@@ -11,26 +11,33 @@ Shell 实用技巧
 .. code-block:: sh
 
         #!/bin/sh
-        # 判断文件是否存在
-        # link：www.jb51.net
-        # date：2013/2/28
          
         myPath="/var/log/httpd/"
         myFile="/var /log/httpd/access.log"
+        fsda1="/dev/sda1"
          
         # 这里的-x 参数判断$myPath是否存在并且是否具有可执行权限
         if [ ! -x "$myPath"]; then
          mkdir "$myPath"
         fi
+
         # 这里的-d 参数判断$myPath是否存在
         if [ ! -d "$myPath"]; then
          mkdir "$myPath"
+        fi
+
+        # 这里的-b 参数判磁盘块设备是否存在
+        if [ -b "$fsda1" ]; then
+                echo  "Fond $fsda1"
+        else
+                echo  "Not fond $fsda1"
         fi
          
         # 这里的-f参数判断$myFile是否存在
         if [ ! -f "$myFile" ]; then
          touch "$myFile"
         fi
+
         # 其他参数还有-n,-n是判断一个变量是否是否有值
         if [ ! -n "$myVar" ]; then
          echo "$myVar is empty"
@@ -88,8 +95,6 @@ Shell 实用技巧
         else
          echo '$var1 not eq $var2'
         fi
-
-
 
 * -f 和-e的区别  Conditional Logic on Files
 * -a file exists.
