@@ -10,7 +10,7 @@ Welcome to onepice's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   qemu_libvirt/qemu
 
 Indices and tables
 ==================
