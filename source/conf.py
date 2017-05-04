@@ -31,22 +31,23 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
-extensions = ['sphinx.ext.autodoc',
-     'sphinx.ext.doctest',
-     'sphinx.ext.intersphinx',
-     'sphinx.ext.todo',
-     'sphinx.ext.coverage',
-#     'sphinx.ext.mathjax',
-     'sphinx.ext.ifconfig',
-     'sphinx.ext.viewcode',
-     'sphinx.ext.githubpages',
-     'rst2pdf.pdfbuilder'
-     ]
-
-#extensions = [
-#  'sphinx.ext.autodoc',
-#  'rst2pdf.pdfbuilder'
-#]
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+    extensions = ['sphinx.ext.autodoc',
+         'sphinx.ext.doctest',
+         'sphinx.ext.intersphinx',
+         'sphinx.ext.todo',
+         'sphinx.ext.coverage',
+         'sphinx.ext.mathjax',  ###
+         'sphinx.ext.ifconfig',
+         'sphinx.ext.viewcode',
+         'sphinx.ext.githubpages',
+         ]
+else:
+    extensions = [
+      'sphinx.ext.autodoc',
+      'rst2pdf.pdfbuilder'
+    ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
