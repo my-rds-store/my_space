@@ -11,6 +11,8 @@ Welcome to onepice's documentation!
    :caption: Contents:
 
    qemu_libvirt/qemu
+   vim/vim
+   shell/shell
 
 Indices and tables
 ==================
