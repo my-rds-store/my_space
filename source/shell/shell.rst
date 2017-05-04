@@ -56,7 +56,6 @@ Shell 实用技巧
 
 .. code-block:: sh
 
-        #shell判断文件夹是否存在
          
         #如果文件夹不存在，创建文件夹
         if [ ! -d "/myfolder" ]; then
