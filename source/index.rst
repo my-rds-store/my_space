@@ -16,9 +16,4 @@ Welcome to onepice's documentation!
    sphinx/chinese_search
    pycharm/remote_debug
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
