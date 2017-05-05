@@ -266,7 +266,7 @@ pdf_documents = [
 ]
   
 # A comma-separated list of custom stylesheets. Example:
-pdf_stylesheets = ['a3','zh_CN']
+pdf_stylesheets = ['a4','zh_CN']
   
 # Create a compressed PDF
 # Use True/False or 1/0
