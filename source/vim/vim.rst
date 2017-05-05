@@ -2,23 +2,11 @@ vim 技巧
 ===================
 
 
-asdfasdf
-asdfasdf
-ss
+1. ttt
 
-dsafasd
-asdfa
-sdfasd
+2. bbb
 
-asdfasdf
-asdfasdf
-ss
-
-dsafasd
-asdfa
-sdfasd
-
-
+3. ddd
 
 
 
