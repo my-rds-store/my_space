@@ -1,6 +1,8 @@
 qemu命令总结
 ===================
 
+.. image:: ./Qemu-logo-small.png
+
 
 **spice端口**
 
