@@ -11,7 +11,6 @@ def build():
     ret = commands.getoutput("make html")
     print ret
 
-
 while True:
     status,ret_str = commands.getstatusoutput("git pull mc_origin master")
     #print  status  
