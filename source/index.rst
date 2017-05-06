@@ -6,6 +6,12 @@
 Welcome to onepice's documentation!
 ===================================
 
+
+|today|
+
+
+sadasdfasd
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -15,5 +21,10 @@ Welcome to onepice's documentation!
    shell/shell
    sphinx/index
    pycharm/remote_debug
+
+
+..
+ 我是注释内容
+ 你看不到我
 
 

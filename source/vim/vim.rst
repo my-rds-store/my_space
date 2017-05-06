@@ -2,24 +2,17 @@ vim 技巧
 ===================
 
 
-1. ttt
 
-2. bbb
+#. vi/vim使用进阶: 开启文件类型检测
 
-3. ddd
-
-4. ddd
-
-tesesfasdfasdfasdf
-adsfas1111111
+http://easwy.com/blog/archives/advanced-vim-skills-filetype-on/
 
 
-asdfasdfa
-asdfasdf
-asdfasdf
-asdfasdf
-asfasdf
+#. plugin、autoload、ftplugin有什么区别
+
+http://www.cnblogs.com/chris-cp/p/4581593.html
 
 
+#. filetype---- 文件类型检测
 
-
+http://liuzhijun.iteye.com/blog/1846123
