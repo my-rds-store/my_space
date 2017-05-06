@@ -3,6 +3,13 @@ reStructuredText 语法
 =====================
 
 
+.. toctree::
+   :maxdepth: 1
+
+   conf
+   chinese_search
+
+
 代码
 ----------
 
@@ -24,3 +31,8 @@ reStructuredText 语法
         .. image:: ./images/pic2.png
                 :width:  380px
                 :height: 253px
+
+
+pdf
+-------------
+

@@ -14,7 +14,6 @@ Welcome to onepice's documentation!
    vim/vim
    shell/shell
    sphinx/sphinx
-   sphinx/chinese_search
    pycharm/remote_debug
 
 
