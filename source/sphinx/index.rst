@@ -9,6 +9,8 @@ reStructuredText 语法
 
    conf
    chinese_search
+   local_pdf
+  
 
 
 代码

@@ -2,41 +2,42 @@ qemu命令总结
 ===================
 
 .. image:: ./Qemu-logo-small.png
+   :scale: 60%
+   
+
+#. **spice端口**
+
+        .. code-block:: sh
+                
+            netstat -ntpl | grep qemu
+            virsh domdisplay --type spice {Id or Name}
 
 
-**spice端口**
+#. **创建镜像**
 
-.. code-block:: sh
-        
-        netstat -ntpl | grep qemu
-        virsh domdisplay --type spice {Id or Name}
+        .. code-block:: sh
 
-
-**创建镜像**
-
-.. code-block:: sh
-
-        qemu-img create -f qcow2 ubuntu-14.04.qcow2 20G
-        qemu-img info ubuntu-14.04.qcow2
+            qemu-img create -f qcow2 ubuntu-14.04.qcow2 20G
+            qemu-img info ubuntu-14.04.qcow2
 
 
-**镜像压缩**
+#. **镜像压缩**
 
-.. code-block:: sh
+        .. code-block:: sh
 
-        qemu-img convert -p -c -O qcow2 source.img destination.qcow2
+            qemu-img convert -p -c -O qcow2 source.img destination.qcow2
 
-**创建快照**
+#. **创建快照**
 
-.. code-block:: sh
+        .. code-block:: sh
 
-        qemu-img create -f qcow2 -b base.qcow2 snapshot.qcow2
+            qemu-img create -f qcow2 -b base.qcow2 snapshot.qcow2
 
-**resize**
+#. **resize**
 
-.. code-block:: sh
+        .. code-block:: sh
 
-        qemu-img resize source.qcow2 +10G
+            qemu-img resize source.qcow2 +10G
 
 
 

@@ -1,16 +1,14 @@
-配置文件 conf.py
-==================
+配置文件说明 conf.py
+=========================
 
 
-version 
--------
+* version 
 
 项目主版本, 用来替代 \|Version\|. 
 例如,对于Python文档, 就像2.6 
 
 
-release 
---------
+* release 
 
 完整版本，用来替换 \|release\|, 正如在HTML模板中.
 例如,对于Python文档。正如 2.6.0rc1
