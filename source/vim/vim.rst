@@ -5,8 +5,9 @@ vim 技巧
 
 查看当前文件是什么类型了
 
-::
-    :set filetype 
+   .. code:: 
+
+        :set filetype 
 
 
 #. vi/vim使用进阶: 开启文件类型检测
