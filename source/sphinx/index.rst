@@ -5,6 +5,7 @@ reStructuredText 语法
 
 .. toctree::
    :maxdepth: 1
+   :caption: Contents:
 
    conf
    chinese_search
@@ -31,6 +32,7 @@ reStructuredText 语法
         .. image:: ./images/pic2.png
                 :width:  380px
                 :height: 253px
+
 
 
 pdf
