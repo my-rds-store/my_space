@@ -13,6 +13,7 @@ Welcome to onepice's documentation!
    qemu_libvirt/qemu
    vim/vim
    shell/shell
+   sphinx/sphinx
    sphinx/chinese_search
    pycharm/remote_debug
 
