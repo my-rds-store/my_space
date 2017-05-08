@@ -2,14 +2,29 @@ vim 技巧
 ===================
 
 
-INSTALL
------------------
+``INSTALL``
+--------------
 
     .. code-block:: sh
 
         $ sudo apt-get install vim vim-scripts vim-doc
         $ sudo apt-get install vim-addon-manager # 插件管理
         $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
+
+
+
+
+``vim实用技巧``
+------------------
+
+    .. seealso::
+
+        .. code-block:: sh
+
+            $ vim-addons status
+            $ vim-addons install omnicppcomplete
+
+        :ref:`如何判断文件类型? <set-filetype>`
 
 
 vim实用技巧
@@ -27,7 +42,7 @@ vim实用技巧
 
 
 
-
+.. _set-filetype:
 
 查看当前文件是什么类型了
 
