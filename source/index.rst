@@ -21,6 +21,7 @@ sadasdfasd
    shell/shell
    sphinx/index
    pycharm/remote_debug
+   docker/index
 
 
 ..
