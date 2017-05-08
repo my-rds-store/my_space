@@ -14,34 +14,29 @@ docker 命令总结
 ------------------
 
 
+``查询``
+^^^^^^^^
 
-``启动docker``
-^^^^^^^^^^^^^^^^^
+#. 启动docker
 
-    .. code-block:: sh
+   .. code-block::
 
      $ sudo service docker start
 
-``列出镜像``
-^^^^^^^^^^^^^^^^^^^^
+#. 列出镜像
 
-    .. code-block:: sh
+    .. code-block::   
 
         $ sudo docker images
 
-``登录阿里云``
-^^^^^^^^^^^^^^^^^^^^
 
-    .. code-block::  sh
-        
-        $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com
-
-``删除镜像
-^^^^^^^^^^^^^^^^^^^^
+#. 登录阿里云
 
 .. code-block:: sh
+    
+    $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com
 
-    sudo docker rmi training/sinatra
+
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
