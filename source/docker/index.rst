@@ -22,7 +22,7 @@ docker 命令总结
 
      $ sudo service docker start
 
-``列出镜像``
+``列出本地镜像``
 ^^^^^^^^^^^^^^^^^^^^
 
     .. code-block:: sh
@@ -36,12 +36,24 @@ docker 命令总结
         
         $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com
 
-``删除镜像
+``搜索``
 ^^^^^^^^^^^^^^^^^^^^
 
-.. code-block:: sh
+    .. code-block:: sh
 
-    sudo docker rmi training/sinatra
+        $ sudo docker search centos
+
+
+``删除镜像``
+^^^^^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+
+        $sudo docker rm  trusting_newton
+
+    .. code-block:: sh
+
+        sudo docker rmi training/sinatra
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
