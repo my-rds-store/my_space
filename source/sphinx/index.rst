@@ -36,6 +36,13 @@ reStructuredText 语法
                 :height: 253px
 
 
+        .. image:: ./x.gif
+               :height: 660px
+               :width: 580 px
+               :scale: 70%
+               :alt: alternate text
+               :align: center
+
 
 pdf
 -------------

@@ -9,8 +9,10 @@ qemu命令总结
 
         .. code-block:: sh
                 
-            netstat -ntpl | grep qemu
-            virsh domdisplay --type spice {Id or Name}
+           netstat -ntpl | grep qemu
+           virsh domdisplay --type spice {Id or Name}
+
+
 
 
 #. **创建镜像**

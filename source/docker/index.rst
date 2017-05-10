@@ -7,12 +7,11 @@ Docker 学习
 
 .. code-block:: sh
 
-     sudo apt-get install -y docker.io
+     $ sudo apt-get install -y docker.io
 
 
 docker 命令总结 
 ------------------
-
 
 
 ``启动docker``
@@ -44,16 +43,40 @@ docker 命令总结
         $ sudo docker search centos
 
 
-``删除镜像``
+``创建容器``
+^^^^^^^^^^^^^^^^^^^^
+
+
+    .. code-block:: sh
+
+       $ sudo docker create -i -t --name=apache  ubuntu:14.04  /bin/bash
+
+
+``启动容器``
+^^^^^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+         sudo docker start apache
+
+
+
+``进入容器``
+^^^^^^^^^^^^^^^^^^^^
+
+    sudo docker attach apach
+
+
+
+``删除镜像/容器``
 ^^^^^^^^^^^^^^^^^^^^
 
     .. code-block:: sh
 
-        $sudo docker rm  trusting_newton
+        $ sudo docker rm  trusting_newton
 
     .. code-block:: sh
 
-        sudo docker rmi training/sinatra
+        $ sudo docker rmi training/sinatra
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
