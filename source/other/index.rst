@@ -24,3 +24,46 @@ other
        :align: center
 
 
+检查端口通不通
+----------------
+
+Linux
+^^^^^^^^^^
+
+#. python 检查端口通不通
+
+    .. code-block:: python
+
+        #!/usr/bin/env python
+        #coding=utf8
+
+        ip = '192.168.5.204'
+        port  = 5900
+
+        import socket
+         
+        sk = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+         
+        sk.settimeout(1)
+         
+        try:
+            sk.connect((ip,port))
+            print 'Server %s:%s  OK!' % (ip,port)
+        except Exception:
+            print 'Server %s:%s not connect!' % (ip,port) 
+        sk.close()
+
+#. nc命令检查端口
+
+    .. code-block:: sh
+
+        $ nc  -vz 192.168.5.204 5904
+
+
+#. telnet 命令检查端口
+    
+    .. code-block:: sh
+
+        $ telnet 192.168.5.204 5900 
+
+

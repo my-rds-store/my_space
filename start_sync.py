@@ -13,8 +13,15 @@ init_logger("/tmp/my_space.log")
 def build():
 
     ret = commands.getoutput("make html")
-    #print ret
     logging.info(ret)
+
+def update_apache2_www():
+
+    ret = commands.getoutput("rm -rf /var/www/html/")
+    logging.info(ret)
+    ret = commands.getoutput("cp -rf build/html/* /var/www/html/")
+    logging.info(ret)
+    
 
 while True:
     status,ret_str = commands.getstatusoutput("git pull mc_origin master")
@@ -29,5 +36,6 @@ while True:
         #print "."
         #print "building... "
         build()
+        update_apache2_www()
     sleep(2)
         
