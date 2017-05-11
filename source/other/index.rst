@@ -67,3 +67,30 @@ Linux
         $ telnet 192.168.5.204 5900 
 
 
+CenterOS
+------------
+
+#. 检查某服务是否开机启动
+
+.. code-block:: sh
+
+	chkconfig dnsmasq 
+	
+
+#. 开启/禁止 某服务开机启动
+
+.. code-block:: sh
+
+	chkconfig dnsmasq on/off
+	systemctl enable/disable  dnsmasq 
+	
+
+#. 启动/停止/重启 某服务
+
+.. code-block:: sh
+
+	systemctl start/stop/restart dnsmasq 
+	
+
+
+
