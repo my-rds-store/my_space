@@ -12,6 +12,8 @@ init_logger("/tmp/my_space.log")
 
 def build():
 
+    ret = commands.getoutput("make clean")
+    logging.info(ret)
     ret = commands.getoutput("make html")
     logging.info(ret)
 
