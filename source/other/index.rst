@@ -91,6 +91,17 @@ CenterOS
 
             # systemctl start/stop/restart dnsmasq 
 	
+问题
+--------
 
+``Apache2``
+^^^^^^^^^^^^^
 
+.. code::
+
+    重启Apache2出现：
+    Could not reliably determine the server's fully qualified domain name, using 127.0.1.1 for ServerName.问题
+    在/etc/apache2/apache2.conf文件最后加上：
+    # Server Name
+    ServerName localhost
 
