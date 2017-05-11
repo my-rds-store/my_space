@@ -74,22 +74,22 @@ CenterOS
 
 .. code-block:: sh
 
-	chkconfig dnsmasq 
+	# chkconfig dnsmasq 
 	
 
 #. 开启/禁止 某服务开机启动
 
 .. code-block:: sh
 
-	chkconfig dnsmasq on/off
-	systemctl enable/disable  dnsmasq 
+	# chkconfig dnsmasq on/off
+	# systemctl enable/disable  dnsmasq 
 	
 
 #. 启动/停止/重启 某服务
 
 .. code-block:: sh
 
-	systemctl start/stop/restart dnsmasq 
+	# systemctl start/stop/restart dnsmasq 
 	
 
 
