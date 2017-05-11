@@ -22,6 +22,7 @@ sadasdfasd
    sphinx/index
    pycharm/remote_debug
    docker/index
+   database/mysql
    other/index
 
 
