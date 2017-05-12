@@ -1,4 +1,3 @@
-
 Docker 学习
 ===================
 
@@ -27,6 +26,16 @@ docker 命令总结
     .. code-block:: sh
 
         $ sudo docker images
+
+``删除本地镜像``
+^^^^^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+
+        $ sudo docker rmi training/sinatra
+
+
+
 
 ``登录阿里云``
 ^^^^^^^^^^^^^^^^^^^^
@@ -61,22 +70,20 @@ docker 命令总结
 
 
 ``进入容器``
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
     sudo docker attach apach
 
 
 
 ``删除镜像/容器``
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 
     .. code-block:: sh
 
         $ sudo docker rm  trusting_newton
 
-    .. code-block:: sh
-
-        $ sudo docker rmi training/sinatra
+        $ sudo docker rm  `docker ps -a -q` # 删除所有镜像
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_

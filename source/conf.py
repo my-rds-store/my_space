@@ -42,11 +42,13 @@ if on_rtd:
          'sphinx.ext.ifconfig',
          'sphinx.ext.viewcode',
          'sphinx.ext.githubpages',
+         'sphinx.ext.graphviz',  ### graphviz画图插
          ]
 else:
     extensions = [
       'sphinx.ext.autodoc',
-      'rst2pdf.pdfbuilder'
+      'rst2pdf.pdfbuilder',
+      'sphinx.ext.graphviz',  #graphviz画图插
     ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -336,3 +338,19 @@ pdf_use_numbered_links = False
   
 # Background images fitting mode
 pdf_fit_background_mode = 'scale'
+
+
+#######################################################################
+# -- Options for PDF output --------------------------------------------------
+#######################################################################
+
+# 设置 graphviz_dot 路径
+graphviz_dot = 'dot'
+# 设置 graphviz_dot_args 的参数，这里默认了默认字体
+graphviz_dot_args = ['-Gfontname=Georgia', 
+                     '-Nfontname=Georgia',
+                     '-Efontname=Georgia']
+# 输出格式，默认png，这里我用svg矢量图
+graphviz_output_format = 'svg'
+
+
