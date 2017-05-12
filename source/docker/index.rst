@@ -48,12 +48,8 @@ docker 命令总结
         $ sudo docker rmi training/sinatra
 
 
-<<<<<<< HEAD
 
 
-``登录阿里云``
-^^^^^^^^^^^^^^^^^^^^
-=======
 阿里云
 ^^^^^^^^^
 
@@ -61,7 +57,6 @@ docker 命令总结
 """""""""
 
 配置信息: **$HOME/.dockercfg**
->>>>>>> 87dd10fba509c31f16f132e85facb7cee00605c3
 
     .. code-block::  sh
         
@@ -105,28 +100,20 @@ docker 命令总结
         $ sudo docker attach apach
 
 
-<<<<<<< HEAD
-``删除镜像/容器``
-^^^^^^^^^^^^^^^^^^^
-=======
 ``进入容器``
 """"""""""""""
->>>>>>> 87dd10fba509c31f16f132e85facb7cee00605c3
 
-    $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c "start.sh; while true; do echo hello world; sleep 1; done"
+    .. code-block:: sh
+
+        $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c "start.sh; while true; do echo hello world; sleep 1; done"
 
 ``删除容器``
 """"""""""""""
 
-<<<<<<< HEAD
-        $ sudo docker rm  `docker ps -a -q` # 删除所有镜像
-=======
     .. code-block:: sh
 
         $ sudo docker rm  name/ID
         $ sudo docker rm `sudo docker ps -a -q`  #  删除全部容器
-
->>>>>>> 87dd10fba509c31f16f132e85facb7cee00605c3
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
