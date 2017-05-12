@@ -10,8 +10,8 @@ reStructuredText 语法
    conf
    chinese_search
    local_pdf
+   graphviz
   
-
 
 
 `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
@@ -48,6 +48,4 @@ reStructuredText 语法
                :align: center
 
 
-pdf
--------------
 
