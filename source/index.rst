@@ -9,8 +9,7 @@ Welcome to onepice's documentation!
 
 |today|
 
-
-sadasdfasd
+夏目友人帐
 
 .. toctree::
    :maxdepth: 2
