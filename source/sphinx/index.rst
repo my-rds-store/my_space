@@ -16,6 +16,21 @@ reStructuredText 语法
 
 `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
 
+INSTALL
+-------
+
+.. code-block:: sh
+
+    sudo pip install --upgrade pip==9.0.1  -i https://pypi.mirrors.ustc.edu.cn/simple
+    sudo pip install sphinx==1.5.5  sphinx-autobuild==0.6.0 -i https://pypi.mirrors.ustc.edu.cn/simple
+    sudo pip install sphinx_rtd_theme==0.2.4  -i https://pypi.mirrors.ustc.edu.cn/simple
+
+本地支持,本地中文关键字检索
+
+.. code-block:: sh
+
+    sudo pip install jieba==0.38 --user  -i https://pypi.mirrors.ustc.edu.cn/simple
+
 
 代码
 ----------
