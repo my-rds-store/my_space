@@ -23,14 +23,17 @@ def update_apache2_www():
     logging.info(ret)
     ret = commands.getoutput("cp -rf build/html/* /var/www/html/")
     logging.info(ret)
-    
 
+def update():    
+    build()
+    update_apache2_www()
+
+update()    
 while True:
     status,ret_str = commands.getstatusoutput("git pull mc_origin master")
     if str(ret_str).find("Already up-to-date") != -1:
         logging.info("Already up-to-date")
     else:
-        build()
-        update_apache2_www()
+        update()    
     sleep(2)
         
