@@ -67,17 +67,18 @@
 
         .. code-block:: sh
 
-            $ sudo pip install --upgrade pip
-            $ pip install jieba --user  -i https://pypi.mirrors.ustc.edu.cn/simple
+            $ sudo pip install --upgrade pip==9.0.1  -i https://pypi.mirrors.ustc.edu.cn/simple
+            $ sudo pip install jieba==0.38  -i https://pypi.mirrors.ustc.edu.cn/simple
 
 
 修改sphinx
 ^^^^^^^^^^^^
 
     #. 下载zh_CN.py
-        ::
 
-            https://github.com/bosbyj/sphinx.search.zh_CN
+        .. code-block:: sh
+
+            $ git clone https://github.com/bosbyj/sphinx.search.zh_CN.git
 
 
     #. 复制 zh_CN.py 到 sphinx 的 search 目录下，如：
