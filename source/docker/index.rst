@@ -154,6 +154,19 @@ https://dev.aliyun.com/search.html
         $ sudo docker port {CONTAINER ID}
         $ sudo docker port {CONTAINER ID}  80
 
+数据管理
+----------
+
+``数据卷``
+
+
+    .. code-block:: sh
+
+        sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
+
+
+
+
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
 * `把镜像推送到阿里云 <https://ninghao.net/video/3780>`_
 * `Running GUI apps with Docker <http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/?utm_source=tuicool&utm_medium=referral>`_ 
