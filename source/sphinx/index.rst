@@ -56,12 +56,11 @@ INSTALL
                :alt: alternate text
                :align: center
 
+        .. raw:: html
 
-.. raw:: html
+           <hr width=50 size=10>
 
-   <hr width=50 size=10>
-
-.. raw:: html
-   :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
+        .. raw:: html
+           :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
 
 
