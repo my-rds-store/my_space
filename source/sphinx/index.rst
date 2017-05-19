@@ -57,4 +57,11 @@ INSTALL
                :align: center
 
 
+.. raw:: html
+
+   <hr width=50 size=10>
+
+.. raw:: html
+   :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
+
 
