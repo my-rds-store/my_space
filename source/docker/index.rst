@@ -118,6 +118,16 @@ https://dev.aliyun.com/search.html
 ``导出导入``
 """"""""""""""
 
+
+    查看容器 
+
+    .. code-block:: sh
+
+        $ sudo docker ps      # 查看UP状态的容器
+        $ sudo docker ps  -a  # 查看所有容器
+        $ sudo docker ps  -as # 查看所有容器,显示容器大小
+
+
     导出容器
 
     .. code-block:: sh
