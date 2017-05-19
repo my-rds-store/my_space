@@ -106,3 +106,18 @@ CenterOS
     ServerName localhost
 
 
+.. raw:: html
+
+    <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/tttttttttttttttttt/embed_player"></iframe>
+
+.. raw:: html
+
+    <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/adding-a-video-in-mediadrop/embed_player"></iframe>
+
+.. raw:: html
+
+    <embed src='http://player.youku.com/player.php/sid/XMjc2ODQzNTcwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+
+.. raw:: html
+
+    <iframe height=498 width=510 src='http://player.youku.com/embed/XMzcyNzAyODAw' frameborder=0 'allowfullscreen'></iframe>
