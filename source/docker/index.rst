@@ -9,6 +9,9 @@ Docker 学习
      $ sudo apt-get install -y docker.io
 
 
+`安装最新版本 <https://docs.docker.com/engine/installation/>`_
+
+
 docker 命令总结 
 ------------------
 
