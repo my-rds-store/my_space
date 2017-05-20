@@ -105,11 +105,6 @@ CenterOS
     # Server Name
     ServerName localhost
 
-
-.. raw:: html
-
-    <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/tttttttttttttttttt/embed_player"></iframe>
-
 .. raw:: html
 
     <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/adding-a-video-in-mediadrop/embed_player"></iframe>

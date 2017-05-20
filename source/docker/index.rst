@@ -167,16 +167,41 @@ https://dev.aliyun.com/search.html
         $ sudo docker port {CONTAINER ID}
         $ sudo docker port {CONTAINER ID}  80
 
-数据管理
-----------
+
+数据卷
+-------------
 
 ``数据卷``
-
+^^^^^^^^^^
 
     .. code-block:: sh
 
-        sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
+        $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
 
+``查看数据卷``
+^^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+        
+        $ sudo docker inspect {NAMES}
+
+
+``数据卷容器``
+^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+        
+        $ sudo docker run -d --volumes-from={NAME/ID} --name=apache_2.2   alpine/my_space_build:v1
+
+
+
+Dockerfile
+-----------
+
+#. EXPOSE
+
+    格式为 EXPOSE <port> [<port>...] 。
+    告诉Docker服务端容器暴露的端口号
 
 
 
