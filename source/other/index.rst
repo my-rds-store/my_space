@@ -27,8 +27,17 @@ other
 检查端口通不通
 ----------------
 
-Linux
-^^^^^^^^^^
+
+查看端口占用
+^^^^^^^^^^^^^
+
+    .. code-block:: sh
+
+        $ sudo netstat -anp | grep ":80\ "
+
+
+检查端口通不通
+^^^^^^^^^^^^^^^^
 
 #. python 检查端口通不通
 
@@ -53,14 +62,18 @@ Linux
             print 'Server %s:%s not connect!' % (ip,port) 
         sk.close()
 
-#. nc命令检查端口
+
+
+
+#. nc命令检查端口通不通
 
     .. code-block:: sh
 
         $ nc  -vz 192.168.5.204 5904
 
 
-#. telnet 命令检查端口
+#. telnet 命令检查端口通不通
+
     
     .. code-block:: sh
 
