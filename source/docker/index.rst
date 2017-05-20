@@ -48,6 +48,17 @@ docker 命令总结
 
         $ sudo docker rmi training/sinatra
 
+``本地镜像重命名``
+""""""""""""""""""
+
+    .. code-block:: sh
+
+        $ sudo docker tag  oldname:tag newname:tag 
+        $ sudo docker tag  image_id    newname:tag 
+        
+        $ sudo docker rmi oldname:tag
+
+
 
 阿里云
 ^^^^^^^^^
@@ -114,6 +125,15 @@ https://dev.aliyun.com/search.html
         sudo docker logs -f  {CONTAINER ID}
         sudo docker logs --follow  {CONTAINER ID}
 
+
+``容器重命名``
+""""""""""""""""""
+
+    .. code-block:: sh
+
+        $ sudo docker rename  oldname    newname 
+        $ sudo docker rename  image_id   newname 
+        
 
 ``导出导入``
 """"""""""""""
