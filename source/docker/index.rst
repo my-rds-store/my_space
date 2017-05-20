@@ -191,8 +191,7 @@ https://dev.aliyun.com/search.html
 
     .. code-block:: sh
         
-        $ sudo docker run -d --volumes-from={NAME/ID} --name=apache_2.2   alpine/my_space_build:v1
-
+        $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
 
 Dockerfile
