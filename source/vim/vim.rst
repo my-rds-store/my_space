@@ -49,6 +49,20 @@ vim实用技巧
 
         :set filetype 
 
+#. Vim升华之树形目录插件NERDTree安装图解
+
+http://www.linuxidc.com/Linux/2013-06/86048.htm
+
+
+
+#. 每天一个vim插件–vim-multiple-cursors (foocoder.com)
+
+    http://www.tuicool.com/articles/ymYNj2
+
+#.  Vim常用插件——前端开发工具系列
+
+http://web.jobbole.com/83226/
+
 
 #. vi/vim使用进阶: 开启文件类型检测
 
