@@ -6,6 +6,13 @@ git 使用总结
 
     $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git
 
+OR
+
+.. code-block:: sh
+
+    $ git clone https://github.com/Valloric/YouCompleteMe.git  
+    $ cd crfasrnn  
+    $ git submodule update --init --recursive 
 
 子模块
 ---------
