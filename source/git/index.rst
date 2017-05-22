@@ -2,6 +2,11 @@ git 使用总结
 ==============
 
 
+.. code-block:: sh
+
+    $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git
+
+
 子模块
 ---------
 
