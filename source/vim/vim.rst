@@ -49,11 +49,12 @@ vim实用技巧
 
         :set filetype 
 
+`Vim升华之树形目录插件NERDTree安装图解 <http://www.linuxidc.com/Linux/2013-06/86048.htm>`_
+
+
 #. Vim升华之树形目录插件NERDTree安装图解
 
 http://www.linuxidc.com/Linux/2013-06/86048.htm
-
-
 
 #. 每天一个vim插件–vim-multiple-cursors (foocoder.com)
 
