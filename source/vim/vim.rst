@@ -1,6 +1,16 @@
 vim 技巧
 ===================
 
+升级vim
+-----------------------
+
+`升级vim <https://stackoverflow.com/questions/39896698/youcompleteme-unavailable-requires-vim-7-4-143>`_
+
+.. code-block:: sh
+
+    $ sudo add-apt-repository ppa:jonathonf/vim
+    $ sudo apt-get update && sudo apt-get upgrade
+    $ sudo apt-get install vim-nox 
 
 ``INSTALL``
 --------------
@@ -11,6 +21,10 @@ vim 技巧
         $ sudo apt-get install vim-addon-manager # 插件管理
         $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
 
+`vim 与 Markdown <http://www.jianshu.com/p/fa8c56e1aa52>`_  
+
+
+`Markdown 预览插件 <https://github.com/iamcco/markdown-preview.vim>`_
 
 `vim插件管理器：Vundle的介绍及安装i(很全) <http://blog.csdn.net/zhangpower1993/article/details/52184581>`_
 
