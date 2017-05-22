@@ -22,6 +22,7 @@ http://man.linuxde.net/rename
 
    qemu_libvirt/qemu
    vim/vim
+   git/index
    shell/shell
    sphinx/index
    pycharm/remote_debug
