@@ -6,7 +6,6 @@
 Welcome to onepice's documentation!
 ===================================
 
-
 |today|
 
 夏目友人帐

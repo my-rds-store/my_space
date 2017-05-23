@@ -14,7 +14,13 @@ reStructuredText 语法
   
 
 
-`reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
+参考文档
+----------
+
+* `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+* `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
+* `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
+* `A ReStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_
 
 
 代码
