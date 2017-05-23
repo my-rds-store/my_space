@@ -11,6 +11,8 @@ Welcome to onepice's documentation!
 夏目友人帐
 
 
+`各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
+
 http://man.linuxde.net/rename
 
 .. toctree::
@@ -19,6 +21,7 @@ http://man.linuxde.net/rename
 
    qemu_libvirt/qemu
    vim/vim
+   git/index
    shell/shell
    sphinx/index
    pycharm/remote_debug

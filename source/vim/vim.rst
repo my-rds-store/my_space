@@ -12,6 +12,14 @@ vim 技巧
         $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
 
 
+`vim插件管理器：Vundle的介绍及安装i(很全) <http://blog.csdn.net/zhangpower1993/article/details/52184581>`_
+
+`一个小博客教你把vim用飞起来 <http://www.cnblogs.com/songfy/p/5635757.html>`_
+
+`VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
+
+
+
 
 ``vim实用技巧``
 ------------------
@@ -24,6 +32,8 @@ vim 技巧
             $ vim-addons install omnicppcomplete
 
         :ref:`如何判断文件类型? <set-filetype>`
+
+
 
 
 vim实用技巧
@@ -48,6 +58,21 @@ vim实用技巧
    .. code:: 
 
         :set filetype 
+
+`Vim升华之树形目录插件NERDTree安装图解 <http://www.linuxidc.com/Linux/2013-06/86048.htm>`_
+
+
+#. Vim升华之树形目录插件NERDTree安装图解
+
+http://www.linuxidc.com/Linux/2013-06/86048.htm
+
+#. 每天一个vim插件–vim-multiple-cursors (foocoder.com)
+
+    http://www.tuicool.com/articles/ymYNj2
+
+#.  Vim常用插件——前端开发工具系列
+
+http://web.jobbole.com/83226/
 
 
 #. vi/vim使用进阶: 开启文件类型检测
