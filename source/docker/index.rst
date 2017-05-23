@@ -9,6 +9,9 @@ Docker 学习
      $ sudo apt-get install -y docker.io
 
 
+`安装最新版本 <https://docs.docker.com/engine/installation/>`_
+
+
 docker 命令总结 
 ------------------
 
@@ -30,28 +33,26 @@ docker 命令总结
 
         $ sudo docker images
 
-<<<<<<< HEAD
-``删除本地镜像``
-^^^^^^^^^^^^^^^^^^^^
-=======
+
 ``创建镜像``
 """"""""""""""""""
 
-    $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce jxm/my_space:v3
+    .. code-block:: sh
+
+        $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce jxm/my_space:v3
 
 ``删除本地镜像``
 """"""""""""""""""
->>>>>>> 87dd10fba509c31f16f132e85facb7cee00605c3
 
     .. code-block:: sh
 
         $ sudo docker rmi training/sinatra
 
 
-
-
 阿里云
 ^^^^^^^^^
+
+https://dev.aliyun.com/search.html
 
 ``登陆``
 """""""""
@@ -89,23 +90,64 @@ docker 命令总结
 
 
 ``进入容器``
-<<<<<<< HEAD
-^^^^^^^^^^^^^^
-=======
 """"""""""""""
->>>>>>> 87dd10fba509c31f16f132e85facb7cee00605c3
 
     .. code-block:: sh
 
         $ sudo docker attach apach
 
 
-``进入容器``
+``守护态运行``
 """"""""""""""
 
     .. code-block:: sh
 
-        $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c "start.sh; while true; do echo hello world; sleep 1; done"
+        $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c " while true; do echo hello world; sleep 1; done"
+ 
+        $ sudo docker run -d -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh
+
+``守护态运行``
+""""""""""""""
+
+    .. code-block:: sh
+
+        sudo docker logs -f  {CONTAINER ID}
+        sudo docker logs --follow  {CONTAINER ID}
+
+
+``导出导入``
+""""""""""""""
+
+
+    查看容器 
+
+    .. code-block:: sh
+
+        $ sudo docker ps      # 查看UP状态的容器
+        $ sudo docker ps  -a  # 查看所有容器
+        $ sudo docker ps  -as # 查看所有容器,显示容器大小
+
+
+    导出容器
+
+    .. code-block:: sh
+
+        $ sudo docker export {CONTAINER ID}  > ubuntu.tar
+
+    导入容器快照
+    
+    .. code-block:: sh
+
+        $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0
+
+    通过指定 URL 或者某个目录来导入，例如
+
+    .. code-block:: sh
+
+        $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
+
+
+
 
 ``删除容器``
 """"""""""""""
@@ -114,6 +156,54 @@ docker 命令总结
 
         $ sudo docker rm  name/ID
         $ sudo docker rm `sudo docker ps -a -q`  #  删除全部容器
+
+使用外部网络
+---------------
+    
+    查看端口
+
+    .. code-block:: sh
+
+        $ sudo docker port {CONTAINER ID}
+        $ sudo docker port {CONTAINER ID}  80
+
+
+数据卷
+-------------
+
+`数据卷容器 <http://wiki.jikexueyuan.com/project/docker-technology-and-combat/datacontainer.html>`_
+
+``数据卷``
+^^^^^^^^^^
+
+    .. code-block:: sh
+
+        $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
+
+``查看数据卷``
+^^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+        
+        $ sudo docker inspect {NAMES}
+
+
+``数据卷容器``
+^^^^^^^^^^^^^^^^
+
+    .. code-block:: sh
+        
+        $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
+
+
+Dockerfile
+-----------
+
+#. EXPOSE
+
+    格式为 EXPOSE <port> [<port>...] 。
+    告诉Docker服务端容器暴露的端口号
+
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_

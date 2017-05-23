@@ -27,8 +27,17 @@ other
 检查端口通不通
 ----------------
 
-Linux
-^^^^^^^^^^
+
+查看端口占用
+^^^^^^^^^^^^^
+
+    .. code-block:: sh
+
+        $ sudo netstat -anp | grep ":80\ "
+
+
+检查端口通不通
+^^^^^^^^^^^^^^^^
 
 #. python 检查端口通不通
 
@@ -53,14 +62,18 @@ Linux
             print 'Server %s:%s not connect!' % (ip,port) 
         sk.close()
 
-#. nc命令检查端口
+
+
+
+#. nc命令检查端口通不通
 
     .. code-block:: sh
 
         $ nc  -vz 192.168.5.204 5904
 
 
-#. telnet 命令检查端口
+#. telnet 命令检查端口通不通
+
     
     .. code-block:: sh
 
@@ -105,4 +118,14 @@ CenterOS
     # Server Name
     ServerName localhost
 
+.. raw:: html
 
+    <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/adding-a-video-in-mediadrop/embed_player"></iframe>
+
+.. raw:: html
+
+    <embed src='http://player.youku.com/player.php/sid/XMjc2ODQzNTcwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+
+.. raw:: html
+
+    <iframe height=498 width=510 src='http://player.youku.com/embed/XMzcyNzAyODAw' frameborder=0 'allowfullscreen'></iframe>

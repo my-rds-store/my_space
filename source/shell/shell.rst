@@ -1,6 +1,22 @@
 Shell 实用技巧
 ===================
 
+apt-get install时如何指定安装版本
+-----------------------------------
+
+.. code-block:: sh
+
+    $ sudo apt-get install package=version
+
+拷贝文件并且示进度
+---------------------
+
+.. code-block:: sh
+
+    $ rrsync  -a -P  path1   path2
+    $ sync
+
+
 判断文件是否存在
 -----------------
 

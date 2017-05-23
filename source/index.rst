@@ -10,6 +10,9 @@ Welcome to onepice's documentation!
 
 夏目友人帐
 
+
+http://man.linuxde.net/rename
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -22,6 +25,8 @@ Welcome to onepice's documentation!
    docker/index
    database/mysql
    other/index
+
+
 
 
 ..

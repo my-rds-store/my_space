@@ -22,6 +22,15 @@ reStructuredText 语法
 * `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
 * `A ReStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_
 
+INSTALL
+-------
+
+.. code-block:: sh
+
+    $ sudo pip install --upgrade pip==9.0.1  -i https://pypi.mirrors.ustc.edu.cn/simple
+    $ sudo pip install sphinx==1.5.5  sphinx-autobuild==0.6.0 -i https://pypi.mirrors.ustc.edu.cn/simple
+    $ sudo pip install sphinx_rtd_theme==0.2.4  -i https://pypi.mirrors.ustc.edu.cn/simple
+
 
 代码
 ----------
@@ -53,5 +62,11 @@ reStructuredText 语法
                :alt: alternate text
                :align: center
 
+        .. raw:: html
+
+           <hr width=50 size=10>
+
+        .. raw:: html
+           :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
 
 
