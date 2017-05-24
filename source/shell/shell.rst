@@ -17,6 +17,14 @@ apt-get install时如何指定安装版本
     $ sync
 
 
+只拷贝软连接
+-----------------
+
+.. code-block:: sh
+
+    $ sudo cp -d $HOME/bin/FoxitReader /usr/local/bin/ 
+
+
 判断文件是否存在
 -----------------
 
