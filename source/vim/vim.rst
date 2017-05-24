@@ -41,6 +41,33 @@ YouCompleteMe  安装
         git submodule update --init --recursive
 
 
+YouCompleteMe的配置
+^^^^^^^^^^^^^^^^^^^^^
+
+`YouCompleteMe的配置 <http://www.cnblogs.com/starrytales/p/6031671.html>`_
+
+`YouCompleteMe的配置 2 <http://blog.jobbole.com/58978/>`_
+
+在 `$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py`
+添加:
+
+.. code-block:: python 
+
+    flags = [
+    '-Wall',
+      ...  
+    '-isystem',
+    './tests/gmock/include',
+    '-isystem',       # 此行及以下，为添加行,检索 C/C++头文件
+    '/usr/include',
+    '-isystem',
+    '/usr/include/c++/5.4.0',
+    '-isystem',
+    '/usr/include',
+    '/usr/include/x86_64-linux-gnu/c++',
+    ]
+
+
 ``vim实用技巧``
 ------------------
 
