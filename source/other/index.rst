@@ -103,6 +103,39 @@ CenterOS
     .. code-block:: sh
 
             # systemctl start/stop/restart dnsmasq 
+
+amixer
+---------
+
+`amixer的用法(音频编码音量控制) <http://blog.sina.com.cn/s/blog_8795b0970101ig2p.html>`_
+
+#. 查看:
+
+.. code-block:: sh
+
+    $ sudo alsamixer
+    $ sudo amixer -D pulse
+
+#. 声音设置
+
+.. code-block:: sh
+
+    $ amixer -D pulse sset "Master" on
+    $ amixer -D pulse sset "Master" off    // 静音
+    $ amixer set "Master" 100%
+
+#. 录音设置
+
+.. code-block:: sh
+
+$ amixer set "Capture" 100%
+
+$ amixer set "Front Mic Boost" 53%
+$ amixer set "Rear Mic Boost" 53%
+
+`alsamixer设置默认声卡及调节音量保存配置 <http://www.it165.net/os/html/201212/4118.html>`_
+
+
 	
 问题
 --------

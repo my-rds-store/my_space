@@ -2,6 +2,11 @@ git 使用总结
 ==============
 
 
+* `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
+
+* `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
+
+
 .. code-block:: sh
 
     $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git
