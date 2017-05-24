@@ -2,6 +2,9 @@ git 使用总结
 ==============
 
 
+`Git 教程 <https://git-scm.com/book/zh/v2>`_
+
+
 * `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
 * `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_

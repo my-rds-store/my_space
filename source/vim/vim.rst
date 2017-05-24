@@ -33,6 +33,12 @@ vim 技巧
 `VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
 
 
+YouCompleteMe  安装
+--------------------
+
+    .. code-block:: sh
+
+        git submodule update --init --recursive
 
 
 ``vim实用技巧``
