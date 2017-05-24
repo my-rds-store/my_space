@@ -33,13 +33,38 @@ vim 技巧
 `VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
 
 
-YouCompleteMe  安装
---------------------
+YouCompleteMe
+---------------
+
+`YouCompleteMe手册 <http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64>`_
+
+
+安装
+-------------------
+
+Ubuntu Linxu x64
 
     .. code-block:: sh
 
-        git submodule update --init --recursive
+        $ sudo apt-get install build-essential cmake
+        $ sudo apt-get install python-dev python3-dev
 
+    .. code-block:: sh
+
+        $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git \
+            $HOME/.vim/bundle/YouCompleteMe
+        $ cd $HOME/.vim/bundle/YouCompleteMe
+        $ git submodule update --init --recursive
+
+        $ ./install.py --clang-completer  # c/c++
+        $ ./install.py --gocode-completer # go
+        $ ./install.py --all
+
+
+    Vundle
+        .. code-block:: sh
+
+            Plugin 'Valloric/YouCompleteMe'
 
 YouCompleteMe的配置
 ^^^^^^^^^^^^^^^^^^^^^
