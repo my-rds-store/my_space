@@ -9,19 +9,36 @@ other
 * `virtualenv搭建虚拟环境 <http://www.cnblogs.com/kym/archive/2011/12/29/2306428.html>`_
 
 
+SPAW 分区
+-------------
+
+Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分区。他是在内存不够用的情况下，从硬盘中临时分出一部分空间系统当做内存使用。但是，如果SWAP的占用超过30%的时候，系统的性能就会受到影响，这时候就要刷新SWAP。
+
+刷新SWAP
+    可以执行命令刷新一次SWAP（将SWAP里的数据转储回内存，并清空SWAP里的数据）
+
+    .. code-block:: sh
+
+        $ sudo swapoff -a && swapon -a
+
+关闭SWAP
+    在内存大于2G时候，一般情况下可以关闭
+
+    .. code-block:: sh
+
+        $ sudo swapoff -a
+
+开启SWAP
+    .. code-block:: sh
+
+        $ sudo swapon -a
+
+
 屏幕录像gif
 ---------------
 
 * `LICEcap(支持Windows Mac) <http://www.cockos.com/licecap/>`_
 * `byzanz-gui(支持Linux) <https://git.oschina.net/mc_space/byzanz-gui>`_
-
-
-.. image:: ./x.gif
-       :height: 660px
-       :width: 580 px
-       :scale: 70%
-       :alt: x text
-       :align: center
 
 
 检查端口通不通
