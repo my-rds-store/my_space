@@ -21,6 +21,8 @@ vim 技巧
         $ sudo apt-get install vim-addon-manager # 插件管理
         $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
 
+`Using Vim as IDE for Python <http://christian.sterzl.info/blog/vim-as-ide-for-python>`_
+
 `vim 与 Markdown <http://www.jianshu.com/p/fa8c56e1aa52>`_  
 
 
