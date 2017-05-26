@@ -43,6 +43,28 @@ qemu命令总结
 
 
 
+
+声卡
+------
+
+#. 查询支持的声卡
+
+        .. code-block:: sh
+
+            [localhost ~] $ sudo /usr/libexec/qemu-kvm --soundhw ?
+            Valid sound card names (comma separated):
+            ac97        Intel 82801AA AC97 Audio
+            hda         Intel HD Audio
+            pcspk       PC speaker
+
+            -soundhw all will enable all of the above
+
+2 增加声卡
+
+        .. code-block:: sh
+
+            [localhost ~] $ sudo /usr/libexec/qemu-kvm --soundhw all
+
 `Creating Guests with PXE <https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Virtualization_Host_Configuration_and_Guest_Installation_Guide/sect-Virtualization_Host_Configuration_and_Guest_Installation_Guide-Guest_Installation-Installing_guests_with_PXE.html>`_
 
 
