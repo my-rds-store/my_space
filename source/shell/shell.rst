@@ -1,6 +1,31 @@
 Shell 实用技巧
 ===================
 
+
+
+shell 文件所在路径
+-----------------------------------
+
+.. code-block:: sh
+
+    #!/usr/bin/env bash
+    #coding=utf-8
+
+    #VERSION="123" # 版本号   
+    #DATETIME=`date -d today +"%Y%m%d%H%M"`               # 时间
+
+    SELF_RELATIVE_DIR=`dirname $0`                       # 获取 脚本文件所在的相对路径
+    #SELF_ABSOLUTE_DIR=$(readlink -f "$SELF_RELATIVE_DIR")
+    SELF_ABSOLUTE_DIR=`readlink -f "$SELF_RELATIVE_DIR"` # 当前 脚本文件，所在的绝对路径
+
+    export PYTHONPATH=$PYTHONPATH:$SELF_ABSOLUTE_DIR
+
+
+    #python $1
+    ipython 
+
+
+
 apt-get install时如何指定安装版本
 -----------------------------------
 
