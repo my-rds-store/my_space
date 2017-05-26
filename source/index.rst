@@ -10,6 +10,8 @@ Welcome to onepice's documentation!
 
 夏目友人帐
 
+http://www.filehorse.com/download-realtek-high-definition-audio-xp/
+
 
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
 
