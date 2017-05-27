@@ -23,6 +23,10 @@ vim 技巧
 
 `Using Vim as IDE for Python <http://christian.sterzl.info/blog/vim-as-ide-for-python>`_
 
+
+`UltiSnips vim 代码块 <http://mednoter.com/UltiSnips.html>`_
+
+
 `vim 与 Markdown <http://www.jianshu.com/p/fa8c56e1aa52>`_  
 
 
@@ -33,6 +37,7 @@ vim 技巧
 `一个小博客教你把vim用飞起来 <http://www.cnblogs.com/songfy/p/5635757.html>`_
 
 `VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
+
 
 
 YouCompleteMe
