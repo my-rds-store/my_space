@@ -19,7 +19,7 @@ Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分�
 
     .. code-block:: sh
 
-        $ sudo swapoff -a && swapon -a
+        $ sudo swapoff -a && sudo swapon -a
 
 关闭SWAP
     在内存大于2G时候，一般情况下可以关闭
