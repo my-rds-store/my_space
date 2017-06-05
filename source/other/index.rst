@@ -145,10 +145,10 @@ amixer
 
 .. code-block:: sh
 
-$ amixer set "Capture" 100%
+    $ amixer set "Capture" 100%
 
-$ amixer set "Front Mic Boost" 53%
-$ amixer set "Rear Mic Boost" 53%
+    $ amixer set "Front Mic Boost" 53%
+    $ amixer set "Rear Mic Boost" 53%
 
 `alsamixer设置默认声卡及调节音量保存配置 <http://www.it165.net/os/html/201212/4118.html>`_
 
