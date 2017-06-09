@@ -33,6 +33,7 @@ http://man.linuxde.net/rename
    pycharm/remote_debug
    docker/index
    database/mysql
+   qt/index
    other/index
 
 

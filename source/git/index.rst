@@ -4,6 +4,7 @@ git 使用总结
 
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
+* `码云平台帮助文档　<http://git.mydoc.io/>`_
 
 
 * `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
