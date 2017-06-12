@@ -32,6 +32,30 @@ INSTALL
     $ sudo pip install sphinx_rtd_theme==0.2.4  -i https://pypi.mirrors.ustc.edu.cn/simple
 
 
+建立sphinx工程
+--------------
+
+.. code-block:: sh
+
+    $ phinx-quickstart
+
+    $ echo "build/" >> .gitignore
+
+
+.. code-block:: sh
+
+    > Separate source and build directories (y/n) [n]: y
+
+修改 conf.py
+
+.. code-block:: python
+
+    language = "zh_CN"
+
+    html_theme = 'sphinx_rtd_theme'
+
+
+
 代码
 ----------
 
