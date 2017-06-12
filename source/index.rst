@@ -34,6 +34,7 @@ http://man.linuxde.net/rename
    docker/index
    database/mysql
    qt/index
+   android/index
    other/index
 
 
