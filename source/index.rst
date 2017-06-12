@@ -19,7 +19,7 @@ http://man.linuxde.net/rename
 
 
 270 
-    http://vdisk.weibo.com/s/zS1BDve_o-v9e
+    https://tieba.baidu.com/p/4029180251
 
 .. toctree::
    :maxdepth: 2
