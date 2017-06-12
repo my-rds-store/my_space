@@ -21,6 +21,7 @@ reStructuredText 语法
 * `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
 * `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
 * `A ReStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_
+* `sphinx-doc <http://www.sphinx-doc.org/en/stable/index.html>`_
 
 INSTALL
 -------
