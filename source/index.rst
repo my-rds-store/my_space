@@ -34,10 +34,9 @@ http://man.linuxde.net/rename
    docker/index
    database/mysql
    qt/index
+   dnsmasq/index
    android/index
    other/index
-
-
 
 ..
  我是注释内容
