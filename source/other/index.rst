@@ -148,9 +148,25 @@ amixer
     $ amixer set "Capture" 100%
 
     $ amixer set "Front Mic Boost" 53%
-    $ amixer set "Rear Mic Boost" 53%
+    $ amixer set "Rear Mic Boost"  53%
 
 `alsamixer设置默认声卡及调节音量保存配置 <http://www.it165.net/os/html/201212/4118.html>`_
+
+
+nmcli命令
+-----------
+
+`2.3.使用 NETWORKMANAGER 命令行工具 NMCLI <https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/sec-Using_the_NetworkManager_Command_Line_Tool_nmcli.html>`_
+
+
+.. code:: sh
+
+    $ nmcli help
+    $ nmcli c help
+
+    $ nmcli con show
+    $ nmcli dev show eth0
+
 
 
 	
