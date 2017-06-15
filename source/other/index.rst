@@ -168,6 +168,12 @@ nmcli命令
     $ nmcli dev show eth0
 
 
+查询含有 *\*rdma.so* 的rpm 包
+--------------------------------
+
+.. code:: sh
+
+    yum provides *rdma.so
 
 	
 问题
