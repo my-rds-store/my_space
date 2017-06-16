@@ -8,7 +8,12 @@ Welcome to onepice's documentation!
 
 |today|
 
-夏目友人帐
+
+`搬瓦工 <https://bwh1.net/>`_
+
+`必应 <http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us#>`_
+
+`Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
 
 http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 
