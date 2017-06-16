@@ -175,6 +175,8 @@ nmcli命令
 
     yum provides *rdma.so
 
+Fedora 开启SSH服务
+   https://my.oschina.net/atttx123/blog/58100 
 	
 问题
 --------
