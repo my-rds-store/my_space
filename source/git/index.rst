@@ -14,7 +14,6 @@ git 使用总结
 
 `gitlab docker 镜像 <https://hub.docker.com/r/sameersbn/gitlab/>`_
 
-
 .. code-block:: sh
 
     $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git
@@ -26,6 +25,13 @@ OR
     $ git clone https://github.com/Valloric/YouCompleteMe.git  
     $ cd crfasrnn  
     $ git submodule update --init --recursive 
+
+
+Git 修改commit 备注信息
+    .. code-block:: sh
+
+        git commit --amend
+
 
 子模块
 ---------
