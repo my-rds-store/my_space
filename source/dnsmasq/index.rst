@@ -66,6 +66,9 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
 .. code-block:: sh
 
+    $ sudo netstat -anlp | grep ":53 "  # 查看53端口,是否占用
+    $ sudo netstat -anlp | grep -w LISTEN | grep ":53 "
+
     $ dnsmasq --test             # 测试配置是正确
     $ systemctl restart dnsmasq  # 重启dnsmasq服务
     $ systemctl status dnsmasq   # 查看 dnsmasq 服务状态
