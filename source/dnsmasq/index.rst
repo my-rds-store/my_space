@@ -1,5 +1,5 @@
 ##########
-dnsmasq
+Dnsmasq
 ##########
 
 *  邮箱
@@ -69,8 +69,8 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
     $ sudo netstat -anlp | grep ":53 "  # 查看53端口,是否占用
     $ sudo netstat -anlp | grep -w LISTEN | grep ":53 "
 
-    $ dnsmasq --test             # 测试配置是正确
-    $ systemctl restart dnsmasq  # 重启dnsmasq服务
-    $ systemctl status dnsmasq   # 查看 dnsmasq 服务状态
-    $ nslookup jiangxumin.com
+    $ sudo dnsmasq --test             # 测试配置是正确
+    $ sudo systemctl restart dnsmasq  # 重启dnsmasq服务
+    $ sudo systemctl status dnsmasq   # 查看 dnsmasq 服务状态
+    $ sudo nslookup  jiangxumin.com
 
