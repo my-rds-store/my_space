@@ -96,6 +96,13 @@ Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分�
 
         $ telnet 192.168.5.204 5900 
 
+#. 查看当前使用的端口
+
+    .. code-block:: sh
+
+       $ netstat -anlp | grep -w LISTEN
+       $ netstat -aunp      # udp
+
 
 CenterOS
 ------------

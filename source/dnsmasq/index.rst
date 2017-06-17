@@ -15,6 +15,9 @@ DNS服务
 ---------
 http://374400.blog.51cto.com/364400/1428126/
 
+https://wiki.debian.org/HowTo/dnsmasq
+https://manpages.debian.org/jessie/dnsmasq-base/dnsmasq.8.en.html
+
 http://www.yunweipai.com/archives/8664.html
 http://chuansong.me/n/471642951828
 http://debugo.com/dnsmasq/
@@ -29,32 +32,42 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
 .. code::
 
-    #port=5353
-    resolv-file=/etc/dnsmasq.resolv.conf
-    strict-order
     user=root
-    listen-address=172.17.0.2,127.0.0.1
-    #no-dhcp-interface=eth0
-    bind-dynamic
-    no-hosts
-    addn-hosts=/etc/dns_add_hosts
-    cache-size=5000
+    interface=br0
+    #except-interface=    #不想监听
+    listen-address=192.168.5.204,127.0.0.1
+    no-dhcp-interface=br0  # br0禁止dhcp服务
+
+    strict-order
+    all-servers   #发起查询,选择回应最快的一条作为查询结果返回
+    resolv-file=/etc/dnsmasq.resolv.conf  # 配置Dnsmasq其他指向的DNS服务器
+
+    no-hosts   # 不想使用/etc/hosts
+    addn-hosts=/etc/dns_add_hosts   # 存放域名解析列表
+
+    cache-size=5000  # 设置dns缓存大小,默认为150条
 
 **cat /etc/dns_add_hosts**
 
 .. code::
 
-    124.133.33.114 mcabc.com
-    58.56.27.130   mcgit
+    58.56.27.130 mcgit.com
+    192.168.2.3  jiangxumin.com
+    124.133.33.114 mcedu.com
+
 
 **cat /etc/dnsmasq.resolv.conf**
 
 .. code::
 
     nameserver 114.114.114.114
+    nameserver 180.76.76.76
     nameserver 8.8.8.8
 
 .. code-block:: sh
 
-    $ nslookup mcabc.com
+    $ dnsmasq --test             # 测试配置是正确
+    $ systemctl restart dnsmasq  # 重启dnsmasq服务
+    $ systemctl status dnsmasq   # 查看 dnsmasq 服务状态
+    $ nslookup jiangxumin.com
 
