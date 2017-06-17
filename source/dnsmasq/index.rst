@@ -51,9 +51,10 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
 .. code::
 
-    58.56.27.130 mcgit.com
-    192.168.2.3  jiangxumin.com
+    58.56.27.130   mcgit.com
+    192.168.2.3    jiangxumin.com
     124.133.33.114 mcedu.com
+    192.168.5.166  ftp.jiangxumin.com
 
 
 **cat /etc/dnsmasq.resolv.conf**

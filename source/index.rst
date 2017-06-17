@@ -8,24 +8,6 @@ Welcome to onepice's documentation!
 
 |today|
 
-
-`搬瓦工 <https://bwh1.net/>`_
-
-`必应 <http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us#>`_
-
-`Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
-
-http://www.filehorse.com/download-realtek-high-definition-audio-xp/
-
-
-`各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
-
-http://man.linuxde.net/rename
-
-
-270 
-    https://tieba.baidu.com/p/4029180251
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -42,6 +24,26 @@ http://man.linuxde.net/rename
    dnsmasq/index
    android/index
    other/index
+
+
+
+`搬瓦工 <https://bwh1.net/>`_
+
+`必应global <http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us#>`_
+
+`Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
+
+http://www.filehorse.com/download-realtek-high-definition-audio-xp/
+
+
+`各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
+
+http://man.linuxde.net/rename
+
+
+270 
+    https://tieba.baidu.com/p/4029180251
+
 
 ..
  我是注释内容
