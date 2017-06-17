@@ -61,6 +61,8 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
 .. code::
 
+    nameserver 223.5.5.5
+    nameserver 223.6.6.6
     nameserver 114.114.114.114
     nameserver 180.76.76.76
     nameserver 8.8.8.8
