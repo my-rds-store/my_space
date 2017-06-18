@@ -42,6 +42,8 @@ gradle
 https://jcenter.bintray.com/com/android/tools/build/
 
 
+`Android studio 关闭 初次启动更新 <http://blog.csdn.net/wyl_1994/article/details/52353647>`_
+
 
 Android SDK 在线更新镜像服务器资源
 -----------------------------------
