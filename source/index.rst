@@ -23,6 +23,7 @@ Welcome to onepice's documentation!
    qt/index
    dnsmasq/index
    android/index
+   openbox/index
    other/index
 
 
