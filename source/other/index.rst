@@ -210,3 +210,10 @@ Fedora 开启SSH服务
 .. raw:: html
 
     <iframe height=498 width=510 src='http://player.youku.com/embed/XMzcyNzAyODAw' frameborder=0 'allowfullscreen'></iframe>
+
+.. raw:: html
+
+    <video width="638" height="478" controls>
+        <source src="http://github.liaoxuefeng.com/sinaweibopy/video/git-apt-install.mp4">
+    </video>
+
