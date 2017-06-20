@@ -9,6 +9,19 @@ openbox
 1. Install
 ^^^^^^^^^^^^^^^^^^
 
+主要安装如下几个包，以及其所依赖的包。
+
+* adobe-flashplugin
+* chromium-browser 
+* ibus
+* ibus-gtk
+* ibus-gtk3
+* ibus-pinyin
+* ibus-googlepinyin
+* ibus-clutter
+* im-config
+* dbus-x11
+
 .. code:: sh
 
    $ sudo tar xzvf  chrome_and_pinyin.tgz 
