@@ -214,6 +214,10 @@ Fedora 开启SSH服务
 
     <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/adding-a-video-in-mediadrop/embed_player"></iframe>
 
+------
+
+插入youku视频
+
 .. raw:: html
 
     <embed src='http://player.youku.com/player.php/sid/XMjc2ODQzNTcwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
@@ -224,7 +228,38 @@ Fedora 开启SSH服务
 
 .. raw:: html
 
+    <iframe height=498 width=510 src="http://player.youku.com/embed/XMjgzODg5NzYwNA==?client_id=undefined" frameborder=0 allowfullscreen></iframe>
+
+------
+
+插入github 视频
+
+.. raw:: html
+
     <video width="638" height="478" controls>
         <source src="http://github.liaoxuefeng.com/sinaweibopy/video/git-apt-install.mp4">
     </video>
+
+
+------
+
+插入gitliab 视频
+
+.. raw:: html
+
+    <video width="638" height="478" controls>
+        <source src="http://58.56.27.130:800/jiang_xmin/videos/raw/master/test/LakePowell_Thunderstorms_nimiaRM_4471864_062_1080_HD_ZH-CN.mp4">
+    </video>
+
+-------
+
+插入百度云盘
+
+.. raw:: html
+
+    <video width="638" height="478" controls>
+        <source src="https://d11.baidupcs.com/file/c3f114b8af0538d6115cb999c203bc5f?bkt=p3-0000704efb1fbe3f09ed4973db1154656483&xcode=818c9e935f798db6570eaae746598dd0bfa3efe48b5ae2b70b2977702d3e6764&fid=705205442-250528-55740032843716&time=1498015007&sign=FDTAXGERLBHS-DCb740ccc5511e5e8fedcff06b081203-2E7ZycCw1sxqN%2FzX%2BiT%2BOeA9IUQ%3D&to=d11&size=452161518&sta_dx=452161518&sta_cs=5604&sta_ft=mp4&sta_ct=7&sta_mt=5&fm2=MH,Yangquan,Netizen-anywhere,,shandong,ct&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000704efb1fbe3f09ed4973db1154656483&sl=83099727&expires=8h&rt=sh&r=376250870&mlogid=3976873212576580908&vuk=705205442&vbdid=2939017377&fin=%E5%93%88%E5%B0%94%E7%9A%84%E7%A7%BB%E5%8A%A8%E5%9F%8E%E5%A0%A1.mp4&fn=%E5%93%88%E5%B0%94%E7%9A%84%E7%A7%BB%E5%8A%A8%E5%9F%8E%E5%A0%A1.mp4&rtype=1&iv=0&dp-logid=3976873212576580908&dp-callid=0.1.1&hps=1&csl=299&csign=aH32eCyhXT%2FyKiSSRhPc3C7xP2o%3D&by=themis">
+    </video>
+
+
 
