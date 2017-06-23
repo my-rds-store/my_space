@@ -34,8 +34,8 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
     user=root
     interface=br0
-    #except-interface=    #不想监听
-    listen-address=192.168.5.204,127.0.0.1
+    except-interface=virbr0,lo   #不想监听
+    #listen-address=192.168.5.204,127.0.0.1
     no-dhcp-interface=br0  # br0禁止dhcp服务
 
     strict-order
