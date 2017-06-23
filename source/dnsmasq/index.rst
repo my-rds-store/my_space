@@ -77,3 +77,5 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
     $ sudo systemctl status dnsmasq   # 查看 dnsmasq 服务状态
     $ sudo nslookup  jiangxumin.com
 
+    $ sudo dnsmasq  -C /etc/dnsmasq.conf  # 启动dnsmasq 进程 指定配置文件
+
