@@ -10,7 +10,9 @@ mingw编译gtk
 
 `Hello World program using GTK+ <http://mingw-cross.sourceforge.net/hello_gtk.html>`_
 
+------------------------
 
+`不要这样学习JavaScript <http://blog.crimx.com/2014/05/15/how-to-learn-javascript-properly/#不要这样学习JavaScript>`_
 
 ------------------------
 
