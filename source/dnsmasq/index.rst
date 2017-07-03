@@ -34,8 +34,8 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
     user=root
     interface=br0
-    #except-interface=    #不想监听
-    listen-address=192.168.5.204,127.0.0.1
+    except-interface=virbr0,lo   #不想监听
+    #listen-address=192.168.5.204,127.0.0.1
     no-dhcp-interface=br0  # br0禁止dhcp服务
 
     strict-order
@@ -51,10 +51,10 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
 
 .. code::
 
-    58.56.27.130   mcgit.com
-    192.168.2.3    jiangxumin.com
-    124.133.33.114 mcedu.com
-    192.168.5.166  ftp.jiangxumin.com
+    58.56.27.130   mcgit.net
+    192.168.2.3    jiangxumin.net
+    124.133.33.114 mcedu.net
+    192.168.5.166  ftp.jiangxumin.net
 
 
 **cat /etc/dnsmasq.resolv.conf**
@@ -76,4 +76,6 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
     $ sudo systemctl restart dnsmasq  # 重启dnsmasq服务
     $ sudo systemctl status dnsmasq   # 查看 dnsmasq 服务状态
     $ sudo nslookup  jiangxumin.com
+
+    $ sudo dnsmasq  -C /etc/dnsmasq.conf  # 启动dnsmasq 进程 指定配置文件
 

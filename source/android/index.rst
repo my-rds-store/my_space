@@ -73,3 +73,19 @@ Android SDK 在线更新镜像服务器资源
     $HOME/.gradle/wrapper/dists/gradle-4.0-milestone-1-all/2rnr7rhi2zsmkxo9re7615fy6/gradle-4.0-milestone-1
     /home/jxm/.gradle/wrapper/dists/gradle-4.0-milestone-1-all/2rnr7rhi2zsmkxo9re7615fy6/gradle-4.0-milestone-1-all.zip
 
+
+
+修改vim快捷键
+-------------
+
+File->Settings->Other Settings->Vim Emulation
+
+.. image:: ./images/overrideMethod.png 
+       :scale: 100%
+       :alt: alternate text
+       :align: center
+
+Select Methods to Override/Implement
+
+
+
