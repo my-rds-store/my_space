@@ -38,7 +38,7 @@ INSTALL
 
 .. code-block:: sh
 
-    $ phinx-quickstart
+    $ sphinx-quickstart
 
     $ echo "build/" >> .gitignore
 
