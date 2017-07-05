@@ -1,6 +1,8 @@
 graphviz 画图
 ==================
 
+`Using PlantUML <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.html>`_
+
 INSTALL
 -----------
 

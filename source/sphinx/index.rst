@@ -23,6 +23,8 @@ reStructuredText 语法
 * `A ReStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_
 * `sphinx-doc <http://www.sphinx-doc.org/en/stable/index.html>`_
 
+* `放到git page <http://lucasbardella.com/blog/2010/02/hosting-your-sphinx-docs-in-github>`_
+
 INSTALL
 -------
 
@@ -60,12 +62,29 @@ INSTALL
 代码
 ----------
 
+`使用Sphinx,显示代码 <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html>`_
+
+`Showing code examples <http://www.sphinx-doc.org/en/stable/markup/code.html#directive-highlight>`_
+
+`highlighting language  <http://pygments.org/docs/lexers/>`_
+
 .. code-block:: rst
 
         .. code-block:: sh
 
                 #!/bin/sh
                 echo "hello world"
+
+
+.. code-block:: rst
+
+    .. literalinclude:: filename
+       :linenos:
+       :language:
+       :lines:
+       :start-after:
+       :end-before:
+       :emphasize-lines:
 
 图片
 -------------
