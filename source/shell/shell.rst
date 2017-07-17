@@ -1,17 +1,56 @@
+##############
 Shell 实用技巧
-===================
+##############
+
+split分割文件
+-------------
+
+http://blog.csdn.net/whu_zhangmin/article/details/45870077
+
+.. code-block:: bash
+
+    $ split -b 4000M -d -a 1 cm-11.tar.gz cm-11.tar.gz.
+
+    # 使用split命令，-b 4000M 表示设置每个分割包的大小，单位还是可以k
+    #  -d "参数指定生成的分割包后缀为数字的形式
+    # -a x来设定序列的长度(默认值是2)，这里设定序列的长度为1
+
+
+
+执行命令后，生成压缩包如下：
+
+.. code:: 
+
+    -rw-r--r--  1 root     root      4194304000 May 20 14:00 cm-11.tar.gz.0
+    -rw-r--r--  1 root     root      4194304000 May 20 14:02 cm-11.tar.gz.1
+    -rw-r--r--  1 root     root      4194304000 May 20 14:03 cm-11.tar.gz.2
+    -rw-r--r--  1 root     root      4194304000 May 20 14:05 cm-11.tar.gz.3
+    -rw-r--r--  1 root     root      4194304000 May 20 14:06 cm-11.tar.gz.4
+    -rw-r--r--  1 root     root      4194304000 May 20 14:08 cm-11.tar.gz.5
+    -rw-r--r--  1 root     root      4194304000 May 20 14:09 cm-11.tar.gz.6
+    -rw-r--r--  1 root     root      2256379886 May 20 14:10 cm-11.tar.gz.7
+
+
+合并文件
+--------
+
+
+.. code-block:: bash
+
+    $ cat cm-11.tar.gz.* > cm-11.tar.gz
+
 
 
 tar 打包
 ---------------
 
-.. code-block:: sh
+.. code-block:: bash
 
-    tar czvf test.tar.gz *         # 压缩当前文件夹下非隐藏文件的文件
-    tar czvf ../abc.tgz  .[!.]* *  # 压缩当前文件夹下所有文件,排除两个隐藏文件夹"."和“..”
+    $ tar czvf test.tar.gz *         # 压缩当前文件夹下非隐藏文件的文件
+    $ tar czvf ../abc.tgz  .[!.]* *  # 压缩当前文件夹下所有文件,排除两个隐藏文件夹"."和“..”
 
 shell 文件所在路径
------------------------------------
+----------------------------
 
 .. code-block:: sh
 
@@ -200,4 +239,15 @@ gdialog
     gdialog --title "msgbox" --msgbox "$text========" $height $width 
     gdialog --title "radiolist" --radiolist "$text" $height $width 2 "1" "aaaa" "on" "2" "bbbb" "off"
     gdialog --title "yesno" --yesno "$text" $height $widch
+
+
+
+Linux平台下的service程序编写指南
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+C
+    http://blog.csdn.net/gobitan/article/details/5903342
+python
+    http://blog.csdn.net/philip502/article/details/13511625
+    https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
 
