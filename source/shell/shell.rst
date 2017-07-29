@@ -2,6 +2,13 @@
 Shell 实用技巧
 ##############
 
+
+常用命令
+--------
+
+    http://blog.csdn.net/jxm_csdn/article/details/52234267
+
+
 split分割文件
 -------------
 
@@ -37,7 +44,6 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
 
 .. code-block:: bash
 
-    $ cat cm-11.tar.gz.* > cm-11.tar.gz
 
 
 

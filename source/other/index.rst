@@ -20,6 +20,15 @@ mingw编译gtk
 * `virtualenv搭建虚拟环境 <http://www.cnblogs.com/kym/archive/2011/12/29/2306428.html>`_
 
 
+patch
+-----
+
+* `linux patch 命令小结 <http://blog.csdn.net/wh_19910525/article/details/7515540>`_
+* `patch 命令用法详解 <http://blog.csdn.net/clozxy/article/details/5830880>`_
+* `二进制patch工具xdelta的使用方法 <http://blog.csdn.net/panda_bear/article/details/8191859/>`_
+
+
+
 SPAW 分区
 -------------
 
@@ -195,6 +204,19 @@ nmcli命令
 
 Fedora 开启SSH服务
    https://my.oschina.net/atttx123/blog/58100 
+
+
+vmware 问题
+-----------
+
+
+http://www.jianshu.com/p/df30c0c3889b
+
+https://communities.vmware.com/thread/552232
+
+`Download VMware-Player-12.5.2-4638234_Linux-4.9_patch.sh <https://communities.vmware.com/servlet/JiveServlet/download/2647089-168790/VMware-Player-12.5.2-4638234_Linux-4.9_patch.sh>`_
+
+* `最新版本 vmware workstation <https://www.vmware.com/cn/products/workstation/workstation-evaluation.html>`_
 	
 问题
 --------
@@ -215,6 +237,11 @@ Fedora 开启SSH服务
     <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/adding-a-video-in-mediadrop/embed_player"></iframe>
 
 ------
+
+.. raw:: html
+
+    <iframe src="http://www.google.cn/maps/embed?pb=!1m14!1m12!1m3!1d11676.277536269174!2d117.22922223214272!3d36.730209801497175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1szh-CN!2scn!4v1501312245008" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 
 插入youku视频
 
