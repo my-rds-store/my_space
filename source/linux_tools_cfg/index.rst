@@ -170,9 +170,30 @@
         $ sudo  systemctl restart vsftpd
 
 
-四). Centos 7 网络配置
-=========================
+四). 挂载Ftp目录(Ubuntu 14.04)
+==================================
 
+1). 安装curlftpfs
+-------------------
+
+    .. code-block:: sh
+
+        $ sudo apt-get install  curlftpfs  
+
+
+2). 挂载
+-------------
+    .. code-block:: sh
+
+        $ sudo curlftpfs -o codepage=gbk  ftp://username:password@192.168.8.25   /mnt  
+
+        $ sudo curlftpfs -o codepage=utf-8 ftp://username:password@192.168.8.25/public /mnt
+
+
+
+
+五). Centos 7 网络配置
+=========================
 
 `1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
    
