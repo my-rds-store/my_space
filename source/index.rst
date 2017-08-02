@@ -24,6 +24,7 @@ Welcome to onepice's documentation!
    dnsmasq/index
    android/index
    openbox/index
+   linux_tools_cfg/index
    other/index
 
 
