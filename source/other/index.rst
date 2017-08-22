@@ -246,6 +246,16 @@ https://communities.vmware.com/thread/552232
 
 插入youku视频
 
+
+.. raw:: html
+
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="325"><param name="movie" value="http://v.ifeng.com/include/exterior.swf?guid=95a6f52b-89d1-4e61-8f17-faecb03b809b&pageurl=http://www.ifeng.com&fromweb=other&AutoPlay=false" /><param name="quality" value="high" /><param name="allowScriptAccess" value="always" /><embed src="http://v.ifeng.com/include/exterior.swf?guid=95a6f52b-89d1-4e61-8f17-faecb03b809b&pageurl=http://www.ifeng.com&fromweb=other&AutoPlay=false" quality="high"  allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="325"></embed></object>
+
+
+.. raw:: html
+
+    <embed src='http://player.youku.com/player.php/sid/XMjYyMjk4MDYwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+
 .. raw:: html
 
     <embed src='http://player.youku.com/player.php/sid/XMjc2ODQzNTcwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>

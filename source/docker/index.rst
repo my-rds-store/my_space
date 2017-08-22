@@ -117,6 +117,8 @@ https://dev.aliyun.com/search.html
  
         $ sudo docker run -d -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh
 
+        $ sudo docker run exec -it myspace_test_v4 /bin/bash
+
 ``守护态运行``
 """"""""""""""
 
@@ -187,7 +189,6 @@ https://dev.aliyun.com/search.html
         $ sudo docker port {CONTAINER ID}
         $ sudo docker port {CONTAINER ID}  80
 
-
 数据卷
 -------------
 
@@ -214,7 +215,6 @@ https://dev.aliyun.com/search.html
     .. code-block:: sh
         
         $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
-
 
 Dockerfile
 -----------

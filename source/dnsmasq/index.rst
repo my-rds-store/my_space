@@ -2,6 +2,17 @@
 Dnsmasq
 ##########
 
+
+Install
+=======
+
+
+ 
+ .. code-block:: bash
+
+    $ sudo yum install dnsmasq 
+
+
 *  邮箱
 * `利用Dnsmasq部署DNS服务 <http://www.yunweipai.com/archives/8664.html>`_
 * `Dnsmasq(简体中文) <https://wiki.archlinux.org/index.php/Dnsmasq_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>`_
@@ -78,4 +89,19 @@ https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
     $ sudo nslookup  jiangxumin.com
 
     $ sudo dnsmasq  -C /etc/dnsmasq.conf  # 启动dnsmasq 进程 指定配置文件
+
+DHCP服务
+-------------
+
+.. code-block:: bash
+
+    interface=br0
+    bind-dynamic
+    dhcp-range=192.168.106.1,192.168.106.240,1h
+    dhcp-option=1,255.255.255.0
+    dhcp-option=3,192.168.106.254
+    dhcp-option=6,114.114.114.114,
+    dhcp-leasefile=/var/lib/dnsmasq/dnsmasq.leases
+
+
 

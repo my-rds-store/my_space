@@ -37,6 +37,13 @@
 
         $ showmount -e 127.0.0.1 
 
+**查看挂载**
+    
+    .. code-block:: bash
+        
+        $ sudo df -Th
+    
+
 2). NFS Client
 --------------
 
@@ -197,3 +204,15 @@
 
 `1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
    
+.. code::
+
+    TYPE=Ethernet
+    DEVICE=enp2s0
+    ONBOOT=yes
+    BOOTPROTO=static
+    IPADDR=192.168.8.25
+    NETMASK=255.255.255.0
+    GATEWAY=192.168.8.254
+    DNS1=114.114.114.114
+    DNS2=180.76.76.76
+
