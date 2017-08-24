@@ -8,6 +8,13 @@ Shell 实用技巧
 
     http://blog.csdn.net/jxm_csdn/article/details/52234267
 
+修改文件名 rename
+-----------------
+
+http://man.linuxde.net/rename
+
+
+
 
 split分割文件
 -------------
