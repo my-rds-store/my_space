@@ -28,5 +28,8 @@
 参考 `The build configuration file <http://www.pythondoc.com/sphinx/config.html>`_。   
 
 
+* 主题 
+
+    http://www.writethedocs.org/guide/tools/sphinx-themes/
 
 
