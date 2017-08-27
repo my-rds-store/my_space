@@ -3,10 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to onepice's documentation!
+
+《诗歌》
 ===================================
 
 |today|
+
+
+    聂鲁达
+
+
+::
+
+    我简直无以言表，我 
+    瞠目结舌 
+    我头脑发热或羽翼失修 
+    而使灵魂有点蠢动 
+    我一意孤行 
+    去诠释那团火 
+    我记下第一行苍白文字 
+    变态的、空洞无物、纯粹 
+    的痴言乱语、一整个无知者的 
+    终极智慧 
+    而忽然间我瞥见 
+    天堂之锁开启 
+    诸多星辰、离离草木 
+    镶边的幻影 
+    迷一般地 
+    与箭、火焰和花丛 
+    以及寥廓长夜、寰宇浑然一体 
+
 
 .. toctree::
    :maxdepth: 2
@@ -45,11 +71,6 @@ http://man.linuxde.net/rename
 
 270 
     https://tieba.baidu.com/p/4029180251
-
-
-.. raw:: html
-
-	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=413961293&auto=1&height=66"></iframe>
 
 ..
  我是注释内容
