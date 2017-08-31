@@ -2,6 +2,11 @@
 Shell 实用技巧
 ##############
 
+ssh 无密码登录
+--------------------
+
+http://blog.csdn.net/zhaihaifei/article/details/50523576
+
 
 常用命令
 --------
@@ -12,8 +17,6 @@ Shell 实用技巧
 -----------------
 
 http://man.linuxde.net/rename
-
-
 
 
 split分割文件

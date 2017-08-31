@@ -20,6 +20,8 @@ Mysql
 
     $ mysql -h localhost -u root -p
 
+    $ mysql -h localhost -u root -p -P 8306  # 指定端口号
+
 
 ``数据库操作``
 ------------------

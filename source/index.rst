@@ -45,6 +45,7 @@
    sphinx/index
    pycharm/remote_debug
    docker/index
+   vagrant/index
    database/mysql
    qt/index
    dnsmasq/index
