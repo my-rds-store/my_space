@@ -2,6 +2,14 @@ Mysql
 ================
 
 
+
+.. code-block:: bash
+
+    $ sudo docker pull mariadb
+
+    $ sudo docker run --name some-mariadb -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag
+
+
 `MySQL 5.1参考手册 <http://www.shouce.ren/api/mysql/5/#>`_
 `MySQL 教程 <http://www.shouce.ren/api/view/a/6106>`_
 
