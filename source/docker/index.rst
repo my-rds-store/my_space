@@ -238,5 +238,6 @@ Other
 
 * `使用官方 docker registry 搭建私有镜像仓库及部署 web ui <http://blog.csdn.net/mideagroup/article/details/52052618>`_
 
-
+* https://hub.docker.com/r/hyper/docker-registry-web
+* https://github.com/kwk/docker-registry-frontend
 
