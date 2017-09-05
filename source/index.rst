@@ -48,6 +48,7 @@
    docker/index
    vagrant/index
    database/mysql
+   database/sqlite
    qt/index
    dnsmasq/index
    android/index
