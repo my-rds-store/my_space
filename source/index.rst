@@ -41,6 +41,7 @@
    qemu_libvirt/qemu
    vim/vim
    git/index
+   python/index
    shell/shell
    sphinx/index
    pycharm/remote_debug

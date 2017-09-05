@@ -7,6 +7,8 @@ Qt学习
 PyQt4
     `Nullege is a search engine for Python source code <http://nullege.com/>`_
 
+QMultimedia
+    QCamera
 
 .. raw:: html
 

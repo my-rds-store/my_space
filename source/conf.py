@@ -40,8 +40,13 @@ extensions = ['sphinx.ext.autodoc',
      'sphinx.ext.ifconfig',
      'sphinx.ext.viewcode',
      'sphinx.ext.githubpages',
-     'sphinx.ext.graphviz',  ### graphviz画图插
+     'sphinx.ext.graphviz'   ### graphviz画图插
      ]
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if on_rtd:
+    extensions.append('chinese_search')
 
 
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
