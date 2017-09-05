@@ -17,7 +17,7 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import os
-import sys
+#import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -42,12 +42,6 @@ extensions = ['sphinx.ext.autodoc',
      'sphinx.ext.githubpages',
      'sphinx.ext.graphviz'   ### graphviz画图插
      ]
-
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-if on_rtd:
-    extensions.append('chinese_search')
-
 
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # if on_rtd:
@@ -370,8 +364,4 @@ graphviz_dot_args = ['-Gfontname=Georgia',
                      '-Efontname=Georgia']
 # 输出格式，默认png，这里我用svg矢量图
 graphviz_output_format = 'svg'
-
-
-_exts = "../exts"
-sys.path.append(os.path.abspath(_exts))
 
