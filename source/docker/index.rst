@@ -1,6 +1,7 @@
 Docker 学习
 ===================
 
+
 安装docker  
 ------------
 
@@ -229,4 +230,13 @@ Dockerfile
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
 * `把镜像推送到阿里云 <https://ninghao.net/video/3780>`_
 * `Running GUI apps with Docker <http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/?utm_source=tuicool&utm_medium=referral>`_ 
+
+
+
+Other
+-----------
+
+* `使用官方 docker registry 搭建私有镜像仓库及部署 web ui <http://blog.csdn.net/mideagroup/article/details/52052618>`_
+
+
 
