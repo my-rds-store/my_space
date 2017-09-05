@@ -372,3 +372,6 @@ graphviz_dot_args = ['-Gfontname=Georgia',
 graphviz_output_format = 'svg'
 
 
+_exts = "../exts"
+sys.path.append(os.path.abspath(_exts))
+
