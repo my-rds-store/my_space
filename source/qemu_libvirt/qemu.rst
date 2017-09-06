@@ -4,6 +4,8 @@ qemu命令总结
 .. image:: ./Qemu-logo-small.png
    :scale: 60%
    
+virsh 与 qemu-img
+----------------------
 
 #. **spice端口**
 
@@ -11,8 +13,6 @@ qemu命令总结
                 
            netstat -ntpl | grep qemu
            virsh domdisplay --type spice {Id or Name}
-
-
 
 
 #. **创建镜像**
@@ -41,6 +41,23 @@ qemu命令总结
 
             qemu-img resize source.qcow2 +10G
 
+
+磁盘
+------
+
+.. code-block:: bash
+
+    # ubuntu 14
+    $ sudo apt-get install libguestfs-tools
+ 
+    # centos 7
+    $ yum install libguestfs-winsupport  # ntfs
+    $ yum install libguestfs-tools       # virt-format
+
+.. code-block:: bash
+
+    $ sudo qemu-img create -f qcow2 disk 20G
+    $ sudo virt-format --filesystem ntfs -a disk.qcow2
 
 
 
