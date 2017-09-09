@@ -75,6 +75,9 @@ http://man.linuxde.net/rename
 270 
     https://tieba.baidu.com/p/4029180251
 
+Ubuntu 源
+    https://wiki.ubuntu.com.cn/%E6%BA%90%E5%88%97%E8%A1%A8
+
 ..
  我是注释内容
  你看不到我
