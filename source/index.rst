@@ -78,6 +78,12 @@ http://man.linuxde.net/rename
 Ubuntu 源
     https://wiki.ubuntu.com.cn/%E6%BA%90%E5%88%97%E8%A1%A8
 
+.. code-block:: bash
+
+    # ubuntu 14.04
+    $ grep "archive.ubuntu.com" /etc/apt/sources.list && \
+    sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
+
 ..
  我是注释内容
  你看不到我
