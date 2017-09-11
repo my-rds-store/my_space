@@ -62,7 +62,6 @@ INSTALL
     html_theme = 'sphinx_rtd_theme'
 
 
-
 代码
 ----------
 
@@ -117,4 +116,11 @@ INSTALL
         .. raw:: html
            :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
 
+
+ReadTheDocs 私有部署搭建安装
+----------------------------
+
+.. literalinclude:: ./rtd_local_install.sh
+    :language: bash
+    :encoding: utf-8
 
