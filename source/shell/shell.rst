@@ -267,3 +267,14 @@ python
     http://blog.csdn.net/philip502/article/details/13511625
     https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
 
+
+磁盘IO 查看
+~~~~~~~~~~~~~~~
+
+http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
+
+.. code-block:: bash
+    
+     $ iostat -d -x -k 1   
+
+
