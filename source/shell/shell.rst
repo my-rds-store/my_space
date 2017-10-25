@@ -13,6 +13,9 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 
     http://blog.csdn.net/jxm_csdn/article/details/52234267
 
+    `我使用过的Linux命令之trap - 在脚本中处理信号 <http://blog.csdn.net/world_hello_100/article/details/18049599>`_
+
+
 修改文件名 rename
 -----------------
 
