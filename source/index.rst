@@ -9,7 +9,6 @@
 
 |today|
 
-
     聂鲁达 
     ::
 
@@ -56,33 +55,51 @@
    linux_tools_cfg/index
    other/index
 
-
-
 `搬瓦工 <https://bwh1.net/>`_
 
 `必应global <http://global.bing.com/?FORM=HPCNEN&setmkt=en-us&setlang=en-us#>`_
 
-`Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
 
 http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 
 
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
 
-http://man.linuxde.net/rename
-
-
-270 
+动漫死神 
     https://tieba.baidu.com/p/4029180251
 
-Ubuntu 源
-    https://wiki.ubuntu.com.cn/%E6%BA%90%E5%88%97%E8%A1%A8
+源列表
+-------
+
+`Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
+
+Ubuntu 源列表
+    `官方源列表 <https://wiki.ubuntu.com.cn/%E6%BA%90%E5%88%97%E8%A1%A8>`_
+
+    `163源列表 <http://mirrors.163.com/.help/ubuntu.html>`_
+    
+    .. code-block:: bash
+    
+         wget http://mirrors.163.com/.help/sources.list.trusty  # ubuntu14.04  163源
 
 .. code-block:: bash
 
-    # ubuntu 14.04
+    # ubuntu 14.04 更换阿里源
     $ grep "archive.ubuntu.com" /etc/apt/sources.list && \
     sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
+
+待研究
+--------
+
+shadowsocks
+    `shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
+
+    `1  <https://www.cmsky.com/kcptun/>`_
+
+    `2  <http://blog.csdn.net/qq_34594236/article/details/77131436>`_
+
+    `3  <http://blog.csdn.net/leoe_/article/details/69618726>`_
+
 
 ..
  我是注释内容
