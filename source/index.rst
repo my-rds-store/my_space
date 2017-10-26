@@ -80,7 +80,10 @@ Ubuntu 源列表
     
     .. code-block:: bash
     
-         wget http://mirrors.163.com/.help/sources.list.trusty  # ubuntu14.04  163源
+         # ubuntu14.04  163源
+         wget -O /etc/apt/sources.list  http://mirrors.163.com/.help/sources.list.trusty
+         curl -o /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.trusty
+
 
 .. code-block:: bash
 

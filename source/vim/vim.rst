@@ -116,6 +116,11 @@ YouCompleteMe的配置
         :ref:`如何判断文件类型? <set-filetype>`
 
 
+防止vim 鼠标右键黏贴，排版错乱。 
+设置：
+.. code-block:: bash
+
+    :set paste 
 
 
 vim实用技巧
