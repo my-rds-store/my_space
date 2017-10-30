@@ -122,3 +122,16 @@ $ git push --tags
     $ git revert xxxx
 
     这个就可以去掉这个COMMIT的改动，这个是明式的去掉，如果你又后悔了，还可以再次恢复。
+
+问题:
+
+::
+
+     ! [remote rejected] master -> master (shallow update not allowed)
+
+解决:
+
+::
+
+     git fetch --unshallow
+     git fetch --unshallow origin 
