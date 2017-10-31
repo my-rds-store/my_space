@@ -14,6 +14,23 @@ Docker 学习
 
 `Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
+镜像加速地址 
+------------------
+
+.. code-block:: bash
+
+    $ sudo vim /etc/docker/daemon.json
+
+::
+
+  {
+      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
+  }
+
+  https://docker.mirrors.ustc.edu.cn     # 中科大
+  https://hub-mirror.c.163.com           # 163
+  https://4lmb1y64.mirror.aliyuncs.com
+
 
 常用命令 
 ------------------
