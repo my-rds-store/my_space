@@ -10,10 +10,12 @@ Docker 学习
      $ sudo apt-get install -y docker.io
 
 
-`安装最新版本 <https://docs.docker.com/engine/installation/>`_
+`Installation  <https://docs.docker.com/engine/installation/>`_
+
+`Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
 
-docker 命令总结 
+常用命令 
 ------------------
 
 
@@ -30,7 +32,7 @@ docker 命令总结
          $ sudo systemctl start  docker
 
 镜像
-^^^^^^^^^^
+^^^^^^
     .. code-block:: bash
 
         $ sudo docker images  # 列出本地镜像
@@ -49,8 +51,6 @@ docker 命令总结
         
         $ sudo docker rmi oldname:tag
 
-
-
 阿里云
 ^^^^^^^^^
 
@@ -66,14 +66,14 @@ https://dev.aliyun.com/search.html
         $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com
 
 ``搜索``
-""""""""""""""""""""
+"""""""""""""""
 
     .. code-block:: bash
 
         $ sudo docker search centos
 
 容器
-^^^^^^^^^^
+^^^^^^^^
 
     .. code-block:: bash
 
@@ -83,8 +83,8 @@ https://dev.aliyun.com/search.html
 
        $ sudo docker attach apach  # 进入容器
        
-       $ sudo docker rm  name/ID               # 删除一个容器
-       $ sudo docker rm `sudo docker ps -a -q`  #  删除全部容器
+       $ sudo docker rm  name/ID                # 删除一个容器
+       $ sudo docker rm `sudo docker ps -a -q`  # 删除全部容器
 
 
 
@@ -101,13 +101,10 @@ https://dev.aliyun.com/search.html
 
         $ sudo docker run exec -it myspace_test_v4 /bin/bash
 
-``守护态运行``
-""""""""""""""
-
     .. code-block:: bash
 
-        sudo docker logs -f  {CONTAINER ID}
-        sudo docker logs --follow  {CONTAINER ID}
+        sudo docker logs -f       {CONTAINER ID}       # 日志
+        sudo docker logs --follow {CONTAINER ID}
     
 
 ``容器重命名``
@@ -117,14 +114,10 @@ https://dev.aliyun.com/search.html
 
         $ sudo docker rename  oldname    newname 
         $ sudo docker rename  image_id   newname 
-        
 
-``导出导入``
+``查询``
 """"""""""""""
-
-
-    查看容器 
-
+        
     .. code-block:: bash
 
         $ sudo docker ps      # 查看UP状态的容器
@@ -132,24 +125,22 @@ https://dev.aliyun.com/search.html
         $ sudo docker ps  -as # 查看所有容器,显示容器大小
 
 
-    导出容器
+``导出导入``
+""""""""""""""
 
     .. code-block:: bash
 
-        $ sudo docker export {CONTAINER ID}  > ubuntu.tar
-
-    导入容器快照
+        $ sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
     
-    .. code-block:: bash
+        $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
 
-        $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0
-
-    通过指定 URL 或者某个目录来导入，例如
-
-    .. code-block:: bash
-
+        # 通过指定 URL 或者某个目录来导入容器
         $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
 
+    .. code-block:: bash
+
+         $ sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
+         $ sudo docker load -i nextcloud.tar            # 导入镜像
 
 
 使用外部网络
