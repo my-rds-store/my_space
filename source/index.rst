@@ -69,6 +69,10 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 源列表
 -------
 
+    163源地址 ： http://mirrors.163.com/
+    阿里源地址:  http://mirrors.aliyun.com/
+
+
 `Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
 
 Ubuntu 源列表
