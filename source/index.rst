@@ -66,6 +66,23 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 动漫死神 
     https://tieba.baidu.com/p/4029180251
 
+Ubuntu 编译源码包
+---------------------
+
+http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
+
+
+.. code-block:: bash
+ 
+    $ sudo apt-get source tree
+
+    $ sudo apt-get build-dep tree
+
+    $ cd tree-1.5.1.2
+    $ sudo dpkg-buildpackage
+
+
+
 源列表
 -------
 
