@@ -175,6 +175,7 @@ amixer
 
     $ sudo alsamixer
     $ sudo amixer -D pulse
+    $ sudo amixer scontrols   # 查看,哪些选择可以控制
 
 #. 声音设置
 
@@ -194,6 +195,25 @@ amixer
     $ amixer set "Rear Mic Boost"  53%
 
 `alsamixer设置默认声卡及调节音量保存配置 <http://www.it165.net/os/html/201212/4118.html>`_
+
+
+.. code-block:: sh
+
+   $ sudo apt-get install alsa-base alsa-utils alsa-oss alsa-tools
+
+
+# .如果默认声卡不是需要的 在 $HOME目录添加 .asoundrc 文件
+
+内容类似如下
+
+::
+   defaults.ctl.card 1 defaults.pcm.card 1
+
+数字1代表声卡序号, 可以通过以下指令查看
+
+.. code-block:: bash
+
+   $ cat /proc/asound/cards
 
 
 nmcli命令
