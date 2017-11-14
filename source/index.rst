@@ -113,6 +113,8 @@ Ubuntu 源列表
 待研究
 --------
 
+http://www.isjian.com/
+
 shadowsocks
     `shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
 
