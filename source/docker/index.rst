@@ -197,6 +197,23 @@ https://dev.aliyun.com/search.html
         
         $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
+``权限``
+---------------
+
+.. code-block:: bash
+
+    $ sudo docker run -d --privileged myimage
+
+    #  参数privileged ，container内的root拥有真正的root权限。
+    #  否则，container内的root只是外部的一个普通用户权限。
+    #  privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。
+    #  甚至允许你在docker容器中启动docker容器。
+
+    $ sudo docker run -d --cap-add SYS_NET_ADMIN myimage
+
+    # 让容器拥有除了MKNOD之外的所有内核权限 
+    $ sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
+
 Dockerfile
 -----------
 
