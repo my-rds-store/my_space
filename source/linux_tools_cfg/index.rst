@@ -2,7 +2,6 @@
 常用工具安装极其配置
 ####################
 
-
 一. NFS (for ubuntu14.04)
 ==========================
 
@@ -196,10 +195,47 @@
 
         $ sudo curlftpfs -o codepage=utf-8 ftp://username:password@192.168.8.25/public /mnt
 
+五).  x11vnc
+=========================
+
+#. 安装与启动
+
+.. code-block:: bash
+
+  # 安装 x11 openbox
+  # apt-get install xserver-xorg x11-xserver-utils
+  $ sudo apt-get install xorg openbox
+
+  # 安装x11vnc：
+  $ sudo apt-get install x11vnc
+
+  # 设置VNC的连接密码：
+  $ sudo x11vnc -storepasswd
+
+  #. 启动VNC Server：
+  $ sudo  x11vnc -forever -shared -rfbauth ~/.vnc/passwd
+
+#. 开机自启动
+
+.. code-block:: bash
+
+  $ cp ~/.vnc/passwd /etc/x11vnc.pass
+
+编辑 `/etc/init/x11vnc.conf`
+
+::
+
+  start on login-session-start
+  script
+  /usr/bin/x11vnc -auth /var/run/lightdm/root/:0 -noxrecord -noxfixes
+  -noxdamage -rfbauth /etc/x11vnc.pass -forever -bg -rfbport 5900 -o
+  /var/log/x11vnc.log
+  end script
+
+`Ubuntu安装X11VNC <https://yq.aliyun.com/ziliao/29494>`_
 
 
-
-五). Centos 7 网络配置
+六). Centos 7 网络配置
 =========================
 
 `1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
