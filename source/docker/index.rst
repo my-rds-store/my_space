@@ -14,18 +14,23 @@ Docker 学习
 
 `Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
+
 镜像加速地址 
 ------------------
 
 .. code-block:: bash
 
-    $ sudo vim /etc/docker/daemon.json
+    $ sudo mkdir -p /etc/docker
+    $ sudo tee /etc/docker/daemon.json <<-'EOF'
+      {
+          "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
+      }
+      EOF
+
+    $ sudo systemctl daemon-reload
+    $ sudo systemctl restart docker
 
 ::
-
-  {
-      "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
-  }
 
   https://docker.mirrors.ustc.edu.cn     # 中科大
   https://hub-mirror.c.163.com           # 163
@@ -220,8 +225,11 @@ Dockerfile
 #. EXPOSE
 
     格式为 EXPOSE <port> [<port>...] 。
-    告诉Docker服务端容器暴露的端口号
+    告诉Docker服务端容器暴露的端口
 
+.. code-block:: bash
+
+    $ sudo docker run -d --restart=always -p 8901:8080 -v $HOEM/Video:/mediadrop/data/media --name=mediadrop acaranta/mediadrop
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
@@ -229,9 +237,21 @@ Dockerfile
 * `Running GUI apps with Docker <http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/?utm_source=tuicool&utm_medium=referral>`_ 
 
 
-
 Other
 -----------
+
+* `Docker私有仓库搭建  <http://www.jianshu.com/p/00ac18fce367>`_
+
+**http: server gave HTTP response to HTTPS client** , 解决,添加如下:
+
+.. code-block:: json
+
+    {
+       "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
+       "insecure-registries": ["192.168.8.204:5000"]
+    }
+
+
 
 * `使用官方 docker registry 搭建私有镜像仓库及部署 web ui <http://blog.csdn.net/mideagroup/article/details/52052618>`_
 
