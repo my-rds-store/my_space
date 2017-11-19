@@ -125,6 +125,11 @@ shadowsocks
     `3  <http://blog.csdn.net/leoe_/article/details/69618726>`_
 
 
+Linux From Scratch
+   https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html 
+
+   http://www.linuxfromscratch.org/
+
 ..
  我是注释内容
  你看不到我
