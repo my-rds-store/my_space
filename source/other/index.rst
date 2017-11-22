@@ -164,6 +164,7 @@ CenterOS
 
             # systemctl start/stop/restart dnsmasq 
 
+
 amixer
 ---------
 
@@ -267,6 +268,16 @@ https://communities.vmware.com/thread/552232
     在/etc/apache2/apache2.conf文件最后加上：
     # Server Name
     ServerName localhost
+
+.. code-block:: bash
+
+    # centos 目录或文件名中文显示 
+    # vim /etc/httpd/conf/httpd.conf
+    AddDefaultCharset UTF-8
+    IndexOptions Charset=GBK
+
+
+
 
 .. raw:: html
 
