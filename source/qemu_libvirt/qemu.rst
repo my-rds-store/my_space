@@ -59,6 +59,9 @@ virsh 与 qemu-img
     $ sudo qemu-img create -f qcow2 disk 20G
     $ sudo virt-format --filesystem ntfs -a disk.qcow2
 
+    $ virt-ls -a  image.qcow2 /
+    $ virt-copy-in test.txt -a  image.qcow2 /
+
 
 
 声卡
