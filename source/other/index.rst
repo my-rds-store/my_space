@@ -1,6 +1,39 @@
 其他
 ================
 
+Windows镜像下载地址
+    https://msdn.itellyou.cn/
+
+qbittorrent
+    http://www.qbittorrent.org/
+
+OBS Studio
+-----------------
+
+官网
+    https://obsproject.com/
+
+搭建RTMP服务器
+
+**Docker**
+
+.. code-block:: bash
+
+    # https://hub.docker.com/r/jasonrivers/nginx-rtmp/
+    $ sudo docker run -d  -p 1935:1935 -p 8088:8080  --rm  jasonrivers/nginx-rtmp
+
+    # or 
+    # https://github.com/alfg/docker-nginx-rtmp
+    $ sudo docker run -d -p 1935:1935 -p 8080:80 --rm alfg/nginx-rtmp
+
+**windows**
+
+    http://bbs.ngacn.cc/read.php?tid=10021940&rand=854
+    https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmfp-server-using-monaserver.153/
+
+
+http://www.hangge.com/blog/cache/detail_1325.html
+
 
 开源许可证
 -----------
