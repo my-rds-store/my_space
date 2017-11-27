@@ -13,6 +13,10 @@ Mingw32 (fedora)
 
 * `Building GTK apps for MS Windows on Linux <http://ricardo.ecn.wfu.edu/~cottrell/cross-gtk/>`_
 
+
+-mwindows
+
+
 .. code-block:: bash
     
     mingw32-pkg-config --libs --cflags gtk+-2.0
