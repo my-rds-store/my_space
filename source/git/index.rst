@@ -11,8 +11,34 @@ git 使用总结
 
 * `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
 
+搭建gitlib
+-------------
 
-`gitlab docker 镜像 <https://hub.docker.com/r/sameersbn/gitlab/>`_
+
+.. code-block:: bash
+
+     docker run --name='gitlab-ce' -d \
+	   -p 10022:22 -p 10080:80 \
+	   --restart always \
+	   --volume /data/gitlab/config:/etc/gitlab \
+	   --volume /data/gitlab/logs:/var/log/gitlab \
+	   --volume /data/gitlab/data:/var/opt/gitlab \
+	   gitlab/gitlab-ce
+
+
+* `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
+* `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
+* https://docs.gitlab.com/omnibus/docker/
+
+搭建gitlib-CI(待研究)
+^^^^^^^^^^^^^^^^^^^^^
+
+* http://www.jianshu.com/p/2b43151fb92e
+
+* http://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
+* http://www.jianshu.com/p/6e65075339d1?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+
 
 .. code-block:: sh
 
