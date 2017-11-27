@@ -115,6 +115,27 @@ apt-get install时如何指定安装版本
     $ sudo cp -d $HOME/bin/FoxitReader /usr/local/bin/ 
 
 
+查找当前目录，及其子目录，” .c “ 文件脚本
+------------------------------------------
+
+.. code-block:: bash
+
+    #!/usr/bin/env bash
+
+    for file in `find ./ -type f -name "*.c"`;
+    do
+	echo $file
+	＃　do something
+	＃　．．．．．
+    done
+
+.. code-block:: bash
+
+    find -type  f  -name  '*.cpp'  |   xargs  grep  '关键字'    # 查找含有某字符串的所有文件
+    chmod a+x `find ./ -type f -name '*.c'`  			# 修改当前目录及其子目录，文件属性
+    service --status-all                                        # 查看进程服务
+
+
 判断文件是否存在
 -----------------
 

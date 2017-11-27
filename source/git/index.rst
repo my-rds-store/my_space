@@ -10,6 +10,7 @@ git 使用总结
 * `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
 
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
+* `Releases <http://docs.gitlab.com/ce/workflow/releases.html>`
 
 搭建gitlib
 -------------
