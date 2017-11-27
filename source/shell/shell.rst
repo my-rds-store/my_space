@@ -125,8 +125,7 @@ apt-get install时如何指定安装版本
     for file in `find ./ -type f -name "*.c"`;
     do
 	echo $file
-	＃　do something
-	＃　．．．．．
+	# do something
     done
 
 .. code-block:: bash
@@ -279,7 +278,6 @@ gdialog
     gdialog --title "msgbox" --msgbox "$text========" $height $width 
     gdialog --title "radiolist" --radiolist "$text" $height $width 2 "1" "aaaa" "on" "2" "bbbb" "off"
     gdialog --title "yesno" --yesno "$text" $height $widch
-
 
 
 Linux平台下的service程序编写指南
