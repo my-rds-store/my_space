@@ -1,19 +1,18 @@
 git 使用总结
 ==============
 
-
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
 * `码云平台帮助文档 <http://git.mydoc.io/>`_
-
 
 * `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
 * `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
 
+* `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
+
 搭建gitlib
 -------------
-
 
 .. code-block:: bash
 
@@ -25,8 +24,7 @@ git 使用总结
 	   --volume /data/gitlab/data:/var/opt/gitlab \
 	   gitlab/gitlab-ce
 
-
-
+* `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
 * `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
 * `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
@@ -72,9 +70,7 @@ http://stackoverflow.com/questions/2144406/git-shallow-submodules
 
     $ git submodule add 仓库地址 路径
 
-
 #. 删除子模块
-
 
 #. 状态 
 
