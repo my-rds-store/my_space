@@ -130,6 +130,14 @@ Linux From Scratch
 
    http://www.linuxfromscratch.org/
 
+前端框架(js)
+   `Meteor <https://www.meteor.com/>`_
+
+BitTorrent
+    * `CentOS 下搭建BT下载服务器安装笔记  <http://www.linuxidc.com/Linux/2011-05/35510.htm>`_
+    * `CTorrent <http://www.3haoweb.cn/a/internet/download/bt/2010/1030/4446.html>`_
+    * `其他 <http://blog.csdn.net/vblittleboy/article/details/38494807>`_
+
 ..
  我是注释内容
  你看不到我
