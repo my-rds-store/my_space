@@ -29,10 +29,11 @@ Hello World
         迷一般地 
         与箭、火焰和花丛 
         以及寥廓长夜、寰宇浑然一体 
+
 匿名网盘
     *  `瑞典 anonfile  <https://anonfile.com/>`_
     *  `即得 <https://good.gd.cn/>`_
-    *   
+    *  `degoo(jiang_xmin@massclouds.com)  <https://degoo.com>`_
 
 短链接服务
     * https://st.im/ 
