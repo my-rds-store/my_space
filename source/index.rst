@@ -29,7 +29,13 @@ Hello World
         迷一般地 
         与箭、火焰和花丛 
         以及寥廓长夜、寰宇浑然一体 
+匿名网盘
+    *  `瑞典 anonfile  <https://anonfile.com/>`_
+    *  `即得 <https://good.gd.cn/>`_
+    *   
 
+短链接服务
+    * https://st.im/ 
 
 .. toctree::
    :maxdepth: 2
@@ -138,6 +144,24 @@ BitTorrent
     * `CentOS 下搭建BT下载服务器安装笔记  <http://www.linuxidc.com/Linux/2011-05/35510.htm>`_
     * `CTorrent <http://www.3haoweb.cn/a/internet/download/bt/2010/1030/4446.html>`_
     * `其他 <http://blog.csdn.net/vblittleboy/article/details/38494807>`_
+
+.. code-block:: bash
+    
+    # 制作种子
+    mktorrent -a http://192.168.8.204:18888/announce -o drbl-live-xfce.iso.torrent /home/jxm/Downloads/drbl-live-xfce.iso
+    # or
+    ctorrent -t ~/Downloads/virtualbox-5.1.deb -u http://192.168.8.204:18888/announce -s virtualbox-5.1.deb.torrent
+
+    # 启动下载
+    ctorrent virtualbox-5.1.deb.torrent -s ~/Downloads/virtualbox-5.1.deb
+
+BT Tracker List
+    https://github.com/ngosang/trackerslist
+    https://newtrackon.com/
+
+bittorrent文件编辑工具
+    * BEncode Editor
+    * TrackerEditor
 
 ..
  我是注释内容
