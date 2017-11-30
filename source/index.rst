@@ -31,6 +31,8 @@ Hello World
         以及寥廓长夜、寰宇浑然一体 
 
 匿名网盘
+    *  `nofile.io <https://nofile.io/>`_
+    *  `奶牛快传 <http://cowtransfer.com/>`_
     *  `瑞典 anonfile  <https://anonfile.com/>`_
     *  `即得 <https://good.gd.cn/>`_
     *  `degoo(jiang_xmin@massclouds.com)  <https://degoo.com>`_
