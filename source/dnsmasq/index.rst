@@ -104,4 +104,9 @@ DHCP服务
     dhcp-leasefile=/var/lib/dnsmasq/dnsmasq.leases
 
 
+Nat转发
+-------------
+
+    * `Linux CentOS 6 NAT 转发 完整教程  <http://www.linuxidc.com/Linux/2017-07/145382.htm>`_
+    * `linux-iptables nat设置路由转换 <http://blog.csdn.net/cooling88/article/details/51040054>`_
 
