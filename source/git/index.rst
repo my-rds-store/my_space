@@ -34,6 +34,7 @@ git 使用总结
 搭建gitlib-CI(待研究)
 ^^^^^^^^^^^^^^^^^^^^^
 
+* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 * `Install GitLab Runner using the official GitLab repositories  <https://docs.gitlab.com/runner/install/linux-repository.html>`_
 * http://www.jianshu.com/p/2b43151fb92e
 
