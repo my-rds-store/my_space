@@ -25,6 +25,19 @@ git 使用总结
 	   --volume /data/gitlab/data:/var/opt/gitlab \
 	   gitlab/gitlab-ce
 
+     sudo docker run --detach \
+         --hostname gitlab.example.com \
+         --env GITLAB_OMNIBUS_CONFIG="external_url 'http://192.168.8.100/'; gitlab_rails['lfs_enabled'] = true;" \
+         --publish 10443:443 --publish 10080:80 --publish 10022:22 \
+         --name gitlab \
+         --restart always \
+         --volume /srv/gitlab/config:/etc/gitlab \
+         --volume /srv/gitlab/logs:/var/log/gitlab \
+         --volume /srv/gitlab/data:/var/opt/gitlab \
+         gitlab/gitlab-ce:8.17.7-ce.0
+
+
+
 * `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
 * `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
