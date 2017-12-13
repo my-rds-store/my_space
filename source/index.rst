@@ -96,8 +96,9 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 源列表
 -------
 
-    163源地址 ： http://mirrors.163.com/
-    阿里源地址:  http://mirrors.aliyun.com/
+    * 163源地址 ： http://mirrors.163.com/
+
+    * 阿里源地址:  http://mirrors.aliyun.com/
 
 
 `Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
