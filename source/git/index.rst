@@ -44,8 +44,27 @@ git 使用总结
 * `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
 * https://docs.gitlab.com/omnibus/docker/
 
-搭建gitlib-CI(待研究)
-^^^^^^^^^^^^^^^^^^^^^
+搭建gitlib-CI 持续集成
+^^^^^^^^^^^^^^^^^^^^^^^
+
+* gitlib-ci : https://gitlab.com
+* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
+
+
+* `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`
+
+::
+ /etc/gitlab-runner/config.toml
+
+.. code-block:: bash
+
+    $ sudo gitlab-ci-multi-runner list
+    $ sudo gitlab-runner list
+    $ sudo gitlab-runner verify
+    $ sudo gitlab-runner unregister --name "name"
+    $ sudo gitlab-runner register
+
+* `gitlab runner 遇到的几个坑 <http://www.jianshu.com/p/d91387b9a79b>`_
 
 * `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 * `Install GitLab Runner using the official GitLab repositories  <https://docs.gitlab.com/runner/install/linux-repository.html>`_
