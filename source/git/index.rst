@@ -58,11 +58,13 @@ git 使用总结
 
 .. code-block:: bash
 
+    $ sudo gitlab-runner register
+    $ sudo gitlab-runner unregister --name "name"
     $ sudo gitlab-ci-multi-runner list
     $ sudo gitlab-runner list
     $ sudo gitlab-runner verify
-    $ sudo gitlab-runner unregister --name "name"
-    $ sudo gitlab-runner register
+    $ gitlab-runner install -n "gitlab-runner" -u root -d /var/gitlab/runner   # ubuntu  
+    $ gitlab-runner uninstall -n "gitlab-runner" 
 
 * `gitlab runner 遇到的几个坑 <http://www.jianshu.com/p/d91387b9a79b>`_
 
