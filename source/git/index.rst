@@ -51,7 +51,7 @@ git 使用总结
 * `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 
 
-* `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`
+* `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`_
 
 ::
  /etc/gitlab-runner/config.toml
