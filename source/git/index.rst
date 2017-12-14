@@ -34,8 +34,7 @@ git 使用总结
          --volume /srv/gitlab/config:/etc/gitlab \
          --volume /srv/gitlab/logs:/var/log/gitlab \
          --volume /srv/gitlab/data:/var/opt/gitlab \
-         gitlab/gitlab-ce:8.17.7-ce.0
-
+         gitlab/gitlab-ce:10.2.4-ce.0
 
 
 * `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
