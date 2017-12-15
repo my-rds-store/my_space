@@ -239,8 +239,13 @@
 
 http://blog.csdn.net/love_xiaozhao/article/details/52704197
 
+七). Synergy 一套键鼠同时控制多台电脑
+=========================================
 
-七). Centos 7 网络配置
+* `Synergy 一套键鼠同时控制多台电脑 Win/Mac/Linux <https://www.iplaysoft.com/synergy.html>`_
+
+
+八). Centos 7 网络配置
 =========================
 
 `1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
