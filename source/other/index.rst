@@ -275,10 +275,10 @@ nmcli命令
 Fedora 开启SSH服务
    https://my.oschina.net/atttx123/blog/58100 
 
+* `Nextcloud+Collabora Office文档在线协作 <https://www.orgleaf.com/2280.html>`_
 
 vmware 问题
 -----------
-
 
 http://www.jianshu.com/p/df30c0c3889b
 
