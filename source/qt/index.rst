@@ -7,6 +7,8 @@ Qt学习
 PyQt4
     `Nullege is a search engine for Python source code <http://nullege.com/>`_
 
+`Qt Style Sheets Examples <https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html>`_
+
 QMultimedia
     QCamera
 

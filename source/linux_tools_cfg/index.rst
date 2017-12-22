@@ -227,8 +227,8 @@
 
   start on login-session-start
   script
-  /usr/bin/x11vnc -auth /var/run/lightdm/root/:0 -noxrecord -noxfixes
-  -noxdamage -rfbauth /etc/x11vnc.pass -forever -bg -rfbport 5900 -o
+  /usr/bin/x11vnc -auth /var/run/lightdm/root/:0 -noxrecord -noxfixes \
+  -noxdamage -rfbauth /etc/x11vnc.pass -forever -bg -rfbport 5900 -o \
   /var/log/x11vnc.log
   end script
 
