@@ -57,6 +57,7 @@ Hello World
    database/sqlite
    qt/index
    mingw32/index
+   nsis/index
    dnsmasq/index
    android/index
    openbox/index
