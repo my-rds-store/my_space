@@ -9,7 +9,7 @@ PyQt4
 
 `Qt Style Sheets Examples <https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html>`_
 
-* `QListWidget 布局方向设定<http://blog.csdn.net/yexiangcsdn/article/details/9932155>`_
+* `QListWidget 布局方向设定 <http://blog.csdn.net/yexiangcsdn/article/details/9932155>`_
 
 QMultimedia
     QCamera
