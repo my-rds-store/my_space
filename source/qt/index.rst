@@ -1,5 +1,13 @@
+#########
 Qt学习
-----------
+#########
+
+
+
+Book
+------
+* `C++ GUI Qt 4编程（第二版） <http://linux.linuxidc.com/index.php?folder=MjAxMsTq18rBzy821MIvNMjVL0Ox4LPMo6i12rb+sOajqSjW0M7EuN/H5VBERsmow+iw5ilAy+bK6dS0wus=>`_ 
+
 
 * `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
 * `qter <http://www.qter.org/portal.php?mod=list&catid=6>`_
@@ -22,6 +30,7 @@ QT环境搭建: QT-4.8 在windows下的使用
 
 Linux下编译静态MinGW环境,编译windows平台Qt程序
    https://yjdwbj.github.io/2016/09/13/Linux%E4%B8%8B%E7%BC%96%E8%AF%91%E9%9D%99%E6%80%81MinGW%E7%8E%AF%E5%A2%83-%E7%BC%96%E8%AF%91windows%E5%B9%B3%E5%8F%B0Qt%E7%A8%8B%E5%BA%8F/
+
 
 .. raw:: html
 
