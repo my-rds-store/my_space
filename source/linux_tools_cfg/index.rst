@@ -211,6 +211,8 @@
 
   # 设置VNC的连接密码：
   $ sudo x11vnc -storepasswd
+  $ sudo x11vnc -storepasswd 123456 ~/.vnc/passwd
+  $ sudo x11vnc -storepasswd 123456 /etc/x11vnc.pass
 
   #. 启动VNC Server：
   $ sudo  x11vnc -forever -shared -rfbauth ~/.vnc/passwd
