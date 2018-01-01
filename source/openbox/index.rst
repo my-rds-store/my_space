@@ -2,6 +2,15 @@
 openbox
 #######
 
+安装资源监视器
+---------------
+
+.. code-block:: bash
+
+    $ apt-get install xfce4-taskmanager
+    $ apt-get install gnome-system-monitor
+
+
 
 安装chrominum-browser和googlepinyin
 -----------------------------------
