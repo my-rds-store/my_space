@@ -168,6 +168,9 @@ bittorrent文件编辑工具
     * BEncode Editor
     * TrackerEditor
 
+Firefly
+    https://github.com/getlantern/forum/issues/4902
+
 ..
  我是注释内容
  你看不到我
