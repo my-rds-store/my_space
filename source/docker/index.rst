@@ -36,6 +36,10 @@ Docker 学习
   https://hub-mirror.c.163.com           # 163
   https://4lmb1y64.mirror.aliyuncs.com
 
+KUBERNETES
+------------------
+
+    * https://www.kubernetes.org.cn/docs
 
 常用命令 
 ------------------
