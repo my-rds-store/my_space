@@ -28,8 +28,8 @@ git config
     $ git config --list 
     $ git config user.name 
     $ git config --global core.editor vim  # 配置默认编辑器 vim
-    $ git rm --cached path          # 撤销add
-    $ git checkout <COMMIT_ID> path # 回退单个文件到某一次提交
+    $ git rm --cached path            # 撤销add
+    $ git checkout <commit_id> <path> # 回退单个文件到某一次提交
 
 git submodule 
 ^^^^^^^^^^^^^^
@@ -39,7 +39,23 @@ git submodule
     git submodule add <repo> <dir>          # 添加 子模块
                                             # 删除 子模块
 
+    git submodule init                      #初始化子模块
+    git submodule update                    # 更新子模块
+    git submodule foreach git pull          # 拉取所有子模块
+
+    git clone <repository> --recursive      # 递归的方式克隆整个项目
     git submodule update --init --recursive
+
+
+
+* how to remove submodule
+
+    ::
+        Delete the relevant line from the .gitmodules file.
+        Delete the relevant section from .git/config.
+        Run git rm --cached path_to_submodule (no trailing slash).
+
+        Remove directory .git/modules/<submodule name>
 
 
 搭建gitlib
