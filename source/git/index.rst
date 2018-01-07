@@ -51,6 +51,7 @@ git submodule
 * how to remove submodule
 
     ::
+
         Delete the relevant line from the .gitmodules file.
         Delete the relevant section from .git/config.
         Run git rm --cached path_to_submodule (no trailing slash).
