@@ -12,6 +12,36 @@ git 使用总结
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
 * `Releases <http://docs.gitlab.com/ce/workflow/releases.html>`_
 
+
+git 常用命令 
+-------------
+
+git config 
+^^^^^^^^^^^
+
+.. code-block:: bash
+
+    $ git config --global -e
+
+    # 默认为 --global
+    $ git config  -e     # or git config --edit
+    $ git config --list 
+    $ git config user.name 
+    $ git config --global core.editor vim  # 配置默认编辑器 vim
+    $ git rm --cached path          # 撤销add
+    $ git checkout <COMMIT_ID> path # 回退单个文件到某一次提交
+
+git submodule 
+^^^^^^^^^^^^^^
+
+.. code-block:: bash
+    
+    git submodule add <repo> <dir>          # 添加 子模块
+                                            # 删除 子模块
+
+    git submodule update --init --recursive
+
+
 搭建gitlib
 -------------
 
