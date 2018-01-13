@@ -7,6 +7,8 @@ git 使用总结
 
 * `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
+* `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`
+
 * `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
 
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
