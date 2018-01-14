@@ -2,71 +2,54 @@
 常用工具安装极其配置
 ####################
 
-一. NFS (for ubuntu14.04)
+NFS (for ubuntu14.04)
 ==========================
 
 1).  NFS Server 
 -----------------------------------
 
-**Install NFS Server**
+.. code-block:: sh
 
-    .. code-block:: sh
+     # Install NFS Server
+     $ sudo apt-get install nfs-kernel-server 
 
-         $ sudo apt-get install nfs-kernel-server 
+.. code::
 
-**Config**
+    # 在 **/etc/exports** 添加
+    /home/jxm/workspace *(rw,sync,no_root_squash,no_subtree_check)
 
-    在 **/etc/exports** 添加
+.. code-block:: sh
 
-    .. code::
+    # Restart NFS Server
+    $ sudo /etc/init.d/rpcbind restart            # 重启rpcbind
+    $ sudo /etc/init.d/nfs-kernel-server restart  # 重启nfs
 
-        /home/jxm/workspace *(rw,sync,no_root_squash,no_subtree_check)
-
-
-**Restart NFS Server**
-
-    .. code-block:: sh
-
-        $ sudo /etc/init.d/rpcbind restart            # 重启rpcbind
-        $ sudo /etc/init.d/nfs-kernel-server restart  # 重启nfs
-    
-**查看**
-
-    .. code-block:: sh
-
-        $ showmount -e 127.0.0.1 
-
-**查看挂载**
-    
-    .. code-block:: bash
+    # 查看
+    $ showmount -e 127.0.0.1 
         
-        $ sudo df -Th
+    # 查看挂载
+    $ sudo df -Th
     
 
 2). NFS Client
 --------------
 
-**安装NFS Client**
-
-    .. code-block:: sh
+.. code-block:: sh
     
-        $ sudo apt-get install  nfs-common
-
-**查看服务器共享文件**
-
-    .. code-block:: sh
+    # 安装NFS Client
+    $ sudo apt-get install  nfs-common
     
-        $ showmount -e 192.168.1.122
+    # 查看服务器共享文件
+    $ showmount -e 192.168.1.122
 
-**挂载**
+    # 挂载
+    $ sudo mount -t nfs 192.168.1.122:/home/jxm/workspace /mnt
+    $ sudo mount.nfs  192.168.1.122:/home/jxm/workspace /mnt
 
-    .. code-block:: sh
 
-        $ sudo mount -t nfs 192.168.1.122:/home/jxm/workspace /mnt
+-----
 
-        $ sudo mount.nfs  192.168.1.122:/home/jxm/workspace /mnt
-
-二. CIFS (Ubuntu 14.04)
+CIFS (Ubuntu 14.04)
 =======================
 
 1). 设置共享
@@ -74,31 +57,20 @@
 
 在要挂载的windows系统中找到需要挂载的硬盘或者文件夹，把它设置为共享，　如：在D盘下建立文件夹**cifs_shared**, 设为共享．
 
-2). ubuntu 安装　cifs-utils
+2). 安装与配置
 ---------------------------
-    .. code-block:: sh
 
-        $ sudo apt-get install  cifs-utils
+.. code-block:: sh
 
-3). 在linux系统/mnt目录下创建一个文件夹
------------------------------------------
+    # 1. 安装 cifs-utils
+    $ sudo apt-get install  cifs-utils
 
-    .. code-block:: sh
+    # 2. 在linux系统/mnt目录下创建一个文件夹
+    $ mkdir /mnt/work
 
-        $ mkdir /mnt/work
-
-4).  挂载
-------------
-
-    .. code-block:: sh
-
-        $ sudo mount -t cifs -o username=jxm,password=123456 //192.168.2.102/cifs_shared /mnt
-
-    或者:
-
-    .. code-block:: sh
-
-        $ sudo mount.cifs -o username="jxm",password="123456",uid=jxm,gid=jxm  //192.168.2.102/cifs_shared /mnt
+    # 3. 挂载
+    $ sudo mount -t cifs -o username=jxm,password=123456 //192.168.2.102/cifs_shared /mnt
+    $ sudo mount.cifs -o username="jxm",password="123456",uid=jxm,gid=jxm  //192.168.2.102/cifs_shared /mnt
 
 
 **更改文件夹权限。给mount共享文件夹所在组的写权限:**
@@ -120,21 +92,39 @@
 * `Linux下mount挂载cifs遇到的编码问题 <http://blog.sina.com.cn/s/blog_406127500101f92r.html>`_
 
 
+-----
 
-三). FTP服务 (Centos 7)
+FTP服务 (Centos 7)
 ============================
 
+.. code-block:: sh
 
+    # 1). 安装vsftpd
+    $ sudo  yum install -y vsftpd
 
+    # 2). 修改配置文件 /etc/vsftpd/vsftpd.conf 
+    ##########################################
+    # 如下图修改: anonymous_enable=NO 
+    ##########################################
 
-1). 安装vsftpd
---------------------------
+    # 3). 添加用户
+    $ sudo  mkdir /home/ftpdir/jxm
+    $ sudo  useradd -d /home/ftpdir/jxm -s /sbin/nologin jxm
+    # or
+    $ sudo  useradd -d /home/ftpdir/jxm -s /bin/bash jxm
 
-    .. code-block:: sh
+    $ sudo  passwd jxm
 
-        $ sudo  yum install -y vsftpd
+    # 4). 删除用户：
+    $ sudo  userdel  jxm
 
-2). 修改配置文件 /etc/vsftpd/vsftpd.conf 修改 anonymous_enable=NO 
+    # 5). 禁用防火墙
+    $ sudo  systemctl stop firewalld.service
+    $ sudo  systemctl disable firewalld.service
+
+    # 6). 重启ftp
+    $ sudo  systemctl restart vsftpd
+
 ------------------------------------------------------------------
 
 .. image:: ./images/vsftp.conf.png
@@ -142,60 +132,23 @@
     :alt: alternate text
     :align: center
 
+-----
 
-3). 添加用户
-----------------
-
-    .. code-block:: sh
-
-        $ sudo  mkdir /home/ftpdir/jxm
-        $ sudo  useradd -d /home/ftpdir/jxm -s /sbin/nologin jxm
-                   或 sudo  useradd -d /home/ftpdir/jxm -s /bin/bash jxm
-        $ sudo  passwd jxm
-
-4). 删除用户：
---------------
-
-    .. code-block:: sh
-
-        $ sudo  userdel  jxm
-
-5). 禁用防火墙
--------------------
-
-    .. code-block:: sh
-
-        $ sudo  systemctl stop firewalld.service
-        $ sudo  systemctl disable firewalld.service
-
-6). 重启ftp
-----------------
-
-    .. code-block:: sh
-
-        $ sudo  systemctl restart vsftpd
-
-
-四). 挂载Ftp目录(Ubuntu 14.04)
+挂载Ftp目录(Ubuntu 14.04)
 ==================================
 
-1). 安装curlftpfs
--------------------
+.. code-block:: sh
 
-    .. code-block:: sh
+    # 1). 安装curlftpfs
+    $ sudo apt-get install  curlftpfs  
 
-        $ sudo apt-get install  curlftpfs  
+    # 2). 挂载
+    $ sudo curlftpfs -o codepage=gbk  ftp://username:password@192.168.8.25   /mnt  
+    $ sudo curlftpfs -o codepage=utf-8 ftp://username:password@192.168.8.25/public /mnt
 
+-----
 
-2). 挂载
--------------
-    .. code-block:: sh
-
-        $ sudo curlftpfs -o codepage=gbk  ftp://username:password@192.168.8.25   /mnt  
-
-        $ sudo curlftpfs -o codepage=utf-8 ftp://username:password@192.168.8.25/public /mnt
-
-五).  x11vnc
+x11vnc
 =========================
 
 #. 安装与启动
@@ -234,20 +187,54 @@
   /var/log/x11vnc.log
   end script
 
-`Ubuntu安装X11VNC <https://yq.aliyun.com/ziliao/29494>`_
 
-六). Ubuntu 14.04安装teamviewer 远程桌面
+参考: Ubuntu安装X11VNC https://yq.aliyun.com/ziliao/29494
+
+-----
+
+Ubuntu 14.04安装teamviewer 远程桌面
 =========================================
+
 
 http://blog.csdn.net/love_xiaozhao/article/details/52704197
 
-七). Synergy 一套键鼠同时控制多台电脑
+
+-----
+
+Ubuntu 14.04安装teamviewer 远程桌面
+=========================================
+
+`WPS for Linux 下载地址 <http://wps-community.org/download.html?vl=a21#download>`_
+
+:: 
+
+    启动WPS for Linux后，出现提示"系统缺失字体" 。
+
+    1. 下载缺失的字体文件，然后复制到Linux系统中的/usr/share/fonts文件夹中。
+
+	    国外下载地址：https://www.dropbox.com/s/lfy4hvq95ilwyw5/wps_symbol_fonts.zip
+
+	    国内下载地址：https://pan.baidu.com/s/1eS6xIzo
+
+    2. 将解压的字体，拷贝到 /usr/share/fonts/wps-office/
+
+    4. 重启 wps
+
+
+参考: http://www.cnblogs.com/liangml/p/5969404.html
+
+
+-----
+
+Synergy 一套键鼠同时控制多台电脑
 =========================================
 
 * `Synergy 一套键鼠同时控制多台电脑 Win/Mac/Linux <https://www.iplaysoft.com/synergy.html>`_
 
 
-八). Centos 7 网络配置
+-----
+
+Centos 7 网络配置
 =========================
 
 `1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
