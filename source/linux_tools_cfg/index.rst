@@ -201,8 +201,8 @@ http://blog.csdn.net/love_xiaozhao/article/details/52704197
 
 -----
 
-Ubuntu 14.04安装teamviewer 远程桌面
-=========================================
+安装WPS for Linux 
+===================
 
 `WPS for Linux 下载地址 <http://wps-community.org/download.html?vl=a21#download>`_
 
