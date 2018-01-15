@@ -60,6 +60,26 @@ git submodule
 
         Remove directory .git/modules/<submodule name>
 
+常见问题及其解决
+-----------------
+
+* 关闭蓝灯后，push失败
+
+    ::
+      connect to 127.0.0.1 port 38897: Connection refused
+
+解决:
+
+.. code-block:: bash
+
+    # 查看
+    $ env | grep -i proxy
+
+    # 清空环境变量
+    $ export http_proxy=""
+    $ export https_proxy=""
+    $ export HTTP_PROXY=""
+    $ export HTTPS_PROXY=""
 
 搭建gitlib
 -------------
