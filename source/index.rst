@@ -100,6 +100,7 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
     * 163源地址 ： http://mirrors.163.com/
 
     * 阿里源地址:  http://mirrors.aliyun.com/
+
 .. code-block:: bash
 
     #centos 安装epel扩展源
