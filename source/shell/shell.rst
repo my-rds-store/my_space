@@ -2,6 +2,16 @@
 Shell 实用技巧
 ##############
 
+
+常见问题
+--------------------
+
+.. code-block:: bash
+
+    # 1. umount.nfs: /mnt: device is busy
+    $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
+
+
 ssh 无密码登录
 --------------------
 
