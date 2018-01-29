@@ -11,3 +11,8 @@ python3-cookbook
 
 * `如何打包你的Python代码 <https://python-packaging-zh.readthedocs.io/zh_CN/latest/>`_
 
+好用的python库
+--------------
+
+* `lxml - XML and HTML with Python <http://lxml.de/>`_
+

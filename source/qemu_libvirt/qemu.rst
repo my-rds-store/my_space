@@ -1,45 +1,58 @@
 qemu命令总结
 ===================
 
+
 .. image:: ./Qemu-logo-small.png
    :scale: 60%
+   :target: https://libvirt.org
+
+---------
+
+.. image:: ./apple-touch-icon.png
+   :scale: 60%
+   :target: https://www.qemu.org
+
+---------
+
+.. |LibvirtLink| image:: ./Qemu-logo-small.png
+   :scale: 60%
    
+.. _LibvirtLink: https://libvirt.org
+
+
 virsh 与 qemu-img
 ----------------------
 
-#. **spice端口**
+* `Reference Manual for libvirt <https://libvirt.org/html/index.html>`_
 
-        .. code-block:: sh
-                
-           netstat -ntpl | grep qemu
-           virsh domdisplay --type spice {Id or Name}
+#. **常用命令**
+
+.. code-block:: sh
+        
+   # spice端口
+   netstat -ntpl | grep qemu
+   virsh domdisplay --type spice {Id or Name}
+
+   # 创建镜像
+   qemu-img create -f qcow2 ubuntu-14.04.qcow2 20G
+   qemu-img info ubuntu-14.04.qcow2
+
+   # 镜像压缩
+   qemu-img convert -p -c -O qcow2 source.img destination.qcow2
+
+   # resize
+   qemu-img resize source.qcow2 +10G
+
+   # 创建外部快照
+   qemu-img create -f qcow2 -b base.qcow2 snapshot.qcow2
+
+   # 内部快照
+   qemu-img snapshot -l    source.qcow2  # 查看
+   qemu-img snapshot -c s1 source.qcow2  # 创建
+   qemu-img snapshot -a s1 source.qcow2  # 还原
 
 
-#. **创建镜像**
-
-        .. code-block:: sh
-
-            qemu-img create -f qcow2 ubuntu-14.04.qcow2 20G
-            qemu-img info ubuntu-14.04.qcow2
-
-
-#. **镜像压缩**
-
-        .. code-block:: sh
-
-            qemu-img convert -p -c -O qcow2 source.img destination.qcow2
-
-#. **创建快照**
-
-        .. code-block:: sh
-
-            qemu-img create -f qcow2 -b base.qcow2 snapshot.qcow2
-
-#. **resize**
-
-        .. code-block:: sh
-
-            qemu-img resize source.qcow2 +10G
+* `How to create Snapshot of Guest machine in Libvirt <http://www.geekpills.com/operating-system/linux/create-snapshot-guest-machine-libvirt>`_
 
 
 磁盘
@@ -47,10 +60,10 @@ virsh 与 qemu-img
 
 .. code-block:: bash
 
-    # ubuntu 14
+    # ubuntu 14 安装libguestfs
     $ sudo apt-get install libguestfs-tools
  
-    # centos 7
+    # centos 7 安装libguestfs
     $ yum install libguestfs-winsupport  # ntfs
     $ yum install libguestfs-tools       # virt-format
 
