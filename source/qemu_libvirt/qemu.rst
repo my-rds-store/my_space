@@ -24,35 +24,57 @@ virsh 与 qemu-img
 ----------------------
 
 * `Reference Manual for libvirt <https://libvirt.org/html/index.html>`_
+*  https://avdv.github.io/libvirt/index.html
+* `Snapshot XML format <https://avdv.github.io/libvirt/formatsnapshot.html>`_
+
+* `Libvirt Remote URIs <https://libvirt.org/docs/libvirt-appdev-guide-python/en-US/html/libvirt_application_development_guide_using_python-Connections-Remote_URIs.html>`_
+
 
 #. **常用命令**
 
+
 .. code-block:: sh
-        
-   # spice端口
-   netstat -ntpl | grep qemu
-   virsh domdisplay --type spice {Id or Name}
 
-   # 创建镜像
-   qemu-img create -f qcow2 ubuntu-14.04.qcow2 20G
-   qemu-img info ubuntu-14.04.qcow2
+    # virsh      
+    #  https://wiki.libvirt.org/page/Failed_to_connect_to_the_hypervisor
 
-   # 镜像压缩
-   qemu-img convert -p -c -O qcow2 source.img destination.qcow2
+    virsh --connect qemu+ssh://username@remove.host.com/system list
+    virsh --connect qemu+ssh://root@192.168.8.204/system --all
 
-   # resize
-   qemu-img resize source.qcow2 +10G
+    # spice端口
+    netstat -ntpl | grep qemu
+    virsh domdisplay --type spice {Id or Name}
 
-   # 创建外部快照
-   qemu-img create -f qcow2 -b base.qcow2 snapshot.qcow2
+    # 创建镜像
+    qemu-img create -f qcow2 ubuntu-14.04.qcow2 20G
+    qemu-img info ubuntu-14.04.qcow2
 
-   # 内部快照
-   qemu-img snapshot -l    source.qcow2  # 查看
-   qemu-img snapshot -c s1 source.qcow2  # 创建
-   qemu-img snapshot -a s1 source.qcow2  # 还原
+    # 镜像压缩
+    qemu-img convert -p -c -O qcow2 source.img destination.qcow2
 
+    # resize
+    qemu-img resize source.qcow2 +10G
+
+    # 创建外部快照
+    qemu-img create -f qcow2 -b base.qcow2 snapshot.qcow2
+
+    # 内部快照
+    qemu-img snapshot -l    source.qcow2  # 查看
+    qemu-img snapshot -c s1 source.qcow2  # 创建
+    qemu-img snapshot -a s1 source.qcow2  # 还原
 
 * `How to create Snapshot of Guest machine in Libvirt <http://www.geekpills.com/operating-system/linux/create-snapshot-guest-machine-libvirt>`_
+
+.. code-block:: sh
+
+    virsh snapshot-create-as --domain srv7 --name srv7-snapshot_1  # 创建快照
+    virsh snapshot-list srv7                                       #  列出
+    virsh snapshot-info srv7 srv7-snapshot_1                       #  info
+    virsh snapshot-revert srv7 srv7-snapshot_1                     #  还原
+    virsh snapshot-delete srv7 srv7-snapshot_1                     #  删除
+
+
+
 
 
 磁盘
