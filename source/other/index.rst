@@ -81,26 +81,27 @@ patch
 SPAW 分区
 -------------
 
+`Linux系统swappiness参数在内存与交换分区之间优化作用 <http://blog.csdn.net/lufeisan/article/details/53339991>`_
+
 Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分区。他是在内存不够用的情况下，从硬盘中临时分出一部分空间系统当做内存使用。但是，如果SWAP的占用超过30%的时候，系统的性能就会受到影响，这时候就要刷新SWAP。
 
-刷新SWAP
-    可以执行命令刷新一次SWAP（将SWAP里的数据转储回内存，并清空SWAP里的数据）
+.. code-block:: sh
 
-    .. code-block:: sh
+    # 可以执行命令刷新一次SWAP（将SWAP里的数据转储回内存，并清空SWAP里的数据）
+    $ sudo swapoff -a && sudo swapon -a
 
-        $ sudo swapoff -a && sudo swapon -a
+    
+    $ cat /proc/sys/vm/swappiness  # 查看
+    $ sysctl -q vm.swappiness      # 查看当前设置
 
-关闭SWAP
-    在内存大于2G时候，一般情况下可以关闭
+    # 临时设置
+    $ sudo sysctl vm.swappiness=10
 
-    .. code-block:: sh
+    # 永久设置
+    $ sudo echo "vm.swappiness=10" >> /etc/sysctl.conf
+    $ sysctl -p  # 激活
 
-        $ sudo swapoff -a
 
-开启SWAP
-    .. code-block:: sh
-
-        $ sudo swapon -a
 
 
 屏幕录像gif
