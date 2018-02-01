@@ -27,6 +27,8 @@ virsh 与 qemu-img
 *  https://avdv.github.io/libvirt/index.html
 * `Snapshot XML format <https://avdv.github.io/libvirt/formatsnapshot.html>`_
 
+* `libvirt.openAuth  <https://libvirt.org/docs/libvirt-appdev-guide-python/en-US/html/libvirt_application_development_guide_using_python-Connections.html>`_
+* `Python libvirt.openAuth() Examples <https://www.programcreek.com/python/example/77115/libvirt.openAuth>`_
 * `Libvirt Remote URIs <https://libvirt.org/docs/libvirt-appdev-guide-python/en-US/html/libvirt_application_development_guide_using_python-Connections-Remote_URIs.html>`_
 
 
