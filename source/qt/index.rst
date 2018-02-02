@@ -23,6 +23,10 @@ PyQt4
 
 * `QListWidget 布局方向设定 <http://blog.csdn.net/yexiangcsdn/article/details/9932155>`_
 
+* `pyqtSignal  <http://pyqt.sourceforge.net/Docs/PyQt4/new_style_signals_slots.html>`_
+
+* `PyQt4 信号和槽用法总结 <http://blog.csdn.net/jxm_csdn/article/details/51628367>`_
+
 QMultimedia
     QCamera
 
@@ -33,7 +37,6 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
    https://yjdwbj.github.io/2016/09/13/Linux%E4%B8%8B%E7%BC%96%E8%AF%91%E9%9D%99%E6%80%81MinGW%E7%8E%AF%E5%A2%83-%E7%BC%96%E8%AF%91windows%E5%B9%B3%E5%8F%B0Qt%E7%A8%8B%E5%BA%8F/
 
 
-
 .. code-block:: cpp
 
     // QTableWidget
@@ -41,7 +44,6 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
     this->ui->tablewidget->setSelectionMode(QAbstractItemView::SingleSelection); //设置只能选择一行，不能多行选中  
     this->ui->tablewidget->setEditTriggers(QAbstractItemView::NoEditTriggers);   //设置每行内容不可更改  
     this->ui->tablewidget->setAlternatingRowColors(true);                        //设置隔一行变一颜色，即：一灰一白 
-
 
 ..
  Music 命运守护夜
