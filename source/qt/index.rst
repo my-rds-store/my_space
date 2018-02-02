@@ -33,6 +33,23 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
    https://yjdwbj.github.io/2016/09/13/Linux%E4%B8%8B%E7%BC%96%E8%AF%91%E9%9D%99%E6%80%81MinGW%E7%8E%AF%E5%A2%83-%E7%BC%96%E8%AF%91windows%E5%B9%B3%E5%8F%B0Qt%E7%A8%8B%E5%BA%8F/
 
 
+
+.. code-block:: cpp
+
+    // QTableWidget
+    this->ui->tablewidget->setSelectionBehavior(QAbstractItemView::SelectRows);  //单击选择一行  
+    this->ui->tablewidget->setSelectionMode(QAbstractItemView::SingleSelection); //设置只能选择一行，不能多行选中  
+    this->ui->tablewidget->setEditTriggers(QAbstractItemView::NoEditTriggers);   //设置每行内容不可更改  
+    this->ui->tablewidget->setAlternatingRowColors(true);                        //设置隔一行变一颜色，即：一灰一白 
+
+
+..
+ Music 命运守护夜
+
 .. raw:: html
 
-    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="https://music.163.com/outchain/player?type=0&id=821701962&auto=1&height=430"></iframe>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 
+    src="https://music.163.com/outchain/player?type=0&id=821701962&auto=1&height=430">
+    </iframe>
+
+
