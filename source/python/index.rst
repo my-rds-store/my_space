@@ -20,3 +20,26 @@ python3-cookbook
 
 * `lxml - XML and HTML with Python <http://lxml.de/>`_
 
+-----
+
+* `PyUserInput <https://github.com/PyUserInput/PyUserInput>`_
+* `简书:PyUserInput <https://www.jianshu.com/p/552f96aa85dc>`_
+
+
+.. code-block:: python
+
+    # 键盘事件监听
+    from pykeyboard import PyKeyboardEvent
+    import time
+
+    class TapRecord(PyKeyboardEvent):
+      def __init__(self):
+        PyKeyboardEvent.__init__(self)
+     
+      def tap(self, keycode, character, press):
+        print(time.time(), keycode, character, press)
+     
+    t = TapRecord()
+    t.run()
+
+
