@@ -4,16 +4,18 @@ python 学习
 
 * `Python Code Examples <https://www.programcreek.com/python/>`_
 
-
-python3-cookbook
-    http://python3-cookbook.readthedocs.io/zh_CN/latest/
-
-流畅的Python 中文PDF
-    http://www.linuxidc.com/Linux/2017-06/144466.htm
-
-
+------
 
 * `如何打包你的Python代码 <https://python-packaging-zh.readthedocs.io/zh_CN/latest/>`_
+
+
+Book
+--------------
+
+* `python3-cookbook <http://python3-cookbook.readthedocs.io/zh_CN/latest/>`_
+* `流畅的Python 中文PDF <http://www.linuxidc.com/Linux/2017-06/144466.htm>`_
+* `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
+
 
 好用的python库
 --------------
@@ -24,7 +26,6 @@ python3-cookbook
 
 * `PyUserInput <https://github.com/PyUserInput/PyUserInput>`_
 * `简书:PyUserInput <https://www.jianshu.com/p/552f96aa85dc>`_
-
 
 .. code-block:: python
 
