@@ -44,3 +44,13 @@ Book
     t.run()
 
 
+----
+
+.. code-block:: python
+
+    # 查看字符串 编码
+    import chardet
+    fencoding=chardet.detect(u"test string")
+    print fencoding
+
+
