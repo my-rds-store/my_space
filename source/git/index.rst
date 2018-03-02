@@ -1,4 +1,4 @@
-git 使用总结
+Git 使用总结
 ==============
 
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
@@ -7,7 +7,7 @@ git 使用总结
 
 * `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
-* `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`
+* `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`_
 
 * `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
 
@@ -15,7 +15,7 @@ git 使用总结
 * `Releases <http://docs.gitlab.com/ce/workflow/releases.html>`_
 
 
-git 常用命令 
+Git 常用命令 
 -------------
 
 git config 
@@ -33,55 +33,50 @@ git config
     $ git rm --cached path            # 撤销add
     $ git checkout <commit_id> <path> # 回退单个文件到某一次提交
 
+    $ git commit --amend              # 修改commit 备注信息
+
+
+`git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
+----------------------------------------------------------------------------
+
+
+.. code-block:: bash
+
+    $ git log --stat  #  --stat，查看修改了那些文件,仅显示简要的增改行数统计
+
+
 git submodule 
 ^^^^^^^^^^^^^^
 
 .. code-block:: bash
     
+    git submodule add url path/to/name 
     git submodule add <repo> <dir>          # 添加 子模块
                                             # 删除 子模块
 
-    git submodule init                      #初始化子模块
+    git submodule init                      # 初始化子模块
+    git submodule status                    # 状态
     git submodule update                    # 更新子模块
     git submodule foreach git pull          # 拉取所有子模块
 
     git clone <repository> --recursive      # 递归的方式克隆整个项目
-    git submodule update --init --recursive
+    git submodule update --init --recursive # 更新子模块
 
 
 
-* how to remove submodule
+git tag 
+^^^^^^^^^^^^^^
 
-    ::
+.. code-block:: sh
 
-        Delete the relevant line from the .gitmodules file.
-        Delete the relevant section from .git/config.
-        Run git rm --cached path_to_submodule (no trailing slash).
+    # 打TAG也就是发布版本
+    $ git tag -a v1.4 -m "version 1.4"
+    $ git push --tags
 
-        Remove directory .git/modules/<submodule name>
+如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
 
-常见问题及其解决
------------------
 
-* 关闭蓝灯后，push失败
-
-    ::
-      connect to 127.0.0.1 port 38897: Connection refused
-
-解决:
-
-.. code-block:: bash
-
-    # 查看
-    $ env | grep -i proxy
-
-    # 清空环境变量
-    $ export http_proxy=""
-    $ export https_proxy=""
-    $ export HTTP_PROXY=""
-    $ export HTTPS_PROXY=""
-
-搭建gitlib
+搭建Gitlib
 -------------
 
 .. code-block:: bash
@@ -112,7 +107,7 @@ git submodule
 * `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
 * https://docs.gitlab.com/omnibus/docker/
 
-搭建gitlib-CI 持续集成
+搭建Gitlib-CI 持续集成
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 * gitlib-ci : https://gitlab.com
@@ -152,6 +147,7 @@ git submodule
 * http://www.jianshu.com/p/6e65075339d1?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 
 
+
 .. code-block:: sh
 
     $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git
@@ -165,43 +161,11 @@ OR
     $ git submodule update --init --recursive 
 
 
-Git 修改commit 备注信息
-    .. code-block:: sh
 
-        git commit --amend
-
-
-子模块
+Other
 ---------
 
 http://stackoverflow.com/questions/2144406/git-shallow-submodules
-
-#. 添加子模块
-
-.. code-block:: sh
-
-    $ git submodule add 仓库地址 路径
-
-#. 删除子模块
-
-#. 状态 
-
-.. code-block:: sh
-
-    $ git submodule status
-
-#. 更新子模块
-
-.. code-block:: sh
-
-    $ git submodule update --init --recursive
-
-.. code-block:: sh
-
-    $ git submodule add url path/to/name 
-    $ git submodule init
-    $ git submodule foreach git pull
-    $ git submodule update
 
 #. 同步一个COMMIT
 
@@ -210,16 +174,6 @@ http://stackoverflow.com/questions/2144406/git-shallow-submodules
 .. code-block:: sh
 
     $ git cherry-pick xxx
-
-#. Git打TAG
-
-打TAG也就是发布版本
-
-.. code-block:: sh
-
-$ git tag -a v1.2 -m "version 1.4"
-$ git push --tags
-如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
 
 # .查看status详情
 
@@ -259,6 +213,40 @@ $ git push --tags
 
     这个就可以去掉这个COMMIT的改动，这个是明式的去掉，如果你又后悔了，还可以再次恢复。
 
+
+FAQ
+-------------
+
+
+
+* 1. 关闭蓝灯后，push失败
+
+    ::
+
+      connect to 127.0.0.1 port 38897: Connection refused
+
+.. code-block:: bash
+
+    # 查看
+    $ env | grep -i proxy
+
+    # 清空环境变量
+    $ export http_proxy=""
+    $ export https_proxy=""
+    $ export HTTP_PROXY=""
+    $ export HTTPS_PROXY=""
+
+
+* How to remove submodule
+
+    ::
+
+        Delete the relevant line from the .gitmodules file.
+        Delete the relevant section from .git/config.
+        Run git rm --cached path_to_submodule (no trailing slash).
+
+        Remove directory .git/modules/<submodule name>
+
 问题:
 
 ::
@@ -271,3 +259,4 @@ $ git push --tags
 
      git fetch --unshallow
      git fetch --unshallow origin 
+
