@@ -39,10 +39,14 @@ git config
 `git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
 ----------------------------------------------------------------------------
 
-
 .. code-block:: bash
 
     $ git log --stat  #  --stat，查看修改了那些文件,仅显示简要的增改行数统计
+
+    # https://www.cnblogs.com/Sir-Lin/p/6064844.html
+    $ git log -- filename  <path>  # 查看某文件的修改历史
+    $ git show <commit-id> <path>
+ 
 
 
 git submodule 
@@ -175,7 +179,7 @@ http://stackoverflow.com/questions/2144406/git-shallow-submodules
 
     $ git cherry-pick xxx
 
-# .查看status详情
+#. 查看status详情
 
 这样可以在commit之前先看一下修改详情。
 
@@ -185,14 +189,14 @@ http://stackoverflow.com/questions/2144406/git-shallow-submodules
     $ git diff --cached
 
 
-# .不产生无用的merge的同步
+#. 不产生无用的merge的同步
 有这么一种情况，用一个分支专门同步代码提供商的代码的时候，如果一般的pull会不断的产生一个merge看起来会很烦，用下边的使用添加一个--rebase就不会产生无用的merge了
 
 .. code-block:: sh
 
     $ git pull --rebase origin master
 
-# .关于stash
+#. 关于stash
 适用情况：做了修改后，还没有add commit等等后续工作，现在突然要切换分支做其它事情，默认情况下你在这个分支修改的代码会被带到切换过去的分支中。可以先把你修改的保存起来。这些修改可以再还原过来。
 
 .. code-block:: sh
@@ -204,7 +208,7 @@ http://stackoverflow.com/questions/2144406/git-shallow-submodules
 
 注意:-u是代表是也把添加的新文件（术语是未跟踪）也藏起来，一般是要有这个u的。
 
-# .恢复一个COMMIT
+#. 恢复一个COMMIT
     如果一个COMMIT你不想要了，想要去除，可以考虑使用以下的方法；
 
 .. code-block:: sh

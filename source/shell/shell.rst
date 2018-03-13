@@ -138,6 +138,9 @@ apt-get install时如何指定安装版本
 	# do something
     done
 
+    # delete pyc
+    find . -name '*.pyc' -delete
+
 .. code-block:: bash
 
     find -type  f  -name  '*.cpp'  |   xargs  grep  '关键字'    # 查找含有某字符串的所有文件
