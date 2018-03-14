@@ -38,7 +38,7 @@ split分割文件
 
 http://blog.csdn.net/whu_zhangmin/article/details/45870077
 
-.. code-block:: bash
+.. code:: bash
 
     $ split -b 4000M -d -a 1 cm-11.tar.gz cm-11.tar.gz.
 
@@ -46,12 +46,7 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
     #  -d "参数指定生成的分割包后缀为数字的形式
     # -a x来设定序列的长度(默认值是2)，这里设定序列的长度为1
 
-
-
-执行命令后，生成压缩包如下：
-
-.. code:: 
-
+    # 执行命令后，生成压缩包如下：
     -rw-r--r--  1 root     root      4194304000 May 20 14:00 cm-11.tar.gz.0
     -rw-r--r--  1 root     root      4194304000 May 20 14:02 cm-11.tar.gz.1
     -rw-r--r--  1 root     root      4194304000 May 20 14:03 cm-11.tar.gz.2
@@ -61,14 +56,8 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
     -rw-r--r--  1 root     root      4194304000 May 20 14:09 cm-11.tar.gz.6
     -rw-r--r--  1 root     root      2256379886 May 20 14:10 cm-11.tar.gz.7
 
-
-合并文件
---------
-
-
-.. code-block:: bash
-
-
+    # 合并文件
+    $ cat cm-11.tar.gz.* | tar -zxv
 
 
 tar 打包
@@ -78,6 +67,7 @@ tar 打包
 
     $ tar czvf test.tar.gz *         # 压缩当前文件夹下非隐藏文件的文件
     $ tar czvf ../abc.tgz  .[!.]* *  # 压缩当前文件夹下所有文件,排除两个隐藏文件夹"."和“..”
+
 
 shell 文件所在路径
 ----------------------------
