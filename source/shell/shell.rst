@@ -12,6 +12,7 @@ Shell 实用技巧
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
 
 
+
 ssh 无密码登录
 --------------------
 
@@ -311,5 +312,67 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 .. code-block:: bash
     
      $ iostat -d -x -k 1   
+
+
+硬盘分区格式化与挂载
+----------------------
+
+.. code::
+
+    root@localhost:~# fdisk /dev/vdb 
+    Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+    Building a new DOS disklabel with disk identifier 0x7de2444b.
+    Changes will remain in memory only, until you decide to write them.
+    After that, of course, the previous content won't be recoverable.
+
+    Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+    Command (m for help): m
+    Command action
+       a   toggle a bootable flag
+       b   edit bsd disklabel
+       c   toggle the dos compatibility flag
+       d   delete a partition
+       l   list known partition types
+       m   print this menu
+       n   add a new partition
+       o   create a new empty DOS partition table
+       p   print the partition table
+       q   quit without saving changes
+       s   create a new empty Sun disklabel
+       t   change a partition's system id
+       u   change display/entry units
+       v   verify the partition table
+       w   write table to disk and exit
+       x   extra functionality (experts only)
+
+    Command (m for help): n
+    Partition type:
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended
+    Select (default p): p
+    Partition number (1-4, default 1): 1
+    First sector (2048-146800639, default 2048): 
+    Using default value 2048
+    Last sector, +sectors or +size{K,M,G} (2048-146800639, default 146800639): 
+    Using default value 146800639
+
+    Command (m for help): w
+    The partition table has been altered!
+
+.. code-block:: bash
+    
+
+    # 格式化
+    mkfs -t ext4 -c /dev/vdb1
+    mkfs.ext4 -c /dev/vdb1
+
+.. code::
+
+    # /etc/fstabe
+    # sudo  blkid  查看 磁盘UUID
+    UUID=fd05da95-d9f5-4a3e-8cf3-41c9dff1f5b8  /home    ext4  defaults   0  0
+    # or
+    /dev/vdb1  /home    ext4  defaults   0  0
 
 
