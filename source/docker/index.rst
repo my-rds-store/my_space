@@ -1,48 +1,62 @@
 Docker 学习
 ===================
 
-
-安装docker  
+Installation  
 ------------
+
+* `Instal Docker <https://docs.docker.com/engine/installation/>`_
+
+* `安装docker(阿里源) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
 
 .. code-block:: bash
 
+     # 老版本
      $ sudo apt-get install -y docker.io
 
-
-`Installation  <https://docs.docker.com/engine/installation/>`_
-
-`Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
-
-
-镜像加速地址 
-------------------
+配置 
+-------
 
 .. code-block:: bash
 
     $ sudo mkdir -p /etc/docker
-    $ sudo tee /etc/docker/daemon.json <<-'EOF'
-      {
-          "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
-      }
-      EOF
 
+    # 1. 指定 镜像加速地址
+    #    https://docker.mirrors.ustc.edu.cn     # 中科大
+    #    https://hub-mirror.c.163.com           # 163
+    #    https://4lmb1y64.mirror.aliyuncs.com
+
+    # 2. 指定 Docker root dir 
+    # 3. 指定 DNS 
+
+    $ sudo tee -a /etc/docker/daemon.json <<-'EOF'
+    {
+        "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
+        "graph": "/home/docker/docker_image",
+        "dns": ["180.76.76.76", "114.114.114.114"]
+    }
+    EOF
+  
+    # 重启
     $ sudo systemctl daemon-reload
     $ sudo systemctl restart docker
 
-::
+    $ sudo service  docker restart   # ubuntu
 
-  https://docker.mirrors.ustc.edu.cn     # 中科大
-  https://hub-mirror.c.163.com           # 163
-  https://4lmb1y64.mirror.aliyuncs.com
+
+    # 查看
+    $ docker info
+
 
 KUBERNETES
 ------------------
 
     * https://www.kubernetes.org.cn/docs
 
+
 常用命令 
 ------------------
+
+`Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
 
 启动docker

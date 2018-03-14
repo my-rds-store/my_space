@@ -12,6 +12,7 @@ Shell 实用技巧
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
 
 
+
 ssh 无密码登录
 --------------------
 
@@ -37,7 +38,7 @@ split分割文件
 
 http://blog.csdn.net/whu_zhangmin/article/details/45870077
 
-.. code-block:: bash
+.. code:: bash
 
     $ split -b 4000M -d -a 1 cm-11.tar.gz cm-11.tar.gz.
 
@@ -45,12 +46,7 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
     #  -d "参数指定生成的分割包后缀为数字的形式
     # -a x来设定序列的长度(默认值是2)，这里设定序列的长度为1
 
-
-
-执行命令后，生成压缩包如下：
-
-.. code:: 
-
+    # 执行命令后，生成压缩包如下：
     -rw-r--r--  1 root     root      4194304000 May 20 14:00 cm-11.tar.gz.0
     -rw-r--r--  1 root     root      4194304000 May 20 14:02 cm-11.tar.gz.1
     -rw-r--r--  1 root     root      4194304000 May 20 14:03 cm-11.tar.gz.2
@@ -60,14 +56,8 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
     -rw-r--r--  1 root     root      4194304000 May 20 14:09 cm-11.tar.gz.6
     -rw-r--r--  1 root     root      2256379886 May 20 14:10 cm-11.tar.gz.7
 
-
-合并文件
---------
-
-
-.. code-block:: bash
-
-
+    # 合并文件
+    $ cat cm-11.tar.gz.* | tar -zxv
 
 
 tar 打包
@@ -77,6 +67,7 @@ tar 打包
 
     $ tar czvf test.tar.gz *         # 压缩当前文件夹下非隐藏文件的文件
     $ tar czvf ../abc.tgz  .[!.]* *  # 压缩当前文件夹下所有文件,排除两个隐藏文件夹"."和“..”
+
 
 shell 文件所在路径
 ----------------------------
@@ -137,6 +128,9 @@ apt-get install时如何指定安装版本
 	echo $file
 	# do something
     done
+
+    # delete pyc
+    find . -name '*.pyc' -delete
 
 .. code-block:: bash
 
@@ -308,5 +302,67 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 .. code-block:: bash
     
      $ iostat -d -x -k 1   
+
+
+硬盘分区格式化与挂载
+----------------------
+
+.. code::
+
+    root@localhost:~# fdisk /dev/vdb 
+    Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+    Building a new DOS disklabel with disk identifier 0x7de2444b.
+    Changes will remain in memory only, until you decide to write them.
+    After that, of course, the previous content won't be recoverable.
+
+    Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+
+    Command (m for help): m
+    Command action
+       a   toggle a bootable flag
+       b   edit bsd disklabel
+       c   toggle the dos compatibility flag
+       d   delete a partition
+       l   list known partition types
+       m   print this menu
+       n   add a new partition
+       o   create a new empty DOS partition table
+       p   print the partition table
+       q   quit without saving changes
+       s   create a new empty Sun disklabel
+       t   change a partition's system id
+       u   change display/entry units
+       v   verify the partition table
+       w   write table to disk and exit
+       x   extra functionality (experts only)
+
+    Command (m for help): n
+    Partition type:
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended
+    Select (default p): p
+    Partition number (1-4, default 1): 1
+    First sector (2048-146800639, default 2048): 
+    Using default value 2048
+    Last sector, +sectors or +size{K,M,G} (2048-146800639, default 146800639): 
+    Using default value 146800639
+
+    Command (m for help): w
+    The partition table has been altered!
+
+.. code-block:: bash
+    
+
+    # 格式化
+    mkfs -t ext4 -c /dev/vdb1
+    mkfs.ext4 -c /dev/vdb1
+
+.. code::
+
+    # /etc/fstabe
+    # sudo  blkid  查看 磁盘UUID
+    UUID=fd05da95-d9f5-4a3e-8cf3-41c9dff1f5b8  /home    ext4  defaults   0  0
+    # or
+    /dev/vdb1  /home    ext4  defaults   0  0
 
 
