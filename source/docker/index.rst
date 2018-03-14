@@ -1,11 +1,8 @@
 Docker 学习
 ===================
 
-
 Installation  
 ------------
-
-
 
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
 
@@ -16,29 +13,33 @@ Installation
      # 老版本
      $ sudo apt-get install -y docker.io
 
-
-镜像加速地址 
-------------------
+配置 
+-------
 
 .. code-block:: bash
 
     $ sudo mkdir -p /etc/docker
-    $ sudo tee /etc/docker/daemon.json <<-'EOF'
-      {
-          "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
-      }
-      EOF
 
-    # 修改 Docker root dir 
+    # 镜像加速地址
     $ sudo tee /etc/docker/daemon.json <<-'EOF'
-      {
-          "graph": "/home/docker/docker_image"
-      }
-      EOF
+    {
+        "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
+    }
+    EOF
+
+    # 指定 Docker root dir 
+    $ sudo tee -a /etc/docker/daemon.json <<-'EOF'
+    {
+        "graph": "/home/docker/docker_image"
+    }
+    EOF
 
     # 重启
     $ sudo systemctl daemon-reload
     $ sudo systemctl restart docker
+
+    $ sudo service  docker restart   # ubuntu
+
 
     # 查看
     $ docker info
