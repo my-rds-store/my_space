@@ -26,6 +26,12 @@ Installation
         "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
     }
     EOF
+    
+    # 加速地址
+    # https://docker.mirrors.ustc.edu.cn     # 中科大
+    # https://hub-mirror.c.163.com           # 163
+    # https://4lmb1y64.mirror.aliyuncs.com
+
 
     # 指定 Docker root dir 
     $ sudo tee -a /etc/docker/daemon.json <<-'EOF'
@@ -43,14 +49,6 @@ Installation
 
     # 查看
     $ docker info
-
-
-::
-
-  https://docker.mirrors.ustc.edu.cn     # 中科大
-  https://hub-mirror.c.163.com           # 163
-  https://4lmb1y64.mirror.aliyuncs.com
-
 
 
 KUBERNETES
