@@ -2,17 +2,15 @@ Docker 学习
 ===================
 
 
-安装docker  
+Installation  
 ------------
-
-.. code-block:: bash
-
-     $ sudo apt-get install -y docker.io
-
 
 `Installation  <https://docs.docker.com/engine/installation/>`_
 
-`Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
+.. code-block:: bash
+
+     # 老版本
+     $ sudo apt-get install -y docker.io
 
 
 镜像加速地址 
@@ -41,8 +39,11 @@ KUBERNETES
 
     * https://www.kubernetes.org.cn/docs
 
+
 常用命令 
 ------------------
+
+`Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
 
 启动docker
