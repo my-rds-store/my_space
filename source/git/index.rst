@@ -120,7 +120,8 @@ git tag
 
 * `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`_
 
-* `Gitlab CI yaml官方配置文件翻译  <https://segmentfault.com/a/1190000010442764#articleHeader2>`_
+* `Gitlab CI yaml官方配置文件翻译 <https://github.com/Fennay/gitlab-ci-cn>`_
+  
 
     ::
 
