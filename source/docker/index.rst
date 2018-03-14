@@ -29,14 +29,28 @@ Installation
       }
       EOF
 
+    # 修改 Docker root dir 
+    $ sudo tee /etc/docker/daemon.json <<-'EOF'
+      {
+          "graph": "/home/docker/docker_image"
+      }
+      EOF
+
+    # 重启
     $ sudo systemctl daemon-reload
     $ sudo systemctl restart docker
+
+    # 查看
+    $ docker info
+
 
 ::
 
   https://docker.mirrors.ustc.edu.cn     # 中科大
   https://hub-mirror.c.163.com           # 163
   https://4lmb1y64.mirror.aliyuncs.com
+
+
 
 KUBERNETES
 ------------------
