@@ -115,13 +115,16 @@ git tag
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 * gitlib-ci : https://gitlab.com
-* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 
+* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 
 * `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`_
 
-::
- /etc/gitlab-runner/config.toml
+* `Gitlab CI yaml官方配置文件翻译  <https://segmentfault.com/a/1190000010442764#articleHeader2>`_
+
+    ::
+
+     /etc/gitlab-runner/config.toml
 
 .. code-block:: bash
 
