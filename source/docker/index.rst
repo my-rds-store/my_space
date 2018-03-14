@@ -20,26 +20,22 @@ Installation
 
     $ sudo mkdir -p /etc/docker
 
-    # 镜像加速地址
-    $ sudo tee /etc/docker/daemon.json <<-'EOF'
-    {
-        "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]  
-    }
-    EOF
-    
-    # 加速地址
-    # https://docker.mirrors.ustc.edu.cn     # 中科大
-    # https://hub-mirror.c.163.com           # 163
-    # https://4lmb1y64.mirror.aliyuncs.com
+    # 1. 指定 镜像加速地址
+    #    https://docker.mirrors.ustc.edu.cn     # 中科大
+    #    https://hub-mirror.c.163.com           # 163
+    #    https://4lmb1y64.mirror.aliyuncs.com
 
+    # 2. 指定 Docker root dir 
+    # 3. 指定 DNS 
 
-    # 指定 Docker root dir 
     $ sudo tee -a /etc/docker/daemon.json <<-'EOF'
     {
-        "graph": "/home/docker/docker_image"
+        "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
+        "graph": "/home/docker/docker_image",
+        "dns": ["180.76.76.76", "114.114.114.114"]
     }
     EOF
-
+  
     # 重启
     $ sudo systemctl daemon-reload
     $ sudo systemctl restart docker
