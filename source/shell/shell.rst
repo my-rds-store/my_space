@@ -32,9 +32,8 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 
 http://man.linuxde.net/rename
 
-tftp
----------
-
+sftp文件批量上传与下载
+------------------------
 
 .. code-block:: bash
 
