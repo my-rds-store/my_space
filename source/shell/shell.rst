@@ -55,7 +55,7 @@ tftp
     PORT=22
 
     # 修改 IFS
-    OldIfs=$IFS
+    OIFS=$IFS
     IFS=$(echo -en "\n\b")
 
     #获取文件
@@ -75,7 +75,7 @@ tftp
     by
     EOF
     done
-    IFS=$OldIfs    # 恢复IFS
+    IFS=$OIFS    # 恢复IFS
 
 .. code-block:: bash
 
