@@ -28,9 +28,76 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 
 
 修改文件名 rename
------------------
+-------------------
 
 http://man.linuxde.net/rename
+
+tftp
+---------
+
+
+.. code-block:: bash
+
+    #!/bin/bash
+    # apt-get install lftp
+    
+    # 上传文件
+
+    #SFTP配置信息
+
+    USER=jxm  #用户名
+    PASSWORD=123456  #密码
+
+    SRCDIR=/home/jxm/Documents  #待上传文件根目录
+    DESDIR=/tmp                 #FTP目录
+
+    IP=127.0.0.1
+    PORT=22
+
+    # 修改 IFS
+    OldIfs=$IFS
+    IFS=$(echo -en "\n\b")
+
+    #获取文件
+    cd ${SRCDIR}
+    #FILES=`ls`  #目录下的所有文件
+    #FILES=`find ${SRCDIR} -mmin -50 -name '*.mp4'` #修改时间在执行时间五分钟之前的文件
+    FILES=`find ${SRCDIR} -name '*.pdf'`
+
+    for FILE in ${FILES}
+    do
+        echo ${FILE}
+    #发送文件 (关键部分）
+    lftp -u ${USER},${PASSWORD} sftp://${IP}:${PORT} <<EOF
+    cd ${DESDIR}/
+    lcd ${SRCDIR}
+    put '${FILE}'
+    by
+    EOF
+    done
+    IFS=$OldIfs    # 恢复IFS
+
+.. code-block:: bash
+
+    #!/bin/bash
+
+    # 下载文件
+
+    USER=root
+    PASSWORD=5EYS40T04BMF  # 密码
+
+    SRCDIR=/u02/dab        # 下载文件目录
+    DESDIR=/u01/sftpFiles  # FTP目录(待下载文件目录)
+    
+    IP=192.168.1.10
+    PORT=22
+
+    lftp -u ${USER},${PASSWORD} sftp://${IP}:${PORT}<<EOF
+    cd ${DESDIR}
+    lcd ${SRCDIR}
+    get text.xml  #需要下载的文件为text.xml
+    by
+    EOF
 
 
 split分割文件
