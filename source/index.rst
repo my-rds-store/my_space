@@ -59,6 +59,7 @@ Hello World
    mingw32/index
    nsis/index
    dnsmasq/index
+   apache/index 
    android/index
    openbox/index
    linux_tools_cfg/index
