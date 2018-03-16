@@ -35,6 +35,8 @@ http://man.linuxde.net/rename
 sftp文件批量上传与下载
 ------------------------
 
+https://stackoverflow.com/questions/41378953/unknown-command-lftp
+
 .. code-block:: bash
 
     #!/bin/bash
@@ -68,6 +70,7 @@ sftp文件批量上传与下载
         echo ${FILE}
     #发送文件 (关键部分）
     lftp -u ${USER},${PASSWORD} sftp://${IP}:${PORT} <<EOF
+    set sftp:auto-confirm yes
     cd ${DESDIR}/
     lcd ${SRCDIR}
     put '${FILE}'
