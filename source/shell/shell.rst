@@ -35,7 +35,8 @@ http://man.linuxde.net/rename
 sftp文件批量上传与下载
 ------------------------
 
-https://stackoverflow.com/questions/41378953/unknown-command-lftp
+* https://stackoverflow.com/questions/41378953/unknown-command-lftp
+* `用Python实现无交互sftp上传 下载 <http://blog.csdn.net/u010950854/article/details/62233538?utm_source=itdadao&utm_medium=referral>`_
 
 .. code-block:: bash
 
