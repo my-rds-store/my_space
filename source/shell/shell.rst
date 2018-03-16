@@ -103,6 +103,18 @@ sftp文件批量上传与下载
     EOF
 
 
+Shell 获取文件名和后缀名
+--------------------------
+
+.. code-block:: bash
+
+    $ file="thisfile.txt"
+    $ echo "filename: ${file%.*}"
+    filename: thisfile
+    $ echo "extension: ${file##*.}"
+    extension: txt
+
+
 split分割文件
 -------------
 
