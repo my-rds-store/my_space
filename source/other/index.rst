@@ -1,6 +1,21 @@
 其他
 ================
 
+
+.. code-block:: bash
+
+    # ubuntu install protobuf
+    sudo apt-get install  libprotobuf-dev
+    sudo apt-get install protobuf-compiler
+
+    #
+    g++ write.cpp addressbook.pb.cc  -o write `pkg-config --cflags --lib    s protobuf`
+    g++ read.cpp addressbook.pb.cc  -o read `pkg-config --cflags --libs     protobuf`
+~                                                                               
+~                                                                               
+~             
+
+
 Windows镜像下载地址
     https://msdn.itellyou.cn/
 

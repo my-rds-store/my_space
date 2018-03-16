@@ -118,12 +118,20 @@ git tag
 
 * gitlib-ci : https://gitlab.com
 
-* 1. `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
+* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 
 * `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`_
 
+* `Gitlab CI yaml官方配置文件翻译 <https://github.com/Fennay/gitlab-ci-cn>`_
+
+    ::
 
      /etc/gitlab-runner/config.toml
+
+* `Advanced configuration <https://docs.gitlab.com/runner/configuration/advanced-configuration.html>`_
+
+
+* `GitLab Runner Commands  <https://docs.gitlab.com/runner/commands/README.html>`_
 
 .. code-block:: bash
 

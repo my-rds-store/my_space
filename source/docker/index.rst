@@ -42,7 +42,6 @@ Installation
 
     $ sudo service  docker restart   # ubuntu
 
-
     # 查看
     $ docker info
 
