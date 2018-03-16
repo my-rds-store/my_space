@@ -136,9 +136,15 @@ Install gitlab-runner
 .. code-block:: bash
 
     docker run -d --name gitlab-runner --restart always \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      gitlab/gitlab-runner:latest
+
+    docker run -d --name gitlab-runner --restart always \
       -v /srv/gitlab-runner/config:/etc/gitlab-runner \
       -v /var/run/docker.sock:/var/run/docker.sock \
       gitlab/gitlab-runner:latest
+
+    docker exec -it gitlab-runner gitlab-runner register
 
 
 * gitlib-ci : https://gitlab.com
@@ -160,10 +166,9 @@ Install gitlab-runner
 
 .. code-block:: bash
 
-    $ sudo gitlab-ci-multi-runner register
     $ sudo gitlab-runner register
-    $ sudo gitlab-runner unregister --name "name"
 
+    $ sudo gitlab-runner unregister --name "name"
     $ sudo gitlab-runner list
     $ sudo gitlab-runner verify
 
