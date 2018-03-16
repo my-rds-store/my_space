@@ -75,7 +75,9 @@ git tag
 
     # 打TAG也就是发布版本
     $ git tag -a v1.4 -m "version 1.4"
+    $ 
     $ git push --tags
+    $ git push my_origin --tags
 
 如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
 
@@ -115,13 +117,13 @@ git tag
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 * gitlib-ci : https://gitlab.com
-* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 
+* 1. `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
 
 * `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`_
 
-::
- /etc/gitlab-runner/config.toml
+
+     /etc/gitlab-runner/config.toml
 
 .. code-block:: bash
 
