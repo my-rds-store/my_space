@@ -1,5 +1,7 @@
-Git 使用总结
-==============
+###########
+Git使用总结
+###########
+
 
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
@@ -15,11 +17,13 @@ Git 使用总结
 * `Releases <http://docs.gitlab.com/ce/workflow/releases.html>`_
 
 
+************
 Git 常用命令 
--------------
+************
 
 git config 
-^^^^^^^^^^^
+============
+
 
 .. code-block:: bash
 
@@ -37,7 +41,7 @@ git config
 
 
 `git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
-----------------------------------------------------------------------------
+=============================================================================
 
 .. code-block:: bash
 
@@ -50,7 +54,7 @@ git config
 
 
 git submodule 
-^^^^^^^^^^^^^^
+================
 
 .. code-block:: bash
     
@@ -69,7 +73,7 @@ git submodule
 
 
 git tag 
-^^^^^^^^^^^^^^
+============
 
 .. code-block:: sh
 
@@ -82,8 +86,14 @@ git tag
 如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
 
 
+************
+Gitlib
+************
+
+
+
 搭建Gitlib
--------------
+================
 
 .. code-block:: bash
 
@@ -113,8 +123,23 @@ git tag
 * `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
 * https://docs.gitlab.com/omnibus/docker/
 
+
 搭建Gitlib-CI 持续集成
-^^^^^^^^^^^^^^^^^^^^^^^
+=======================
+
+Section name
+============
+
+Install gitlab-runner
+----------------------
+
+.. code-block:: bash
+
+    docker run -d --name gitlab-runner --restart always \
+      -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      gitlab/gitlab-runner:latest
+
 
 * gitlib-ci : https://gitlab.com
 
@@ -176,8 +201,10 @@ OR
 
 
 
+************
 Other
----------
+************
+
 
 http://stackoverflow.com/questions/2144406/git-shallow-submodules
 
@@ -227,11 +254,9 @@ http://stackoverflow.com/questions/2144406/git-shallow-submodules
 
     这个就可以去掉这个COMMIT的改动，这个是明式的去掉，如果你又后悔了，还可以再次恢复。
 
-
+***
 FAQ
--------------
-
-
+***
 
 * 1. 关闭蓝灯后，push失败
 
