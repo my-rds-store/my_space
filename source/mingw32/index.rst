@@ -17,6 +17,8 @@ Mingw32 (fedora)
 -mwindows
 
 
+* `my_code_exam <https://gitee.com/ForClanguage/about_gtk.git>`_ 
+
 .. code-block:: bash
     
     mingw32-pkg-config --libs --cflags gtk+-2.0
