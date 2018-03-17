@@ -93,6 +93,15 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
     $ cd tree-1.5.1.2
     $ sudo dpkg-buildpackage
 
+    #  构建 vlc 打包环境
+    apt-get update
+    apt-get install curl -y  
+    curl -o /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.trusty
+    apt-get update
+    sudo apt-get build-dep vlc -y
+    #sudo apt-get source vlc
+
+
 
 
 源列表
