@@ -200,8 +200,6 @@ Gitlab_
     Please enter the Docker image (eg. ruby:2.1):
     alpine:latest
 
-    # OR
-
 * `Using Docker images <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html>`_
 * `Using Docker Build <https://docs.gitlab.com/ce/ci/docker/using_docker_build.html>`_
 
