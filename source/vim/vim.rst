@@ -39,7 +39,6 @@ vim 技巧
 `VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
 
 
-
 YouCompleteMe
 ---------------
 
@@ -64,6 +63,8 @@ Ubuntu Linxu x64
         $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git \
             $HOME/.vim/bundle/YouCompleteMe
         $ cd $HOME/.vim/bundle/YouCompleteMe
+
+        $ cd crfasrnn  
         $ git submodule update --init --recursive
 
         $ ./install.py --clang-completer  # c/c++

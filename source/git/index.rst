@@ -2,20 +2,20 @@
 Git使用总结
 ###########
 
-
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
 * `码云平台帮助文档 <http://git.mydoc.io/>`_
 
-* `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
+-------------
 
 * `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`_
-
-* `git-学习 <http://blog.csdn.net/jxm_csdn/article/details/51793607>`_
-
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
-* `Releases <http://docs.gitlab.com/ce/workflow/releases.html>`_
+* `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
+.. image:: ./image/Repository.png
+    :scale: 100%
+    :alt: alternate text
+    :align: center
 
 ************
 Git 常用命令 
@@ -24,21 +24,25 @@ Git 常用命令
 git config 
 ============
 
+.. code-block:: bash
+
+    $ git config --global -e  # 默认为 --global
+    $ git config  -e    # or git config --edit
+    $ git config --list 
+    $ git config --global core.editor vim  # 配置默认编辑器 vim
+
+撤销与回退 
+============
 
 .. code-block:: bash
 
-    $ git config --global -e
+    $ git rm --cached path                 # 撤销add
+    $ git checkout <commit_id> <path>      # 回退单个文件到某一次提交
 
-    # 默认为 --global
-    $ git config  -e     # or git config --edit
-    $ git config --list 
-    $ git config user.name 
-    $ git config --global core.editor vim  # 配置默认编辑器 vim
-    $ git rm --cached path            # 撤销add
-    $ git checkout <commit_id> <path> # 回退单个文件到某一次提交
+    $ git revert <commit_id>
+    # git revert是用一次新的commit来回滚之前的commit, 而git reset是直接删除指定的commit。
 
-    $ git commit --amend              # 修改commit 备注信息
-
+    $ git commit --amend                   # 修改commit 备注信息
 
 `git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
 =============================================================================
@@ -50,7 +54,22 @@ git config
     # https://www.cnblogs.com/Sir-Lin/p/6064844.html
     $ git log -- filename  <path>  # 查看某文件的修改历史
     $ git show <commit-id> <path>
- 
+
+
+* `git cherry-pick <https://www.jianshu.com/p/08c3f1804b36>`_
+
+.. code-block:: sh
+
+    $ git cherry-pick xxx
+
+.. code-block:: sh
+
+    $ git add  <path>
+    $ git diff --cached
+
+.. code-block:: sh
+
+    $ git pull --rebase origin master
 
 
 git submodule 
@@ -70,8 +89,6 @@ git submodule
     git clone <repository> --recursive      # 递归的方式克隆整个项目
     git submodule update --init --recursive # 更新子模块
 
-
-
 git tag 
 ============
 
@@ -87,12 +104,13 @@ git tag
 
 
 ************
-Gitlib
+Gitlab_
 ************
 
+.. _Gitlab : https://gitlab.com
 
 
-搭建Gitlib
+搭建Gitlab 
 ================
 
 .. code-block:: bash
@@ -121,17 +139,21 @@ Gitlib
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
 * `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
 * `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
-* https://docs.gitlab.com/omnibus/docker/
+*  https://docs.gitlab.com/omnibus/docker/
 
 
-搭建Gitlib-CI 持续集成
+搭建Gitlab-CI 持续集成
 =======================
 
-Section name
+快速使用
 ============
 
-Install gitlab-runner
-----------------------
+
+1. Install gitlab-runner
+--------------------------
+
+* https://docs.gitlab.com/runner/install/docker.html
+
 
 .. code-block:: bash
 
@@ -139,137 +161,108 @@ Install gitlab-runner
       -v /var/run/docker.sock:/var/run/docker.sock \
       gitlab/gitlab-runner:latest
 
+    # or
     docker run -d --name gitlab-runner --restart always \
       -v /srv/gitlab-runner/config:/etc/gitlab-runner \
       -v /var/run/docker.sock:/var/run/docker.sock \
       gitlab/gitlab-runner:latest
 
-    docker exec -it gitlab-runner gitlab-runner register
+2. Registering Runners 
+-------------------------
 
+* https://docs.gitlab.com/runner/register/index.html
 
-* gitlib-ci : https://gitlab.com
+.. code-block:: bash
+
+    $ docker exec -it gitlab-runner gitlab-runner register
+
+    Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com )
+    https://gitlab.com
+
+    Please enter the gitlab-ci token for this runner
+    xxx
+
+    Please enter the gitlab-ci description for this runner
+    [hostame] my-runner
+
+    Please enter the gitlab-ci tags for this runner (comma separated):
+    my-tag,another-tag
+
+    Whether to run untagged jobs [true/false]:
+    [false]: true
+
+    Whether to lock Runner to current project [true/false]:
+    [true]: true
+
+    Please enter the executor: ssh, docker+machine, docker-ssh+machine, kubernetes, docker, parallels, virtualbox, docker-ssh, shell:
+    docker
+
+    Please enter the Docker image (eg. ruby:2.1):
+    alpine:latest
+
+    # OR
+
+* `Using Docker images <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html>`_
+* `Using Docker Build <https://docs.gitlab.com/ce/ci/docker/using_docker_build.html>`_
+
+.. code-block:: bash
+
+    $ docker exec -it gitlab-runner gitlab-runner register
+      --url "https://gitlab.example.com/" \
+      --registration-token "PROJECT_REGISTRATION_TOKEN" \
+      --description "docker-gitlab-runner-description" \
+      --tag-list my-tag,another-tag \
+      --run-untagged true \
+      --locked  true \
+      --executor "docker" \
+      --docker-image ubuntu:14.04 
+
+3. gitlab-ci.yml
+------------------
+
+* `通过 .gitlab-ci.yml配置任务 <https://fennay.github.io/gitlab-ci-cn/gitlab-ci-yaml.html>`_
+* `Configuration of your jobs with .gitlab-ci.yml <https://docs.gitlab.com/ee/ci/yaml/README.html>`_
+
+4. gitlab-runner 常用命令
+--------------------------
+
+.. code-block:: bash
+
+    $ sudo gitlab-runner register
+    $ sudo gitlab-runner unregister --name "name"
+    $ sudo gitlab-runner list
+    $ sudo gitlab-runner verify
+
+Advanced
+========
 
 * `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
-
 * `用 GitLab CI 进行持续集成 <https://segmentfault.com/a/1190000006120164>`_
-
 * `Gitlab CI yaml官方配置文件翻译 <https://github.com/Fennay/gitlab-ci-cn>`_
-
-    ::
-
-     /etc/gitlab-runner/config.toml
-
 * `Advanced configuration <https://docs.gitlab.com/runner/configuration/advanced-configuration.html>`_
-
-
 * `GitLab Runner Commands  <https://docs.gitlab.com/runner/commands/README.html>`_
 
 .. code-block:: bash
 
     $ sudo gitlab-runner register
+    $ sudo gitlab-runner register -c "$HOME/.gitlab-runner/config.toml"
 
     $ sudo gitlab-runner unregister --name "name"
     $ sudo gitlab-runner list
     $ sudo gitlab-runner verify
 
-    $ sudo gitlab-runner install -n "gitlab-runner" -u root -d /var/gitlab/runner \
-      -c /etc/gitlab-runner/config.toml   # ubuntu  
-
-    $ sudo gitlab-runner uninstall -n "gitlab-runner" 
-
-    $ sudo gitlab-runner start -n "gitlab-runner" 
-    $ sudo gitlab-runner stop  -n "gitlab-runner" 
-
 * `gitlab runner 遇到的几个坑 <http://www.jianshu.com/p/d91387b9a79b>`_
-
-* `Install GitLab Runner <https://docs.gitlab.com/runner/install/>`_
-* `Install GitLab Runner using the official GitLab repositories  <https://docs.gitlab.com/runner/install/linux-repository.html>`_
-* http://www.jianshu.com/p/2b43151fb92e
-
-* http://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
-
-* http://www.jianshu.com/p/6e65075339d1?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
-
-
-
-.. code-block:: sh
-
-    $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git
-
-OR
-
-.. code-block:: sh
-
-    $ git clone https://github.com/Valloric/YouCompleteMe.git  
-    $ cd crfasrnn  
-    $ git submodule update --init --recursive 
-
-
-
-************
-Other
-************
-
-
-http://stackoverflow.com/questions/2144406/git-shallow-submodules
-
-#. 同步一个COMMIT
-
-    可以同步一个commit到本分支
-
-.. code-block:: sh
-
-    $ git cherry-pick xxx
-
-#. 查看status详情
-
-这样可以在commit之前先看一下修改详情。
-
-.. code-block:: sh
-
-    $ git add xxx
-    $ git diff --cached
-
-
-#. 不产生无用的merge的同步
-有这么一种情况，用一个分支专门同步代码提供商的代码的时候，如果一般的pull会不断的产生一个merge看起来会很烦，用下边的使用添加一个--rebase就不会产生无用的merge了
-
-.. code-block:: sh
-
-    $ git pull --rebase origin master
-
-#. 关于stash
-适用情况：做了修改后，还没有add commit等等后续工作，现在突然要切换分支做其它事情，默认情况下你在这个分支修改的代码会被带到切换过去的分支中。可以先把你修改的保存起来。这些修改可以再还原过来。
-
-.. code-block:: sh
-
-    $ git stash -u
-
-    $ xxxx 随便你的操作
-    $ git stash pop
-
-注意:-u是代表是也把添加的新文件（术语是未跟踪）也藏起来，一般是要有这个u的。
-
-#. 恢复一个COMMIT
-    如果一个COMMIT你不想要了，想要去除，可以考虑使用以下的方法；
-
-.. code-block:: sh
-
-    $ git revert xxxx
-
-    这个就可以去掉这个COMMIT的改动，这个是明式的去掉，如果你又后悔了，还可以再次恢复。
+* `GitLab-CI与GitLab-Runner <http://www.jianshu.com/p/2b43151fb92e>`_
+* `[后端]gitlab之gitlab-ci自动部署  <http://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation>`_
 
 ***
 FAQ
 ***
 
-* 1. 关闭蓝灯后，push失败
-
-    ::
-
-      connect to 127.0.0.1 port 38897: Connection refused
-
 .. code-block:: bash
+
+    # 关闭蓝灯后，push失败
+    connect to 127.0.0.1 port 38897: Connection refused
 
     # 查看
     $ env | grep -i proxy
@@ -280,27 +273,19 @@ FAQ
     $ export HTTP_PROXY=""
     $ export HTTPS_PROXY=""
 
+::
 
-* How to remove submodule
+    How to remove submodule
 
-    ::
+    1. Delete the relevant line from the .gitmodules file.
+    2. Delete the relevant section from .git/config.
+    3. Run git rm --cached path_to_submodule (no trailing slash).
 
-        Delete the relevant line from the .gitmodules file.
-        Delete the relevant section from .git/config.
-        Run git rm --cached path_to_submodule (no trailing slash).
-
-        Remove directory .git/modules/<submodule name>
-
-问题:
+    4. Remove directory .git/modules/<submodule name>
 
 ::
 
      ! [remote rejected] master -> master (shallow update not allowed)
 
-解决:
-
-::
-
-     git fetch --unshallow
-     git fetch --unshallow origin 
-
+     $ git fetch --unshallow
+     $ git fetch --unshallow origin 
