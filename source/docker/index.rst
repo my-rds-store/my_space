@@ -111,11 +111,9 @@ KUBERNETES
         
         $ sudo docker rmi oldname:tag   # 删除镜像
 
-
-        $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
+        $ sudo docker login --username=jiang_xmin -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
 
         $ sudo docker search centos  # 搜索
-
 
 容器
 ============
@@ -218,6 +216,8 @@ KUBERNETES
 **********
 Dockerfile
 **********
+
+* https://code.aliyun.com/
 
 
 #. EXPOSE
