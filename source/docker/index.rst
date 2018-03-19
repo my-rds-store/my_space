@@ -1,8 +1,22 @@
-Docker 学习
-===================
+###############
+Docker 学习总结
+###############
 
-Installation  
-------------
+*******************
+Docker Hub 与阿里云
+*******************
+
+https://dev.aliyun.com/search.html
+
+
+
+************
+安装与配置
+************
+
+
+安装  
+============
 
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
 
@@ -18,7 +32,7 @@ Installation
      $ sudo apt-get install -y docker.io
 
 配置 
--------
+============
 
 .. code-block:: bash
 
@@ -56,17 +70,21 @@ KUBERNETES
     * https://www.kubernetes.org.cn/docs
 
 
-常用命令 
-------------------
+**********
+常用命令
+**********
 
 `Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
 
-启动docker
-^^^^^^^^^^^^^^^^^
+
+启动docker server
+===================
 
     .. code-block:: bash
         
+         #  启动docker server
+
          # ubuntu
          $ sudo service docker start
 
@@ -74,49 +92,33 @@ KUBERNETES
          $ sudo systemctl enable docker 
          $ sudo systemctl start  docker
 
+
+
 镜像
-^^^^^^
+===================
+
     .. code-block:: bash
 
         $ sudo docker images  # 列出本地镜像
-
         $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce jxm/my_space:v3  # 镜像commit
 
         $ sudo docker rmi training/sinatra  # 删除本地镜像
 
-``本地镜像重命名``
-""""""""""""""""""
 
-    .. code-block:: bash
-
+        #  本地镜像重命名 
         $ sudo docker tag  oldname:tag newname:tag 
         $ sudo docker tag  image_id    newname:tag 
         
-        $ sudo docker rmi oldname:tag
+        $ sudo docker rmi oldname:tag   # 删除镜像
 
-阿里云
-^^^^^^^^^
 
-https://dev.aliyun.com/search.html
+        $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
 
-``登陆``
-"""""""""
+        $ sudo docker search centos  # 搜索
 
-配置信息: **$HOME/.dockercfg**
-
-    .. code-block::  bash
-        
-        $ sudo docker login  -e sample.aliyun.com registry.aliyuncs.com
-
-``搜索``
-"""""""""""""""
-
-    .. code-block:: bash
-
-        $ sudo docker search centos
 
 容器
-^^^^^^^^
+============
 
     .. code-block:: bash
 
@@ -131,100 +133,72 @@ https://dev.aliyun.com/search.html
 
 
 
-``守护态运行``
-""""""""""""""
+       # 守护态运行``
+       $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c " while true; do echo hello world; sleep 1; done"
 
-    .. code-block:: bash
+       $ sudo docker run -d -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh
 
-        $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c " while true; do echo hello world; sleep 1; done"
- 
-        $ sudo docker run -d -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh
+       $ sudo docker run -d --restart=always -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh  #开机自启动
 
-        $ sudo docker run -d --restart=always -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh  #开机自启动
+       $ sudo docker run exec -it myspace_test_v4 /bin/bash
 
-        $ sudo docker run exec -it myspace_test_v4 /bin/bash
+       # 查看日志
+       $ sudo docker logs -f       {CONTAINER ID}       # 日志
+       $ sudo docker logs --follow {CONTAINER ID}
 
-    .. code-block:: bash
+       #  容器重命名
+       $ sudo docker rename  oldname    newname 
+       $ sudo docker rename  image_id   newname 
 
-        sudo docker logs -f       {CONTAINER ID}       # 日志
-        sudo docker logs --follow {CONTAINER ID}
+       #``查询``
+       $ sudo docker ps      # 查看UP状态的容器
+       $ sudo docker ps  -a  # 查看所有容器
+       $ sudo docker ps  -as # 查看所有容器,显示容器大小
+
+
+       # 导出导入
+       $ sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
     
+       $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
 
-``容器重命名``
-""""""""""""""""""
-
-    .. code-block:: bash
-
-        $ sudo docker rename  oldname    newname 
-        $ sudo docker rename  image_id   newname 
-
-``查询``
-""""""""""""""
-        
-    .. code-block:: bash
-
-        $ sudo docker ps      # 查看UP状态的容器
-        $ sudo docker ps  -a  # 查看所有容器
-        $ sudo docker ps  -as # 查看所有容器,显示容器大小
+       # 通过指定 URL 或者某个目录来导入容器
+       $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
 
 
-``导出导入``
-""""""""""""""
-
-    .. code-block:: bash
-
-        $ sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
-    
-        $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
-
-        # 通过指定 URL 或者某个目录来导入容器
-        $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
-
-    .. code-block:: bash
-
-         $ sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
-         $ sudo docker load -i nextcloud.tar            # 导入镜像
+       $ sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
+       $ sudo docker load -i nextcloud.tar            # 导入镜像
 
 
 使用外部网络
----------------
-    
-    查看端口
+============
 
-    .. code-block:: bash
 
-        $ sudo docker port {CONTAINER ID}
-        $ sudo docker port {CONTAINER ID}  80
+.. code-block:: bash
+
+    # 查看端口
+    $ sudo docker port {CONTAINER ID}
+    $ sudo docker port {CONTAINER ID}  80
+
 
 数据卷
--------------
+============
 
 `数据卷容器 <http://wiki.jikexueyuan.com/project/docker-technology-and-combat/datacontainer.html>`_
 
-``数据卷``
-^^^^^^^^^^
 
     .. code-block:: bash
 
+        # 指定数据卷
         $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
 
-``查看数据卷``
-^^^^^^^^^^^^^^^^^
-
-    .. code-block:: bash
-        
+        # 查看数据卷
         $ sudo docker inspect {NAMES}
-
-
-``数据卷容器``
-^^^^^^^^^^^^^^^^
-
-    .. code-block:: bash
         
+        # 数据卷容器
         $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
-``权限``
----------------
+权限
+============
 
 .. code-block:: bash
 
@@ -240,13 +214,17 @@ https://dev.aliyun.com/search.html
     # 让容器拥有除了MKNOD之外的所有内核权限 
     $ sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
 
+
+**********
 Dockerfile
------------
+**********
+
 
 #. EXPOSE
 
     格式为 EXPOSE <port> [<port>...] 。
     告诉Docker服务端容器暴露的端口
+
 
 .. code-block:: bash
 
@@ -258,8 +236,10 @@ Dockerfile
 * `Running GUI apps with Docker <http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/?utm_source=tuicool&utm_medium=referral>`_ 
 
 
+*****
 Other
------------
+*****
+
 
 * `Docker私有仓库搭建  <http://www.jianshu.com/p/00ac18fce367>`_
 
