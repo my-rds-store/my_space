@@ -82,11 +82,13 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 动漫死神 
     https://tieba.baidu.com/p/4029180251
 
+
 Ubuntu 编译源码包
 ---------------------
 
 http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 
+`Debian 维护者指导 <https://www.debian.org/doc/manuals/debmake-doc/>`_
 
 .. code-block:: bash
  
