@@ -105,6 +105,7 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
     EOF
 
     $ sudo sslocal -c /etc/shadowsocks.json
+    $ sudo sslocal -c /etc/shadowsocks.json -d start
 
     $ google-chrome --proxy-server=socks5://127.0.0.1:1080
 
