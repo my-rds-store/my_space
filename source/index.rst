@@ -84,7 +84,7 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 * `github shadowsocks <https://github.com/ziggear/shadowsocks>`_
 
 
-* https://my.vultr.com
+* https://vultr.com
 
 .. code-block:: bash
     
