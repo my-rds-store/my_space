@@ -83,6 +83,9 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 
 * `github shadowsocks <https://github.com/ziggear/shadowsocks>`_
 
+
+* https://my.vultr.com
+
 .. code-block:: bash
     
     #  servier 代理端
@@ -90,7 +93,6 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
     
     # 本机
     $ sudo tee  /etc/docker/daemon.json <<-'EOF'
-    $ sudo cat /etc/shadowsocks.json
     {
         "server":"45.63.71.50",
         "server_port":443,
