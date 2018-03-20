@@ -92,7 +92,7 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
     nohup ssserver -p 443 -k password -m aes-256-cfb >>/dev/null &
     
     # 本机
-    $ sudo tee  /etc/docker/daemon.json <<-'EOF'
+    $ sudo tee /etc/shadowsocks.json <<-'EOF'
     {
         "server":"45.63.71.50",
         "server_port":443,
@@ -108,6 +108,8 @@ http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 
     $ sudo sslocal -c /etc/shadowsocks.json
     $ sudo sslocal -c /etc/shadowsocks.json -d start
+    $ sudo sslocal -c /etc/shadowsocks.json -d stop
+    $ sudo sslocal -c /etc/shadowsocks.json -d restart
 
     $ google-chrome --proxy-server=socks5://127.0.0.1:1080
 
