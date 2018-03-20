@@ -81,6 +81,7 @@ Hello World
 
 http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 
+* `github shadowsocks <https://github.com/ziggear/shadowsocks>`_
 
 .. code-block:: bash
     
