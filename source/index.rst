@@ -82,6 +82,32 @@ Hello World
 http://www.filehorse.com/download-realtek-high-definition-audio-xp/
 
 
+.. code-block:: bash
+    
+    #  servier 代理端
+    nohup ssserver -p 443 -k password -m aes-256-cfb >>/dev/null &
+    
+    # 本机
+    $ sudo tee  /etc/docker/daemon.json <<-'EOF'
+    $ sudo cat /etc/shadowsocks.json
+    {
+        "server":"45.63.71.50",
+        "server_port":443,
+        "local_address": "127.0.0.1",
+        "local_port":1080,
+        "password":"password",
+        "timeout":300,
+        "method":"aes-256-cfb",
+        "fast_open": true,
+        "workers": 1
+    }
+    EOF
+
+    $ sudo sslocal -c /etc/shadowsocks.json
+
+    $ google-chrome --proxy-server=socks5://127.0.0.1:1080
+
+
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
 
 动漫死神 
