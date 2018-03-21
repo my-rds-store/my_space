@@ -1,13 +1,6 @@
-##########
+########
 科学上网
-##########
-
-                          *一枝红杏出墙来!!!*
-
-.. image:: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1821475898,231081266&fm=27&gp=0.jpg
-    :alt: alternate text
-    :align: center
-
+########
 
 ************
 VPS厂商
@@ -17,9 +10,9 @@ VPS厂商
 * `Vultr(中文网) <https://buy.shangyufeidi.com/vultr/?f=bad>`_
 * https://vultr.com
 
-*************************
-1. 牛逼的shadowsocks          
-*************************
+***************
+1. shadowsocks
+***************
 
 * `GitHub shadowsocks <https://github.com/ziggear/shadowsocks>`_
 
@@ -74,12 +67,14 @@ VPS厂商
 
     
 ****************************
-2. 神奇的SwitchyOmega             
+2. SwitchyOmega             
 ****************************
 
+配置
+============
 
 配置代理
-============
+---------------
 
 .. image:: ./image/proxy.png
     :scale: 100%
@@ -88,26 +83,22 @@ VPS厂商
 
  
 配置自动切换
-============
+---------------
 
 * `gfwlist <https://github.com/gfwlist/gfwlist>`_
-
-*导入在线，规则列表，立即更新情景模式*
-
-.. code:: 
-
-    在线规则列表:
-    https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt 
-
 
 .. image:: ./image/auto_switch.png
     :scale: 100%
     :alt: alternate text
     :align: center
 
+.. code:: 
+
+    https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt 
+
  
 参考
-============
+---------------
 
 * `Chrome 配置 SwitchyOmega <http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/>`_
 * `SS + SwitchyOmega实现代理自动切换 <https://eliyar.biz/AutoProxy-By-Shadowsocks-and-SwitchyOmega/>`_
