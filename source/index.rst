@@ -138,16 +138,6 @@ Ubuntu 源列表
 
 http://www.isjian.com/
 
-shadowsocks
-    `shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
-
-    `1  <https://www.cmsky.com/kcptun/>`_
-
-    `2  <http://blog.csdn.net/qq_34594236/article/details/77131436>`_
-
-    `3  <http://blog.csdn.net/leoe_/article/details/69618726>`_
-
-
 Linux From Scratch
    https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html 
 

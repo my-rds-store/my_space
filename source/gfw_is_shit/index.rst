@@ -8,7 +8,6 @@
     :alt: alternate text
     :align: center
 
-
 ************
 VPS厂商
 ************
@@ -23,7 +22,6 @@ VPS厂商
 
 * `GitHub shadowsocks <https://github.com/ziggear/shadowsocks>`_
 
-
 安装 shadowsocks
 ==================
 
@@ -31,6 +29,8 @@ VPS厂商
 
     $ sudo pip insall shadowsocks
 
+* `docker shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
+* `kcptun  <https://www.cmsky.com/kcptun/>`_
 
 配置 shadowsocks
 ==================
@@ -70,8 +70,6 @@ VPS厂商
 * http://blog.csdn.net/lee_j_r/article/details/54019691
 * https://www.8dlive.com/post/168.html
 * http://xinwen.eastday.com/a/170207195821936.html
-
-
     
 ****************************
 2. 神奇的SwitchyOmega             
@@ -104,12 +102,9 @@ VPS厂商
     :scale: 100%
     :alt: alternate text
     :align: center
-
  
 参考
 ============
 
 * `Chrome 配置 SwitchyOmega <http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/>`_
 * `SS + SwitchyOmega实现代理自动切换 <https://eliyar.biz/AutoProxy-By-Shadowsocks-and-SwitchyOmega/>`_
-
-
