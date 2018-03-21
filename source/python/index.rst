@@ -52,5 +52,13 @@ Book
     import chardet
     fencoding=chardet.detect(u"test string")
     print fencoding
-
+    
+    # 从URL地址提取文件名
+    import os
+    url = 'http://www.jb51.net/images/logo.gif'
+    filename = os.path.basename(url)
+    print(filename)
+    
+    # 去除扩展名
+    print os.path.splitext(filename)[0]
 

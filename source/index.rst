@@ -63,55 +63,8 @@ Hello World
    android/index
    openbox/index
    linux_tools_cfg/index
+   gfw_is_shit/index
    other/index
-
-
-云梯
-============
-
-* `搬瓦工 <https://bwh1.net/>`_
-* `Vultr中文网 <https://buy.shangyufeidi.com/vultr/?f=bad>`_
-
-* https://www.cnblogs.com/cursorhu/p/7157257.html
-
-* http://blog.csdn.net/lee_j_r/article/details/54019691
-* https://www.8dlive.com/post/168.html
-* http://xinwen.eastday.com/a/170207195821936.html
-
-
-http://www.filehorse.com/download-realtek-high-definition-audio-xp/
-
-* `github shadowsocks <https://github.com/ziggear/shadowsocks>`_
-
-
-* https://vultr.com
-
-.. code-block:: bash
-    
-    #  servier 代理端
-    nohup ssserver -p 443 -k password -m aes-256-cfb >>/dev/null &
-    
-    # 本机
-    $ sudo tee /etc/shadowsocks.json <<-'EOF'
-    {
-        "server":"45.63.71.50",
-        "server_port":443,
-        "local_address": "127.0.0.1",
-        "local_port":1080,
-        "password":"password",
-        "timeout":300,
-        "method":"aes-256-cfb",
-        "fast_open": true,
-        "workers": 1
-    }
-    EOF
-
-    $ sudo sslocal -c /etc/shadowsocks.json
-    $ sudo sslocal -c /etc/shadowsocks.json -d start
-    $ sudo sslocal -c /etc/shadowsocks.json -d stop
-    $ sudo sslocal -c /etc/shadowsocks.json -d restart
-
-    $ google-chrome --proxy-server=socks5://127.0.0.1:1080
 
 
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
