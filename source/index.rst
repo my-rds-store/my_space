@@ -48,6 +48,7 @@ Hello World
    vim/vim
    git/index
    python/index
+   nginx/index
    shell/shell
    sphinx/index
    pycharm/remote_debug

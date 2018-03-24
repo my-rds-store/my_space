@@ -16,6 +16,10 @@ Book
 * `流畅的Python 中文PDF <http://www.linuxidc.com/Linux/2017-06/144466.htm>`_
 * `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
 
+-------
+
+* `Django 教程 <https://code.ziqiangxuetang.com/django/django-tutorial.html>`_
+
 
 好用的python库
 --------------
