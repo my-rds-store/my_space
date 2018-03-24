@@ -113,6 +113,8 @@ Shell 获取文件名和后缀名
     filename: thisfile
     $ echo "extension: ${file##*.}"
     extension: txt
+    $ basename '/a/b/c/name.txt'    #用于去掉路径信息，返回纯粹的文件名
+    name.txt
 
 
 split分割文件
