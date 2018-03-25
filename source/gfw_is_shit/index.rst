@@ -27,7 +27,7 @@ VPS厂商
 
 .. code-block:: bash
 
-    $ sudo pip insall shadowsocks
+    $ sudo pip install shadowsocks
 
 * `docker shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
 * `kcptun  <https://www.cmsky.com/kcptun/>`_
