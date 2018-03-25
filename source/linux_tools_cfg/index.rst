@@ -251,6 +251,8 @@ Centos 7 网络配置
     DNS1=114.114.114.114
     DNS2=180.76.76.76
 
+      
+* `Centos防火墙设置与端口开放的方法 <https://blog.csdn.net/u011846257/article/details/54707864>`_
 
 .. raw:: html
 
