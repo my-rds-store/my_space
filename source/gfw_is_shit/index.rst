@@ -74,12 +74,15 @@ VPS厂商
     /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
     EOF
 
+    # 设置启动等级： 
+    $ sudo update-rc.d /etc/init.d/shadowsocks-start.sh defaults 90
+
 * `在CentOS下配置自启动服务 <http://imchao.wang/2014/02/21/make-your-service-autostart-on-linux/>`_
 
     
 .. code-block:: bash
 
-    # 本地PC (ubuntu)
+    # Client 本地PC (ubuntu)
     $ sudo tee /etc/shadowsocks.json <<-'EOF'
     {
         "server":"my_server_ip",
@@ -93,14 +96,34 @@ VPS厂商
         "workers": 100
     }
     EOF
-
+    
+    # 手动
     $ sudo sslocal -c /etc/shadowsocks.json
     $ sudo sslocal -c /etc/shadowsocks.json -d start
     $ sudo sslocal -c /etc/shadowsocks.json -d stop
     $ sudo sslocal -c /etc/shadowsocks.json -d restart
 
-    $ google-chrome --proxy-server=socks5://127.0.0.1:1080
+    # 开机自启动
+    $ sudo tee /etc/init.d/shadowsocks-start.sh <<-'EOF'
+    #! /bin/sh
+    ### BEGIN INIT INFO
+    # Provides:          shadowsocks
+    # Required-Start:    $remote_fs $syslog
+    # Required-Stop:     $remote_fs $syslog
+    # Should-Start:      $network $time
+    # Should-stop:       $network $time
+    # Default-Start:     2 3 4 5
+    # Default-Stop:      0 1 6
+    # Short-Description: shadowsocks.
+    ### END INIT INFO
+    /usr/local/bin/sslocal -c /etc/shadowsocks.json -d start
+    EOF
 
+    # 设置启动等级： 
+    $ sudo update-rc.d /etc/init.d/shadowsocks-start.sh defaults 90
+
+    # Test
+    $ google-chrome --proxy-server=socks5://127.0.0.1:1080
 
 参考
 ============
