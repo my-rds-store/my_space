@@ -253,6 +253,50 @@ Centos 7 网络配置
 
       
 * `Centos防火墙设置与端口开放的方法 <https://blog.csdn.net/u011846257/article/details/54707864>`_
+  
+  .. code-block:: bash
+       
+	systemctl start/stop firewalld      # 启动/禁用防火墙
+	systemctl enable/disable firewalld  # 设置开机自动启动/禁用开机自启动
+
+	firewall-cmd --reload               # 重启防火墙
+     
+	# 查看防火墙状态
+	systemctl status firewalld 
+	firewall-cmd --state
+
+	firewall-cmd --version  # 版本
+
+	firewall-cmd --get-active-zones           # 查看区域信息
+	firewall-cmd --get-zone-of-interface=eth0 # 查看指定接口所属区域信息
+
+	# 将接口添加到区域(默认接口都在public)
+	firewall-cmd --zone=public --add-interface=eth0 # (永久生效再加上 --permanent 然后reload防火墙)
+	
+	# 设置默认接口区域
+	firewall-cmd --set-default-zone=public(立即生效，无需重启)
+	
+	firewall-cmd --reload          # 或
+	firewall-cmd --complete-reload # (两者的区别就是第一个无需断开连接，就是firewalld特性之一动态添加规则，
+			  	       #  第二个需要断开连接，类似重启服务)
+
+
+	# 查看指定区域所有打开的端口
+	firewall-cmd --zone=public --list-ports
+
+	# 在指定区域打开端口（记得重启防火墙）
+	firewall-cmd --zone=public --add-port=80/tcp             # 临时,重启失效
+	firewall-cmd --zone=public --add-port=80/tcp --permanent # 永久生效再加上 
+
+	firewall-cmd --panic-on    # 拒绝所有包
+	firewall-cmd --panic-off   # 取消拒绝状态
+	firewall-cmd --query-panic # 查看是否拒绝
+  
+
+	# 说明：
+	#   –zone              作用域
+	#   –add-port=8080/tcp 添加端口，格式为：端口/通讯协议
+	#   –permanent         永久生效，没有此参数重启后失效
 
 .. raw:: html
 
