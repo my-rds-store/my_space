@@ -9,11 +9,9 @@ Docker Hub 与阿里云
 https://dev.aliyun.com/search.html
 
 
-
 ************
 安装与配置
 ************
-
 
 安装  
 ============
@@ -25,6 +23,14 @@ https://dev.aliyun.com/search.html
   curl -sSL https://get.docker.com/ | sh
 
 * `安装docker(阿里源) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
+
+.. code-block:: bash
+
+    # centos 
+    curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_centos7.sh | bash
+
+    # ubuntu 
+    curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
 
 .. code-block:: bash
 
