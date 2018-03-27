@@ -164,7 +164,7 @@ polipo
     
 .. code-block:: bash
 
-    sudo tee /etc/polipo/config <<-'EOF'
+    $ sudo tee /etc/polipo/config <<-'EOF'
 
     # This file only needs to list configuration variables that deviate
     # from the default values.  See /usr/share/doc/polipo/examples/config.sample
