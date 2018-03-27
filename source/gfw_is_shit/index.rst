@@ -35,23 +35,62 @@ VPS厂商
 配置 shadowsocks
 ==================
 
+
+* `Configuration via Config File <https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File>`_
+
+
 .. code-block:: bash
     
     #  代理服务器端
-    nohup ssserver -p 443 -k password -m aes-256-cfb >>/dev/null &
+    ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
+
+    # 自动启动(ubuntu)
+    $ sudo tee /etc/shadowsocks.json <<-'EOF'
+    {
+        "server":"my_server_ip",
+        "server_port":8388,
+        "local_address": "127.0.0.1",
+        "local_port":1080,
+        "password":"mypassword",
+        "timeout":300,
+        "method":"aes-256-cfb",
+        "fast_open": false
+        "workers": 100
+    }
+    EOF
+
+    $ sudo tee /etc/init.d/shadowsocks-start.sh <<-'EOF'
+    #! /bin/sh
+    ### BEGIN INIT INFO
+    # Provides:          shadowsocks
+    # Required-Start:    $remote_fs $syslog
+    # Required-Stop:     $remote_fs $syslog
+    # Should-Start:      $network $time
+    # Should-stop:       $network $time
+    # Default-Start:     2 3 4 5
+    # Default-Stop:      0 1 6
+    # Short-Description: shadowsocks.
+    ### END INIT INFO
+    /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
+    EOF
+
+* `在CentOS下配置自启动服务 <http://imchao.wang/2014/02/21/make-your-service-autostart-on-linux/>`_
+
     
+.. code-block:: bash
+
     # 本地PC (ubuntu)
     $ sudo tee /etc/shadowsocks.json <<-'EOF'
     {
-        "server":"45.63.71.50",
-        "server_port":443,
+        "server":"my_server_ip",
+        "server_port":8388,
         "local_address": "127.0.0.1",
         "local_port":1080,
-        "password":"password",
+        "password":"mypassword",
         "timeout":300,
         "method":"aes-256-cfb",
         "fast_open": true,
-        "workers": 1
+        "workers": 100
     }
     EOF
 
@@ -61,6 +100,7 @@ VPS厂商
     $ sudo sslocal -c /etc/shadowsocks.json -d restart
 
     $ google-chrome --proxy-server=socks5://127.0.0.1:1080
+
 
 参考
 ============
@@ -108,3 +148,65 @@ VPS厂商
 
 * `Chrome 配置 SwitchyOmega <http://www.cylong.com/blog/2017/04/09/chrome-SwitchyOmega/>`_
 * `SS + SwitchyOmega实现代理自动切换 <https://eliyar.biz/AutoProxy-By-Shadowsocks-and-SwitchyOmega/>`_
+
+
+******
+polipo
+******
+
+
+.. code-block:: bash
+
+    $ sudo apt-get install polipo
+    $ sudo polipo -v
+    $ man polipo
+    # the default values.  See /usr/share/doc/polipo/examples/config.sample
+    
+.. code-block:: bash
+
+    sudo tee /etc/shadowsocks.json <<-'EOF'
+    
+    # This file only needs to list configuration variables that deviate
+    # from the default values.  See /usr/share/doc/polipo/examples/config.sample
+    # and "polipo -v" for variables you can tweak and further information.
+
+    logSyslog = true
+    logFile = /var/log/polipo/polipo.log
+
+    proxyAddress = "0.0.0.0"
+    proxyPort = 17070
+    socksParentProxy = "127.0.0.1:7070"
+    socksProxyType = socks5
+    allowedClients = 127.0.0.1
+    
+    EOF
+
+    $ sudo service polipo restart
+
+
+.. code-block:: bash
+
+    # 以ubuntu 测试通过
+    echo -e "\n------------------------------------------\n"
+    curl ip.gs
+    #curl ifconfig.me
+    echo -e "\n------------------------------------------\n"
+
+    export https_proxy=https://127.0.0.1:17070
+    export HTTPS_PROXY=https://127.0.0.1:17070
+    export  http_proxy=http://127.0.0.1:17070
+    export  HTTP_PROXY=http://127.0.0.1:17070
+
+    curl ip.gs
+    #curl ifconfig.me
+    echo -e "\n------------------------------------------\n"
+
+ 
+参考
+============
+
+* `Shadowsocks + Polipo 配置全局代理(Linux 版本) <https://blog.csdn.net/jon_me/article/details/53525059/>`_
+* `shadowsocks和polipo配置全局代理 <https://blog.denghaihui.com/2017/10/10/shadowsocks-polipo/>`_
+
+
+
