@@ -173,15 +173,25 @@ polipo
     logSyslog = true
     logFile = /var/log/polipo/polipo.log
 
-    proxyAddress = "0.0.0.0"
-    proxyPort = 8123
     socksParentProxy = "127.0.0.1:1080"
     socksProxyType = socks5
-    allowedClients = 127.0.0.1
+
+    proxyAddress = "0.0.0.0"
+    proxyPort = 8123
+    allowedClients = 127.0.0.1, ::1, 192.168.8.0/24 
     
     EOF
 
     $ sudo service polipo restart
+
+:: 
+
+    socksParentProxy : 上级代理ip,端口
+    socksProxyType   : 是上级代理类型
+
+    proxyAddress     : 监听的ip
+    proxyPort        : 是本地监听端口
+    allowedClients   : 是允许连接ip范围
 
 
 .. code-block:: bash
@@ -193,13 +203,15 @@ polipo
     echo -e "\n------------------------------------------\n"
 
     export https_proxy=https://127.0.0.1:8123
-    export HTTPS_PROXY=https://127.0.0.1:8123
     export  http_proxy=http://127.0.0.1:8123
+    export HTTPS_PROXY=https://127.0.0.1:8123
     export  HTTP_PROXY=http://127.0.0.1:8123
 
     curl ip.gs
     #curl ifconfig.me
     echo -e "\n------------------------------------------\n"
+
+    $ git config --global http.proxy=localhost:8123
 
  
 参考
@@ -208,5 +220,6 @@ polipo
 * `Shadowsocks + Polipo 配置全局代理(Linux 版本) <https://blog.csdn.net/jon_me/article/details/53525059/>`_
 * `shadowsocks和polipo配置全局代理 <https://blog.denghaihui.com/2017/10/10/shadowsocks-polipo/>`_
 
+*  `ubuntu Polipo 快速使用 <http://wiki.ubuntu.org.cn/UbuntuHelp:Polipo/zh>`_
 
 

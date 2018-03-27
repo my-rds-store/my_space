@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+##################
 Hello World
-===================================
+##################
+
 
 |today|
 
@@ -74,8 +76,12 @@ Hello World
     https://tieba.baidu.com/p/4029180251
 
 
+************************
 Ubuntu 编译源码包
----------------------
+************************
+
+
+
 
 http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 
@@ -100,10 +106,10 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
     #sudo apt-get source vlc
 
 
-
-
+************
 源列表
--------
+************
+
 
     * 163源地址 ： http://mirrors.163.com/
 
@@ -117,16 +123,18 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 `Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
 
 Ubuntu 源列表
+================
+
+
     `官方源列表 <https://wiki.ubuntu.com.cn/%E6%BA%90%E5%88%97%E8%A1%A8>`_
 
     `163源列表 <http://mirrors.163.com/.help/ubuntu.html>`_
     
-    .. code-block:: bash
-    
-         # ubuntu14.04  163源
-         wget -O /etc/apt/sources.list  http://mirrors.163.com/.help/sources.list.trusty
-         curl -o /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.trusty
+.. code-block:: bash
 
+     # ubuntu14.04  163源
+     wget -O /etc/apt/sources.list  http://mirrors.163.com/.help/sources.list.trusty
+     curl -o /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.trusty
 
 .. code-block:: bash
 
@@ -134,8 +142,37 @@ Ubuntu 源列表
     $ grep "archive.ubuntu.com" /etc/apt/sources.list && \
     sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
 
+* `apt-get命令使用代理 <http://daemon369.github.io/network/2014/06/05/use-proxy-for-apt-get>`_
+
+
+.. code-block:: bash
+
+    #  APT工具集使用的默认配置文件是/etc/apt/apt.conf
+    $ sudo tee /etc/apt/apt.conf <<-'EOF'
+    Acquire::http::proxy "http://127.0.0.1:8087/";
+    Acquire::https::proxy "https://127.0.0.1:8087/"; 
+    EOF
+    
+    # 1.使用-o选项
+    sudo apt-get -o Acquire::http::proxy="http://127.0.0.1:8000/" update
+
+    # 2. 使用-c选项
+    
+    $ sudo tee ~/apt_proxy.conf <<-'EOF'
+    Acquire::http::proxy "http://127.0.0.1:8087/";
+    Acquire::https::proxy "https://127.0.0.1:8087/"; 
+    EOF
+    sudo apt-get -c ~/apt_proxy.conf update
+
+
+    # 3. 如果我们设置了环境变量APT_CONFIG，那么APT工具集将使用APT_CONFIG指向的配置文件。
+    $ export APT_CONFIG=~/apt_proxy.conf
+    $ sudo apt-get update
+    
+
+************
 待研究
---------
+************
 
 http://www.isjian.com/
 

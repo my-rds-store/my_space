@@ -31,6 +31,8 @@ git config
     $ git config --list 
     $ git config --global core.editor vim  # 配置默认编辑器 vim
 
+    $ git config --global http.proxy=localhost:8123 # 代理服务器
+
 撤销与回退 
 ============
 
