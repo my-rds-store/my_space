@@ -7,7 +7,6 @@
 Hello World
 ##################
 
-
 |today|
 
     ::
@@ -75,13 +74,9 @@ Hello World
 动漫死神 
     https://tieba.baidu.com/p/4029180251
 
-
 ************************
 Ubuntu 编译源码包
 ************************
-
-
-
 
 http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 

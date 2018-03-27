@@ -27,6 +27,10 @@ VPS厂商
 
 .. code-block:: bash
 
+    # ubuntu
+    $ export LC_ALL=C
+    $ apt-get install python-pip
+
     $ sudo pip install shadowsocks
 
 * `docker shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
@@ -34,7 +38,6 @@ VPS厂商
 
 配置 shadowsocks
 ==================
-
 
 * `Configuration via Config File <https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File>`_
 
@@ -105,7 +108,7 @@ VPS厂商
 
     # 开机自启动
     $ sudo tee /etc/init.d/shadowsocks-start.sh <<-'EOF'
-    #! /bin/sh
+    #!/bin/sh
     ### BEGIN INIT INFO
     # Provides:          shadowsocks
     # Required-Start:    $remote_fs $syslog
@@ -120,7 +123,7 @@ VPS厂商
     EOF
 
     # 设置启动等级： 
-    $ sudo update-rc.d /etc/init.d/shadowsocks-start.sh defaults 90
+    $ sudo update-rc.d shadowsocks-start.sh defaults 90
 
     # Test
     $ google-chrome --proxy-server=socks5://127.0.0.1:1080
