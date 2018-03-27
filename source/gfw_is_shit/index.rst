@@ -192,10 +192,10 @@ polipo
     #curl ifconfig.me
     echo -e "\n------------------------------------------\n"
 
-    export https_proxy=https://127.0.0.1:17070
-    export HTTPS_PROXY=https://127.0.0.1:17070
-    export  http_proxy=http://127.0.0.1:17070
-    export  HTTP_PROXY=http://127.0.0.1:17070
+    export https_proxy=https://127.0.0.1:8123
+    export HTTPS_PROXY=https://127.0.0.1:8123
+    export  http_proxy=http://127.0.0.1:8123
+    export  HTTP_PROXY=http://127.0.0.1:8123
 
     curl ip.gs
     #curl ifconfig.me
