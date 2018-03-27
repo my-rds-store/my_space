@@ -150,10 +150,11 @@ VPS厂商
 * `SS + SwitchyOmega实现代理自动切换 <https://eliyar.biz/AutoProxy-By-Shadowsocks-and-SwitchyOmega/>`_
 
 
-******
-polipo
-******
+************************************
+3. polipo http/https的代理转发
+************************************
 
+Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多工具目前只支持http和https等协议,对socks5协议支持不够好, 所以需要将socks协议转换成http协议.
 
 .. code-block:: bash
 
