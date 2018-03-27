@@ -164,8 +164,8 @@ polipo
     
 .. code-block:: bash
 
-    sudo tee /etc/shadowsocks.json <<-'EOF'
-    
+    sudo tee /etc/polipo/config <<-'EOF'
+
     # This file only needs to list configuration variables that deviate
     # from the default values.  See /usr/share/doc/polipo/examples/config.sample
     # and "polipo -v" for variables you can tweak and further information.
@@ -174,8 +174,8 @@ polipo
     logFile = /var/log/polipo/polipo.log
 
     proxyAddress = "0.0.0.0"
-    proxyPort = 17070
-    socksParentProxy = "127.0.0.1:7070"
+    proxyPort = 8123
+    socksParentProxy = "127.0.0.1:1080"
     socksProxyType = socks5
     allowedClients = 127.0.0.1
     
