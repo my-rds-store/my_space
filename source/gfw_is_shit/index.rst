@@ -14,7 +14,7 @@ VPS厂商
 
 * `搬瓦工 <https://bwh1.net/>`_
 * `Vultr(中文网) <https://buy.shangyufeidi.com/vultr/?f=bad>`_
-* https://vultr.com
+* https://www.vultr.com
 
 *************************
 1. 牛逼的shadowsocks          
