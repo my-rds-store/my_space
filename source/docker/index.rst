@@ -19,10 +19,11 @@ https://dev.aliyun.com/search.html
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
 
 .. code-block:: bash
-
+  
+  # 官方安装，速度慢
   curl -sSL https://get.docker.com/ | sh
 
-* `安装docker(阿里源) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
+* `安装docker(基于阿里源,速度快) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
 
 .. code-block:: bash
 
@@ -38,7 +39,7 @@ https://dev.aliyun.com/search.html
      $ sudo apt-get install -y docker.io
 
 配置 
-============
+========
 
 .. code-block:: bash
 
