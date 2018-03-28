@@ -42,12 +42,17 @@ VPS厂商
 * `Configuration via Config File <https://github.com/shadowsocks/shadowsocks/wiki/Configuration-via-Config-File>`_
 
 
+Server  
+--------
+
+
 .. code-block:: bash
     
-    #  代理服务器端
-    ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
+    #  1. 手动启动
 
-    # 自动启动(ubuntu)
+    $ sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
+
+    # 2. 配置自动启动(ubuntu)
     $ sudo tee /etc/shadowsocks.json <<-'EOF'
     {
         "server":"my_server_ip",
@@ -82,10 +87,13 @@ VPS厂商
 
 * `在CentOS下配置自启动服务 <http://imchao.wang/2014/02/21/make-your-service-autostart-on-linux/>`_
 
+Client
+------
     
+* Ubuntu
+
 .. code-block:: bash
 
-    # Client 本地PC (ubuntu)
     $ sudo tee /etc/shadowsocks.json <<-'EOF'
     {
         "server":"my_server_ip",
@@ -100,13 +108,13 @@ VPS厂商
     }
     EOF
     
-    # 手动
+    # 手动启动，停止
     $ sudo sslocal -c /etc/shadowsocks.json
     $ sudo sslocal -c /etc/shadowsocks.json -d start
     $ sudo sslocal -c /etc/shadowsocks.json -d stop
     $ sudo sslocal -c /etc/shadowsocks.json -d restart
 
-    # 开机自启动
+    # 配置开机自启动
     $ sudo tee /etc/init.d/shadowsocks-start.sh <<-'EOF'
     #!/bin/sh
     ### BEGIN INIT INFO
@@ -125,8 +133,23 @@ VPS厂商
     # 设置启动等级： 
     $ sudo update-rc.d shadowsocks-start.sh defaults 90
 
-    # Test
+    # 测试
     $ google-chrome --proxy-server=socks5://127.0.0.1:1080
+
+* Windows_ / OSX_ 
+
+.. _Windows: https://github.com/shadowsocks/shadowsocks-csharp
+.. _OSX: https://github.com/shadowsocks/shadowsocks-iOS/wiki/Shadowsocks-for-OSX-Help
+
+* Android_ / iOS_ 
+
+.. _Android: https://github.com/shadowsocks/shadowsocks-android 
+.. _iOS: https://github.com/shadowsocks/openwrt-shadowsocks
+
+* OpenWRT_ 
+
+.. _OpenWRT: https://github.com/shadowsocks/openwrt-shadowsocks
+
 
 参考
 ============

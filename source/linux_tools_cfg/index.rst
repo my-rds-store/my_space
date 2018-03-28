@@ -301,21 +301,24 @@ Centos 7 网络配置
 
 -------
 
-
 8. 定时任务
 =============
 
-
 .. code-block:: bash
 
-    export EDITOR=vim
-    crontab -e
+    $ export EDITOR=vim
+    $ crontab -e
+    $ sudo  service cron status/start/stop/restart
+
+::
+
+    # 每天　23 点　1 分　执行
+    # m h  dom mon dow   command
+    1 23 * * *  /root/workspace_for_docker/mk_mcstudent_iso.sh 
 
 
 .. image:: https://images2015.cnblogs.com/blog/1173412/201706/1173412-20170627141421461-845471341.png
-    :alt: alternate text
     :align: center
-
 
 * `使用crontab，让linux定时执行shell脚本 <https://www.cnblogs.com/wucaiyun1/p/6866730.html>`_
 * `一个简单的linux下设置定时执行shell脚本的示例 <https://www.cnblogs.com/bcphp/p/7084967.html>`_
@@ -323,6 +326,4 @@ Centos 7 网络配置
 .. raw:: html
 
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=413961293&auto=1&height=66"></iframe>
-
-
 
