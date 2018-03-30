@@ -32,6 +32,38 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 
 http://man.linuxde.net/rename
 
+
+判断安装包,有没有安装
+------------------------
+
+* Ubuntu
+
+.. code-block:: bash
+
+    #!/bin/bash
+     
+    dpkg -s $1 &> /dev/null
+
+    if [ $? -eq 0 ]; then
+        echo "Package  is installed!"
+    else
+        echo "Package  is NOT installed!"
+    fi
+
+    # OR
+    dpkg -l | grep -qw package || apt-get install package
+
+
+.. code-block:: bash
+
+    if ! rpm -qa | grep -qw vim; then
+        yum install vim
+    fi
+
+    # or 
+    rpm -qa | grep -qw glibc-static || yum install vim
+
+
 sftp文件批量上传与下载
 ------------------------
 
