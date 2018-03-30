@@ -83,7 +83,8 @@ Server
     EOF
 
     # 设置启动等级： 
-    $ sudo update-rc.d /etc/init.d/shadowsocks-start.sh defaults 90
+    $ sudo chmod a+x /etc/init.d/shadowsocks-start.sh
+    $ sudo update-rc.d shadowsocks-start.sh defaults 90
 
 * `在CentOS下配置自启动服务 <http://imchao.wang/2014/02/21/make-your-service-autostart-on-linux/>`_
 
@@ -131,6 +132,7 @@ Client
     EOF
 
     # 设置启动等级： 
+    $ sudo chmod a+x /etc/init.d/shadowsocks-start.sh
     $ sudo update-rc.d shadowsocks-start.sh defaults 90
 
     # 测试
