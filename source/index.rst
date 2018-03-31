@@ -145,18 +145,18 @@ Ubuntu 源列表
 
     #  APT工具集使用的默认配置文件是/etc/apt/apt.conf
     $ sudo tee /etc/apt/apt.conf <<-'EOF'
-    Acquire::http::proxy "http://127.0.0.1:8087/";
-    Acquire::https::proxy "https://127.0.0.1:8087/"; 
+    Acquire::http::proxy "http://127.0.0.1:8123/";
+    Acquire::https::proxy "https://127.0.0.1:8123/"; 
     EOF
     
     # 1.使用-o选项
-    sudo apt-get -o Acquire::http::proxy="http://127.0.0.1:8000/" update
+    sudo apt-get -o Acquire::http::proxy="http://127.0.0.1:8123/" update
 
     # 2. 使用-c选项
     
     $ sudo tee ~/apt_proxy.conf <<-'EOF'
-    Acquire::http::proxy "http://127.0.0.1:8087/";
-    Acquire::https::proxy "https://127.0.0.1:8087/"; 
+    Acquire::http::proxy "http://127.0.0.1:8123/";
+    Acquire::https::proxy "https://127.0.0.1:8123/"; 
     EOF
     sudo apt-get -c ~/apt_proxy.conf update
 

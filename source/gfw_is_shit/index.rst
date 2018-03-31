@@ -108,6 +108,8 @@ Client
         "workers": 100
     }
     EOF
+
+    # workers - 并发数
     
     # 手动启动，停止
     $ sudo sslocal -c /etc/shadowsocks.json
