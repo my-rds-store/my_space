@@ -62,7 +62,7 @@ Server
         "password":"mypassword",
         "timeout":300,
         "method":"aes-256-cfb",
-        "fast_open": false
+        "fast_open": false,
         "workers": 100
     }
     EOF
