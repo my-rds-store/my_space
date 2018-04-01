@@ -45,6 +45,16 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
     this->ui->tablewidget->setEditTriggers(QAbstractItemView::NoEditTriggers);   //设置每行内容不可更改  
     this->ui->tablewidget->setAlternatingRowColors(true);                        //设置隔一行变一颜色，即：一灰一白 
 
+
+.. code-block:: pyton
+
+    # install qt4
+    $ sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer -y --force-yes
+
+    # qtcreator-3.5.1 depends
+    $ sudo apt-get install libgstreamer-plugins-base0.10-0
+
+
 ..
  Music 命运守护夜
 
