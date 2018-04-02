@@ -34,10 +34,15 @@ INSTALL
 
 .. code-block:: sh
 
-    $ sudo pip install --upgrade pip==9.0.1  -i https://pypi.mirrors.ustc.edu.cn/simple
+    $ sudo pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple
+
+    # for mac
+    $ sudo pip install six --upgrade --ignore-installed six 
+
     $ sudo pip install sphinx==1.5.5  sphinx-autobuild==0.6.0 -i https://pypi.mirrors.ustc.edu.cn/simple
     $ sudo pip install sphinx_rtd_theme==0.2.4  -i https://pypi.mirrors.ustc.edu.cn/simple
-
+    
+* `Pip安装依赖于six的库失败的解决方法 <https://www.jianshu.com/p/45fb07007ddc>`_
 
 建立sphinx工程
 --------------

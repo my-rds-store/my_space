@@ -8,6 +8,9 @@
     :alt: alternate text
     :align: center
 
+* `科学上网漫游指南 <https://lvii.gitbooks.io/outman/content/>`_
+* `科学上网漫游指南GitBook <https://www.gitbook.com/book/lvii/outman/details>`_
+ 
 ************
 VPS厂商
 ************
@@ -209,11 +212,16 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
 
 .. code-block:: bash
 
+    # ubuntu
     $ sudo apt-get install polipo
     $ sudo polipo -v
     $ man polipo
     # the default values.  See /usr/share/doc/polipo/examples/config.sample
     
+    # mac
+    $ brew  search polipo
+    $ sudo mkdir /etc/polipo
+
 .. code-block:: bash
 
     $ sudo tee /etc/polipo/config <<-'EOF'
@@ -234,7 +242,12 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
     
     EOF
 
+    # ubuntu
     $ sudo service polipo restart
+
+    # mac
+    $ sudo mkdir /var/log/polipo
+    $ sudo polipo socksParentProxy=localhost:1080
 
 :: 
 
@@ -264,14 +277,18 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
     echo -e "\n------------------------------------------\n"
 
     $ git config --global http.proxy=localhost:8123
-
  
+* `How To setup polipo on OSX <https://gist.github.com/maoo/3262589c9db989c6e948>`_
+
 参考
 ============
+
+
+
+* `Mac+shadowsocks+polipo快捷实现终端科学上网 <https://segmentfault.com/a/1190000008449046>`_
 
 * `Shadowsocks + Polipo 配置全局代理(Linux 版本) <https://blog.csdn.net/jon_me/article/details/53525059/>`_
 * `shadowsocks和polipo配置全局代理 <https://blog.denghaihui.com/2017/10/10/shadowsocks-polipo/>`_
 
 *  `ubuntu Polipo 快速使用 <http://wiki.ubuntu.org.cn/UbuntuHelp:Polipo/zh>`_
-
 

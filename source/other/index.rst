@@ -244,6 +244,32 @@ amixer
 `alsamixer设置默认声卡及调节音量保存配置 <http://www.it165.net/os/html/201212/4118.html>`_
 
 
+.. code-block:: bash
+
+    $ sudo apt-get install alsa-base alsa-utils alsa-oss alsa-tools
+
+    # 1. 如果默认声卡不是需要的
+    # 在home目录添加.asoundrc文件
+
+    $ sudo tee $HOME/.asoundrc <<-'EOF'
+    defaults.ctl.card 1 defaults.pcm.card 1
+    EOF
+
+    # 数字1代表声卡序号
+    # 可以通过以下指令查看
+
+    $ cat /proc/asound/cards
+
+    # 2. alsamixer调节声音
+    # Master和PCM是必须打开的。
+    # Master和PCM声道默认是静音的，标记是MM，用左右方向键选择，按M来修改为OO就是开启，上下键调节音量大小。 
+    # 配置好之后执行：
+    $ alsactl store # 保存配置, 配置会保存在/var/lib/alsa/asound.state
+
+reboot
+
+应该就正常了
+
 .. code-block:: sh
 
    $ sudo apt-get install alsa-base alsa-utils alsa-oss alsa-tools

@@ -23,6 +23,8 @@ Git 安装与配置
 
 * `Git flow completion <https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion>`_
 
+* `为git设置 http https 代理 <https://www.jianshu.com/p/5e64135eb5c5>`_
+
 ************
 Git 常用命令 
 ************

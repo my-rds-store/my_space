@@ -11,7 +11,7 @@ Shell 实用技巧
     # 1. umount.nfs: /mnt: device is busy
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
 
-
+* nettop
 
 ssh 无密码登录
 --------------------
