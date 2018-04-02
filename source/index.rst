@@ -180,6 +180,8 @@ Linux From Scratch
 前端框架(js)
    `Meteor <https://www.meteor.com/>`_
 
+* `jitsi  开源视频会议 <https://jitsi.org/>`_
+
 BitTorrent
     * `CentOS 下搭建BT下载服务器安装笔记  <http://www.linuxidc.com/Linux/2011-05/35510.htm>`_
     * `CTorrent <http://www.3haoweb.cn/a/internet/download/bt/2010/1030/4446.html>`_

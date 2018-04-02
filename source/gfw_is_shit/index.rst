@@ -148,12 +148,11 @@ Client
 * Android_ / iOS_ 
 
 .. _Android: https://github.com/shadowsocks/shadowsocks-android 
-.. _iOS: https://github.com/shadowsocks/openwrt-shadowsocks
+.. _iOS: https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help
 
 * OpenWRT_ 
 
 .. _OpenWRT: https://github.com/shadowsocks/openwrt-shadowsocks
-
 
 参考
 ============
@@ -167,7 +166,6 @@ Client
 ****************************
 2. 神奇的SwitchyOmega             
 ****************************
-
 
 配置代理
 ============
