@@ -46,7 +46,7 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
     this->ui->tablewidget->setAlternatingRowColors(true);                        //设置隔一行变一颜色，即：一灰一白 
 
 
-.. code-block:: pyton
+.. code-block:: bash
 
     # install qt4
     $ sudo apt-get install qt4-dev-tools qt4-doc qt4-qtconfig qt4-demos qt4-designer -y --force-yes

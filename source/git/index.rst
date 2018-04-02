@@ -17,6 +17,12 @@ Git使用总结
     :alt: alternate text
     :align: center
 
+****************
+Git 安装与配置 
+****************
+
+* `Git flow completion <https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion>`_
+
 ************
 Git 常用命令 
 ************
