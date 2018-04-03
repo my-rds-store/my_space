@@ -13,10 +13,12 @@ NFS (for ubuntu14.04)
      # Install NFS Server
      $ sudo apt-get install nfs-kernel-server 
 
-.. code::
+.. code-block:: sh
 
-    # 在 **/etc/exports** 添加
+    # 在 /etc/exports 添加
+    tree -a /etc/exports<<-'EOF'
     /home/jxm/workspace *(rw,sync,no_root_squash,no_subtree_check)
+    EOF
 
 .. code-block:: sh
 
@@ -111,7 +113,7 @@ FTP服务 (Centos 7)
     $ sudo  mkdir /home/ftpdir/jxm
     $ sudo  useradd -d /home/ftpdir/jxm -s /sbin/nologin jxm
     # or
-    $ sudo  useradd -d /home/ftpdir/jxm -s /bin/bash jxm
+    $ sudo  useradd -d /home/ftpdir/jxm -s /bin/sh jxm
 
     $ sudo  passwd jxm
 
@@ -153,7 +155,7 @@ x11vnc
 
 #. 安装与启动
 
-.. code-block:: bash
+.. code-block:: sh
 
   # 安装 x11 openbox
   # apt-get install xserver-xorg x11-xserver-utils
@@ -172,7 +174,7 @@ x11vnc
 
 #. 开机自启动
 
-.. code-block:: bash
+.. code-block:: sh
 
   $ cp ~/.vnc/passwd /etc/x11vnc.pass
 
@@ -223,7 +225,6 @@ http://blog.csdn.net/love_xiaozhao/article/details/52704197
 
 参考: http://www.cnblogs.com/liangml/p/5969404.html
 
-
 -----
 
 Synergy 一套键鼠同时控制多台电脑
@@ -231,9 +232,9 @@ Synergy 一套键鼠同时控制多台电脑
 
 * `Synergy 一套键鼠同时控制多台电脑 Win/Mac/Linux <https://www.iplaysoft.com/synergy.html>`_
 
+* `Compiling Synergy <https://github.com/symless/synergy-core/wiki/Compiling#Dependencies>`_
 
 -----
-
 
 Centos 7 网络配置
 =========================
@@ -255,7 +256,7 @@ Centos 7 网络配置
       
 * `Centos防火墙设置与端口开放的方法 <https://blog.csdn.net/u011846257/article/details/54707864>`_
   
-  .. code-block:: bash
+  .. code-block:: sh
        
 	systemctl start/stop firewalld      # 启动/禁用防火墙
 	systemctl enable/disable firewalld  # 设置开机自动启动/禁用开机自启动
@@ -304,7 +305,7 @@ Centos 7 网络配置
 8. 定时任务
 =============
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ export EDITOR=vim
     $ crontab -e
