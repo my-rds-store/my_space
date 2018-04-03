@@ -2,6 +2,10 @@
 Qt学习
 #########
 
+*******
+Book   
+*******
+
 Book
 ------
 
@@ -30,6 +34,7 @@ PyQt4
 QMultimedia
     QCamera
 
+
 QT环境搭建: QT-4.8 在windows下的使用
     http://blog.csdn.net/qq_22122811/article/details/63684008
 
@@ -53,6 +58,13 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
 
     # qtcreator-3.5.1 depends
     $ sudo apt-get install libgstreamer-plugins-base0.10-0
+
+************
+NextCloud   
+************
+
+* `Git Client <https://github.com/nextcloud/client>`_
+* `Build the Client <https://github.com/nextcloud/client_theming>`_
 
 
 ..
