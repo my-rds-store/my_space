@@ -18,7 +18,15 @@ Book
 * `qter <http://www.qter.org/portal.php?mod=list&catid=6>`_
 
 
+--------
+
+
 * `图片下载网站  <https://www.flaticon.com/>`_
+
+ www.flaticon.com/Jiangxumin/cjiangxumin@gmain.com/j6m
+
+
+--------
 
 PyQt4
     `Nullege is a search engine for Python source code <http://nullege.com/>`_
