@@ -303,6 +303,8 @@ nmcli命令
     $ nmcli con show
     $ nmcli dev show eth0
 
+*  `工具Valgrind,检测内存泄露 <https://www.cnblogs.com/wangkangluo1/archive/2011/07/20/2111248.html>`_
+
 
 查询含有 *\*rdma.so* 的rpm 包
 --------------------------------
