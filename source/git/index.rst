@@ -216,15 +216,24 @@ Gitlab_
 .. code-block:: sh
 
     $ sudo docker exec -it gitlab-public-runner gitlab-runner register -n \
-	--url "https://gitlab.example.com/" \
-	--registration-token "PROJECT_REGISTRATION_TOKEN" \
-	--executor docker \
-	--description 2.3-docker-gitlab-runner  \
-	--docker-image ubuntu:14.04  \
-	--docker-privileged true\
-	--locked false \
-	--run-untagged true \
-	--tag-list public-runner,another-tag 
+            --url "https://gitlab.com/" \
+            --registration-token "REGISTRATION_TOKEN" \
+            --executor docker \
+            --description 2.3-docker-gitlab-runner  \
+            --docker-image ubuntu:14.04  \
+            --docker-privileged true\
+            --locked false \
+            --run-untagged true \
+            --tag-list public-runner,another-tag 
+
+    # add volumes
+    $ sudo docker exec -it gitlab-public-runner gitlab-runner register -n \
+            --url https://gitlab.com/ \
+            --registration-token REGISTRATION_TOKEN \
+            --executor docker \
+            --description "My Docker Runner" \
+            --docker-image "docker:latest" \
+            --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 
 
 
