@@ -32,7 +32,7 @@ Git 常用命令
 git config 
 ============
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ git config --global -e  # 默认为 --global
     $ git config  -e    # or git config --edit
@@ -44,7 +44,7 @@ git config
 撤销与回退 
 ============
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ git rm --cached path                 # 撤销add
     $ git checkout <commit_id> <path>      # 回退单个文件到某一次提交
@@ -57,7 +57,7 @@ git config
 `git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
 =============================================================================
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ git log --stat  #  --stat，查看修改了那些文件,仅显示简要的增改行数统计
 
@@ -85,7 +85,7 @@ git config
 git submodule 
 ================
 
-.. code-block:: bash
+.. code-block:: sh
     
     git submodule add url path/to/name 
     git submodule add <repo> <dir>          # 添加 子模块
@@ -123,7 +123,7 @@ Gitlab_
 搭建Gitlab 
 ================
 
-.. code-block:: bash
+.. code-block:: sh
 
      docker run --name='gitlab-ce' -d \
 	   -p 10022:22 -p 10080:80 \
@@ -165,7 +165,7 @@ Gitlab_
 * https://docs.gitlab.com/runner/install/docker.html
 
 
-.. code-block:: bash
+.. code-block:: sh
 
     docker run -d --name gitlab-runner --restart always \
       -v /var/run/docker.sock:/var/run/docker.sock \
@@ -182,7 +182,7 @@ Gitlab_
 
 * https://docs.gitlab.com/runner/register/index.html
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ docker exec -it gitlab-runner gitlab-runner register
 
@@ -213,17 +213,20 @@ Gitlab_
 * `Using Docker images <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html>`_
 * `Using Docker Build <https://docs.gitlab.com/ce/ci/docker/using_docker_build.html>`_
 
-.. code-block:: bash
+.. code-block:: sh
 
-    $ docker exec -it gitlab-runner gitlab-runner register
-      --url "https://gitlab.example.com/" \
-      --registration-token "PROJECT_REGISTRATION_TOKEN" \
-      --description "docker-gitlab-runner-description" \
-      --tag-list my-tag,another-tag \
-      --run-untagged true \
-      --locked  true \
-      --executor "docker" \
-      --docker-image ubuntu:14.04 
+    $ sudo docker exec -it gitlab-public-runner gitlab-runner register -n \
+	--url "https://gitlab.example.com/" \
+	--registration-token "PROJECT_REGISTRATION_TOKEN" \
+	--executor docker \
+	--description 2.3-docker-gitlab-runner  \
+	--docker-image ubuntu:14.04  \
+	--docker-privileged true\
+	--locked false \
+	--run-untagged true \
+	--tag-list public-runner,another-tag 
+
+
 
 3. gitlab-ci.yml
 ------------------
@@ -234,7 +237,7 @@ Gitlab_
 4. gitlab-runner 常用命令
 --------------------------
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ sudo gitlab-runner register
     $ sudo gitlab-runner unregister --name "name"
@@ -250,7 +253,7 @@ Advanced
 * `Advanced configuration <https://docs.gitlab.com/runner/configuration/advanced-configuration.html>`_
 * `GitLab Runner Commands  <https://docs.gitlab.com/runner/commands/README.html>`_
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ sudo gitlab-runner register
     $ sudo gitlab-runner register -c "$HOME/.gitlab-runner/config.toml"
@@ -267,7 +270,7 @@ Advanced
 FAQ
 ***
 
-.. code-block:: bash
+.. code-block:: sh
 
     # 关闭蓝灯后，push失败
     connect to 127.0.0.1 port 38897: Connection refused
