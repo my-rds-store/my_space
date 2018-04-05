@@ -30,6 +30,9 @@ http://www.vagrantbox.es/
 参考
 ====
 
-http://blog.csdn.net/hel12he/article/details/51069269
+
+* `Vagrant 入门 <https://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html>`_
+
+* http://blog.csdn.net/hel12he/article/details/51069269
 
 
