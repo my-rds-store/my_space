@@ -323,6 +323,32 @@ Centos 7 网络配置
 * `使用crontab，让linux定时执行shell脚本 <https://www.cnblogs.com/wucaiyun1/p/6866730.html>`_
 * `一个简单的linux下设置定时执行shell脚本的示例 <https://www.cnblogs.com/bcphp/p/7084967.html>`_
 
+***********
+流量监控   
+***********
+
+iftop
+============
+
+.. code-block:: sh
+
+    $ brew install iftop # mac
+    $ export PATH=$PATH:/usr/local/sbin
+
+nethogs
+==========
+
+.. code-block:: sh
+
+    $ brew install nethogs # mac
+    $ export PATH=$PATH:/usr/local/sbin
+
+nload
+==========
+
+    $ apt-get install nload 
+
+
 .. raw:: html
 
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=413961293&auto=1&height=66"></iframe>
