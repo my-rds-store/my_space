@@ -44,4 +44,9 @@ http://www.vagrantbox.es/
 
 * http://blog.csdn.net/hel12he/article/details/51069269
 
+----
+
+* https://code-maven.com/xforwarding-from-vagrant-box
+* https://coderwall.com/p/ozhfva/run-graphical-programs-within-vagrantboxes
+
 
