@@ -317,18 +317,16 @@ Centos 7 网络配置
     # m h  dom mon dow   command
     1 23 * * *  /root/workspace_for_docker/mk_mcstudent_iso.sh 
 
-
 .. image:: https://images2015.cnblogs.com/blog/1173412/201706/1173412-20170627141421461-845471341.png
 
 * `使用crontab，让linux定时执行shell脚本 <https://www.cnblogs.com/wucaiyun1/p/6866730.html>`_
 * `一个简单的linux下设置定时执行shell脚本的示例 <https://www.cnblogs.com/bcphp/p/7084967.html>`_
 
-***********
 流量监控   
-***********
+==========
 
 iftop
-============
+---------------
 
 .. code-block:: sh
 
@@ -336,7 +334,7 @@ iftop
     $ export PATH=$PATH:/usr/local/sbin
 
 nethogs
-==========
+---------------
 
 .. code-block:: sh
 
@@ -344,10 +342,11 @@ nethogs
     $ export PATH=$PATH:/usr/local/sbin
 
 nload
-==========
+---------------
+
+.. code-block:: sh
 
     $ apt-get install nload 
-
 
 .. raw:: html
 
