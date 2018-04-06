@@ -2,11 +2,12 @@
 Shell 实用技巧
 ##############
 
+* `explainshell <https://explainshell.com/>`_
 
 常见问题
 --------------------
 
-.. code-block:: bash
+.. code-block:: sh
 
     # 1. umount.nfs: /mnt: device is busy
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
@@ -38,7 +39,7 @@ http://man.linuxde.net/rename
 
 * Ubuntu
 
-.. code-block:: bash
+.. code-block:: sh
 
     #!/bin/bash
      
@@ -54,7 +55,7 @@ http://man.linuxde.net/rename
     dpkg -l | grep -qw package || apt-get install package
 
 
-.. code-block:: bash
+.. code-block:: sh
 
     if ! rpm -qa | grep -qw vim; then
         yum install vim
@@ -70,7 +71,7 @@ sftp文件批量上传与下载
 * https://stackoverflow.com/questions/41378953/unknown-command-lftp
 * `用Python实现无交互sftp上传 下载 <http://blog.csdn.net/u010950854/article/details/62233538?utm_source=itdadao&utm_medium=referral>`_
 
-.. code-block:: bash
+.. code-block:: sh
 
     #!/bin/bash
     # apt-get install lftp
@@ -112,7 +113,7 @@ sftp文件批量上传与下载
     done
     IFS=$OIFS    # 恢复IFS
 
-.. code-block:: bash
+.. code-block:: sh
 
     #!/bin/bash
 
@@ -138,7 +139,7 @@ sftp文件批量上传与下载
 Shell 获取文件名和后缀名
 --------------------------
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ file="thisfile.txt"
     $ echo "filename: ${file%.*}"
@@ -154,7 +155,7 @@ split分割文件
 
 http://blog.csdn.net/whu_zhangmin/article/details/45870077
 
-.. code:: bash
+.. code:: sh
 
     $ split -b 4000M -d -a 1 cm-11.tar.gz cm-11.tar.gz.
 
@@ -179,7 +180,7 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
 tar 打包
 ---------------
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ tar czvf test.tar.gz *         # 压缩当前文件夹下非隐藏文件的文件
     $ tar czvf ../abc.tgz  .[!.]* *  # 压缩当前文件夹下所有文件,排除两个隐藏文件夹"."和“..”
@@ -237,7 +238,7 @@ apt-get install时如何指定安装版本
 查找当前目录，及其子目录，” .c “ 文件脚本
 ------------------------------------------
 
-.. code-block:: bash
+.. code-block:: sh
 
     #!/usr/bin/env bash
 
@@ -250,7 +251,7 @@ apt-get install时如何指定安装版本
     # delete pyc
     find . -name '*.pyc' -delete
 
-.. code-block:: bash
+.. code-block:: sh
 
     find -type  f  -name  '*.cpp'  |   xargs  grep  '关键字'    # 查找含有某字符串的所有文件
     chmod a+x `find ./ -type f -name '*.c'`  			# 修改当前目录及其子目录，文件属性
@@ -417,7 +418,7 @@ python
 
 http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 
-.. code-block:: bash
+.. code-block:: sh
     
      $ iostat -d -x -k 1   
 
@@ -468,8 +469,7 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
     Command (m for help): w
     The partition table has been altered!
 
-.. code-block:: bash
-    
+.. code-block:: sh
 
     # 格式化
     mkfs -t ext4 -c /dev/vdb1

@@ -2,6 +2,7 @@
 Git使用总结
 ###########
 
+* `Git Community Book 中文版 <http://gitbook.liuhui998.com/index.html>`_
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
 * `码云平台帮助文档 <http://git.mydoc.io/>`_
