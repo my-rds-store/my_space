@@ -1,13 +1,17 @@
 ###############
-Docker 学习总结
+Docker 笔记
 ###############
 
-*******************
-Docker Hub 与阿里云
-*******************
+**********************
+Docker Hub 与阿里云  
+**********************
 
-https://dev.aliyun.com/search.html
+* `Docker Hub <https://hub.docker.com/explore/>`_
+* `阿里云 <https://dev.aliyun.com/search.html>`_
 
+.. code-block:: sh
+
+    $ sudo docker login --username=jiang_xmin -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
 
 ************
 安装与配置
@@ -18,30 +22,30 @@ https://dev.aliyun.com/search.html
 
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
 
-.. code-block:: bash
+.. code-block:: sh
   
   # 官方安装，速度慢
   curl -sSL https://get.docker.com/ | sh
 
 * `安装docker(基于阿里源,速度快) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
 
-.. code-block:: bash
+.. code-block:: sh
 
-    # centos 
+    # fedora/centos 
     curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_centos7.sh | bash
 
-    # ubuntu 
+    # debian/ubuntu 
     curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
 
-.. code-block:: bash
+.. code-block:: sh
 
-     # 老版本
+     # centos 6 安装老版本
      $ sudo apt-get install -y docker.io
 
 配置 
 ========
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ sudo mkdir -p /etc/docker
 
@@ -77,6 +81,13 @@ KUBERNETES
     * https://www.kubernetes.org.cn/docs
 
 
+***********
+常用镜像   
+***********
+
+* `nimmis/alpine-apache <https://hub.docker.com/r/nimmis/alpine-apache/>`_
+
+
 **********
 常用命令
 **********
@@ -84,11 +95,10 @@ KUBERNETES
 `Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
 
-
 启动docker server
 ===================
 
-    .. code-block:: bash
+    .. code-block:: sh
         
          #  启动docker server
 
@@ -100,13 +110,12 @@ KUBERNETES
          $ sudo systemctl start  docker
 
 
-
 镜像
 ===================
 
-    .. code-block:: bash
+    .. code-block:: sh
 
-        $ sudo docker images  # 列出本地镜像
+        $ sudo docker images      # 列出本地镜像
         $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce jxm/my_space:v3  # 镜像commit
 
         $ sudo docker rmi training/sinatra  # 删除本地镜像
@@ -118,19 +127,17 @@ KUBERNETES
         
         $ sudo docker rmi oldname:tag   # 删除镜像
 
-        $ sudo docker login --username=jiang_xmin -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
 
         $ sudo docker search centos  # 搜索
 
 容器
 ============
 
-    .. code-block:: bash
+    .. code-block:: sh
 
        $ sudo docker create -i -t --name=apache  ubuntu:14.04  /bin/bash  #  创建容器
 
        $ sudo docker start apache  # 启动容器
-
        $ sudo docker attach apach  # 进入容器
        
        $ sudo docker rm  name/ID                # 删除一个容器
@@ -139,9 +146,8 @@ KUBERNETES
 
 
        # 守护态运行``
-       $ sudo docker run -d -p 3080:80 --name=myspace_test  jxm/my_space:v3  /bin/bash -c " while true; do echo hello world; sleep 1; done"
-
-       $ sudo docker run -d -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh
+       $ sudo docker run -d -p 3080:80 --name=myspace_test_v3 jxm/my_space:v3  /bin/bash -c " while true; do echo hello world; sleep 1; done"
+       $ sudo docker run -d -p 3080:80 --name=myspace_test_v4 jxm/my_space:v4  /root/start.sh
 
        $ sudo docker run -d --restart=always -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh  #开机自启动
 
@@ -169,7 +175,6 @@ KUBERNETES
        # 通过指定 URL 或者某个目录来导入容器
        $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
 
-
        $ sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
        $ sudo docker load -i nextcloud.tar            # 导入镜像
 
@@ -178,7 +183,7 @@ KUBERNETES
 ============
 
 
-.. code-block:: bash
+.. code-block:: sh
 
     # 查看端口
     $ sudo docker port {CONTAINER ID}
@@ -191,7 +196,7 @@ KUBERNETES
 `数据卷容器 <http://wiki.jikexueyuan.com/project/docker-technology-and-combat/datacontainer.html>`_
 
 
-    .. code-block:: bash
+    .. code-block:: sh
 
         # 指定数据卷
         $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
@@ -205,7 +210,7 @@ KUBERNETES
 权限
 ============
 
-.. code-block:: bash
+.. code-block:: sh
 
     $ sudo docker run -d --privileged myimage
 
@@ -227,15 +232,42 @@ Dockerfile
 * https://code.aliyun.com/
 
 
+.. code-block:: dockerfile
+
+    # This is a comment
+    FROM ubuntu:14.04
+
+    MAINTAINER Jiangxumin <cjaingxumin@gmail.com>
+
+    USER    root
+    WORKDIR /root
+
+    # ENV TEST  123
+
+    COPY install.sh ./
+    COPY run.sh ./
+
+    RUN ./install.sh
+
+    VOLUME ["/data1","/data2"]
+    EXPOSE 22
+    EXPOSE 80
+    EXPOSE 443
+
+    CMD ["/bin/bash","/root/run.sh"]
+
+.. code-block:: sh
+
+    $ sudo docker build . -t  ${image name}
+
+.. code-block:: sh
+
+    $ sudo docker run -d --restart=always -p 8901:8080 -v $HOEM/Video:/mediadrop/data/media --name=mediadrop acaranta/mediadrop
+
 #. EXPOSE
 
     格式为 EXPOSE <port> [<port>...] 。
     告诉Docker服务端容器暴露的端口
-
-
-.. code-block:: bash
-
-    $ sudo docker run -d --restart=always -p 8901:8080 -v $HOEM/Video:/mediadrop/data/media --name=mediadrop acaranta/mediadrop
 
 
 * `阿里云Docker <https://dev.aliyun.com/search.html>`_
