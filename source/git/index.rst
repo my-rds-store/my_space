@@ -2,6 +2,7 @@
 Git使用总结
 ###########
 
+* `Git Community Book 中文版 <http://gitbook.liuhui998.com/index.html>`_
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
 * `码云平台帮助文档 <http://git.mydoc.io/>`_
@@ -23,8 +24,6 @@ Git 安装与配置
 
 * `Git flow completion <https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion>`_
 
-* `为git设置 http https 代理 <https://www.jianshu.com/p/5e64135eb5c5>`_
-
 ************
 Git 常用命令 
 ************
@@ -39,7 +38,17 @@ git config
     $ git config --list 
     $ git config --global core.editor vim  # 配置默认编辑器 vim
 
-    $ git config --global http.proxy=localhost:8123 # 代理服务器
+    #  代理服务哦
+    $ git config --global http.proxy  lsocks5://127.0.0.1:1080 # 代理服务器
+    $ git config --global https.proxy lsocks5://127.0.0.1:1080 
+    
+    $ git config --global --unset http.proxy   # 撤销代理服务器
+    $ git config --global --unset https.proxy
+
+    $ git config --global --get http.proxy   # 查询理服务器
+    $ git config --global --get https.proxy
+
+
 
 撤销与回退 
 ============
