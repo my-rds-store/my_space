@@ -15,6 +15,9 @@ Install and Start
 
 * `使用SSH的X11特性远程运行X界面程序 <https://blog.csdn.net/gothicane/article/details/1669978>`_
 
+* `窗口管理器 Openbox 入门指南 <https://linuxtoy.org/archives/openbox-getting-started-guide.html#reasons>`_
+
+
 **********************
 安装资源监视器
 **********************
