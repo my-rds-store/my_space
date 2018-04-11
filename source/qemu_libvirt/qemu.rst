@@ -35,6 +35,14 @@ virsh 与 qemu-img
 #. **常用命令**
 
 
+* `列出 CPU Models <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-kvm_guest_virtual_machine_compatibility-supported_cpu_models>`_
+
+.. code-block:: sh
+
+    $ cat /usr/share/libvirt/cpu_map.xml
+    $ virsh cpu-models x86_64
+
+
 .. code-block:: sh
 
     # virsh      
