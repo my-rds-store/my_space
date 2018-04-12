@@ -47,6 +47,7 @@ Hello World
 
    qemu_libvirt/qemu
    vim/vim
+   mac/index
    git/index
    python/index
    nginx/index
