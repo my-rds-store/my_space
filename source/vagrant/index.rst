@@ -50,16 +50,21 @@ Vagrantfile
 
 
 .. code:: 
+    
+    # 挂在目录
+    config.vm.synced_folder "../data", "/vagrant_data"
 
-  config.vm.provider "virtualbox" do |vb|
-    # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
-    vb.name = "vagrent_ubuntu14"
-    # Customize the amount of memory on the VM:
-    vb.memory = "1024"
-    vb.cpus = 4
-  end
+    config.vm.provider "virtualbox" do |vb|
+      # Display the VirtualBox GUI when booting the machine
+      vb.gui = true
+      vb.name = "vagrent_ubuntu14"
+      # Customize the amount of memory on the VM:
+      vb.memory = "1024"
+      vb.cpus = 4
+    end
 
+
+    #  指定端口
 
 
 *******
