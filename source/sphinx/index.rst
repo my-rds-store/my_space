@@ -66,15 +66,16 @@ INSTALL
 
     html_theme = 'sphinx_rtd_theme'
 
-
 代码
 ----------
 
-`使用Sphinx,显示代码 <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html>`_
+* `使用Sphinx,显示代码 <https://build-me-the-docs-please.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html>`_
 
-`Showing code examples <http://www.sphinx-doc.org/en/stable/markup/code.html#directive-highlight>`_
+* `Showing code examples <http://www.sphinx-doc.org/en/stable/markup/code.html#directive-highlight>`_
 
-`highlighting language  <http://pygments.org/docs/lexers/>`_
+* `highlighting language  <http://pygments.org/docs/lexers/>`_
+
+* `code-block 支持的代码格式 <http://pygments.org/docs/lexers/>`_
 
 .. code-block:: rst
 
@@ -82,7 +83,6 @@ INSTALL
 
                 #!/bin/sh
                 echo "hello world"
-
 
 .. code-block:: rst
 

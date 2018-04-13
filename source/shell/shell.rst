@@ -4,6 +4,21 @@ Shell 实用技巧
 
 * `explainshell <https://explainshell.com/>`_
 
+更改用户名
+---------------
+
+.. code-block:: sh
+
+    #To change username (it is probably best to do this without being logged in):
+    sudo usermod -l newUsername oldUsername
+    # This however, doesn't rename the home folder.
+
+    # To change home-folder, use
+    sudo usermod -d /home/newHomeDir -m newUsername
+
+
+
+
 常见问题
 --------------------
 
