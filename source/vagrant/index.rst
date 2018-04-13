@@ -3,13 +3,18 @@ Vagrant
 #######
 
 ************
-INSTALL
+INSTALL_
 ************
 
-    ubuntu
+.. _INSTALL: https://www.virtualbox.org/wiki/Linux_Downloads
+
+* `install virtual from from command line <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
+
         .. code-block:: sh
         
             # 1. install virtualbox
+            $ sudo apt-get install virtualbox                       # 14.04
+            $ sudo apt-get install virtualbox virtualbox-ext-pack   # 16.04
 
             # 2. install  vagrant
             $ sudo apt-get install vagrant  vagrant-lxc
@@ -65,6 +70,23 @@ Vagrantfile
 
 
     #  指定端口
+
+
+********************
+about mc_termianl   
+********************
+
+.. code-block:: sh
+
+    # Install VirtualBox Guest Additions
+    wget -O /etc/apt/sources.list  http://mirrors.163.com/.help/sources.list.trusty
+    apt-get install -y gcc make perl
+    apt-get clean
+    mount /dev/cdrom /media/cdrom
+    cd /media/cdrom
+    ./VBoxLinuxAdditions.run 
+
+
 
 
 *******
