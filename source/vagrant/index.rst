@@ -11,13 +11,11 @@ INSTALL_
 * `install virtual from from command line <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
 
         .. code-block:: sh
-        
-            # 1. install virtualbox
-            $ sudo apt-get install virtualbox                       # 14.04
-            $ sudo apt-get install virtualbox virtualbox-ext-pack   # 16.04
 
-            # 2. install  vagrant
-            $ sudo apt-get install vagrant  vagrant-lxc
+            sudo apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib"
+            wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+            sudo apt-get update
+            sudo apt-get install virtualbox-5.x dkms 
 
 .. code-block:: sh
 
@@ -27,6 +25,22 @@ INSTALL_
 *************
 Vagrant cmd  
 *************
+
+* `基于Virtual box 创建Vagrant box <http://ebarnouflant.com/posts/7-convert-a-virtualbox-ova-vm-into-a-vagrant-box>`_
+
+
+.. code-block:: sh
+
+    # virtualBox 导入虚拟机
+    $ VBoxManage import ./UCS-Virtualbox-Demo-Image.ova --vsys 0 --eula accept                                                                                                                                   
+    # 查看虚拟机 id
+    $ VBoxManage list vms
+    "UCS 4.1" {acef4c0a-35be-4640-a214-be135417f04d}
+    You can now package that VM as a Vagrant box:
+
+    # 基于虚拟机 id 生成 vagrant box
+    $ vagrant package --base acef4c0a-35be-4640-a214-be135417f04d --output UCS.box   
+
 
 .. code-block:: sh
     
@@ -56,6 +70,15 @@ Vagrantfile
 
 .. code:: 
     
+    config.vm.box = "mc_termian_test"
+
+    # The url from where the 'config.vm.box' box will be fetched if it
+    # doesn't already exist on the user's system.
+
+    config.vm.box_url = "../boxs/mc_termianl.box"
+    config.ssh.username = 'root'
+    config.ssh.password = 'rootroot'
+
     # 挂在目录
     config.vm.synced_folder "../data", "/vagrant_data"
 
@@ -68,8 +91,9 @@ Vagrantfile
       vb.cpus = 4
     end
 
+    #  网络
+    # config.vm.network "public_network", ip: "192.168.2.176" , bridge: "en0"
 
-    #  指定端口
 
 
 ********************
@@ -86,9 +110,6 @@ about mc_termianl
     cd /media/cdrom
     ./VBoxLinuxAdditions.run 
 
-
-
-
 *******
 Docs   
 *******
@@ -97,9 +118,6 @@ Docs
 * `gitbook vagrant  <https://ninghao.gitbooks.io/vagrant/content/>`_
 * `Ansible中文权威指南 <http://www.ansible.com.cn/index.html>`_
     
----
-
-* `Convert a VirtualBox .ova VM into a Vagrant box <http://ebarnouflant.com/posts/7-convert-a-virtualbox-ova-vm-into-a-vagrant-box>`_
 
 Vagrantbox.ex
 =================
