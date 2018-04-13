@@ -20,6 +20,19 @@ INSTALL
     #  查看 插件
     $ vagrant plugin list
 
+*************
+Vagrant cmd  
+*************
+
+
+.. code-block:: sh
+    
+    $ vagrant box add --name new_name {url}
+
+    $ vagrant box repackage <name>          <provider> <version>
+    $ vagrant box repackage ubuntu/trusty64 virtualbox 20180330.0.0
+
+
 *******
 Docs   
 *******
