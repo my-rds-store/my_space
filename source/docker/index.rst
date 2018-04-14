@@ -59,7 +59,7 @@ Docker Hub 与阿里云
 
     $ sudo tee -a /etc/docker/daemon.json <<-'EOF'
     {
-        "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
+        "registry-mirrors": ["https://4lmb1y64.mirror.aliyuncs.com"],
         "graph": "/home/docker/docker_image",
         "dns": ["180.76.76.76", "114.114.114.114"]
     }

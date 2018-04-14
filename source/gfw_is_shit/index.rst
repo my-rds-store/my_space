@@ -32,9 +32,10 @@ VPS厂商
 
     # ubuntu
     $ export LC_ALL=C
-    $ apt-get install python-pip
+    $ sudo apt-get install python-pip 
 
-    $ sudo pip install shadowsocks
+    $ sudo pip install --upgrade pip -i https://pypi.mirrors.ustc.edu.cn/simple
+    $ sudo pip install shadowsocks  -i https://pypi.mirrors.ustc.edu.cn/simple
 
 * `docker shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
 * `kcptun  <https://www.cmsky.com/kcptun/>`_
@@ -53,7 +54,7 @@ Server
     
     #  1. 手动启动
 
-    $ sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
+    $ sudo ssserver -p 8388 -k password -m aes-256-cfb --user nobody -d start
 
     # 2. 配置自动启动(ubuntu)
     $ sudo tee /etc/shadowsocks.json <<-'EOF'

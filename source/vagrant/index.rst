@@ -22,6 +22,8 @@ INSTALL_
     #  查看 插件
     $ vagrant plugin list
 
+    $ vagrant plugin install vagrant-share --plugin-clean-source --plugin-source https://gems.hashicorp.com
+
 *************
 Vagrant cmd  
 *************
