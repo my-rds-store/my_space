@@ -90,6 +90,8 @@ Server
     $ sudo chmod a+x /etc/init.d/shadowsocks-start.sh
     $ sudo update-rc.d shadowsocks-start.sh defaults 90
 
+    $ service shadowsocks-start.sh start/stop/restart
+
 * `在CentOS下配置自启动服务 <http://imchao.wang/2014/02/21/make-your-service-autostart-on-linux/>`_
 
 Client
