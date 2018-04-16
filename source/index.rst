@@ -41,34 +41,6 @@ Hello World
 短链接服务
     * https://st.im/ 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   qemu_libvirt/qemu
-   vim/vim
-   mac/index
-   git/index
-   python/index
-   nginx/index
-   download_tools/index
-   shell/shell
-   sphinx/index
-   pycharm/remote_debug
-   docker/index
-   vagrant/index
-   database/mysql
-   database/sqlite
-   qt/index
-   mingw32/index
-   nsis/index
-   dnsmasq/index
-   apache/index 
-   android/index
-   openbox/index
-   linux_tools_cfg/index
-   gfw_is_shit/index
-   other/index
 
 
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
@@ -106,7 +78,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 ************
 源列表
 ************
-
 
     * 163源地址 ： http://mirrors.163.com/
 
@@ -178,8 +149,6 @@ Ubuntu 源列表
       $ sudo git config --global https.proxy https://192.168.2.3:8123
       $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
-
 ************
 待研究
 ************
@@ -219,11 +188,39 @@ bittorrent文件编辑工具
     * BEncode Editor
     * TrackerEditor
 
-Firefly
-    https://github.com/getlantern/forum/issues/4902
-
 ..
  我是注释内容
  你看不到我
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   qemu_libvirt/qemu
+   vim/vim
+   mac/index
+   git/index
+   python/index
+   java/index
+   golang/index
+   cpp/index
+   nginx/index
+   download_tools/index
+   shell/shell
+   sphinx/index
+   pycharm/remote_debug
+   docker/index
+   vagrant/index
+   database/mysql
+   database/sqlite
+   qt/index
+   mingw32/index
+   nsis/index
+   dnsmasq/index
+   apache/index 
+   android/index
+   openbox/index
+   linux_tools_cfg/index
+   gfw_is_shit/index
+   other/index
 

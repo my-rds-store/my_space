@@ -15,7 +15,11 @@ Book
 
 
 * `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
-* `qter <http://www.qter.org/portal.php?mod=list&catid=6>`_
+* `Qt开源社区 <http://www.qter.org/>`_
+    * `精品教程 <http://www.qter.org/portal.php?mod=list&catid=6>`_
+* `QTCN <http://www.qtcn.org/gpq4/>`_
+* `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
+* `Qt Download <http://download.qt.io/>`_
 
 
 --------
@@ -66,6 +70,7 @@ Linux下编译静态MinGW环境,编译windows平台Qt程序
 
     # qtcreator-3.5.1 depends
     $ sudo apt-get install libgstreamer-plugins-base0.10-0
+
 
 ************
 NextCloud   
