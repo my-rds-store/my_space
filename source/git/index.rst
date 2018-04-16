@@ -39,8 +39,8 @@ git config
     $ git config --global core.editor vim  # 配置默认编辑器 vim
 
     #  代理服务哦
-    $ git config --global http.proxy  lsocks5://127.0.0.1:1080 # 代理服务器
-    $ git config --global https.proxy lsocks5://127.0.0.1:1080 
+    $ git config --global http.proxy  socks5://127.0.0.1:1080 # 代理服务器
+    $ git config --global https.proxy socks5://127.0.0.1:1080 
     
     $ git config --global --unset http.proxy   # 撤销代理服务器
     $ git config --global --unset https.proxy
