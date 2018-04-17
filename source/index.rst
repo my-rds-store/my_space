@@ -31,6 +31,10 @@ Hello World
         与箭、火焰和花丛 
         以及寥廓长夜、寰宇浑然一体 
 
+编程类开放书籍荟萃
+    * https://linuxstory.org/free-chinese-programming-books/
+    * https://www.zhihu.com/question/38836382
+
 匿名网盘
     *  `nofile.io <https://nofile.io/>`_
     *  `奶牛快传 <http://cowtransfer.com/>`_
@@ -42,11 +46,8 @@ Hello World
     * https://st.im/ 
 
 
-
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
 
-动漫死神 
-    https://tieba.baidu.com/p/4029180251
 
 ************************
 Ubuntu 编译源码包
@@ -202,6 +203,7 @@ bittorrent文件编辑工具
    git/index
    python/index
    java/index
+   android/index
    golang/index
    cpp/index
    nginx/index
@@ -218,7 +220,6 @@ bittorrent文件编辑工具
    nsis/index
    dnsmasq/index
    apache/index 
-   android/index
    openbox/index
    linux_tools_cfg/index
    gfw_is_shit/index
