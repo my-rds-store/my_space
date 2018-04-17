@@ -9,11 +9,15 @@ Android
 * `Android官方培训课程中文版 <http://hukai.me/android-training-course-in-chinese/index.html>`_ 
 * `ANDROID学习之路 <http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/>`_
 
+* `adbshell <http://adbshell.com/commands>`_
+* `adb命令 <https://zmywly8866.github.io/2015/01/24/all-adb-command.html>`_
+
 --------
 
 **********
 搭建环境  
 **********
+
 
 Android studio gradle 无法获取 pom文件
 -------------------------------------
