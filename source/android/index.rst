@@ -12,6 +12,13 @@ Android
 * `adbshell <http://adbshell.com/commands>`_
 * `adb命令 <https://zmywly8866.github.io/2015/01/24/all-adb-command.html>`_
 
+* `connect to android emulator from virtualbox <https://nftb.saturdaymp.com/connect-to-android-emulator-from-virtualbox/>`_
+* `VirtualBox中安装Android-x86 <https://www.cnblogs.com/wynn0123/p/6288344.html>`_
+
+remote-debugging-with-android-emulator
+    * https://stackoverflow.com/questions/1754162/remote-debugging-with-android-emulator
+    * http://delphi.org/2013/09/debugging-against-a-remote-android-emulator/
+
 --------
 
 **********
