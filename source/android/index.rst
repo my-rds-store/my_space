@@ -9,6 +9,20 @@ Android
 * `Android官方培训课程中文版 <http://hukai.me/android-training-course-in-chinese/index.html>`_ 
 * `ANDROID学习之路 <http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/>`_
 
+--------
+
+**********
+搭建环境  
+**********
+
+Android studio gradle 无法获取 pom文件
+-------------------------------------
+
+* 1. 改maven 为国内地址
+    * https://blog.csdn.net/zengmingen/article/details/79877676
+* 2. 取消国外代理,改为国内
+    * `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
+
 Download
 ========
 
