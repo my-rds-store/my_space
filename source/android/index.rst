@@ -13,7 +13,8 @@ Android
 * `adb命令 <https://zmywly8866.github.io/2015/01/24/all-adb-command.html>`_
 
 * `connect to android emulator from virtualbox <https://nftb.saturdaymp.com/connect-to-android-emulator-from-virtualbox/>`_
-* `VirtualBox中安装Android-x86 <https://www.cnblogs.com/wynn0123/p/6288344.html>`_
+
+* `VirtualBox中安装Android-x86 <https://www.howtogeek.com/164570/how-to-install-android-in-virtualbox/>`_
 
 remote-debugging-with-android-emulator
     * https://stackoverflow.com/questions/1754162/remote-debugging-with-android-emulator
