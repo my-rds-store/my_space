@@ -23,7 +23,14 @@ remote-debugging-with-android-emulator
 --------
 
 * `第一行代码源代码 <https://github.com/guolindev/booksource>`_
+
+.. code-block:: sh
+
+    $ git clone https://github.com/guolindev/booksource
+
+
 * `Android 约束布局（ConstraintLayout）详解 <https://blog.csdn.net/airsaid/article/details/79052011>`_
+
 
 --------
 
