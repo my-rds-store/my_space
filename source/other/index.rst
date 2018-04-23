@@ -266,28 +266,6 @@ amixer
     # 配置好之后执行：
     $ alsactl store # 保存配置, 配置会保存在/var/lib/alsa/asound.state
 
-reboot
-
-应该就正常了
-
-.. code-block:: sh
-
-   $ sudo apt-get install alsa-base alsa-utils alsa-oss alsa-tools
-
-
-# .如果默认声卡不是需要的 在 $HOME目录添加 .asoundrc 文件
-
-内容类似如下
-
-::
-   defaults.ctl.card 1 defaults.pcm.card 1
-
-数字1代表声卡序号, 可以通过以下指令查看
-
-.. code-block:: bash
-
-   $ cat /proc/asound/cards
-
 
 nmcli命令
 -----------
