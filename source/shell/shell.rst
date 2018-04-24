@@ -191,6 +191,15 @@ http://blog.csdn.net/whu_zhangmin/article/details/45870077
     # 合并文件
     $ cat cm-11.tar.gz.* | tar -zxv
 
+7zip
+-------
+
+* `7-zip-examples <https://www.dotnetperls.com/7-zip-examples>`_
+
+.. code-block:: sh
+
+  $ 7za a -t7z w7_64_5200u_comp.qcow2.7z w7_64_5200u_comp.qcow2 -mx9
+
 
 tar 打包
 ---------------
