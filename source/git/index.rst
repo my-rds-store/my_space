@@ -284,6 +284,24 @@ Advanced
 * `GitLab-CI与GitLab-Runner <http://www.jianshu.com/p/2b43151fb92e>`_
 * `[后端]gitlab之gitlab-ci自动部署  <http://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation>`_
 
+**************
+Travis CI     
+**************
+
+
+* `docs.travis-ci <https://docs.travis-ci.com/>`_
+
+* `持续集成服务 Travis CI 教程 <http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html>`_
+
+* `用Travis CI给android项目部署Github release <http://kescoode.com/travis-ci-android-github-release/>`_
+* `基于Travis CI搭建Android自动打包发布工作流（支持Github Release及fir.im） <https://avnpc.com/pages/android-auto-deploy-workflow-on-travis-ci>`_
+
+* `用Github、Travis-CI集成发布app遇到的坑 <https://www.jianshu.com/p/fac8ccc8373b>`_
+
+* `如何简单入门使用Travis-CI持续集成 <https://github.com/nukc/how-to-use-travis-ci>`_
+
+* https://github.com/gopl/ci
+
 ***
 FAQ
 ***

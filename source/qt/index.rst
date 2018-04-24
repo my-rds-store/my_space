@@ -21,9 +21,7 @@ Book
 * `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
 * `Qt Download <http://download.qt.io/>`_
 
-
 --------
-
 
 * `图片下载网站  <https://www.flaticon.com/>`_
 
@@ -50,9 +48,18 @@ QMultimedia
 QT环境搭建: QT-4.8 在windows下的使用
     http://blog.csdn.net/qq_22122811/article/details/63684008
 
-Linux下编译静态MinGW环境,编译windows平台Qt程序
-   https://yjdwbj.github.io/2016/09/13/Linux%E4%B8%8B%E7%BC%96%E8%AF%91%E9%9D%99%E6%80%81MinGW%E7%8E%AF%E5%A2%83-%E7%BC%96%E8%AF%91windows%E5%B9%B3%E5%8F%B0Qt%E7%A8%8B%E5%BA%8F/
+*************
+跨平台编译   
+*************
 
+* `Linux下编译静态MinGW环境,编译windows平台Qt程序 <https://yjdwbj.github.io/2016/09/13/Linux%E4%B8%8B%E7%BC%96%E8%AF%91%E9%9D%99%E6%80%81MinGW%E7%8E%AF%E5%A2%83-%E7%BC%96%E8%AF%91windows%E5%B9%B3%E5%8F%B0Qt%E7%A8%8B%E5%BA%8F/>`_
+
+* `MXE <http://mxe.cc/>`_   
+
+
+***********
+知识点     
+***********
 
 .. code-block:: cpp
 

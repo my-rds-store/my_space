@@ -40,12 +40,11 @@ remote-debugging-with-android-emulator
 
 
 Android studio gradle 无法获取 pom文件
--------------------------------------
+------------------------------------------
 
-* 1. 改maven 为国内地址
-    * https://blog.csdn.net/zengmingen/article/details/79877676
-* 2. 取消国外代理,改为国内
-    * `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
+* 1. `改maven 为国内地址 <https://blog.csdn.net/zengmingen/article/details/79877676>`_
+* 2. 取消国外代理,改为国内 
+  * `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
 
 Download
 ========
@@ -130,6 +129,4 @@ File->Settings->Other Settings->Vim Emulation
        :align: center
 
 Select Methods to Override/Implement
-
-
 
