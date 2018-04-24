@@ -14,3 +14,9 @@ Mac
     # 显示进度
     $ brew install pv
     $ pv -petr ubuntu-11.10-desktop-i386.iso | sudo dd of=/dev/disk2 bs=1m` 
+
+
+.. code-block:: sh
+
+    $ open -a appname args...
+
