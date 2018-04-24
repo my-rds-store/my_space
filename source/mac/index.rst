@@ -3,6 +3,21 @@ Mac
 ######
 
 
+* `Homebrew <https://brew.sh/index_zh-cn>`_
+
+.. code-block:: bash
+
+      # 1. set proxy
+      $ export ALL_PROXY=socks5://127.0.0.1:1080
+      # or
+      # sudo git config --global http.proxy  socks5://127.0.0.1:1080
+      # sudo git config --global https.proxy socks5://127.0.0.1:1080
+
+      # 2. install Homebrew
+      $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+
 * `Mac 下制作U盘启动 <http://blog.jeswang.org/blog/2012/02/13/burn-iso-to-usb-on-mac/>`_
   
 .. code-block:: sh
@@ -28,3 +43,6 @@ Mac
     
     $ brew cask install mounty
   
+
+
+

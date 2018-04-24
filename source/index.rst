@@ -138,18 +138,6 @@ Ubuntu 源列表
     $ export APT_CONFIG=~/apt_proxy.conf
     $ sudo apt-get update
     
-*******
-待整理 
-*******
-
-* `Homebrew <https://brew.sh/index_zh-cn>`_
-
-.. code-block:: bash
-     
-      $ sudo git config --global http.proxy http://192.168.2.3:8123
-      $ sudo git config --global https.proxy https://192.168.2.3:8123
-      $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 ************
 待研究
 ************
