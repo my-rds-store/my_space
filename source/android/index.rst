@@ -12,6 +12,19 @@ Android
 * `adbshell <http://adbshell.com/commands>`_
 * `adb命令 <https://zmywly8866.github.io/2015/01/24/all-adb-command.html>`_
 
+* `如何让Android设备能使用adb 调试<http://blog.sina.com.cn/s/blog_540316260101fuho.html>`_
+  
+.. code-block:: sh
+
+    # 打开Android Terminal Emulatror后，输入如下的内容：
+    su  -root # 切换到root
+    setprop service.adb.tcp.port 5555
+    stop adbd
+    start adbd
+  
+
+
+
 * `connect to android emulator from virtualbox <https://nftb.saturdaymp.com/connect-to-android-emulator-from-virtualbox/>`_
 
 * `VirtualBox中安装Android-x86 <https://www.howtogeek.com/164570/how-to-install-android-in-virtualbox/>`_
