@@ -13,11 +13,11 @@ Android
 
 * `androiddevtools <http://www.androiddevtools.cn/>`_
 
-gradle
+Gradle
 -----------
 
-    * https://services.gradle.org/distributions
-
+    * `Gradle Install <https://gradle.org/install/>`_
+    * `Download <https://services.gradle.org/distributions>`_
 
 ***************
 构建 打包环境  
