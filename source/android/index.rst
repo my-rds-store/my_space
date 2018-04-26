@@ -2,15 +2,25 @@
 Android      
 ##############
 
-#############
-下载地址     
-#############
+**************
+下载地址      
+**************
+
 
 * `官方下载地址 <https://developer.android.com/studio/#command-tools>`_
 
 * `ANDROID SDK下载地址列表 <http://pro.sr1.me/post/android-sdk-download-links>`_
 
 * `androiddevtools <http://www.androiddevtools.cn/>`_
+
+***************
+构建 打包环境  
+***************
+
+* `Intro to docker: Building Android App  <https://medium.com/@elye.project/intro-to-docker-building-android-app-cb7fb1b97602>`_
+* `如何利用 Docker 环境加速 Android 应用的构建 <https://linux.cn/article-6865-1.html>`_
+
+https://github.com/uber-archive/android-build-environment/blob/master/Dockerfile
 
  
 ************
