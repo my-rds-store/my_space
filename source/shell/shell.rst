@@ -27,6 +27,17 @@ Shell 实用技巧
     # 1. umount.nfs: /mnt: device is busy
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
 
+
+`磁盘坏道 <http://man.linuxde.net/badblocks>`_
+--------------------------------------------------------
+
+.. code-block:: sh
+
+    $ badblocks -b 4096 -c 16 /dev/hda1 -o hda-badblocks-list
+    $ badblocks -s -v /dev/sda
+
+
+
 * nettop
 
 ssh 无密码登录

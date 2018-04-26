@@ -9,10 +9,15 @@ Android
 * `Android官方培训课程中文版 <http://hukai.me/android-training-course-in-chinese/index.html>`_ 
 * `ANDROID学习之路 <http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/>`_
 
-* `adbshell <http://adbshell.com/commands>`_
+adbshell_   
+==========
+
+.. _adbshell: http://adbshell.com/commands
+
+* `adbshell commands <http://adbshell.com/commands>`_
 * `adb命令 <https://zmywly8866.github.io/2015/01/24/all-adb-command.html>`_
 
-* `如何让Android设备能使用adb 调试<http://blog.sina.com.cn/s/blog_540316260101fuho.html>`_
+* `如何让Android设备能使用adb 调试 <http://blog.sina.com.cn/s/blog_540316260101fuho.html>`_
   
 .. code-block:: sh
 
@@ -22,7 +27,10 @@ Android
     stop adbd
     start adbd
   
+.. code-block:: sh
 
+    $ adb shell am start    com.example.demo/com.example.test.MainActivity  # start 
+    $ adb shell am start -n com.example.demo/com.example.test.MainActivity  # restart
 
 
 * `connect to android emulator from virtualbox <https://nftb.saturdaymp.com/connect-to-android-emulator-from-virtualbox/>`_
@@ -53,11 +61,11 @@ remote-debugging-with-android-emulator
 
 
 Android studio gradle 无法获取 pom文件
-------------------------------------------
+================================================
 
-* 1. `改maven 为国内地址 <https://blog.csdn.net/zengmingen/article/details/79877676>`_
-* 2. 取消国外代理,改为国内 
-  * `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
+    * 1. `改maven 为国内地址 <https://blog.csdn.net/zengmingen/article/details/79877676>`_
+    * 2. 取消国外代理,改为国内 
+      * `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
 
 Download
 ========
