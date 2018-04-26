@@ -2,12 +2,24 @@
 Android      
 ##############
 
+#############
+下载地址     
+#############
+
+* `ANDROID SDK下载地址列表 <http://pro.sr1.me/post/android-sdk-download-links>`_
+  http://www.androiddevtools.cn/
+
+* `androiddevtools <http://www.androiddevtools.cn/>`_
+
+ 
 ************
 学习资料    
 ************
 
 * `Android官方培训课程中文版 <http://hukai.me/android-training-course-in-chinese/index.html>`_ 
 * `ANDROID学习之路 <http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/>`_
+
+
 
 adbshell_   
 ==========
@@ -72,9 +84,6 @@ Download
 
 官方下载地址
     https://developer.android.com/studio/index.html
-
-androiddevtools
-    http://www.androiddevtools.cn/
 
 google developers
     https://developers.google.cn/

@@ -53,6 +53,7 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 
     `我使用过的Linux命令之trap - 在脚本中处理信号 <http://blog.csdn.net/world_hello_100/article/details/18049599>`_
 
+* `Bash 脚本 set 命令教程 <http://www.ruanyifeng.com/blog/2017/11/bash-set.html?utm_source=tool.lu>`_
 
 修改文件名 rename
 -------------------
