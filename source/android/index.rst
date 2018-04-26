@@ -39,6 +39,8 @@ https://github.com/uber-archive/android-build-environment/blob/master/Dockerfile
 sdkmanager   
 ============
 
+*  `Installing-Android-SDK-Tools  <https://github.com/codepath/android_guides/wiki/Installing-Android-SDK-Tools>`_
+
 .. code-block:: sh
 
     sdkmanager --list 
