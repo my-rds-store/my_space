@@ -6,8 +6,9 @@ Android
 下载地址     
 #############
 
+* `官方下载地址 <https://developer.android.com/studio/#command-tools>`_
+
 * `ANDROID SDK下载地址列表 <http://pro.sr1.me/post/android-sdk-download-links>`_
-  http://www.androiddevtools.cn/
 
 * `androiddevtools <http://www.androiddevtools.cn/>`_
 
