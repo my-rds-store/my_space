@@ -16,7 +16,7 @@ Mac
       # 2. install Homebrew
       $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-
+*  `Git命令自动补全(mac)  <https://www.jianshu.com/p/7130a5c11d42>`_
 
 * `Mac 下制作U盘启动 <http://blog.jeswang.org/blog/2012/02/13/burn-iso-to-usb-on-mac/>`_
   
