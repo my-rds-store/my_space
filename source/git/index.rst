@@ -63,6 +63,24 @@ git config
 
     $ git commit --amend                   # 修改commit 备注信息
 
+
+Gitignore   
+============
+
+
+.. code-block:: sh
+
+    # 忽略,指定文件之外的所有文件
+    $ tee .gitignore <<-'EOF'
+    /*
+
+    ! Dockerfile
+    ! init.sh
+    ! sources.list
+    ! readme.md
+    EOF
+
+
 `git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
 =============================================================================
 

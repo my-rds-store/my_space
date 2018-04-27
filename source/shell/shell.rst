@@ -27,6 +27,17 @@ Shell 实用技巧
     # 1. umount.nfs: /mnt: device is busy
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
 
+
+`磁盘坏道 <http://man.linuxde.net/badblocks>`_
+--------------------------------------------------------
+
+.. code-block:: sh
+
+    $ badblocks -b 4096 -c 16 /dev/hda1 -o hda-badblocks-list
+    $ badblocks -s -v /dev/sda
+
+
+
 * nettop
 
 ssh 无密码登录
@@ -42,6 +53,7 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 
     `我使用过的Linux命令之trap - 在脚本中处理信号 <http://blog.csdn.net/world_hello_100/article/details/18049599>`_
 
+* `Bash 脚本 set 命令教程 <http://www.ruanyifeng.com/blog/2017/11/bash-set.html?utm_source=tool.lu>`_
 
 修改文件名 rename
 -------------------
