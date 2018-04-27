@@ -18,6 +18,7 @@ Gradle
 
     * `Gradle Install <https://gradle.org/install/>`_
     * `Download <https://services.gradle.org/distributions>`_
+    * `Gradle 入门 <https://www.jianshu.com/p/001abe1d8e95>`_
 
 ***************
 构建 打包环境  
