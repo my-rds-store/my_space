@@ -2,6 +2,14 @@
 ================
 
 
+::
+
+    windows 计算md6
+    > certutil -hashfile D:\filename.txt MD5
+    > certutil -hashfile D:\filename.txt SHA1
+    > certutil -hashfile D:\filename.txt SHA256
+
+
 .. code-block:: bash
 
     # ubuntu install protobuf
