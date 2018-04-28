@@ -2,6 +2,7 @@
 Android      
 ##############
 
+
 **************
 下载地址      
 **************
@@ -13,8 +14,9 @@ Android
 
 * `androiddevtools <http://www.androiddevtools.cn/>`_
 
+************
 Gradle
------------
+************
 
     * `Gradle Install <https://gradle.org/install/>`_
     * `Download <https://services.gradle.org/distributions>`_
@@ -44,8 +46,8 @@ sdkmanager
 
 .. code-block:: sh
 
-    sdkmanager --list 
-    sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8"
+    $ sdkmanager --list 
+    $ sdkmanager 'extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha8'
 
 adbshell_   
 ==========
@@ -91,19 +93,17 @@ remote-debugging-with-android-emulator
 * `Android 约束布局（ConstraintLayout）详解 <https://blog.csdn.net/airsaid/article/details/79052011>`_
 
 
---------
 
 **********
 搭建环境  
 **********
 
-
 Android studio gradle 无法获取 pom文件
 ================================================
 
-    * 1. `改maven 为国内地址 <https://blog.csdn.net/zengmingen/article/details/79877676>`_
-    * 2. 取消国外代理,改为国内 
-      * `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
+* 1. `改maven 为国内地址 <https://blog.csdn.net/zengmingen/article/details/79877676>`_
+* 2. 取消国外代理,改为国内 
+* `gradle 设置代理 <https://blog.csdn.net/cheng545/article/details/72868781>`_
 
 Download
 ========
@@ -139,7 +139,7 @@ https://jcenter.bintray.com/com/android/tools/build/
 
 
 Android SDK 在线更新镜像服务器资源
------------------------------------
+=====================================
 
 中国科学院开源协会镜像站地址:
     * IPV4/IPV6: http://mirrors.opencas.cn 端口：80
@@ -170,7 +170,8 @@ Android SDK 在线更新镜像服务器资源
 
 
 修改vim快捷键
--------------
+=================
+
 
 File->Settings->Other Settings->Vim Emulation
 

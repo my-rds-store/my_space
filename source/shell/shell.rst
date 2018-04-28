@@ -2,6 +2,18 @@
 Shell 实用技巧
 ##############
 
+*******
+ZSH    
+*******
+
+* `Oh My ZSH <http://ohmyz.sh/>`_
+
+
+********
+Bash    
+********
+
+
 * `explainshell <https://explainshell.com/>`_
 
 更改用户名
