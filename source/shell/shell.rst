@@ -531,4 +531,24 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
     # or
     /dev/vdb1  /home    ext4  defaults   0  0
 
+.. code-block:: sh
+
+    # 获取 public ip 
+    $ curl icanhazip.com
+    $ curl ipecho.net/plain; echo
+    $ curl ifconfig.me
+    $ curl  -s freegeoip.net/xml/ | grep "<IP>" | sed 's/<\/.*$//g' | sed 's/^.*>//g'
+    
+    # get <CountryCode>
+    $ curl  -s freegeoip.net/json/ | sed "s/^.*country_code\":\"//g" | sed 's/\".*$//g'
+    $ curl  -s freegeoip.net/xml/ | grep "<CountryCode>" | sed 's/<\/.*$//g' | sed 's/^.*>//g'
+
+    # 
+    $ curl freegeoip.net/json/github.com
+    $ curl freegeoip.net/json/baidu.com
+    $ curl ipinfo.io/8.8.8.8
+    $ curl ipinfo.io/8.8.8.8/country
+
+    # https://github.com/fiorix/freegeoip
+    # https://ipstack.com/
 
