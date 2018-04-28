@@ -2,11 +2,9 @@
 Android      
 ##############
 
-
 **************
 下载地址      
 **************
-
 
 * `官方下载地址 <https://developer.android.com/studio/#command-tools>`_
 
@@ -36,7 +34,7 @@ https://github.com/uber-archive/android-build-environment/blob/master/Dockerfile
 学习资料    
 ************
 
-* `Android官方培训课程中文版 <http://hukai.me/android-training-course-in-chinese/index.html>`_ 
+* `Android官方培训课程中文版 <http://hukai.me/android-training-course-in-chinese/index.html>`_
 * `ANDROID学习之路 <http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/>`_
 
 sdkmanager   

@@ -80,14 +80,19 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 源列表
 ************
 
+    * 科大开源镜像站:  http://mirrors.ustc.edu.cn/
     * 163源地址 ： http://mirrors.163.com/
-
     * 阿里源地址:  http://mirrors.aliyun.com/
 
 .. code-block:: bash
 
-    #centos 安装epel扩展源
+    # centos/fedora 安装epel扩展源 并更换为科大开源镜像
     $ sudo yum -y install epel-release
+    $ sudo sed -e 's!^mirrorlist=!#mirrorlist=!g' \
+             -e 's!^#baseurl=!baseurl=!g' \
+             -e 's!//download\.fedoraproject\.org/pub!//mirrors.ustc.edu.cn!g' \
+             -e 's!http://mirrors\.ustc!https://mirrors.ustc!g' \
+             -i /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo
 
 `Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
 
@@ -101,18 +106,18 @@ Ubuntu 源列表
     
 .. code-block:: bash
 
-     # ubuntu14.04  163源
-     wget -O /etc/apt/sources.list  http://mirrors.163.com/.help/sources.list.trusty
-     curl -o /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.trusty
-
-.. code-block:: bash
+    # ubuntu14.04  163源
+    $ sudo wget -O /etc/apt/sources.list  http://mirrors.163.com/.help/sources.list.trusty
+    # sudo curl -o /etc/apt/sources.list http://mirrors.163.com/.help/sources.list.trusty
 
     # ubuntu 14.04 更换阿里源
     $ grep "archive.ubuntu.com" /etc/apt/sources.list && \
-    sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
+           sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
+
+    # 科大源
+    $ sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 
 * `apt-get命令使用代理 <http://daemon369.github.io/network/2014/06/05/use-proxy-for-apt-get>`_
-
 
 .. code-block:: bash
 
