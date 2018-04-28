@@ -4,7 +4,7 @@
 
 ::
 
-    windows 计算md6
+    windows 计算 MD5 SHA1  SHA256
     > certutil -hashfile D:\filename.txt MD5
     > certutil -hashfile D:\filename.txt SHA1
     > certutil -hashfile D:\filename.txt SHA256
