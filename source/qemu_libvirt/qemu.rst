@@ -32,6 +32,10 @@ virsh 与 qemu-img
 * `Libvirt Remote URIs <https://libvirt.org/docs/libvirt-appdev-guide-python/en-US/html/libvirt_application_development_guide_using_python-Connections-Remote_URIs.html>`_
 
 
+* `Adding Storage Devices To Guests <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/virtualization_administration_guide/sect-virtualization-virtualized_block_devices-adding_storage_devices_to_guests>`_
+
+* https://www.thegeekstuff.com/2015/02/add-memory-cpu-disk-to-kvm-vm/
+
 #. **常用命令**
 
 

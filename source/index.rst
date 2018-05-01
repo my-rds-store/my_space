@@ -147,6 +147,28 @@ Ubuntu 源列表
 待研究
 ************
 
+* `itchat <http://itchat.readthedocs.io/zh/latest/>`_
+    * http://itchat.readthedocs.io/zh/latest/
+    * http://itchat.readthedocs.io/zh/latest/api/#api
+    * https://github.com/littlecodersh/EasierLife/blob/master/Plugins/Tuling/tuling.py
+    * https://blog.csdn.net/co_zy/article/details/73302984
+
+    * 图灵机器人 api
+        * http://www.tuling123.com/
+        * https://www.kancloud.cn/turing/web_api/522989
+
+P2P File Transfer
+    https://github.com/ypingcn/P2PChat-Qt
+    https://github.com/aanrv/P2P-File-Transfer-Client
+    https://www.cnblogs.com/snake-hand/p/3148366.html
+    https://blog.csdn.net/hackertom/article/details/73692902
+
+--------------
+
+* 天气预报 android 短信推送 
+
+--------------
+
 http://www.isjian.com/
 
 Linux From Scratch
