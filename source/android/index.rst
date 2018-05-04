@@ -6,6 +6,8 @@ Android
 下载地址      
 **************
 
+* `developer android <https://developer.android.google.cn/>`_
+
 * `官方下载地址 <https://developer.android.com/studio/#command-tools>`_
 
 * `ANDROID SDK下载地址列表 <http://pro.sr1.me/post/android-sdk-download-links>`_
