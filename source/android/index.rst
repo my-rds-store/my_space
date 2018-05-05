@@ -22,6 +22,48 @@ Gradle
     * `Download <https://services.gradle.org/distributions>`_
     * `Gradle 入门 <https://www.jianshu.com/p/001abe1d8e95>`_
 
+************
+APK 证书
+************
+
+* `给第三方apk进行系统签名的几种方式  <https://blog.csdn.net/luzhenrong45/article/details/47733053>`_
+
+* `生成证书  <http://www.cnblogs.com/littleatp/p/5922362.html>`_
+
+.. code-block:: sh
+
+   keytool -genkeypair -alias serverkey -keypass 111111 -storepass 111111 \
+        -dname "C=CN,ST=GD,L=SZ,O=vihoo,OU=dev,CN=vihoo.com" \
+        -keyalg RSA -keysize 2048 -validity 3650 -keystore server.keystore 
+
+.. code-block:: sh
+
+    android{
+        ...
+        ...
+       signingConfigs {
+             myrelease {
+                 storeFile file( System.getProperty("user.home") + "/.android/debug.keystore")
+                 keyAlias "AndroidDebugKey"
+                 storePassword  "android"
+                 keyPassword  "android"
+             }
+         }
+        buildTypes {
+            release {
+                signingConfig   signingConfigs.myrelease
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+            debug {
+                signingConfig   signingConfigs.myrelease
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+
+
 ***************
 构建 打包环境  
 ***************
@@ -31,6 +73,7 @@ Gradle
 
 https://github.com/uber-archive/android-build-environment/blob/master/Dockerfile
 
+* `手动编译安卓项目  <http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0603/4331.html>`_
  
 ************
 学习资料    
@@ -68,6 +111,8 @@ adbshell_
     start adbd
   
 .. code-block:: sh
+
+    $ adb shell pm list package                   # list all installed packages
 
     $ adb shell am start    com.example.demo/com.example.test.MainActivity  # start 
     $ adb shell am start -n com.example.demo/com.example.test.MainActivity  # restart
@@ -182,3 +227,23 @@ File->Settings->Other Settings->Vim Emulation
 
 Select Methods to Override/Implement
 
+**************
+常见问题      
+**************
+
+* `sudo执行命令时提示找不到该命令 <https://blog.csdn.net/Cryhelyxx/article/details/53384004>`_
+
+* `adb USB 权限问题 <https://askubuntu.com/questions/908306/adb-no-permissions-on-ubuntu-17-04?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa>`_
+
+.. code-block:: sh
+
+    $ sudo adb kill-server
+    $ sudo adb start-server
+
+    #then connect your device turn Debugging on and type
+    $ adb devices
+
+
+------
+
+https://github.com/YachaoLiu/spice-client-android
