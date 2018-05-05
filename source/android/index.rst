@@ -112,10 +112,15 @@ adbshell_
   
 .. code-block:: sh
 
-    $ adb shell pm list package                   # list all installed packages
+    $ ./gradlew assembleRelease
+    $ ./gradlew assembleDebug
+    $ adb install  app/build/outputs/apk/release/app-release.apk 
 
-    $ adb shell am start    com.example.demo/com.example.test.MainActivity  # start 
-    $ adb shell am start -n com.example.demo/com.example.test.MainActivity  # restart
+    $ adb shell pm list package                   # list all installed packages
+    $ adb shell pm uninstall  com.example.client 
+
+    $ adb shell am start    com.example.client/com.example.client.MainActivity  # start 
+    $ adb shell am start -n com.example.client/com.example.client.MainActivity  # restart
 
 
 * `connect to android emulator from virtualbox <https://nftb.saturdaymp.com/connect-to-android-emulator-from-virtualbox/>`_
