@@ -8,7 +8,7 @@ C/C++
 Glib
 *************
 
-* GIO Reference Manual <https://developer.gnome.org/gio/stable/>`_
+* `GIO Reference Manual <https://developer.gnome.org/gio/stable/>`_
 
 
 * `浅析GLib <https://www.ibm.com/developerworks/cn/linux/l-glib/>`_
