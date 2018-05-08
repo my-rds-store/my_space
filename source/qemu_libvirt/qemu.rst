@@ -20,6 +20,11 @@ qemu命令总结
 .. _LibvirtLink: https://libvirt.org
 
 
+PCI 透传
+----------------------
+
+* `使用libvirt和qemu将pci pass through设备添加到虚拟机上 <https://www.chenyudong.com/archives/add-pci-pass-through-device-to-guest-vm-with-libvirt-and-qemu.html>`_
+
 virsh 与 qemu-img
 ----------------------
 
