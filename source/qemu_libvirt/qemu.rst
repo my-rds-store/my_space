@@ -49,7 +49,7 @@ OR
 
 .. code-block:: bash
 
-    $ tree hostdev.xml <-"EOF"
+    $ tee hostdev.xml <<-"EOF"
     <hostdev mode='subsystem' type='pci' managed='yes'>
       <driver name='vfio'/>
       <source>
@@ -59,6 +59,7 @@ OR
     EOF
 
     $ sudo virsh nodedev-dettach pci_0000_00_14_0
+    $ sudo virsh nodedev-reattach pci_0000_00_14_0
 
     $ virsh attach-device --config ${domain} ./hostdev.xml
     $ virsh attach-device ${domain} ./hostdev.xml
