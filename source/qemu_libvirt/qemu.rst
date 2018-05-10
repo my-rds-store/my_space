@@ -25,6 +25,46 @@ PCI 透传
 
 * `使用libvirt和qemu将pci pass through设备添加到虚拟机上 <https://www.chenyudong.com/archives/add-pci-pass-through-device-to-guest-vm-with-libvirt-and-qemu.html>`_
 
+.. code-block:: sh
+
+    $ tail -f /var/log/syslog
+    $ tail -f /var/log/libvirt/qemu/${domain}.log
+
+
+
+.. code-block:: sh
+    vim /etc/default/grub
+
+add  intel_iommu=on vfio_iommu_type1.allow_unsafe_interrupts=1
+
+::
+    GRUB_CMDLINE_LINUX="quiet splash loglevel=2 intel_iommu=igfx_off i915.hvm_boot_foreground=1 i915.enable_cmd_parser=0 i915.enable_hangcheck=0 loglvl=all guest_loglvl=all conring_size=4M noreboot intel_iommu=on vfio_iommu_type1.allow_unsafe_interrupts=1"
+
+OR   
+
+.. code-block:: sh
+
+    $ vim /boot/grub/grub.cfg
+
+
+.. code-block:: bash
+
+    $ tree hostdev.xml <-"EOF"
+    <hostdev mode='subsystem' type='pci' managed='yes'>
+      <driver name='vfio'/>
+      <source>
+	    <address domain='0x0000' bus='0x00' slot='0x14' function='0x0'/>
+      </source>
+    </hostdev>
+    EOF
+
+    $ sudo virsh nodedev-dettach pci_0000_00_14_0
+
+    $ virsh attach-device --config ${domain} ./hostdev.xml
+    $ virsh attach-device ${domain} ./hostdev.xml
+
+    $ virsh detach-device ${domain} ./hostdev.xml
+
 virsh 与 qemu-img
 ----------------------
 
