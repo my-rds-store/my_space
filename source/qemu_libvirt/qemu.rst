@@ -20,6 +20,8 @@ qemu命令总结
 .. _LibvirtLink: https://libvirt.org
 
 
+* `Hooks for specific system management <https://libvirt.org/hooks.html>`_
+
 PCI 透传
 ----------------------
 
