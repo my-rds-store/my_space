@@ -22,6 +22,12 @@ qemu命令总结
 
 * `Hooks for specific system management <https://libvirt.org/hooks.html>`_
 
+kvmgt 
+---------------
+
+* `Igvtg-qemu <https://github.com/intel/Igvtg-qemu/tree/2016q4-2.3.0>`_
+* `Igvtg-kernel <https://github.com/intel/Igvtg-kernel/blob/2016q4-4.3.0/iGVT-g_Setup_Guide.txt>`_
+
 PCI 透传
 ----------------------
 
