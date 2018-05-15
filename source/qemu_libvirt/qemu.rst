@@ -34,6 +34,7 @@ PCI 透传
     $ tail -f /var/log/libvirt/qemu/${domain}.log
 
 .. code-block:: sh
+
     vim /etc/default/grub
 
 add  " intel_iommu=on vfio_iommu_type1.allow_unsafe_interrupts=1"
