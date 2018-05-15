@@ -40,6 +40,7 @@ add  " intel_iommu=on vfio_iommu_type1.allow_unsafe_interrupts=1"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ::
+
     GRUB_CMDLINE_LINUX="quiet splash loglevel=2 intel_iommu=igfx_off i915.hvm_boot_foreground=1 i915.enable_cmd_parser=0 i915.enable_hangcheck=0 loglvl=all guest_loglvl=all conring_size=4M noreboot intel_iommu=on vfio_iommu_type1.allow_unsafe_interrupts=1"
 
 OR   
