@@ -94,6 +94,7 @@ KUBERNETES
 
 `Docker Commandlind <https://docs.docker.com/engine/reference/commandline/docker/>`_
 
+* `docker 资源限制   <https://docs.docker.com/config/containers/resource_constraints/#limit-a-containers-access-to-memory>`_
 
 启动docker server
 ===================
