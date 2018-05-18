@@ -41,9 +41,20 @@ PyQt4
 
 * `PyQt4 信号和槽用法总结 <http://blog.csdn.net/jxm_csdn/article/details/51628367>`_
 
+
+**********
+播放器    
+**********
+
 QMultimedia
     QCamera
 
+* `SMPlayer <https://sourceforge.net/projects/smplayer/?source=typ_redirect>`_
+* `获取SMPlayer <https://www.smplayer.info/zh_TW/downloads>`_
+
+.. code-block:: sh
+
+    $ sudo apt-get install smplayer
 
 QT环境搭建: QT-4.8 在windows下的使用
     http://blog.csdn.net/qq_22122811/article/details/63684008

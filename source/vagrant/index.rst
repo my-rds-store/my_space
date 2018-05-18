@@ -36,7 +36,8 @@ Vagrant cmd
     # virtualBox 导入虚拟机
     $ VBoxManage import ./UCS-Virtualbox-Demo-Image.ova --vsys 0 --eula accept                                                                                                                                   
     # 查看虚拟机 id
-    $ VBoxManage list vms
+    $ vboxmanage lisb vms
+
     "UCS 4.1" {acef4c0a-35be-4640-a214-be135417f04d}
     You can now package that VM as a Vagrant box:
 
