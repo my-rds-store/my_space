@@ -134,6 +134,19 @@ virsh 与 qemu-img
     qemu-img snapshot -c s1 source.qcow2  # 创建
     qemu-img snapshot -a s1 source.qcow2  # 还原
 
+    # Committing Changes
+    # https://dustymabe.com/2015/01/11/qemu-img-backing-files-a-poor-mans-snapshotrollback/
+    # 
+    $ sudo qemu-img info /guests/F21server.qcow2.snap
+    image: /guests/F21server.qcow2.snap
+    file format: qcow2
+    virtual size: 20G (21474836480 bytes)
+    disk size: 15M
+    cluster_size: 65536
+    backing file: /guests/F21server.img
+    $ sudo qemu-img commit /guests/F21server.qcow2.snap
+    Image committed.
+
 * `How to create Snapshot of Guest machine in Libvirt <http://www.geekpills.com/operating-system/linux/create-snapshot-guest-machine-libvirt>`_
 
 .. code-block:: sh
