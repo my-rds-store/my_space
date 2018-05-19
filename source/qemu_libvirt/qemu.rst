@@ -168,7 +168,22 @@ virsh 与 qemu-img
     $ virt-ls -a  image.qcow2 /
     $ virt-copy-in test.txt -a  image.qcow2 /
 
+CD
+------
 
+.. code-block:: xml
+
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2' cache='unsafe'/>
+      <source file='/data/disk/3601b740-5726-11e8-a561-5254007aa05f_D.qcow2'/>
+      <target dev='vdb' bus='virtio'/>
+    </disk>
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/cdata/isos/Windows-7-Ultimate-SP1-x64-677408.iso'/>
+      <target dev='hda' bus='ide'/>
+      <readonly/>
+    </disk>
 
 声卡
 ------
