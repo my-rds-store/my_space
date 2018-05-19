@@ -184,6 +184,25 @@ CD
       <target dev='hda' bus='ide'/>
       <readonly/>
     </disk>
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/cdata/isos/virtio-win.iso'/>
+      <target dev='hdb' bus='ide'/>
+      <readonly/>
+    </disk>
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/cdata/isos/mcos-tools.iso'/>
+      <target dev='hdc' bus='ide'/>
+      <readonly/>
+    </disk>
+    <disk type='file' device='floppy'>
+      <driver name='qemu' type='raw'/>
+      <source file='/cdata/isos/virtio-win.vfd'/>
+      <target dev='fda' bus='fdc'/>
+      <readonly/>
+    </disk>
+
 
 声卡
 ------
