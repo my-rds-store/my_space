@@ -147,6 +147,9 @@ virsh 与 qemu-img
     $ sudo qemu-img commit /guests/F21server.qcow2.snap
     Image committed.
 
+    # 重改基础镜像
+　　qemu-img rebase [-u] -b /PATH/TO/base.qcow2 linux.qcow2　　# -u 指 unsafe 模式，无需检验，通常用于基础镜像移动位置或重命名之后
+
 * `How to create Snapshot of Guest machine in Libvirt <http://www.geekpills.com/operating-system/linux/create-snapshot-guest-machine-libvirt>`_
 
 .. code-block:: sh

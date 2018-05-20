@@ -240,6 +240,8 @@ amixer
     $ amixer -D pulse sset "Master" off    // 静音
     $ amixer set "Master" 100%
 
+    $ amixer set "PCM" 94%    #  6100u 华科 噪音
+
 #. 录音设置
 
 .. code-block:: sh
@@ -248,6 +250,7 @@ amixer
 
     $ amixer set "Front Mic Boost" 53%
     $ amixer set "Rear Mic Boost"  53%
+
 
 `alsamixer设置默认声卡及调节音量保存配置 <http://www.it165.net/os/html/201212/4118.html>`_
 
