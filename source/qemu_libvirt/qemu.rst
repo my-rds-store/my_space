@@ -21,6 +21,8 @@ qemu命令总结
 
 
 * `Hooks for specific system management <https://libvirt.org/hooks.html>`_
+* `Libvirt和QEMU Hook机制介绍 <http://www.just4coding.com/blog/2017/11/25/qemu-hook/>`_
+
 
 kvmgt 
 ---------------
