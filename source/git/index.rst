@@ -63,6 +63,15 @@ git config
 
     $ git commit --amend                   # 修改commit 备注信息
 
+新建分支   
+===========
+
+
+.. code-block:: sh
+
+    $ git branch  <new_branch_name> <commit_id>  
+    $ git checkout -b  <new_branch_name> <commit_id>  
+
 
 Gitignore   
 ============
@@ -91,6 +100,7 @@ Gitignore
     # https://www.cnblogs.com/Sir-Lin/p/6064844.html
     $ git log -- filename  <path>  # 查看某文件的修改历史
     $ git show <commit-id> <path>
+    $ git log -b <branch_name> 
 
 
 * `git cherry-pick <https://www.jianshu.com/p/08c3f1804b36>`_
@@ -102,7 +112,14 @@ Gitignore
 .. code-block:: sh
 
     $ git add  <path>
+
+    #####################
+    # about git diff
+    #####################
+
     $ git diff --cached
+    # Compare files from two different branches
+    $ git diff <branch_name> <another_branch_name> -- <path>
 
 .. code-block:: sh
 

@@ -85,6 +85,9 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
     * 阿里源地址:  http://mirrors.aliyun.com/
 
 .. code-block:: bash
+    
+　  #　
+    wget -O /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo 
 
     # centos/fedora 安装epel扩展源 并更换为科大开源镜像
     $ sudo yum -y install epel-release
