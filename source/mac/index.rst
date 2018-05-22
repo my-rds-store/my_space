@@ -29,7 +29,12 @@ Mac
     # 显示进度
     $ brew install pv
     $ pv -petr ubuntu-11.10-desktop-i386.iso | sudo dd of=/dev/disk2 bs=1m` 
-
+    
+    # For Ubuntu
+    $ sudo tee /usr/local/bin/pvdd <<-'EOF'
+    pv -petr $1 | sudo dd of=$2 bs=4096
+    EOF
+    $ sudo chmod a+x /usr/local/bin/pvdd
 
 .. code-block:: sh
 

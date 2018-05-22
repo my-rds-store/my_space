@@ -1,5 +1,5 @@
 ###########
-Git使用总结
+Git
 ###########
 
 * `Git Community Book 中文版 <http://gitbook.liuhui998.com/index.html>`_
@@ -48,8 +48,6 @@ git config
     $ git config --global --get http.proxy   # 查询理服务器
     $ git config --global --get https.proxy
 
-
-
 撤销与回退 
 ============
 
@@ -57,21 +55,20 @@ git config
 
     $ git rm --cached path                 # 撤销add
     $ git checkout <commit_id> <path>      # 回退单个文件到某一次提交
+    $ git checkout <branc_name> -- <path>  # checkout file from a brach
 
     $ git revert <commit_id>
     # git revert是用一次新的commit来回滚之前的commit, 而git reset是直接删除指定的commit。
 
     $ git commit --amend                   # 修改commit 备注信息
 
-新建分支   
-===========
-
+Create New branch   
+==================
 
 .. code-block:: sh
 
     $ git branch  <new_branch_name> <commit_id>  
     $ git checkout -b  <new_branch_name> <commit_id>  
-
 
 Gitignore   
 ============
