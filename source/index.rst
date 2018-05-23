@@ -86,8 +86,10 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 
 .. code-block:: bash
     
-　  #　
-    wget -O /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo 
+    $ curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+    $ curl -o /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo 
+    $ sudo yum makecache
+
 
     # centos/fedora 安装epel扩展源 并更换为科大开源镜像
     $ sudo yum -y install epel-release
