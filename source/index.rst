@@ -45,6 +45,8 @@ Hello World
 短链接服务
     * https://st.im/ 
 
+* `chroot  <https://www.howtogeek.com/howto/linux/reset-your-ubuntu-password-easily-from-the-live-cd/>`_
+
 
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
 
