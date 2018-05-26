@@ -131,6 +131,11 @@ http://www.vagrantbox.es/
 
  * `vagrantmanager <http://vagrantmanager.com/>`_
 
+VirtualBox  
+============
+
+* `VirtualBox修改现有虚拟磁盘大小<https://blog.csdn.net/weiguang1017/article/details/52252448>`_
+
 
 参考
 ====
