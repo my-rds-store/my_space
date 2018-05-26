@@ -9,6 +9,8 @@ ZSH
 * `Oh My ZSH <http://ohmyz.sh/>`_
 
 
+* `超赞的Linux软件 <https://alim0x.gitbooks.io/awesome-linux-software-zh_cn/content/>`_
+
 ********
 Bash    
 ********
