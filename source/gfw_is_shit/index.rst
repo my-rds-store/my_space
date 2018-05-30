@@ -169,6 +169,35 @@ Client
 * https://www.8dlive.com/post/168.html
 * http://xinwen.eastday.com/a/170207195821936.html
     
+
+kcptun 加速
+============
+
+* `kcptun  <https://github.com/xtaci/kcptun>`_   
+
+* `Using shadowsocks and kcptun <http://litaotju.github.io/2017/05/14/Uwssing-shadowsocks-and-kcptun/>`_
+
+
++--------------+------------------------------+--------------------------+
+| 属性         |  客户端                      |  服务器                  |
++==============+==============================+==========================+
+| listener_port| 与shadowsocks交互的端口      |  对外的端口              |
++--------------+------------------------------+--------------------------+
+| target_ip    | 服务器的IP	                  |  本机                    |
++--------------+------------------------------+--------------------------+
+| target_port  | 服务器的端口（listen_port）  |  与shadowsocks交互的端口 |
++--------------+------------------------------+--------------------------+
+
+* `kcptun-android <https://github.com/shadowsocks/kcptun-android/releases>`_
+
+
+参考       
+-----------
+
+* `搬瓦工VPS/OPENVZ加速工具kcptun <https://www.cmsky.com/kcptun/>`_
+
+
+
 ****************************
 2. 神奇的SwitchyOmega             
 ****************************
