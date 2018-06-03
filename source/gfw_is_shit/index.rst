@@ -19,6 +19,25 @@ VPS厂商
 * `Vultr(中文网) <https://buy.shangyufeidi.com/vultr/?f=bad>`_
 * https://www.vultr.com
 
+
+`快速搭建 <https://hub.docker.com/r/mritd/shadowsocks/>`_ 
+========================================================================
+
+.. code-block:: sh
+
+    # server
+    $ sudo firewall-cmd --zone=public --add-port=8500/udp --permanent  # 开启服务端 端口
+    $ sudo docker run -d --restart=always --name ssserver -p 6443:6443 -p 8500:8500/udp mritd/shadowsocks \
+      -m "ss-server" -s "-s 0.0.0.0 -p 6443 -m aes-256-cfb -k test123 --fast-open -n 5 " \
+      -x -e "kcpserver" -k "-t 127.0.0.1:6443 -l :8500 -mode fast2"
+
+    # client
+    $ sudo docker run -dt --name ssclient -p 1080:1080 mritd/shadowsocks \
+      -m "ss-local" -s "-s 127.0.0.1 -p 8500 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k test123 --fast-open" \
+      -x -e "kcpclient" -k "-r $SSSERVER_IP:8500 -l :8500 -mode fast2"
+
+
+
 *************************
 1. 牛逼的shadowsocks          
 *************************
@@ -38,7 +57,7 @@ VPS厂商
     $ sudo pip install shadowsocks  -i https://pypi.mirrors.ustc.edu.cn/simple
 
 * `docker shadowsocks <https://hub.docker.com/r/mritd/shadowsocks/>`_
-* `kcptun  <https://www.cmsky.com/kcptun/>`_
+* `kcptun <https://www.cmsky.com/kcptun/>`_
 
 配置 shadowsocks
 ==================
@@ -171,7 +190,7 @@ Client
     
 
 kcptun 加速
-============
+==============
 
 * `kcptun  <https://github.com/xtaci/kcptun>`_   
 
