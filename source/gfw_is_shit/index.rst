@@ -23,6 +23,20 @@ VPS厂商
 `快速搭建 <https://hub.docker.com/r/mritd/shadowsocks/>`_ 
 ========================================================================
 
+
+.. code-block:: sh
+    $ curl -sSL https://get.docker.com/ | sh
+     
+    # server
+    $ sudo firewall-cmd --zone=public --add-port=8500/udp --permanent  # 开启服务端 端口
+
+    $ docker run -d --restart=always --name ssserver -p 6443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -m aes-256-cfb -k rootroot --fast-open"
+
+    # client
+    $ docker run -d --restart=always --name ssclient -p 1080:1080 mritd/shadowsocks \
+      -m "ss-local" -s "-s $SSSERVER_IP -p 6443 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k rootroot --fast-open" 
+
+
 .. code-block:: sh
 
     # server
