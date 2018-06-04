@@ -25,6 +25,7 @@ VPS厂商
 
 
 .. code-block:: sh
+
     $ curl -sSL https://get.docker.com/ | sh
      
     # server
@@ -35,7 +36,6 @@ VPS厂商
     # client
     $ docker run -d --restart=always --name ssclient -p 1080:1080 mritd/shadowsocks \
       -m "ss-local" -s "-s $SSSERVER_IP -p 6443 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k rootroot --fast-open" 
-
 
 .. code-block:: sh
 
