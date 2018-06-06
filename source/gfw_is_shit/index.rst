@@ -26,6 +26,10 @@ VPS厂商
 ========================================================================
 
 
+方案1（未加速）
+-----------------
+
+==================================
 .. code-block:: sh
 
     $ curl -sSL https://get.docker.com/ | sh
@@ -39,6 +43,9 @@ VPS厂商
     $ docker run -d --restart=always --name ssclient -p 1080:1080 mritd/shadowsocks \
       -m "ss-local" -s "-s $SSSERVER_IP -p 6443 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k rootroot --fast-open" 
 
+方案2 （kcptun 加速,24小时内 被封）
+------------------------------------
+
 .. code-block:: sh
 
     # server
@@ -51,6 +58,35 @@ VPS厂商
     $ sudo docker run -d --restart=always --name ssclient -p 1080:1080 mritd/shadowsocks \
       -m "ss-local" -s "-s 127.0.0.1 -p 8500 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k meiyoumima --fast-open" \
       -x -e "kcpclient" -k "-r $SSSERVER_IP:8500 -l :8500 -mode fast2"
+
+
+方案3  < Udp2raw-tunnel  <https://github.com/wangyu-/udp2raw-tunnel/blob/master/doc/kcptun_step_by_step.md>`_
+---------------------------------------------------------------------------------------------------------------------------
+
+.. code-block:: sh
+
+   # ssserver
+   docker run -d --restart=always --name ssserver -p 6443:6443 mritd/shadowsocks -s "-s 0.0.0.0 -p 6443 -m aes-256-cfb -k rootroot --fast-open"
+
+   # kcptun server 
+   ./server_linux_amd64 -t "0.0.0.0:6443" -l ":4000" -mode fast2  -mtu 1200
+
+   # hudp2raw server
+   ./udp2raw_amd64 -s -l 0.0.0.0:2096 -r 0.0.0.0:4000 -k "passwd:meiyoumima" --raw-mode faketcp -a
+
+
+   ####-------- G -- F -- W  -------####
+
+   # hudp2raw client
+   ./udp2raw_amd64 -c -r $SERVER_IP:2096 -l 0.0.0.0:4000 --raw-mode faketcp -a -k "passwd:meiyoumima"
+
+
+   # kcptun client 
+   ./client_linux_amd64  -r "0.0.0.0:4000" -l ":8388" -mode fast2 -mtu 1200
+    
+   # ssclient
+   sudo docker run -d  --name ssclient -p 1081:1080 mritd/shadowsocks -m "ss-local" -s "-s 192.168.2.3 -p 8388 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k rootroot --fast-open"
+
 
 *************************
 1. 牛逼的shadowsocks          
