@@ -2,6 +2,8 @@
 科学上网
 ##########
 
+
+
                           *一枝红杏出墙来!!!*
 
 .. image:: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1821475898,231081266&fm=27&gp=0.jpg
@@ -205,7 +207,6 @@ kcptun 加速
 ==============
 
 * `kcptun  <https://github.com/xtaci/kcptun>`_   
-
 * `Using shadowsocks and kcptun <http://litaotju.github.io/2017/05/14/Uwssing-shadowsocks-and-kcptun/>`_
 
 
@@ -214,10 +215,12 @@ kcptun 加速
 +==============+==============================+==========================+
 | listener_port| 与shadowsocks交互的端口      |  对外的端口              |
 +--------------+------------------------------+--------------------------+
-| target_ip    | 服务器的IP	                  |  本机                    |
+| target_ip    | 服务器的IP                   |  本机                    |
 +--------------+------------------------------+--------------------------+
 | target_port  | 服务器的端口（listen_port）  |  与shadowsocks交互的端口 |
 +--------------+------------------------------+--------------------------+
+
+-------
 
 * `kcptun-android <https://github.com/shadowsocks/kcptun-android/releases>`_
 

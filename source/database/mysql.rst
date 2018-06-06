@@ -1,13 +1,25 @@
 Mysql
 ================
 
-
-
 .. code-block:: bash
 
     $ sudo docker pull mariadb
 
     $ docker run --name some-mariadb -p 8306:3306 -e MYSQL_ROOT_PASSWORD=rootroot -d mariadb:latest
+
+    # For Sysvinit Systems
+    $ sudo  service mysql start|stop|restart|reload|status
+    # or
+    $ sudo  /etc/init.d/mysql start|stop|restart|reload|status
+
+    # For Systemd Systems #
+    $ sudo systemctl start|stop|restart|reload|status  mariadb.service
+    # or
+    $ sudo systemctl start|stop|restart|reload|status  mysql.service
+    # or
+    $ sudo systemctl start|stop|restart|reload|status  mariadb
+    # or
+    $ sudo systemctl start|stop|restart|reload|status  mysql
 
 
 select 查询，中文显示乱码
@@ -236,4 +248,15 @@ select 查询，中文显示乱码
 .. code-block:: sql
 
     DELETE FROM table_name WHERE id=2;
+
+数据库恢复
+============
+
+.. code-block:: sh
+
+    $ sudo systemctl stop  mariadb.service
+    # 替换 /val/lib/mysql 目录
+    $ sudo cp -r /val/lib/mysql  /val/lib/mysql.bak
+    $ sudo cp -r new_mysql  /val/lib/mysql
+    $ sudo chown -R mysql:mysql /val/lib/mysql 
 
