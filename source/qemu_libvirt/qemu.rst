@@ -1,6 +1,7 @@
 qemu命令总结
 ===================
 
+* https://medium.com/@calerogers/gpu-virtualization-with-kvm-qemu-63ca98a6a172
 
 .. image:: ./Qemu-logo-small.png
    :scale: 60%
