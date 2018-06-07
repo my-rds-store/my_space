@@ -29,7 +29,6 @@ VPS厂商
 方案1（未加速）
 -----------------
 
-==================================
 .. code-block:: sh
 
     $ curl -sSL https://get.docker.com/ | sh
@@ -44,7 +43,7 @@ VPS厂商
       -m "ss-local" -s "-s $SSSERVER_IP -p 6443 -b 0.0.0.0 -l 1080 -m aes-256-cfb -k rootroot --fast-open" 
 
 方案2 （kcptun 加速,24小时内 被封）
-------------------------------------
+--------------------------------------
 
 .. code-block:: sh
 
@@ -60,8 +59,8 @@ VPS厂商
       -x -e "kcpclient" -k "-r $SSSERVER_IP:8500 -l :8500 -mode fast2"
 
 
-方案3  < Udp2raw-tunnel  <https://github.com/wangyu-/udp2raw-tunnel/blob/master/doc/kcptun_step_by_step.md>`_
----------------------------------------------------------------------------------------------------------------------------
+方案3  `Udp2raw-tunnel <https://github.com/wangyu-/udp2raw-tunnel/blob/master/doc/kcptun_step_by_step.md>`_
+----------------------------------------------------------------------------------------------------------------
 
 .. code-block:: sh
 
