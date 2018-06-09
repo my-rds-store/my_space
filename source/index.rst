@@ -78,6 +78,15 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
     #sudo apt-get source vlc
 
 
+##################
+镜像下载地址
+##################
+
+* `Ubuntu  <http://cdimage.ubuntu.com/releases/>`_
+* `CentOS  <http://isoredirect.centos.org/centos/7/isos/x86_64/>`_
+* `Fedora  </>`_
+
+
 ************
 源列表
 ************
