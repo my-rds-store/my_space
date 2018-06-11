@@ -97,7 +97,15 @@ Vagrantfile
     #  网络
     # config.vm.network "public_network", ip: "192.168.2.176" , bridge: "en0"
 
+************
+Init 
+************
 
+.. code-block:: sh
+
+    vagrant init ubuntu/trusty64
+    vagrant init my-box https://boxes.company.com/my.box
+    vagrant init my-box ../mybox_storage/my.box
 
 ********************
 about mc_termianl   

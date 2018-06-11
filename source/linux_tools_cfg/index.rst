@@ -348,8 +348,11 @@ nload
 
     $ apt-get install nload 
 
-lm-sensors (CPU  温度)
+lm sensors
 ------------------------------
+
+*  `lm-sensors <https://wiki.archlinux.org/index.php/Lm_sensors_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>`_
+
 
 .. code-block:: sh
      
