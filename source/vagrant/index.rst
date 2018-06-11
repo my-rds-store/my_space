@@ -59,12 +59,21 @@ Vagrant cmd
 
     # 基于VirtualBox虚拟机打包 box
 
+provison
+============
 
 **provison并不会每次都执行，只有在这三种情况下provision才会运行：**
 
-* 首次执行vagrant up
-* 执行vagrant provision
-* 执行vagrant reload --provision
+.. code-block:: sh
+
+   # 1. 首次执行vagrant up
+   $  vagrant up
+
+   # 2. 执行
+   $ vagrant provision
+
+   # 3. 执行 
+   $ vagrant reload --provision
 
 *************
 Vagrantfile  
