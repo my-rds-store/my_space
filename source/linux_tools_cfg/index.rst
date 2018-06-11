@@ -348,6 +348,21 @@ nload
 
     $ apt-get install nload 
 
+lm-sensors (CPU  温度)
+------------------------------
+
+.. code-block:: sh
+     
+    $ sudo apt-get install lm-sensors
+    $ sudo yum     install lm_sensors
+
+    #  CPU  温度
+    $ sensors
+
+
+
+
+
 .. raw:: html
 
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=413961293&auto=1&height=66"></iframe>
