@@ -236,8 +236,11 @@ Synergy 一套键鼠同时控制多台电脑
 
 -----
 
-Centos 7 网络配置
+网络配置
 =========================
+
+CentOS 网络
+--------------
 
 `1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
    
@@ -253,7 +256,30 @@ Centos 7 网络配置
     DNS1=114.114.114.114
     DNS2=180.76.76.76
 
-      
+ubuntu 网络
+---------------
+    
+:: 
+
+    auto lo 
+    iface lo inet loopback 
+
+    auto enp1s0
+    iface enp1s0 inet manual 
+
+    auto br0
+    iface br0 inet dhcp
+
+    bridge_ports enp1s0 
+    bridge_stp off   
+    bridge_fd 0      
+    bridge_maxwait 0 
+    bridge_maxage 12
+
+
+防火墙
+---------------
+
 * `Centos防火墙设置与端口开放的方法 <https://blog.csdn.net/u011846257/article/details/54707864>`_
   
   .. code-block:: sh
