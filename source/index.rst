@@ -253,6 +253,7 @@ bittorrent文件编辑工具
    apache/index 
    openbox/index
    linux_tools_cfg/index
+   x11/index
    install_cd_customization/index
    gfw_is_shit/index
    other/index

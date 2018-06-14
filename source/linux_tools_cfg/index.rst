@@ -296,6 +296,8 @@ ubuntu 网络
 防火墙
 ---------------
 
+* `Iptables与Firewalld防火墙 <https://www.linuxprobe.com/chapter-08.html>`_
+
 * `Centos防火墙设置与端口开放的方法 <https://blog.csdn.net/u011846257/article/details/54707864>`_
   
   .. code-block:: sh
