@@ -239,6 +239,22 @@ Synergy 一套键鼠同时控制多台电脑
 网络配置
 =========================
 
+配置Mac 地址 
+--------------
+
+* https://en.wikibooks.org/wiki/Changing_Your_MAC_Address/Linux
+  
+.. code-block:: sh
+
+  /etc/init.d/networking stop
+  ifconfig eth0 hw ether 02:01:02:03:04:08
+  /etc/init.d/networking start
+
+  /etc/init.d/network stop
+  ip link set eth0 address 02:01:02:03:04:08
+  /etc/init.d/network start
+
+
 CentOS 网络
 --------------
 
