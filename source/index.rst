@@ -239,6 +239,7 @@ bittorrent文件编辑工具
    cpp/index
    nginx/index
    download_tools/index
+   bittorrent/index
    shell/shell
    sphinx/index
    pycharm/remote_debug
