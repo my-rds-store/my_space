@@ -67,9 +67,37 @@ Install
 
 .. code-block:: sh
 
+    sudo mkdir /etc/systemd/system/getty@tty1.service.d
+    tee /etc/systemd/system/getty@tty1.service.d/override.conf  <<- 'EOF'
+    [Service]
+    ExecStart=
+    ExecStart=-/sbin/agetty --noissue --autologin 帳戶名稱 %I $TERM
+    Type=idle
+    EOF
+
+.. code-block:: sh
+
     # 登陆自启动
     tee  /root/.bash_profile <<-'EOF'
     if [ -z "$DISPLAY" ] && [ $(tty) == /dev/tty1 ]; then
         xinit  # or start x11
+        exec startx
+        exit 1
     fi
     EOF
+
+.. code-block:: sh
+
+    tee /root/.xinitrc <<-'EOF'
+    #!/bin/sh
+
+    #  $Home/.xinitrc
+    # /etc/X11/xinit/xinitrc
+
+    exec openbox-session
+    EOF
+
+    tee  .config/openbox/autostart.sh  <<-'EOF'
+    # start  client
+    EOF
+
