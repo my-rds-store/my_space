@@ -58,3 +58,18 @@ Install
     # feh --bg-center ~/Wallpapers/paperart5.jpg
     EOF
 
+
+**************
+自 动 登 陆   
+**************
+
+* `Ubuntu Server 16.04 免密碼自動登入  <https://justhodl.blogspot.com/2018/03/ubuntu-server-1604-auto-login-non-gui.html>`_
+
+.. code-block:: sh
+
+    # 登陆自启动
+    tee  /root/.bash_profile <<-'EOF'
+    if [ -z "$DISPLAY" ] && [ $(tty) == /dev/tty1 ]; then
+        xinit  # or start x11
+    fi
+    EOF
