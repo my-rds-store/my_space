@@ -158,6 +158,16 @@ Ubuntu 源列表
     # 3. 如果我们设置了环境变量APT_CONFIG，那么APT工具集将使用APT_CONFIG指向的配置文件。
     $ export APT_CONFIG=~/apt_proxy.conf
     $ sudo apt-get update
+
+
+
+.. code-block:: sh
+
+    apt-get download  <your_package_here> #  Download the binary package into the current directory
+    ####################
+    apt-get clean
+    apt-get --download-only install <your_package_here>
+    cp /var/cache/apt/archives/*.deb <your_directory_here>
     
 ************
 待研究
