@@ -243,7 +243,7 @@ Gitlab_
     [false]: true
 
     Whether to lock Runner to current project [true/false]:
-    [true]: true
+    [true]: false
 
     Please enter the executor: ssh, docker+machine, docker-ssh+machine, kubernetes, docker, parallels, virtualbox, docker-ssh, shell:
     docker
