@@ -31,6 +31,7 @@ Mac
     $ pv -petr ubuntu-11.10-desktop-i386.iso | sudo dd of=/dev/disk2 bs=1m` 
     
     # For Ubuntu
+    $ suod apt-get install pv
     $ sudo tee /usr/local/bin/pvdd <<-'EOF'
     pv -petr $1 | sudo dd of=$2 bs=4096
     EOF
