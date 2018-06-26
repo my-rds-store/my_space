@@ -254,6 +254,19 @@ Synergy 一套键鼠同时控制多台电脑
   ip link set eth0 address 02:01:02:03:04:08
   /etc/init.d/network start
 
+Bringing interfaces up/down 
+----------------------------
+
+.. code-block:: sh
+
+    # ip 
+    $ sudo  ip link set dev <interface> up
+    $ sudo  ip l    s   dev <interface> down
+    
+    # ifconfig 
+    $ sudo  /sbin/ifconfig <interface> up
+    $ sudo  /sbin/ifconfig <interface> down
+
 
 CentOS 网络
 --------------

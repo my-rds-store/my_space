@@ -37,6 +37,11 @@ Mac
     EOF
     $ sudo chmod a+x /usr/local/bin/pvdd
 
+
+    # or 
+    $ sudo dd if=ubuntu.iso of=/dev/sdb  bs=4M 
+    $ watch  -n 5 "sudo pkill -USR1 ^dd$"
+
 .. code-block:: sh
 
     $ open -a appname args...
