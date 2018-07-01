@@ -116,6 +116,28 @@ Init
     vagrant init my-box https://boxes.company.com/my.box
     vagrant init my-box ../mybox_storage/my.box
 
+
+************
+set proxy   
+************
+
+
+.. code-block:: sh
+
+    # Install proxyconf:
+    $ vagrant plugin install vagrant-proxyconf
+
+.. code-block:: sh
+
+    #Configure your Vagrantfile:
+    config.proxy.http     = "http://yourproxy:8080"
+    config.proxy.https    = "http://yourproxy:8080"
+    config.proxy.no_proxy = "localhost,127.0.0.1"
+
+
+
+
+
 ********************
 about mc_termianl   
 ********************
