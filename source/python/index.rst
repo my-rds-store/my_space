@@ -74,3 +74,10 @@ Book
     # 去除扩展名
     print os.path.splitext(filename)[0]
 
+    # 打印方法名
+    import inspect
+    import sys
+    for  method in  inspect.getmembers(sys.path):
+        print method
+
+
