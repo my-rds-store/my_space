@@ -58,6 +58,10 @@ Book
     t.run()
 
 
+
+* `python装饰器详解 <https://blog.csdn.net/xiangxianghehe/article/details/77170585>`_
+
+
 ----
 
 .. code-block:: python
