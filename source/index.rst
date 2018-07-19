@@ -254,6 +254,7 @@ bittorrent文件编辑工具
    bittorrent/index
    shell/shell
    sphinx/index
+   latex/index
    pycharm/remote_debug
    docker/index
    vagrant/index
