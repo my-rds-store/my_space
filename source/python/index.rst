@@ -9,18 +9,21 @@ python 学习
 
 * `在Linux中使用Python模拟键盘按键  <https://blog.csdn.net/zhouy1989/article/details/13997507>`_
 
-------
 
+************
 打包
---------------
+************
 
 * `如何打包你的Python代码 <https://python-packaging-zh.readthedocs.io/zh_CN/latest/>`_
 
 * `Pyinstaller使用  <https://www.jianshu.com/p/cc76099bbe04>`_
 * `Using PyInstaller <http://pyinstaller.readthedocs.io/en/stable/usage.html>`_
 
-Book
---------------
+*******
+Book   
+*******
+
+
 
 * `python3-cookbook <http://python3-cookbook.readthedocs.io/zh_CN/latest/>`_
 * `流畅的Python 中文PDF <http://www.linuxidc.com/Linux/2017-06/144466.htm>`_
@@ -31,8 +34,9 @@ Book
 * `Django 教程 <https://code.ziqiangxuetang.com/django/django-tutorial.html>`_
 
 
-好用的python库
---------------
+****************
+好用的python库  
+****************
 
 * `lxml - XML and HTML with Python <http://lxml.de/>`_
 
@@ -85,5 +89,29 @@ Book
     import sys
     for  method in  inspect.getmembers(sys.path):
         print method
+
+
+************************************
+tty终端中显示和输入中文
+************************************
+
+
+* https://blog.csdn.net/maybe_frank/article/details/53371201
+* https://fooyou.github.io/document/2015/11/30/fbterm-display-and-input-Chinese-in-tty.html
+
+.. code-block:: sh
+
+   $ sudo apt-get install fbterm
+   $ sudo fbterm
+
+
+
+
+
+*******
+其他   
+*******
+
+* `python全栈学习路线-查询笔记 <https://www.cnblogs.com/eric_yi/p/8483079.html>`_
 
 
