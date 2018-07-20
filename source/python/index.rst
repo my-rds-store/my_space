@@ -104,9 +104,10 @@ tty终端中显示和输入中文
    $ sudo apt-get install fbterm
    $ sudo fbterm
 
+------
 
-
-
+* `Urwid <http://urwid.org/>`
+* `npyscreen  <https://npyscreen.readthedocs.io/index.html>`_
 
 *******
 其他   

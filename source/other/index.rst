@@ -222,6 +222,8 @@ CenterOS
 amixer
 ---------
 
+* `Ubuntu14.04使能root用户音频系统 <http://blog.163.com/ljf_gzhu/blog/static/13155344020156513446281/>`_
+
 `amixer的用法(音频编码音量控制) <http://blog.sina.com.cn/s/blog_8795b0970101ig2p.html>`_
 
 #. 查看:
