@@ -93,6 +93,8 @@ VPS厂商
 
 * `GitHub shadowsocks <https://github.com/ziggear/shadowsocks>`_
 
+* `brook <https://github.com/txthinking/brook>`_
+
 安装 shadowsocks
 ==================
 

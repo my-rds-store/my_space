@@ -53,7 +53,9 @@ git config
 
 .. code-block:: sh
 
-    $ git rm --cached path                 # 撤销add
+    $ git rm    --cached path              # 撤销add 文件
+    $ git rm -r --cached path              # 撤销add 目录
+
     $ git checkout <commit_id> <path>      # 回退单个文件到某一次提交
     $ git checkout <branc_name> -- <path>  # checkout file from a brach
 
