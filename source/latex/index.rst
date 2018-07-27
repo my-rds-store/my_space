@@ -52,7 +52,34 @@ Learning and  Book
 * `LaTeX | 为学术论文排版而生 <https://www.jianshu.com/p/9c5482a31c5b>`_
 * `CTEX <http://www.ctex.org/HomePage>`_
 
+**************************
+LaTeX/Source Code Listings
+**************************
 
+* `LaTeX/Source Code Listings <https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings>`_
+
+.. code-block:: python
+
+    #!/usr/bin/env python
+    #coding=utf-8
+    #file name:  source_filename.py
+
+    improt os
+
+    def func()
+        print "hello world"
+
+
+.. code-block:: tex
+
+    \documentclass[UTF8]{ctexart}
+
+
+    \usepackage{listings}
+
+    \begin{document}
+            \lstinputlisting[language=Python]{source_filename.py}
+    \end{document}
 
 
 
