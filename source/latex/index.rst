@@ -53,6 +53,7 @@ Learning and  Book
 * `LaTeX | 为学术论文排版而生 <https://www.jianshu.com/p/9c5482a31c5b>`_
 * `CTEX <http://www.ctex.org/HomePage>`_
 * `LaTex help <http://www.emerson.emory.edu/services/latex/latex_toc.html>`_
+* `LATEX2e 插图指南 <http://www.ctex.org/documents/latex/graphics/graphics.html>`_
 * `WIKIBOOKS LaTex <https://en.wikibooks.org/wiki/LaTeX>`_
 
 *********************
