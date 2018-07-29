@@ -47,12 +47,19 @@ Learning and  Book
 
 
 * `LaTex新人教程  <http://www.latexstudio.net/archives/9377>`_
+* `LaTex Tutorial Main <http://www1.cmc.edu/pages/faculty/aaksoy/latex/latextutorialmain.html>`_
 
 * `LaTex 入门 - [ 云盘 密码9652]  <https://pan.baidu.com/s/1bq7Dv9hvNwCpmag1GaZw1A>`_
 * `LaTeX | 为学术论文排版而生 <https://www.jianshu.com/p/9c5482a31c5b>`_
 * `CTEX <http://www.ctex.org/HomePage>`_
 * `LaTex help <http://www.emerson.emory.edu/services/latex/latex_toc.html>`_
 * `WIKIBOOKS LaTex <https://en.wikibooks.org/wiki/LaTeX>`_
+
+*********************
+LaTex templates
+*********************
+
+* `latextemplates <http://www.latextemplates.com/>`_
 
 **************************
 LaTeX/Source Code Listings
