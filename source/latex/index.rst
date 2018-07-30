@@ -45,6 +45,8 @@ Quick start (ubuntu)
 Learning and  Book   
 *********************
 
+* `texblog  <https://texblog.org/>`_
+  * `Automated sub-figure generation using a loop in LaTeX  <https://texblog.org/2015/10/09/automated-sub-figure-generation-using-a-loop-in-latex/>`_
 
 * `LaTex新人教程  <http://www.latexstudio.net/archives/9377>`_
 * `LaTex Tutorial Main <http://www1.cmc.edu/pages/faculty/aaksoy/latex/latextutorialmain.html>`_
