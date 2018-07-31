@@ -55,6 +55,7 @@ Quick start (ubuntu)
 
 
 .. code-block:: sh
+
     # 手册
     $ texdoc texdoc     # texdoc 
 
@@ -106,8 +107,8 @@ Learning and  Book
      
 -------------
 
------
-https://www.ubuntupit.com/best-latex-editor-top-33-reviewed-for-linux-nerds/
+* https://www.ubuntupit.com/best-latex-editor-top-33-reviewed-for-linux-nerds/
+
 -----
 
 * `TeXnicle <http://www.bobsoft-mac.de/texnicle/texnicle.html>`_
