@@ -18,6 +18,15 @@ INSTALL
     $ sudo apt-get install texmaker 
     $ sudo apt-get install texstudio
 
+    ############
+    #  mac 
+    ############
+
+    $ brew cask install mactex`
+
+    # Install Edit 
+    $ brew cask install texstudio
+
 *******************************************
 Quick start (ubuntu)   
 *******************************************
