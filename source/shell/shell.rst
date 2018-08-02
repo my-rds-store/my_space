@@ -477,6 +477,8 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 硬盘分区格式化与挂载
 ----------------------
 
+* 添加磁盘分区 
+
 .. code::
 
     root@localhost:~# fdisk /dev/vdb 
@@ -533,6 +535,41 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
     UUID=fd05da95-d9f5-4a3e-8cf3-41c9dff1f5b8  /home    ext4  defaults   0  0
     # or
     /dev/vdb1  /home    ext4  defaults   0  0
+
+
+* `Linux LVM逻辑卷配置过程详解（创建，增加，减少，删除，卸载)  <http://blog.51cto.com/dreamfire/1084729>`_
+
+
+.. code-block:: sh
+    
+    # lvm 减少逻辑卷的空间,释放给其他逻辑卷使用
+
+    ###############################
+    # 1. 减少逻辑卷ssd-cdata的空间
+    ###############################
+    umount /dev/mapper/ssd-cdata           # 卸载 ssd-cdata
+    
+    e2fsck -f /dev/mapper/ssd-cdata        # 检车逻辑卷上　剩余空间
+    
+    resize2fs /dev/mapper/ssd-cdata 10G    # 将文件系统减少到 10G
+    
+    lvreduce -L 10G /dev/mapper/ssd-cdata  # 将逻辑卷减少到 10G
+    　
+    mount /dev/mapper/ssd-cdata /cdata     # 挂载重新使用
+
+
+    ###############################
+    #  2. 增加逻辑卷ssd-data的空间
+    ###############################
+    
+    pvscan           # 查看剩余,未分配空间
+    
+    lvextend -L +13.90G  /dev/mapper/ssd-data   # 逻辑卷增加10G
+
+    lvs               # 查看
+
+    resize2fs /dev/mapper/ssd-data  # 同步文件系统
+
 
 .. code-block:: sh
 

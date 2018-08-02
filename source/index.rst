@@ -31,6 +31,25 @@ Hello World
         与箭、火焰和花丛 
         以及寥廓长夜、寰宇浑然一体 
 
+
+*************
+open edx     
+*************
+
+*  https://shuer.link/#/discover
+
+* `学堂在线 <http://www.xuetangx.com>`_
+    * username : jiang_xumin@massclouds.com
+
+* `中国大学MOOC <https://www.icourse163.org/>`_
+    * username :jiang_xumin@massclouds.com
+
+* `edx <https://www.edx.org/>`_
+    * login : google emal 
+
+* `MOOC 网站：Coursera、Udacity、edX，哪个更适合中国人？你有何经验分享？ <https://www.zhihu.com/question/21095181>`_
+
+
 编程类开放书籍荟萃
     * https://linuxstory.org/free-chinese-programming-books/
     * https://www.zhihu.com/question/38836382
