@@ -421,7 +421,10 @@ lm sensors
     #  CPU  温度
     $ sensors
 
+`tmate <https://tmate.io/>`_
+--------------------------------
 
+* https://linux.cn/article-9096-1.html
 
 
 
