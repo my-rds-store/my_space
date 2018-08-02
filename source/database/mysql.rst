@@ -260,3 +260,8 @@ select 查询，中文显示乱码
     $ sudo cp -r new_mysql  /val/lib/mysql
     $ sudo chown -R mysql:mysql /val/lib/mysql 
 
+修改最大连接数 
+===============
+
+* `CentOS7.2 调整mysql数据库最大连接数 <https://blog.csdn.net/hnhuangyiyang/article/details/51132141>`_
+

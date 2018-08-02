@@ -157,6 +157,37 @@ git tag
 
 
 ************
+Send Mail   
+************
+
+
+.. code-block:: sh
+
+    $ sudo apt-get install -y git-email  
+    
+    # config 
+    $ git config --local user.email "jiang_xmin@massclouds.com"
+    $ git config --local user.name  "jiang_xmin"
+    $ git config --local sendemail.smtpserver     "smtp.qiye.163.com"
+    $ git config --local sendemail.smtpencryption "tls"
+    $ git config --local sendemail.smtpuser        "jiang_xmin@massclouds.com"
+    $ git config --local sendemail.smtpserverport "25"
+    # git config --local sendemail.smtppass       'passwd'
+
+    $ git config --local sendemail.annotate     true
+    $ git config --local sendemail.chainreplyto true
+    $ git config --local sendemail.confirm      always 
+    $ git config --local sendemail.to jxm_zn@163.com  # sendo to 
+
+    # send 
+    $ git send-email --no-chain-reply-to --annotate --confirm=always --to=jxm_zn@163.com  master -1 
+
+
+
+
+
+
+************
 Gitlab_
 ************
 
