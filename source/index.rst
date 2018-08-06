@@ -276,6 +276,7 @@ bittorrent文件编辑工具
    latex/index
    pycharm/remote_debug
    docker/index
+   kubernetes/index
    vagrant/index
    database/mysql
    database/sqlite

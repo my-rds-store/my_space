@@ -75,18 +75,11 @@ Docker Hub 与阿里云
     $ docker info
 
 
-KUBERNETES
-------------------
-
-    * https://www.kubernetes.org.cn/docs
-
-
 ***********
 常用镜像   
 ***********
 
 * `nimmis/alpine-apache <https://hub.docker.com/r/nimmis/alpine-apache/>`_
-
 
 **********
 常用命令

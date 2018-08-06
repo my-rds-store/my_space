@@ -1,12 +1,12 @@
-#######
+##############
 Vagrant
-#######
+##############
 
-************
-INSTALL_
-************
+************************
+Install Virtualbox_
+************************
 
-.. _INSTALL: https://www.virtualbox.org/wiki/Linux_Downloads
+.. _Virtualbox: https://www.virtualbox.org/wiki/Linux_Downloads
 
 * `install virtual from from command line <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
 
@@ -133,9 +133,6 @@ set proxy
     config.proxy.http     = "http://yourproxy:8080"
     config.proxy.https    = "http://yourproxy:8080"
     config.proxy.no_proxy = "localhost,127.0.0.1"
-
-
-
 
 
 ********************
