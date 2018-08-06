@@ -7,7 +7,9 @@ Docker Hub 与阿里云
 **********************
 
 * `Docker Hub <https://hub.docker.com/explore/>`_
+* `QUAY <https://quay.io>`_
 * `阿里云 <https://dev.aliyun.com/search.html>`_
+
 
 .. code-block:: sh
 

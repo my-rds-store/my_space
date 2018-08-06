@@ -260,6 +260,7 @@ bittorrent文件编辑工具
    :caption: Contents:
 
    qemu_libvirt/qemu
+   openstack/index
    vim/vim
    mac/index
    git/index
