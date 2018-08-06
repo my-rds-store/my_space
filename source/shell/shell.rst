@@ -1,5 +1,5 @@
 ##############
-Shell 实用技巧
+Shell 
 ##############
 
 *******
@@ -596,8 +596,9 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 Ubuntu 修改 启动时间等待  
 **************************
 
-
 .. code-block:: sh
 
     # Ubuntu14.04
+    
+    sed -i 's/^.*GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=0/' /etc/default/grub
     sed -i 's/timeout=10/timeout=0/' /etc/grub.d/30_os-prober
