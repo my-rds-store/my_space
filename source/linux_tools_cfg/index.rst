@@ -407,7 +407,7 @@ nload
 
     $ apt-get install nload 
 
-lm sensors
+查看硬件温度
 ------------------------------
 
 *  `lm-sensors <https://wiki.archlinux.org/index.php/Lm_sensors_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>`_
@@ -419,7 +419,19 @@ lm sensors
     $ sudo yum     install lm_sensors
 
     #  CPU  温度
+    $ sensors-detect
     $ sensors
+
+    #  硬盘温度
+    $ sudo apt-get install hddtemp
+    $ sudo hddtemp /dev/sda1
+
+    #  cpu 使用
+    $ sudo apt-get install sysstat
+    $ mpstat
+    $ vmstat
+
+    $ watch -d -n 1 'echo free;mpstat;echo;free -m;echo temp; sudo hddtemp /dev/sd? ;echo; sensors'
 
 `tmate <https://tmate.io/>`_
 --------------------------------
