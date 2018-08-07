@@ -59,6 +59,22 @@ Vagrant cmd
 
     # 基于VirtualBox虚拟机打包 box
 
+****************************************************
+Virtualbox enable hardware virtualization technology
+****************************************************
+
+
+.. code-block:: sh
+
+    $ vboxmanage list vms
+    "bionic-server-cloudimg-amd64" {39f472bf-1d9c-4e6a-a11f-fbfccb2f3171}
+
+    # 修改
+    $ vboxmanage  modifyvm  bionic-server-cloudimg-amd64 --hwvirtex on
+    $ vboxmanage  modifyvm  bionic-server-cloudimg-amd64 --hwvirtex on
+    # 查看
+    $ vboxmanage showvminfo bionic-server-cloudimg-amd64 |grep -i hardw 
+
 provison
 ============
 
@@ -98,6 +114,10 @@ Vagrantfile
       # Display the VirtualBox GUI when booting the machine
       vb.gui = true
       vb.name = "vagrent_ubuntu14"
+
+      # enable hardware virtualization technology
+      #vb.customize ["modifyvm", :id, "--hwvirtex", "on"]  
+
       # Customize the amount of memory on the VM:
       vb.memory = "1024"
       vb.cpus = 4
@@ -117,10 +137,31 @@ Init
     vagrant init my-box ../mybox_storage/my.box
 
 
+    vagrant box add --name bionic-server-cloudimg-amd64  https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+
+
+Base box download
+==================
+
+* `Ubuntu cloud <https://cloud-images.ubuntu.com/>`_
+    * https://mirrors.ustc.edu.cn/ubuntu-cloud-images/
+    * https://mirrors.ustc.edu.cn/ubuntu-cloud-images/server/server/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+    * https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+
+* `Centos cloud <https://cloud.centos.org/centos/7/vagrant/x86_64/images/>`_
+    * https://mirrors.ustc.edu.cn/centos-cloud
+    * https://mirrors.ustc.edu.cn/centos-cloud/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1805_01.VirtualBox.box
+
+* `Fedora cloud <https://alt.fedoraproject.org/cloud/>`_
+    * http://mirrors.163.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+    * https://mirrors.ustc.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+    * https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+    * https://mirrors.aliyun.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+    * https://mirrors.shu.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+
 ************
 set proxy   
 ************
-
 
 .. code-block:: sh
 
