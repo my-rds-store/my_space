@@ -31,4 +31,5 @@ KUBERNETES
 
 * `114. 学习 Kubernetes 的 Why 和 How  <https://blog.csdn.net/CloudMan6/article/details/78954441>`_
 * `115. 五秒创建 k8s 集群 <https://blog.csdn.net/cloudman6/article/details/78973949>`_
+* `116. k8s 核心功能 <https://blog.csdn.net/cloudman6/article/details/78997613>`_
 
