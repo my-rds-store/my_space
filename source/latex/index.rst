@@ -1,5 +1,5 @@
 ########
-LaTex   
+LaTeX   
 ########
 
 ***********
@@ -27,6 +27,7 @@ INSTALL
     # Install Edit 
     $ brew cask install texstudio
 
+
 *******************************************
 Quick start (ubuntu)   
 *******************************************
@@ -49,39 +50,6 @@ Quick start (ubuntu)
     $ xelatex text.tex  # 编译 ==> pdf
     $ evince text.pdf   # 查看
 
-*********************
-常用命令   
-*********************
-
-
-.. code-block:: sh
-
-    # 手册
-    $ texdoc texdoc     # texdoc 
-
-    $ texdoc ctex       # CTEX 宏集手册
-    $ texdoc lshort-zh  # 一份不太简短的 L A TEX 2
-    $ texdoc graphic    # 图片
-    $ texdoc longtable  # 长表格宏包
-    $ texdoc tabu       # 综合表格宏包
- 
-*********************
-Learning and  Book   
-*********************
-
-* `Mac LaTex 实战 <https://toutiao.io/posts/diwaz3/preview>`_
-
-* `texblog  <https://texblog.org/>`_
-    * `Automated sub-figure generation using a loop in LaTeX  <https://texblog.org/2015/10/09/automated-sub-figure-generation-using-a-loop-in-latex/>`_
-
-* `LaTex Tutorial Main <http://www1.cmc.edu/pages/faculty/aaksoy/latex/latextutorialmain.html>`_
-
-* `LaTex 入门 - [ 云盘 密码9652]  <https://pan.baidu.com/s/1bq7Dv9hvNwCpmag1GaZw1A>`_
-* `LaTeX | 为学术论文排版而生 <https://www.jianshu.com/p/9c5482a31c5b>`_
-* `CTEX <http://www.ctex.org/HomePage>`_
-* `LaTex help <http://www.emerson.emory.edu/services/latex/latex_toc.html>`_
-* `LATEX2e 插图指南 <http://www.ctex.org/documents/latex/graphics/graphics.html>`_
-* `WIKIBOOKS LaTex <https://en.wikibooks.org/wiki/LaTeX>`_
 
 **********
 编辑器    
@@ -116,30 +84,6 @@ Learning and  Book
 * texpad
 * texmaker
 
-----------------
-
-**************
-屏幕显示按键  
-**************
-
-
-* `keycastr - keycast on mac  <https://github.com/keycastr/keycastr>`_
-* `screenkey <https://www.thregr.org/~wavexx/software/screenkey/>`_
-    
-    .. code-block:: sh
-    
-        $ sudo apt-get install screenkey 
-        $ screenkey --show-settings 
-        $ screenkey -t 0.5 --multiline
-
-* `KeyCastOW – keycast on windows <http://brookhong.github.io/2014/04/28/keycast-on-windows.html>`_
-
-
-*********************
-LaTex templates
-*********************
-
-* `latextemplates <http://www.latextemplates.com/>`_
 
 **************************
 LaTeX/Source Code Listings
@@ -171,4 +115,93 @@ LaTeX/Source Code Listings
     \end{document}
 
 
+**********
+关于字体  
+**********
+
+* `fonts.conf 中文手册 <http://www.jinbuguo.com/gui/fonts.conf.html>`_
+* `Linux字体美化实战(Fontconfig配置) <http://www.jinbuguo.com/gui/linux_fontconfig.html>`_
+
+------
+
+* `Ubuntu安装adobe字体 <https://blog.csdn.net/yixian918/article/details/51462275>`_
+
+  
+  .. code-block:: sh
+
+    $ git clone --depth 1  https://github.com/dolbydu/font.git adobe-fonts
+    $ sudo mkdir -p   /usr/share/fonts/adobe
+    $ sudo cp -rvf adobe-fonts/* /usr/share/fonts/adobe/
+
+    # 生成字体信息
+    $ sudo mkfontscale
+    $ sudo mkfontdir
+    $ sudo fc-cache -f -v
+
+    # 查看
+    $ fc-list :lang=zh-cn
+
+
+*  `思源字体 <https://github.com/adobe-fonts/source-han-sans>`_
+
+
+************************
+deeplearningbook
+************************
+
+
+* `deeplearningbook 英文版 <http://www.deeplearningbook.org/>`_
+
+* `deeplearningbook 中文版 <https://github.com/exacity/deeplearningbook-chinese.git>`_
+
+* `deeplearningbook 读书笔记 (for Makedown) <https://github.com/exacity/simplified-deeplearning.git>`_
+
+
+************
+学习文档    
+************
+
+离线文档
+============
+
+.. code-block:: sh
+
+    # 手册
+    $ texdoc texdoc     # texdoc 
+
+    $ texdoc ctex       # CTEX 宏集手册
+    $ texdoc lshort-zh  # 一份不太简短的 L A TEX 2
+    $ texdoc graphic    # 图片
+    $ texdoc longtable  # 长表格宏包
+    $ texdoc tabu       # 综合表格宏包
+
+在线文档    
+===============
+
+* `LaTeX文档-CTEX <http://www.ctex.org/OnlineDocuments>`_
+
+Learning and  Book   
+=====================
+
+* `Mac LaTex 实战 <https://toutiao.io/posts/diwaz3/preview>`_
+
+* `texblog  <https://texblog.org/>`_
+    * `Automated sub-figure generation using a loop in LaTeX  <https://texblog.org/2015/10/09/automated-sub-figure-generation-using-a-loop-in-latex/>`_
+
+* `LaTex Tutorial Main <http://www1.cmc.edu/pages/faculty/aaksoy/latex/latextutorialmain.html>`_
+
+* `LaTex 入门 - [ 云盘 密码9652]  <https://pan.baidu.com/s/1bq7Dv9hvNwCpmag1GaZw1A>`_
+* `LaTeX | 为学术论文排版而生 <https://www.jianshu.com/p/9c5482a31c5b>`_
+* `CTEX <http://www.ctex.org/HomePage>`_
+* `LaTex help <http://www.emerson.emory.edu/services/latex/latex_toc.html>`_
+* `LATEX2e 插图指南 <http://www.ctex.org/documents/latex/graphics/graphics.html>`_
+* `WIKIBOOKS LaTex <https://en.wikibooks.org/wiki/LaTeX>`_
+
+************
+latex 模板
+************
+
+* `LaTeX 开源小屋 <http://www.latexstudio.net/>`_
+* `国科大论文模板 <https://github.com/mohuangrui/ucasthesis>`_
+* `LaTeX Templates <http://www.latextemplates.com/>`_
 

@@ -1,6 +1,25 @@
 vim 技巧
 ===================
 
+
+**************
+屏幕显示按键  
+**************
+
+* `keycastr - keycast on mac  <https://github.com/keycastr/keycastr>`_
+* `screenkey <https://www.thregr.org/~wavexx/software/screenkey/>`_
+    
+    .. code-block:: sh
+    
+        $ sudo apt-get install screenkey 
+        $ screenkey --show-settings 
+        $ screenkey -t 0.5 --multiline
+
+* `KeyCastOW – keycast on windows <http://brookhong.github.io/2014/04/28/keycast-on-windows.html>`_
+
+
+
+
 升级vim
 -----------------------
 
@@ -115,6 +134,8 @@ YouCompleteMe的配置
             $ vim-addons install omnicppcomplete
 
         :ref:`如何判断文件类型? <set-filetype>`
+
+
 
 
 防止vim 鼠标右键黏贴，排版错乱。 

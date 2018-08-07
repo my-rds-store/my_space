@@ -2,20 +2,11 @@
 Vagrant
 ##############
 
-************************
-Install Virtualbox_
-************************
+************************************
+Vagrant 插件
+************************************
 
-.. _Virtualbox: https://www.virtualbox.org/wiki/Linux_Downloads
-
-* `install virtual from from command line <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
-
-        .. code-block:: sh
-
-            sudo apt-add-repository "deb http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib"
-            wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
-            sudo apt-get update
-            sudo apt-get install virtualbox-5.x dkms 
+* `科大Rubygems源使用 <http://mirrors.ustc.edu.cn/help/rubygems.html>`_
 
 .. code-block:: sh
 
@@ -24,12 +15,72 @@ Install Virtualbox_
 
     $ vagrant plugin install vagrant-share --plugin-clean-source --plugin-source https://gems.hashicorp.com
 
-*************
-Vagrant cmd  
-*************
+***********************
+Vagrant box Init  
+***********************
+
+.. code-block:: sh
+
+    vagrant init ubuntu/trusty64
+    vagrant init my-box https://boxes.company.com/my.box
+    vagrant init my-box ../mybox_storage/my.box
+
+************************************
+Vagrant box Add
+************************************
+
+.. code-block:: sh
+
+    $ vagrant box add --name mybox ../mybox_storage/my.box
+    $ vagrant box add        mybox http://someurl.com/mybox.box
+    $ vagrant box add --name mybox http://someurl.com/mybox.box
+    
+    # eg :
+    $ vagrant box add --name bionic-server-cloudimg-amd64     https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+    $ vagrant box add --name CentOS-7-x86_64-Vagrant-1805_01  https://mirrors.ustc.edu.cn/centos-cloud/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1805_01.VirtualBox.box
+    $ vagrant box add --name Fedora-Cloud-Base-Vagrant-28-1.1 http://mirrors.163.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+
+Vagrantbox.ex
+=================
+
+ * http://www.vagrantbox.es/
+
+ * `vagrant box cloud <https://app.vagrantup.com/boxes/search>`_
+
+
+
+Base box download
+==================
+
+* `Ubuntu cloud <https://cloud-images.ubuntu.com/>`_
+    
+    .. code::
+
+        https://mirrors.ustc.edu.cn/ubuntu-cloud-images/server/server/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+        https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+
+* `Centos cloud <https://cloud.centos.org/centos/7/vagrant/x86_64/images/>`_
+
+    .. code:: 
+    
+        https://mirrors.ustc.edu.cn/centos-cloud
+        https://mirrors.ustc.edu.cn/centos-cloud/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1805_01.VirtualBox.box
+
+* `Fedora cloud <https://alt.fedoraproject.org/cloud/>`_
+    .. code::
+
+        http://mirrors.163.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+        https://mirrors.ustc.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+        https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+        https://mirrors.aliyun.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+        https://mirrors.shu.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+
+
+************************************
+基于Virtual box 创建Vagrant box
+************************************
 
 * `基于Virtual box 创建Vagrant box <http://ebarnouflant.com/posts/7-convert-a-virtualbox-ova-vm-into-a-vagrant-box>`_
-
 
 .. code-block:: sh
 
@@ -45,6 +96,10 @@ Vagrant cmd
     $ vagrant package --base acef4c0a-35be-4640-a214-be135417f04d --output UCS.box   
 
 
+************************************
+打包  Vagrant box
+************************************
+
 .. code-block:: sh
     
     # 打包成box
@@ -53,30 +108,9 @@ Vagrant cmd
     $ vagrant box repackage <name>          <provider> <version>
     $ vagrant box repackage ubuntu/trusty64 virtualbox 20180330.0.0
 
-    $ vagrant box add        mybox http://someurl.com/mybox.box
-    $ vagrant box add --name mybox http://someurl.com/mybox.box
-    $ vagrant init mybox https://boxes.company.com/mybox.box
-
-    # 基于VirtualBox虚拟机打包 box
-
-****************************************************
-Virtualbox enable hardware virtualization technology
-****************************************************
-
-
-.. code-block:: sh
-
-    $ vboxmanage list vms
-    "bionic-server-cloudimg-amd64" {39f472bf-1d9c-4e6a-a11f-fbfccb2f3171}
-
-    # 修改
-    $ vboxmanage  modifyvm  bionic-server-cloudimg-amd64 --hwvirtex on
-    $ vboxmanage  modifyvm  bionic-server-cloudimg-amd64 --hwvirtex on
-    # 查看
-    $ vboxmanage showvminfo bionic-server-cloudimg-amd64 |grep -i hardw 
-
+************
 provison
-============
+************
 
 **provison并不会每次都执行，只有在这三种情况下provision才会运行：**
 
@@ -95,7 +129,6 @@ provison
 Vagrantfile  
 *************
 
-
 .. code:: 
     
     config.vm.box = "mc_termian_test"
@@ -113,51 +146,23 @@ Vagrantfile
     config.vm.provider "virtualbox" do |vb|
       # Display the VirtualBox GUI when booting the machine
       vb.gui = true
-      vb.name = "vagrent_ubuntu14"
 
-      # enable hardware virtualization technology
-      #vb.customize ["modifyvm", :id, "--hwvirtex", "on"]  
+      vb.name = "vagrent_ubuntu14"
 
       # Customize the amount of memory on the VM:
       vb.memory = "1024"
       vb.cpus = 4
+
+      # enable hardware virtualization technology
+      vb.customize ["modifyvm", :id, "--pae",      "on"]
+      vb.customize ["modifyvm", :id, "--hwvirtex", "on"]  
+      vb.customize ["modifyvm", :id, "--vtxvpid",  "on"]
+      vb.customize ["modifyvm", :id, "--vtxux",    "on"]
+
     end
 
-    #  网络
+    # 网络
     # config.vm.network "public_network", ip: "192.168.2.176" , bridge: "en0"
-
-************
-Init 
-************
-
-.. code-block:: sh
-
-    vagrant init ubuntu/trusty64
-    vagrant init my-box https://boxes.company.com/my.box
-    vagrant init my-box ../mybox_storage/my.box
-
-
-    vagrant box add --name bionic-server-cloudimg-amd64  https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
-
-
-Base box download
-==================
-
-* `Ubuntu cloud <https://cloud-images.ubuntu.com/>`_
-    * https://mirrors.ustc.edu.cn/ubuntu-cloud-images/
-    * https://mirrors.ustc.edu.cn/ubuntu-cloud-images/server/server/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
-    * https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
-
-* `Centos cloud <https://cloud.centos.org/centos/7/vagrant/x86_64/images/>`_
-    * https://mirrors.ustc.edu.cn/centos-cloud
-    * https://mirrors.ustc.edu.cn/centos-cloud/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1805_01.VirtualBox.box
-
-* `Fedora cloud <https://alt.fedoraproject.org/cloud/>`_
-    * http://mirrors.163.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
-    * https://mirrors.ustc.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
-    * https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
-    * https://mirrors.aliyun.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
-    * https://mirrors.shu.edu.cn/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
 
 ************
 set proxy   
@@ -190,6 +195,7 @@ about mc_termianl
     cd /media/cdrom
     ./VBoxLinuxAdditions.run 
 
+
 *******
 Docs   
 *******
@@ -198,20 +204,6 @@ Docs
 * `gitbook vagrant  <https://ninghao.gitbooks.io/vagrant/content/>`_
 * `Ansible中文权威指南 <http://www.ansible.com.cn/index.html>`_
     
-
-Vagrantbox.ex
-=================
-
-http://www.vagrantbox.es/
-
- * `vagrant box cloud <https://app.vagrantup.com/boxes/search>`_
-
- * `vagrantmanager <http://vagrantmanager.com/>`_
-
-VirtualBox  
-============
-
-* `VirtualBox修改现有虚拟磁盘大小 <https://blog.csdn.net/weiguang1017/article/details/52252448>`_
 
 
 参考
@@ -224,7 +216,6 @@ VirtualBox
 
 ----
 
-* https://code-maven.com/xforwarding-from-vagrant-box
 * https://coderwall.com/p/ozhfva/run-graphical-programs-within-vagrantboxes
 
 
