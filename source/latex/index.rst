@@ -127,7 +127,7 @@ LaTeX/Source Code Listings
 * `Ubuntu安装adobe字体 <https://blog.csdn.net/yixian918/article/details/51462275>`_
 
   
-  .. code-block:: sh
+.. code-block:: sh
 
     $ git clone --depth 1  https://github.com/dolbydu/font.git adobe-fonts
     $ sudo mkdir -p   /usr/share/fonts/adobe
@@ -141,8 +141,12 @@ LaTeX/Source Code Listings
     # 查看
     $ fc-list :lang=zh-cn
 
+* `思源字体- Google Noto Fonts <https://www.google.com/get/noto/>`_
 
-*  `思源字体 <https://github.com/adobe-fonts/source-han-sans>`_
+.. code-block:: sh
+
+    # 思源字体 ubuntu
+    $ sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
 
 
 ************************
