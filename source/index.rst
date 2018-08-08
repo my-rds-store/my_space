@@ -21,7 +21,7 @@ Hello World
     <title>诗歌</title>
     <style type="text/css">
     #wrapper {
-            width: 600px;
+            width: 400px;
             background-color: #261718;
     }
     .tet{
