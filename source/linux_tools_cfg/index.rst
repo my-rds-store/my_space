@@ -438,6 +438,7 @@ tmux
 
 * `使用 tmux 打造更强大的终端 <https://linux.cn/article-8421-1.html>`_
 
+* `Tmux 速成教程：技巧和调整 <http://blog.jobbole.com/87584/>`_
 
 .. code-block:: sh
 

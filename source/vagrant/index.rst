@@ -25,6 +25,11 @@ Vagrant box Init
     vagrant init my-box https://boxes.company.com/my.box
     vagrant init my-box ../mybox_storage/my.box
 
+    # eg :
+    $ vagrant init  bionic-server-cloudimg-amd64     https://mirrors.shu.edu.cn/ubuntu-cloud-images/bionic/20180802/bionic-server-cloudimg-amd64-vagrant.box
+    $ vagrant init  CentOS-7-x86_64-Vagrant-1805_01  https://mirrors.ustc.edu.cn/centos-cloud/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1805_01.VirtualBox.box
+    $ vagrant init  Fedora-Cloud-Base-Vagrant-28-1.1 http://mirrors.163.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
+
 ************************************
 Vagrant box Add
 ************************************
@@ -40,14 +45,13 @@ Vagrant box Add
     $ vagrant box add --name CentOS-7-x86_64-Vagrant-1805_01  https://mirrors.ustc.edu.cn/centos-cloud/centos/7/vagrant/x86_64/images/CentOS-7-x86_64-Vagrant-1805_01.VirtualBox.box
     $ vagrant box add --name Fedora-Cloud-Base-Vagrant-28-1.1 http://mirrors.163.com/fedora/releases/28/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-28-1.1.x86_64.vagrant-virtualbox.box
 
+
 Vagrantbox.ex
 =================
 
  * http://www.vagrantbox.es/
 
  * `vagrant box cloud <https://app.vagrantup.com/boxes/search>`_
-
-
 
 Base box download
 ==================
