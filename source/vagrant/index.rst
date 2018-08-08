@@ -125,6 +125,26 @@ provison
    # 3. 执行 
    $ vagrant reload --provision
 
+
+************************
+Vagrant Snapshot
+************************
+
+
+.. code-block:: sh
+
+   $ vagrant snapshot --help
+
+     
+   $ vagrant snapshot list    "snapshot_name"
+   $ vagrant snapshot save    "snapshot_name"  # 创建快照
+   $ vagrant snapshot delete  "snapshot_name"  # 删除快照
+   $ vagrant snapshot pop     "snapshot_name"
+   $ vagrant snapshot push    "snapshot_name"
+   $ vagrant snapshot restore "snapshot_name"  # 从快照还原
+
+     
+
 *************
 Vagrantfile  
 *************
