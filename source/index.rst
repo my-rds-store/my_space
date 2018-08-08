@@ -9,28 +9,72 @@ Hello World
 
 |today|
 
-    ::
+.. raw:: html
 
-        我简直无以言表，我 
-        瞠目结舌 
-        我头脑发热或羽翼失修 
-        而使灵魂有点蠢动 
-        我一意孤行 
-        去诠释那团火 
+    <!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="诗歌">
+    <meta name="description" content="精选诗歌">
+     
+    <title>诗歌</title>
+    <style type="text/css">
+    #wrapper {
+            width: 600px;
+            background-color: #261718;
+    }
+    .tet{
+            color: #E8B606;	
 
-        我记下第一行苍白文字 
-        变态的、空洞无物、纯粹 
-        的痴言乱语、一整个无知者的 
-        终极智慧 
+    }
+     
+    #wrapper #box {
+            width: 260px;
+            text-align: center;
+            margin:0 auto;
+    }
+    p {line-height:5px;}
+    h1 {
+            background-image: url(image/u=648132297,961608322&fm=21&gp=0.jpg);
+            background-position: 12% 0%;
+    }
+    </style>
+    </head>
+     
+    <body>
+    <div id="wrapper">
+      <div id="box">
+        <h1 class="tet">诗</h1>
+        <h4 class="tet">聂鲁达【智利】</h4>
+        <p class='tet'>我简直无以言表，我 </p>
+        <p class='tet'>瞠目结舌 </p>
+        <p class='tet'>我头脑发热或羽翼失修 </p>
+        <p class='tet'>而使灵魂有点蠢动 </p>
+        <p class='tet'>我一意孤行 </p>
+        <p class='tet'>去诠释那团火 </p>
+        <br/>
 
-        而忽然间我瞥见 
-        天堂之锁开启 
-        诸多星辰、离离草木 
-        镶边的幻影 
-        迷一般地 
-        与箭、火焰和花丛 
-        以及寥廓长夜、寰宇浑然一体 
+        <p class='tet'>我记下第一行苍白文字 </p>
+        <p class='tet'>变态的、空洞无物、纯粹 </p>
+        <p class='tet'>的痴言乱语、一整个无知者的 </p>
+        <p class='tet'>终极智慧 </p>
 
+        <br/>
+        <p class='tet'>而忽然间我瞥见 </p>
+        <p class='tet'>天堂之锁开启 </p>
+        <p class='tet'>诸多星辰、离离草木 </p>
+        <p class='tet'>镶边的幻影 </p>
+        <p class='tet'>迷一般地 </p>
+        <p class='tet'>与箭、火焰和花丛 </p>
+        <p class='tet'>以及寥廓长夜、寰宇浑然一体 </p>
+        <br/>
+
+      </div>
+    </div>
+     
+    </body>
+    </html>
 
 *************
 open edx     
