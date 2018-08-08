@@ -142,6 +142,7 @@ LaTeX/Source Code Listings
     $ fc-list :lang=zh-cn
 
 * `思源字体- Google Noto Fonts <https://www.google.com/get/noto/>`_
+* `XeTeX下使用思源黑体 <http://www.latexstudio.net/archives/2021.html>`_
 
 .. code-block:: sh
 
