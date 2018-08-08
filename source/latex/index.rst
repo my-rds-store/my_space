@@ -39,10 +39,22 @@ Quick start (ubuntu)
     \documentclass{ctexart}
     \title{First \LaTeX Document}
     \author{Jiang Xumin}
+    
+    % 思源字体
+    \setCJKmainfont[BoldFont = Noto Sans CJK SC]{Noto Serif CJK SC}
+    \setCJKsansfont{Noto Sans CJK SC}
+    \setCJKfamilyfont{zhsong}{Noto Serif CJK SC}
+    \setCJKfamilyfont{zhhei}{Noto Sans CJK SC}
 
     \begin{document}
     \maketitle
+
     你好, \LaTeX!
+
+    \CJKfamily{zhhei}  这是黑体
+ 
+    \CJKfamily{zhsong} 这是宋体
+
     \end{document}
 
 .. code-block:: sh
@@ -149,6 +161,48 @@ LaTeX/Source Code Listings
 
     # 思源字体 ubuntu
     $ sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+
+----------------
+
+
+* setmainfont{...} 
+    衬线字体,论文中西文部分默认使用的字体。这里的默认字体都会是 Times New Roman。Linux 下也有同名字体。
+
+* setsansfont{...}
+    是西文默认无衬线字体。一般可能出现在大标题等显眼的位置。 这一部分经常碰上的字体会是 Helvetica/Arial。Linux下有Helvetica，前缀是 -adobe-helvetica-* 。这是一个古老的非抗锯齿版本（也就是不用 fontconfig 配置而使用 xfontsel），所以如今的 XWindow 环境应该不会再使用它作为屏幕字体。
+
+* setmonofont{...} 
+    是西文默认的等宽字体。一般用于排版程序代码。打印机字体。Courier 或者 Courier New 是常见的 Word 选项。Linux 下一般会有 Courier，但很少能看见 Courier New。
+
+------------
+
+* setCJKmainfont[BoldFont={...},ItalicFont={...}]{...} 
+    指定中文（或韩文日文）的默认字体。衬线字体, 通常情况下，大部分文档论文会要求用宋体{SimSun}排版。
+    Linux 下可能用文鼎宋体代替，不过效果可能较差。
+    另一点是和西文不同的地方，这个设置允许我们指定粗体和斜体应用何种字体代替。之所以有这个区别，是因为中文不使用粗体表示强调，也不使用斜体表示引文或书名号。我一般会指定BoldFont 和 ItalicFont 为某种黑体，
+    Windows 环境下是SimHei，Linux下我会用文泉驿正黑避免版权问题。
+    有些高校的论文模板，比如就是明确要求强调段落必须使用楷体（SimKai），只能照着要求设置。
+
+* \setCJKsansfont{...}  
+    无衬线字体
+* \setCJKmonofont{...}
+    等宽字体,打印机字体。
+
+
+
+* `衬线字体与无衬线字体区别 <https://www.jianshu.com/p/414ea6c05276>`_
+* `如何优雅的选择默认字体(font-family) <https://www.imooc.com/article/11261>`_
+
+-----------------
+
+.. code-block:: tex
+
+    \setCJKmainfont{隶书}
+    % \setCJKmainfont{[Lishu.TTF]}     % 当前目录字体 Lishu.TTF
+
+    %\setCJKfamilyfont{msyahei}{Microsoft YaHei}
+    \setCJKfamilyfont{msyahei}{微软雅黑}
+
 
 
 ************************
