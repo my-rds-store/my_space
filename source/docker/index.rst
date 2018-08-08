@@ -1,15 +1,15 @@
 ###############
-Docker 笔记
+Docker
 ###############
 
 **********************
-Docker Hub 与阿里云  
+Repositories
 **********************
 
 * `Docker Hub <https://hub.docker.com/explore/>`_
+*  `Docker store <https://store.docker.com>`_
 * `QUAY <https://quay.io>`_
 * `阿里云 <https://dev.aliyun.com/search.html>`_
-
 
 .. code-block:: sh
 
@@ -19,7 +19,7 @@ Docker Hub 与阿里云
 安装与配置
 ************
 
-安装  
+安装与启动 
 ============
 
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
@@ -28,6 +28,7 @@ Docker Hub 与阿里云
   
   # 官方安装，速度慢
   curl -sSL https://get.docker.com/ | sh
+
 
 * `安装docker(基于阿里源,速度快) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
 
@@ -43,6 +44,18 @@ Docker Hub 与阿里云
 
      # centos 6 安装老版本
      $ sudo apt-get install -y docker.io
+
+
+.. code-block:: sh
+    
+     #  启动docker server
+
+     # ubuntu
+     $ sudo service docker start
+
+     # centos
+     $ sudo systemctl enable docker 
+     $ sudo systemctl start  docker
 
 配置 
 ========
@@ -91,103 +104,152 @@ Docker Hub 与阿里云
 
 * `docker 资源限制   <https://docs.docker.com/config/containers/resource_constraints/#limit-a-containers-access-to-memory>`_
 
-启动docker server
-===================
-
-    .. code-block:: sh
-        
-         #  启动docker server
-
-         # ubuntu
-         $ sudo service docker start
-
-         # centos
-         $ sudo systemctl enable docker 
-         $ sudo systemctl start  docker
-
 
 镜像
 ===================
 
-    .. code-block:: sh
+.. code-block:: sh
 
-        $ sudo docker images      # 列出本地镜像
-        $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce jxm/my_space:v3  # 镜像commit
+    $ docker images --help
 
-        $ sudo docker rmi training/sinatra  # 删除本地镜像
-
-
-        #  本地镜像重命名 
-        $ sudo docker tag  oldname:tag newname:tag 
-        $ sudo docker tag  image_id    newname:tag 
-        
-        $ sudo docker rmi oldname:tag   # 删除镜像
+    $ sudo docker images      # 列出本地镜像
 
 
-        $ sudo docker search centos  # 搜索
+    $ sudo docker commit -m "do something" -a "do something ..." {CONTAINER ID} {REPOSITORY:TAG}  # 镜像commit
+    $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce   jxm/my_space:v3  # 镜像commit
+
+    $ sudo docker rmi {REPOSITORY:TAG}  # 删除本地镜像
+    
+    #  本地镜像重命名 
+    $ sudo docker tag  {ORIGIN_REPOSITORY:TAG} {NEW_NAME:TAG} 
+    $ sudo docker tag  {IMAGE_ID}              {NEW_NAME:TAG} 
+    $ sudo docker rmi  {ORIGIN_REPOSITORY:TAG}   
+
+
+    #  从docker hub 搜索镜像
+    $ sudo docker search centos  
 
 容器
 ============
 
-    .. code-block:: sh
+容器-create/run/rm 
+-----------------------
 
-       $ sudo docker create -i -t --name=apache  ubuntu:14.04  /bin/bash  #  创建容器
+.. code-block:: sh
 
-       $ sudo docker start apache  # 启动容器
-       $ sudo docker attach apach  # 进入容器
-       
-       $ sudo docker rm  name/ID                # 删除一个容器
-       $ sudo docker rm `sudo docker ps -a -q`  # 删除全部容器
+   $ sudo docker create --help
+   $ sudo docker create -i -t --name=my_test  ubuntu:14.04  /bin/bash  #  创建容器
+  
+
+   $ docker run --help
+   # 守护态运行``
+   $ sudo docker run -d -p 3080:80 --name={CONTAINER_NAME}  {REPOSITORY:TAG}  /bin/bash -c " while true; do echo hello world; sleep 1; done"
+   $ sudo docker run -d --restart=always -p 3080:80 --name={CONTAINER_NAME} {REPOSITORY:TAG}  /root/start.sh  #开机自启动
 
 
+   # 启动一个容器
+   $ docker start --help
+   $ sudo docker start/stop {CONTAINER_NAME}  # 启动/停止容器
 
-       # 守护态运行``
-       $ sudo docker run -d -p 3080:80 --name=myspace_test_v3 jxm/my_space:v3  /bin/bash -c " while true; do echo hello world; sleep 1; done"
-       $ sudo docker run -d -p 3080:80 --name=myspace_test_v4 jxm/my_space:v4  /root/start.sh
+   $ docker --help
+   $ sudo docker attach {CONTAINER_NAME}  # 进入容器
 
-       $ sudo docker run -d --restart=always -p 3080:80 --name=myspace_test_v4  jxm/my_space:v4 /root/start.sh  #开机自启动
+   $ docker rm --help
+   $ sudo docker rm  {CONTAINER_NAME}/{CONTAINER_ID}  # 删除一个容器
+   $ sudo docker rm `sudo docker ps -a -q`            # 删除全部容器
 
-       $ sudo docker run exec -it myspace_test_v4 /bin/bash
+
+容器-exec
+-----------------------
+
+.. code-block:: sh
+
+       $ docker exec  --help
+       $ sudo docker exec -it {CONTAINER_NAME} /bin/bash
+
+
+容器-root权限
+-----------------
+
+.. code-block:: sh
+
+    $ sudo docker run -d --privileged {REPOSITORY:TAG} 
+
+    #  参数privileged ，container内的root拥有真正的root权限。
+    #  否则，container内的root只是外部的一个普通用户权限。
+    #  privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。
+    #  甚至允许你在docker容器中启动docker容器。
+
+    $ sudo docker run -d --cap-add SYS_NET_ADMIN {REPOSITORY:TAG} 
+
+    # 让容器拥有除了MKNOD之外的所有内核权限 
+    $ sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
+
+容器-logs
+------------------
+
+.. code-block:: sh
 
        # 查看日志
+       $ docker logs --help       
        $ sudo docker logs -f       {CONTAINER ID}       # 日志
        $ sudo docker logs --follow {CONTAINER ID}
 
-       #  容器重命名
-       $ sudo docker rename  oldname    newname 
-       $ sudo docker rename  image_id   newname 
+容器-ps
+----------
 
-       #``查询``
-       $ sudo docker ps      # 查看UP状态的容器
-       $ sudo docker ps  -a  # 查看所有容器
-       $ sudo docker ps  -as # 查看所有容器,显示容器大小
+.. code-block:: sh
+
+   #``查询``
+   $ docker ps  --help      
+   $ sudo docker ps         # 显示UP状态的容器
+   $ sudo docker ps  -a     # 显示所有容器
+   $ sudo docker ps  -as    # 显示所有容器,显示容器大小
+
+容器-导入导出
+---------------
+
+.. code-block:: sh
 
 
        # 导出导入
+       $ docker export --help
        $ sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
     
        $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
 
+       $ docker import --help
        # 通过指定 URL 或者某个目录来导入容器
        $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
 
+       $ docker save  --help
        $ sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
        $ sudo docker load -i nextcloud.tar            # 导入镜像
 
 
-使用外部网络
-============
+容器-reame
+----------------
 
+.. code-block:: sh
+
+       #  容器重命名
+       $ docker rename  --help 
+       $ sudo docker rename {ORIGIN_NAME}  {NEW_NAME}
+       $ sudo docker rename {CONTAINER ID} {NEW_NAME} 
+
+容器-port
+--------------
 
 .. code-block:: sh
 
     # 查看端口
+    $ docker port --help
     $ sudo docker port {CONTAINER ID}
     $ sudo docker port {CONTAINER ID}  80
 
 
-数据卷
-============
+容器-数据卷
+-------------------
 
 `数据卷容器 <http://wiki.jikexueyuan.com/project/docker-technology-and-combat/datacontainer.html>`_
 
@@ -202,23 +264,6 @@ Docker Hub 与阿里云
         
         # 数据卷容器
         $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
-
-权限
-============
-
-.. code-block:: sh
-
-    $ sudo docker run -d --privileged myimage
-
-    #  参数privileged ，container内的root拥有真正的root权限。
-    #  否则，container内的root只是外部的一个普通用户权限。
-    #  privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。
-    #  甚至允许你在docker容器中启动docker容器。
-
-    $ sudo docker run -d --cap-add SYS_NET_ADMIN myimage
-
-    # 让容器拥有除了MKNOD之外的所有内核权限 
-    $ sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
 
 
 **********

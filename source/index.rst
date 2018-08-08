@@ -280,8 +280,7 @@ bittorrent文件编辑工具
    kubernetes/index
    vagrant/index
    virtualbox/index
-   database/mysql
-   database/sqlite
+   database/index
    qt/index
    mingw32/index
    nsis/index

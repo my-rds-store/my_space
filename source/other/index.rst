@@ -327,6 +327,42 @@ nginx
 * `nginx简易教程 <http://www.cnblogs.com/jingmoxukong/p/5945200.html>`_
 
 
+ubutnu 源制作
+---------------
+
+.. code-block:: sh
+
+    # 1、
+    mkdir -p /var/www/soft
+    mkdir -p /var/www/dists/lucid/main
+
+    # 2、 
+    cp *.deb /var/www/soft/
+
+    # 3、
+    # 如果是arm的deb包把命令行中的amd改成arm ，如果说是32位操作系统安装的包同理把64改成32,
+    # 不过32位就是32位，64位的制作64位的，不要混要不然装的时候报错
+    dpkg-scanpackages soft/ /dev/null | gzip > /var/www/dists/lucid/main/binary-amd64/Packages.gz
+
+    # 4、
+    cp http_file_server.py /var/www/soft               
+
+    # 5、（命令行）
+    python http_file_server.py
+    #ok 本地安装源制作完成。
+
+    # 6、本地测试：
+    mv  /etc/apt/sources.list   /etc/apt/sources.list.bak
+    #添加如下，内容
+    tee  /etc/apt/sources.list <<-"EOF"
+    deb http://127.0.0.1:8008 lucid main
+    EOF
+    # 
+    apt-get update
+    apt-cache search  "deb包“
+
+
+
 问题
 ------
 

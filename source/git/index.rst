@@ -183,8 +183,11 @@ Send Mail
     $ git send-email --no-chain-reply-to --annotate --confirm=always --to=jxm_zn@163.com  master -1 
 
 
+********
+Github  
+********
 
-
+* `Syncing a fork <https://help.github.com/articles/syncing-a-fork/>`_
 
 
 ************

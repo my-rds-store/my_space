@@ -1,6 +1,6 @@
-vim 技巧
-===================
-
+####
+VIM 
+####
 
 **************
 屏幕显示按键  
@@ -18,6 +18,18 @@ vim 技巧
 * `KeyCastOW – keycast on windows <http://brookhong.github.io/2014/04/28/keycast-on-windows.html>`_
 
 
+************
+安装vim
+************
+
+``INSTALL``
+--------------
+
+.. code-block:: sh
+
+    $ sudo apt-get install vim vim-scripts vim-doc
+    $ sudo apt-get install vim-addon-manager # 插件管理
+    $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
 
 
 升级vim
@@ -31,35 +43,20 @@ vim 技巧
     $ sudo apt-get update && sudo apt-get upgrade
     $ sudo apt-get install vim-nox 
 
-``INSTALL``
---------------
+* `Using Vim as IDE for Python <http://christian.sterzl.info/blog/vim-as-ide-for-python>`_
+* `UltiSnips vim 代码块 <http://mednoter.com/UltiSnips.html>`_
+* `vim 与 Markdown <http://www.jianshu.com/p/fa8c56e1aa52>`_  
+* `Markdown 预览插件 <https://github.com/iamcco/markdown-preview.vim>`_
+* `vim插件管理器：Vundle的介绍及安装(很全) <http://blog.csdn.net/zhangpower1993/article/details/52184581>`_
+* `一个小博客教你把vim用飞起来 <http://www.cnblogs.com/songfy/p/5635757.html>`_
 
-    .. code-block:: sh
-
-        $ sudo apt-get install vim vim-scripts vim-doc
-        $ sudo apt-get install vim-addon-manager # 插件管理
-        $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
-
-`Using Vim as IDE for Python <http://christian.sterzl.info/blog/vim-as-ide-for-python>`_
+* `VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
 
 
-`UltiSnips vim 代码块 <http://mednoter.com/UltiSnips.html>`_
-
-
-`vim 与 Markdown <http://www.jianshu.com/p/fa8c56e1aa52>`_  
-
-
-`Markdown 预览插件 <https://github.com/iamcco/markdown-preview.vim>`_
-
-`vim插件管理器：Vundle的介绍及安装i(很全) <http://blog.csdn.net/zhangpower1993/article/details/52184581>`_
-
-`一个小博客教你把vim用飞起来 <http://www.cnblogs.com/songfy/p/5635757.html>`_
-
-`VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
-
-
+************************
 YouCompleteMe
----------------
+************************
+
 
 `YouCompleteMe手册 <http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64>`_
 
@@ -97,7 +94,7 @@ Ubuntu Linxu x64
             Plugin 'Valloric/YouCompleteMe'
 
 YouCompleteMe的配置
-^^^^^^^^^^^^^^^^^^^^^
+-------------------
 
 `YouCompleteMe的配置 <http://www.cnblogs.com/starrytales/p/6031671.html>`_
 
@@ -123,17 +120,20 @@ YouCompleteMe的配置
     ]
 
 
-``vim实用技巧``
-------------------
+************
+vim实用技巧
+************
 
-    .. seealso::
 
-        .. code-block:: sh
 
-            $ vim-addons status
-            $ vim-addons install omnicppcomplete
+.. seealso::
 
-        :ref:`如何判断文件类型? <set-filetype>`
+    .. code-block:: sh
+
+        $ vim-addons status
+        $ vim-addons install omnicppcomplete
+
+    :ref:`如何判断文件类型? <set-filetype>`
 
 
 
@@ -146,6 +146,8 @@ YouCompleteMe的配置
 
 
 vim实用技巧
+============
+
 ---------------------
 
 * 技巧 24 面向列块的可视模式编辑表格数据
@@ -167,6 +169,8 @@ vim实用技巧
    .. code:: 
 
         :set filetype 
+
+--------------------------
 
 `Vim升华之树形目录插件NERDTree安装图解 <http://www.linuxidc.com/Linux/2013-06/86048.htm>`_
 
