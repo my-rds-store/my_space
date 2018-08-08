@@ -251,19 +251,19 @@ Repositories
 容器-数据卷
 -------------------
 
-`数据卷容器 <http://wiki.jikexueyuan.com/project/docker-technology-and-combat/datacontainer.html>`_
+* `数据卷容器 <http://wiki.jikexueyuan.com/project/docker-technology-and-combat/datacontainer.html>`_
 
 
-    .. code-block:: sh
+.. code-block:: sh
 
-        # 指定数据卷
-        $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
+    # 指定数据卷
+    $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
 
-        # 查看数据卷
-        $ sudo docker inspect {NAMES}
-        
-        # 数据卷容器
-        $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
+    # 查看数据卷
+    $ sudo docker inspect {NAMES}
+    
+    # 数据卷容器
+    $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
 
 **********
