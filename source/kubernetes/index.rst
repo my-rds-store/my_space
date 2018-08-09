@@ -35,3 +35,24 @@ KUBERNETES
 * `118. 部署 k8s Cluster（上） <https://blog.csdn.net/cloudman6/article/details/79036876>`_
 
 
+************
+搭建
+************
+
+
+* `googlecontainer <https://hub.docker.com/u/googlecontainer/>`_
+
+---------------------------------
+
+* `install-kubeadm <https://kubernetes.io/docs/setup/independent/install-kubeadm/>`_
+
+* `安装部署 Kubernetes 集群 <https://www.cnblogs.com/Leo_wl/p/8511902.html>`_
+
+* `使用Kubeadm快速搭建Kubernetes(docker) <https://blog.csdn.net/CSDN_duomaomao/article/details/73825839>`_
+
+* `使用kubeadm安装Kubernetes v1.10以及常见问题解答 <https://www.kubernetes.org.cn/3805.html>`_
+
+* `Kubernetes in Vagrant with kubeadm <https://medium.com/@lizrice/kubernetes-in-vagrant-with-kubeadm-21979ded6c63>`_
+
+* `k8s学习笔记（一） <https://www.cnblogs.com/silvermagic/p/9110882.html>`_
+

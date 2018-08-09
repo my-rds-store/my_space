@@ -89,6 +89,44 @@ Repositories
     # 查看
     $ docker info
 
+******************
+代理
+******************
+
+* `HTTP/HTTPS proxy <https://docs.docker.com/config/daemon/systemd/#httphttps-proxy>`_
+
+
+.. code-block:: sh
+
+    $ sudo mkdir -p /etc/systemd/system/docker.service.d
+
+    $ sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf <<-'EOF'
+    [Service]
+    Environment="HTTP_PROXY=http://proxy.example.com:80/"
+    EOF
+
+    $ sudo tee /etc/systemd/system/docker.service.d/https-proxy.conf <<-'EOF'
+    [Service]
+    Environment="HTTPS_PROXY=https://proxy.example.com:443/"
+    EOF
+
+    # Flush changes:
+    $ sudo systemctl daemon-reload
+
+    # Restart Docker:
+    $ sudo systemctl restart docker
+
+    # Verify that the configuration has been loaded:
+    $ systemctl show --property=Environment docker
+    Environment=HTTP_PROXY=http://proxy.example.com:80/
+
+    # Or, if you are behind an HTTPS proxy server:
+    
+    $ systemctl show --property=Environment docker
+    Environment=HTTPS_PROXY=https://proxy.example.com:443/
+
+    # test 
+    $ sudo docker pull k8s.gcr.io/kube-apiserver-amd64:v1.11.0
 
 ***********
 常用镜像   
