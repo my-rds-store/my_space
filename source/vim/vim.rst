@@ -119,6 +119,7 @@ YouCompleteMe的配置
     '/usr/include/x86_64-linux-gnu/c++',
     ]
 
+* `在VIM下写C++ <https://harttle.land/2015/07/18/vim-cpp.html>`_
 
 ************
 vim实用技巧
