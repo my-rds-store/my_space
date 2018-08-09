@@ -309,6 +309,20 @@ apt-get install时如何指定安装版本
     service --status-all                                        # 查看进程服务
 
 
+判断文件中包含字段
+--------------------
+
+.. code-block:: sh
+
+    File=/etc/yum.conf
+    #WORD='proxy'
+    WORD='^proxy=.*$'
+    if  ! grep $WORD "$File"  ; then
+      echo  "$WORD not fond in $File"
+    else
+      echo  "${WORD} in $File"
+    fi
+
 判断文件是否存在
 -----------------
 
