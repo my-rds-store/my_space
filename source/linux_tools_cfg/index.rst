@@ -440,9 +440,12 @@ tmux
 
 * `Tmux 速成教程：技巧和调整 <http://blog.jobbole.com/87584/>`_
 
+* `tmux-yank <https://tmux-plugins.github.io/tmux-yank/>`_
+
 .. code-block:: sh
 
-    $ sudo apt-get install tmux
+    $ sudo apt-get install tmux # ubuntu
+    $ sudo brew    install tmux    # osX
 
 .. code:: 
 
