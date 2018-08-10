@@ -96,8 +96,8 @@ virsh 与 qemu-img
 
 * https://www.thegeekstuff.com/2015/02/add-memory-cpu-disk-to-kvm-vm/
 
-#. **常用命令**
-
+常用命令
+-------------------
 
 * `列出 CPU Models <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-kvm_guest_virtual_machine_compatibility-supported_cpu_models>`_
 
@@ -146,12 +146,12 @@ virsh 与 qemu-img
     disk size: 15M
     cluster_size: 65536
     backing file: /guests/F21server.img
+
     $ sudo qemu-img commit /guests/F21server.qcow2.snap
     Image committed.
 
     # 重改基础镜像
-　　$ qemu-img rebase [-u] -b /PATH/TO/base.qcow2 linux.qcow2
-    # -u 指 unsafe 模式,需检验,常用于基础镜像移动位置或重命名之后.
+    $ qemu-img rebase [-u] -b /PATH/TO/base.qcow2 linux.qcow2 # -u 指 unsafe 模式,需检验,常用于基础镜像移动位置或重命名之后.
 
 
 * `How to create Snapshot of Guest machine in Libvirt <http://www.geekpills.com/operating-system/linux/create-snapshot-guest-machine-libvirt>`_

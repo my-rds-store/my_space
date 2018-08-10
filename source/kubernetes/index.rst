@@ -39,6 +39,8 @@ Kubernetes
 
 * `kubeadm安装kubernetes集群 <http://blog.51cto.com/lullaby/2150610>`_
 
+* `通过docker hub 下载 <https://mritd.me/2016/10/29/set-up-kubernetes-cluster-by-kubeadm/>`_
+
 ------------
 
 * `安装部署 Kubernetes 集群  <https://www.cnblogs.com/Leo_wl/p/8511902.html>`_
