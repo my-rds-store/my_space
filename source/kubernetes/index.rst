@@ -42,7 +42,12 @@ KUBERNETES
 
 ---------------------------------
 
+
 * `install-kubeadm <https://kubernetes.io/docs/setup/independent/install-kubeadm/>`_
+
+* `kubeadm安装kubernetes集群 <http://blog.51cto.com/lullaby/2150610>`_
+
+------------
 
 * `安装部署 Kubernetes 集群  <https://www.cnblogs.com/Leo_wl/p/8511902.html>`_
 * `kubeadm安装kubernetes集群 <http://blog.51cto.com/lullaby/2150610>`_
