@@ -9,7 +9,8 @@ Install Virtualbox_
 
 .. _Virtualbox: https://www.virtualbox.org/wiki/Linux_Downloads
 
-* `install virtual from from command line <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
+
+* `Install oracle virtualbox on ubuntu <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
 
         .. code-block:: sh
 
@@ -17,6 +18,14 @@ Install Virtualbox_
             wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
             sudo apt-get update
             sudo apt-get install virtualbox-5.x dkms 
+
+* `Install oracle virtualbox on centos <https://wiki.centos.org/zh/HowTos/Virtualization/VirtualBox>`_
+
+        .. code-block:: sh
+
+            curl -o /etc/yum.repos.d/virtualbox.repo  http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+            yum --enablerepo=epel install dkms
+            yum makecache
 
 ------------------
 

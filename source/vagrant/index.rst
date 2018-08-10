@@ -34,6 +34,8 @@ Vagrant box Init
 Vagrant box Add
 ************************************
 
+Vagrant会将所下载的box,保存到 `~/.vagrant.d/boxes` 目录下
+
 .. code-block:: sh
 
     $ vagrant box add --name mybox ../mybox_storage/my.box
