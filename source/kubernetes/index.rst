@@ -2,16 +2,11 @@
 Kubernetes   
 #############
 
-KUBERNETES
-------------------
-
-    * https://www.kubernetes.org.cn/docs
-
+* `Kubernetes中文手册 <https://www.kubernetes.org.cn/docs>`_
 
 ***********************
 每天5分钟玩转容器技术  
 ***********************
-
 
 * `1. 写在最前面 <https://blog.csdn.net/CloudMan6/article/details/70054393>`_
 * `2. 容器生态系统  <https://blog.csdn.net/cloudman6/article/details/70162855>`_
@@ -32,16 +27,13 @@ KUBERNETES
 * `117. k8s 重要概念  <https://blog.csdn.net/cloudman6/article/details/79014649>`_
 * `118. 部署 k8s Cluster（上） <https://blog.csdn.net/cloudman6/article/details/79036876>`_
 
-
 ************
 搭建
 ************
 
-
 * `googlecontainer <https://hub.docker.com/u/googlecontainer/>`_
 
 ---------------------------------
-
 
 * `install-kubeadm <https://kubernetes.io/docs/setup/independent/install-kubeadm/>`_
 
@@ -59,11 +51,8 @@ KUBERNETES
 
 * `k8s学习笔记（一） <https://www.cnblogs.com/silvermagic/p/9110882.html>`_
 
-
-
-
 测试
-=====================
+=======
 
 .. code-block:: yaml
 
@@ -85,12 +74,10 @@ KUBERNETES
 	name: busybox
       restartPolicy: Always
 
-
 .. code-block:: sh
 
    sudo kubectl create -f ./busybox.yaml
    sudo kubectl get rc 
    sudo kubectl get pods 
    sudo kubectl describe pod mysql
-
 

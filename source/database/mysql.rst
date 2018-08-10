@@ -36,8 +36,8 @@ select 查询，中文显示乱码
 `MySQL 教程 <http://www.shouce.ren/api/view/a/6106>`_
 
 
-``登陆``
-------------------
+登陆
+============
 
 .. code-block:: sh
 
@@ -46,11 +46,11 @@ select 查询，中文显示乱码
     $ mysql -h localhost -u root -p -P 8306  # 指定端口号
 
 
-``数据库操作``
-------------------
+数据库操作
+============
 
 创建数据库
-^^^^^^^^^^^
+-------------
 
 .. code-block:: sql
 
@@ -64,13 +64,15 @@ select 查询，中文显示乱码
     Enter password:******
 
 查看数据库
-^^^^^^^^^^^
+-------------
+
 .. code:: 
 
     > SHOW DATABASES;
 
+
 选中数据库
-^^^^^^^^^^^
+--------------
 
 .. code-block:: sql
 
@@ -79,14 +81,14 @@ select 查询，中文显示乱码
 
 
 查看数据库中的表
-^^^^^^^^^^^^^^^^^^
+------------------
 .. code-block:: sql
 
     > SHOW TABLES;
 
 
 删除数据库
-^^^^^^^^^^^^^^^^^^
+------------------
 .. code-block::  sql
 
     -- drop database 数据库名;
@@ -97,11 +99,12 @@ select 查询，中文显示乱码
     [root@host]# mysqladmin -u root -p drop 数据库名;
     Enter password:******
 
-``数据表操作``
-------------------
+数据表操作
+==============
+
 
 创建表
-^^^^^^^^^
+---------
 
 .. code-block::  sql
 
@@ -142,14 +145,14 @@ select 查询，中文显示乱码
 
 
 查看表结构
-^^^^^^^^^^^
+-----------
 
 .. code-block:: sql
 
     DESC table_name;
 
 查看表的创建语句
-^^^^^^^^^^^^^^^^^
+-----------------
 
 .. code-block:: sql
 
@@ -157,7 +160,7 @@ select 查询，中文显示乱码
     SHOW CREATE TABLE table_name;
 
 删除表
-^^^^^^^^^
+---------
 
 .. code-block:: sql
 
@@ -165,7 +168,7 @@ select 查询，中文显示乱码
 
 
 指定表引擎和字符集
-^^^^^^^^^^^^^^^^^^^^
+--------------------
 
 在创建表最后，我们常用MyISAM或者InnoDB引擎。在指定引擎时，我们可以使用：
 
@@ -190,7 +193,7 @@ select 查询，中文显示乱码
       )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-``导出表结构``
+导出表结构
 ------------------
 
 .. code-block:: bash
@@ -199,7 +202,7 @@ select 查询，中文显示乱码
     $ mysqldump -uroot -prootroot sva_rec date_drv         > foo.sql 
 
 
-``导入表结构``
+导入表结构
 ------------------
 
 .. code-block:: bash

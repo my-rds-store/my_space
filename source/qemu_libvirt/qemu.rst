@@ -106,7 +106,6 @@ virsh 与 qemu-img
     $ cat /usr/share/libvirt/cpu_map.xml
     $ virsh cpu-models x86_64
 
-
 .. code-block:: sh
 
     # virsh      
@@ -151,7 +150,9 @@ virsh 与 qemu-img
     Image committed.
 
     # 重改基础镜像
-　　qemu-img rebase [-u] -b /PATH/TO/base.qcow2 linux.qcow2　　# -u 指 unsafe 模式，无需检验，通常用于基础镜像移动位置或重命名之后
+　　$ qemu-img rebase [-u] -b /PATH/TO/base.qcow2 linux.qcow2
+    # -u 指 unsafe 模式,需检验,常用于基础镜像移动位置或重命名之后.
+
 
 * `How to create Snapshot of Guest machine in Libvirt <http://www.geekpills.com/operating-system/linux/create-snapshot-guest-machine-libvirt>`_
 
@@ -164,13 +165,10 @@ virsh 与 qemu-img
     virsh snapshot-delete srv7 srv7-snapshot_1                     #  删除
 
 
-
-
-
 磁盘
 ------
 
-.. code-block:: bash
+.. code-block:: sh
 
     # ubuntu 14 安装libguestfs
     $ sudo apt-get install libguestfs-tools
