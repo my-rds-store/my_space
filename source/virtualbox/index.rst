@@ -19,13 +19,20 @@ Install Virtualbox_
             sudo apt-get update
             sudo apt-get install virtualbox-5.x dkms 
 
+            # load kernel model
+            sudo /sbin/vboxconfig
+
 * `Install oracle virtualbox on centos <https://wiki.centos.org/zh/HowTos/Virtualization/VirtualBox>`_
 
         .. code-block:: sh
 
             curl -o /etc/yum.repos.d/virtualbox.repo  http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
-            yum --enablerepo=epel install dkms
             yum makecache
+            sudo yum --enablerepo=epel install -y dkms
+            sudo yum install -y virtualbox-5.x 
+
+            # load kernel model
+            sudo /sbin/vboxconfig
 
 ------------------
 
