@@ -25,14 +25,15 @@ Repositories
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
 
 .. code-block:: sh
-  
-  # 官方安装，速度慢
-  curl -sSL https://get.docker.com/ | sh
 
+    ##################################### 
+    # 官方安装，速度慢
+    ##################################### 
+    curl -sSL https://get.docker.com/ | sh
 
-* `安装docker(基于阿里源,速度快) <https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.6a7c1991Uq3rD1>`_
-
-.. code-block:: sh
+    ##################################### 
+    # 基于国内源,速度快
+    ##################################### 
 
     # fedora/centos 
     curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_centos7.sh | bash
@@ -40,10 +41,8 @@ Repositories
     # debian/ubuntu 
     curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
 
-.. code-block:: sh
-
-     # centos 6 安装老版本
-     $ sudo apt-get install -y docker.io
+    # centos 6 安装老版本,docker
+    sudo yum install -y docker.io
 
 
 .. code-block:: sh
@@ -51,18 +50,18 @@ Repositories
      #  启动docker server
 
      # ubuntu
-     $ sudo service docker start
+     sudo service docker start
 
      # centos
-     $ sudo systemctl enable docker 
-     $ sudo systemctl start  docker
+     sudo systemctl enable docker 
+     sudo systemctl start  docker
 
 配置 
 ========
 
 .. code-block:: sh
 
-    $ sudo mkdir -p /etc/docker
+    sudo mkdir -p /etc/docker
 
     # 1. 指定 镜像加速地址
     #    https://docker.mirrors.ustc.edu.cn     # 中科大
@@ -72,22 +71,22 @@ Repositories
     # 2. 指定 Docker root dir 
     # 3. 指定 DNS 
 
-    $ sudo tee -a /etc/docker/daemon.json <<-'EOF'
+    sudo tee -a /etc/docker/daemon.json <<-'EOF'
     {
-        "registry-mirrors": ["https://4lmb1y64.mirror.aliyuncs.com"],
+        "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
         "graph": "/home/docker/docker_image",
         "dns": ["180.76.76.76", "114.114.114.114"]
     }
     EOF
   
     # 重启
-    $ sudo systemctl daemon-reload
-    $ sudo systemctl restart docker
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
 
-    $ sudo service  docker restart   # ubuntu
+    sudo service  docker restart   # ubuntu
 
     # 查看
-    $ docker info
+    docker info
 
 ******************
 代理
@@ -98,35 +97,35 @@ Repositories
 
 .. code-block:: sh
 
-    $ sudo mkdir -p /etc/systemd/system/docker.service.d
+    sudo mkdir -p /etc/systemd/system/docker.service.d
 
-    $ sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf <<-'EOF'
+    sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf <<-'EOF'
     [Service]
     Environment="HTTP_PROXY=http://proxy.example.com:80/"
     EOF
 
-    $ sudo tee /etc/systemd/system/docker.service.d/https-proxy.conf <<-'EOF'
+    sudo tee /etc/systemd/system/docker.service.d/https-proxy.conf <<-'EOF'
     [Service]
     Environment="HTTPS_PROXY=https://proxy.example.com:443/"
     EOF
 
     # Flush changes:
-    $ sudo systemctl daemon-reload
+    sudo systemctl daemon-reload
 
     # Restart Docker:
-    $ sudo systemctl restart docker
+    sudo systemctl restart docker
 
     # Verify that the configuration has been loaded:
-    $ systemctl show --property=Environment docker
+    systemctl show --property=Environment docker
     Environment=HTTP_PROXY=http://proxy.example.com:80/
 
     # Or, if you are behind an HTTPS proxy server:
     
-    $ systemctl show --property=Environment docker
+    systemctl show --property=Environment docker
     Environment=HTTPS_PROXY=https://proxy.example.com:443/
 
     # test 
-    $ sudo docker pull k8s.gcr.io/kube-apiserver-amd64:v1.11.0
+    sudo docker pull k8s.gcr.io/kube-apiserver-amd64:v1.11.0
 
 ***********
 常用镜像   
@@ -148,24 +147,23 @@ Repositories
 
 .. code-block:: sh
 
-    $ docker images --help
+    docker images --help
 
-    $ sudo docker images      # 列出本地镜像
+    sudo docker images      # 列出本地镜像
 
+    sudo docker commit -m "do something" -a "do something ..." {CONTAINER ID} {REPOSITORY:TAG}  # 镜像commit
+    sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce   jxm/my_space:v3  # 镜像commit
 
-    $ sudo docker commit -m "do something" -a "do something ..." {CONTAINER ID} {REPOSITORY:TAG}  # 镜像commit
-    $ sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce   jxm/my_space:v3  # 镜像commit
-
-    $ sudo docker rmi {REPOSITORY:TAG}  # 删除本地镜像
+    sudo docker rmi {REPOSITORY:TAG}  # 删除本地镜像
     
-    #  本地镜像重命名 
-    $ sudo docker tag  {ORIGIN_REPOSITORY:TAG} {NEW_NAME:TAG} 
-    $ sudo docker tag  {IMAGE_ID}              {NEW_NAME:TAG} 
-    $ sudo docker rmi  {ORIGIN_REPOSITORY:TAG}   
+    # 本地镜像重命名 
+    sudo docker tag  {ORIGIN_REPOSITORY:TAG} {NEW_NAME:TAG} 
+    sudo docker tag  {IMAGE_ID}              {NEW_NAME:TAG} 
+    sudo docker rmi  {ORIGIN_REPOSITORY:TAG}   
 
 
-    #  从docker hub 搜索镜像
-    $ sudo docker search centos  
+    # 从docker hub 搜索镜像
+    sudo docker search centos  
 
 容器
 ============
@@ -175,26 +173,24 @@ Repositories
 
 .. code-block:: sh
 
-   $ sudo docker create --help
-   $ sudo docker create -i -t --name=my_test  ubuntu:14.04  /bin/bash  #  创建容器
-  
+   sudo docker create --help
+   sudo docker create -i -t --name=my_test  ubuntu:14.04  /bin/bash  #  创建容器
 
-   $ docker run --help
+   docker run --help
    # 守护态运行``
-   $ sudo docker run -d -p 3080:80 --name={CONTAINER_NAME}  {REPOSITORY:TAG}  /bin/bash -c " while true; do echo hello world; sleep 1; done"
-   $ sudo docker run -d --restart=always -p 3080:80 --name={CONTAINER_NAME} {REPOSITORY:TAG}  /root/start.sh  #开机自启动
-
+   sudo docker run -d -p 3080:80 --name={CONTAINER_NAME}  {REPOSITORY:TAG}  /bin/bash -c " while true; do echo hello world; sleep 1; done"
+   sudo docker run -d --restart=always -p 3080:80 --name={CONTAINER_NAME} {REPOSITORY:TAG}  /root/start.sh  #开机自启动
 
    # 启动一个容器
-   $ docker start --help
-   $ sudo docker start/stop {CONTAINER_NAME}  # 启动/停止容器
+   docker start --help
+   sudo docker start/stop {CONTAINER_NAME}  # 启动/停止容器
 
-   $ docker --help
-   $ sudo docker attach {CONTAINER_NAME}  # 进入容器
+   docker --help
+   sudo docker attach {CONTAINER_NAME}  # 进入容器
 
-   $ docker rm --help
-   $ sudo docker rm  {CONTAINER_NAME}/{CONTAINER_ID}  # 删除一个容器
-   $ sudo docker rm `sudo docker ps -a -q`            # 删除全部容器
+   docker rm --help
+   sudo docker rm  {CONTAINER_NAME}/{CONTAINER_ID}  # 删除一个容器
+   sudo docker rm `sudo docker ps -a -q`            # 删除全部容器
 
 
 容器-exec
@@ -202,8 +198,8 @@ Repositories
 
 .. code-block:: sh
 
-       $ docker exec  --help
-       $ sudo docker exec -it {CONTAINER_NAME} /bin/bash
+    docker exec  --help
+    sudo docker exec -it {CONTAINER_NAME} /bin/bash
 
 
 容器-root权限
@@ -211,27 +207,27 @@ Repositories
 
 .. code-block:: sh
 
-    $ sudo docker run -d --privileged {REPOSITORY:TAG} 
+    sudo docker run -d --privileged {REPOSITORY:TAG} 
 
     #  参数privileged ，container内的root拥有真正的root权限。
     #  否则，container内的root只是外部的一个普通用户权限。
     #  privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。
     #  甚至允许你在docker容器中启动docker容器。
 
-    $ sudo docker run -d --cap-add SYS_NET_ADMIN {REPOSITORY:TAG} 
+    sudo docker run -d --cap-add SYS_NET_ADMIN {REPOSITORY:TAG} 
 
     # 让容器拥有除了MKNOD之外的所有内核权限 
-    $ sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
+    sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
 
 容器-logs
 ------------------
 
 .. code-block:: sh
 
-       # 查看日志
-       $ docker logs --help       
-       $ sudo docker logs -f       {CONTAINER ID}       # 日志
-       $ sudo docker logs --follow {CONTAINER ID}
+   # 查看日志
+   docker logs --help       
+   sudo docker logs -f       {CONTAINER ID}       # 日志
+   sudo docker logs --follow {CONTAINER ID}
 
 容器-ps
 ----------
@@ -239,10 +235,10 @@ Repositories
 .. code-block:: sh
 
    #``查询``
-   $ docker ps  --help      
-   $ sudo docker ps         # 显示UP状态的容器
-   $ sudo docker ps  -a     # 显示所有容器
-   $ sudo docker ps  -as    # 显示所有容器,显示容器大小
+   docker ps  --help      
+   sudo docker ps         # 显示UP状态的容器
+   sudo docker ps  -a     # 显示所有容器
+   sudo docker ps  -as    # 显示所有容器,显示容器大小
 
 容器-导入导出
 ---------------
@@ -250,19 +246,19 @@ Repositories
 .. code-block:: sh
 
 
-       # 导出导入
-       $ docker export --help
-       $ sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
-    
-       $ cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
+   # 导出导入
+   docker export --help
+   sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
 
-       $ docker import --help
-       # 通过指定 URL 或者某个目录来导入容器
-       $ sudo docker import http://example.com/exampleimage.tgz example/imagerepo
+   cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
 
-       $ docker save  --help
-       $ sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
-       $ sudo docker load -i nextcloud.tar            # 导入镜像
+   docker import --help
+   # 通过指定 URL 或者某个目录来导入容器
+   sudo docker import http://example.com/exampleimage.tgz example/imagerepo
+
+   docker save  --help
+   sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
+   sudo docker load -i nextcloud.tar            # 导入镜像
 
 
 容器-reame
@@ -270,10 +266,10 @@ Repositories
 
 .. code-block:: sh
 
-       #  容器重命名
-       $ docker rename  --help 
-       $ sudo docker rename {ORIGIN_NAME}  {NEW_NAME}
-       $ sudo docker rename {CONTAINER ID} {NEW_NAME} 
+   #  容器重命名
+   docker rename  --help 
+   sudo docker rename {ORIGIN_NAME}  {NEW_NAME}
+   sudo docker rename {CONTAINER ID} {NEW_NAME} 
 
 容器-port
 --------------
@@ -281,9 +277,9 @@ Repositories
 .. code-block:: sh
 
     # 查看端口
-    $ docker port --help
-    $ sudo docker port {CONTAINER ID}
-    $ sudo docker port {CONTAINER ID}  80
+    docker port --help
+    sudo docker port {CONTAINER ID}
+    sudo docker port {CONTAINER ID}  80
 
 
 容器-数据卷
@@ -295,13 +291,13 @@ Repositories
 .. code-block:: sh
 
     # 指定数据卷
-    $ sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
+    sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
 
     # 查看数据卷
-    $ sudo docker inspect {NAMES}
+    sudo docker inspect {NAMES}
     
     # 数据卷容器
-    $ sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
+    sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
 
 **********

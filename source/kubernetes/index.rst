@@ -2,12 +2,10 @@
 Kubernetes   
 #############
 
-
 KUBERNETES
 ------------------
 
     * https://www.kubernetes.org.cn/docs
-
 
 
 ***********************
@@ -46,13 +44,48 @@ KUBERNETES
 
 * `install-kubeadm <https://kubernetes.io/docs/setup/independent/install-kubeadm/>`_
 
-* `安装部署 Kubernetes 集群 <https://www.cnblogs.com/Leo_wl/p/8511902.html>`_
+* `安装部署 Kubernetes 集群  <https://www.cnblogs.com/Leo_wl/p/8511902.html>`_
+* `kubeadm安装kubernetes集群 <http://blog.51cto.com/lullaby/2150610>`_
 
 * `使用Kubeadm快速搭建Kubernetes(docker) <https://blog.csdn.net/CSDN_duomaomao/article/details/73825839>`_
-
 * `使用kubeadm安装Kubernetes v1.10以及常见问题解答 <https://www.kubernetes.org.cn/3805.html>`_
 
 * `Kubernetes in Vagrant with kubeadm <https://medium.com/@lizrice/kubernetes-in-vagrant-with-kubeadm-21979ded6c63>`_
 
 * `k8s学习笔记（一） <https://www.cnblogs.com/silvermagic/p/9110882.html>`_
+
+
+
+
+测试
+=====================
+
+.. code-block:: yaml
+
+    #################
+    # busybox.yaml
+    #################
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: busybox
+      namespace: default
+    spec:
+      containers:
+      - image: busybox
+	command:
+	  - sleep
+	  - "3600"
+	imagePullPolicy: IfNotPresent
+	name: busybox
+      restartPolicy: Always
+
+
+.. code-block:: sh
+
+   sudo kubectl create -f ./busybox.yaml
+   sudo kubectl get rc 
+   sudo kubectl get pods 
+   sudo kubectl describe pod mysql
+
 
