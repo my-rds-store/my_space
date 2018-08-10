@@ -231,6 +231,14 @@ Docs
 * `Ansible中文权威指南 <http://www.ansible.com.cn/index.html>`_
     
 
+**********
+常见问题  
+**********
+
+* `vagrant 启动时报错failed to create the raw output file <https://my.oschina.net/chan17/blog/1785293>`_
+
+
+
 
 参考
 ====
