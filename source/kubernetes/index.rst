@@ -83,3 +83,39 @@ Kubernetes
    sudo kubectl get pods 
    sudo kubectl describe pod mysql
 
+******
+FAQ   
+******
+
+
+问题:
+
+.. code-block:: sh
+
+    ########################3
+    # Centos7
+    ########################3
+
+    #sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.10.0/Documentation/kube-flannel.yml
+    $ sudo kubectl apply -f ./kube-flannel.yml
+    unable to recognize "./kube-flannel.yml": Get http://localhost:8080/api?timeout=32s: dial tcp [::1]:8080: connect: connection refused
+    unable to recognize "./kube-flannel.yml": Get http://localhost:8080/api?timeout=32s: dial tcp [::1]:8080: connect: connection refused
+    unable to recognize "./kube-flannel.yml": Get http://localhost:8080/api?timeout=32s: dial tcp [::1]:8080: connect: connection refused
+    unable to recognize "./kube-flannel.yml": Get http://localhost:8080/api?timeout=32s: dial tcp [::1]:8080: connect: connection refused
+    unable to recognize "./kube-flannel.yml": Get http://localhost:8080/api?timeout=32s: dial tcp [::1]:8080: connect: connection refused
+    The connection to the server localhost:8080 was refused - did you specify the right host or port
+
+解决: 需要开启 api server 代理端口：
+
+* https://www.oschina.net/question/574036_2271046
+* `Kubernetes核心原理（一）之API Server <https://yq.aliyun.com/articles/149595>`_
+
+.. code-block:: sh
+
+    # 查看端口是否代理：
+    $ curl localhost:8080/api
+
+    # 开启端口代理：
+    $ kubectl proxy --port=8080 &
+
+-----------------------------------
