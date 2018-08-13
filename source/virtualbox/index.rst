@@ -34,6 +34,14 @@ Install Virtualbox_
             # load kernel model
             sudo /sbin/vboxconfig
 
+*************************************
+Install Extension_Pack
+*************************************
+
+.. code-block:: sh
+
+    VBoxManage extpack install ~/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack
+
 ------------------
 
 * `Manual <https://www.virtualbox.org/manual/>`_

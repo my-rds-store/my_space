@@ -127,6 +127,20 @@ FTP服务 (Centos 7)
     # 6). 重启ftp
     $ sudo  systemctl restart vsftpd
 
+Ftp遇到的问题  
+---------------
+
+* 没有网关,ftp登录慢,解决
+
+  * `Linux vsftpd login method to solve the problem of slow card <https://www.programering.com/a/MDN1YzMwATU.html>`_
+  * `vsftpd log in is slow <http://geekinlinux.blogspot.com/2012/11/vsftpd-log-in-is-slow.html>`_
+
+.. code-block:: sh
+
+    tee -a  /etc/vsftpd/vsftpd.conf <<-'EOF'
+    reverse_lookup_enable=NO
+    EOF
+
 ------------------------------------------------------------------
 
 .. image:: ./images/vsftp.conf.png
