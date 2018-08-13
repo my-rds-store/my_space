@@ -155,7 +155,8 @@ Vagrant Snapshot
 Vagrantfile  
 *************
 
-* `vagrantfile examble <https://github.com/hugsy/modern.ie-vagrant/blob/master/Vagrantfile>`_
+* `vagrantfile examble  <https://github.com/hugsy/modern.ie-vagrant/blob/master/Vagrantfile>`_
+* `vagrantfile examble2 <https://github.com/patrickdlee/vagrant-examples/blob/master/example6/Vagrantfile>`_
 
 .. code:: 
     
