@@ -76,6 +76,17 @@ VirtualBox修改现有虚拟磁盘大小
 * `VirtualBox修改现有虚拟磁盘大小 <https://blog.csdn.net/weiguang1017/article/details/52252448>`_
 
 
+***************************************************
+Remote display (VRDP support)    
+***************************************************
+    
+* `Chapter7. Remote display (VRDP support) <https://www.virtualbox.org/manual/ch07.html#vrde>`_
+
+.. code-block:: sh
+
+    VBoxManage modifyvm "VM name" --vrde on
+
+
 ****************************************************
 Virtual networking
 ****************************************************

@@ -185,6 +185,9 @@ Vagrantfile
       vb.customize ["modifyvm", :id, "--vtxvpid",  "on"]
       vb.customize ["modifyvm", :id, "--vtxux",    "on"]
 
+      vb.customize ["controlvm", :id, "vrde", "on"]  # Remote display (VRDP support)
+
+
     end
 
     # 网络
