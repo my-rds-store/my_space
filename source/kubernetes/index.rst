@@ -26,6 +26,25 @@ Kubernetes
 * `116. k8s 核心功能 <https://blog.csdn.net/cloudman6/article/details/78997613>`_
 * `117. k8s 重要概念  <https://blog.csdn.net/cloudman6/article/details/79014649>`_
 * `118. 部署 k8s Cluster（上） <https://blog.csdn.net/cloudman6/article/details/79036876>`_
+* `119. 部署 k8s Cluster（下） <https://blog.csdn.net/cloudman6/article/details/79055050>`_
+* `120. Kubernetes 架构（上） <https://blog.csdn.net/cloudman6/article/details/79070461>`_
+* `121. Kubernetes 架构（下） <https://blog.csdn.net/cloudman6/article/details/79091574>`_
+* `122. 通过例子理解 k8s 架构 <https://blog.csdn.net/cloudman6/article/details/79118086>`_
+  
+
+  
+
+.. code-block:: sh
+
+
+    kubeadm token list 
+
+    # get --discovery-token-ca-cert-hash
+    openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
+
+
+
+
 
 ************
 搭建
