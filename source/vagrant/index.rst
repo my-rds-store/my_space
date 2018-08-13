@@ -155,6 +155,8 @@ Vagrant Snapshot
 Vagrantfile  
 *************
 
+* `vagrantfile examble <https://github.com/hugsy/modern.ie-vagrant/blob/master/Vagrantfile>`_
+
 .. code:: 
     
     config.vm.box = "mc_termian_test"
@@ -185,8 +187,9 @@ Vagrantfile
       vb.customize ["modifyvm", :id, "--vtxvpid",  "on"]
       vb.customize ["modifyvm", :id, "--vtxux",    "on"]
 
-      vb.customize ["controlvm", :id, "vrde", "on"]  # Remote display (VRDP support)
-
+      ## Remote display (VRDP support)
+      # vb.customize ["modifyvm", :id, "--vrde", "on"]
+      # vb.customize ["modifyvm", :id, "--vrdeport", "3940"] # change here to a free port,fefault :3389
 
     end
 
