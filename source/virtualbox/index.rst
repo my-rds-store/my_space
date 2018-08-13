@@ -9,6 +9,11 @@ Install Virtualbox_
 
 .. _Virtualbox: https://www.virtualbox.org/wiki/Linux_Downloads
 
+----
+
+* `download.virtualbox.org  <http://download.virtualbox.org/virtualbox/>`_
+
+----
 
 * `Install oracle virtualbox on ubuntu <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
 
