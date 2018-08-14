@@ -158,6 +158,21 @@ vim实用技巧
 
         xml 编写技巧
 
+* 录制宏: `qa` 操作序列 `q, @a, @@`
+
+示例
+    在一个只有一行且这一行只有“1”的文本中，键入如下命令：
+
+    * `qaYp<C-a>q→`
+        * `qa`   开始录制
+        * `Yp`    复制行
+        * `<C-a>` 增加1
+        * `q`     停止录制
+        * `@a→` 在1 下面写2
+        * `@@→` 在2 下面写3
+        * `100@@` 会创建新的100行，并把数据增加到103 
+
+.. image:: http://yannesposito.com/Scratch/img/blog/Learn-Vim-Progressively/macros.gif
 
 
 .. _set-filetype:
