@@ -15,6 +15,9 @@ Vagrant 插件
 
     $ vagrant plugin install vagrant-share --plugin-clean-source --plugin-source https://gems.hashicorp.com
 
+    $ yum install libvirt-devel 
+    $ vagrant plugin install vagrant-libvirt --plugin-clean-source --plugin-source  https://mirrors.ustc.edu.cn/rubygems/
+
 ***********************
 Vagrant box Init  
 ***********************
