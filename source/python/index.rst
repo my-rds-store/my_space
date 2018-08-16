@@ -29,6 +29,23 @@ Book
 * `流畅的Python 中文PDF <http://www.linuxidc.com/Linux/2017-06/144466.htm>`_
 * `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
 
+python 语法规则   
+==================
+
+
+* python规则指定,所有在赋值语句左面的变量都是局部变量
+
+.. code-block:: python
+
+    a=5
+    def func():
+        # global a  # 注释掉此行，报错
+        a = a+11
+        print a
+
+    func()
+
+
 -------
 
 * `Django 教程 <https://code.ziqiangxuetang.com/django/django-tutorial.html>`_
