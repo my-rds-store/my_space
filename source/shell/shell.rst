@@ -587,6 +587,9 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 
 .. code-block:: sh
 
+    # 
+    curl http://ip-api.com/json/
+
     # 获取 public ip 
     $ curl icanhazip.com
     $ curl ipecho.net/plain; echo
