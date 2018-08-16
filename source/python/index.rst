@@ -81,7 +81,8 @@ python 语法规则
 
 
 * `python装饰器详解 <https://blog.csdn.net/xiangxianghehe/article/details/77170585>`_
-
+* `python装饰器 <http://python.jobbole.com/82344/>`_
+* `详解Python的装饰器 <https://www.cnblogs.com/cicaday/p/python-decorator.html>`_
 
 ----
 
@@ -91,13 +92,13 @@ python 语法规则
     import chardet
     fencoding=chardet.detect(u"test string")
     print fencoding
-    
+
     # 从URL地址提取文件名
     import os
     url = 'http://www.jb51.net/images/logo.gif'
     filename = os.path.basename(url)
     print(filename)
-    
+
     # 去除扩展名
     print os.path.splitext(filename)[0]
 
