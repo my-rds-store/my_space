@@ -21,8 +21,10 @@ Vagrant 插件
     $ vagrant plugin install vagrant-rekey-ssh --plugin-clean-source --plugin-source  https://mirrors.ustc.edu.cn/rubygems/
 
 ************************************
-Vagrant & libvirt 
+Vagrant-libvirt 
 ************************************
+
+* `Install vagrant-libvirt <https://github.com/vagrant-libvirt/vagrant-libvirt/blob/master/README.md#installation>`_
 
 * `使用Vagrant部署kvm虚拟化 <https://huataihuang.gitbooks.io/cloud-atlas/virtual/vagrant/vagrant_libvirt_kvm.html>`_
 
@@ -50,7 +52,6 @@ CentOS7默认安装libvirt环境，已经在/var/lib/libvirt/images目录上创�
       end
     end
 
-
 启动
 ==============
 
@@ -62,7 +63,6 @@ CentOS7默认安装libvirt环境，已经在/var/lib/libvirt/images目录上创�
     vagrant up --provider libvirt
     # or 
     export VAGRANT_DEFAULT_PROVIDER=libvirt ; vagrant up
-
 
 
 ***********************
