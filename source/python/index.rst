@@ -134,3 +134,9 @@ tty终端中显示和输入中文
 * `python全栈学习路线-查询笔记 <https://www.cnblogs.com/eric_yi/p/8483079.html>`_
 
 
+***********
+机器学习   
+***********
+
+* https://github.com/Avik-Jain/100-Days-Of-ML-Code
+
