@@ -347,6 +347,8 @@ downloading-the-latest-artifacts
 ====================================
  
 * `downloading-the-latest-artifacts <https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html#downloading-the-latest-artifacts>`_
+* `download-the-artifacts-archive <https://docs.gitlab.com/ee/api/jobs.html#download-the-artifacts-archive>`_
+* `download-a-single-artifact-file <https://docs.gitlab.com/ee/api/jobs.html#download-a-single-artifact-file>`_
 
 .. code-block:: sh
 
