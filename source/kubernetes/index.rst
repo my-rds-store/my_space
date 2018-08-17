@@ -231,6 +231,7 @@ K8s
 
 * `安装部署 Kubernetes 集群  <https://www.cnblogs.com/Leo_wl/p/8511902.html>`_
 * `kubeadm安装kubernetes集群 <http://blog.51cto.com/lullaby/2150610>`_
+* `【kubernetes/k8s 部署】minikube与kubernetes搭建 2017.08.16 <https://blog.csdn.net/zhonglinzhang/article/details/77223027>`_
 
 * `使用Kubeadm快速搭建Kubernetes(docker) <https://blog.csdn.net/CSDN_duomaomao/article/details/73825839>`_
 * `使用kubeadm安装Kubernetes v1.10以及常见问题解答 <https://www.kubernetes.org.cn/3805.html>`_

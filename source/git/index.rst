@@ -330,6 +330,38 @@ Gitlab_
     $ sudo gitlab-runner list
     $ sudo gitlab-runner verify
 
+Triggering pipelines through the API
+============================================
+
+* https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger
+
+.. code-block:: sh
+
+    curl -X POST \
+         -F token=c180975fb840ba2b5c942347a58f90 \
+         -F ref=master \
+         http://192.168.1.102/api/v4/projects/7/trigger/pipeline
+
+
+downloading-the-latest-artifacts
+====================================
+ 
+* `downloading-the-latest-artifacts <https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html#downloading-the-latest-artifacts>`_
+
+.. code-block:: sh
+
+    # pirvite  project
+    curl -L  --header "PRIVATE-TOKEN: nDU2GenxaCiNouREB91n"  "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"   -o artifacts.zip
+
+    # public project
+    curl -L  "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"   -o artifacts.zip
+    wget -O artifacts.zip  http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1
+    
+    # 
+    curl -L -o mcstudent_offline_4.2.1-11-g54157f0_amd64.deb http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+    wget -O mcstudent_offline_4.2.1-11-g54157f0_amd64.deb http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+
+
 Advanced
 ========
 
