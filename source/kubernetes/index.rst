@@ -239,6 +239,7 @@ K8s
 * `Kubernetes in Vagrant with kubeadm <https://medium.com/@lizrice/kubernetes-in-vagrant-with-kubeadm-21979ded6c63>`_
 
 * `k8s学习笔记（一） <https://www.cnblogs.com/silvermagic/p/9110882.html>`_
+* `Kubernetes Handbook <https://www.ctolib.com/docs//sfile/kubernetes-handbook/index.html>`_
 
 测试
 =======
