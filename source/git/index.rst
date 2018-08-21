@@ -378,15 +378,22 @@ downloading-the-latest-artifacts
 .. code-block:: sh
 
     # pirvite  project
-    curl -L  --header "PRIVATE-TOKEN: nDU2GenxaCiNouREB91n"  "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"   -o artifacts.zip
+    curl -L  --header "PRIVATE-TOKEN: nDU2GenxaCiNouREB91n"  \
+        "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1" \
+        -o artifacts.zip
 
     # public project
-    curl -L  "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"   -o artifacts.zip
-    wget -O artifacts.zip  http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1
+    curl -L -o artifacts.zip \
+    "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"
+    
+    wget -O artifacts.zip  \
+    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1
     
     # 
-    curl -L -o mcstudent_offline_4.2.1-11-g54157f0_amd64.deb http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
-    wget -O mcstudent_offline_4.2.1-11-g54157f0_amd64.deb http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+    curl -L -o mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
+    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+    wget -O mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
+    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
 
 
 Advanced
