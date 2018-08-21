@@ -156,6 +156,30 @@ git tag
 如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
 
 
+git patch   
+============
+
+.. code-block:: sh
+
+    ########################################
+    # 当前分支，打patch
+    ########################################
+    # 1、生成patch(在代码修改后没有commit之前的状态执行，进入想生成patch的目录即可)
+    git diff > project.patch
+    # 2、打patch，方法和linux的diff一样
+    patch -p0 < project.patch
+    git apply project.patch  //也可用这个命令打patch
+    
+    ###################################################  
+    # 不同分支,不同文件，打pacth, 
+    # 将 my_dev 对比 master的修改，打成path
+    ################################################### 
+    git diff master my_dev -- src/view/setting/other_seting.py > other_seting.py.pacth
+
+    # 此时branch 位于 master 
+    git apply other_seting.py.pacth
+
+
 ************
 Send Mail   
 ************
@@ -181,6 +205,7 @@ Send Mail
 
     # send 
     $ git send-email --no-chain-reply-to --annotate --confirm=always --to=jxm_zn@163.com  master -1 
+
 
 
 ********
