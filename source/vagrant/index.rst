@@ -65,6 +65,12 @@ CentOS7默认安装libvirt环境，已经在/var/lib/libvirt/images目录上创�
     export VAGRANT_DEFAULT_PROVIDER=libvirt ; vagrant up
 
 
+FAQ
+==============
+
+* https://www.jianshu.com/p/44a48ae9db08
+* https://github.com/AJNOURI/COA/issues/68
+
 ***********************
 Vagrant box Init  
 ***********************
