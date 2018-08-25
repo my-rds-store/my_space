@@ -23,8 +23,6 @@ python 学习
 Book   
 *******
 
-
-
 * `python3-cookbook <http://python3-cookbook.readthedocs.io/zh_CN/latest/>`_
 * `流畅的Python 中文PDF <http://www.linuxidc.com/Linux/2017-06/144466.htm>`_
 * `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
@@ -56,6 +54,9 @@ python 语法规则
 ****************
 
 * `lxml - XML and HTML with Python <http://lxml.de/>`_
+
+* `Urwid <http://urwid.org/index.html>`_
+  * `urwid_timed_progress <https://github.com/mgk/urwid_timed_progress>`_
 
 -----
 
