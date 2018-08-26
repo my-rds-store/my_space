@@ -615,7 +615,8 @@ Ubuntu 修改 启动时间等待
 
 .. code-block:: sh
 
-    # Ubuntu14.04
+    # Ubuntu14.04 , Ubuntu18.04
     
     sed -i 's/^.*GRUB_TIMEOUT=.*$/GRUB_TIMEOUT=0/' /etc/default/grub
     sed -i 's/timeout=10/timeout=0/' /etc/grub.d/30_os-prober
+    update-grub

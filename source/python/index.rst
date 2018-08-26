@@ -1,5 +1,5 @@
 ###########
-python 学习
+Python 
 ###########
 
 * `Python Code Examples <https://www.programcreek.com/python/>`_
