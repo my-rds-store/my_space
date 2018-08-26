@@ -22,7 +22,7 @@ INSTALL
     #  mac 
     ############
 
-    $ brew cask install mactex`
+    $ brew cask install mactex
 
     # Install Edit 
     $ brew cask install texstudio
