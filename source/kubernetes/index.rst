@@ -42,41 +42,41 @@ Docker
 * `29. 限制容器的 Block IO <https://blog.csdn.net/CloudMan6/article/details/73275235>`_
 * `30. 实现容器的底层技术 <https://blog.csdn.net/CloudMan6/article/details/73441688>`_
 * `31. none 和 host 网络的适用场景 <https://blog.csdn.net/CloudMan6/article/details/73490335>`_
-* 32
-* 33
-* 34
-* 35
-* 36
-* 37
-* 38
-* 39
-* 40
-* 41
-* 42
-* 43
-* 44
-* 45
-* 46
-* 47
-* 48
-* 49
-* 50
-* 51
-* 52
-* 53
-* 54
-* 55
-* 56
-* 57
-* 58
-* 59
-* 60
-* 61
-* 62
-* 63
-* 64
-* 65
-* 66
+* `32. 学容器必须懂 bridge 网络  <https://blog.csdn.net/CloudMan6/article/details/73610507>`_
+* `33. 如何自定义容器网络？ <https://blog.csdn.net/CloudMan6/article/details/73718953>`_
+* `34. 理解容器之间的连通性 <https://blog.csdn.net/CloudMan6/article/details/73825691>`_
+* `35. 容器间通信的三种方式 <https://blog.csdn.net/CloudMan6/article/details/73928932>`_
+* `36. 容器如何访问外部世界？ <https://blog.csdn.net/CloudMan6/article/details/74157891>`_
+* `37. 外部世界如何访问容器？ <https://blog.csdn.net/CloudMan6/article/details/74359616>`_
+* `38. Docker 的两类存储资源 <https://blog.csdn.net/CloudMan6/article/details/74590058>`_
+* `39. Data Volume 之 bind mount <https://blog.csdn.net/CloudMan6/article/details/74896920>`_
+* `40. docker managed volume <https://blog.csdn.net/CloudMan6/article/details/74999509>`_
+* `41. 如何共享数据？ <https://blog.csdn.net/CloudMan6/article/details/75093632>`_
+* `42. 用 volume container 共享数据 <https://blog.csdn.net/CloudMan6/article/details/75194862>`_
+* `43. data-packed volume container <https://blog.csdn.net/CloudMan6/article/details/75331672>`_
+* `44. volume 生命周期管理 <https://blog.csdn.net/CloudMan6/article/details/75578915>`_
+* `45. 安装 Docker Machine <https://blog.csdn.net/CloudMan6/article/details/75810234>`_
+* `46. 创建 Machine <https://blog.csdn.net/CloudMan6/article/details/76100816>`_
+* `47. 管理 Machine <https://blog.csdn.net/CloudMan6/article/details/76223476>`_
+* `48. 跨主机网络概述 <https://blog.csdn.net/CloudMan6/article/details/76383702>`_
+* `49. 准备 overlay 网络实验环境 <https://blog.csdn.net/CloudMan6/article/details/76557792>`_
+* `50. 创建 overlay 网络 <https://blog.csdn.net/CloudMan6/article/details/76638952>`_
+* `51. 在 overlay 中运行容器 <https://blog.csdn.net/CloudMan6/article/details/76765159>`_
+* `52. overlay 如何实现跨主机通信？ <https://blog.csdn.net/CloudMan6/article/details/76889979>`_
+* `53. overlay 是如何隔离的？ <https://blog.csdn.net/CloudMan6/article/details/77073752>`_
+* `54. 准备 macvlan 环境 <https://blog.csdn.net/CloudMan6/article/details/77140712>`_
+* `55. 创建 macvlan 网络 <https://blog.csdn.net/CloudMan6/article/details/77186548>`_
+* `56. macvlan 网络结构分析 <https://blog.csdn.net/CloudMan6/article/details/77338515>`_
+* `57. macvlan 网络隔离和连通 <https://blog.csdn.net/CloudMan6/article/details/77430395>`_
+* `58. flannel 概述 <https://blog.csdn.net/CloudMan6/article/details/77481720>`_
+* `59. 安装配置 flannel <https://blog.csdn.net/CloudMan6/article/details/77540088>`_
+* `60. 在 Docker 中使用 flannel <https://blog.csdn.net/CloudMan6/article/details/77622313>`_
+* `61. flannel 的连通与隔离 <https://blog.csdn.net/CloudMan6/article/details/77676572>`_
+* `62. 如何使用 flannel host-gw backend？ <https://blog.csdn.net/CloudMan6/article/details/77744631>`_
+* `63. 如何使用 Weave 网络？ <https://blog.csdn.net/CloudMan6/article/details/77825734>`_
+* `64. Weave 网络结构分析 <https://blog.csdn.net/CloudMan6/article/details/77856911>`_
+* `65. 容器在 Weave 中如何通信和隔离？ <https://blog.csdn.net/CloudMan6/article/details/77886886>`_
+* `66. Weave 如何与外网通信？ <https://blog.csdn.net/CloudMan6/article/details/77921063>`_
 * 67
 * 68
 * 69
