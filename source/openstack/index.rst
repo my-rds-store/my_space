@@ -33,12 +33,12 @@ Openstack
 * `23. 理解 Nova 架构 <https://blog.csdn.net/CloudMan6/article/details/51194672>`_
 * `24. Nova 组件如何协同工作 <https://blog.csdn.net/CloudMan6/article/details/51206344>`_
 * `25. OpenStack 通用设计思路 <https://blog.csdn.net/CloudMan6/article/details/51235388>`_
-* 26
-* 27
-* 28
-* 29
-* 30
-* 31
+* `26. Nova 组件详解 <https://blog.csdn.net/CloudMan6/article/details/51254712>`_ 
+* `27. 看 nova-scheduler 如何选择计算节点 <https://blog.csdn.net/CloudMan6/article/details/51272760>`_
+* `28. nova-compute 部署 instance 详解 <https://blog.csdn.net/CloudMan6/article/details/51292027>`_
+* `29. 教你看懂 OpenStack 日志 <https://blog.csdn.net/CloudMan6/article/details/51307662>`_
+* `30. Launch和Shut Off操作详解 <https://blog.csdn.net/CloudMan6/article/details/51319744>`_
+* `31. Start Instance 操作详解 <https://blog.csdn.net/CloudMan6/article/details/51345851>`_
 * 32
 * 33
 * 34
