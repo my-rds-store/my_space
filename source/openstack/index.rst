@@ -18,21 +18,21 @@ Openstack
 * `8. LVM 类型的 Storage Pool <https://blog.csdn.net/cloudman6/article/details/50893484>`_
 * `9. KVM 网络虚拟化基础 <https://blog.csdn.net/cloudman6/article/details/50917309>`_
 * `10. 动手实践虚拟网络 <https://blog.csdn.net/cloudman6/article/details/50933195>`_
-* 11
-* 12
-* 13
-* 14
-* 15
-* 16
-* 17
-* 18
-* 19
-* 20
-* 21
-* 22
-* 23
-* 24
-* 25
+* `11. 理解 virbr0 <https://blog.csdn.net/CloudMan6/article/details/50957427>`_
+* `12. Linux 如何实现 VLAN <https://blog.csdn.net/CloudMan6/article/details/50968305>`_
+* `13. 动手实践 Linux VLAN <https://blog.csdn.net/CloudMan6/article/details/50990229>`_
+* `14. 云计算与 OpenStack <https://blog.csdn.net/CloudMan6/article/details/51009255>`_
+* `15. OpenStack 架构 <https://blog.csdn.net/CloudMan6/article/details/51024839>`_
+* `16. 搭建 OpenStack 实验环境 <https://blog.csdn.net/CloudMan6/article/details/51051776>`_
+* `17. 部署 DevStack <https://blog.csdn.net/CloudMan6/article/details/51068887>`_
+* `18. 理解 Keystone 核心概念 <https://blog.csdn.net/CloudMan6/article/details/51089186>`_
+* `19. 通过例子学习 Keystone <https://blog.csdn.net/CloudMan6/article/details/51107654>`_
+* `20. 理解 Glance <https://blog.csdn.net/CloudMan6/article/details/51137827>`_
+* `21. 创建 Image <https://blog.csdn.net/CloudMan6/article/details/51155573>`_
+* `22. 如何使用 OpenStack CLI <https://blog.csdn.net/CloudMan6/article/details/51176072>`_
+* `23. 理解 Nova 架构 <https://blog.csdn.net/CloudMan6/article/details/51194672>`_
+* `24. Nova 组件如何协同工作 <https://blog.csdn.net/CloudMan6/article/details/51206344>`_
+* `25. OpenStack 通用设计思路 <https://blog.csdn.net/CloudMan6/article/details/51235388>`_
 * 26
 * 27
 * 28
