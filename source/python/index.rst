@@ -109,11 +109,37 @@ python 语法规则
     for  method in  inspect.getmembers(sys.path):
         print method
 
+***********************************
+Linux 下编译windows Exe
+***********************************
+
+* `Build a Windows executable from Python scripts on Linux <http://sparkandshine.net/build-a-windows-executable-from-python-scripts-on-linux/>`_
+
+.. code-block:: sh
+
+    sudo apt-get install wine32 winetricks
+    winetricks python 
+
+    cd ~/.wine/drive_c/Python26
+    #wine msiexec /i python-2.7.15.msi /L*v log.txt
+    wine msiexec /i python-2.7.15.msi 
+
+    wine python.exe Scripts/pip.exe install pyinstaller -i    https://pypi.mirrors.ustc.edu.cn/simple
+    wine python.exe Scripts/pip.exe install --upgrade pip -i  https://pypi.mirrors.ustc.edu.cn/simple
+    #wine python.exe Scripts/pip.exe install pyserial -i    https://pypi.mirrors.ustc.edu.cn/simple
+
+    cd ~/workspace
+
+    tee HelloWorld.py <<-"EOF"
+    print('hello world!')
+    EOF
+
+    wine ~/.wine/drive_c/Python27/Scripts/pyinstaller.exe --onefile HelloWorld.py
+    wine dist/HelloWorld.exe
 
 ************************************
 tty终端中显示和输入中文
 ************************************
-
 
 * https://blog.csdn.net/maybe_frank/article/details/53371201
 * https://fooyou.github.io/document/2015/11/30/fbterm-display-and-input-Chinese-in-tty.html

@@ -628,6 +628,7 @@ Systemd
 
 * `Systemd 入门教程 <http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html>`_
 * `systemctl 命令完全指南 <https://www.linuxidc.com/Linux/2015-07/120833.htm>`_
+* `REATING AND MODIFYING SYSTEMD UNIT FILES <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-managing_services_with_systemd-unit_files>`_
 
 .. code-block:: sh
 

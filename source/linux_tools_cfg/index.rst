@@ -490,6 +490,21 @@ nload
 
     $ watch -d -n 1 'echo free;mpstat;echo;free -m;echo temp; sudo hddtemp /dev/sd? ;echo; sensors'
 
+
+网络唤醒
+--------------------------------
+
+* `Wake Up Computers Using Linux Command  <https://www.cyberciti.biz/tips/linux-send-wake-on-lan-wol-magic-packets.html>`_
+
+.. code-block:: sh
+
+    sudo apt-get install  -y etherwake 
+
+    wakeonlan    E4:3A:6E:06:39:0A
+    # or
+    sudo etherwake -i eth0  E4:3A:6E:06:39:0A
+
+
 tmux
 --------------------------------
 
