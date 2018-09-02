@@ -113,6 +113,8 @@ python 语法规则
 Linux 下编译windows Exe
 ***********************************
 
+* `winehq <https://wiki.winehq.org/Ubuntu_zhcn>`_
+
 * `Build a Windows executable from Python scripts on Linux <http://sparkandshine.net/build-a-windows-executable-from-python-scripts-on-linux/>`_
 
 .. code-block:: sh
