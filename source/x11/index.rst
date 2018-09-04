@@ -101,3 +101,16 @@ Install
     # start  client
     EOF
 
+------------------
+
+* `Scrot-如何从Linux命令行截屏 <https://www.linuxidc.com/Linux/2014-06/103198.htm>`_
+
+------------
+
+.. code-block:: sh
+
+    ssh -AY user@host 
+    ssh -AY user@host xterm
+
+------------
+
