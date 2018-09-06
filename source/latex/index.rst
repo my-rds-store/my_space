@@ -68,6 +68,11 @@ Quick start (ubuntu)
 **********
 
 * `texstudio <http://texstudio.sourceforge.net/>`_
+    * Texstudio快捷键。
+        * Ctrl + t : 注释
+        * Ctrl + u : 去除注释
+
+
 * `ShareLaTex - 在线 LaTex 协同编辑 <https://www.sharelatex.com>`_
 
 ------------------------
