@@ -283,11 +283,11 @@ Bringing interfaces up/down
     $ sudo  /sbin/ifconfig <interface> up
     $ sudo  /sbin/ifconfig <interface> down
 
-
 CentOS 网络
 --------------
 
-`1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
+* `CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
+* `bond <https://www.cnblogs.com/liwanggui/p/6807212.html>`_
    
 .. code::
 

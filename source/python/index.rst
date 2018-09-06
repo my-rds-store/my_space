@@ -50,13 +50,15 @@ python 语法规则
 
 
 ****************
-好用的python库  
+python库  
 ****************
 
 * `lxml - XML and HTML with Python <http://lxml.de/>`_
 
 * `Urwid <http://urwid.org/index.html>`_
   * `urwid_timed_progress <https://github.com/mgk/urwid_timed_progress>`_
+
+* `pyserial <https://my.oschina.net/u/2306127/blog/616002>`_
 
 -----
 
