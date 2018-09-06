@@ -265,3 +265,20 @@ latex 模板
 * `国科大论文模板 <https://github.com/mohuangrui/ucasthesis>`_
 * `LaTeX Templates <http://www.latextemplates.com/>`_
 
+
+#########
+知识点   
+#########
+
+* 超链接
+
+
+.. code-block:: tex
+
+    %1.1 使用的包
+    \usepackage[colorlinks,linkcolor=blue]{hyperref}
+    
+    %1.2 插入链接的代码
+    \href{http://v.youku.com/}{Youku video} 
+
+
