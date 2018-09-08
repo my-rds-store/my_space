@@ -119,6 +119,10 @@ Gitignore
     $ git diff --cached
     # Compare files from two different branches
     $ git diff <branch_name> <another_branch_name> -- <path>
+    
+    # 比价不同分支，不同文件
+    $ git diff 4.2.0-dev-fix:./src/model/offline_vm/hotplug_usb.py \
+               4.2.0-vgt_passthough:./src-core/model/offline_vm/hotplug_usb.py
 
 .. code-block:: sh
 
