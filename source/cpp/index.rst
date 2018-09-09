@@ -69,3 +69,10 @@ D-bus研究
 JNI log
     * `android JNI中的log打印 <https://blog.csdn.net/yf210yf/article/details/9305623>`_
     * `Jni中打印log信息 <https://www.jianshu.com/p/acbf724fdcc9>`_
+
+
+**********
+数据结构    
+**********
+
+* `单向链表逆序 <https://blog.csdn.net/ljyljyok/article/details/77996029>`_
