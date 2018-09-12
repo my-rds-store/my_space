@@ -1,6 +1,6 @@
-######
-Glib  
-######
+############
+Glib/GTK  
+############
 
 * `GIO Reference Manual <https://developer.gnome.org/gio/stable/>`_
 
@@ -11,6 +11,10 @@ Glib
 * `g_main_loop_new (NULL, FALSE) 原理分析 <https://blog.csdn.net/arag2009/article/details/17095361>`_
 * `GTK+浅谈之总结 <https://blog.csdn.net/taiyang1987912/article/details/48174563>`_
 
+Book   
+=======
+
+    链接: https://pan.baidu.com/s/1B6xkYFYPWEJy2EccRaFkYQ 密码: m3q6
 
 
 
