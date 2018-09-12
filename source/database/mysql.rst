@@ -254,8 +254,8 @@ select 查询，中文显示乱码
 
     DELETE FROM table_name WHERE id=2;
 
-数据库恢复
-============
+数据库从另外一台导入
+========================
 
 .. code-block:: sh
 
@@ -264,6 +264,161 @@ select 查询，中文显示乱码
     $ sudo cp -r /val/lib/mysql  /val/lib/mysql.bak
     $ sudo cp -r new_mysql  /val/lib/mysql
     $ sudo chown -R mysql:mysql /val/lib/mysql 
+
+服务器数据库损坏修复
+========================
+
+1. 关闭使用数据库的服务
+------------------------------
+
+.. code-block:: sh
+
+    systemctl stop mccenter
+    systemctl stop zabbix-server
+
+    
+
+2.用恢复模式启动数据库
+------------------------------
+
+编辑数据库配置文件 `/etc/my.cnf`
+
+
+.. code-block:: ini
+
+    [mysqld]
+
+    datadir=/var/lib/mysql
+
+    socket=/var/lib/mysql/mysql.sock
+
+    # Disabling symbolic-links is recommended to prevent assorted security risks
+
+    symbolic-links=0
+
+    # Settings user and group are ignored when systemd is used.
+
+    # If you need to run mysqld under a different user or group,
+
+    # customize your systemd unit file for mariadb according to the
+
+    # instructions in http://fedoraproject.org/wiki/Systemd
+
+    # innodb_force_recovery = 2
+
+    # innodb_purge_threads = 0
+
+    max_allowed_packet = 500M
+
+    wait_timeout = 600
+
+    [mysqld_safe]
+
+    log-error=/var/log/mariadb/mariadb.log
+
+    pid-file=/var/run/mariadb/mariadb.pid
+
+    #
+
+    # include all files from the config directory
+
+    #
+
+    !includedir /etc/my.cnf.d
+
+* 在[mysqld]下添加 `innodb_force_recovery = 2` ，其中等号右侧的数值应该从1到6逐个测试。
+* 在[mysqld]下添加 `innodb_purge_threads = 0` 。
+* 在[mysqld]下添加 `max_allowed_packet = 500M` 。
+* 在[mysqld]下添加 `wait_timeout = 600` 。
+
+
+.. code-block:: sh
+
+    #重启数据库服务
+    systemctl restart mariadb
+
+
+如果长时间没有完成，则用 `ctrl + c` 停止命令执行。继续修改配置文件，增大 `innodb_force_recovery` 的值。
+然后重启数据库服务。
+
+如果重启数据库命令执行完成，用 `systemctl status mariadb` ，命令查看数据库服务是否已经启动。
+如果没有，继续修改配置文件，增大 `innodb_force_recovery` 的值。然后重启数据库服务。
+重复前面的步骤，直到数据库成功启动。
+
+
+3.备份数据库
+-------------------
+
+.. code-block:: sh
+
+    mysqldump -uroot --all-databases  > all_mysql_backup.sql
+
+4.清空数据库
+-------------------
+
+
+.. code-block:: sh
+
+    systemctl  stop  mariadb  #关闭数据库服务
+    cp -r  /var/lib/mysql/ /var/lib/mysql.bak # 备份数据库
+    rm -rf /var/lib/mysql/* #删除数据库
+
+5.正常启动数据库
+---------------------
+
+
+.. code-block:: sh
+
+    # 修改配置文件： 注释掉修改的配置项
+    # vi /etc/my.cnf
+    sed -i 's/^innodb_force_recovery =.*$/# innodb_force_recovery = 2/' /etc/my.cnf
+    sed -i 's/^innodb_purge_threads =.*$/# innodb_purge_threads = 0/'   /etc/my.cnf
+
+    systemctl restart mariadb #重启数据库
+
+6.恢复数据库数据
+-----------------------
+
+.. code-block:: sh
+
+    mysql -uroot -e "source /root/all_mysql_backup.sql"
+    
+7.修改数据库用户权限
+---------------------------
+
+.. code-block:: sh
+    
+    mysql -uroot #登录数据库shell。
+    
+.. code-block:: sql
+
+    /*修改数据库用户权限*/
+    update user set host = '%'  where user ='root';
+    flush privileges;
+    quit;
+
+.. code-block:: sh
+    
+    mysql -uroot #登录数据库shell。
+ 
+.. code-block:: sql
+
+    /*创建zabbix用户*/
+    create user 'zabbix'@'%'identified by 'zabbix';
+
+    /*给zabbix用户数据库zabbix的操作权限：*/
+    grant all on zabbix.* to'zabbix'@'%';
+    flush privileges;
+    quit;
+
+8.启动停掉的服务
+------------------------
+
+.. code-block:: sh
+
+    systemctl start mccenter
+    systemctl start zabbix-server
+
 
 修改最大连接数 
 ===============
