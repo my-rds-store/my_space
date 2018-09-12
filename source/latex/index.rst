@@ -94,7 +94,7 @@ Quick start (ubuntu)
 
 * https://www.ubuntupit.com/best-latex-editor-top-33-reviewed-for-linux-nerds/
 
------
+----------------
 
 * `TeXnicle <http://www.bobsoft-mac.de/texnicle/texnicle.html>`_
 * `TeXpen <https://sourceforge.net/projects/texpen/>`_
@@ -270,13 +270,11 @@ latex 模板
 * `国科大论文模板 <https://github.com/mohuangrui/ucasthesis>`_
 * `LaTeX Templates <http://www.latextemplates.com/>`_
 
-
-#########
+************
 知识点   
-#########
+************
 
 * 超链接
-
 
 .. code-block:: tex
 
