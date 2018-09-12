@@ -336,6 +336,7 @@ bittorrent文件编辑工具
    java/index
    android/index
    golang/index
+   c/index
    cpp/index
    nginx/index
    download_tools/index
