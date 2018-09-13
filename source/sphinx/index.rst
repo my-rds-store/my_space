@@ -65,8 +65,14 @@ INSTALL
 .. code-block:: python
 
     language = "zh_CN"
-
     html_theme = 'sphinx_rtd_theme'
+
+.. code-block:: sh
+
+    # language = "zh_CN"
+    sed -i "s/^language =.*$/language = 'zh_CN'/g" source/conf.py
+    # html_theme = 'sphinx_rtd_theme'
+    sed -i "s/^html_theme =.*$/html_theme = 'sphinx_rtd_theme'/g" source/conf.py
 
 代码
 ----------
