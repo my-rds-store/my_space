@@ -139,9 +139,17 @@ git submodule
                                             # 删除 子模块
 
     git submodule init                      # 初始化子模块
-    git submodule status                    # 状态
-    git submodule update                    # 更新子模块
+    git submodule status                    # 查看子模块
+    git submodule update                    # 
+
+    ##########################
+    #    跟新，子模块
+    ##########################
     git submodule foreach git pull          # 拉取所有子模块
+    git submodule sync                      # 
+    git add .                               # 
+    git push origin master                  # 
+
 
     git clone <repository> --recursive      # 递归的方式克隆整个项目
     git submodule update --init --recursive # 更新子模块
