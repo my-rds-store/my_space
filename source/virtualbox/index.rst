@@ -9,6 +9,11 @@ Install Virtualbox_
 
 .. _Virtualbox: https://www.virtualbox.org/wiki/Linux_Downloads
 
+----
+
+* `download.virtualbox.org  <http://download.virtualbox.org/virtualbox/>`_
+
+----
 
 * `Install oracle virtualbox on ubuntu <https://tecadmin.net/install-oracle-virtualbox-on-ubuntu/>`_
 
@@ -33,6 +38,14 @@ Install Virtualbox_
 
             # load kernel model
             sudo /sbin/vboxconfig
+
+*************************************
+Install Extension_Pack
+*************************************
+
+.. code-block:: sh
+
+    VBoxManage extpack install ~/Oracle_VM_VirtualBox_Extension_Pack-5.2.16.vbox-extpack
 
 ------------------
 
@@ -74,6 +87,17 @@ VirtualBox修改现有虚拟磁盘大小
 ****************************************************
 
 * `VirtualBox修改现有虚拟磁盘大小 <https://blog.csdn.net/weiguang1017/article/details/52252448>`_
+
+
+***************************************************
+Remote display (VRDP support)    
+***************************************************
+    
+* `Chapter7. Remote display (VRDP support) <https://www.virtualbox.org/manual/ch07.html#vrde>`_
+
+.. code-block:: sh
+
+    VBoxManage modifyvm "VM name" --vrde on
 
 
 ****************************************************
@@ -134,6 +158,50 @@ Virtual networking
     VBoxManage list natnetworks
 
 
+*****************
+创建虚拟机
+*****************
+
+.. code-block:: sh
+
+    # https://blog.csdn.net/anyjack/article/details/54861226
+    URL="http://192.168.8.25/jxm/mc_client_iso/MCCR-student-offline-4.2.1_201808122301.iso"
+    ISO_NAME=`basename $URL`
+
+    VM_NAME="redhat67v0"
+
+    curl -o $ISO_NAME $URL
+    mkdir virtualbox
+    VBoxManage createhd --filename virtualbox/${VM_NAME} --size 51240
+
+    #ls -lrt ./virtualbox/
+    VBoxManage createvm --name ${VM_NAME} --register
+    VBoxManage modifyvm ${VM_NAME} --ostype linux
+    VBoxManage modifyvm ${VM_NAME} --memory 4096  # MB
+
+    VBoxManage storagectl ${VM_NAME} --name IDE --add ide --controller PIIX4 --bootable off
+    VBoxManage storagectl ${VM_NAME} --name SATA --add sata --controller IntelAhci --bootable on
+
+    VBoxManage storageattach ${VM_NAME} --storagectl IDE --port 0 --device 0 --type dvddrive --medium  $ISO_NAME
+    VBoxManage storageattach ${VM_NAME} --storagectl SATA --port 0 --device 0 --type hdd --medium virtualbox/${VM_NAME}.vdi
+
+    VBoxManage modifyvm ${VM_NAME} --nic1 nat --nictype1 82540EM --cableconnected1 on
+
+    vboxmanage modifyvm ${VM_NAME} --vrde on
+    vboxmanage modifyvm ${VM_NAME} --vrdeport 3400
+
+    vboxmanage startvm ${VM_NAME} --type=headless
+
+    ## 查看正在运行的vbox系统，关机。
+    #vboxmanage list runningvms
+    #vboxmanage controlvm ${VM_NAME} poweroff
+    #VBoxManage showvminfo ${VM_NAME} |grep -i sata
+
+    ## 仅注销虚拟机
+    # VBoxManage unregistervm ${VM_NAME}
+
+    ## 删除虚拟机（！！！会删除所有虚拟硬盘，谨慎操作！！！）
+    # VBoxManage unregistervm --delete ${VM_NAME}
 
 
 

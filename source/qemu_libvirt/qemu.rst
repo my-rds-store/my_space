@@ -164,6 +164,10 @@ virsh 与 qemu-img
     virsh snapshot-revert srv7 srv7-snapshot_1                     #  还原
     virsh snapshot-delete srv7 srv7-snapshot_1                     #  删除
 
+串口
+-----------
+
+* `libvirt使用虚拟机的串口和控制台 <https://blog.csdn.net/isclouder/article/details/80774592>`_
 
 磁盘
 ------

@@ -22,7 +22,7 @@ INSTALL
     #  mac 
     ############
 
-    $ brew cask install mactex`
+    $ brew cask install mactex
 
     # Install Edit 
     $ brew cask install texstudio
@@ -68,6 +68,11 @@ Quick start (ubuntu)
 **********
 
 * `texstudio <http://texstudio.sourceforge.net/>`_
+    * Texstudio快捷键。
+        * Ctrl + t : 注释
+        * Ctrl + u : 去除注释
+
+
 * `ShareLaTex - 在线 LaTex 协同编辑 <https://www.sharelatex.com>`_
 
 ------------------------
@@ -89,7 +94,7 @@ Quick start (ubuntu)
 
 * https://www.ubuntupit.com/best-latex-editor-top-33-reviewed-for-linux-nerds/
 
------
+----------------
 
 * `TeXnicle <http://www.bobsoft-mac.de/texnicle/texnicle.html>`_
 * `TeXpen <https://sourceforge.net/projects/texpen/>`_
@@ -264,4 +269,19 @@ latex 模板
 * `LaTeX 开源小屋 <http://www.latexstudio.net/>`_
 * `国科大论文模板 <https://github.com/mohuangrui/ucasthesis>`_
 * `LaTeX Templates <http://www.latextemplates.com/>`_
+
+************
+知识点   
+************
+
+* 超链接
+
+.. code-block:: tex
+
+    %1.1 使用的包
+    \usepackage[colorlinks,linkcolor=blue]{hyperref}
+    
+    %1.2 插入链接的代码
+    \href{http://v.youku.com/}{Youku video} 
+
 

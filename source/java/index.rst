@@ -2,6 +2,8 @@
 Java   
 #######
 
+* `Java语言规范(英文) <http://java.sun.com/docs/books/jls/>`_
+
 * `Java jdk api <http://tool.oschina.net/apidocs/apidoc?api=jdk-zh>`_
 
 * `Java 教程 1.6  <http://www.runoob.com/java/java-tutorial.html>`_

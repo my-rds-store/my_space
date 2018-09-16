@@ -67,6 +67,11 @@ QT环境搭建: QT-4.8 在windows下的使用
 
 * `MXE <http://mxe.cc/>`_   
 
+********
+打包    
+********
+
+*  `QT程序打包成EXE <https://blog.csdn.net/weixin_39568531/article/details/79606105>`_
 
 ***********
 知识点     

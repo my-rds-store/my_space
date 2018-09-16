@@ -235,6 +235,12 @@ File->Settings->Other Settings->Vim Emulation
 Select Methods to Override/Implement
 
 **************
+移动UI框架      
+**************
+
+* `移动UI框架 Flutter <https://flutterchina.club/>`_
+
+**************
 常见问题      
 **************
 

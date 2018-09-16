@@ -297,12 +297,19 @@ nmcli命令
 *  `工具Valgrind,检测内存泄露 <https://www.cnblogs.com/wangkangluo1/archive/2011/07/20/2111248.html>`_
 
 
+rmp and yum   
+--------------
+
+* `RPM包的制作* <https://blog.csdn.net/samxx8/article/details/71945726>`_
+
+
 查询含有 *\*rdma.so* 的rpm 包
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: sh
 
     yum provides *rdma.so
+
 
 Fedora 开启SSH服务
    https://my.oschina.net/atttx123/blog/58100 

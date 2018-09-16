@@ -15,6 +15,62 @@ Vagrant 插件
 
     $ vagrant plugin install vagrant-share --plugin-clean-source --plugin-source https://gems.hashicorp.com
 
+    $ yum install libvirt-devel 
+    $ vagrant plugin install vagrant-libvirt --plugin-clean-source --plugin-source  https://mirrors.ustc.edu.cn/rubygems/
+    $ vagrant plugin install vagrant-mutate --plugin-clean-source --plugin-source  https://mirrors.ustc.edu.cn/rubygems/
+    $ vagrant plugin install vagrant-rekey-ssh --plugin-clean-source --plugin-source  https://mirrors.ustc.edu.cn/rubygems/
+
+************************************
+Vagrant-libvirt 
+************************************
+
+* `Install vagrant-libvirt <https://github.com/vagrant-libvirt/vagrant-libvirt/blob/master/README.md#installation>`_
+
+* `使用Vagrant部署kvm虚拟化 <https://huataihuang.gitbooks.io/cloud-atlas/virtual/vagrant/vagrant_libvirt_kvm.html>`_
+
+ 
+初始化
+============
+ 
+.. code-block:: sh
+
+    vagrant init centos/7 
+
+更名存储池
+============
+ 
+Vagrant会尝试使用一个名为default的存储池，
+如果这个default存储池不存在就会尝试在/var/lib/libvirt/images上创建这个defualt存储池。
+CentOS7默认安装libvirt环境，已经在/var/lib/libvirt/images目录上创建了名为images的存储池，
+所以需要修改Vagrantfile配置文件中定义provider。
+
+.. code:: 
+
+    Vagrant.configure("2") do |config|
+      config.vm.provider "libvirt" do |libvirt|
+        libvirt.storage_pool_name = "images"
+      end
+    end
+
+启动
+==============
+
+为告知Vagrant主机使用的provider是vagrant-libvirt, 而不是默认的virtualbox，
+设置环境变量（这样vagrant up命令就不需要加上--provider libvirt参数）
+
+.. code-block:: sh
+
+    vagrant up --provider libvirt
+    # or 
+    export VAGRANT_DEFAULT_PROVIDER=libvirt ; vagrant up
+
+
+FAQ
+==============
+
+* https://www.jianshu.com/p/44a48ae9db08
+* https://github.com/AJNOURI/COA/issues/68
+
 ***********************
 Vagrant box Init  
 ***********************
@@ -155,6 +211,9 @@ Vagrant Snapshot
 Vagrantfile  
 *************
 
+* `vagrantfile examble  <https://github.com/hugsy/modern.ie-vagrant/blob/master/Vagrantfile>`_
+* `vagrantfile examble2 <https://github.com/patrickdlee/vagrant-examples/blob/master/example6/Vagrantfile>`_
+
 .. code:: 
     
     config.vm.box = "mc_termian_test"
@@ -184,6 +243,10 @@ Vagrantfile
       vb.customize ["modifyvm", :id, "--hwvirtex", "on"]  
       vb.customize ["modifyvm", :id, "--vtxvpid",  "on"]
       vb.customize ["modifyvm", :id, "--vtxux",    "on"]
+
+      ## Remote display (VRDP support)
+      # vb.customize ["modifyvm", :id, "--vrde", "on"]
+      # vb.customize ["modifyvm", :id, "--vrdeport", "3940"] # change here to a free port,fefault :3389
 
     end
 

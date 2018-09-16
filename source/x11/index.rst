@@ -101,3 +101,33 @@ Install
     # start  client
     EOF
 
+------------------
+
+* `Scrot-如何从Linux命令行截屏 <https://www.linuxidc.com/Linux/2014-06/103198.htm>`_
+
+------------
+
+.. code-block:: sh
+
+    ssh -AY user@host 
+    ssh -AY user@host xterm
+
+------------
+
+* `Remote X11 GUI for LINUX/UNIX <https://www.redwireservices.com/remote-x11-for-linux-unix>`_
+* `通过X11实现 Linux服务器图形化界面显示 <https://www.cnblogs.com/lixiaochun/p/8547815.html>`_
+
+.. code-block:: sh
+
+    sudo yum install xorg-x11-xauth xterm
+    sed -i 's/#X11Forwarding yes/X11Forwarding yes/g' /etc/ssh/sshd_config
+    systemctl restart sshd
+
+    ssh -Y user@host
+
+    # test
+    yum install gnome-clocks.x86_64
+    gnome-clocks
+
+
+

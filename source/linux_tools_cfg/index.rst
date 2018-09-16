@@ -127,6 +127,20 @@ FTP服务 (Centos 7)
     # 6). 重启ftp
     $ sudo  systemctl restart vsftpd
 
+Ftp遇到的问题  
+---------------
+
+* 没有网关,ftp登录慢,解决
+
+  * `Linux vsftpd login method to solve the problem of slow card <https://www.programering.com/a/MDN1YzMwATU.html>`_
+  * `vsftpd log in is slow <http://geekinlinux.blogspot.com/2012/11/vsftpd-log-in-is-slow.html>`_
+
+.. code-block:: sh
+
+    tee -a  /etc/vsftpd/vsftpd.conf <<-'EOF'
+    reverse_lookup_enable=NO
+    EOF
+
 ------------------------------------------------------------------
 
 .. image:: ./images/vsftp.conf.png
@@ -269,11 +283,11 @@ Bringing interfaces up/down
     $ sudo  /sbin/ifconfig <interface> up
     $ sudo  /sbin/ifconfig <interface> down
 
-
 CentOS 网络
 --------------
 
-`1. CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
+* `CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
+* `bond <https://www.cnblogs.com/liwanggui/p/6807212.html>`_
    
 .. code::
 
@@ -307,6 +321,49 @@ ubuntu 网络
     bridge_maxwait 0 
     bridge_maxage 12
 
+
+无线网卡
+----------------
+
+* `ubuntu server 16.10 启用有/无线网卡 <https://blog.csdn.net/ltwang_tech/article/details/69258249>`_
+
+* BCM4332
+    * https://askubuntu.com/questions/55868/installing-broadcom-wireless-drivers
+    * https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx
+
+.. code-block:: sh
+
+    sudo apt-get install lshw
+    sudo apt-get install wireless-tools wpasupplicant 
+
+    #Ubuntu Server默认的情况下不会启用无线网卡，需要手动来启用无线网卡。
+    sudo lshw -numeric -class network
+    sudo ifconfig -a
+
+    #检查是哪一个接口来支持无线连接
+    sudo iwconfig
+    #启动无线网卡WLAN0
+    sudo ip link set wlan0 up
+    # 查看 SSID
+    sudo iwlist wlan0 scanning | egrep 'Cell |Encryption|Quality|Last beacon|ESSID'
+     
+    #生成无线路由密钥。这一步就是根据你无线网络的SSID和密码，来生成WLAN需要的配置文件
+    wpa_passphrase ESSID password > /etc/wpa_config.conf
+    # or
+    wpa_passphrase SSID  password > /etc/wpa_config.conf
+
+    # 设置无线网络。
+    # 编辑/etc/network/interfaces文件，将wlan添加到其中：
+    tee -a /etc/network/interfaces <<-'EOF'
+    auto wlan0
+    iface wlan0 inet dhcp
+    wpa-conf /etc/wpa_config.conf
+    EOF
+
+    # 重新启动计算机。根据我实际的操作结果来看，配置好了之后虽然说无线网卡被启用了，但是驱动貌似没加载全。
+    # 因此需要重启Ubuntu Server以便完整启用无线网卡。
+
+ 
 
 防火墙
 ---------------
@@ -432,6 +489,21 @@ nload
     $ vmstat
 
     $ watch -d -n 1 'echo free;mpstat;echo;free -m;echo temp; sudo hddtemp /dev/sd? ;echo; sensors'
+
+
+网络唤醒
+--------------------------------
+
+* `Wake Up Computers Using Linux Command  <https://www.cyberciti.biz/tips/linux-send-wake-on-lan-wol-magic-packets.html>`_
+
+.. code-block:: sh
+
+    sudo apt-get install  -y etherwake 
+
+    wakeonlan    E4:3A:6E:06:39:0A
+    # or
+    sudo etherwake -i eth0  E4:3A:6E:06:39:0A
+
 
 tmux
 --------------------------------

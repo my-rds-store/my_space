@@ -119,6 +119,10 @@ Gitignore
     $ git diff --cached
     # Compare files from two different branches
     $ git diff <branch_name> <another_branch_name> -- <path>
+    
+    # 比较不同分支，不同文件
+    $ git diff 4.2.0-dev-fix:./src/model/offline_vm/hotplug_usb.py \
+               4.2.0-vgt_passthough:./src-core/model/offline_vm/hotplug_usb.py
 
 .. code-block:: sh
 
@@ -135,12 +139,22 @@ git submodule
                                             # 删除 子模块
 
     git submodule init                      # 初始化子模块
-    git submodule status                    # 状态
-    git submodule update                    # 更新子模块
+    git submodule status                    # 查看子模块
+    git submodule update                    # 
+
+    ##########################
+    #    跟新，子模块
+    ##########################
     git submodule foreach git pull          # 拉取所有子模块
+    git submodule sync                      # 
+    git add .                               # 
+    git push origin master                  # 
+
 
     git clone <repository> --recursive      # 递归的方式克隆整个项目
     git submodule update --init --recursive # 更新子模块
+
+
 
 git tag 
 ============
@@ -154,6 +168,30 @@ git tag
     $ git push my_origin --tags
 
 如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
+
+
+git patch   
+============
+
+.. code-block:: sh
+
+    ########################################
+    # 当前分支，打patch
+    ########################################
+    # 1、生成patch(在代码修改后没有commit之前的状态执行，进入想生成patch的目录即可)
+    git diff > project.patch
+    # 2、打patch，方法和linux的diff一样
+    patch -p0 < project.patch
+    git apply project.patch  //也可用这个命令打patch
+    
+    ###################################################  
+    # 不同分支,不同文件，打pacth, 
+    # 将 my_dev 对比 master的修改，打成path
+    ################################################### 
+    git diff master my_dev -- src/view/setting/other_seting.py > other_seting.py.pacth
+
+    # 此时branch 位于 master 
+    git apply other_seting.py.pacth
 
 
 ************
@@ -181,6 +219,7 @@ Send Mail
 
     # send 
     $ git send-email --no-chain-reply-to --annotate --confirm=always --to=jxm_zn@163.com  master -1 
+
 
 
 ********
@@ -329,6 +368,48 @@ Gitlab_
     $ sudo gitlab-runner unregister --name "name"
     $ sudo gitlab-runner list
     $ sudo gitlab-runner verify
+
+Triggering pipelines through the API
+============================================
+
+* https://docs.gitlab.com/ee/ci/triggers/#adding-a-new-trigger
+
+.. code-block:: sh
+
+    curl -X POST \
+         -F token=c180975fb840ba2b5c942347a58f90 \
+         -F ref=master \
+         http://192.168.1.102/api/v4/projects/7/trigger/pipeline
+
+
+downloading-the-latest-artifacts
+====================================
+ 
+* `downloading-the-latest-artifacts <https://docs.gitlab.com/ce/user/project/pipelines/job_artifacts.html#downloading-the-latest-artifacts>`_
+* `download-the-artifacts-archive <https://docs.gitlab.com/ee/api/jobs.html#download-the-artifacts-archive>`_
+* `download-a-single-artifact-file <https://docs.gitlab.com/ee/api/jobs.html#download-a-single-artifact-file>`_
+
+.. code-block:: sh
+
+    # pirvite  project
+    curl -L  --header "PRIVATE-TOKEN: nDU2GenxaCiNouREB91n"  \
+        "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1" \
+        -o artifacts.zip
+
+    # public project
+    curl -L -o artifacts.zip \
+    "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"
+    
+    wget -O artifacts.zip  \
+    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1
+    
+    #### 
+    curl -L -o mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
+    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+
+    wget -O mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
+    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+
 
 Advanced
 ========
