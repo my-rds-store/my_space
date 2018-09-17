@@ -270,6 +270,9 @@ latex 模板
 * `国科大论文模板 <https://github.com/mohuangrui/ucasthesis>`_
 * `LaTeX Templates <http://www.latextemplates.com/>`_
 
+* 演示文稿
+    * `一个中文Latex幻灯片模版 <http://blog.sciencenet.cn/blog-255662-1095006.html>`_
+
 ************
 知识点   
 ************

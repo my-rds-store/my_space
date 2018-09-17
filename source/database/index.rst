@@ -9,4 +9,5 @@ DataBase
 
    mysql
    sqlite
+   postgresql.rst
 
