@@ -57,9 +57,10 @@ Vim
 YouCompleteMe
 ************************
 
+* `YouCompleteMe手册 <http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64>`_
+* `Vim插件YouCompleteMe介绍 <http://www.vitah.net/posts/15cf7230/>`_
 
-`YouCompleteMe手册 <http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64>`_
-
+* `dotvim [github] <https://github.com/Jiangxumin/dotvim/blob/master/README.md>`_
 
 安装
 -------------------
@@ -73,11 +74,13 @@ Ubuntu Linxu x64
 
         $ sudo apt-get install golang           # 搭建go环境
 
-
     .. code-block:: sh
 
+        $ cp -vrf /mnt/.vim/bundle/*  ~/.vim/bundle/
+
         $ git clone --depth 1 --recursive https://github.com/Valloric/YouCompleteMe.git \
-            $HOME/.vim/bundle/YouCompleteMe
+                $HOME/.vim/bundle/YouCompleteMe
+
         $ cd $HOME/.vim/bundle/YouCompleteMe
 
         $ cd crfasrnn  
@@ -87,11 +90,11 @@ Ubuntu Linxu x64
         $ ./install.py --gocode-completer # go
         $ ./install.py --all
 
-
     Vundle
         .. code-block:: sh
 
             Plugin 'Valloric/YouCompleteMe'
+
 
 YouCompleteMe的配置
 -------------------
