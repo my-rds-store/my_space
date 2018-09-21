@@ -175,7 +175,7 @@ tty终端中显示和输入中文
 
 ------
 
-* `Urwid <http://urwid.org/>`
+* `Urwid <http://urwid.org/>`_
 * `npyscreen  <https://npyscreen.readthedocs.io/index.html>`_
 
 *******
