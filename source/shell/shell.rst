@@ -8,6 +8,12 @@ ZSH
 
 * `Oh My ZSH <http://ohmyz.sh/>`_
 
+*******
+Book   
+*******
+
+* `shell 书籍推荐 <https://blog.csdn.net/hw478983/article/details/78813906>`_
+
 ------
 
 * `超赞的Linux软件 <https://alim0x.gitbooks.io/awesome-linux-software-zh_cn/content/>`_
