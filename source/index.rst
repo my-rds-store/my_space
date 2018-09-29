@@ -346,6 +346,7 @@ bittorrent文件编辑工具
    pycharm/remote_debug
    docker/index
    kubernetes/index
+   rancher/index
    vagrant/index
    virtualbox/index
    database/index
