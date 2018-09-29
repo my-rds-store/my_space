@@ -10,4 +10,5 @@ DataBase
    mysql
    sqlite
    postgresql.rst
+   oracle
 
