@@ -38,6 +38,7 @@ Bash
     sudo usermod -d /home/newHomeDir -m newUsername
 
 
+* `linux查看硬链接对应的所有文件 <http://blog.51cto.com/liuqun/1982654>`_
 
 
 常见问题
