@@ -2,6 +2,7 @@
 Mysql
 #########
 
+* `推荐几本学习MySQL的好书 <https://www.cnblogs.com/prettyisshit/p/5841055.html>`_
 
 .. code-block:: bash
 

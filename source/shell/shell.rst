@@ -8,6 +8,12 @@ ZSH
 
 * `Oh My ZSH <http://ohmyz.sh/>`_
 
+*******
+Book   
+*******
+
+* `shell 书籍推荐 <https://blog.csdn.net/hw478983/article/details/78813906>`_
+
 ------
 
 * `超赞的Linux软件 <https://alim0x.gitbooks.io/awesome-linux-software-zh_cn/content/>`_
@@ -32,6 +38,7 @@ Bash
     sudo usermod -d /home/newHomeDir -m newUsername
 
 
+* `linux查看硬链接对应的所有文件 <http://blog.51cto.com/liuqun/1982654>`_
 
 
 常见问题
