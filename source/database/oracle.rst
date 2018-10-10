@@ -66,3 +66,9 @@ Client
 
     select name from v$database;
 
+    cat test.sql
+    SELECT table_name FROM user_tables;
+    exit;
+
+    sqlplus64 system/oracle@//192.168.8.204:49161/xe @/root/test.sql
+
