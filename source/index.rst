@@ -104,14 +104,8 @@ Hello World
 *************
 PDF book     
 *************
-
-::
-
-    FTP地址：ftp://ftp1.linuxidc.com
-
-    用户名：ftp1.linuxidc.com
-
-    密码：www.linuxidc.com
+   
+* `linux公社下载地址 <https://linux.linuxidc.com/>`_
 
 *************
 open edx     
