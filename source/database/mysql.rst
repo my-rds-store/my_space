@@ -3,6 +3,7 @@ Mysql
 #########
 
 * `推荐几本学习MySQL的好书 <https://www.cnblogs.com/prettyisshit/p/5841055.html>`_
+    * `MySQL必知必会 高清晰中文书签版PDF+源码 <https://linux.linuxidc.com/index.php?folder=MjAxNsTq18rBzy801MIvNcjVL015U1FMsdjWqrHYu+EguN/H5c761tDOxMrpx6mw5lBERivUtMLr>`_
 
 .. code-block:: bash
 
