@@ -9,6 +9,7 @@ Mysql
 
     $ sudo docker pull mariadb
 
+    $ docker run --name some-mysql   -p 3306:3306 -e MYSQL_ROOT_PASSWORD=rootroot -d mysql:latest
     $ docker run --name some-mariadb -p 8306:3306 -e MYSQL_ROOT_PASSWORD=rootroot -d mariadb:latest
 
     # For Sysvinit Systems
