@@ -589,7 +589,10 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 
     lvs               # 查看
 
-    resize2fs /dev/mapper/ssd-data  # 同步文件系统
+    # 同步文件系统
+    resize2fs  /dev/mapper/ssd-data   # resize2fs命令,针对的是ext2、ext3、ext4文件系统
+    xfs_growfs /dev/mapper/ssd-data  # xfs_growfs命令,针对的是xfs文件系统
+
 
 
 .. code-block:: sh
