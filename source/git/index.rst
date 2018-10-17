@@ -252,7 +252,7 @@ Gitlab_
      sudo docker run --detach \
          --hostname gitlab.example.com \
          --env GITLAB_OMNIBUS_CONFIG="external_url 'http://192.168.8.100:10080'; gitlab_rails['lfs_enabled'] = true;" \
-         --publish 10443:443 --publish 10080:10080 --publish 10022:22 \
+         --publish 10443:443 --publish 10080:80 --publish 10022:22 \
          --name gitlab \
          --restart always \
          --volume /srv/gitlab/config:/etc/gitlab \
