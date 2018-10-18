@@ -93,11 +93,19 @@ CIFS (Ubuntu 14.04)
 * `linux cifs自动挂载windows硬盘或文件夹 <http://myblack.blog.chinaunix.net/uid-29261327-id-3988933.html>`_
 * `Linux下mount挂载cifs遇到的编码问题 <http://blog.sina.com.cn/s/blog_406127500101f92r.html>`_
 
-
 -----
 
 FTP服务 (Centos 7)
 ============================
+
+
+.. code-block:: sh
+
+    docker run -d --restart=always  --name ftpd_server -p 21:21 -p 30000-30009:30000-30009 -e "PUBLICHOST=localhost"  \
+    -e FTP_USER_NAME=mccr -e FTP_USER_PASS=123456 -e FTP_USER_HOME=/home/mccr \
+     -v /home:/home  \
+    stilliard/pure-ftpd
+
 
 .. code-block:: sh
 
