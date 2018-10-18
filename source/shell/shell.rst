@@ -594,6 +594,33 @@ http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
     xfs_growfs /dev/mapper/ssd-data  # xfs_growfs命令,针对的是xfs文件系统
 
 
+    ###############################
+    #  扩容
+    ###############################
+
+    # 1 建立新的分区
+    fdisk  -l /dev/vda
+    partprobe
+
+    # 2 新建新的pv
+    pvcreate /dev/vda3
+    pvdisplay
+    pvscan
+
+    # 3 # 放大 VG
+    # vgcreate -s 16M centos /dev/vda3
+    vgextend centos /dev/vda3
+    vgdisplay
+
+    # 4  增加 LV
+    lvextend -L +50G /dev/mapper/centos-root
+    lvdisplay
+
+    # 5 完整的将lv 容量，扩充到整个文件系统
+    # resize2fs /dev/mapper/centos-root
+    xfs_growfs /dev/mapper/centos-root
+    df -hT
+
 
 .. code-block:: sh
 
