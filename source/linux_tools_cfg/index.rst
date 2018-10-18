@@ -425,7 +425,9 @@ ubuntu 网络
 
     $ export EDITOR=vim
     $ crontab -e
-    $ sudo  service cron status/start/stop/restart
+
+    $ service cron status/start/stop/restart
+    $ systemcltl  restart crond
 
 ::
 
