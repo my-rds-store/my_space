@@ -411,6 +411,9 @@ downloading-the-latest-artifacts
     http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
 
 
+* `Building Docker images with GitLab CI/CD <https://docs.gitlab.com/ee/ci/docker/using_docker_build.html>`_
+
+
 Advanced
 ========
 
