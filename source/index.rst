@@ -343,7 +343,7 @@ bittorrent文件编辑工具
    download_tools/index
    bittorrent/index
    shell/shell
-   sphinx/index
+   lightweight_markup_language/index
    latex/index
    pycharm/remote_debug
    docker/index

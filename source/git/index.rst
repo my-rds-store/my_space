@@ -351,13 +351,38 @@ Gitlab_
             --docker-image "docker:latest" \
             --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 
-
-
 3. gitlab-ci.yml
 ------------------
 
 * `通过 .gitlab-ci.yml配置任务 <https://fennay.github.io/gitlab-ci-cn/gitlab-ci-yaml.html>`_
 * `Configuration of your jobs with .gitlab-ci.yml <https://docs.gitlab.com/ee/ci/yaml/README.html>`_
+
+gitlab-ci 环境变量
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* CI_REPOSITORY_URL 
+* CI_PIPELINE_URL   
+* CI_PROJECT_URL     : Project url
+* CI_SERVER_NAME
+* CI_COMMIT_REF_NAME : 分支名
+
+.. code-block:: sh
+
+    $ echo "$CI_REPOSITORY_URL"
+    http://gitlab-ci-token:xxxxxxxxxxxxxxxxxxxx@172.19.2.57/jiang_xmin/gitlib-ci_test.git
+    $ echo "$CI_PIPELINE_URL"
+    http://172.19.2.57/jiang_xmin/gitlib-ci_test/pipelines/149
+    $ echo "$CI_PROJECT_URL"
+    http://172.19.2.57/jiang_xmin/gitlib-ci_test
+    $ echo "$CI_SERVER"
+    yes
+    $ echo "$CI_SERVER_NAME"
+    GitLab
+    $ echo "$CI_COMMIT_REF_NAME"
+    dev
+    $ IP=`echo "$CI_PROJECT_URL" | sed "s/^http:\/\///"| sed "s/\/.*$//"`
+    $ echo "$IP"
+    172.19.2.57
 
 4. gitlab-runner 常用命令
 --------------------------
@@ -409,6 +434,9 @@ downloading-the-latest-artifacts
 
     wget -O mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
     http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+
+
+* `Building Docker images with GitLab CI/CD <https://docs.gitlab.com/ee/ci/docker/using_docker_build.html>`_
 
 
 Advanced
