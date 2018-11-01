@@ -362,5 +362,6 @@ bittorrent文件编辑工具
    x11/index
    install_cd_customization/index
    gfw_is_shit/index
+   tensorflow/index
    other/index
 
