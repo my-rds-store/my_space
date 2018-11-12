@@ -271,7 +271,7 @@ Ubuntu 源列表
     * https://letsencrypt.org/
 
 DDRL
----------
+============
 
 * `Partclone <https://partclone.org>`_
     * `鸟哥介绍DDRL <http://linux.vbird.org/linux_enterprise/0130drbl_clonezilla.php>`_
@@ -285,7 +285,7 @@ DDRL
 * http://drbl.nchc.org.tw/fine-print.php?path=advanced/./01_DRBL/01-drbl-archi.faq#01-drbl-archi.faq
 
 Udpcast
------------
+===========
 
 * http://www.udpcast.linux.lu/mkimagedoc.html
 
