@@ -52,7 +52,6 @@ Vim
 
 * `VIM配置---面向前端 <http://blog.csdn.net/u012948976/article/details/51869990>`_
 
-
 --------
 
 * `vim gbk编码支持，与转码 <https://www.cnblogs.com/jaiho/archive/2011/08/24/2056375.html>`_
@@ -66,6 +65,8 @@ Vim
 
 :: 
 
+    :set fileencoding       ,  查看编码
+    :set fileencoding=utf-8 ， 然后 w 存盘 一下即可转化为 utf8 格式，
     :set fileencodings=utf-8 ，然后 w 存盘 一下即可转化为 utf8 格式，
     :set fileencodings=cp936 ，然后 w 存盘 一下即可转化为 ANSI 格式。
 
