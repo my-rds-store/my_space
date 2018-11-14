@@ -11,6 +11,10 @@ Glib/GTK
 * `g_main_loop_new (NULL, FALSE) 原理分析 <https://blog.csdn.net/arag2009/article/details/17095361>`_
 * `GTK+浅谈之总结 <https://blog.csdn.net/taiyang1987912/article/details/48174563>`_
 
+------
+
+* `C语言也能做界面：踏上GTK+学习之旅 <https://blog.csdn.net/tennysonsky/article/details/42740865>`_
+
 Book   
 =======
 

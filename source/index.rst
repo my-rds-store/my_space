@@ -270,6 +270,25 @@ Ubuntu 源列表
 * `申请Let's Encrypt永久免费SSL证书 <https://www.jianshu.com/p/3ae2f024c291>`_
     * https://letsencrypt.org/
 
+DDRL
+============
+
+* `Partclone <https://partclone.org>`_
+    * `鸟哥介绍DDRL <http://linux.vbird.org/linux_enterprise/0130drbl_clonezilla.php>`_
+    * `Partclone <http://ju.outofmemory.cn/entry/346636>`_
+    * `Partclone - git hub <https://github.com/Thomas-Tsai/partclone>`_
+
+
+* https://github.com/stevenshiau/drbl
+* http://drbl.nchc.org.tw/one4all/desktop/drbl-cmd-list.php
+* http://drbl.nchc.org.tw/advanced/
+* http://drbl.nchc.org.tw/fine-print.php?path=advanced/./01_DRBL/01-drbl-archi.faq#01-drbl-archi.faq
+
+Udpcast
+===========
+
+* http://www.udpcast.linux.lu/mkimagedoc.html
+
 ----
 
 P2P File Transfer
@@ -362,6 +381,7 @@ bittorrent文件编辑工具
    x11/index
    install_cd_customization/index
    gfw_is_shit/index
+   tensorflow/index
    other/index
 
 ------------------
