@@ -364,3 +364,7 @@ bittorrent文件编辑工具
    gfw_is_shit/index
    other/index
 
+------------------
+
+* `英特尔® 服务器主板 S1200SPL的 pGFX 图形驱动程序 S1200SPL <https://downloadcenter.intel.com/zh-cn/download/25689/pGFX-Graphics-Driver-for-the-Intel-Server-Board-S1200SPL?product=97950&_ga=2.88649426.81022229.1538991029-1974842179.1536233238>`_
+
