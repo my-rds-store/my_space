@@ -80,7 +80,7 @@ ceph
 
 --------------
 
-* `协作工具 leangoo <www.leangoo.com>`_
+* `协作工具 leangoo <https://www.leangoo.com>`_
 
 
 other
