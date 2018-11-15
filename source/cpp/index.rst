@@ -11,6 +11,7 @@ C/C++
    glib
    data_structure
    debug
+   ffmpeg
 
 
 
