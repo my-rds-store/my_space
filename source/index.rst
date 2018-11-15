@@ -299,10 +299,6 @@ P2P File Transfer
 
 --------------
 
-* 天气预报 android 短信推送 
-
---------------
-
 http://www.isjian.com/
 
 Linux From Scratch
