@@ -145,7 +145,7 @@ git submodule
     ##########################
     #    跟新，子模块
     ##########################
-    git submodule foreach git pull          # 拉取所有子模块
+    git submodule foreach git pull origin master # 拉取所有子模块
     git submodule sync                      # 
     git add .                               # 
     git push origin master                  # 
