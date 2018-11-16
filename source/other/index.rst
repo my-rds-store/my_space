@@ -346,6 +346,10 @@ nginx
 * `nginx简易教程 <http://www.cnblogs.com/jingmoxukong/p/5945200.html>`_
 
 
+----------
+
+* `Ubuntu 14.04安装teamviewer 远程桌面 <https://blog.csdn.net/love_xiaozhao/article/details/52704197>`_
+
 ubutnu 源制作
 ---------------
 
