@@ -309,11 +309,15 @@ apt-get install时如何指定安装版本
     # delete pyc
     find . -name '*.pyc' -delete
 
+    # File's data was last modified n*24 hours ago
+    find  -type f  -mtime +10  -name "mcstudent_offline*"
+
 .. code-block:: sh
 
     find -type  f  -name  '*.cpp'  |   xargs  grep  '关键字'    # 查找含有某字符串的所有文件
     chmod a+x `find ./ -type f -name '*.c'`  			# 修改当前目录及其子目录，文件属性
     service --status-all                                        # 查看进程服务
+
 
 
 判断文件中包含字段
