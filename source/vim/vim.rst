@@ -64,6 +64,9 @@ Vim
     set fileformats=unix
 
     " 设置gvim 
+    winpos 100 100          "设置初始界面位置
+    set lines=25 columns=85 "设置初始界面大小
+
     set gfn=Courier_New:h14 # 字体 字号
     colorscheme torte      # 主题
     set guioptions-=m      # 隐藏菜单栏 
