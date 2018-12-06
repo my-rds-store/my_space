@@ -63,6 +63,12 @@ Vim
     set termencoding=utf-8
     set fileformats=unix
 
+    " 设置gvim 
+    set gfn=Courier_New:h14 # 字体 字号
+    colorscheme torte      # 主题
+    set guioptions-=m      # 隐藏菜单栏 
+    set guioptions-=T      # 隐藏工具栏目
+
 :: 
 
     :set fileencoding       ,  查看编码
@@ -70,6 +76,7 @@ Vim
     :set fileencodings=utf-8 ，然后 w 存盘 一下即可转化为 utf8 格式，
     :set fileencodings=cp936 ，然后 w 存盘 一下即可转化为 ANSI 格式。
 
+    
 ************************
 YouCompleteMe
 ************************

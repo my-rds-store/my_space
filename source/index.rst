@@ -26,7 +26,6 @@ Hello World
     }
     .tet{
             color: #E8B606;	
-
     }
      
     #wrapper #box {
