@@ -4,11 +4,17 @@ Python
 
 * `Python Code Examples <https://www.programcreek.com/python/>`_
 
-* `python-requests <http://www.python-requests.org/en/master/>`_
-* `Python Requests快速入门  <https://blog.csdn.net/iloveyin/article/details/21444613>`_
+* `python-requests <http://www.python-requests.org/en/master/>`_ * `Python Requests快速入门  <https://blog.csdn.net/iloveyin/article/details/21444613>`_
 
 * `在Linux中使用Python模拟键盘按键  <https://blog.csdn.net/zhouy1989/article/details/13997507>`_
 
+* 
+
+
+.. code-block:: sh
+    
+    #  SimpleHTTPServer
+    python -m SimpleHTTPServer 8008
 
 ************
 打包
