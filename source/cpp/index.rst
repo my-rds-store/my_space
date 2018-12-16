@@ -23,6 +23,14 @@ C/C++
 `Unix c <https://unix-c.readthedocs.io>`_
 *****************************************************
 
+***************************************************************************
+`跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
+***************************************************************************
+
+* https://github.com/seisman/how-to-write-makefile
+
+-------
+
 * `UTF-8 <http://www.cnblogs.com/chenwenbiao/archive/2011/08/11/2134503.html>`_
 
 
