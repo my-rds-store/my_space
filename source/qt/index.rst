@@ -42,6 +42,17 @@ PyQt4
 * `PyQt4 信号和槽用法总结 <http://blog.csdn.net/jxm_csdn/article/details/51628367>`_
 
 
+********************
+PyQt 学习示例    
+********************
+
+* `Python GUI  <https://pythonprogramminglanguage.com/pyqt/>`_
+
+.. code-block:: sh
+
+    git clone --depth 1  https://github.com/pyqt/examples.git
+
+
 **********
 播放器    
 **********
