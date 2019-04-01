@@ -55,5 +55,8 @@ Mac
     $ brew cask install mounty
   
 
+* 安装串口驱动 CH341, 调试助手CoolTerm
+    * https://github.com/adrianmihalko/ch340g-ch34g-ch34x-mac-os-x-driver
+    * http://freeware.the-meiers.org/
 
 
