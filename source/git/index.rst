@@ -136,7 +136,9 @@ git submodule
     
     git submodule add url path/to/name 
     git submodule add <repo> <dir>          # 添加 子模块
+    git submodule add -b tractor --force <url> path
                                             # 删除 子模块
+					    
 
     git submodule init                      # 初始化子模块
     git submodule status                    # 查看子模块
@@ -154,7 +156,7 @@ git submodule
     git clone <repository> --recursive      # 递归的方式克隆整个项目
     git submodule update --init --recursive # 更新子模块
 
-
+* `Getting Git Submodule To Track A Branch <https://www.activestate.com/blog/getting-git-submodule-track-branch/>`_
 
 git tag 
 ============
