@@ -154,8 +154,9 @@ git submodule
 
 
     git clone <repository> --recursive      # 递归的方式克隆整个项目
-    git submodule update --init --recursive # 更新子模块
-
+    git submodule update --init --recursive     # 更新子模块
+    git submodule update --recursive --remote   # 更新子模块
+    
 * `Getting Git Submodule To Track A Branch <https://www.activestate.com/blog/getting-git-submodule-track-branch/>`_
 
 git tag 
