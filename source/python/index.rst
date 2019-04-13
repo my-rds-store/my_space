@@ -14,8 +14,11 @@ Python
 
 .. code-block:: sh
     
-    #  SimpleHTTPServer
+    # python2   SimpleHTTPServer
     python -m SimpleHTTPServer 8008
+    
+    # python3   
+    python -m http.server 8008
 
 ************
 打包
