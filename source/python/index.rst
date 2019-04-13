@@ -201,3 +201,14 @@ tty终端中显示和输入中文
 
 * https://github.com/Avik-Jain/100-Days-Of-ML-Code
 
+
+******************
+build int docker 
+******************
+
+* https://github.com/dockefile-storage/wine/blob/master/Dockerfile
+* https://hub.docker.com/r/cdrx/pyinstaller-windows/dockerfile
+* http://www.kegel.com/wine/cl-howto-win7sdk.html
+* https://github.com/Winetricks/winetricks
+    * https://github.com/Winetricks/winetricks/blob/master/files/verbs/settings.txt
+
