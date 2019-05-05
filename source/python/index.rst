@@ -9,8 +9,6 @@ Python
 
 * `在Linux中使用Python模拟键盘按键  <https://blog.csdn.net/zhouy1989/article/details/13997507>`_
 
-* 
-
 
 .. code-block:: sh
     
@@ -19,6 +17,15 @@ Python
     
     # python3   
     python -m http.server 8008
+
+
+.. code-block:: sh
+
+    # 查找python安装包的路径 site-packages
+
+    python -m site              # 系统目录
+    python -m site --user-site  # 用户目录
+
 
 ************
 打包
