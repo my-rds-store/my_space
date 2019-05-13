@@ -71,6 +71,9 @@ Create New branch
 
     $ git branch  <new_branch_name> <commit_id>  
     $ git checkout -b  <new_branch_name> <commit_id>  
+    $ git branch -a   # 查看分支（本地 + 远程)  
+    $ git push origin --delete <new_branch_name>   # 删除远程分支
+
 
 Gitignore   
 ============

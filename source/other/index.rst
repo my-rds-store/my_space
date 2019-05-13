@@ -386,7 +386,15 @@ ubutnu 源制作
     apt-get update
     apt-cache search  "deb包“
 
+ubuntu 好用的工具
+------------------
 
+.. code-block:: sh
+
+	# Indicator Stickynotes - Ubuntu 桌面便签小工具 
+	sudo add-apt-repository ppa:umang/indicator-stickynotes
+	sudo apt-get update 
+	sudo apt-get install indicator-stickynotes 
 
 问题
 ------
