@@ -330,6 +330,32 @@ ubuntu 网络
     bridge_maxage 12
 
 
+::
+
+        # /etc/network/interfaces 添加
+	auto enp0s25
+	iface enp0s25 inet static
+	address 192.168.0.88
+	netmask 255.255.255.0
+	gateway 192.168.0.1
+
+::
+
+        # interfaces 方式修改 DNS,  在 /etc/network/interfaces 添加
+	dns-nameserver xx.xx.xx.xx  # 单个 重启电脑生效
+	dns-nameserver xxx.xxx.xx.xx
+	dns-nameservers xxx.xxx.xxx.xxx xxx.xxx.xx.xxx  # 多个 重启电脑生效
+
+::
+
+	# resolvconf 方式修改 dns
+        #    /etc/resolv.conf                     # 临时
+        #    /etc/resolvconf/resolv.conf.d/head   # sudo resolvconf -u  更新
+
+        nameserver xxx.xxx.xx.xxx
+        nameserver xx.xx.xx.xx
+
+
 无线网卡
 ----------------
 
