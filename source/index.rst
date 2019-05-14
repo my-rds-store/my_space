@@ -333,6 +333,24 @@ bittorrent文件编辑工具
     * BEncode Editor
     * TrackerEditor
 
+邮箱
+===========
+
+* `网易邮箱 <https://help.aliyun.com/knowledge_detail/36576.html?spm=a2c4g.11186631.2.3.372744fdMddz7M>`_
+
+::
+
+        企业云邮箱各个服务器地址及端口信息如下：
+
+        收件服务器地址：
+
+                POP 服务器地址：pop3.mxhichina.com 端口110，SSL 加密端口995
+                或
+                IMAP 服务器地址：imap.mxhichina.com 端口143，SSL 加密端口993
+
+        发件服务器地址：
+                SMTP 服务器地址：smtp.mxhichina.com 端口25， SSL 加密端口465
+
 
 
 ..
