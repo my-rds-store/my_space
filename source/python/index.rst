@@ -219,3 +219,11 @@ build int docker
 * https://github.com/Winetricks/winetricks
     * https://github.com/Winetricks/winetricks/blob/master/files/verbs/settings.txt
 
+************************************
+build install python 
+************************************
+
+* `Ubuntu 16.04 安装 Python3.6 <https://www.cnblogs.com/gaowengang/p/7736672.html>`_
+        * `python3.6安装报错ZipImportError...zlib not available <https://blog.51cto.com/jschu/2174394>`_
+
+
