@@ -223,6 +223,11 @@ build int docker
 build install python 
 ************************************
 
+.. code-block:: sh
+        # 编译前安装 , 否则pip 报错误
+        sudo apt-get install openssl
+        sudo apt-get install libssl-dev
+
 * `Ubuntu 16.04 安装 Python3.6 <https://www.cnblogs.com/gaowengang/p/7736672.html>`_
         * `python3.6安装报错ZipImportError...zlib not available <https://blog.51cto.com/jschu/2174394>`_
 
