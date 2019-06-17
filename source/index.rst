@@ -360,7 +360,7 @@ Peak-CAN
         【error】scripts/basic/fixdep: Syntax error: "(" unexpected
 
 
-* `解决方法 <https://www.cnblogs.com/happyamyhope/p/9430225.html>_`
+* `解决方法 <https://www.cnblogs.com/happyamyhope/p/9430225.html>`_
 
 .. code-block:: bash
 
