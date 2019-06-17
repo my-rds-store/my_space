@@ -372,6 +372,18 @@ Peak-CAN
     # 注意，也可能是在scripts下而不是build目录下进行编译；
     # cd /lib/modules/4.4.38-tegra/build/scripts
 
+
+* jetson Tx2  install python-can
+
+.. code-block:: bash
+
+        tar xzvf python-can-3.2.0.tar.gz 
+        cd python-can-3.2.0/
+        ls
+        python3 setup.py build
+        python3 setup.py install --user
+
+
 ..
  我是注释内容
  你看不到我
