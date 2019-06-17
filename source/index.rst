@@ -352,6 +352,25 @@ bittorrent文件编辑工具
                 SMTP 服务器地址：smtp.mxhichina.com 端口25， SSL 加密端口465
 
 
+Peak-CAN
+===========
+
+:: 
+
+        【error】scripts/basic/fixdep: Syntax error: "(" unexpected
+
+
+* `解决方法 <https://www.cnblogs.com/happyamyhope/p/9430225.html>_`
+
+.. code-block:: bash
+
+    vim scripts/basic/fixdep
+    cd /lib/modules/4.4.38-tegra/build
+    sudo make scripts
+    sudo make -j4 scripts
+
+    # 注意，也可能是在scripts下而不是build目录下进行编译；
+    # cd /lib/modules/4.4.38-tegra/build/scripts
 
 ..
  我是注释内容
@@ -402,3 +421,4 @@ bittorrent文件编辑工具
 
 * `英特尔® 服务器主板 S1200SPL的 pGFX 图形驱动程序 S1200SPL <https://downloadcenter.intel.com/zh-cn/download/25689/pGFX-Graphics-Driver-for-the-Intel-Server-Board-S1200SPL?product=97950&_ga=2.88649426.81022229.1538991029-1974842179.1536233238>`_
 
+------------------------
