@@ -341,6 +341,8 @@ ubuntu 网络
 
 ::
 
+        sudo apt-get install resolvconf
+
         # interfaces 方式修改 DNS,  在 /etc/network/interfaces 添加
 	dns-nameserver xx.xx.xx.xx  # 单个 重启电脑生效
 	dns-nameserver xxx.xxx.xx.xx
