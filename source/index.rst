@@ -402,7 +402,8 @@ Peak-CAN
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+    
+   ros/index
    qemu_libvirt/qemu
    openstack/index
    vim/vim
