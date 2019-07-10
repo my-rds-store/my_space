@@ -48,6 +48,11 @@ git config
     $ git config --global --get http.proxy   # 查询理服务器
     $ git config --global --get https.proxy
 
+    # 记住密码
+    $ git config credential.helper store # 永久记住密码
+    $ git config credential.helper cache  # 临时记住密码15分钟
+    $ git config credential.helper 'cache --timeout=3600' # 临时记住密码1小时
+
 撤销与回退 
 ============
 
