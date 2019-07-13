@@ -21,22 +21,20 @@
     g++ read.cpp addressbook.pb.cc  -o read `pkg-config --cflags --libs     protobuf`
 
 
- JRebel激活
+
+JRebel激活
 -----------------
 
-http://blog.lanyus.com/archives/174.html
-
+* http://blog.lanyus.com/archives/174.html
 * `撸了个反代工具, 可用于激活JRebel <http://blog.lanyus.com/archives/317.html>`_
 
-.. code-block::sh
-
+.. code-block:: sh
 
         docker pull ilanyu/golang-reverseproxy
         docker run -d -p 8888:8888 ilanyu/golang-reverseproxy
-
         # 1. 浏览器打开 http://127.0.0.1:8888/
         # 2. 点击"获取注册码"
-                                                                              
+                                                                      
 
 http://blog.lanyus.com/archives/317.html
 
