@@ -204,11 +204,17 @@ git patch
     # 此时branch 位于 master 
     git apply other_seting.py.pacth
 
+************
+打包发布   
+************
+
+.. code-block:: sh
+
+        git archive --format zip --output /path/to/file.zip master # 将 master 以zip格式打包到指定文件
 
 ************
 Send Mail   
 ************
-
 
 .. code-block:: sh
 
