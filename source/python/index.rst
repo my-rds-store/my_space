@@ -43,6 +43,7 @@ Book
 * `python3-cookbook <http://python3-cookbook.readthedocs.io/zh_CN/latest/>`_
 * `流畅的Python 中文PDF <http://www.linuxidc.com/Linux/2017-06/144466.htm>`_
 * `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
+* `NumPy 中文文档 <https://www.numpy.org.cn/>`_
 
 python 语法规则   
 ==================
