@@ -2,6 +2,11 @@
 ROS
 #############
 
+
+***********
+环境搭建
+***********
+
 .. code-block:: sh
 
         # 更换阿里源
@@ -23,4 +28,8 @@ ROS
                              python-wstool \
                              build-essential --yes --allow-unauthenticated
         source /opt/ros/kinetic/setup.sh
+
+
+* `《ROS机器人开发实践》源码 <https://github.com/huchunxu/ros_exploring>`_
+
 
