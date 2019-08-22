@@ -45,6 +45,35 @@ Book
 * `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
 * `NumPy 中文文档 <https://www.numpy.org.cn/>`_
 
+**************
+国内镜像源
+**************
+
+* Linux
+ 
+.. code-block:: sh
+        
+    mkdir $HOME/.pip
+    tee $HOME/.pip/pip.conf <<-'EOF'
+    [global]
+    index-url = https://mirrors.aliyun.com/pypi/simple/
+
+    [install]
+    trusted-host=mirrors.aliyun.com
+    EOF
+
+* Windows
+
+::
+
+        在文件夹的地址栏输入 %appdata% （即进入这个文件夹）。
+
+        在当前文件夹下新建一个pip文件夹。
+
+        进入pip文件夹，新建一个pip.ini文件
+
+
+
 python 语法规则   
 ==================
 

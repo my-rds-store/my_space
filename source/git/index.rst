@@ -11,7 +11,7 @@ Git
 
 * `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`_
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
-* `git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
+* `Git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
 .. image:: ./image/Repository.png
     :scale: 100%
@@ -237,6 +237,22 @@ Send Mail
     # send 
     $ git send-email --no-chain-reply-to --annotate --confirm=always --to=jxm_zn@163.com  master -1 
 
+
+
+* `如何加快github下载代码的速度 <https://blog.csdn.net/mist99/article/details/80602090>`_
+
+::
+
+        sudo gedit /etc/hosts
+
+        添加
+
+        151.101.185.194 http://github.global.ssl.fastly.net 
+        192.30.253.112  http://github.com
+
+        保存,退出,并重启网络
+
+        /etc/init.d/networking restart
 
 
 ********

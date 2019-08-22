@@ -43,6 +43,8 @@ ROS
 
         echo $ROS_PACKAGE_PATH
 
+        catkin_init_workspace
+
         catkin_create_pkg <package_name> [depend1] [depend2] ... [dependn]
         #catkin_create_pkg learning_communication std_msgs rospy rsocpp
         catkin_make
