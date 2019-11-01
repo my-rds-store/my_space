@@ -29,6 +29,16 @@ ROS
                              build-essential --yes --allow-unauthenticated
         source /opt/ros/kinetic/setup.sh
 
+        ########################################
+        # install  ros melodic  on ubuntu 18.04  
+        ########################################
+        sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
+        rosdep update
+
+        sudo apt install ros-melodic-desktop-full
+        apt-cache search ros-melodic
+
+
 
 * `《ROS机器人开发实践》源码 <https://github.com/huchunxu/ros_exploring>`_
 
