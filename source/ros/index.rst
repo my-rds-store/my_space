@@ -36,6 +36,9 @@ ROS
         rosdep update
 
         sudo apt install ros-melodic-desktop-full
+        # sudo apt-get install rosbash 
+        sudo apt-get install ros-melodic-rosbash ros-melodic-rosbash-params # install and reboot , roscd 
+
         apt-cache search ros-melodic
 
 .. code-block:: sh
@@ -85,6 +88,9 @@ ROS
         ###########
 
         rostopic -h
+        
+        rostopic type /sent_messages
+        rosmsg info can_msgs/Frame
 
         ############
         # rosbag
@@ -121,6 +127,11 @@ ROS
 
        $ cansend can0 123#0102030405060708
         
+* `vcan <https://python-can.readthedocs.io/en/master/interfaces/socketcan.html#the-virtual-can-driver-vcan>`_
+
+
+.. code-block:: sh 
+
        #######################
        ## create vcan
        #######################
@@ -136,9 +147,20 @@ ROS
        sudo cangw -A -s vcan0 -d vcan1 -e 
        sudo cangw -A -s vcan1 -d vcan0 -e
 
+
+       rosrun socketcan_bridge socketcan_bridge_node _can_device:=vcan0
+       rostopic pub  /sent_messages can_msgs/Frame  -r 1 --  \
+       '{header: auto,id: 15, is_rtr: 0,is_extended: 0,is_error: 0,dlc: 8,data: [1,2,3,4,5,6,7,9]}'
+
+       rosrun socketcan_bridge socketcan_to_topic_node _can_device:=vcan0
+       rosrun socketcan_bridge topic_to_socketcan_node _can_device:=vcan0
+
+
 * `socketcan_interface <http://wiki.ros.org/socketcan_interface?distro=melodic>`_
+
 * `CAN BUS tools <https://cantools.readthedocs.io/en/latest/#>`_
         
+
 ------
 
 * `研华can卡驱动 下载地址  <https://support.advantech.com/support/DownloadSRDetail_New.aspx?SR_ID=GF-GRSC&Doc_Source=Download>`_

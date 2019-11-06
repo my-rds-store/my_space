@@ -312,6 +312,9 @@ apt-get install时如何指定安装版本
     # File's data was last modified n*24 hours ago
     find  -type f  -mtime +10  -name "mcstudent_offline*"
 
+    find ./  -type f -perm -111 #查看具有可执行权限的文件
+
+
 .. code-block:: sh
 
     find -type  f  -name  '*.cpp'  |   xargs  grep  '关键字'    # 查找含有某字符串的所有文件
