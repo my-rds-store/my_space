@@ -159,9 +159,19 @@ ROS
 * `socketcan_interface <http://wiki.ros.org/socketcan_interface?distro=melodic>`_
 
 * `CAN BUS tools <https://cantools.readthedocs.io/en/latest/#>`_
+* `Can Dbc Editor : SavvyCAN <https://github.com/collin80/SavvyCAN/releases>`_
         
 
 ------
 
 * `研华can卡驱动 下载地址  <https://support.advantech.com/support/DownloadSRDetail_New.aspx?SR_ID=GF-GRSC&Doc_Source=Download>`_
+
+----------
+
+* [使用socat实现Linux虚拟串口](https://blog.csdn.net/rainertop/article/details/26706847)
+
+.. code-block:: sh 
+
+        sudo apt-get install -y socat
+        socat -d -d pty,raw,echo=0 pty,raw,echo=0
 
