@@ -288,7 +288,8 @@ DDRL
     * `Partclone <http://ju.outofmemory.cn/entry/346636>`_
     * `Partclone - git hub <https://github.com/Thomas-Tsai/partclone>`_
 
-
+* https://www.seeandroid.com/how-to-delete-search-history-on-wish-application/
+* https://techrusty.com/how-to-stop-skype-from-lowering-volume/
 * https://github.com/stevenshiau/drbl
 * http://drbl.nchc.org.tw/one4all/desktop/drbl-cmd-list.php
 * http://drbl.nchc.org.tw/advanced/
