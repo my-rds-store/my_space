@@ -175,3 +175,15 @@ ROS
         sudo apt-get install -y socat
         socat -d -d pty,raw,echo=0 pty,raw,echo=0
 
+
+* `摄像头 <https://blog.csdn.net/qq_43433255/article/details/89332667>`_
+
+.. code-block:: sh 
+
+  sudo apt-get install ros-melodic-uvc-camera
+  sudo apt-get install "ros-melodic-image-*"
+  sudo apt-get install ros-melodic-rqt-image-view
+
+  rosrun uvc_camera uvc_camera_node
+  rosrun image_view image_view image:=/image_raw
+
