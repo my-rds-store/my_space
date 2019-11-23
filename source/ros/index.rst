@@ -129,7 +129,6 @@ Peak-CAN
 
        $ cansend can0 123#0102030405060708
         
-* `vcan <https://python-can.readthedocs.io/en/master/interfaces/socketcan.html#the-virtual-can-driver-vcan>`_
 
 
 :: 
@@ -150,6 +149,8 @@ Peak-CAN
     # cd /lib/modules/4.4.38-tegra/build/scripts
 
 
+------------
+
 * jetson Tx2  install python-can
 
 .. code-block:: bash
@@ -161,6 +162,9 @@ Peak-CAN
         python3 setup.py install --user
 
 
+--------------
+
+* `vcan <https://python-can.readthedocs.io/en/master/interfaces/socketcan.html#the-virtual-can-driver-vcan>`_
 
 .. code-block:: sh 
 
