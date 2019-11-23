@@ -101,6 +101,8 @@ ROS
         rosdep install AMAZING_PACKAGE
         rosdep install --from-paths src --ignore-src -r -y # 用于安装工作空间中所有包的依赖项
 
+Peak-CAN
+===========
 
 * 安装peak can
 
@@ -128,6 +130,36 @@ ROS
        $ cansend can0 123#0102030405060708
         
 * `vcan <https://python-can.readthedocs.io/en/master/interfaces/socketcan.html#the-virtual-can-driver-vcan>`_
+
+
+:: 
+
+        【error】scripts/basic/fixdep: Syntax error: "(" unexpected
+
+
+* `解决方法 <https://www.cnblogs.com/happyamyhope/p/9430225.html>`_
+
+.. code-block:: bash
+
+    vim scripts/basic/fixdep
+    cd /lib/modules/4.4.38-tegra/build
+    sudo make scripts
+    sudo make -j4 scripts
+
+    # 注意，也可能是在scripts下而不是build目录下进行编译；
+    # cd /lib/modules/4.4.38-tegra/build/scripts
+
+
+* jetson Tx2  install python-can
+
+.. code-block:: bash
+
+        tar xzvf python-can-3.2.0.tar.gz 
+        cd python-can-3.2.0/
+        ls
+        python3 setup.py build
+        python3 setup.py install --user
+
 
 
 .. code-block:: sh 
