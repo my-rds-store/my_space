@@ -248,7 +248,13 @@ Peak-CAN
     #	https://developer.nvidia.com/rdp/cudnn-archive
     #
     #  	Download cuDNN v7.5.0 (Feb 21, 2019), for CUDA 10.0
-    #  	
+    #
+    #   CUDA_PATH:  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
+    #   CUDA_PATH_9.0:  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
+    #   CUDNN:  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
+    #   path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
+    #
+    #   #CUDNN bin include lib 分别拷贝到CUDA中相同名称的文件
     ###############################
 
     numpy==1.16.3 
