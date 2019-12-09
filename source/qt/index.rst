@@ -52,6 +52,13 @@ PyQt 学习示例
 
     git clone --depth 1  https://github.com/pyqt/examples.git
 
+*******************
+Qt地图  研究   
+*******************
+
+* https://github.com/SindenDev/amap.git
+* https://github.com/SindenDev/QAMap.git
+* https://github.com/gongjianbo/QtWebCannelAndMap.git
 
 **********
 播放器    
