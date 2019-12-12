@@ -262,4 +262,16 @@ build install python
 * `Ubuntu 16.04 安装 Python3.6 <https://www.cnblogs.com/gaowengang/p/7736672.html>`_
         * `python3.6安装报错ZipImportError...zlib not available <https://blog.51cto.com/jschu/2174394>`_
 
+************************************
+示例 
+************************************
+
+UDP 接收超时
+=============
+
+.. literalinclude:: src/udp_timeout.py
+    :linenos:
+    :language: python
+    :emphasize-lines: 6, 9,15
+
 

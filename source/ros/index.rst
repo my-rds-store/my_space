@@ -197,6 +197,7 @@ Peak-CAN
 * `CAN BUS tools <https://cantools.readthedocs.io/en/latest/#>`_
 * `Can Dbc Editor : SavvyCAN <https://github.com/collin80/SavvyCAN/releases>`_
         
+* `PID <http://wiki.ros.org/pid>`_
 
 ------
 
