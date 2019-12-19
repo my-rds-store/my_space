@@ -43,6 +43,7 @@ C/C++
 
 **********************
 protobuf
+**********************
 
 .. code-block:: bash
 
@@ -61,6 +62,12 @@ protobuf
     all:
             protoc -I=${SRC_DIR} --cpp_out=${DST_DIR}    ${SRC_DIR}/gps_path_tracking.proto
             protoc -I=${SRC_DIR} --python_out=${DST_DIR} ${SRC_DIR}/gps_path_tracking.proto
+
+
+.. code:: 
+
+        # Qt .pro add this line
+        unix|win32: LIBS += -pthread -lprotobuf -pthread -lpthread
 
 -------
 
@@ -96,7 +103,3 @@ gcc
 ******
 
 * -Wno-unused-function:  发现不使用的函数不警告
-
-
-
-
