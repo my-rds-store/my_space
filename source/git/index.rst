@@ -90,10 +90,10 @@ Gitignore
     $ tee .gitignore <<-'EOF'
     /*
 
-    ! Dockerfile
-    ! init.sh
-    ! sources.list
-    ! readme.md
+    !Dockerfile
+    !init.sh
+    !sources.list
+    !*.md
     EOF
 
 
