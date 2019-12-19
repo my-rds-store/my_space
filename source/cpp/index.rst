@@ -41,6 +41,16 @@ C/C++
 `Learn OpenGL <https://learnopengl-cn.github.io/>`_
 ***************************************************************************
 
+
+**********************
+Doxygen
+**********************
+
+* 待研究
+    * `Doxygen 10 分钟入门教程 <http://cedar-renjun.github.io/2014/03/21/learn-doxygen-in-10-minutes/index.html>`_
+    * `学习用 doxygen 生成源码文档  <https://www.ibm.com/developerworks/cn/aix/library/au-learningdoxygen/>`_
+    * `doxygen 使用 <https://www.cnblogs.com/rongpmcu/p/7662765.html>`_
+
 **********************
 Protobuf
 **********************
