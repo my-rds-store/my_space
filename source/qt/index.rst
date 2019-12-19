@@ -251,6 +251,12 @@ StyleSheet
                 border-radius: 4px;
         }
 
+************
+常见问题   
+************
+
+* `Ubuntu下Qtcreator无法输入中文的解决办法 <https://blog.csdn.net/baidu_33850454/article/details/81212026>`_
+
 ..
  Music 命运守护夜
 
