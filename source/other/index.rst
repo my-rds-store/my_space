@@ -10,16 +10,6 @@
     > certutil -hashfile D:\filename.txt SHA256
 
 
-.. code-block:: bash
-
-    # ubuntu install protobuf
-    sudo apt-get install  libprotobuf-dev
-    sudo apt-get install protobuf-compiler
-
-    #
-    g++ write.cpp addressbook.pb.cc  -o write `pkg-config --cflags --lib    s protobuf`
-    g++ read.cpp addressbook.pb.cc  -o read `pkg-config --cflags --libs     protobuf`
-
 
 
 JRebel激活

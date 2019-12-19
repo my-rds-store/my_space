@@ -41,7 +41,26 @@ C/C++
 `Learn OpenGL <https://learnopengl-cn.github.io/>`_
 ***************************************************************************
 
+**********************
+protobuf
 
+.. code-block:: bash
+
+    # ubuntu install protobuf
+    sudo apt-get install  libprotobuf-dev
+    sudo apt-get install protobuf-compiler
+
+    #
+    g++ write.cpp addressbook.pb.cc  -o write `pkg-config --cflags --libs protobuf`
+    g++ read.cpp  addressbook.pb.cc  -o read  `pkg-config --cflags --libs protobuf`
+
+.. code-block:: makefile
+
+    SRC_DIR:=../../proto
+    DST_DIR:=.
+    all:
+            protoc -I=${SRC_DIR} --cpp_out=${DST_DIR}    ${SRC_DIR}/gps_path_tracking.proto
+            protoc -I=${SRC_DIR} --python_out=${DST_DIR} ${SRC_DIR}/gps_path_tracking.proto
 
 -------
 
