@@ -164,6 +164,26 @@ Peak-CAN
 
 --------------
 
+*  `How to configure and use CAN bus <https://developer.ridgerun.com/wiki/index.php/How_to_configure_and_use_CAN_bus>`_
+
+.. code::
+
+    auto can0
+    iface can0 inet manual
+            #pre-up ip link set $IFACE type can bitrate 125000 listen-only off
+            pre-up /sbin/ip link set $IFACE type can bitrate 125000 triple-sampling on
+            up /sbin/ifconfig $IFACE up
+            down /sbin/ifconfig $IFACE down
+
+
+    auto vcan0
+    iface vcan0 can static
+        bitrate 0  # NEEDED but not supported
+        pre-up /sbin/ip link add dev $IFACE type vcan
+        up /sbin/ip link set $IFACE up
+        down /sbin/ip link set $IFACE down
+
+
 * `vcan <https://python-can.readthedocs.io/en/master/interfaces/socketcan.html#the-virtual-can-driver-vcan>`_
 
 .. code-block:: sh 
@@ -205,7 +225,11 @@ Peak-CAN
 
 ----------
 
-* [使用socat实现Linux虚拟串口](https://blog.csdn.net/rainertop/article/details/26706847)
+* `使用socat实现Linux虚拟串口 <https://blog.csdn.net/rainertop/article/details/26706847>`_
+
+
+
+
 
 .. code-block:: sh 
 
