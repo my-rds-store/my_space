@@ -383,6 +383,7 @@ bittorrent文件编辑工具
    android/index
    golang/index
    cpp/index
+   qt/index
    opencv/index
    nginx/index
    download_tools/index
@@ -397,7 +398,6 @@ bittorrent文件编辑工具
    vagrant/index
    virtualbox/index
    database/index
-   qt/index
    unix/index
    mingw32/index
    nsis/index
