@@ -1,5 +1,5 @@
 #########
-Qt学习
+Qt
 #########
 
 *******
@@ -102,6 +102,10 @@ QT环境搭建: QT-4.8 在windows下的使用
     this->ui->tablewidget->setSelectionMode(QAbstractItemView::SingleSelection); //设置只能选择一行，不能多行选中  
     this->ui->tablewidget->setEditTriggers(QAbstractItemView::NoEditTriggers);   //设置每行内容不可更改  
     this->ui->tablewidget->setAlternatingRowColors(true);                        //设置隔一行变一颜色，即：一灰一白 
+
+
+
+* `环境变量 - setProcessEnvironmen  <https://blog.csdn.net/nicai_xiaoqinxi/article/details/90207538>`_
 
 
 .. code-block:: bash
