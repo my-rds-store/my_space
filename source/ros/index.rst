@@ -105,6 +105,7 @@ Peak-CAN
 ===========
 
 * 安装peak can
+    * `peak-linux-driver-8.9.3.tar.gz <http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.9.3.tar.gz>`_
 
 .. code-block:: sh
 
@@ -147,6 +148,17 @@ Peak-CAN
 
     # 注意，也可能是在scripts下而不是build目录下进行编译；
     # cd /lib/modules/4.4.38-tegra/build/scripts
+
+
+* `pcanview  <http://www.peak-system.com/fileadmin/media/linux/index.htm>`_
+
+.. code-block:: bash
+
+  wget -q http://www.peak-system.com/debian/dists/`lsb_release -cs`/peak-system.list -O- | sudo tee /etc/apt/sources.list.d/peak-system.list
+  wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add -
+  sudo apt-get update 
+  sudo apt-get install pcanview-ncurses
+
 
 
 ------------
