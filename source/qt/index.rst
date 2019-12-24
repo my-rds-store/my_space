@@ -56,6 +56,14 @@ PyQt 学习示例
 Qt地图  研究   
 *******************
 
+* `Qt Position <https://doc.qt.io/qt-5/qtpositioning-module.html>`_
+
+* `Qt Location <https://doc.qt.io/qt-5/qtlocation-cpp.html>`_
+
+
+
+-------------
+
 * https://github.com/SindenDev/amap.git
 * https://github.com/SindenDev/QAMap.git
 * https://github.com/gongjianbo/QtWebCannelAndMap.git
