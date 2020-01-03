@@ -101,6 +101,11 @@ ROS
         rosdep install AMAZING_PACKAGE
         rosdep install --from-paths src --ignore-src -r -y # 用于安装工作空间中所有包的依赖项
 
+ROS Qt Creator Plug-in
+==========================
+
+* `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html>`_
+
 Peak-CAN
 ===========
 
