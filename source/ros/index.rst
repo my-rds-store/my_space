@@ -269,7 +269,6 @@ Peak-CAN
 环境搭建
 ***********
 
-
 .. code::
 
     ###############################
@@ -306,3 +305,28 @@ Peak-CAN
 
     Pillow==5.1.0
     matplotlib==2.2.2  
+
+*************
+autoware
+*************
+
+* `Wiki <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
+
+
+docker 
+==========
+
+需要 在 autoware 用户下操作
+
+.. code-block:: sh
+
+     git clone https://gitlab.com/autowarefoundation/autoware.ai/docker.git
+
+
+
+     cd docker/generic
+
+     mkdir ~/Autoware
+    ./run.sh --ros-distro melodic 
+    ./run.sh --ros-distro melodic --cuda off # 无cuda
+
