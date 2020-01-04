@@ -307,7 +307,7 @@ Peak-CAN
     matplotlib==2.2.2  
 
 *************
-autoware
+Autoware
 *************
 
 * `Wiki <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
@@ -329,4 +329,20 @@ docker
      mkdir ~/Autoware
     ./run.sh --ros-distro melodic 
     ./run.sh --ros-distro melodic --cuda off # 无cuda
+
+-------
+
+新建 autoware 用户
+
+.. code::
+
+    #/etc/sudoers 添加
+    autoware      ALL=NOPASSWD:ALL
+    
+* `问题: No protocol specified  <https://blog.csdn.net/Niction69/article/details/78480675>`_
+
+.. code-block:: sh
+    
+    #　root 用户下
+    xhost +
 
