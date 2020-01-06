@@ -16,8 +16,12 @@ ROS
         #  添加 ROS源
         sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
 
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
+        sudo apt-get update
+
         #apt-cache search ros-kinetic
         sudo apt-get install ros-kinetic-desktop-full --yes --allow-unauthenticated
+        sudo apt-get install ros-melodic-desktop-full --yes --allow-unauthenticated
 
         # sudo apt-get install ros-kinetic-slam-gmapping -y # 地图建模
 
