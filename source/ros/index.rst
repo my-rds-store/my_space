@@ -317,6 +317,11 @@ Autoware
 * `Wiki <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
 
 
+.. code-block:: sh
+
+    # Build Eigen Requre add  CPLUS_INCLUDE_PATH
+    export CPLUS_INCLUDE_PATH=/usr/local/include/eigen3:${CPLUS_INCLUDE_PATH}
+
 docker 
 ==========
 
