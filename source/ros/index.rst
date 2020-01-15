@@ -2,6 +2,8 @@
 ROS
 #############
 
+*  `rospy <https://www.ncnynl.com/archives/201611/1055.html>`_
+*  `roscpp <https://www.ncnynl.com/archives/201701/1273.html>`_
 
 ***********
 环境搭建
@@ -317,22 +319,19 @@ Autoware
 
 * `Wiki <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
 
-
 .. code-block:: sh
 
     # Build Eigen Requre add  CPLUS_INCLUDE_PATH
     export CPLUS_INCLUDE_PATH=/usr/local/include/eigen3:${CPLUS_INCLUDE_PATH}
 
 docker 
-==========
+========
 
 需要 在 autoware 用户下操作
 
 .. code-block:: sh
 
      git clone https://gitlab.com/autowarefoundation/autoware.ai/docker.git
-
-
 
      cd docker/generic
 
