@@ -12,6 +12,7 @@ ROS
         # 更换阿里源
         sed -i 's/cn.archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
         sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
+        sed -i 's/ports.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list # arm
 
         #  添加 ROS源
         sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
