@@ -2,6 +2,7 @@
 ROS
 #############
 
+
 * `rospy [阅读中...] <https://www.ncnynl.com/archives/201611/1055.html>`_
 * `roscpp <https://www.ncnynl.com/archives/201701/1273.html>`_
 
@@ -63,6 +64,8 @@ example
         rosrun turtlesim turtlesim_node
         rosrun turtlesim turtle_teleop_key
 
+
+
 * `《ROS机器人开发实践》源码 <https://github.com/huchunxu/ros_exploring>`_
 
 ***********
@@ -81,6 +84,11 @@ example
         catkin_create_pkg <package_name> [depend1] [depend2] ... [dependn]
         #catkin_create_pkg learning_communication std_msgs rospy roscpp
         catkin_make
+        
+        ## 只编译白名单
+        catkin_make -DCATKIN_WHITELIST_PACKAGES="ros_pyqt;pyqt_gui;rqt_gui"
+        ## 不编译,黑名单列表里面的包
+        catkin_make -DCATKIN_BLACKLIST_PACKAGES="dyn_cfg_gui;qt_ros_test;ros_cmake;qt4rosgui;test_gui;vizlib_test;rqt_mypkg;ros_cv_gui"
 
         rosrun [package_name] [node_name]
         
