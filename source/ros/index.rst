@@ -2,8 +2,10 @@
 ROS
 #############
 
-*  `rospy <https://www.ncnynl.com/archives/201611/1055.html>`_
-*  `roscpp <https://www.ncnynl.com/archives/201701/1273.html>`_
+* `rospy [阅读中...] <https://www.ncnynl.com/archives/201611/1055.html>`_
+* `roscpp <https://www.ncnynl.com/archives/201701/1273.html>`_
+
+* `ROS探索总结 <http://www.guyuehome.com/column/ros-explore/page/3>`_
 
 ***********
 环境搭建
