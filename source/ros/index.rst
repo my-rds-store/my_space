@@ -8,6 +8,12 @@ ROS
 * `ROS探索总结 <http://www.guyuehome.com/column/ros-explore/page/3>`_
 
 ***********
+example
+***********
+
+* `ROS with PyQt <https://github.com/WelinLee/ROS_QT_GUI.git>`_
+
+***********
 环境搭建
 ***********
 
