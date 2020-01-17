@@ -373,6 +373,7 @@ bittorrent文件编辑工具
    :caption: Contents:
     
    ros/index
+   autoware/index
    qemu_libvirt/qemu
    openstack/index
    vim/vim
