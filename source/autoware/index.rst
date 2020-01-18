@@ -192,6 +192,12 @@ Autoware
     #　root 用户下
     xhost +
 
+
+5. 学习资料
+`````````````
+
+* `autoware入门教程 <https://www.ncnynl.com/archives/201910/3402.html>`_
+
 二 LGSVL
 ------------
 
