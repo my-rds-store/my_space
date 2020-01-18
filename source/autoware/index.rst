@@ -190,9 +190,21 @@ Autoware
 .. code-block:: sh
     
     #　root 用户下
+    xhost +
 
+二 LGSVL
+------------
+
+* `lgsvl documentation <https://www.lgsvlsimulator.com/docs/>`_
+
+.. code-block:: sh
+
+    cp -rvf  ./src/autoware/simulation/lgsvl_simulator_bridge/*  \
+             ./install/lgsvl_simulator_bridge/share/lgsvl_simulator_bridge/
+    source install/setup.bash
+    roslaunch runtime_manager runtime_manager.launch
    
-二 问题整理
+三 问题整理
 ------------
 
 （ 空 )
