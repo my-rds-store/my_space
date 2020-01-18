@@ -15,7 +15,7 @@ Autoware
 1 安装 ROS melodic
 ````````````````````
 
-1.1 更新ROS源地址
+1.1 更新 ROS源地址
 :::::::::::::::::::
 
 .. code-block:: sh
@@ -31,7 +31,7 @@ Autoware
         sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
         sudo apt-get update
 
-1.2 安装ROS
+1.2 安装 ROS
 :::::::::::::::::::
 
 * 执行安装脚本
@@ -46,12 +46,12 @@ Autoware
 
 * 安装脚本的源码如下:
 
-    .. literalinclude:: ./src/ros_instal.sh
-       :language: bash
+  .. literalinclude:: ./src/ros_instal.sh
+     :language: bash
 
 
 
-2 安装ROS CUDA 10.0
+2 安装 CUDA 10.0
 ```````````````````
 
 * Step 1 : revmoe nvidia
@@ -76,7 +76,7 @@ Autoware
 * Step 3 :  Install cuDNN 
 
 
-    `先下载,cuDNN v7.5.0 (Feb 21, 2019), for CUDA 10.0 <https://developer.nvidia.com/rdp/cudnn-archive>`_ ;
+    `先下载 cuDNN v7.5.0 (Feb 21, 2019), for CUDA 10.0 <https://developer.nvidia.com/rdp/cudnn-archive>`_ ;
     需要注册账号登录才能下载.
 
     .. code-block:: sh
@@ -116,7 +116,7 @@ Autoware
 
 
 
-3 源码编译Autoware
+3 源码编译 Autoware
 ````````````````````````````````
 
 * step 1 : Install Eigen
