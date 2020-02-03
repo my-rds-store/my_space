@@ -291,6 +291,18 @@ Bringing interfaces up/down
     $ sudo  /sbin/ifconfig <interface> up
     $ sudo  /sbin/ifconfig <interface> down
 
+ip命令使用 
+--------------
+
+.. code-block:: sh
+
+    ip addr add 192.168.2.1/24 dev enp0s25 #添加IP地址
+    ip addr del 192.168.2.1/24 dev enp0s25 #删除IP地址
+
+    ip link set enp0s25 up/down
+
+    
+
 CentOS 网络
 --------------
 
