@@ -271,9 +271,6 @@ Step 3
 .. image:: ./img/vision_darknet_yolo3/04.png
         :scale: 100%
 
-.. image:: ./img/vision_darknet_yolo3/5.png
-        :scale: 60%
-
 .. image:: ./img/vision_darknet_yolo3/6.png
         :scale: 60%
 
