@@ -215,3 +215,66 @@ Autoware
 
 （ 空 )
 
+三 学习笔记
+------------
+
+使用YOLOv3进行检测
+``````````````````
+
+* `Running yolov3 detection in autoware <https://youtu.be/M5K2xc6ndtA>`_
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/M5K2xc6ndtA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Step 1: 安装Yolo3
+::::::::::::::::::
+
+* `安装Yolo  <https://www.ncnynl.com/archives/201911/3439.html>`_
+
+Step 2: usb_cam
+::::::::::::::::
+
+.. code-block:: bash
+
+    mkdir -p usb_cam 
+    cd myros 
+
+    #git clone https://github.com/bosch-ros-pkg/usb_cam src
+    git clone https://github.com/ros-drivers/usb_cam.git src
+
+    catkin_make 
+    source devel/setup.bash 
+
+    roscore  &
+    source devel/setup.bash 
+    roslaunch usb_cam usb_cam-test.launch
+
+Step 3
+::::::::::::::::
+
+
+
+* Computing->Detection->vision_detector->vision_darknet_yolo3/[app]
+
+.. image:: ./img/vision_darknet_yolo3/01.png
+        :scale: 80%
+
+.. image:: ./img/vision_darknet_yolo3/02.png
+        :scale: 80%
+
+* 打卡 Rviz
+
+.. image:: ./img/vision_darknet_yolo3/03.png
+        :scale: 80%
+
+.. image:: ./img/vision_darknet_yolo3/04.png
+        :scale: 100%
+
+.. image:: ./img/vision_darknet_yolo3/5.png
+        :scale: 60%
+
+.. image:: ./img/vision_darknet_yolo3/6.png
+        :scale: 60%
+
+
