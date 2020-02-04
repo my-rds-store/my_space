@@ -218,6 +218,93 @@ Autoware
 四 学习笔记
 ------------
 
+使用GNSS进行定位
+`````````````````
+
+gpsd
+::::::
+
+gpsd是一个GPS的守护进程，用以侦听来自GPS接收器的位置信息，并将这些位置信息转换成一种简化的格式。这样就可以使用其他程序对这些数据进行分析并制作图表等。该软件包中有一个客户端，用以显示当前可见GPS卫星（如果有的话）的位置和速度。它也可以使用差分全球定位系统/ IP协议。
+
+.. code-block:: sh
+
+    sudo apt-get install gpsd gpsd-clients
+
+ 
+* `Python gpsd bindings <https://www.perrygeo.com/python-gpsd-bindings.html>`_
+
+----
+
+* `How to use Android phone as GPS sensor in Linux <https://miloserdov.org/?p=3762>`_
+
+  .. code-block:: sh
+    
+    systemctl stop    gpsd
+    systemctl disable gpsd
+    sudo shutdown -r now   # 需要关机重启，启动 启动 gpad -N .... 会报错。
+
+
+    sudo apt-get install adb
+
+    ###########
+    cgps
+    gpsmon
+
+* `Warwalking With Linux and Android <https://pentasticweb.wordpress.com/2016/05/27/warwalking-with-linux-and-android/>`_
+    * https://www.jillybunch.com/sharegps/nmea-usb-linux.html
+
+
+gpsfake
+:::::::::
+
+* 使用gpsfake模拟GPS数据
+
+    .. code:: 
+
+        1. 将假的gps数据存到文件中，命名为test.log.
+
+               nc localhost 20175  >> test.log
+               或者
+               curl <phone ip>:port >> test.log
+
+        2. ls /dev/pts,查看现在有什么设备。我的有三个，分别是0，1，ptmx。
+
+        3. gpsfake -c 0.2 test.log  #  0.2秒 发送一条数据
+
+        4. ls /dev/pts再次查看。这时候有四个了，分别是0,1,2,ptmx.
+
+        5. cat /dev/pts/2. 就可以看到假的gps数据了。
+
+        6. gpsd -F -D3 -N /dev/pts/2
+
+        7 cgps 或者 gpsmon
+
+
+    * `gpsd_client-Tutorials <http://wiki.ros.org/gpsd_client/Tutorials/Getting%20Started%20with%20gpsd_client>`_
+
+    .. code-block:: sh 
+
+        # 8. 
+        rosrun gpsd_client gpsd_client _host:=localhost _port:=2947
+
+        #9. 
+        rostopic echo /fix
+        
+ `nmea_navsat_driver <https://wiki.ros.org/nmea_navsat_driver>`_
+    * `run nmea_serial_driver <https://autoware.readthedocs.io/en/feature-documentation_rtd/DevelopersGuide/PackagesAPI/sensing/scripts.html>`_
+
+    .. code-block:: sh 
+
+       gpsfake -c 0.2 test.log  #  0.2秒 发送一条数据
+
+       rosrun nmea_navsat_driver nmea_serial_driver _port:=/dev/pts/7 _baud:=4800
+
+       rostopic list
+       rostopic echo /fix
+       rostopic echo /vel 
+       rostopic echo /time_reference
+
+
 使用YOLOv3进行检测
 ``````````````````
 
