@@ -8,6 +8,10 @@ ROS
 
 * `ROS探索总结 <http://www.guyuehome.com/column/ros-explore/page/3>`_
 
+------
+
+* `CSDN ROS学习八篇 <https://blog.csdn.net/tansir94/category_7885264.html>`_
+
 ***********
 example
 ***********
@@ -123,6 +127,20 @@ example
 
         rosdep install AMAZING_PACKAGE
         rosdep install --from-paths src --ignore-src -r -y # 用于安装工作空间中所有包的依赖项
+
+
+ROS 分布式
+==========================
+
+* `两台机器、两个主机的ros通信配置和实验 <https://www.jianshu.com/p/872dc7b514f1?utm_campaign>`_
+
+.. code:: 
+
+    sudo apt-get install chrony # 时间同步
+
+
+
+https://www.jianshu.com/p/872dc7b514f1?utm_campaign
 
 ROS Qt Creator Plug-in
 ==========================

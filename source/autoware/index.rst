@@ -133,6 +133,17 @@ Autoware
 
 * step 2 : Build Autoware
 
+**注意**
+
+    .. code::
+
+        NVIDIA Jetson AGX Xavier 
+            需要 将libopencv-dev 版本 
+            由 4.1.1-2-gd5a58aa75 降为 3.2.0+dfsg-4ubuntu0.1
+
+            sudo apt-get install libopencv-dev=3.2.0+dfsg-4ubuntu0.1
+                                      
+
 .. code-block:: sh
 
     mkdir -p autoware.ai/src
@@ -203,6 +214,14 @@ Autoware
 
 * `lgsvl documentation <https://www.lgsvlsimulator.com/docs/>`_
 
+
+.. code::
+
+    Windows LGSVL地图及配置文件，下载保存路径为
+
+     用户\AppData\Locallow\LG Silicon Valley Lab\LGSVL Simulator\
+
+
 .. code-block:: sh
 
     cp -rvf  ./src/autoware/simulation/lgsvl_simulator_bridge/*  \
@@ -217,6 +236,13 @@ Autoware
 
 四 学习笔记
 ------------
+
+
+
+.. code-block:: sh
+
+    rosrun runtime_manager runtime_manager_dialog.py
+
 
 使用GNSS进行定位
 `````````````````
@@ -255,7 +281,7 @@ gpsd是一个GPS的守护进程，用以侦听来自GPS接收器的位置信息�
 
 
 gpsfake
-:::::::::
+:::::::::::::::
 
 * 使用gpsfake模拟GPS数据
 
@@ -305,6 +331,21 @@ gpsfake
        rostopic echo /time_reference
 
 
+gnss_localizer 
+:::::::::::::::
+
+fix2tfpose
+'''''''''''''''
+
+.. code-block:: cpp
+
+  pose_publisher = nh.advertise<geometry_msgs::PoseStamped>("gnss_pose", 1000);
+  stat_publisher = nh.advertise<std_msgs::Bool>("/gnss_stat", 1000);
+  ros::Subscriber gnss_pose_subscriber = nh.subscribe("fix", 100, GNSSCallback);
+
+
+
+
 使用YOLOv3进行检测
 ``````````````````
 
@@ -325,7 +366,7 @@ Step 2: usb_cam
 .. code-block:: bash
 
     mkdir -p usb_cam 
-    cd myros 
+    cd usb_cam 
 
     #git clone https://github.com/bosch-ros-pkg/usb_cam src
     git clone https://github.com/ros-drivers/usb_cam.git src
@@ -362,3 +403,43 @@ Step 3
         :scale: 60%
 
 
+
+* How to use object detection package in Autoware 
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/rCSzirRForc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+------------------
+
+
+* 基于Autoware的robosense速腾激光雷达建图 <https://blog.csdn.net/muqiuzhiji123/article/details/90451157>`_
+
+
+--------------------
+
+
+*  Jetson AGX Xavier
+
+.. raw:: html
+   :file: ./jetson_nvpmodel.html
+
+.. code-block:: sh
+
+    tegrastats
+
+    sudo nvpmodel --query
+    sudo nvpmodel -m 0  # 0 - MAXN ; 
+                        # 1 - MODE_10W ;  默认
+                        # 2 - MODE_15W ; 
+                        # 3 - MODE_30W_ALL ; 
+                        # 4 - MODE_30W_6CORE ; 
+                        # 5 - MODE_30W_4CORE ; 
+                        # 6 - MODE_30W_2CORE ; 
+
+
+    sudo jetson_clocks --show
+    
+    suod -i  && echo 255 > /sys/devices/pwm-fan/target_pwm  # 风扇开到最大

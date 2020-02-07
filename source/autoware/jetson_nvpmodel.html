@@ -1,0 +1,173 @@
+<h2>Configuration</h2>
+<p>nvpmodel introduces seven different &#8220;modes&#8221; on the Jetson AGX Xavier. The following table breaks down the modes which describe which CPU, GPU, DLA and VA cores to use along with their clock frequency, and the memory controller frequency.</p>
+<h2 align="center">NVPMODEL CLOCK CONFIGURATION</h2>
+<style type="text/css">
+  table          {border: white;}
+  table th       {background-color:#505050; color:#84B637; }
+  table th#NAME  {background-color:#505050; color:#84B637; font-size: 10px; padding: 2px;}
+  table td       {background-color:#E1E1E1; color: black;}
+  table td#MN    {background-color:#999999; color: white;}
+  table td#DFLT  {background-color:#84B637; color: white; text-align: center;}
+</style>
+<p><!–– 
+
+<table class="t1" 
+--></p>
+<table>
+<tbody>
+<!–– Table Header
+––></p>
+<tr>
+<th>Mode Name</th>
+<th>EDP</th>
+<th>10W</th>
+<th>15W</th>
+<th>30W</th>
+<th>30W</th>
+<th>30W</th>
+<th>30W</th>
+</tr>
+<tr>
+<th></th>
+<th id="NAME">MAXN</th>
+<th id="NAME">MODE_10W</th>
+<th id="NAME">MODE_15W</th>
+<th id="NAME">MODE_30W_ALL</th>
+<th id="NAME">MODE_30W_6CORE</th>
+<th id="NAME">MODE_30W_4CORE</th>
+<th id="NAME">MODE_30W_2CORE</th>
+</tr>
+<p><!–– Power Budget
+––></p>
+<tr>
+<td id="MN">Power Budget</td>
+<td style="text-align: center;">n/a</td>
+<td style="text-align: center;">10W</td>
+<td id="DFLT">15W</td>
+<td style="text-align: center;">30W</td>
+<td style="text-align: center;">30W</td>
+<td style="text-align: center;">30W</td>
+<td style="text-align: center;">30W</td>
+</tr>
+<p><!–– Mode ID
+––></p>
+<tr>
+<td id="MN">Mode ID</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td  id="DFLT">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<p><!–– Online CPUs
+––></p>
+<tr>
+<td id="MN">Number of Online CPUs</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+<td  id="DFLT">4</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+</tr>
+<p><!–– CPU Maximal Frequency (MHz)
+––></p>
+<tr>
+<td id="MN">CPU Maximal Frequency<br />(MHz)</td>
+<td style="text-align: center;">2265.6</td>
+<td style="text-align: center;">1200</td>
+<td  id="DFLT">1200</td>
+<td style="text-align: center;">1200</td>
+<td style="text-align: center;">1450</td>
+<td style="text-align: center;">1780</td>
+<td style="text-align: center;">2100</td>
+</tr>
+<p><!–– GPU TPC
+––></p>
+<tr>
+<td id="MN">GPU TPC</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2</td>
+<td id="DFLT">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<p><!–– GPU Maximal Frequency (MHz)
+––></p>
+<tr>
+<td id="MN">CPU Maximal Frequency<br />(MHz)</td>
+<td style="text-align: center;">1377</td>
+<td style="text-align: center;">520</td>
+<td id="DFLT">670</td>
+<td style="text-align: center;">900</td>
+<td style="text-align: center;">900</td>
+<td style="text-align: center;">900</td>
+<td style="text-align: center;">900</td>
+</tr>
+<p><!–– DLA Cores
+––></p>
+<tr>
+<td id="MN">DLA Cores</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td id="DFLT">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+</tr>
+<p><!–– DLA Maximal Frequency
+––></p>
+<tr>
+<td id="MN">DLA Maximal Frequency<br />(MHz)</td>
+<td style="text-align: center;">1395.2</td>
+<td style="text-align: center;">550</td>
+<td id="DFLT">750</td>
+<td style="text-align: center;">1050</td>
+<td style="text-align: center;">1050</td>
+<td style="text-align: center;">1050</td>
+<td style="text-align: center;">1050</td>
+</tr>
+<p><!–– Vision Accelerator (VA) cores
+––></p>
+<tr>
+<td id="MN">Vision Accelerator (VA) cores</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td id="DFLT">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<p><!–– VA Maximal Frequency (MHz)
+––></p>
+<tr>
+<td id="MN">VA Maximal Frequency<br />(MHz)</td>
+<td style="text-align: center;">1088</td>
+<td style="text-align: center;">0</td>
+<td id="DFLT">550</td>
+<td style="text-align: center;"> 760 </td>
+<td style="text-align: center;"> 760 </td>
+<td style="text-align: center;">760</td>
+<td style="text-align: center;"> 760 </td>
+</tr>
+<p><!–– Memory Maximal Freq (MHz)
+––></p>
+<tr>
+<td id="MN">Memory Maximal Frequency<br />(MHz)</td>
+<td style="text-align: center;">2133</td>
+<td style="text-align: center;">1066</td>
+<td id="DFLT">1333</td>
+<td style="text-align: center;"> 1600 </td>
+<td style="text-align: center;"> 1600 </td>
+<td style="text-align: center;"> 1600 </td>
+<td style="text-align: center;"> 1600 </td>
+</tr>
+</tbody>
+</table>
