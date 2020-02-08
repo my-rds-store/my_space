@@ -209,11 +209,8 @@ Autoware
 
 * `autoware入门教程 <https://www.ncnynl.com/archives/201910/3402.html>`_
 
-二 LGSVL
-------------
-
-* `lgsvl documentation <https://www.lgsvlsimulator.com/docs/>`_
-
+`二 LGSVL <https://www.lgsvlsimulator.com/docs/>`_
+-----------------------------------------------------
 
 .. code::
 
@@ -221,6 +218,8 @@ Autoware
 
      用户\AppData\Locallow\LG Silicon Valley Lab\LGSVL Simulator\
 
+
+.. mdinclude:: ./md/autoware-json-example.md
 
 .. code-block:: sh
 

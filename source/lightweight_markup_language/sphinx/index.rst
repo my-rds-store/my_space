@@ -40,6 +40,7 @@ INSTALL
 
     $ sudo pip install sphinx==1.5.5  sphinx-autobuild==0.6.0 -i https://pypi.mirrors.ustc.edu.cn/simple
     $ sudo pip install sphinx_rtd_theme==0.2.4  -i https://pypi.mirrors.ustc.edu.cn/simple
+    $ sudo python -m pip install m2r  # 支持Markdown
 
     $ sudo  apt-get install graphviz # suport  graphviz
     
@@ -167,6 +168,8 @@ INSTALL
         .. raw:: html
            :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
 
+`支持Markdown <https://github.com/miyakogi/m2r>`_
+--------------------------------------------------
 
 ReadTheDocs 私有部署搭建安装
 ----------------------------
