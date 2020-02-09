@@ -1,10 +1,10 @@
-# Example JSON Configuration for an Autoware Vehicle 
+### Example JSON Configuration for an Autoware Vehicle 
 
-### Bridge Type  
+* Bridge Type
 
 `ROS`
 
-### Published Topics 
+* Published Topics 
 
 |Topic|Sensor Name|
 |:-:|:-:|
@@ -14,13 +14,15 @@
 |`/points_raw`|Lidar|
 |`/simulator/camera_node/image/compressed`|Main Camera|
 
-### Subscribed Topics 
+
+* Subscribed Topics 
 
 |Topic|Sensor Name|
 |:-:|:-:|
 |`/vehicle_cmd`|Autoware Car Control|
 
-### Complete JSON Configuration 
+
+* Complete JSON Configuration 
 
 ```JSON
 [
