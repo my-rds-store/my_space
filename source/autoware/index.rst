@@ -362,6 +362,13 @@ Step 1: 安装Yolo3
 Step 2: usb_cam
 ::::::::::::::::
 
+.. code-block:: sh
+
+    sudo apt install ros-melodic-cv-camera
+    rosrun cv_camera cv_camera_node
+
+    rostopic echo /cv_camera/image_raw
+
 .. code-block:: bash
 
     mkdir -p usb_cam 
