@@ -96,34 +96,90 @@ example
 
         rosrun [package_name] [node_name]
         
-        ###########
-        # rosnode
-        ###########
-        rosnode list                  获得运行节点列表
-        rosnode info node-name        获得特定节点的信息
-        rosnode ping  node-name       测试节点是否连通
-        rosnode kill node-name        终止节点
+rosnode
+========
 
-        ###########
-        # rospack
-        ###########
+
+.. code-block:: sh
+
+        rosnode list                # 获得运行节点列表
+        rosnode info node-name      # 获得特定节点的信息
+        rosnode ping node-name      # 测试节点是否连通
+        rosnode kill node-name      # 终止节点
+
+rospack
+========
+
+.. code-block:: sh
 
         rospack -h
 
-        ###########
-        # rostopic
-        ###########
+
+rostopic
+========
+
+.. code-block:: sh
 
         rostopic -h
         
         rostopic type /sent_messages
         rosmsg info can_msgs/Frame
 
-        ############
-        # rosbag
-        ############
+
+rosbag
+========
+
+* 录制
+
+.. code-block:: sh
 
         rosbag -h
+
+        rosbag record -a
+        rosbag record /topic_name1 /topic_name2 /topic_name3
+        rosbag record -O/-o filename.bag /topic_name1 #  -O (大写) 后跟录制数据包的名字。
+                                                      #  -o（小写）则只是给数据包的名字加前缀。
+
+                                                      
+        rosbag record -a -O filename.bag -x "/monitor/(.*)" #记录过滤掉/monitor/*之外的其他topic
+
+        # 在运行rosbag record命令的窗口中按Ctrl-C退出该命令，即结束数据记录。
+
+        # 现在在~/bagfiles目录中应该会看到一个以日期和时间命名并以.bag作为后缀的 rosbag 文件，
+        # 它包含rosbag record运行期间发布的 topic。
+
+
+如果在 launch 文件中使用 rosbag record 命令，如下
+
+.. code-block:: xml
+
+    <node pkg="rosbag" type="record" name="bag_record" args="/topic1 /topic2"/> 
+
+
+默认存放路径是 ~/.ros 中。
+
+
+.. code-block:: sh
+
+    rosbag info filename.bag
+
+* 回放
+
+.. code-block:: sh
+
+    rosbag play <bagfile>
+    rosbag play -r 2 <bagfile> # 两倍的速度发布topic。 -r 后面的数字对应播放速率。
+    rosbag play -l  <bagfile>  # -l == --loop  循环播放
+    rosbag play <bagfile> --topic /topic1  # 只播放感兴趣的 topic
+    rosbag play <bagfile> -d <sec> # 等待一定时间之后发布bag文件中的内容 ;  rosbag  help play  | grep delay
+
+    # 在上述播放命令执行期间，空格键可以暂停播放。
+
+
+rosdep
+========
+    
+.. code-block:: sh
 
         rosdep install AMAZING_PACKAGE
         rosdep install --from-paths src --ignore-src -r -y # 用于安装工作空间中所有包的依赖项
@@ -147,8 +203,9 @@ ROS Qt Creator Plug-in
 
 * `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html>`_
 
+***************
 Peak-CAN
-===========
+***************
 
 * 安装peak can
     * `peak-linux-driver-8.9.3.tar.gz <http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.9.3.tar.gz>`_
@@ -286,14 +343,10 @@ Peak-CAN
 * `使用socat实现Linux虚拟串口 <https://blog.csdn.net/rainertop/article/details/26706847>`_
 
 
-
-
-
 .. code-block:: sh 
 
         sudo apt-get install -y socat
         socat -d -d pty,raw,echo=0 pty,raw,echo=0
-
 
 * `摄像头 <https://blog.csdn.net/qq_43433255/article/details/89332667>`_
 
@@ -305,6 +358,7 @@ Peak-CAN
 
   rosrun uvc_camera uvc_camera_node
   rosrun image_view image_view image:=/image_raw
+
 
 ***********
 环境搭建
@@ -347,6 +401,7 @@ Peak-CAN
     Pillow==5.1.0
     matplotlib==2.2.2  
 
+
 *************
 Autoware
 *************
@@ -357,35 +412,4 @@ Autoware
 
     # Build Eigen Requre add  CPLUS_INCLUDE_PATH
     export CPLUS_INCLUDE_PATH=/usr/local/include/eigen3:${CPLUS_INCLUDE_PATH}
-
-docker 
-========
-
-需要 在 autoware 用户下操作
-
-.. code-block:: sh
-
-     git clone https://gitlab.com/autowarefoundation/autoware.ai/docker.git
-
-     cd docker/generic
-
-     mkdir ~/Autoware
-    ./run.sh --ros-distro melodic 
-    ./run.sh --ros-distro melodic --cuda off # 无cuda
-
--------
-
-新建 autoware 用户
-
-.. code::
-
-    #/etc/sudoers 添加
-    autoware      ALL=NOPASSWD:ALL
-    
-* `问题: No protocol specified  <https://blog.csdn.net/Niction69/article/details/78480675>`_
-
-.. code-block:: sh
-    
-    #　root 用户下
-    xhost +
 

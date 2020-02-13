@@ -416,12 +416,33 @@ Step 3
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/rCSzirRForc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-
 ------------------
 
 
-* 基于Autoware的robosense速腾激光雷达建图 <https://blog.csdn.net/muqiuzhiji123/article/details/90451157>`_
+* `RoboSense-LiDAR <https://github.com/RoboSense-LiDAR/ros_rslidar.git>`_
+
+.. code:: 
+
+    $ git diff
+    diff --git a/rslidar_pointcloud/launch/cloud_nodelet.launch b/rslidar_pointcloud/launch/cloud_nodelet.launch
+    index 6f0869a..b1e4bf9 100644
+    --- a/rslidar_pointcloud/launch/cloud_nodelet.launch
+    +++ b/rslidar_pointcloud/launch/cloud_nodelet.launch
+    @@ -24,5 +24,8 @@
+         <param name="angle_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/angle.csv" />
+         <param name="channel_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/ChannelNum.csv" />
+     
+    +       <!-- support autoware  -->
+    +       <param name="frame_id" type="string" value="velodyne" />
+    +       <remap from="rslidar_points" to="/points_raw"/>
+       </node>
+     </launch>
+
+
+.. code-block:: sh
+
+   rostopic echo /rslidar_points | grep frame_id
+   rostopic echo /points_raw     | grep frame_id
 
 
 --------------------
