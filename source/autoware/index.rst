@@ -329,7 +329,6 @@ gpsfake
        rostopic echo /vel 
        rostopic echo /time_reference
 
-
 gnss_localizer 
 :::::::::::::::
 
@@ -341,9 +340,6 @@ fix2tfpose
   pose_publisher = nh.advertise<geometry_msgs::PoseStamped>("gnss_pose", 1000);
   stat_publisher = nh.advertise<std_msgs::Bool>("/gnss_stat", 1000);
   ros::Subscriber gnss_pose_subscriber = nh.subscribe("fix", 100, GNSSCallback);
-
-
-
 
 使用YOLOv3进行检测
 ``````````````````
@@ -387,8 +383,6 @@ Step 2: usb_cam
 Step 3
 ::::::::::::::::
 
-
-
 * Computing->Detection->vision_detector->vision_darknet_yolo3/[app]
 
 .. image:: ./img/vision_darknet_yolo3/01.png
@@ -408,8 +402,6 @@ Step 3
 .. image:: ./img/vision_darknet_yolo3/6.png
         :scale: 60%
 
-
-
 * How to use object detection package in Autoware 
 
 .. raw:: html
@@ -418,35 +410,40 @@ Step 3
 
 ------------------
 
-
 * `RoboSense-LiDAR <https://github.com/RoboSense-LiDAR/ros_rslidar.git>`_
 
 .. code:: 
 
     $ git diff
+
     diff --git a/rslidar_pointcloud/launch/cloud_nodelet.launch b/rslidar_pointcloud/launch/cloud_nodelet.launch
-    index 6f0869a..b1e4bf9 100644
+    index 6f0869a..a3ef4e9 100644
     --- a/rslidar_pointcloud/launch/cloud_nodelet.launch
     +++ b/rslidar_pointcloud/launch/cloud_nodelet.launch
-    @@ -24,5 +24,8 @@
+    @@ -15,6 +15,9 @@
+         <param name="device_ip" value="$(arg device_ip)" />
+         <param name="msop_port" value="$(arg msop_port)" />
+         <param name="difop_port" value="$(arg difop_port)"/>
+    +
+    +    <!-- support autoware  -->
+    +    <param name="frame_id" type="string" value="velodyne"/>
+       </node>
+     
+       <node pkg="nodelet" type="nodelet" name="$(arg manager)_cloud"
+    @@ -24,5 +27,7 @@
          <param name="angle_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/angle.csv" />
          <param name="channel_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/ChannelNum.csv" />
      
     +       <!-- support autoware  -->
-    +       <param name="frame_id" type="string" value="velodyne" />
     +       <remap from="rslidar_points" to="/points_raw"/>
        </node>
      </launch>
 
-
 .. code-block:: sh
 
-   rostopic echo /rslidar_points | grep frame_id
    rostopic echo /points_raw     | grep frame_id
 
-
 --------------------
-
 
 *  Jetson AGX Xavier
 
