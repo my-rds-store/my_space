@@ -348,6 +348,23 @@ gpsfake
 gnss_localizer 
 :::::::::::::::
 
+https://github.com/autowarefoundation/autoware/issues/492
+
+
+.. code-block:: sh
+
+    find . -name "*.py" -or -name "*.yaml"| xargs grep -in plane
+    find . -name "*.c*" -or -name "*.h*" -or -name "*.launch" -or -name "*.py" | xargs grep -in set_plane
+
+    vim ./autoware/utilities/runtime_manager/scripts/computing.yaml +1281
+    vim ./autoware/utilities/autoware_launcher/plugins/refs/nmea2tfpose.yaml +11
+
+    vim ./autoware/core_perception/gnss_localizer/launch/fix2tfpose.launch +4
+    vim ./autoware/core_perception/gnss_localizer/nodes/nmea2tfpose/nmea2tfpose_core.cpp +46
+
+    vim ./autoware/common/gnss/src/geo_pos_conv.cpp +52
+
+
 fix2tfpose
 '''''''''''''''
 
