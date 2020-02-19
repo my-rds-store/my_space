@@ -235,6 +235,9 @@ Autoware
              ./install/lgsvl_simulator_bridge/share/lgsvl_simulator_bridge/
     source install/setup.bash
     roslaunch runtime_manager runtime_manager.launch
+    
+    # start
+    roslaunch rosbridge_server rosbridge_websocket.launch
    
 --------
 
@@ -251,7 +254,6 @@ Autoware
 
 四 学习笔记
 ------------
-
 
 
 .. code-block:: sh
