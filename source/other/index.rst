@@ -10,6 +10,21 @@
     > certutil -hashfile D:\filename.txt SHA256
 
 
+系统常见问题
+-----------------
+
+* Ubuntu
+    * `ubuntu 18.04 鼠标键盘延迟问题 <https://blog.csdn.net/xmzwlw/article/details/48287313>`_
+    
+      .. code-block:: sh
+
+          # 安装ccsm 
+          sudo apt-get install compizconfig-settings-manager
+
+          # 启动ccsm :  General -> OpenGL  -> disable “Sync To VBlank”
+          ccsm  
+
+
 
 
 JRebel激活

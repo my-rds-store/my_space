@@ -192,8 +192,31 @@ tf变换
 ==========================
 
 * `什么是tf变换 <https://www.guyuehome.com/355>`_
+    * `github <https://github.com/ros-example/ros_explore/tree/master/robot_setup_tf>`_
 * `坐标系统 <https://www.guyuehome.com/265>`_
 * `重读tf <https://www.guyuehome.com/279>`_
+
+.. code-block:: sh
+
+    rosrun tf tf_monitor <source_frame> <target_target>
+    rosrun tf tf_echo <source_frame> <target_target> 
+    rosrun tf view_frames 
+
+.. code-block:: sh
+
+    # << ROS机器人开发实践 >> Page 64
+    rosrun tf static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms
+    rosrun tf static_transform_publisher x y z qx  qy  qz  qw frame_id child_frame_id period_in_ms
+
+.. code-block:: xml
+
+    <!-- << ROS机器人开发实践 >> Page 64 -->
+    <launch>
+    <node pkg="tf" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 /world /map 10" />
+    <node pkg="tf" type="static_transform_publisher" name="map_to_mobility" args="0 0 0 0 0 0 /map /mobility 10" />
+    </launch>
+
+
 
 
 ROS 分布式
