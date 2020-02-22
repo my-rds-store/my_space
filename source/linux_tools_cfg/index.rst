@@ -254,6 +254,8 @@ http://blog.csdn.net/love_xiaozhao/article/details/52704197
 Synergy 一套键鼠同时控制多台电脑
 =========================================
 
+* `[ 下载地址 ] <https://sourceforge.net/projects/synergy-stable-builds/files/>`_
+
 * `Synergy 一套键鼠同时控制多台电脑 Win/Mac/Linux <https://www.iplaysoft.com/synergy.html>`_
 
 * `Compiling Synergy <https://github.com/symless/synergy-core/wiki/Compiling#Dependencies>`_
