@@ -256,10 +256,19 @@ Synergy 一套键鼠同时控制多台电脑
 
 * `[ 下载地址 ] <https://sourceforge.net/projects/synergy-stable-builds/files/>`_
 
+.. code:: 
+
+    Question::
+        system tray is unavailable don't close your window
+
+    sudo apt-get install sni-qt
+
+
 * `Synergy 一套键鼠同时控制多台电脑 Win/Mac/Linux <https://www.iplaysoft.com/synergy.html>`_
 
 * `Compiling Synergy <https://github.com/symless/synergy-core/wiki/Compiling#Dependencies>`_
 
+  o
 -----
 
 网络配置
