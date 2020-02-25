@@ -115,3 +115,5 @@ gcc
 ******
 
 * -Wno-unused-function:  发现不使用的函数不警告
+
+* 全局环境变量（ `C_INCLUDE_PATH` / `CPLUS_INCLUDE_PATH` ）添加自定义的头文件路径

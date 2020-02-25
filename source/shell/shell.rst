@@ -184,6 +184,27 @@ sftp文件批量上传与下载
     by
     EOF
 
+Shell 统计代码行数
+-------------------------
+
+
+.. code-block:: sh
+
+    # 文件名 空格问题 ？？？
+    find . -type f  -name "*.c*" -or -name "*.h**"  -or -name "*.msg"   | xargs cat | wc -l | sort -k2
+
+.. code-block:: sh
+
+    total=0
+    find . -type f  -name "*.c*" -or -name "*.h**"  -or -name "*.msg" | while read FILE; do
+         #you see use grep instead wc ! for properly counting
+         count=$(grep -c ^ < "$FILE")
+         let total=total+count #in bash, you can convert this for another shell
+         #echo "$FILE has $count lines ===>  $total"
+         echo "TOTAL LINES COUNTED ...  :  $total"
+    done
+    echo "TOTAL LINES COUNTED:  $total" #打印为 0 ?????
+
 
 Shell 获取文件名和后缀名
 --------------------------
