@@ -137,8 +137,11 @@ rostopic
         rostopic type /sent_messages
         rosmsg info can_msgs/Frame
 
-rosbag
-========
+        
+
+
+`rosbag <http://wiki.ros.org/rosbag/Commandline>`_
+====================================================
 
 * 录制
 
@@ -150,7 +153,6 @@ rosbag
         rosbag record /topic_name1 /topic_name2 /topic_name3
         rosbag record -O/-o filename.bag /topic_name1 #  -O (大写) 后跟录制数据包的名字。
                                                       #  -o（小写）则只是给数据包的名字加前缀。
-
                                                       
         rosbag record -a -O filename.bag -x "/monitor/(.*)" #记录过滤掉/monitor/*之外的其他topic
 
@@ -158,6 +160,8 @@ rosbag
 
         # 现在在~/bagfiles目录中应该会看到一个以日期和时间命名并以.bag作为后缀的 rosbag 文件，
         # 它包含rosbag record运行期间发布的 topic。
+
+
 
 
 如果在 launch 文件中使用 rosbag record 命令，如下
@@ -185,6 +189,16 @@ rosbag
     rosbag play <bagfile> -d <sec> # 等待一定时间之后发布bag文件中的内容 ;  rosbag  help play  | grep delay
 
     # 在上述播放命令执行期间，空格键可以暂停播放。
+
+
+* 过滤
+
+
+.. code-block:: sh
+
+    rosbag filter IN.bag OUT.bag 'topic == "/turtle1/command_velocity"'
+    rosbag filter skoda.bag skoda_filter.bag  "topic == '/BrakeCmd' or topic == '/SteeringCmd' or topic == '/ThrottleCmd' or topic== '/rosout' or topic=='/rosout_agg'"
+
 
 
 rosdep
