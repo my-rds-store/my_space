@@ -79,6 +79,7 @@ example
 .. code-block:: sh
         
         roscore
+
         rqt_graph   #  查看节点关系
 
         echo $ROS_PACKAGE_PATH
@@ -112,8 +113,19 @@ rospack
 
 .. code-block:: sh
 
-        rospack -h
+    rospack -h
 
+rosparam
+==========
+
+.. code-block:: sh
+
+    rosparam set     set parameter             设置参数
+    rosparam get     get parameter             获得参数值
+    rosparam load    load parameters from file 从文件中加载参数到参数服务器
+    rosparam dump    dump parameters to file   将参数服务器中的参数写入到文件
+    rosparam delete  delete parameter          删除参数
+    rosparam list    list parameter names      列出参数服务器中的参数
 
 rostopic
 ========
@@ -124,7 +136,6 @@ rostopic
         
         rostopic type /sent_messages
         rosmsg info can_msgs/Frame
-
 
 rosbag
 ========

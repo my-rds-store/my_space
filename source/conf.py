@@ -41,7 +41,7 @@ extensions = ['sphinx.ext.autodoc',
      'sphinx.ext.viewcode',
      'sphinx.ext.githubpages',
      'sphinx.ext.graphviz',   ### graphviz画图插
-     'm2r'
+     #'m2r'
      ]
 
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
