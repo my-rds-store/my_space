@@ -418,6 +418,20 @@ ubuntu 好用的工具
 	sudo apt-get update 
 	sudo apt-get install indicator-stickynotes 
 
+
+tty终端中显示和输入中文
+------------------------------------
+
+* https://blog.csdn.net/maybe_frank/article/details/53371201
+* https://fooyou.github.io/document/2015/11/30/fbterm-display-and-input-Chinese-in-tty.html
+
+.. code-block:: sh
+
+   $ sudo apt-get install fbterm
+   $ sudo fbterm
+
+
+
 问题
 ------
 

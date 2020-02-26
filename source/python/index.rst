@@ -208,18 +208,6 @@ Linux 下编译windows Exe
     wine ${PY_HOME}/python.exe ${PY_HOME}/Scripts/pip.exe install --upgrade pip -i  https://pypi.mirrors.ustc.edu.cn/simple
 
 
-************************************
-tty终端中显示和输入中文
-************************************
-
-* https://blog.csdn.net/maybe_frank/article/details/53371201
-* https://fooyou.github.io/document/2015/11/30/fbterm-display-and-input-Chinese-in-tty.html
-
-.. code-block:: sh
-
-   $ sudo apt-get install fbterm
-   $ sudo fbterm
-
 ------
 
 * `Urwid <http://urwid.org/>`_
