@@ -214,6 +214,17 @@ rosdep
 知识点
 ***************
 
+rviz
+============
+
+.. code-block:: sh
+
+    # imu
+    sudo apt-get install ros-melodic-imu-tools
+
+.. image:: img/rviz_imu_plugin.png
+
+
 tf变换
 ==========================
 
