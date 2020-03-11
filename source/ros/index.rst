@@ -137,7 +137,8 @@ rostopic
         rostopic type /sent_messages
         rosmsg info can_msgs/Frame
 
-        
+        #                           src topic   =>    des topic
+        rosrun topic_tools relay /cv_camera/image_raw /camera/image_raw
 
 
 `rosbag <http://wiki.ros.org/rosbag/Commandline>`_
