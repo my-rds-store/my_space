@@ -140,6 +140,12 @@ rostopic
         #                           src topic   =>    des topic
         rosrun topic_tools relay /cv_camera/image_raw /camera/image_raw
 
+        rostopic pub /chatter std_msgs/String  'hello'  # 发一次
+        rostopic pub /chatter std_msgs/String -r 1 -- '{data: hello}' # 一秒发一次
+
+        rostopic pub  /sent_messages can_msgs/Frame  -r 1 -- \
+       '{header: auto,id: 15, is_rtr: 0,is_extended: 0,is_error: 0,dlc: 8,data: [1,2,3,4,5,6,7,9]}'
+
 
 `rosbag <http://wiki.ros.org/rosbag/Commandline>`_
 ====================================================
