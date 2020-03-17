@@ -149,7 +149,14 @@ Autoware
     mkdir -p autoware.ai/src
     cd autoware.ai
 
-    # Download
+
+    # Download 1.12.0
+    wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.12.0/autoware.ai.repos?inline=false"
+
+    # Download 1.13.0
+    wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.13.0/autoware.ai.repos?inline=false"
+
+    # Download master
     wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/master/autoware.ai.repos?inline=false"
 
     vcs import src < autoware.ai.repos
