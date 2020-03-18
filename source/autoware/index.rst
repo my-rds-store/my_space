@@ -774,3 +774,43 @@ Step 3
     sudo jetson_clocks --show
     
     suod -i  && echo 255 > /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
+
+惠普暗影精灵5 Plus
+-------------------
+
+惠普暗影精灵5 Plus 装　ubuntu 18.04 踩到的坑.
+
+* 结合这两篇Blog , 解决ubuntu 18.04 安装问题
+
+    * http://keyblog.cn/article-139.html
+    * https://blog.csdn.net/xiaxinkai/article/details/103739698
+
+`ACPI Error: No handler or method for GPE` => kernel 5.5 rc1 已经修正了这个问题。
+kernel  >= 5.5 的 Ubutnu  应该不存在这个问题
+
+::
+
+    安装步骤 刻录 Ubuntu 18.04 U盘启动
+
+    装系统-> 选择 UEFI 启动
+        当看到“Try Ubuntu", “Install Ubuntu”, “…” 这个黑色界面的时候按"e"，然后可以看到一段英文，把段落中的"quiet splash"修改成"nomodeset"，修改完按F10重启。（重要：不这样操作可能会卡住，无法启动安装器）
+        安装器若启动不起来，多尝试几次．
+
+    安装过程，联网更新软件，并且勾选　第三方库安装．
+
+    ===========
+
+    安装完毕,重启
+    在ubuntu选项上按e，进入启动命令编辑, 把段落中的"linux"打头的一行，找到quiet splash替换为text acpi=off，然后按F10启动。
+
+
+    进入桌面，更改为　国内源，然后 软件更新．
+
+    打开software updater，选择additional drivers，点击NVIDIA driver 435，点击Apply Changes。
+
+
+    安装完驱动，不要重启，打开终端，安装vim，然后sudo vim /etc/default/grub，修改一下两行：
+
+    GRUB_CMDLINE_LINUX_DEFAULT="text"
+    GRUB_CMDLINE_LINUX="pci=nommconf"
+
