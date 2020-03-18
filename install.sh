@@ -1,7 +1,6 @@
-#pip3 install --user sphinx==1.5.5  sphinx-autobuild==0.6.0 -i https://pypi.mirrors.ustc.edu.cn/simple
-#pip3 install --user sphinx_rtd_theme==0.2.4  -i https://pypi.mirrors.ustc.edu.cn/simple
 
-# python3
-pip3 install --user sphinx  sphinx-autobuild -i https://pypi.mirrors.ustc.edu.cn/simple
-pip3 install --user sphinx_rtd_theme  -i https://pypi.mirrors.ustc.edu.cn/simple
+sudo pip install sphinx==1.5.5  sphinx-autobuild==0.6.0 
+sudo pip install sphinx_rtd_theme==0.2.4  
+sudo python -m pip install m2r  # 支持Markdown
+
 sudo  apt-get install graphviz # suport  graphviz
