@@ -223,7 +223,8 @@ rosdep
 package
 ==========
 
-* `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_
+* `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_  
+
 
   .. code-block:: sh
 
@@ -242,6 +243,7 @@ package
         rosrun rqt_image_view rqt_image_view /rtsp_camera_relay/image
 
     * `VXG RTSP Server APK (IP camera)  <https://apkpure.com/vxg-rtsp-server-ip-camera/veg.mediacapture.sdk.test.server>`_
+        * `APK <https://apk.support/app/veg.mediacapture.sdk.test.server>`_
 
 rviz
 ========
