@@ -239,6 +239,8 @@ package
         export ROCON_RTSP_CAMERA_RELAY_URL=rtsp://192.168.2.100:5540/ch0
         roslaunch rocon_rtsp_camera_relay rtsp_camera_relay.launch --screen
 
+        rosrun rqt_image_view rqt_image_view /rtsp_camera_relay/image
+
     * `VXG RTSP Server APK (IP camera)  <https://apkpure.com/vxg-rtsp-server-ip-camera/veg.mediacapture.sdk.test.server>`_
 
 rviz
