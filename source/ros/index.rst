@@ -220,6 +220,19 @@ rosdep
 知识点
 ***************
 
+package
+==============
+
+* `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_
+
+  .. code-block:: sh
+    
+        export ROCON_RTSP_CAMERA_RELAY_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov
+        source devel/setup.zsh 
+        roslaunch rocon_rtsp_camera_relay rtsp_camera_relay.launch --screen
+
+
+
 rviz
 ============
 

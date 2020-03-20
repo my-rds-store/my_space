@@ -668,6 +668,9 @@ Step 2: usb_cam
 .. code-block:: sh
 
     sudo apt install ros-melodic-cv-camera
+
+    rosparam set cv_camera/device_id 2
+
     rosrun cv_camera cv_camera_node
 
     rostopic echo /cv_camera/image_raw
