@@ -221,20 +221,28 @@ rosdep
 ***************
 
 package
-==============
+==========
 
 * `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_
 
   .. code-block:: sh
-    
-        export ROCON_RTSP_CAMERA_RELAY_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov
+
+        mkdir -p  work_dir/src
+        cd  work_dir/src
+        git clone  --depth 1 https://github.com/robotics-in-concert/rocon_devices.git
+        cd ../
+        catkin_make
+
         source devel/setup.zsh 
+
+        # export ROCON_RTSP_CAMERA_RELAY_URL=rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov # public rtsp test url
+        export ROCON_RTSP_CAMERA_RELAY_URL=rtsp://192.168.2.100:5540/ch0
         roslaunch rocon_rtsp_camera_relay rtsp_camera_relay.launch --screen
 
-
+    * `VXG RTSP Server APK (IP camera)  <https://apkpure.com/vxg-rtsp-server-ip-camera/veg.mediacapture.sdk.test.server>`_
 
 rviz
-============
+========
 
 .. code-block:: sh
 
