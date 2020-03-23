@@ -817,3 +817,13 @@ kernel  >= 5.5 的 Ubutnu  应该不存在这个问题
     GRUB_CMDLINE_LINUX_DEFAULT="text"
     GRUB_CMDLINE_LINUX="pci=nommconf"
 
+
+*  `没有声音问题 <https://www.linuxuprising.com/2018/06/fix-no-sound-dummy-output-issue-in.html>`_
+
+.. code-block:: sh
+
+    echo "options snd-hda-intel model=auto" | sudo tee -a /etc/modprobe.d/alsa-base.conf
+    echo "options snd-hda-intel dmic_detect=0" | sudo tee -a /etc/modprobe.d/alsa-base.conf
+    echo "blacklist snd_soc_skl" | sudo tee -a /etc/modprobe.d/blacklist.conf
+    shutdown -r now
+

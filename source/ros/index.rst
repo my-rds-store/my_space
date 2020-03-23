@@ -245,6 +245,36 @@ package
     * `VXG RTSP Server APK (IP camera)  <https://apkpure.com/vxg-rtsp-server-ip-camera/veg.mediacapture.sdk.test.server>`_
         * `APK <https://apk.support/app/veg.mediacapture.sdk.test.server>`_
 
+.. code-block:: bash
+
+    # Download
+    flycapture2-2.13.3.31-amd64-pkg_Ubuntu18.04.tgz
+    tar xzvf flycapture2-2.13.3.31-amd64-pkg_Ubuntu18.04.tgz
+    cd flycapture2-2.13.3.31-amd64
+    
+    # README
+    # Ubuntu 18.04:
+    sudo apt-get install libraw1394-11 libavcodec57 libavformat57        \
+        libswscale4 libswresample2 libavutil55 libgtkmm-2.4-1v5              \
+        libglademm-2.4-1v5 libgtkglextmm-x11-1.2-0v5 libgtkmm-2.4-dev        \
+        libglademm-2.4-dev libgtkglextmm-x11-1.2-dev libusb-1.0-0
+
+    y
+    y
+    ${USERNAME}
+    y
+
+
+   To do this just add "raw1394" to the /etc/modules file.
+   # vim /etc/modules-load.d/modules.conf
+
+
+   # 
+   git clone --depth https://github.com/ros-drivers/pointgrey_camera_driver.git
+   source devel/setup.zsh 
+   roslaunch pointgrey_camera_driver camera.launch
+
+
 rviz
 ========
 
