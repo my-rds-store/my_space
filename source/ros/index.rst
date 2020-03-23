@@ -327,6 +327,7 @@ ROS 分布式
     sudo apt-get install chrony # 时间同步
 
 
+    export ROS_MASTER_URI=http://${MasterHostName}:11311
 
 https://www.jianshu.com/p/872dc7b514f1?utm_campaign
 
