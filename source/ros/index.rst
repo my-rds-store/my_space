@@ -331,6 +331,32 @@ ROS 分布式
 
 https://www.jianshu.com/p/872dc7b514f1?utm_campaign
 
+
+创建Deb安装包
+==========================
+
+* `How to make a debian from a ROS package <https://gist.github.com/awesomebytes/196eab972a94dd8fcdd69adfe3bd1152>`_
+
+.. code-block:: sh
+
+    sudo apt-get install python-bloom
+    # or sudo pip install -U bloom
+
+    #sudo apt-get install dpkg-dev debhelper
+    sudo apt-get install fakeroot
+
+.. code-block:: sh
+
+    # 1. Create debian structure
+
+    #    To make a debian folder structure from the ROS package 
+    #    you must cd into the package to be in the same folder where package.xml file is.
+    bloom-generate rosdebian --os-name ubuntu --os-version bionic --ros-distro melodic
+    # bloom-generate rosdebian --ros-distro melodic
+    
+    # 2. Create binary debian
+    fakeroot debian/rules binary
+
 ROS Qt Creator Plug-in
 ==========================
 

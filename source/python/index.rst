@@ -2,6 +2,10 @@
 Python 
 ###########
 
+* `Numpy 中文 <https://www.numpy.org.cn/about/>`_
+
+-----------------
+
 * `Python Code Examples <https://www.programcreek.com/python/>`_
 
 * `python-requests <http://www.python-requests.org/en/master/>`_ 
