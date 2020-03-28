@@ -137,6 +137,16 @@ Gitignore
     $ git pull --rebase origin master
 
 
+git lfs  
+====================
+
+.. code-block:: sh
+
+    apt-get install git-lfs
+    git lfs clone <repo>
+
+
+
 git submodule 
 ================
 
