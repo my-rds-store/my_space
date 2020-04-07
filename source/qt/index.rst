@@ -9,6 +9,7 @@ Book
 Book
 ------
 
+* `QMlBook <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
 * `C++ GUI Qt 4编程（第二版） <http://linux.linuxidc.com/index.php?folder=MjAxMsTq18rBzy821MIvNMjVL0Ox4LPMo6i12rb+sOajqSjW0M7EuN/H5VBERsmow+iw5ilAy+bK6dS0wus=>`_ 
 * `QmlBook  <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
 * https://github.com/cwc1987/QmlBook-In-Chinese
