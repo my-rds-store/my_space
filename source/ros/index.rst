@@ -224,9 +224,9 @@ package
 ==========
 
 * `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_  
+    * `参考 - Ubuntu利用ROS搭建手机移动网络摄像头 (Android) <https://www.bbsmax.com/A/E35pOMWgJv/>`_
 
-
-  .. code-block:: sh
+    .. code-block:: sh
 
         mkdir -p  work_dir/src
         cd  work_dir/src
@@ -242,13 +242,21 @@ package
 
         rosrun rqt_image_view rqt_image_view /rtsp_camera_relay/image
 
-    * `VXG RTSP Server APK (IP camera)  <https://apkpure.com/vxg-rtsp-server-ip-camera/veg.mediacapture.sdk.test.server>`_
-        * `APK <https://apk.support/app/veg.mediacapture.sdk.test.server>`_
+
+    * `VXG RTSP Server APK (IP camera) <https://apkpure.com/vxg-rtsp-server-ip-camera/veg.mediacapture.sdk.test.server>`_
+        * `APK (需要登梯子) <https://apk.support/app/veg.mediacapture.sdk.test.server>`_
+
+
+----------------
+
+* `pointgrey_camera_driver <http://wiki.ros.org/pointgrey_camera_driver>`_
+
+
+    `Download FlyCapture SDK - flycapture2-2.13.3.31-amd64-pkg_Ubuntu18.04.tgz <https://www.flir.com/support-center/iis/machine-vision/downloads/spinnaker-sdk-flycapture-and-firmware-download/>`_
+
 
 .. code-block:: bash
 
-    # Download
-    flycapture2-2.13.3.31-amd64-pkg_Ubuntu18.04.tgz
     tar xzvf flycapture2-2.13.3.31-amd64-pkg_Ubuntu18.04.tgz
     cd flycapture2-2.13.3.31-amd64
     
@@ -259,20 +267,23 @@ package
         libglademm-2.4-1v5 libgtkglextmm-x11-1.2-0v5 libgtkmm-2.4-dev        \
         libglademm-2.4-dev libgtkglextmm-x11-1.2-dev libusb-1.0-0
 
+
+    sudo bash install_flycapture.sh
     y
     y
-    ${USERNAME}
+    ${USER}
     y
 
 
    To do this just add "raw1394" to the /etc/modules file.
    # vim /etc/modules-load.d/modules.conf
 
-
    # 
-   git clone --depth https://github.com/ros-drivers/pointgrey_camera_driver.git
+   git clone --depth  1 https://github.com/ros-drivers/pointgrey_camera_driver.git
    source devel/setup.zsh 
    roslaunch pointgrey_camera_driver camera.launch
+
+   rostopic list
 
 
 rviz
