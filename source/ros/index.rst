@@ -371,9 +371,12 @@ Peak-CAN
 
 .. code-block:: sh
 
+       $ sudo apt-get install libpopt-dev #  libelf-dev
+       $ 
        $ tar –xzf peak-linux-driver-X.Y.Z.tar.gz
        $ cd peak-linux-driver-X.Y.Z 
        $ make -C driver NET=NETDEV_SUPPORT
+       $ make -C driver netdev # verson 8.9.3
        $ sudo make install
        $ sudo modprobe peak_usb # 卸载 sudo modprobe -r peak_usb
        $ ip l | grpe can
@@ -412,7 +415,12 @@ Peak-CAN
     # cd /lib/modules/4.4.38-tegra/build/scripts
 
 
+***************
+pcanview
+***************
+
 * `pcanview  <http://www.peak-system.com/fileadmin/media/linux/index.htm>`_
+
 
 .. code-block:: bash
 
