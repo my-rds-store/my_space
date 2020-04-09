@@ -14,7 +14,12 @@ C/C++
    ffmpeg
 
 * `C++ 参考手册  <https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5>`_
+
+-----------
+
 * `C++并发编程实战 <https://nj.gitbooks.io/c/content/>`_
+* `C++并发编程实战 第二版 <https://chenxiaowei.gitbook.io/c-concurrency-in-action-second-edition-2019/>`_
+
 
 ------------
 
