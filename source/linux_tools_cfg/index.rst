@@ -302,7 +302,7 @@ Bringing interfaces up/down
     $ sudo  /sbin/ifconfig <interface> up
     $ sudo  /sbin/ifconfig <interface> down
 
-ip命令使用 
+ip 命令使用 
 --------------
 
 .. code-block:: sh
@@ -312,7 +312,9 @@ ip命令使用
 
     ip link set enp0s25 up/down
 
-    
+    sudo ip route show
+    sudo ip route add default via 192.168.2.1 # 添加默认路由
+    sudo ip route del default via 192.168.2.1 # 
 
 CentOS 网络
 --------------
