@@ -316,6 +316,11 @@ ip 命令使用
     sudo ip route add default via 192.168.2.1 # 添加默认路由
     sudo ip route del default via 192.168.2.1 # 
 
+    # 修改Mac 地址
+    sudo ip link set dev wlp0s20f3 down
+    sudo ip link set dev wlp0s20f3 address 00:01:4f:00:15:f1
+    sudo ip link set dev wlp0s20f3 up
+
 CentOS 网络
 --------------
 
