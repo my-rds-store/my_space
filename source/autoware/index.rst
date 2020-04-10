@@ -648,6 +648,17 @@ rviz，配置文件 Autoware/ros/src/.config/rviz/ndt_mapping.rviz。
 
     lattice_planner -> lattice_velocity_set  
 
+
+
+Traffic Light Recognition
+````````````````````````````````````
+
+* `Traffic Light Recognition <https://i.youku.com/i/UNDIxMDQ1MTkzNg==?spm=a2h0j.11185381.module_basic_dayu_sub.DLDDH2~A>`_
+
+.. raw:: html
+
+    <iframe height=650 width=1100 src='https://player.youku.com/embed/XMjg5MzQ0MjEzNg==' frameborder=0 'allowfullscreen'></iframe>
+
 使用YOLOv3进行检测
 ``````````````````
 

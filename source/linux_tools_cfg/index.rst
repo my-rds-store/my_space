@@ -263,13 +263,25 @@ Synergy 一套键鼠同时控制多台电脑
 
     sudo apt-get install sni-qt
 
-
 * `Synergy 一套键鼠同时控制多台电脑 Win/Mac/Linux <https://www.iplaysoft.com/synergy.html>`_
 
 * `Compiling Synergy <https://github.com/symless/synergy-core/wiki/Compiling#Dependencies>`_
-
-  o
+  
 -----
+
+FSearch : Linux 版本的 Everything
+=========================================
+
+* `FSearch  <https://launchpad.net/~christian-boxdoerfer/+archive/ubuntu/fsearch-daily?field.series_filter>`_
+
+.. code-block:: bash
+
+    sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily
+    sudo apt-get update
+    sudo apt install fsearch-trunk
+
+--------
+
 
 网络配置
 =========================
