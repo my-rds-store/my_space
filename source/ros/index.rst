@@ -57,7 +57,8 @@ example
 
         sudo apt install ros-melodic-desktop-full
         # sudo apt-get install rosbash 
-        sudo apt-get install ros-melodic-rosbash ros-melodic-rosbash-params # install and reboot , roscd 
+        # sudo apt-get install ros-melodic-rosbash ros-melodic-rosbash-params # install and reboot , roscd 
+        sudo apt-get install ros-${ROS_DISTRO}-rosbash ros-${ROS_DISTRO}-rosbash-params
 
         apt-cache search ros-melodic
 
