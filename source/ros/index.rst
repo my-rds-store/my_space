@@ -406,7 +406,8 @@ Peak-CAN
        $ rosrun socketcan_interface socketcan_bcm can0 0.5 12#12345678 # id=12 周期0.5s
 
        $ cansend can0 123#0102030405060708
-        
+       $ cangen -v can0   # 随机生成can消息
+       $ candump can0
 
 
 :: 
