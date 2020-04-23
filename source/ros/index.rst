@@ -631,6 +631,16 @@ NVIDIA Xavier
     cansend can1 "601#b110ff"
 
 
+* `NVIDIA Xavier UART <https://blog.csdn.net/weifengdq/article/details/103071182>`_
+
+.. code-block:: sh
+
+    sudo chmod a+wrx /dev/ttyTHS0
+    # sudo usermod -a -G ddialout $USER
+    # sudo usermod -a -G tty $USER
+
+
+
 
 
 
