@@ -393,8 +393,9 @@ Peak-CAN
        $ sudo modprobe peak_usb # 卸载 sudo modprobe -r peak_usb
        $ ip l | grpe can
 
-       $ sudo apt-get install ros-kinetic-socketcan-interface \
-                               ros-melodic-ros-canopen
+       
+       $ sudo apt-get install ros-${ROS_DISTRO}-socketcan-interface \
+                               ros-${ROS_DISTRO}-ros-canopen
 
        $ sudo apt-get install can-utils
        $ sudo ifconfig can0
