@@ -805,6 +805,19 @@ Step 3
     
     suod -i  && echo 255 > /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
 
+
+MapToolbox
+-------------------
+
+* https://github.com/autocore-ai/MapToolbox.git 
+* https://github.com/tier4/MapToolbox
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WTRHPs8pN04" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 惠普暗影精灵5 Plus
 -------------------
 
