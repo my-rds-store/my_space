@@ -782,7 +782,8 @@ Step 3
 
 --------------------
 
-*  Jetson AGX Xavier
+Jetson AGX Xavier
+-------------------
 
 .. raw:: html
    :file: ./jetson_nvpmodel.html
