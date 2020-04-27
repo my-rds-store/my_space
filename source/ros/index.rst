@@ -582,65 +582,6 @@ pcanview
     Pillow==5.1.0
     matplotlib==2.2.2  
 
-**************************
-NVIDIA Xavier 
-**************************
-
-* `NVIDIA Xavier CAN <https://blog.csdn.net/weifengdq/article/details/103093111#JetsonAGX_Xavier_CAN_17>`_
-
-.. code-block:: sh
-
-    sudo modprobe can
-    sudo modprobe can_raw
-    sudo modprobe mttcan
-
-    #############################
-    # 用devmem修改寄存器
-    #############################
-    sudo busybox devmem 0x0c303000 32 0x0000C400
-    sudo busybox devmem 0x0c303008 32 0x0000C458
-    sudo busybox devmem 0x0c303010 32 0x0000C400
-    sudo busybox devmem 0x0c303018 32 0x0000C458
-
-    # 检查寄存器
-    sudo busybox devmem 0x0c303000	# 0x0000C055
-    sudo busybox devmem 0x0c303008	# 0x0000C055
-    sudo busybox devmem 0x0c303010	# 0x0000C059
-    sudo busybox devmem 0x0c303018	# 0x0000C059
-
-    # 配置标准CAN  500k
-    sudo ip link set can0 type can bitrate 500000
-    sudo ip link set can1 type can bitrate 500000
-
-    # 配置为仲裁段500k, 数据段2M的的CANFD:
-    #sudo ip link set can0 type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
-    #sudo ip link set can1 type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
-
-    # 设置本地回环
-    #sudo ip link set can0 type can bitrate 500000 loopback on
-    #sudo ip link set can1 type can bitrate 500000 loopback on
-
-
-    #sudo ip link set down can0
-    #sudo ip link set down can1
-
-    sudo ip link set up can0
-    sudo ip link set up can1
-
-    # 
-    cansend can0 "601#b110ff"
-    cansend can1 "601#b110ff"
-
-
-* `NVIDIA Xavier UART <https://blog.csdn.net/weifengdq/article/details/103071182>`_
-
-.. code-block:: sh
-
-    sudo chmod a+wrx /dev/ttyTHS0
-    # sudo usermod -a -G ddialout $USER
-    # sudo usermod -a -G tty $USER
-
-
 
 
 
