@@ -3,6 +3,9 @@ ROS
 #############
 
 
+* `ROS与QT语言入门教程 <https://www.ncnynl.com/category/ros-qt/>`_
+    * `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html#installation>`_
+
 * `rospy [阅读中...] <https://www.ncnynl.com/archives/201611/1055.html>`_
 * `roscpp <https://www.ncnynl.com/archives/201701/1273.html>`_
 

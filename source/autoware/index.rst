@@ -796,6 +796,9 @@ Jetson AGX Xavier
     tegrastats
 
     sudo nvpmodel --query
+    sudo nvpmodel -q --verbose
+
+    sudo nvpmodel -p --verbose
     sudo nvpmodel -m 0  # 0 - MAXN ; 
                         # 1 - MODE_10W ;  默认
                         # 2 - MODE_15W ; 
@@ -808,6 +811,8 @@ Jetson AGX Xavier
     sudo jetson_clocks --show
     
     suod -i  && echo 255 > /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
+
+
 
 
 ----
@@ -857,6 +862,21 @@ Jetson AGX Xavier
     cansend can0 "601#b110ff"
     cansend can1 "601#b110ff"
 
+---------
+
+* Jetson TX2——CAN口的使用 `<https://blog.csdn.net/xuezhunzhen9743/article/details/81877757>`_
+
+
+.. code-block:: sh
+
+    modprobe can        // 插入 can 总线子系统
+    modprobe can-raw    // 插入can 协议模块
+    modprobe can-bcm
+    modprobe can-gw  
+    modprobe can-dev
+    modprobe mttcan      //真正的can口支持
+
+---------
 
 * `NVIDIA Xavier UART <https://blog.csdn.net/weifengdq/article/details/103071182>`_
 
