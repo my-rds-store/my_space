@@ -167,6 +167,9 @@ Autoware
 
     # With CUDA support
     AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+    AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --packages-up-to gnss_localizer \
+                                    --cmake-args -DCMAKE_BUILD_TYPE=Release  
+
 
     # Without CUDA Support
     # colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
