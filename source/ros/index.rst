@@ -378,6 +378,15 @@ ROS Qt Creator Plug-in
 * `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html>`_
 
 ***************
+CAN BUS
+***************
+
+
+* `CAN BUS tools <https://cantools.readthedocs.io/en/latest/>`_
+
+
+
+***************
 Peak-CAN
 ***************
 
