@@ -87,6 +87,15 @@ Protobuf
         # Qt .pro add this line
         unix|win32: LIBS += -pthread -lprotobuf -pthread -lpthread
 
+
+**********************
+boost
+**********************
+
+.. code-block:: zsh
+
+    sudo apt-get install libboost-all-dev
+
 -------
 
 * `UTF-8 <http://www.cnblogs.com/chenwenbiao/archive/2011/08/11/2134503.html>`_
