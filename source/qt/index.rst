@@ -10,9 +10,9 @@ Book
 ------
 
 * `QMlBook <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
+    * https://github.com/cwc1987/QmlBook-In-Chinese
+
 * `C++ GUI Qt 4编程（第二版） <http://linux.linuxidc.com/index.php?folder=MjAxMsTq18rBzy821MIvNMjVL0Ox4LPMo6i12rb+sOajqSjW0M7EuN/H5VBERsmow+iw5ilAy+bK6dS0wus=>`_ 
-* `QmlBook  <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
-* https://github.com/cwc1987/QmlBook-In-Chinese
 
 
 * `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
@@ -21,6 +21,14 @@ Book
 * `QTCN <http://www.qtcn.org/gpq4/>`_
 * `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
 * `Qt Download <http://download.qt.io/>`_
+
+*******
+QML   
+*******
+
+*  待整理
+    * https://www.linuxzen.com/pyqt-qml-kuai-su-kai-fa-guizong-jie.html
+    * https://evileg.com/en/post/242/
 
 --------
 
