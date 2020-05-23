@@ -30,6 +30,42 @@ QML
     * https://www.linuxzen.com/pyqt-qml-kuai-su-kai-fa-guizong-jie.html
     * https://evileg.com/en/post/242/
 
+
+.. code-block:: qml
+
+    /* test.qml */
+
+    import QtQuick 2.0
+
+    Rectangle {
+        id: test
+        width: 100; height: 30
+
+        Text {
+            anchors.fill:parent;
+            text: textData;
+        }
+    }
+
+
+
+.. code-block:: python
+
+    from PyQt5.QtQuick import  QQuickView
+    from PyQt5.QtWidgets import QApplication
+    from PyQt5.QtCore import QUrl
+
+    app = QApplication([])
+
+    view = QQuickView()
+    rootContext = view.rootContext()
+    rootContext.setContextProperty("textData", "Hello world")
+    view.setSource(QUrl("test.qml"))
+    view.show()
+    app.exec_()
+
+
+
 --------
 
 * `图片下载网站  <https://www.flaticon.com/>`_

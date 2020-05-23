@@ -788,8 +788,20 @@ Step 3
 
 --------------------
 
+
+Jetson Tx2 
+-------------------
+
+刷机 sdkmanager_1.1.0-6343
+     jetpack 4.2.3  
+
+
 Jetson AGX Xavier
 -------------------
+
+刷机 sdkmanager_1.1.0-6343
+     jetpack 4.3  
+
 
 .. raw:: html
    :file: ./jetson_nvpmodel.html
