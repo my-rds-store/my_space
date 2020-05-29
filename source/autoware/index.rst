@@ -142,7 +142,15 @@ Autoware
             由 4.1.1-2-gd5a58aa75 降为 3.2.0+dfsg-4ubuntu0.1
 
             sudo apt-get install libopencv-dev=3.2.0+dfsg-4ubuntu0.1
+
                                       
+    * `autoware master branch build on nvidia Jetson AGX Xavier <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/merge_requests/25/diffs?commit_id=4706665ce4366f66034ecd089902f57426b5a728>`_ 
+
+    .. code-block:: sh
+
+            cd vendor/mrt_cmake_modules
+            git checkout 9ddefc0
+
 
 .. code-block:: sh
 
@@ -833,6 +841,9 @@ Jetson AGX Xavier
 ----
 
 * `NVIDIA Xavier CAN <https://blog.csdn.net/weifengdq/article/details/103093111#JetsonAGX_Xavier_CAN_17>`_
+
+* `can_xavier <https://github.com/hmxf/can_xavier>`_
+
 
 .. code-block:: sh
 
