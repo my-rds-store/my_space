@@ -673,10 +673,34 @@ Autoware Camera-LiDAR Calibration Package
 .. code-block:: sh
 
     # calibration_publisher
-    roslaunch runtime_manager calibration_publisher.launch target_frame:=velodyne camera_frame:=camera file:=/home/nvidia/20200423_170612_autoware_lidar_camera_calibration.yaml register_lidar2camera_tf:=True publish_extrinsic_mat:=True publish_camera_info:=True camera_info_topic:=/camera_info2 image_topic_src:=/image_raw projection_matrix_topic:=/projection_matrix camera_id:=/cv_camera
+
+    CALIBRATION=$(pwd)/calibration/autoware_lidar_camera_calibration.yaml
+
+    roslaunch runtime_manager calibration_publisher.launch target_frame:=velodyne camera_frame:=camera file:=${CALIBRATION} \
+    register_lidar2camera_tf:=True publish_extrinsic_mat:=True publish_camera_info:=True \
+    camera_info_topic:=/camera_info2  \
+    image_topic_src:=/image_raw  \
+    projection_matrix_topic:=/projection_matrix  \
+    camera_id:=/cv_camera
+
 
     # points2image
     roslaunch runtime_manager  points2image.launch  camera_id:=/cv_camera camera_info_src:=/camera_info2
+
+    #######################################################################
+    #
+    # rosrun topic_tools relay /cv_camera/image_raw /image_raw
+
+    #CALIBRATION=$(pwd)/calibration/autoware_lidar_camera_calibration.yaml
+    #roslaunch runtime_manager calibration_publisher.launch target_frame:=velodyne camera_frame:=camera file:=${CALIBRATION}  \
+    #        register_lidar2camera_tf:=True publish_extrinsic_mat:=True publish_camera_info:=True \
+    #        camera_info_topic:=/camera_info  \
+    #        image_topic_src:=/image_raw       \
+    #        projection_matrix_topic:=/projection_matrix camera_id:=/
+
+    # #points2image
+    #roslaunch runtime_manager  points2image.launch  camera_id:=/ camera_info_src:=camera_info
+
 
 
 
