@@ -933,7 +933,7 @@ Jetson AGX Xavier
 .. code-block:: sh
 
     sudo chmod a+wrx /dev/ttyTHS0
-    # sudo usermod -a -G ddialout $USER
+    # sudo usermod -a -G dialout $USER
     # sudo usermod -a -G tty $USER
 
 
