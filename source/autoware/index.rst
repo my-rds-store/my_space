@@ -838,6 +838,7 @@ Jetson AGX Xavier
 .. raw:: html
    :file: ./jetson_nvpmodel.html
 
+
 .. code-block:: sh
 
     tegrastats
@@ -860,7 +861,14 @@ Jetson AGX Xavier
     suod -i  && echo 255 > /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
 
 
+----
 
+* QT5
+
+.. code-block:: sh
+
+    sudo apt-get install qt5-default qtcreator -y
+    sudo  apt isntall libqt5charts5 libqt5charts5-dev
 
 ----
 
@@ -869,8 +877,27 @@ Jetson AGX Xavier
 * `can_xavier <https://github.com/hmxf/can_xavier>`_
 
 
+----
+
+* `Enabling CAN on Nvidia Jetson Xavier <https://medium.com/@ramin.nabati/enabling-can-on-nvidia-jetson-xavier-developer-kit-aaaa3c4d99c9>`_
+
 .. code-block:: sh
 
+    # 开机自启动
+    sudo tee -a /etc/rc.local <<- 'EOF'
+    #!/bin/bash
+    bash /enable_CAN.sh &
+    exit 0
+    EOF
+    sudo chmod a+x /etc/rc.local 
+
+
+.. code-block:: sh
+
+    ######################
+    # enable_CAN.sh
+    ######################
+    
     sudo modprobe can
     sudo modprobe can_raw
     sudo modprobe mttcan
@@ -883,11 +910,11 @@ Jetson AGX Xavier
     sudo busybox devmem 0x0c303010 32 0x0000C400
     sudo busybox devmem 0x0c303018 32 0x0000C458
 
-    # 检查寄存器
-    sudo busybox devmem 0x0c303000	# 0x0000C055
-    sudo busybox devmem 0x0c303008	# 0x0000C055
-    sudo busybox devmem 0x0c303010	# 0x0000C059
-    sudo busybox devmem 0x0c303018	# 0x0000C059
+    # # 检查寄存器
+    # sudo busybox devmem 0x0c303000	# 0x0000C055
+    # sudo busybox devmem 0x0c303008	# 0x0000C055
+    # sudo busybox devmem 0x0c303010	# 0x0000C059
+    # sudo busybox devmem 0x0c303018	# 0x0000C059
 
     # 配置标准CAN  500k
     sudo ip link set can0 type can bitrate 500000
@@ -912,6 +939,18 @@ Jetson AGX Xavier
     cansend can0 "601#b110ff"
     cansend can1 "601#b110ff"
 
+
+    #sudo nvpmodel -m 0
+
+    sudo echo 255 > target_pwm
+    sudo cp -vf target_pwm /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
+
+    # 禁用串行控制台
+    #sudo systemctl stop nvgetty
+    #sudo systemctl disable nvgetty
+    #udevadm trigger  # 串口 /dev/ttyTHS0
+
+
 ---------
 
 * Jetson TX2——CAN口的使用 `<https://blog.csdn.net/xuezhunzhen9743/article/details/81877757>`_
@@ -929,15 +968,17 @@ Jetson AGX Xavier
 ---------
 
 * `NVIDIA Xavier UART <https://blog.csdn.net/weifengdq/article/details/103071182>`_
+* `jetson-nano-uart <https://www.jetsonhacks.com/2019/10/10/jetson-nano-uart/>`_
 
 .. code-block:: sh
 
-    sudo chmod a+wrx /dev/ttyTHS0
+    # 禁用串行控制台 ttyTHS*
+    sudo systemctl stop nvgetty
+    sudo systemctl disable nvgetty
+    udevadm trigger  # 串口 /dev/ttyTHS0
+
     # sudo usermod -a -G dialout $USER
-    # sudo usermod -a -G tty $USER
-
-
-
+    ## sudo chmod a+wrx /dev/ttyTHS0
 
 
 MapToolbox
