@@ -857,9 +857,9 @@ Jetson AGX Xavier
 
 
     sudo jetson_clocks --show
-    
-    suod -i  && echo 255 > /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
 
+    echo 255 > target_pwm
+    sudo cp -vf target_pwm /sys/devices/pwm-fan/target_pwm  # 风扇开到最大
 
 ----
 
