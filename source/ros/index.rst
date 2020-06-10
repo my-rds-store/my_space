@@ -227,6 +227,26 @@ rosdep
 package
 ==========
 
+* `image_transport <http://wiki.ros.org/image_transport>`_
+
+    .. code-block:: sh
+
+       # 解压缩
+       # /cv_camera/image_raw/compressed  => /cv_camera/image_decompressed
+       rosrun image_transport republish compressed in:=/cv_camera/image_raw \
+                                                  out:=/cv_camera/image_decompressed
+
+       # /simulator/camera_node/image/compressed  => /image_raw
+       rosrun image_transport republish compressed in:=/simulator/camera_node/image \
+                                                  out:=/cv_camera/image_decompressed
+
+    .. code-block:: xml
+
+        <launch>
+            <node name="image_decompresser" type="republish" pkg="image_transport" output="screen" args="compressed in:=/simulator/camera_node/image raw out:=/image_raw">
+            </node>
+        </launch>
+
 * `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_  
     * `参考 - Ubuntu利用ROS搭建手机移动网络摄像头 (Android) <https://www.bbsmax.com/A/E35pOMWgJv/>`_
 
