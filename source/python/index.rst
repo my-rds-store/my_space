@@ -76,6 +76,25 @@ Book
 
         进入pip文件夹，新建一个pip.ini文件
 
+virtualenv   
+==================
+
+.. code-block:: sh
+
+    # old  version
+    #virtualenv --no-site-packages venv
+    #virtualenv -p /usr/bin/python3.6  --no-site-packages venv
+    
+    # new version 20.0.13
+    virtualenv --python=python3 venv
+
+
+    pip freeze  # 查看当前安装版本
+    pip freeze > requirements.txt
+
+* `virtualenvwrapper  <https://www.cnblogs.com/freely/p/8022923.html>`_
+
+   待整理
 
 
 python 语法规则   

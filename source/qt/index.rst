@@ -86,6 +86,7 @@ PyQt4
 
 * `PyQt4 信号和槽用法总结 <http://blog.csdn.net/jxm_csdn/article/details/51628367>`_
 
+* `PyQt 之 QSettings <https://blog.csdn.net/jxm_csdn/article/details/106762208>`_ 
 
 ********************
 PyQt 学习示例    
