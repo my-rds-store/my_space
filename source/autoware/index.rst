@@ -143,8 +143,9 @@ Autoware
 
             sudo apt-get install libopencv-dev=3.2.0+dfsg-4ubuntu0.1
 
-                                      
-    * `autoware master branch build on nvidia Jetson AGX Xavier <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/merge_requests/25/diffs?commit_id=4706665ce4366f66034ecd089902f57426b5a728>`_ 
+    **build autoware 1.13.0 on  NVIDIA Jetson AGX Xavier**
+        * `autoware master branch build on nvidia Jetson AGX Xavier <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/merge_requests/25/diffs?commit_id=4706665ce4366f66034ecd089902f57426b5a728>`_ 
+        * https://www.ncnynl.com/archives/201911/3482.html
 
     .. code-block:: sh
 
