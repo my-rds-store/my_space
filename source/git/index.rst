@@ -13,6 +13,11 @@ Git
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
 * `Git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
 
+----
+
+* `Git分支管理策略  <http://www.ruanyifeng.com/blog/2012/07/git.html>`_
+* `git cherry-pick 教程 (*重点*) <http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html>`_
+
 .. image:: ./image/Repository.png
     :scale: 100%
     :alt: alternate text

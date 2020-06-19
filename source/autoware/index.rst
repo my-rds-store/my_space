@@ -10,6 +10,7 @@ Autoware
 ------------
 
 * `Wiki <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
+* `矢量地图 <https://account.tier4.jp/accounts/login/>`_
 
 
 1 安装 ROS melodic

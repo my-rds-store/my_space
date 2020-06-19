@@ -686,6 +686,13 @@ Ubuntu 修改 启动时间等待
     sed -i 's/timeout=10/timeout=0/' /etc/grub.d/30_os-prober
     update-grub
 
+**********************************
+禁止ubuntu 18.04更新内核 (待验证)  
+**********************************
+
+* https://blog.csdn.net/weixin_40522162/article/details/80302735
+
+
 
 *********
 Systemd  
