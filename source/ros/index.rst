@@ -2,6 +2,7 @@
 ROS
 #############
 
+-----
 
 * `ROS与QT语言入门教程 <https://www.ncnynl.com/category/ros-qt/>`_
     * `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html#installation>`_
@@ -192,6 +193,13 @@ rostopic
 * 回放
 
 .. code-block:: sh
+
+    rosparam set /use_sim_time true # 使用的是仿真时间
+    
+    # launch文件 设置
+    # <param name="use_sim_time" value="false" />
+    
+
 
     rosbag play <bagfile>
     rosbag play -r 2 <bagfile> # 两倍的速度发布topic。 -r 后面的数字对应播放速率。
