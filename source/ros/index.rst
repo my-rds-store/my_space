@@ -204,7 +204,7 @@ rostopic
     rosbag play <bagfile>
     rosbag play -r 2 <bagfile> # 两倍的速度发布topic。 -r 后面的数字对应播放速率。
     rosbag play -l  <bagfile>  # -l == --loop  循环播放
-    rosbag play <bagfile> --topic /topic1  # 只播放感兴趣的 topic
+    rosbag play <bagfile> --topics /topic1  # 只播放感兴趣的 topic
     rosbag play <bagfile> -d <sec> # 等待一定时间之后发布bag文件中的内容 ;  rosbag  help play  | grep delay
 
     # 在上述播放命令执行期间，空格键可以暂停播放。
