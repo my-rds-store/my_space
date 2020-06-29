@@ -36,6 +36,8 @@ C/C++
 `OpenSSL 编程 <https://openssl-programing.readthedocs.io>`_
 **************************************************************
 
+* `Cmake-Cookbook (网速慢，需要梯子) <https://app.gitbook.com/@chenxiaowei/s/cmake-cookbook/>`_
+
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
 ***************************************************************************
