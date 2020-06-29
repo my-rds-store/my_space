@@ -827,7 +827,11 @@ Jetson Tx2
 -------------------
 
 刷机 sdkmanager_1.1.0-6343
-     jetpack 4.2.3  
+     jetpack 4.3  
+
+* `arm64架构安装vscode——tx2安装vscode  <https://packagecloud.io/headmelted/codebuilds>`_
+
+* `tx2 ubuntu18安装中文输入法，并解决无候选框的问题 <https://blog.csdn.net/xunchou/article/details/93754697>`_
 
 
 Jetson AGX Xavier
