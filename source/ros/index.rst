@@ -232,6 +232,18 @@ rosdep
 知识点
 ***************
 
+ROSINFO
+==========
+
+.. code-block:: sh
+
+    export ROSCONSOLE_FORMAT='[${severity}] [${time}]${node}--${function}-${line}: ${message}'
+    
+    # ${line}     for __LINE__
+    # ${function} for __func__
+    # ${file}     for __FILE__
+    # ${node}     for the node name, no pre-processor equivalent.
+
 package
 ==========
 
