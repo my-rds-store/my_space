@@ -330,6 +330,9 @@ package
    rostopic list
 
 
+   
+
+
 rviz
 ========
 
@@ -416,6 +419,39 @@ ROS Qt Creator Plug-in
 ==========================
 
 * `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html>`_
+
+***************
+sensor
+***************
+
+
+velodyne
+========
+
+.. image:: img/velodyne_default.png
+
+.. image:: img/velodyne-2.png
+ 
+::
+
+    Motor RPM: 转速,范围(0-1200), 默认 600 
+
+    Host(Destination)  
+        - IP Address    : 广播地址 255.255.255.255
+                        : 单播地址 接收端(UDP Server)设备 IP , eg: 10.158.51.29  
+                          接收端设备IP，必须和此IP一致。
+
+
+        - Data Port     : 网络端口 , default 2368
+
+.. code-block:: sh
+
+    roslaunch velodyne_pointcloud VLP16_points.launch port:=2368
+    roslaunch velodyne_pointcloud VLP16_points.launch port:=2371
+
+    # topic 
+    #    - /velodyne_points
+ 
 
 ***************
 CAN BUS
