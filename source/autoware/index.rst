@@ -1048,3 +1048,17 @@ kernel  >= 5.5 的 Ubutnu  应该不存在这个问题
     echo "blacklist snd_soc_skl" | sudo tee -a /etc/modprobe.d/blacklist.conf
     shutdown -r now
 
+
+usb无线wifi
+-------------------
+
+* (AC1750) Edimax ew-7833uac on 18.04
+
+* `Need rtl8814au driver for kernel 5.3 on Ubuntu 19.10 <https://askubuntu.com/questions/1185952/need-rtl8814au-driver-for-kernel-5-3-on-ubuntu-19-10>`_
+
+.. code-block:: sh
+
+    sudo apt install git dkms
+    git clone https://github.com/aircrack-ng/rtl8812au.git
+    cd rtl8812au
+    sudo ./dkms-install.sh
