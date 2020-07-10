@@ -956,7 +956,6 @@ Jetson AGX Xavier
     #sudo systemctl disable nvgetty
     #udevadm trigger  # 串口 /dev/ttyTHS0
 
-
 ---------
 
 * Jetson TX2——CAN口的使用 `<https://blog.csdn.net/xuezhunzhen9743/article/details/81877757>`_
@@ -985,6 +984,62 @@ Jetson AGX Xavier
 
     # sudo usermod -a -G dialout $USER
     ## sudo chmod a+wrx /dev/ttyTHS0
+
+------------------
+
+* `nvida agx vnc 屏幕共享 <https://medium.com/@bharathsudharsan023/jetson-nano-remote-vnc-access-d1e71c82492b>`_
+
+**1**
+
+.. code-block:: sh
+
+    sudo vim /usr/share/glib-2.0/schemas/org.gnome.Vino.gschema.xml
+ 
+.. code-block:: xml
+
+   <!-- and go ahead and add the following key into the XML file. -->
+
+    <key name='enabled' type='b'>
+       <summary>Enable remote access to the desktop</summary>
+       <description>
+       If true, allows remote access to the desktop via the RFB
+       protocol. Users on remote machines may then connect to the
+       desktop using a VNC viewer.
+       </description>
+       <default>false</default>
+    </key>
+
+.. code-block:: sh
+
+     # 更新
+    # Then compile the Gnome schemas with the glib-compile-schemas command. 
+
+    sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+
+    # 关闭 encryption of the VNC
+    #  或者使用图形界面配置工具 dconf editor 'sudo apt-get install dconf-editor'
+
+    gsettings set org.gnome.Vino require-encryption false
+    gsettings set org.gnome.Vino prompt-enabled false
+
+
+**2**
+
+ 
+    打开 `startup applications` .
+    
+    添加 command `/usr/lib/vino/vino-server`. 
+
+    然后，重启系统
+
+.. image:: img/startup_applications.png
+
+
+**3**
+
+.. code-block:: sh
+
+    vncviewer 192.168.2.105:5900
 
 
 MapToolbox

@@ -2,10 +2,7 @@
 ROS
 #############
 
------
-
 * `ROS与QT语言入门教程 <https://www.ncnynl.com/category/ros-qt/>`_
-    * `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html#installation>`_
 
 * `rospy [阅读中...] <https://www.ncnynl.com/archives/201611/1055.html>`_
 * `roscpp <https://www.ncnynl.com/archives/201701/1273.html>`_
@@ -415,11 +412,6 @@ https://www.jianshu.com/p/872dc7b514f1?utm_campaign
     # 2. Create binary debian
     fakeroot debian/rules binary
 
-ROS Qt Creator Plug-in
-==========================
-
-* `ROS Qt Creator Plug-in <https://ros-qtc-plugin.readthedocs.io/en/latest/_source/How-to-Install-Users.html>`_
-
 ***************
 sensor
 ***************
@@ -457,9 +449,7 @@ velodyne
 CAN BUS
 ***************
 
-
 * `CAN BUS tools <https://cantools.readthedocs.io/en/latest/>`_
-
 
 
 ***************
@@ -597,9 +587,7 @@ pcanview
 
 
 * `socketcan_interface <http://wiki.ros.org/socketcan_interface?distro=melodic>`_
-
-* `CAN BUS tools <https://cantools.readthedocs.io/en/latest/#>`_
-* `Can Dbc Editor : SavvyCAN <https://github.com/collin80/SavvyCAN/releases>`_
+* `Can Dbc Editor - SavvyCAN <https://github.com/collin80/SavvyCAN/releases>`_
         
 * `PID <http://wiki.ros.org/pid>`_
 
