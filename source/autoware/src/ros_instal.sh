@@ -1,6 +1,12 @@
 ##############################
 # Install ROS  melodic
 ##############################
+
+sudo tee /etc/resolv.conf <<-'EOF'
+nameserver 114.114.114.114
+nameserver 8.8.8.8
+EOF
+
 sudo apt install libc6:i386 --yes --allow-unauthenticated
 #sudo apt-get install cuda-10-0
 
@@ -26,6 +32,15 @@ EOF
 source /opt/ros/melodic/setup.bash
 
 
+sudo apt-get install python-rosinstall \
+                     python-rosinstall-generator \
+                     python-wstool \
+                     build-essential --yes --allow-unauthenticated
+
+
+sudo apt install -y python-catkin-pkg python-rosdep ros-$ROS_DISTRO-catkin
+sudo apt install -y python3-pip python3-colcon-common-extensions python3-setuptools python3-vcstool 
+
 ##############
 sudo tee /etc/resolv.conf <<-'EOF'
 nameserver 8.8.8.8
@@ -35,14 +50,13 @@ EOF
 sudo rosdep init
 rosdep update
 
-sudo apt-get install python-rosinstall \
-                     python-rosinstall-generator \
-                     python-wstool \
-                     build-essential --yes --allow-unauthenticated
+##############
+sudo tee /etc/resolv.conf <<-'EOF'
+nameserver 114.114.114.114
+nameserver 8.8.8.8
+EOF
 
 
-sudo apt install -y python-catkin-pkg python-rosdep ros-$ROS_DISTRO-catkin
-sudo apt install -y python3-pip python3-colcon-common-extensions python3-setuptools python3-vcstool 
 
 sudo apt-get install libarmadillo-dev libglew-dev libssh2-1-dev python-flask python-requests wget --yes --allow-unauthenticated
 
