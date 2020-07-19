@@ -833,6 +833,13 @@ Jetson Tx2
 
 * `tx2 ubuntu18安装中文输入法，并解决无候选框的问题 <https://blog.csdn.net/xunchou/article/details/93754697>`_
 
+=====
+
+* `Stop Chromium asking for keyring unlock <https://voltaicforge.com/games/chromium-gnome-keyring/>`_
+
+.. code-block:: bash
+
+    chromium --password-store=basic 
 
 Jetson AGX Xavier
 -------------------
