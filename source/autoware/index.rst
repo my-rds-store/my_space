@@ -878,10 +878,19 @@ Jetson AGX Xavier
 
 ----
 
+* ubuntu sudo 免密码 
+
+.. code-block:: sh
+
+    sudo tee /etc/sudoers.d/nopasswd4sudo <<- 'EOF'
+    nvidia ALL=(ALL) NOPASSWD : ALL  
+    EOF
+
+----
+
 * `NVIDIA Xavier CAN <https://blog.csdn.net/weifengdq/article/details/103093111#JetsonAGX_Xavier_CAN_17>`_
 
 * `can_xavier <https://github.com/hmxf/can_xavier>`_
-
 
 ----
 
