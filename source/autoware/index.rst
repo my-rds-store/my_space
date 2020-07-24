@@ -1,4 +1,4 @@
-Autoware
+Autoware 
 ===========
 
 * MIC-7700
@@ -8,8 +8,8 @@ Autoware
 
 一 环境搭建
 ------------
-
-* `Wiki <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
+* `Wiki <https://github.com/Autoware-AI/autoware.ai/wiki>`_
+    * `Wiki(gitlib)  <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
 * `矢量地图 <https://account.tier4.jp/accounts/login/>`_
 
 
