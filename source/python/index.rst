@@ -40,6 +40,17 @@ Python
 * `Pyinstaller使用  <https://www.jianshu.com/p/cc76099bbe04>`_
 * `Using PyInstaller <http://pyinstaller.readthedocs.io/en/stable/usage.html>`_
 
+---------
+
+* python3编译成pyc文件
+
+.. code-block:: sh
+
+    python3 -m compileall -b .           # -b: 生成的pyc与源代码在同一目录
+    find . -name “*.py” |xargs rm -rf    # . 删除py文件
+    find . -name “pycache” |xargs rm -rf # 删除pycache目录
+
+
 *******
 Book   
 *******
