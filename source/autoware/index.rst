@@ -128,9 +128,9 @@ Autoware
 
     mkdir eigen && tar --strip-components=1 -xzvf 3.3.7.tar.gz -C eigen #Decompress
 
-    cd eigen && mkdir build && cd build && cmake .. && make && make install #Build and install
+    cd eigen && mkdir build && cd build && cmake .. && make && sudo make install #Build and install
 
-    cd && rm -rf 3.3.7.tar.gz && rm -rf eigen #Remove downloaded and temporary files
+    cd ../../ && rm -rf 3.3.7.tar.gz && rm -rf eigen #Remove downloaded and temporary files
 
 * step 2 : Build Autoware
 
