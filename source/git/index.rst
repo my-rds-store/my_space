@@ -113,6 +113,7 @@ Gitignore
     $ git log -- filename  <path>  # 查看某文件的修改历史
     $ git show <commit-id> <path>
     $ git log -b <branch_name> 
+    $ git log --graph --all   
 
 
 * `git cherry-pick <https://www.jianshu.com/p/08c3f1804b36>`_

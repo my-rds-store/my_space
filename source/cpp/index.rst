@@ -32,6 +32,10 @@ C/C++
 `Unix c <https://unix-c.readthedocs.io>`_
 ************************************************
 
+*  `C11多线程 <https://www.ibadboy.net/archives/2320.html>`_
+    * `C11新增多线程支持库-threads.h参考手册  <https://www.ibadboy.net/archives/2323.html>`_
+
+
 **************************************************************
 `OpenSSL 编程 <https://openssl-programing.readthedocs.io>`_
 **************************************************************
@@ -58,6 +62,7 @@ Doxygen
     * `Doxygen 10 分钟入门教程 <http://cedar-renjun.github.io/2014/03/21/learn-doxygen-in-10-minutes/index.html>`_
     * `学习用 doxygen 生成源码文档  <https://www.ibm.com/developerworks/cn/aix/library/au-learningdoxygen/>`_
     * `doxygen 使用 <https://www.cnblogs.com/rongpmcu/p/7662765.html>`_
+
 
 **********************
 Protobuf
