@@ -386,6 +386,7 @@ bittorrent文件编辑工具
     
    ros/index
    autoware/index
+   vscode/index
    qemu_libvirt/qemu
    openstack/index
    vim/vim
