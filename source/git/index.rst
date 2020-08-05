@@ -186,6 +186,8 @@ git submodule
 git tag 
 ============
 
+* `Git Tag <https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE>`_
+
 .. code-block:: sh
 
     # 打TAG也就是发布版本
@@ -193,6 +195,8 @@ git tag
     $ 
     $ git push --tags
     $ git push my_origin --tags
+
+    $ git tag -d  tag_name
 
 如果还不能理解可以到这里看看是linus是怎么给Linux内核打的TAG，TAG看起来像什么：https://github.com/torvalds/linux/releases
 
