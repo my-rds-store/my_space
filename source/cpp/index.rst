@@ -17,6 +17,7 @@ C/C++
 
 -----------
 
+* `C++ 并发编程 (从C++11到C++17) <https://paul.pub/cpp-concurrency/#id-%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C>`_
 * `C++并发编程实战 <https://nj.gitbooks.io/c/content/>`_
 * `C++并发编程实战 第二版 <https://chenxiaowei.gitbook.io/c-concurrency-in-action-second-edition-2019/>`_
 
