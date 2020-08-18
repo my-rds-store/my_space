@@ -11,8 +11,19 @@ lgsvl仿真
     https://apollo.auto/devcenter/document_list_cn.html
 
 
+* `如何在Apollo中添加新的车辆 <https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_add_a_new_vehicle_cn.md>`_
+* `如何调节控制参数 <https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_tune_control_parameters_cn.md>`_
+* `如何标定车辆油门和制动 <https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_update_vehicle_calibration_cn.md>`_
+* `Apollo 2.5版导航模式的使用方法 <https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_use_apollo_2.5_navigation_mode_cn.md>`_
+* `使用VSCode构建、调试Apollo项目 <https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_build_and_debug_apollo_in_vscode_cn.md>`_
+* `如何在本地运行基于NDT点云匹配的定位模块 <https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_run_NDT_localization_module_on_your_local_computer_cn.md>`_
+
+如何在本地运行RTK定位模块
+    https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_run_RTK_localization_module_on_your_local_computer_cn.md
+
 二. 参考资料
 --------------------
+
 
 
 知乎王方浩
