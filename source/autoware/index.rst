@@ -123,11 +123,14 @@ Autoware
 3 源码编译 Autoware
 ````````````````````````````````
 
-* step 1 : Install Eigen
+* step 1 : Install Eigen (线性算术的C++模板库) 
+
+* `主页 <http://eigen.tuxfamily.org/index.php?title=Main_Page>`_
 
 .. code-block:: sh
 
-    wget http://bitbucket.org/eigen/eigen/get/3.3.7.tar.gz #Download Eigen
+    #wget http://bitbucket.org/eigen/eigen/get/3.3.7.tar.gz #Download Eigen 失效
+    wget https://gitlab.com/libeigen/eigen/-/archive/3.3.7/eigen-3.3.7.tar.gz
 
     mkdir eigen && tar --strip-components=1 -xzvf 3.3.7.tar.gz -C eigen #Decompress
 
