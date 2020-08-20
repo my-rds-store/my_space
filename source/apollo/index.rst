@@ -24,6 +24,8 @@ lgsvl仿真
 二. 参考资料
 --------------------
 
+攻城狮の家
+    * `Apollo相对地图与导航模式详解 <http://xchu.net/2019/08/23/apollo%E7%9B%B8%E5%AF%B9%E5%9C%B0%E5%9B%BE/>`_
 
 
 知乎王方浩
@@ -44,8 +46,13 @@ Dig-intoApollo
 路径规划之 A* 算法
     https://paul.pub/a-star-algorithm/
 
+PPT
+    https://blog.csdn.net/dreautumn?t=1
 
 ---------------
+
+Apollo 5.5 源码学习笔记（七） | Apollo与LGSVL联合仿真测试
+    https://blog.csdn.net/zhanghm1995/article/details/106454958
 
 如何使用LGSVL模拟器运行Apollo 5.5
     http://ghoulich.xninja.org/2020/06/09/8782206b064a37fdaba39f30900b7913/
