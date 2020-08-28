@@ -700,6 +700,145 @@ pcanview
   rosrun uvc_camera uvc_camera_node
   rosrun image_view image_view image:=/image_raw
 
+*****************
+EMQ- MQTT
+*****************
+
+* `docker imag : emqx <https://hub.docker.com/r/emqx/emqx>`_
+
+---------
+
+* `在容器中搭建运行EMQ服务器（MQTT服务器） <https://www.hangge.com/blog/cache/detail_2609.html>`_
+
+
+* 各个服务端口说明：
+    * 1883：MQTT 协议端口
+    * 8883：MQTT/SSL 端口
+    * 8083：MQTT/WebSocket 端口
+    * 8080：HTTP API 端口
+    * 18083：Dashboard 管理控制台端口
+
+* 访问地址：http://服务器IP:18083
+    * 默认用户名：admin
+    * 默认密码：public
+
+.. code-block:: sh
+
+    docker run --name emq \
+        -p 18083:18083 \
+        -p 1883:1883 \
+        -p 8084:8084 \
+        -p 8883:8883 \
+        -p 8083:8083 \
+        -d emqx/emqx
+
+* TEST 
+
+    * https://pypi.org/project/paho-mqtt/
+
+-----
+
+    * `Python使用mqtt极简例子 <https://www.jianshu.com/p/0ed4e59b1e8f>`_
+
+.. code-block:: python
+
+    # pub.py
+
+    import paho.mqtt.client as mqtt
+
+    def on_connect(client, userdata, flags, rc):
+        print("Connected with result code: " + str(rc))
+
+    def on_message(client, userdata, msg):
+        print(msg.topic + " " + str(msg.payload))
+
+    client = mqtt.Client()
+    client.on_connect = on_connect
+    client.on_message = on_message
+    client.connect('127.0.0.1', 1883, 600) # 600为keepalive的时间间隔
+    client.publish('fifa', payload='amazing', qos=0)
+
+
+.. code-block:: python
+    
+    # sub.py
+    import paho.mqtt.client as mqtt
+
+    def on_connect(client, userdata, flags, rc):
+        print("Connected with result code: " + str(rc))
+
+    def on_message(client, userdata, msg):
+        print(msg.topic + " " + str(msg.payload))
+
+    client = mqtt.Client()
+    client.on_connect = on_connect
+    client.on_message = on_message
+    client.connect('127.0.0.1', 1883, 600) # 600为keepalive的时间间隔
+    client.subscribe('fifa', qos=0)
+    client.loop_forever() # 保持连接
+
+* `Python MQTT客户端实现 <https://www.cnblogs.com/saryli/p/9719175.html>`_
+
+
+.. code-block:: python
+
+    # sub.py
+
+    import paho.mqtt.client as mqtt
+    import time
+
+    #HOST = "127.0.0.1"
+    HOST = "192.168.2.102"
+    PORT = 1883
+
+    def client_loop():
+        client_id = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
+        client = mqtt.Client(client_id)    # ClientId不能重复，所以使用当前时间
+        client.username_pw_set("jxm", "public")  # 必须设置，否则会返回「Connected with result code 4」
+        client.on_connect = on_connect
+        client.on_message = on_message
+        client.connect(HOST, PORT, 60)
+        client.loop_forever()
+
+    def on_connect(client, userdata, flags, rc):
+        print("Connected with result code "+str(rc))
+        client.subscribe("test")
+
+    def on_message(client, userdata, msg):
+        print(msg.topic+" "+msg.payload.decode("utf-8"))
+
+    if __name__ == '__main__':
+        client_loop()
+
+.. code-block:: python
+
+    # pub.py
+
+    # import paho.mqtt.client as mqtt
+    import paho.mqtt.publish as publish
+    import time
+     
+    HOST = "127.0.0.1"
+    PORT = 1883
+    def on_connect(client, userdata, flags, rc):
+        print("Connected with result code "+str(rc))
+        client.subscribe("test")
+     
+    def on_message(client, userdata, msg):
+        print(msg.topic+" "+msg.payload.decode("utf-8"))
+     
+    if __name__ == '__main__':
+        client_id = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
+        # client = mqtt.Client(client_id)    # ClientId不能重复，所以使用当前时间
+        # client.username_pw_set("admin", "123456")  # 必须设置，否则会返回「Connected with result code 4」
+        # client.on_connect = on_connect
+        # client.on_message = on_message
+        # client.connect(HOST, PORT, 60)
+        # client.publish("test", "你好 MQTT", qos=0, retain=False)  # 发布消息
+     
+        publish.single("test", "你好 MQTT", qos = 1,hostname=HOST,port=PORT,
+                       client_id=client_id,auth = {'username':"jxm",
+                                                   'password':"public"})
 
 ***********
 环境搭建
