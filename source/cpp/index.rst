@@ -42,6 +42,7 @@ C/C++
 **************************************************************
 
 * `Cmake-Cookbook (网速慢，需要梯子) <https://app.gitbook.com/@chenxiaowei/s/cmake-cookbook/>`_
+    * `CMake之find_package <https://www.jianshu.com/p/46e9b8a6cb6a>`_
 
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
