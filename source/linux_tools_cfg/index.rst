@@ -3,9 +3,7 @@
 ####################
 
 NFS (for ubuntu14.04)
-==========================
-
-1).  NFS Server 
+========================== 1).  NFS Server 
 -----------------------------------
 
 .. code-block:: sh
@@ -646,8 +644,111 @@ tmux
 * https://linux.cn/article-9096-1.html
 
 
+`Ubuntu制作apt源 <https://www.cnblogs.com/sixloop/p/make_ubuntu_apt_repo.html>`_
+-----------------------------------------------------------------------------------
+
+* nginx
+
+.. code-block:: sh
+
+    apt install nginx
+
+
+* nginx辑配置文件
+
+::
+
+    server {
+     error_log /var/log/nginx/apt_server.log info;
+     listen  8080;
+     #server_name www.example.com;
+     root /var/www/apt_server;
+     autoindex on;
+     
+     location / {
+      #index index.html index.htm;
+     }
+    }
+
+
+.. code-block:: sh
+
+    nginx -t reload  #重载配置
+
+
+* 初始化仓库目录
+
+.. code-block:: sh
+
+    mkdir -p /var/www/apt_server
+    cd /var/www/apt_server
+    mkdir -p dists/zesty/main/binary-amd64
+    mkdir -p dists/zesty/main/binary-i386
+    mkdir -p dists/zesty/main/binary-arm64
+    ln -s /var/cache/apt/archives /var/www/apt_server/packages
+
+
+    sudo apt-get install dpkg-dev 
+
+
+* 建立包列表及依赖信息文件
+
+.. code-block:: sh
+
+    cd /var/www/apt_server/
+    dpkg-scanpackages packages /dev/null | gzip > dists/zesty/main/binary-amd64/Packages.gz
+    dpkg-scanpackages packages /dev/null | gzip > dists/zesty/main/binary-i386/Packages.gz
+    dpkg-scanpackages packages /dev/null | gzip > dists/zesty/main/binary-arm64/Packages.gz
+
+
+-------------------
+
+
+* 加入源地址 `/etc/apt/sources.list`
+::
+
+    deb http://{IP}:8080 zesty main
+    deb [arch=amd64] http://{IP}:8080 zesty main
+    deb [arch=i386] http://{IP}:8080 zesty main
+    deb [arch=arm64] http://{IP}:8080 zesty main
+
+
+.. code-block:: sh
+
+    sudo apt-get update --allow-insecure-repositories
+
+    sudo apt-get install vim --allow-unauthenticated
+
+        # 注意事项：需要加上这个 --allow-unauthenticated选项。
+        #           本地的源是没有签名的，直接更新ubuntu下的apt会提示找不到release文件，
+        #           是一种不安全的源，默认是被禁用的。
+
+*  递归下载所需deb包及依赖包
+
+
+.. code-block:: sh
+
+    #edit your package list.
+    PACKAGES="wget 
+              tcpdump
+              unzip"
+     
+    # get dep recurse
+    DEPS=$(apt-cache depends --recurse --no-recommends --no-suggests \
+              --no-conflicts --no-breaks --no-replaces --no-enhances \
+              --no-pre-depends ${PACKAGES} | grep "^\w" )
+     
+    echo $DEPS
+     
+    # download all deps
+    cd /var/www/ubuntu/packages/
+    apt-get download $DEPS
+
+
 
 .. raw:: html
 
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=413961293&auto=1&height=66"></iframe>
+
+
 
