@@ -308,6 +308,16 @@ rosdep
         rosdep install AMAZING_PACKAGE
         rosdep install --from-paths src --ignore-src -r -y # 用于安装工作空间中所有包的依赖项
 
+
+* rosdep update一直timeout的问题  !
+
+.. code-block:: sh
+    
+    find  /usr/lib/python2.7/dist-packages/rosdep2/ -name "*.py" | xargs grep -n  "DOWNLOAD_TIMEOUT\ ="
+
+    #  将  DOWNLOAD_TIMEOUT = 15.0 的值，改大一点就可以了
+
+
 ***************
 知识点
 ***************
@@ -409,8 +419,7 @@ package
 
    rostopic list
 
-
-   
+-------------
 
 
 rviz
