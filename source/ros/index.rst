@@ -37,7 +37,6 @@ example
         sudo apt-get update
 
         #apt-cache search ros-kinetic
-        sudo apt-get install ros-kinetic-desktop-full --yes --allow-unauthenticated
         sudo apt-get install ros-melodic-desktop-full --yes --allow-unauthenticated
 
         # sudo apt-get install ros-kinetic-slam-gmapping -y # 地图建模
