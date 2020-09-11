@@ -447,6 +447,8 @@ tf变换
     rosrun tf tf_echo <source_frame> <target_target> 
     rosrun tf view_frames 
 
+* `static_transform_publisher <https://blog.csdn.net/tiancailx/article/details/78910317>`_
+
 .. code-block:: sh
 
     # << ROS机器人开发实践 >> Page 64
