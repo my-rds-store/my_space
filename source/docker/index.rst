@@ -40,6 +40,7 @@ Repositories
 
     # debian/ubuntu 
     curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
+    wget -qO - https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
 
     # centos 6 安装老版本,docker
     sudo yum install -y docker.io
