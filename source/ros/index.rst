@@ -689,6 +689,22 @@ pcanview
 
 * `研华can卡驱动 下载地址  <https://support.advantech.com/support/DownloadSRDetail_New.aspx?SR_ID=GF-GRSC&Doc_Source=Download>`_
 
+* `关闭内核或包的自动更新 <https://blog.csdn.net/weixin_42915431/article/details/106614841>`_
+
+.. code-block:: sh 
+
+    uname  -r # 查看当前内核版本
+    dpkg --get-selections | grep linux-image # 查看已安装内核镜像
+    sudo apt-mark hold linux-image-5.0.0-23-generic # 禁止内核更新  
+    sudo apt-mark unhold linux-image-5.0.0-23-generic #解除禁用
+
+
+    # 或者 修改配置
+    #
+    #  修改系统配置，在/etc/apt/apt.conf.d目录下
+    #  10periodic、20auto-upgrades配置中1改为0即可
+
+
 ----------
 
 * `使用socat实现Linux虚拟串口 <https://blog.csdn.net/rainertop/article/details/26706847>`_
