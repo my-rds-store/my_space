@@ -225,8 +225,10 @@ Autoware
     # Download 1.13.0
     wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.13.0/autoware.ai.repos?inline=false"
 
+    # Download 1.14.0
+
     # Download master
-    wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/master/autoware.ai.repos?inline=false"
+    wget -O autoware.ai.repos "https://raw.githubusercontent.com/Autoware-AI/autoware.ai/master/autoware.ai.repos"
 
     vcs import src < autoware.ai.repos
 

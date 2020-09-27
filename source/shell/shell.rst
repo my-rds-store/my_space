@@ -219,6 +219,8 @@ Shell 获取文件名和后缀名
     $ basename '/a/b/c/name.txt'    #用于去掉路径信息，返回纯粹的文件名
     name.txt
 
+    dirname  #获取文件路径
+
 
 split分割文件
 -------------
