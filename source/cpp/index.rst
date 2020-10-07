@@ -44,6 +44,8 @@ C/C++
 * `Cmake-Cookbook (网速慢，需要梯子) <https://app.gitbook.com/@chenxiaowei/s/cmake-cookbook/>`_
     * `cmake教程4(find_package使用) <https://cloud.tencent.com/developer/article/1338349>`_
     * `CMake之find_package <https://www.jianshu.com/p/46e9b8a6cb6a>`_
+* `CMake Cookbook中文版 <https://www.bookstack.cn/read/CMake-Cookbook/content-chapter1-1.0-chinese.md>`_
+    * https://github.com/xiaoweiChen/CMake-Cookbook.git
 
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
@@ -157,6 +159,29 @@ GeographicLib
 
     g++ main.cpp `pkg-config --cflags --libs geographiclib`
 
+
+
+.. code-block:: cmake
+
+    # CMakeLists.txt
+
+    cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+    project(localCartesian_test LANGUAGES CXX)
+
+    #find_package(PkgConfig REQUIRED)
+    include(FindPkgConfig)
+
+    #pkg_search_module(GEOGRAPHICLIB REQUIRED IMPORTED_TARGET geographiclib>=1.49) # 检查包并使用第一个可用包
+    pkg_check_modules(GEOGRAPHICLIB REQUIRED IMPORTED_TARGET geographiclib>=1.49)  # 检查所有相应的包
+
+
+    #include_directories(${GEOGRAPHICLIB_INCLUDE_DIRS})
+    include_directories(PkgConfig::GEOGRAPHICLIB)
+
+    add_executable(${PROJECT_NAME} main.cpp)
+
+    #target_link_libraries(${PROJECT_NAME}  ${GEOGRAPHICLIB_LIBRARIES})
+    target_link_libraries(${PROJECT_NAME}  PkgConfig::GEOGRAPHICLIB)
 
 
 -------
