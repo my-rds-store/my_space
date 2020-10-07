@@ -762,6 +762,8 @@ EMQ- MQTT
 
     * https://pypi.org/project/paho-mqtt/
 
+* `MQTTBox <http://workswithweb.com/html/mqttbox/downloads.html>`_
+
 -----
 
     * `Python使用mqtt极简例子 <https://www.jianshu.com/p/0ed4e59b1e8f>`_
