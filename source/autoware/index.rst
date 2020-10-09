@@ -60,6 +60,8 @@ Autoware
 
 一 环境搭建
 ------------
+
+* `Wiki 加速 <https://hub.fastgit.org /Autoware-AI/autoware.ai/wiki>`_
 * `Wiki <https://github.com/Autoware-AI/autoware.ai/wiki>`_
     * `Wiki(gitlib)  <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
 * `矢量地图 <https://account.tier4.jp/accounts/login/>`_
@@ -226,6 +228,10 @@ Autoware
     wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.13.0/autoware.ai.repos?inline=false"
 
     # Download 1.14.0
+    wget https://raw.fastgit.org/Autoware-AI/autoware.ai/1.14.0/autoware.ai.repos
+    sed -i "s/github.com/hub.fastgit.org/" autoware.ai.repos
+
+
 
     # Download master
     wget -O autoware.ai.repos "https://raw.githubusercontent.com/Autoware-AI/autoware.ai/master/autoware.ai.repos"

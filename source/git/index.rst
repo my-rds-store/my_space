@@ -29,6 +29,8 @@ Git 安装与配置
 
 * `Git flow completion <https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion>`_
 
+
+
 ************
 Git 常用命令 
 ************
@@ -38,20 +40,28 @@ git config
 
 .. code-block:: sh
 
-    $ git config --global -e  # 默认为 --global
-    $ git config  -e    # or git config --edit
-    $ git config --list 
-    $ git config --global core.editor vim  # 配置默认编辑器 vim
+    git config --global -e  # 默认为 --global
+    git config  -e    # or git config --edit
+    git config --list 
+    git config --global core.editor vim  # 配置默认编辑器 vim
 
-    #  代理服务哦
-    $ git config --global http.proxy  socks5://127.0.0.1:1080 # 代理服务器
-    $ git config --global https.proxy socks5://127.0.0.1:1080 
+    #  设置代理服务- 全局
+    git config --global http.proxy  socks5://127.0.0.1:1080 # 代理服务器
+    git config --global https.proxy socks5://127.0.0.1:1080 
     
-    $ git config --global --unset http.proxy   # 撤销代理服务器
-    $ git config --global --unset https.proxy
+    git config --global --unset http.proxy   # 撤销代理服务器
+    git config --global --unset https.proxy
 
-    $ git config --global --get http.proxy   # 查询理服务器
-    $ git config --global --get https.proxy
+    git config --global --get http.proxy   # 查询理服务器
+    git config --global --get https.proxy
+
+
+    #设置代理服务 - 只对github.com
+    git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+     
+    #取消代理
+    git config --global --unset http.https://github.com.proxy
+
 
     # 记住密码
     $ git config credential.helper store # 永久记住密码
@@ -257,7 +267,22 @@ Send Mail
     # send 
     $ git send-email --no-chain-reply-to --annotate --confirm=always --to=jxm_zn@163.com  master -1 
 
+********
+Github  
+********
 
+
+* github的镜像网站 `github.com.cnpmjs.org` 和 `hub.fastgit.org`
+
+.. code-block:: sh 
+
+    # 未加速
+    git clone https://github.com/Autoware-AI/autoware.ai.git 
+
+    # 加速
+    git clone https://github.com.cnpmjs.org/Autoware-AI/autoware.ai.git 
+    git clone https://hub.fastgit.org/Autoware-AI/autoware.ai.git 
+    
 
 * `如何加快github下载代码的速度 <https://blog.csdn.net/mist99/article/details/80602090>`_
 
@@ -275,12 +300,10 @@ Send Mail
         /etc/init.d/networking restart
 
 
-********
-Github  
-********
+
+
 
 * `Syncing a fork <https://help.github.com/articles/syncing-a-fork/>`_
-
 
 ************
 Gitlab_
