@@ -93,21 +93,18 @@ Autoware
 
 .. code-block:: sh
     
-    sudo apt-get install curl --yes --allow-unauthenticated
-    
     # 按照提示输入,当前用户密码
+    # x86_64
     wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash
 
+    # Arm - Nvidia Jetson AGX
+    wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/autoware/src/ros_install_agx.sh | bash
 
-    # Nvidia Jetson AGX
-    curl -sSL https://github.com/my-rds-store/my_space/raw/master/source/autoware/src/ros_install_agx.sh | bash
 
-
-* 安装脚本的源码如下:
+* x86_64安装脚本的源码如下:
 
   .. literalinclude:: ./src/ros_instal.sh
      :language: bash
-
 
 
 2 安装 CUDA 10.0
@@ -121,7 +118,7 @@ Autoware
 
 * Step 2 : Install cuda 10.0
 
-    `下载链接: cuda-repo-ubuntu1804_10.0.130-1_amd64.deb <https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.1.105-1_amd64.deb>`_
+    `下载链接: cuda-repo-ubuntu1804_10.0.130-1_amd64.deb <https://developer.download.nvidia.cn/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb>`_
 
     .. code-block:: sh
 
@@ -244,6 +241,7 @@ Autoware
 
     # With CUDA support
     AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+    # With CUDA support build gnss_localizer only
     AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --packages-up-to gnss_localizer \
                                     --cmake-args -DCMAKE_BUILD_TYPE=Release  
 
