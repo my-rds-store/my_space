@@ -642,9 +642,11 @@ rosbag建图
     ndt_mapping[app] : ref设定保存pcd文件的路径, 建图结束后 ,点击 `PCD OUTPUT` 保存pcd。
 
 
-rviz，配置文件 Autoware/ros/src/.config/rviz/ndt_mapping.rviz。
+    rviz 配置文件 Autoware/ros/src/.config/rviz/ndt_mapping.rviz。
 
-建图不一定每次都成功，有时候 NDT 算法匹配的不好，地图可能很混乱。我们的经验是，在收集 LIDAR 数据的时候车辆*行驶慢一些*，如果建图不成功，就多尝试几次，每次都重新收集一次数据.
+
+    建图不一定每次都成功，有时候 NDT 算法匹配的不好,地图可能很混乱。
+    我们的经验是，在收集 LIDAR 数据的时候车辆行驶慢一些，如果建图不成功，就多尝试几次，每次都重新收集一次数据.`
 
 
 生成 Waypoint

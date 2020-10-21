@@ -217,6 +217,7 @@ roslaunch
 
         <remap>
             为此节点设置重新映射参数。
+            <remap from="/original_name" to="/new_name"/>
 
         <rosparam>
             将rosparam文件加载到此节点的〜 / local命名空间中。
@@ -282,6 +283,7 @@ roslaunch
 
 
     rosbag play <bagfile>
+    rosbag play ros.bag  /original_name:=/new_name  # rosbag remap topoic name
     rosbag play -r 2 <bagfile> # 两倍的速度发布topic。 -r 后面的数字对应播放速率。
     rosbag play -l  <bagfile>  # -l == --loop  循环播放
     rosbag play <bagfile> --topics /topic1  # 只播放感兴趣的 topic
