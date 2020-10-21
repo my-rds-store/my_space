@@ -552,55 +552,49 @@ CAN BUS
 Peak-CAN
 ***************
 
-* 安装peak can
-    * `peak-linux-driver-8.9.3.tar.gz <http://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.9.3.tar.gz>`_
+* `安装peak can Drivers <https://www.peak-system.com/Drivers.523.0.html?&L=1>`_
+    * `peak-linux-driver-8.10.2.tar.gz <https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.10.2.tar.gz>`_
 
 .. code-block:: sh
 
-       $ sudo apt-get install libpopt-dev #  libelf-dev
-       $ 
-       $ tar –xzf peak-linux-driver-X.Y.Z.tar.gz
-       $ cd peak-linux-driver-X.Y.Z 
-       $ make -C driver NET=NETDEV_SUPPORT
-       $ make -C driver netdev # verson 8.9.3
-       $ sudo make install
-       $ sudo modprobe peak_usb # 卸载 sudo modprobe -r peak_usb
-       $ ip l | grpe can
+        # 1. install depends
+        sudo apt-get install linux-headers-`uname -r`  \
+                        libpopt-dev g++
 
-       
-       $ sudo apt-get install ros-${ROS_DISTRO}-socketcan-interface \
-                               ros-${ROS_DISTRO}-ros-canopen
+        # 2. build 
+        tar -xzf peak-linux-driver-X.Y.Z.tar.gz
+        cd peak-linux-driver-X.Y.Z 
 
-       $ sudo apt-get install can-utils
-       $ sudo ifconfig can0
-
-       $ sudo ip link set can0 up type can bitrate 500000
-       $ ip -details -statistics link show can0
-
-       $ rosrun socketcan_interface socketcan_dump can0 # dump
-       $ rosrun socketcan_interface socketcan_bcm can0 0.5 12#12345678 # id=12 周期0.5s
-
-       $ cansend can0 123#0102030405060708
-       $ cangen -v can0   # 随机生成can消息
-       $ candump can0
+        make
+        make -C driver netdev
+        make -C lib
+        make -C test
+        make -C libpcanbasic
 
 
-:: 
+        # 3. install 
+        sudo make -C driver install
+        sudo make -C lib install
+        sudo make -C test install
+        sudo make -C libpcanbasic install
 
-        【error】scripts/basic/fixdep: Syntax error: "(" unexpected
+        ip l | grpe can
 
+        # 4.0 load peak_usb
+        sudo modprobe peak_usb # 卸载 sudo modprobe -r peak_usb
+        
+        # 4.1  reboot
+        sudo shutdown -r now
 
-* `解决方法 <https://www.cnblogs.com/happyamyhope/p/9430225.html>`_
+        # 5.  set can0  up
+        sudo ip link set can0 up type can bitrate 500000
+        ip -details -statistics link show can0
 
-.. code-block:: bash
-
-    vim scripts/basic/fixdep
-    cd /lib/modules/4.4.38-tegra/build
-    sudo make scripts
-    sudo make -j4 scripts
-
-    # 注意，也可能是在scripts下而不是build目录下进行编译；
-    # cd /lib/modules/4.4.38-tegra/build/scripts
+        # 6.  test send
+        sudo apt-get install can-utils
+        cansend can0 123#0102030405060708
+        cangen -v can0   # 随机生成can消息
+        candump can0
 
 
 ***************
@@ -683,6 +677,16 @@ pcanview
 
 
 * `socketcan_interface <http://wiki.ros.org/socketcan_interface?distro=melodic>`_
+
+.. code-block:: sh 
+
+       $ sudo apt-get install ros-${ROS_DISTRO}-socketcan-interface \
+                               ros-${ROS_DISTRO}-ros-canopen
+       $ rosrun socketcan_interface socketcan_dump can0 # dump
+       $ rosrun socketcan_interface socketcan_bcm can0  0.5 12#12345678 # id=12 周期0.5s
+
+
+
 * `Can Dbc Editor - SavvyCAN <https://github.com/collin80/SavvyCAN/releases>`_
         
 * `PID <http://wiki.ros.org/pid>`_
