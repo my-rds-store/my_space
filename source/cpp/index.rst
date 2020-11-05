@@ -47,6 +47,8 @@ C/C++
 * `CMake Cookbook中文版 <https://www.bookstack.cn/read/CMake-Cookbook/content-chapter1-1.0-chinese.md>`_
     * https://github.com/xiaoweiChen/CMake-Cookbook.git
 
+    * `cmake 生成 protobuf <https://blog.csdn.net/datase/article/details/82763236>`_
+
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
 ***************************************************************************

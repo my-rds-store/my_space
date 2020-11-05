@@ -541,6 +541,9 @@ velodyne
     #    - /velodyne_points
  
 
+* `ROS创建点云数据并在rviz中显示 <https://blog.csdn.net/qq_43176116/article/details/88020003>`_
+
+
 ***************
 CAN BUS
 ***************
@@ -698,6 +701,9 @@ pcanview
 * `关闭内核或包的自动更新 <https://blog.csdn.net/weixin_42915431/article/details/106614841>`_
 
 .. code-block:: sh 
+
+    # 安装内核
+    sudo apt-get install linux-headers-$(uname -r) linux-image-$(uname -r) 
 
     uname  -r # 查看当前内核版本
     dpkg --get-selections | grep linux-image # 查看已安装内核镜像

@@ -96,9 +96,11 @@ Autoware
     # 按照提示输入,当前用户密码
     # x86_64
     wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash
+    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash 
 
     # Arm - Nvidia Jetson AGX
     wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/autoware/src/ros_install_agx.sh | bash
+    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_install_agx.sh
 
 
 * x86_64安装脚本的源码如下:

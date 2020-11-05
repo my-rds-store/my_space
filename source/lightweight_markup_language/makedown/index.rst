@@ -2,6 +2,8 @@
 Makedown  
 ##########
 
+* `LaTeX公式编辑器 <https://www.latexlive.com/home>`_
+
 * `Makedown 画图 <https://mermaid-js.github.io/mermaid/diagrams-and-syntax-and-examples/>`_
 
 * `在线编辑器 <https://mermaid-js.github.io/mermaid-live-editor>`_
