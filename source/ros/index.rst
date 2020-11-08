@@ -11,6 +11,13 @@ ROS
 
 ------
 
+
+* `中国大学MOOC---《机器人操作系统入门》课程讲义 <https://sychaichangkun.gitbooks.io/ros-tutorial-icourse163/content/>`_
+    * `课程讲义 github markdown file  <https://github.com/DroidAITech/ROS-Academy-for-Beginners-Book-Melodic>`_
+
+    * `代码示例 <https://github.com/DroidAITech/ROS-Academy-for-Beginners>`_
+
+
 * `CSDN ROS学习八篇 <https://blog.csdn.net/tansir94/category_7885264.html>`_
 
 ***********
