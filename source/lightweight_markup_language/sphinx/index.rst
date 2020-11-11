@@ -74,6 +74,21 @@ INSTALL
     # html_theme = 'sphinx_rtd_theme'
     sed -i "s/^html_theme =.*$/html_theme = 'sphinx_rtd_theme'/g" source/conf.py
 
+.. image:: img/readthedocs.png
+       :height: 500 px
+       :width: 800 px
+       :scale: 100%
+       :alt: alternate text
+       :align: center
+
+.. image:: img/github.png
+       :height: 500 px
+       :width: 800 px
+       :scale: 100%
+       :alt: alternate text
+       :align: center
+
+
 代码
 ----------
 

@@ -487,6 +487,15 @@ ROS 分布式
 
     export ROS_MASTER_URI=http://${MasterHostName}:11311
 
+.. code:: 
+
+    export ROS_HOSTNAME=192.168.1.102
+    export ROS_IP=192.168.1.102
+    export ROS_MASTER_URI=http://192.168.1.102:11311
+
+    #
+    export ROS_MASTER_URI=http://192.168.1.102:11311
+
 https://www.jianshu.com/p/872dc7b514f1?utm_campaign
 
 

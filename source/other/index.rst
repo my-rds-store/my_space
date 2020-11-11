@@ -2,6 +2,23 @@
 ================
 
 
+.. math:: \sigma_\mathrm{mean} = \frac{\sigma}{\sqrt{N}}
+
+.. math::
+
+    \begin{bmatrix} 
+     1 & 3\\ 
+    -2 & 0 
+    \end{bmatrix}  
+    \begin{bmatrix} 
+    -1 \\ 
+    2  
+    \end{bmatrix} =
+    \begin{bmatrix} 
+    5 \\ 
+    2  
+    \end{bmatrix}
+
 ::
 
     windows 计算 MD5 SHA1  SHA256
