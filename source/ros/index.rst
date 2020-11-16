@@ -725,6 +725,7 @@ advSocketCAN
     # 安装 18.04.4 lts :  http://old-releases.ubuntu.com/releases/18.04.4/
 
     sudo apt-get install linux-image-5.0.0-23-generic linux-headers-5.0.0-23-generic
+    sudo apt-mark hold linux-image-5.0.0-23-generic #　禁用系统升级
     ##  modinfo  ./advcan_sja1000.ko | grep depend    
     sudo apt-get install linux-modules-extra-5.0.0-23-generic # depends can-dev.ko
     sudo apt-get install vim make gcc openssh-server
