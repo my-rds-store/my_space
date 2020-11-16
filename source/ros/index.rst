@@ -567,9 +567,9 @@ CAN BUS
 * `CAN BUS tools <https://cantools.readthedocs.io/en/latest/>`_
 
 
-***************
+***********
 Peak-CAN
-***************
+***********
 
 * `安装peak can Drivers <https://www.peak-system.com/Drivers.523.0.html?&L=1>`_
     * `peak-linux-driver-8.10.2.tar.gz <https://www.peak-system.com/fileadmin/media/linux/files/peak-linux-driver-8.10.2.tar.gz>`_
@@ -712,7 +712,23 @@ pcanview
 
 ------
 
-* `研华can卡驱动 下载地址  <https://support.advantech.com/support/DownloadSRDetail_New.aspx?SR_ID=GF-GRSC&Doc_Source=Download>`_
+
+**************
+advSocketCAN
+**************
+
+* `研华can卡驱动 下载地址  <https://www.advantech.com.cn/products/b991fa0c-fbbf-b6f7-0540-72301e18edd7/mioe-3680/mod_13aea4bc-7f66-48ca-bc0f-da5b70ef4e50>`_
+    * `advSocketCAN_V1.0.1.0.tar.gz <https://advdownload.advantech.com.cn/productfile/Downloadfile4/1-1URWZCF/advSocketCAN_V1.0.1.0.tar.gz>`_
+
+.. code-block:: sh
+
+    # 安装 18.04.4 lts :  http://old-releases.ubuntu.com/releases/18.04.4/
+
+    sudo apt-get install linux-image-5.0.0-23-generic linux-headers-5.0.0-23-generic
+    ##  modinfo  ./advcan_sja1000.ko | grep depend    
+    sudo apt-get install linux-modules-extra-5.0.0-23-generic # depends can-dev.ko
+    sudo apt-get install vim make gcc openssh-server
+
 
 * `关闭内核或包的自动更新 <https://blog.csdn.net/weixin_42915431/article/details/106614841>`_
 
