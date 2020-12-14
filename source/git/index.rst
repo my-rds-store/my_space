@@ -7,6 +7,9 @@ Git
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
 * `码云平台帮助文档 <http://git.mydoc.io/>`_
 
+
+* `learngitbranching <https://learngitbranching.js.org/?locale=zh_CN>`_
+
 -------------
 
 * `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`_

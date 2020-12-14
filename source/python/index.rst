@@ -98,6 +98,8 @@ virtualenv
     
     # new version 20.0.13
     virtualenv --python=python3 venv
+    source venv/bin/activate #启动环境
+    deactivate  # 退出删除环境
 
 
     pip freeze  # 查看当前安装版本

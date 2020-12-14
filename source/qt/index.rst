@@ -22,6 +22,17 @@ Book
 * `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
 * `Qt Download <http://download.qt.io/>`_
 
+*********************
+Qt学习 开源项目
+*********************
+
+* `Stacer <https://github.com/oguzhaninan/Stacer>`_
+
+    .. code-block:: sh
+
+        git clone --depth 1 https://hub.fastgit.org/oguzhaninan/Stacer.git
+
+
 *******
 QML   
 *******

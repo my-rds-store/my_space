@@ -81,7 +81,7 @@ sudo apt-get install vim openssh-server --yes --allow-unauthenticated
 # sudo apt-get install curl --yes --allow-unauthenticated
 # sudo apt-get install chromium-browser --yes --allow-unauthenticated
 
-#sudo apt-get install libsdl1.2-dev --yes --allow-unauthenticated
+sudo apt-get install libsdl1.2-dev --yes --allow-unauthenticated
 
 # 
 # #sudo apt-get install aptitude
