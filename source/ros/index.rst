@@ -584,7 +584,7 @@ Peak-CAN
         tar -xzf peak-linux-driver-X.Y.Z.tar.gz
         cd peak-linux-driver-X.Y.Z 
 
-        make
+        make -j $(nproc)
         make -C driver netdev
         make -C lib
         make -C test
@@ -654,7 +654,7 @@ pcanview
     auto can0
     iface can0 inet manual
             #pre-up ip link set $IFACE type can bitrate 125000 listen-only off
-            pre-up /sbin/ip link set $IFACE type can bitrate 125000 triple-sampling on
+            pre-up /sbin/ip link set $IFACE type can bitrate 500000 triple-sampling on
             up /sbin/ifconfig $IFACE up
             down /sbin/ifconfig $IFACE down
 
