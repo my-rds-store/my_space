@@ -607,12 +607,18 @@ tmux
 
     C-b ?          显示快捷键帮助
 
+    c-b : set -g display-panes-time 2000
+    C-b : Up, Down 
+          Left, Right  更改窗口大小
+
+    C-b q          显示分隔窗口的编号
+    C-b q 0-9      切换到窗口的编号对应的窗口
+
     C-b C-o        调换窗口位置，类似与vim 里的C-w
     C-b 空格键     采用下一个内置布局
     C-b !          把当前窗口变为新窗口
     C-b "          模向分隔窗口
     C-b %          纵向分隔窗口
-    C-b q          显示分隔窗口的编号
     C-b o          跳到下一个分隔窗口
     C-b 上下键     上一个及下一个分隔窗口
     C-b ALT-方向键 调整分隔窗口大小
@@ -633,6 +639,12 @@ tmux
                    可以通过tmux attach进入 到指定的会话
 
 .. code-block:: sh
+
+    tee ${HOME}/.tmux.conf  <<-'EOF'
+    #延时时间 1200 ms
+    set -g display-panes-time 1200
+    EOF
+
 
     $ tmux list-sessions
     
