@@ -445,6 +445,9 @@ rviz
 tf变换
 ==========================
 
+.. image:: img/Yaw_Axis_Corrected.svg
+
+
 * `什么是tf变换 <https://www.guyuehome.com/355>`_
     * `源码 github <https://github.com/ros-example/ros_explore/tree/master/robot_setup_tf>`_
 * `坐标系统 <https://www.guyuehome.com/265>`_
@@ -464,6 +467,8 @@ tf变换
     rosrun tf static_transform_publisher x y z yaw pitch roll frame_id child_frame_id period_in_ms
     rosrun tf static_transform_publisher x y z qx  qy  qz  qw frame_id child_frame_id period_in_ms
 
+
+
 .. code-block:: xml
 
     <!-- << ROS机器人开发实践 >> Page 64 -->
@@ -472,7 +477,44 @@ tf变换
     <node pkg="tf" type="static_transform_publisher" name="map_to_mobility" args="0 0 0 0 0 0 /map /mobility 10" />
     </launch>
 
+* `API <http://wiki.ros.org/tf/Overview/Using%20Published%20Transforms>`_
 
+* `tf namespace <http://docs.ros.org/en/kinetic/api/tf/html/c++/namespacetf.html>`_
+    * tf::TransformListener Class Reference
+
+
+    +---------------------+-----------------------+-------------------------------+ 
+    | cpp                 |  python               | type                          |
+    +=====================+=======================+===============================+ 
+    |transformQuaternion()| transformQuaternion() |geometry_msgs/QuaternionStamped|
+    +---------------------+-----------------------+-------------------------------+ 
+    |transformVector()    | transformVector3()    | geometry_msgs/Vector3Stamped  |
+    +---------------------+-----------------------+-------------------------------+ 
+    |transformPoint()     | transformPoint()      | geometry_msgs/PointStamped    |
+    +---------------------+-----------------------+-------------------------------+ 
+    |transformPose()      | transformPose()       | geometry_msgs/PoseStamped     |
+    +---------------------+-----------------------+-------------------------------+ 
+    |transformPointCloud()| transformPointCloud() | sensor_msgs/PointCloud        |
+    +---------------------+-----------------------+-------------------------------+ 
+
+
+
+    .. code-block:: cpp
+
+         static geometry_msgs::Quaternion createQuaternionMsgFromRollPitchYaw (double roll, 
+                                                                               double pitch, 
+                                                                               double yaw)	
+
+         void tf::Quaternion::setRPY(const tfScalar & 	roll,
+                                     const tfScalar & 	pitch,
+                                     const tfScalar & 	yaw)
+
+        // 将 tf::Quaternion 转换成  geometry_msgs::Quaternion
+        static void quaternionTFToMsg ( const Quaternion &bt, 
+                                        geometry_msgs::Quaternion &msg)
+
+
+* `geometry_msgs <http://docs.ros.org/en/api/geometry_msgs/html/index-msg.html>`_
 
 
 ROS 分布式
