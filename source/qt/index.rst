@@ -79,6 +79,8 @@ QML
 
 --------
 
+* `阿里图标 <https://www.iconfont.cn/?spm=a313x.7781069.1998910419.d4d0a486a>`_
+
 * `图片下载网站  <https://www.flaticon.com/>`_
 
  www.flaticon.com/Jiangxumin/cjiangxumin@gmain.com/j6m
