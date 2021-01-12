@@ -188,6 +188,9 @@ GeographicLib
 
 -------
 
+* `【C++11】随机值获取——random <https://www.jianshu.com/p/05863a00af8d>`_
+
+
 * `UTF-8 <http://www.cnblogs.com/chenwenbiao/archive/2011/08/11/2134503.html>`_
 
 
