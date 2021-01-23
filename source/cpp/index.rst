@@ -126,9 +126,13 @@ GeographicLib
     #include <cmath>
     #include <GeographicLib/Geocentric.hpp>
     #include <GeographicLib/LocalCartesian.hpp>
+    
+    #include <iomanip>
+
     using namespace std;
     using namespace GeographicLib;
     int main() {
+        cout<<setiosflags(ios::fixed)<<setiosflags(ios::right)<<setprecision(8); //输出一个右对齐的小数点后两位的浮点数。
       try {
         Geocentric earth(Constants::WGS84_a(), Constants::WGS84_f());
         // Alternatively: const Geocentric& earth = Geocentric::WGS84();

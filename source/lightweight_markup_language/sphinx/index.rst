@@ -74,6 +74,9 @@ INSTALL
     # html_theme = 'sphinx_rtd_theme'
     sed -i "s/^html_theme =.*$/html_theme = 'sphinx_rtd_theme'/g" source/conf.py
 
+    ## 手动注释掉,关闭: loading intersphinx inventory from https://docs.python.org/objects.inv...
+    # intersphinx_mapping = {'https://docs.python.org/': None}
+
 .. image:: img/readthedocs.png
        :height: 500 px
        :width: 800 px
