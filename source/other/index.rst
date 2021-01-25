@@ -107,20 +107,6 @@ ceph
 
 `FreeNAS+廉价主机：搭建低成本家庭多媒体共享方案 <https://post.smzdm.com/p/27048/>`_
 
-流程图
---------------
-
-* `ProcessOn <https://www.processon.com/>`_
-* `yEd <https://www.yworks.com/products/yed/download>`_
-
----------------
-
-* `mobaxterm <https://mobaxterm.mobatek.net/download.html>`_
-
---------------
-
-* `协作工具 leangoo <https://www.leangoo.com>`_
-
 
 other
 --------------
