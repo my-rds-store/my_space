@@ -159,7 +159,12 @@ open edx
 
 **流程图**
 
-* `Drawio <https://github.com/jgraph/drawio-desktop/releases>`_
+* `Drawio <https://github.com/jgraph/drawio-desktop/releases>`_  
+
+.. code-block:: sh
+
+  sudo snap install drawio
+
 * `ProcessOn <https://www.processon.com/>`_
 * `yEd <https://www.yworks.com/products/yed/download>`_
 
