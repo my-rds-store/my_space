@@ -16,6 +16,8 @@ ROS
   * `ROS Pluginlib高级篇 <https://zhuanlan.zhihu.com/p/101107305>`_
   * `ROS Nodelet介绍  <https://zhuanlan.zhihu.com/p/103032444>`_
 
+* https://github.com/chengyangkj/Ros_Qt5_Gui_App#%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B
+
 ------
 
 
