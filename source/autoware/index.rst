@@ -65,6 +65,7 @@ Autoware
 * `Wiki <https://github.com/Autoware-AI/autoware.ai/wiki>`_
     * `Wiki(gitlib)  <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
 * `矢量地图 <https://account.tier4.jp/accounts/login/>`_
+* `MapToolbox <https://github.com/autocore-ai/MapToolbox/tree/lanelet2>`_
 
 
 1 安装 ROS melodic

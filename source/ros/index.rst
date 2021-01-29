@@ -11,6 +11,13 @@ ROS
 
 ------
 
+* ros Pluginlib
+  * `ROS Pluginlib基础篇 <https://zhuanlan.zhihu.com/p/100562982>`_
+  * `ROS Pluginlib高级篇 <https://zhuanlan.zhihu.com/p/101107305>`_
+  * `ROS Nodelet介绍  <https://zhuanlan.zhihu.com/p/103032444>`_
+
+------
+
 
 * `中国大学MOOC---《机器人操作系统入门》课程讲义 <https://sychaichangkun.gitbooks.io/ros-tutorial-icourse163/content/>`_
     * `课程讲义 github markdown file  <https://github.com/DroidAITech/ROS-Academy-for-Beginners-Book-Melodic>`_
