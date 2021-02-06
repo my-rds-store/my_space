@@ -226,8 +226,8 @@ http://blog.csdn.net/love_xiaozhao/article/details/52704197
 安装WPS for Linux 
 ===================
 
+* 百度云盘
 * `WPS for Linux 下载地址 1 <http://community.wps.cn/download/>`_
-
 * `WPS for Linux 下载地址 2 <http://wps-community.org/download.html?vl=a21#download>`_
 
 :: 

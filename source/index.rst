@@ -176,6 +176,8 @@ open edx
 
 * `协作工具 leangoo <https://www.leangoo.com>`_
 
+* grub-customizer
+
 
 匿名网盘
     *  `奶牛快传 <http://cowtransfer.com/>`_
