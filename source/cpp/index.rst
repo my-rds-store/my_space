@@ -38,17 +38,19 @@ C/C++
     * `C11新增多线程支持库-threads.h参考手册  <https://www.ibadboy.net/archives/2323.html>`_
 
 
-**************************************************************
-`OpenSSL 编程 <https://openssl-programing.readthedocs.io>`_
-**************************************************************
+
+**********************
+Cmake
+**********************
+
 
 * `Cmake-Cookbook (网速慢，需要梯子) <https://app.gitbook.com/@chenxiaowei/s/cmake-cookbook/>`_
     * `cmake教程4(find_package使用) <https://cloud.tencent.com/developer/article/1338349>`_
     * `CMake之find_package <https://www.jianshu.com/p/46e9b8a6cb6a>`_
 * `CMake Cookbook中文版 <https://www.bookstack.cn/read/CMake-Cookbook/content-chapter1-1.0-chinese.md>`_
     * https://github.com/xiaoweiChen/CMake-Cookbook.git
-
     * `cmake 生成 protobuf <https://blog.csdn.net/datase/article/details/82763236>`_
+    * `readelf <https://blog.csdn.net/yfldyxl/article/details/81566279>`_
 
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
@@ -222,8 +224,6 @@ GeographicLib
     实际将UNICODE转换为UTF-8编码时应先去除高位0，然后根据所剩编码的位数决定所需最小的UTF-8编码位数。 
     因此那些基本ASCII字符集中的字符（UNICODE兼容ASCII）只需要一个字节的UTF-8编码（7个二进制位）便可以表示
 
-
-
 ******
 gcc   
 ******
@@ -231,3 +231,11 @@ gcc
 * -Wno-unused-function:  发现不使用的函数不警告
 
 * 全局环境变量（ `C_INCLUDE_PATH` / `CPLUS_INCLUDE_PATH` ）添加自定义的头文件路径
+* `-rpath: <https://www.coderclan.cc/198.html>`_  用于指定运行动时态库搜索路径
+
+
+------------------
+
+**************************************************************
+`OpenSSL 编程 <https://openssl-programing.readthedocs.io>`_
+**************************************************************

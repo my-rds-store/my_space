@@ -196,6 +196,47 @@ NextCloud
 StyleSheet   
 ************
 
+
+.. code:: sh
+    sudo apt-get install ttf-wqy-zenhei fonts-wqy-microhei #安装字体
+
+    fc-list # 查看字体命令
+
+.. code::
+
+    font: bold;  是否粗体显示
+    border-image:"";  用来设定边框的背景图片。
+    border-radius:5px;  用来设定边框的弧度。可以设定圆角的按钮
+    border-width: 1px；  边框大小
+
+
+    font-family:"微软雅黑";  来设定字体所属家族，
+    font-size:20px;      来设定字体大小
+    font-style:"";       来设定字体样式
+    font-weight:20px;    来设定字体深浅
+
+    background-color: green;  设置背景颜色
+    background:transparent;   设置背景为透明
+    color:rgb(241, 70, 62);   设置前景颜色
+    selection-color:rgb(241, 70, 62);  用来设定选中时候的颜色
+
+    qproperty-alignment: AlignCenter; /*居中*/
+    qproperty-text: '文字';
+    qproperty-wordWrap: true; /* 自动换行*/
+
+     
+
+     min-height: 32px;
+     max-height: 32px;
+     min-width: 80px;
+     max-width: 80px;
+     padding: 5px;
+
+
+    可以使用border-top，border-right，border-bottom，border-left分别设定按钮的上下左右边框，
+    同样有border-left-color, border-left-style, border-left-width.等分别来设定他们的颜色，样式和宽度
+
+
 .. code::  
 
         /************************ 
