@@ -198,6 +198,7 @@ StyleSheet
 
 
 .. code:: sh
+
     sudo apt-get install ttf-wqy-zenhei fonts-wqy-microhei #安装字体
 
     fc-list # 查看字体命令
