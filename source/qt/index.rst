@@ -26,6 +26,8 @@ Book
 Qt学习 开源项目
 *********************
 
+* `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
+
 * `Stacer <https://github.com/oguzhaninan/Stacer>`_
 
     .. code-block:: sh
