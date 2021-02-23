@@ -300,6 +300,42 @@ Repositories
     # 数据卷容器
     sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
+********************
+docker-compose
+********************
+
+* `Doc <https://docs.docker.com/compose/compose-file/compose-file-v3/>`_
+
+.. code-block:: sh
+
+    pip install docker-compose==1.24.0
+
+
+    # docker-compose.yml
+    version: "3.0"
+    services:
+      ros_test:
+        #privileged: true
+        image: 'ros:melodic-desktop'
+        container_name: ros-test
+        #runtime: nvidia
+        user: 'root'
+        working_dir: /mnt
+        #restart: always
+        network_mode: "host"
+        #ports:
+        #  - "8080:80"
+        volumes:
+          - /tmp/.X11-unix:/tmp/.X11-unix:rw
+          - /etc/localtime:/etc/localtime:ro
+          - /sys/fs/cgroup:/sys/fs/cgroup:ro
+          - /home/promote/work/proj:/mnt
+        environment:
+          - DISPLAY=:1
+          - QT_X11_NO_MITSHM=1
+        hostname: 'HP-Laptop'
+        extra_hosts:
+          - "HP-Laptop:127.0.0.1"
 
 **********
 Dockerfile
