@@ -311,14 +311,16 @@ docker-compose
     pip install docker-compose==1.24.0
 
 
+.. code-block:: yaml
+
     # docker-compose.yml
     version: "3.0"
     services:
-      ros_test:
-        #privileged: true
-        image: 'ros:melodic-desktop'
+      autoware:
+        privileged: true
+        image: autoware/autoware:latest-melodic-cuda
         container_name: ros-test
-        #runtime: nvidia
+        runtime: nvidia
         user: 'root'
         working_dir: /mnt
         #restart: always
@@ -327,15 +329,16 @@ docker-compose
         #  - "8080:80"
         volumes:
           - /tmp/.X11-unix:/tmp/.X11-unix:rw
-          - /etc/localtime:/etc/localtime:ro
-          - /sys/fs/cgroup:/sys/fs/cgroup:ro
           - /home/promote/work/proj:/mnt
         environment:
           - DISPLAY=:1
-          - QT_X11_NO_MITSHM=1
+          #- USER_ID=1000
+          #- QT_X11_NO_MITSHM=1
+          - QT_LOGGING_RULES="*=false"
         hostname: 'HP-Laptop'
         extra_hosts:
           - "HP-Laptop:127.0.0.1"
+        entrypoint: ["/bin/bash", "-c", "while true; do echo hello world; sleep 1; done"]
 
 **********
 Dockerfile
