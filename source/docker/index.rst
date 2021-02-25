@@ -89,6 +89,20 @@ Repositories
     # 查看
     docker info
 
+去掉sudo权限 
+================
+
+.. code:: sh
+
+    #可以添加docker组
+    sudo groupadd docker
+
+    #添加用户到docker组 
+    sudo gpasswd -a $USER docker
+
+    # docker服务重启 (CentOS7的場合)
+    sudo systemctl restart docker
+
 ******************
 代理
 ******************
