@@ -556,8 +556,9 @@ ROS 分布式
 https://www.jianshu.com/p/872dc7b514f1?utm_campaign
 
 
+***************
 创建Deb安装包
-==========================
+***************
 
 * `How to make a debian from a ROS package <https://gist.github.com/awesomebytes/196eab972a94dd8fcdd69adfe3bd1152>`_
 
@@ -580,6 +581,31 @@ https://www.jianshu.com/p/872dc7b514f1?utm_campaign
     
     # 2. Create binary debian
     fakeroot debian/rules binary
+
+* `生成的deb安装包，依赖本地deb包 <https://answers.ros.org/question/280213/generate-deb-from-dependent-res-package-locally/#280235>`_。
+
+    * 1. 创建文件 `rosdep.yaml`
+
+    .. code:: yaml
+
+        pm_gnss_msgs:
+            ubuntu: ros-melodic-pm-gnss-msgs
+
+    * 2. 在 `/etc/ros/rosdep/sources.list.d/50-my-packages.list` 编辑
+
+
+    .. code:: 
+
+        yaml file:///mnt/waypoint_follower/waypoint_follower_1.0/src/pure_pursuit_ext/rosdep.yaml
+
+
+    * 3. 然后
+
+    .. code:: 
+
+        rosdep update                   # 更新本地
+        rosdep db | grep  pm_gnss_msgs  # 查看
+
 
 ***************
 sensor
