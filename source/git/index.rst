@@ -340,6 +340,23 @@ Gitlab_
          gitlab/gitlab-ce:10.2.4-ce.0
 
 
+     # 更改物理机主机，sshd端口 
+     sudo sed -i 's/#Port\ 22/Port\ 1022/g' /etc/ssh/sshd_config
+     sudo shutdown -r now
+
+     # 
+     sudo docker run --detach \
+        --hostname "192.168.1.100" \
+        --env GITLAB_OMNIBUS_CONFIG="gitlab_rails['lfs_enabled'] = true;" \
+        --publish 10443:443 --publish 80:80 --publish 22:22 \
+        --name gitlab \
+        --restart always \
+        --volume /srv/gitlab/config:/etc/gitlab \
+        --volume /srv/gitlab/logs:/var/log/gitlab \
+        --volume /srv/gitlab/data:/var/opt/gitlab \
+       gitlab/gitlab-ee:13.9.1-ee.0
+
+
 * `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
 * `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
