@@ -392,6 +392,7 @@ ubutnu 源制作
     # 3、
     # 如果是arm的deb包把命令行中的amd改成arm ，如果说是32位操作系统安装的包同理把64改成32,
     # 不过32位就是32位，64位的制作64位的，不要混要不然装的时候报错
+    sudo apt-get install dpkg-dev
     dpkg-scanpackages soft/ /dev/null | gzip > /var/www/dists/lucid/main/binary-amd64/Packages.gz
 
     # 4、
