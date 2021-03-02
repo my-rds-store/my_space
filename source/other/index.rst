@@ -380,37 +380,67 @@ nginx
 ubutnu 源制作
 ---------------
 
-.. code-block:: sh
+* https://gist.github.com/awesomebytes/ce0643c1ddead589ab06e2a1e4c5861b
 
-    # 1、
-    mkdir -p /var/www/soft
-    mkdir -p /var/www/dists/lucid/main
+* Requirements
+    * Python (I used 2.7).
+    * dpkg-scanpackages: **sudo apt-get install dpkg-dev**
+    * gzip: **sudo apt-get install gzip**
 
-    # 2、 
-    cp *.deb /var/www/soft/
 
-    # 3、
-    # 如果是arm的deb包把命令行中的amd改成arm ，如果说是32位操作系统安装的包同理把64改成32,
-    # 不过32位就是32位，64位的制作64位的，不要混要不然装的时候报错
-    sudo apt-get install dpkg-dev
-    dpkg-scanpackages soft/ /dev/null | gzip > /var/www/dists/lucid/main/binary-amd64/Packages.gz
+* 1. Create your debian hosting folder structure
 
-    # 4、
-    cp http_file_server.py /var/www/soft               
+    .. code-block:: sh
 
-    # 5、（命令行）
-    python http_file_server.py
-    #ok 本地安装源制作完成。
+        mkdir simple_debian_repo
+        cd simple_debian_repo
+        mkdir debian
 
-    # 6、本地测试：
-    mv  /etc/apt/sources.list   /etc/apt/sources.list.bak
-    #添加如下，内容
-    tee  /etc/apt/sources.list <<-"EOF"
-    deb http://127.0.0.1:8008 lucid main
-    EOF
-    # 
-    apt-get update
-    apt-cache search  "deb包“
+* 2. Add your `.deb` files to the `debian` folder
+
+    .. code-block:: sh
+
+        cp my_awesome_thing.deb simple_debian_repo/debian
+
+* 3. Create Packages.gz file
+
+    .. code-block:: sh
+
+        # You'll need to do this every time you add/update a .deb.
+        dpkg-scanpackages debian /dev/null | gzip -9c > debian/Packages.gz
+
+
+    You'll get an output similar to
+
+    .. code:: 
+
+        dpkg-scanpackages: warning: Packages in archive but missing from override file:
+        dpkg-scanpackages: warning:   my_awesome_thing.deb
+        dpkg-scanpackages: info: Wrote 1 entries to output Packages file.
+
+
+* 4. Run a webserver to host it
+
+    .. code-block:: sh
+
+        cd simple_debian_repo/
+        python -m SimpleHTTPServer 8000
+
+* 5. Configure any machine to point to your new debian repository
+
+    .. code-block:: sh
+
+        tee  /etc/apt/sources.list <<-"EOF"
+        deb [trusted=yes] http://127.0.0.1:8000 debian/
+        EOF
+         
+        apt-get update
+        apt-cache search  "deb包“
+
+    Note: 
+        that the packages will be non authenticated, so if you want to stop having warnings you'll need to add the **[trusted=yes]**
+
+
 
 ubuntu 好用的工具
 ------------------
