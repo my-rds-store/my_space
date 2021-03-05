@@ -356,6 +356,15 @@ Gitlab_
         --volume /srv/gitlab/data:/var/opt/gitlab \
        gitlab/gitlab-ee:13.9.1-ee.0
 
+* `Gitlab Pages <https://docs.gitlab.com/ee/administration/pages/index.html>`_
+
+.. code-block:: ini
+
+    # /srv/gitlab/config/gitlab.rb
+    pages_external_url "http://192.168.1.100/"
+    gitlab_pages['enable'] = true
+
+
 
 * `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
