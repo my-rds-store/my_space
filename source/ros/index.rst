@@ -997,6 +997,14 @@ EMQ- MQTT
                        client_id=client_id,auth = {'username':"jxm",
                                                    'password':"public"})
 
+* C/C++ 
+
+.. code-block:: sh
+
+    # C 
+    man libmosquitto 
+
+
 ***********
 环境搭建
 ***********
