@@ -897,6 +897,8 @@ EMQ- MQTT
 
     * `Python使用mqtt极简例子 <https://www.jianshu.com/p/0ed4e59b1e8f>`_
 
+    * `c++ example <https://github.com/Auctoris/mosquitopp_client>`_
+
 .. code-block:: python
 
     # pub.py
