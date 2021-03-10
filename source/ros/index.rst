@@ -895,9 +895,12 @@ EMQ- MQTT
 
 -----
 
+    * `mqtt API <https://mosquitto.org/api/files/mosquitto-h.html>`_
+
     * `Python使用mqtt极简例子 <https://www.jianshu.com/p/0ed4e59b1e8f>`_
 
     * `c++ example <https://github.com/Auctoris/mosquitopp_client>`_
+        * https://blog.csdn.net/computerme/article/details/90112716
 
 .. code-block:: python
 
