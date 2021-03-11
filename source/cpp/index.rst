@@ -109,9 +109,16 @@ Protobuf
 boost
 **********************
 
+* `docs <https://www.boost.org/doc/libs/1_65_1/>`_ 
+    * `boost::filesystem总结  <https://www.cnblogs.com/Lilu-1226/p/10773263.html>`_
+
 .. code-block:: zsh
 
     sudo apt-get install libboost-all-dev
+
+    g++ test.cpp -lboost_system -lboost_filesystem 
+
+
 
 **********************
 GeographicLib
