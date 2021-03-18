@@ -25,6 +25,14 @@ C/C++
 
 ------------
 
+***************
+Demo
+***************
+
+* `GTest <https://gitee.com/saltDocument/demo/tree/master/gtest>`_
+* `yaml-cpp <https://gitee.com/saltDocument/demo/tree/master/yaml-cpp>`_
+
+
 
 ************************************************************************
 `系统程序员成长计划 <https://c-language-learn-plan.readthedocs.io>`_
@@ -72,13 +80,6 @@ Doxygen
     * `Doxygen 10 分钟入门教程 <http://cedar-renjun.github.io/2014/03/21/learn-doxygen-in-10-minutes/index.html>`_
     * `学习用 doxygen 生成源码文档  <https://www.ibm.com/developerworks/cn/aix/library/au-learningdoxygen/>`_
     * `doxygen 使用 <https://www.cnblogs.com/rongpmcu/p/7662765.html>`_
-
-***************
-Demo
-***************
-
-* `GTest <https://gitee.com/saltDocument/demo/tree/master/gtest>`_
-* `yaml-cpp <https://gitee.com/saltDocument/demo/tree/master/yaml-cpp>`_
 
 
 **********************
