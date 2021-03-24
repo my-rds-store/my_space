@@ -31,7 +31,8 @@ Demo
 
 * `GTest <https://gitee.com/saltDocument/demo/tree/master/gtest>`_
 * `yaml-cpp <https://gitee.com/saltDocument/demo/tree/master/yaml-cpp>`_
-
+* `ros: libyaml <https://gitee.com/saltDocument/demo/tree/master/ros/libyaml>`_
+* `A start 算法c++实现 <https://gitee.com/saltDocument/demo/tree/master/a_star>`_
 
 
 ************************************************************************

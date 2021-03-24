@@ -564,11 +564,11 @@ https://www.jianshu.com/p/872dc7b514f1?utm_campaign
 
 .. code-block:: sh
 
-    sudo apt-get install python-bloom
+    sudo apt-get install python-bloom=0.10.2-100
     # or sudo pip install -U bloom
 
     #sudo apt-get install dpkg-dev debhelper
-    sudo apt-get install fakeroot
+    sudo apt-get install fakeroot=1.22-2ubuntu1
 
 .. code-block:: sh
 
