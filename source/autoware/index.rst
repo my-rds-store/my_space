@@ -307,6 +307,10 @@ Autoware
     sudo apt-get install libgtk2.0-0:i386 libglib2.0-0:i386 libgdk-pixbuf2.0-0:i386 # 待验证
     sudo apt-get install vulkan-utils # 解决: No supported renderes found, exiting 
 
+.. code-block:: sh
+
+    ## 
+    ${HOME}/.config/unity3d/LG\ Silicon\ Valley\ Lab/LGSVL\ Simulator
 
 .. code::
 
