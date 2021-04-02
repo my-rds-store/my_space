@@ -404,9 +404,11 @@ Dockerfile
 * `Running GUI apps with Docker <http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/?utm_source=tuicool&utm_medium=referral>`_ 
 
 
-*****
-Other
-*****
+***************
+Docker私有仓库
+***************
+
+* `harbor搭建与使用 待验证 <https://blog.csdn.net/qq_24095941/article/details/86063684>`_
 
 
 * `Docker私有仓库搭建  <http://www.jianshu.com/p/00ac18fce367>`_
@@ -424,6 +426,12 @@ Other
 
 * `使用官方 docker registry 搭建私有镜像仓库及部署 web ui <http://blog.csdn.net/mideagroup/article/details/52052618>`_
 
+
+*****
+Other
+*****
+
 * https://hub.docker.com/r/hyper/docker-registry-web
 * https://github.com/kwk/docker-registry-frontend
+
 
