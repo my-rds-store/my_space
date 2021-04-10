@@ -803,9 +803,46 @@ advSocketCAN
 * `研华can卡驱动 下载地址  <https://www.advantech.com.cn/products/b991fa0c-fbbf-b6f7-0540-72301e18edd7/mioe-3680/mod_13aea4bc-7f66-48ca-bc0f-da5b70ef4e50>`_
     * `advSocketCAN_V1.0.1.0.tar.gz <https://advdownload.advantech.com.cn/productfile/Downloadfile4/1-1URWZCF/advSocketCAN_V1.0.1.0.tar.gz>`_
 
+* 研华can卡驱动 - SocketCAN Driver for PCM-26D2CA
+    * `下载地址 - PCM-26D2CA_Linux_V1.0.1.0.tar.zip <https://advdownload.advantech.com.cn/productfile/Downloadfile2/1-1ZDOCLA/PCM-26D2CA_Linux_V1.0.1.0.tar.zip>`_
+
+
+.. code-block:: bash
+
+    sudo apt-get install -y flex bison
+    sudo tee /etc/modules-load.d/modules.conf <<-'EOF'
+    lp
+        can
+        can_dev
+        can_raw
+    advsocketcan
+        advcan_sja1000
+    EOF
+
+.. code-block:: bash
+
+    sed -i "s/SUBDIRS/M/g"   advSocketCAN_V1.0.1.0/driver/Makefile
+
+.. code::
+
+    20c20
+    < 	$(MAKE) -w -C $(KDIR) SUBDIRS=$(PWD) modules 
+    ---
+    > 	$(MAKE) -w -C $(KDIR) M=$(PWD) modules
+
+.. code-block:: bash
+
+    make
+    sudo make install
+
+
+* 系统内核
+
 .. code-block:: sh
 
     # 安装 18.04.4 lts :  http://old-releases.ubuntu.com/releases/18.04.4/
+    # 安装 18.04.5 lts
+    #           http://releases.ubuntu.com/releases/bionic/ubuntu-18.04.5-desktop-amd64.iso.torrent
 
     sudo apt-get install linux-image-5.3.0-59-generic linux-headers-5.3.0-59-generic
     sudo apt-mark hold linux-image-5.3.0-59-generic #　禁用系统升级
