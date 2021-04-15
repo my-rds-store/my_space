@@ -2,6 +2,88 @@
 ROS
 #############
 
+
+* 待研究
+    * ros 开机自启动 `robot_upstart`
+
+* `Awesome Robotic Tooling <https://freerobotics.tools/>`_
+    * https://freerobotics.tools/#communication-and-coordination
+    * https://freerobotics.tools/#documentation-and-presentation
+    * https://freerobotics.tools/#requirements-and-safety
+    * https://freerobotics.tools/#architecture-and-design
+    * https://freerobotics.tools/#frameworks-and-stacks
+    * https://freerobotics.tools/#development-environment
+    * https://freerobotics.tools/#template
+    * https://freerobotics.tools/#build-and-deploy
+    * https://freerobotics.tools/#unit-and-integration-test
+    * https://freerobotics.tools/#lint-and-format
+    * https://freerobotics.tools/#debugging-and-tracing
+    * https://freerobotics.tools/#version-control
+    * https://freerobotics.tools/#simulation
+    * https://freerobotics.tools/#electronics-and-mechanics
+    * https://freerobotics.tools/#sensor-processing
+    * https://freerobotics.tools/#perception-pipeline
+    * https://freerobotics.tools/#machine-learning
+    * https://freerobotics.tools/#parallel-processing
+    * https://freerobotics.tools/#image-processing
+    * https://freerobotics.tools/#radar-processing 
+    * https://freerobotics.tools/#lidar-and-point-cloud-processing 
+    * https://freerobotics.tools/#localization-and-state-estimation
+    * https://freerobotics.tools/#simultaneous-localization-and-mapping 
+    * https://freerobotics.tools/#visual
+    * https://freerobotics.tools/#vector-map 
+    * https://freerobotics.tools/#prediction
+    * `behavior-and-decision <https://freerobotics.tools/#behavior-and-decision>`_
+    * `planning and control <https://freerobotics.tools/#planning-and-control>`_
+        * `steering_functions` - Contains a C++ library that implements steering functions for car-like robots with limited turning radius.
+    * https://freerobotics.tools/#user-interaction
+    * https://freerobotics.tools/#acoustic-user-interface 
+    * https://freerobotics.tools/#command-line-interface
+    * https://freerobotics.tools/#data-visualization-and-mission-control 
+    * https://freerobotics.tools/#annotation
+    * https://freerobotics.tools/#point-cloud
+    * https://freerobotics.tools/#rviz
+    * https://freerobotics.tools/#operation-system
+    * https://freerobotics.tools/#database-and-record
+    * https://freerobotics.tools/#network-distributed-file-system
+    * https://freerobotics.tools/#server-infrastructure-and-high-performance-computing
+    * https://freerobotics.tools/#embedded-operation-system
+    * https://freerobotics.tools/#real-time-kernel
+    * https://freerobotics.tools/#network-and-middleware
+    * https://freerobotics.tools/#ethernet-and-wireless-networking
+    * https://freerobotics.tools/#controller-area-network
+    * https://freerobotics.tools/#sensor-and-acuator-interfaces
+    * https://freerobotics.tools/#security
+    * https://freerobotics.tools/#datasets
+
+
+
+
+* `Webots <https://cyberbotics.com/#cyberbotics>`_
+    * `webots-超详细入门教程(2020) <https://www.bilibili.com/video/BV11V411f7ko?p=2&spm_id_from=pageDriver>`_
+    * `ROS仿真平台总结 <https://rupingcen.blog.csdn.net/article/details/106396478>`_
+        * `Webots 机器人仿真平台(一) 系统安装 <https://rupingcen.blog.csdn.net/article/details/105122098>`_ 
+        * Webots 机器人仿真平台(八) 添加GPS传感器 https://rupingcen.blog.csdn.net/article/details/105658021
+        * Webots 机器人仿真平台(九) 添加IMU传感器 https://blog.csdn.net/crp997576280/article/details/105667450
+        * Webots 机器人仿真平台(十一) 添加激光传感器（laser） <https://rupingcen.blog.csdn.net/article/details/105761752>
+
+
+    * `webots 自动驾驶 <https://cyberbotics.com/doc/automobile/introduction>`_
+
+----
+
+* `开源自主导航小车MickX4（十）总结 <https://rupingcen.blog.csdn.net/article/details/113438074>`_
+    * `源自主导航小车MickX4（七）cartographer 室外3D建图 <https://blog.csdn.net/crp997576280/article/details/111600534>`_
+    * `开源自主导航小车MickX4（八）LeGo-LOAM 室外3D建图 <https://blog.csdn.net/crp997576280/article/details/111657554>`_
+    *  `开源自主导航小车MickX4（九）基于move_base 的自主导航框架 <https://blog.csdn.net/crp997576280/article/details/113434795>`_
+
+
+------
+
+
+-----
+
+
 * `ROS与QT语言入门教程 <https://www.ncnynl.com/category/ros-qt/>`_
 
 * `rospy [阅读中...] <https://www.ncnynl.com/archives/201611/1055.html>`_
@@ -322,6 +404,23 @@ roslaunch
     rosbag filter IN.bag OUT.bag 'topic == "/turtle1/command_velocity"'
     rosbag filter skoda.bag skoda_filter.bag  "topic == '/BrakeCmd' or topic == '/SteeringCmd' or topic == '/ThrottleCmd' or topic== '/rosout' or topic=='/rosout_agg'"
 
+
+* 压缩 compress
+
+.. code-block:: sh
+
+    # 有时候我们的包太大了，会导致打开很慢。比如25G的KITTI数据包可能需要10分钟打开。
+    # rosbag提供了两种压缩格式：BZ2和LZ4。
+    # 其中BZ2占用硬盘小，但播放慢。LZ4虽然对体积的压缩不多，但打开速度提高了数倍。
+    # 另外，此命令会自动备份要压缩的数据包，命名会加一个origin，所以无需担心。
+
+    rosbag compress --lz4 slam_2019-12-14-23-24-43_filter.bag
+
+————————————————
+
+版权声明：本文为CSDN博主「鱼尾sama」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+
+原文链接：https://blog.csdn.net/a850565178/article/details/105820624
 
 
 rosdep

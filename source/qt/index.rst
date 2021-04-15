@@ -40,8 +40,9 @@ QML
 *******
 
 *  待整理
-    * https://www.linuxzen.com/pyqt-qml-kuai-su-kai-fa-guizong-jie.html
+    * `QtQuick之PyQt5与QML交互学习笔记 <https://blog.csdn.net/zym326975/article/details/86589091>`_
     * https://evileg.com/en/post/242/
+    * https://www.linuxzen.com/pyqt-qml-kuai-su-kai-fa-guizong-jie.html
 
 
 .. code-block:: qml
@@ -112,6 +113,21 @@ PyQt 学习示例
 .. code-block:: sh
 
     git clone --depth 1  https://github.com/pyqt/examples.git
+
+*******************
+QChart
+*******************
+
+* 动态曲线图 
+    * **Examples/Qt-5.10.0/charts/dynamicspline**
+    * **Examples/Qt-5.10.0/charts/qmlchart**
+* `QT绘制曲线图 QSplineSeries <https://blog.csdn.net/sazass/article/details/112892959>`_
+* `QT绘制直方图 QBarSeries <https://blog.csdn.net/sazass/article/details/112877752>`_
+* `QT绘制饼状图 QPieSeries     <https://blog.csdn.net/sazass/article/details/112863491>`_
+* `QT绘制折线图 QLineSeries    <https://blog.csdn.net/sazass/article/details/112885820>`_
+* `QT绘制散点图 QScatterSeries <https://blog.csdn.net/sazass/article/details/112895656>`_
+* `QT绘制面积图 QAreaSeries    <https://blog.csdn.net/sazass/article/details/112899184>`_
+
 
 *******************
 Qt地图  研究   
