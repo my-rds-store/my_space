@@ -77,10 +77,6 @@ ROS
     * `开源自主导航小车MickX4（八）LeGo-LOAM 室外3D建图 <https://blog.csdn.net/crp997576280/article/details/111657554>`_
     *  `开源自主导航小车MickX4（九）基于move_base 的自主导航框架 <https://blog.csdn.net/crp997576280/article/details/113434795>`_
 
-
-------
-
-
 -----
 
 
@@ -1146,49 +1142,16 @@ EMQ- MQTT
     man libmosquitto 
 
 
-***********
-环境搭建
-***********
 
-.. code::
+***************
+Demo
+***************
 
-    ###############################
-    ## NVIDIA Geforce GTX 1060 Ti
-    ###############################
-    #
-    # SYS : Windows 10
-    # Python : 3.6.8 、3.7.3
-    #
-    # cuda 10.0
-    #  
-    #    	https://developer.nvidia.com/cuda-toolkit-archive
-    #
-    #    	cuda_10.0.130_411.31_win10.exe
-    #
-    # cudnn 7.5.0.56
-    #
-    #	https://developer.nvidia.com/rdp/cudnn-archive
-    #
-    #  	Download cuDNN v7.5.0 (Feb 21, 2019), for CUDA 10.0
-    #
-    #   CUDA_PATH:  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
-    #   CUDA_PATH_9.0:  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0
-    #   CUDNN:  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
-    #   path: C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin
-    #
-    #   #CUDNN bin include lib 分别拷贝到CUDA中相同名称的文件
-    ###############################
-
-    numpy==1.16.3 
-    tensorflow-gpu==1.13.1 
-    keras==2.2.4
-    opencv-python==3.4.3.18 
-
-    Pillow==5.1.0
-    matplotlib==2.2.2  
-
-
-
+* `GTest <https://gitee.com/saltDocument/demo/tree/master/gtest>`_
+* `yaml-cpp <https://gitee.com/saltDocument/demo/tree/master/yaml-cpp>`_
+* `ros: libyaml <https://gitee.com/saltDocument/demo/tree/master/ros/libyaml>`_
+* `A start 算法c++实现 <https://gitee.com/saltDocument/demo/tree/master/a_star>`_
+* `Ros QML Example <https://gitee.com/saltDocument/demo/tree/master/ros_qml_example>`-
 
 
 *************
