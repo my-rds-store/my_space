@@ -180,6 +180,9 @@ QT环境搭建: QT-4.8 在windows下的使用
 知识点     
 ***********
 
+* `将外部应用程序嵌入到QWidget中 <https://gitee.com/saltDocument/demo/tree/master/find_window>`_
+
+
 .. code-block:: cpp
 
     // QTableWidget
