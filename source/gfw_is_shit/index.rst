@@ -383,6 +383,37 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
  
 * `How To setup polipo on OSX <https://gist.github.com/maoo/3262589c9db989c6e948>`_
 
+
+************************************
+4. 端口转发
+************************************
+
+* 内网渗透之端口转发与代理工具总结:
+	* https://www.freebuf.com/articles/web/170970.html
+	* https://github.com/Brucetg/Pentest-tools.git
+        * /home/promote/Documents/Pentest-tools/端口转发
+
+
+.. code-block:: sh
+
+    #端口转发
+    lcx.exe -slave 192.168.8.6 8888 127.0.0.1 9666
+    lcx.exe -listen  8888 8889  #将 8888 转发到 8889 
+
+    ## 代理
+    lcx.exe -tran 8889 127.0.0.1 9666
+
+
+    ##　端口转发示例３　
+    lcx.exe -slave 192.168.8.100 8888 127.0.0.1 9666　　  # windows  端运行 无界端口 127.0.01:9666
+    ./portmap -m 2 -p1 8889 -h2  192.168.8.100 -p2 8888　  # Linux端(192.168.8.100)  ,上网配置 8889 
+
+
+    ## 待研究： https://www.freebuf.com/articles/network/244567.html
+
+
+
+
 参考
 ============
 
@@ -394,4 +425,9 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
 * `shadowsocks和polipo配置全局代理 <https://blog.denghaihui.com/2017/10/10/shadowsocks-polipo/>`_
 
 *  `ubuntu Polipo 快速使用 <http://wiki.ubuntu.org.cn/UbuntuHelp:Polipo/zh>`_
+
+
+=================
+
+* https://github.com/gfw-breaker/nogfw
 
