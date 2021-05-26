@@ -302,7 +302,7 @@ Autoware
 
 
 `二 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
------------------------------------------------------
+-------------------------------------------------------------------
 
 * `carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
 
