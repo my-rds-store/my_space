@@ -231,6 +231,8 @@ Autoware
     wget https://raw.fastgit.org/Autoware-AI/autoware.ai/1.14.0/autoware.ai.repos
     sed -i "s/github.com/hub.fastgit.org/" autoware.ai.repos
 
+    #　使用方源 lanelet2
+    # sudo apt-get install  ros-melodic-lanelet2
 
 
     # Download master
@@ -297,7 +299,15 @@ Autoware
 
 * `autoware入门教程 <https://www.ncnynl.com/archives/201910/3402.html>`_
 
-`二 LGSVL <https://www.lgsvlsimulator.com/docs/>`_
+
+
+`二 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
+-----------------------------------------------------
+
+* `carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
+
+
+`三 LGSVL <https://www.lgsvlsimulator.com/docs/>`_
 -----------------------------------------------------
 
 .. code-block:: sh
