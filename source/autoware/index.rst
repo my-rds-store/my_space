@@ -306,6 +306,9 @@ Autoware
 
 * `carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
 
+.. code-block:: sh
+
+    roslaunch carla_autoware_agent carla_autoware_agent.launch town:=Town03 host:=192.168.8.6
 
 `三 LGSVL <https://www.lgsvlsimulator.com/docs/>`_
 -----------------------------------------------------
