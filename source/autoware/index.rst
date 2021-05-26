@@ -304,6 +304,7 @@ Autoware
 `二 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
 -------------------------------------------------------------------
 
+* `ros-bridge <https://carla.readthedocs.io/projects/ros-bridge/en/latest/>`_
 * `carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
 
 .. code-block:: sh
