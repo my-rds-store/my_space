@@ -313,6 +313,8 @@ Autoware
 
     roslaunch carla_autoware_agent carla_autoware_agent.launch town:=Town03 host:=192.168.8.6
 
+* `Carla教程-叶小飞 <https://www.zhihu.com/people/xie-xiao-fei-78-24/posts>`_
+
 `三 LGSVL <https://www.lgsvlsimulator.com/docs/>`_
 -----------------------------------------------------
 
