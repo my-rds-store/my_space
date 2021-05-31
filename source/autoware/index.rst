@@ -3,55 +3,9 @@ Autoware
 
 .. raw:: html
 
-    <!doctype html>
-    <html>
-    <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="----">
-    <meta name="description" content="----">
-     
-    <title>---</title>
-    <style type="text/css">
-    #wrapper {
-            width: 600px;
-            background-color: #261718;
-    }
-    .tet{
-            color: #E8B606;	
-    }
-     
-    #wrapper #box {
-            width: 260px;
-            text-align: center;
-            margin:0 auto;
-    }
-    p {line-height:5px;}
-    h1 {
-            background-image: url(image/u=648132297,961608322&fm=21&gp=0.jpg);
-            background-position: 12% 0%;
-    }
-    </style>
-    </head>
-     
-    <body>
-    <div id="wrapper">
-      <div id="box">
-
-        <h9 class="tet">你可以铿锵有力, 但不要仗势叫嚣.</h9>
-        <br/>
-        <h9 class="tet">滋润鲜花的是雨露, 不是那滚滚雷鸣.</h9>
-
-
-
-      </div>
-    </div>
-     
-    </body>
-    </html>
-
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="https://music.163.com/outchain/player?type=2&id=31445772&auto=1&height=32"></iframe>
 
 --------------
-
 
 * MIC-7700
     * ubuntu18.04 LTS
@@ -304,8 +258,19 @@ Autoware
 `二 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
 -------------------------------------------------------------------
 
-* `ros-bridge <https://carla.readthedocs.io/projects/ros-bridge/en/latest/>`_
-* `carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
+`ros-bridge <https://carla.readthedocs.io/projects/ros-bridge/en/latest/>`_
+`````````````````````````````````````````````````````````````````````````````
+
+
+
+.. code-block:: sh
+
+        roslaunch carla_ros_bridge carla_ros_bridge_with_example_ego_vehicle.launch \
+            host:=192.168.8.6 town:=Town03 vehicle_filter:=vehicle.toyota.prius  \
+            spawn_point:="0.700499,-189.727951,0.2,0,0.000000,-91.413536"
+
+`carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
+`````````````````````````````````````````````````````````````````````````````
 
 .. code-block:: sh
 
@@ -313,10 +278,15 @@ Autoware
 
     roslaunch carla_autoware_agent carla_autoware_agent.launch town:=Town03 host:=192.168.8.6
 
+
+
+
+
 * `Carla教程-叶小飞 <https://www.zhihu.com/people/xie-xiao-fei-78-24/posts>`_
 
-`三 LGSVL <https://www.lgsvlsimulator.com/docs/>`_
------------------------------------------------------
+
+`三 LGSVL Simulator <https://www.lgsvlsimulator.com/docs/>`_
+-------------------------------------------------------------------------
 
 .. code-block:: sh
  
