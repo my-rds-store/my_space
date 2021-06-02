@@ -258,9 +258,14 @@ Autoware
 `二 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
 -------------------------------------------------------------------
 
+.. code-block:: sh
+
+ # 0.9.10 depends
+ pip install --user pygame numpy
+
+
 `ros-bridge <https://carla.readthedocs.io/projects/ros-bridge/en/latest/>`_
 `````````````````````````````````````````````````````````````````````````````
-
 
 
 .. code-block:: sh
