@@ -2,6 +2,12 @@
 ROS
 #############
 
+* PlotJuggler
+
+.. code-block:: sh
+
+    apt-get install ros-melodic-plotjuggler ros-melodic-plotjuggler-ros
+
 
 * 待研究
     * ros 开机自启动 `robot_upstart`
