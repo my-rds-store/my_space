@@ -174,19 +174,12 @@ Autoware
     cd autoware.ai
 
 
-    # Download 1.12.0
-    wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.12.0/autoware.ai.repos?inline=false"
-
-    # Download 1.13.0
-    wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.13.0/autoware.ai.repos?inline=false"
-
     # Download 1.14.0
     wget https://raw.fastgit.org/Autoware-AI/autoware.ai/1.14.0/autoware.ai.repos
     sed -i "s/github.com/hub.fastgit.org/" autoware.ai.repos
 
-    #　使用方源 lanelet2
+    #　使用官方 lanelet2
     # sudo apt-get install  ros-melodic-lanelet2
-
 
     # Download master
     wget -O autoware.ai.repos "https://raw.githubusercontent.com/Autoware-AI/autoware.ai/master/autoware.ai.repos"
@@ -197,15 +190,16 @@ Autoware
     rosdep update
     rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 
+    # Without CUDA Support
+    colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+
     # With CUDA support
     AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+
     # With CUDA support build gnss_localizer only
-    AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --packages-up-to gnss_localizer \
-                                    --cmake-args -DCMAKE_BUILD_TYPE=Release  
+    # AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --packages-up-to gnss_localizer \
+    #                                --cmake-args -DCMAKE_BUILD_TYPE=Release  
 
-
-    # Without CUDA Support
-    # colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 * step 2 : Run Autoware
 
@@ -253,7 +247,6 @@ Autoware
 * `autoware入门教程 <https://www.ncnynl.com/archives/201910/3402.html>`_
 
 
-
 `二 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
 -------------------------------------------------------------------
 
@@ -281,9 +274,6 @@ Autoware
     SDL_VIDEODRIVER=offscreen ./CarlaUE4.sh -opengl
 
     roslaunch carla_autoware_agent carla_autoware_agent.launch town:=Town03 host:=192.168.8.6
-
-
-
 
 
 * `Carla教程-叶小飞 <https://www.zhihu.com/people/xie-xiao-fei-78-24/posts>`_
