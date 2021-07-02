@@ -20,50 +20,7 @@ Autoware
 * `矢量地图 <https://account.tier4.jp/accounts/login/>`_
 * `MapToolbox <https://github.com/autocore-ai/MapToolbox/tree/lanelet2>`_
 
-
-1 安装 ROS melodic
-````````````````````
-
-1.1 更新 ROS源地址
-:::::::::::::::::::
-
-.. code-block:: sh
-
-        # # 更换阿里源, 网速快; 缺点, 当碰巧,阿里源正在和官方源同步的时段，会无法安装
-        # sed -i 's/cn.archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list # X86 中文
-        # sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list    # X86 英文
-        # sed -i 's/ports.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list      # arm 
-
-        #  添加 科大ROS源
-        sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
-
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
-        sudo apt-get update
-
-1.2 安装 ROS
-:::::::::::::::::::
-
-* 执行安装脚本
-
-.. code-block:: sh
-    
-    # 按照提示输入,当前用户密码
-    # x86_64
-    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash
-    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash 
-
-    # Arm - Nvidia Jetson AGX
-    wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/autoware/src/ros_install_agx.sh | bash
-    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_install_agx.sh
-
-
-* x86_64安装脚本的源码如下:
-
-  .. literalinclude:: ./src/ros_instal.sh
-     :language: bash
-
-
-2 安装 CUDA 10.0
+1 安装 CUDA 10.0
 ```````````````````
 
 * Step 1 : revmoe nvidia
@@ -126,6 +83,49 @@ Autoware
 
         sudo shutdown -r now
 
+
+
+
+2 安装 ROS melodic
+````````````````````
+
+2.1 更新 ROS源地址
+:::::::::::::::::::
+
+.. code-block:: sh
+
+        # # 更换阿里源, 网速快; 缺点, 当碰巧,阿里源正在和官方源同步的时段，会无法安装
+        # sed -i 's/cn.archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list # X86 中文
+        # sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list    # X86 英文
+        # sed -i 's/ports.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list      # arm 
+
+        #  添加 科大ROS源
+        sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
+
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
+        sudo apt-get update
+
+2.2 安装 ROS
+:::::::::::::::::::
+
+* 执行安装脚本
+
+.. code-block:: sh
+    
+    # 按照提示输入,当前用户密码
+    # x86_64
+    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash
+    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash 
+
+    # Arm - Nvidia Jetson AGX
+    wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/autoware/src/ros_install_agx.sh | bash
+    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_install_agx.sh
+
+
+* x86_64安装脚本的源码如下:
+
+  .. literalinclude:: ./src/ros_instal.sh
+     :language: bash
 
 
 3 源码编译 Autoware
