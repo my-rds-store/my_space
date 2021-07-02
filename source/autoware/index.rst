@@ -15,9 +15,8 @@ Autoware
 一 环境搭建
 ------------
 
-* `Wiki 加速 <https://hub.fastgit.org /Autoware-AI/autoware.ai/wiki>`_
 * `Wiki <https://github.com/Autoware-AI/autoware.ai/wiki>`_
-    * `Wiki(gitlib)  <https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/home>`_
+    * `Wiki 加速地址 <https://hub.fastgit.org /Autoware-AI/autoware.ai/wiki>`_
 * `矢量地图 <https://account.tier4.jp/accounts/login/>`_
 * `MapToolbox <https://github.com/autocore-ai/MapToolbox/tree/lanelet2>`_
 
