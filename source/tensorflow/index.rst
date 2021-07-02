@@ -2,7 +2,7 @@
 tensorflow                   
 #################
 
-* `tensorflow 中文社区 <http://www.tensorfly.cn/>`_
+* `tensorflow 中文社区 <https://doc.codingdict.com/tensorflow/index.html>`_
 
 .. code-block:: sh
 
