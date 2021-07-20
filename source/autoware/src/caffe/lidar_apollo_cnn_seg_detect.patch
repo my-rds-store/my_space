@@ -1,0 +1,227 @@
+diff --git a/lidar_apollo_cnn_seg_detect/include/cnn_segmentation.h b/lidar_apollo_cnn_seg_detect/include/cnn_segmentation.h
+index 475eb9a..dba4180 100755
+--- a/lidar_apollo_cnn_seg_detect/include/cnn_segmentation.h
++++ b/lidar_apollo_cnn_seg_detect/include/cnn_segmentation.h
+@@ -61,6 +61,7 @@ private:
+   double range_, score_threshold_;
+   int width_;
+   int height_;
++  bool use_constant_feature_;  // add code
+   std_msgs::Header message_header_;
+   std::string topic_src_;
+ 
+diff --git a/lidar_apollo_cnn_seg_detect/include/feature_generator.h b/lidar_apollo_cnn_seg_detect/include/feature_generator.h
+index 74e73ac..dc39072 100755
+--- a/lidar_apollo_cnn_seg_detect/include/feature_generator.h
++++ b/lidar_apollo_cnn_seg_detect/include/feature_generator.h
+@@ -31,7 +31,8 @@ public:
+   FeatureGenerator(){}
+   ~FeatureGenerator(){}
+ 
+-  bool init(caffe::Blob<float>* out_blob);
++  //bool init(caffe::Blob<float>* out_blob);
++  bool init(caffe::Blob<float>* out_blob, bool use_constant_feature);  // add code
+   void generate(
+       const pcl::PointCloud<pcl::PointXYZI>::Ptr& pc_ptr);
+ private:
+diff --git a/lidar_apollo_cnn_seg_detect/launch/lidar_apollo_cnn_seg_detect.launch b/lidar_apollo_cnn_seg_detect/launch/lidar_apollo_cnn_seg_detect.launch
+index d79f053..d9631d8 100644
+--- a/lidar_apollo_cnn_seg_detect/launch/lidar_apollo_cnn_seg_detect.launch
++++ b/lidar_apollo_cnn_seg_detect/launch/lidar_apollo_cnn_seg_detect.launch
+@@ -7,6 +7,12 @@
+   <arg name="use_gpu" default="true" />
+   <arg name="gpu_device_id" default="0" />
+ 
++  <arg name="width" default="512" />   <!-- add code -->
++  <arg name="height" default="512" />  <!-- add code -->
++  <arg name="range" default="60" />  <!-- add code -->
++  <arg name="use_constant_feature" default="false"/>  <!-- add code -->
++
++
+   <node pkg="lidar_apollo_cnn_seg_detect" type="lidar_apollo_cnn_seg_detect" name="lidar_apollo_cnn_seg_detect_01" output="screen">
+     <param name="network_definition_file" value="$(arg network_definition_file)" />
+     <param name="pretrained_model_file" value="$(arg pretrained_model_file)" />
+@@ -14,6 +20,13 @@
+     <param name="score_threshold" value="$(arg score_threshold)" />
+     <param name="use_gpu" value="$(arg use_gpu)" />
+     <param name="gpu_device_id" value="$(arg gpu_device_id)" />
++
++
++    <param name="height" value="$(arg height)" />  <!-- add code -->
++    <param name="width" value="$(arg width)" />  <!-- add code -->
++    <param name="range" value="$(arg range)" />  <!-- add code -->
++    <param name="use_constant_feature" value="$(arg use_constant_feature)" />  <!-- add code -->
++
+   </node>
+ 
+   <node pkg="detected_objects_visualizer" type="visualize_detected_objects" name="cluster_detect_visualization_01"
+diff --git a/lidar_apollo_cnn_seg_detect/nodes/cnn_segmentation.cpp b/lidar_apollo_cnn_seg_detect/nodes/cnn_segmentation.cpp
+index 230a0b7..cde991c 100755
+--- a/lidar_apollo_cnn_seg_detect/nodes/cnn_segmentation.cpp
++++ b/lidar_apollo_cnn_seg_detect/nodes/cnn_segmentation.cpp
+@@ -49,7 +49,8 @@ bool CNNSegmentation::init()
+   ROS_INFO("[%s] points_src: %s", __APP_NAME__, topic_src_.c_str());
+ 
+   private_node_handle.param<double>("range", range_, 60.);
+-  ROS_INFO("[%s] Pretrained Model File: %.2f", __APP_NAME__, range_);
++  ROS_INFO("[%s] range: %.2f", __APP_NAME__, range_); // add code
++  //ROS_INFO("[%s] Pretrained Model File: %.2f", __APP_NAME__, range_);
+ 
+   private_node_handle.param<double>("score_threshold", score_threshold_, 0.6);
+   ROS_INFO("[%s] score_threshold: %.2f", __APP_NAME__, score_threshold_);
+@@ -60,6 +61,9 @@ bool CNNSegmentation::init()
+   private_node_handle.param<int>("height", height_, 512);
+   ROS_INFO("[%s] height: %d", __APP_NAME__, height_);
+ 
++  private_node_handle.param<bool>("use_constant_feature", use_constant_feature_, false); // add code
++  ROS_INFO("[%s] whether to use constant features: %d", __APP_NAME__, use_constant_feature_); // add code
++
+   private_node_handle.param<bool>("use_gpu", use_gpu_, false);
+   ROS_INFO("[%s] use_gpu: %d", __APP_NAME__, use_gpu_);
+ 
+@@ -120,7 +124,8 @@ bool CNNSegmentation::init()
+   }
+ 
+   feature_generator_.reset(new FeatureGenerator());
+-  if (!feature_generator_->init(feature_blob_.get()))
++  //if (!feature_generator_->init(feature_blob_.get()))
++  if (!feature_generator_->init(feature_blob_.get(), use_constant_feature_))  // add code
+   {
+     ROS_ERROR("[%s] Fail to Initialize feature generator for CNNSegmentation", __APP_NAME__);
+     return false;
+@@ -191,7 +196,12 @@ void CNNSegmentation::test_run()
+ 
+ void CNNSegmentation::run()
+ {
+-  init();
++  //init();
++  if(this->init()){  // add code
++    ROS_INFO("The network init successfully!");  // add code
++  }else{  // add code
++    ROS_ERROR("The network init fail!!!");  // add code
++  }  // add code
+ 
+   points_sub_ = nh_.subscribe(topic_src_, 1, &CNNSegmentation::pointsCallback, this);
+   points_pub_ = nh_.advertise<sensor_msgs::PointCloud2>("/detection/lidar_detector/points_cluster", 1);
+diff --git a/lidar_apollo_cnn_seg_detect/nodes/feature_generator.cpp b/lidar_apollo_cnn_seg_detect/nodes/feature_generator.cpp
+index d6a7829..b738129 100755
+--- a/lidar_apollo_cnn_seg_detect/nodes/feature_generator.cpp
++++ b/lidar_apollo_cnn_seg_detect/nodes/feature_generator.cpp
+@@ -16,7 +16,8 @@
+ 
+ #include "feature_generator.h"
+ 
+-bool FeatureGenerator::init(caffe::Blob<float>* out_blob)
++//bool FeatureGenerator::init(caffe::Blob<float>* out_blob)
++bool FeatureGenerator::init(caffe::Blob<float>* out_blob, bool use_constant_feature) // add code
+ {
+   out_blob_ = out_blob;
+ 
+@@ -30,7 +31,15 @@ bool FeatureGenerator::init(caffe::Blob<float>* out_blob)
+       << "Current implementation version requires input_width == input_height.";
+ 
+   // set output blob and log lookup table
+-  out_blob_->Reshape(1, 8, height_, width_);
++  //out_blob_->Reshape(1, 8, height_, width_);
++    /********* add code *********/
++  if(use_constant_feature){ // add code 
++    out_blob_->Reshape(1, 8, height_, width_);
++  }else{
++    out_blob_->Reshape(1, 6, height_, width_);
++  }
++  /********* add code *********/
++
+ 
+   log_table_.resize(256);
+   for (size_t i = 0; i < log_table_.size(); ++i) {
+@@ -44,33 +53,70 @@ bool FeatureGenerator::init(caffe::Blob<float>* out_blob)
+   max_height_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
+   mean_height_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
+   count_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
+-  direction_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
++  // direction_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
++  /*********** add code ***********/
++  if(use_constant_feature){
++    direction_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
++  }
++  /********** add code ************/
++  
+   top_intensity_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
+   mean_intensity_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
+-  distance_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
++  // distance_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
++  /********** add code ************/
++  if(use_constant_feature){
++    distance_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
++  }
++  /********** add code ************/
++
+   nonempty_data_ = out_blob_data + out_blob_->offset(0, channel_index++);
+   CHECK_EQ(out_blob_->offset(0, channel_index), out_blob_->count());
+ 
+-  // compute direction and distance features
+-  int siz = height_ * width_;
+-  std::vector<float> direction_data(siz);
+-  std::vector<float> distance_data(siz);
+-
+-  for (int row = 0; row < height_; ++row) {
+-    for (int col = 0; col < width_; ++col) {
+-      int idx = row * width_ + col;
+-      // * row <-> x, column <-> y
+-      float center_x = Pixel2Pc(row, height_, range_);
+-      float center_y = Pixel2Pc(col, width_, range_);
+-      constexpr double K_CV_PI = 3.1415926535897932384626433832795;
+-      direction_data[idx] =
+-          static_cast<float>(std::atan2(center_y, center_x) / (2.0 * K_CV_PI));
+-      distance_data[idx] =
+-          static_cast<float>(std::hypot(center_x, center_y) / 60.0 - 0.5);
++  // // compute direction and distance features
++  // int siz = height_ * width_;
++  // std::vector<float> direction_data(siz);
++  // std::vector<float> distance_data(siz);
++
++  // for (int row = 0; row < height_; ++row) {
++  //   for (int col = 0; col < width_; ++col) {
++  //     int idx = row * width_ + col;
++  //     // * row <-> x, column <-> y
++  //     float center_x = Pixel2Pc(row, height_, range_);
++  //     float center_y = Pixel2Pc(col, width_, range_);
++  //     constexpr double K_CV_PI = 3.1415926535897932384626433832795;
++  //     direction_data[idx] =
++  //         static_cast<float>(std::atan2(center_y, center_x) / (2.0 * K_CV_PI));
++  //     distance_data[idx] =
++  //         static_cast<float>(std::hypot(center_x, center_y) / 60.0 - 0.5);
++  //   }
++  // }
++  // caffe::caffe_copy(siz, direction_data.data(), direction_data_);
++  // caffe::caffe_copy(siz, distance_data.data(), distance_data_);
++  
++/************** add code **************/
++  if(use_constant_feature){
++    // compute direction and distance features
++    int siz = height_ * width_;
++    std::vector<float> direction_data(siz);
++    std::vector<float> distance_data(siz);
++
++    for (int row = 0; row < height_; ++row) {
++      for (int col = 0; col < width_; ++col) {
++        int idx = row * width_ + col;
++        // * row <-> x, column <-> y
++        float center_x = Pixel2Pc(row, height_, range_);
++        float center_y = Pixel2Pc(col, width_, range_);
++        constexpr double K_CV_PI = 3.1415926535897932384626433832795;
++        direction_data[idx] =
++            static_cast<float>(std::atan2(center_y, center_x) / (2.0 * K_CV_PI));
++        distance_data[idx] =
++            static_cast<float>(std::hypot(center_x, center_y) / 60.0 - 0.5);
++      }
+     }
++    caffe::caffe_copy(siz, direction_data.data(), direction_data_);
++    caffe::caffe_copy(siz, distance_data.data(), distance_data_);
+   }
+-  caffe::caffe_copy(siz, direction_data.data(), direction_data_);
+-  caffe::caffe_copy(siz, distance_data.data(), distance_data_);
++  /****************** add code ******************/
+ 
+   return true;
+ }

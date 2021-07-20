@@ -210,6 +210,46 @@ Autoware
     roslaunch runtime_manager runtime_manager.launch
 
 
+* lidar_apollo_cnn_seg_detect
+
+.. code-block:: sh
+
+
+  #参考: https://www.cnblogs.com/hgl0417/p/12114955.html
+  
+  sudo apt install -y libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+  sudo apt install -y --no-install-recommends libboost-all-dev
+  sudo apt install -y libopenblas-dev #libatlas-base-dev
+  sudo apt install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
+  
+  git clone --depth 1 https://hub.fastgit.org/BVLC/caffe.git $HOME/caffe
+  
+  URL_PATH=https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/caffe
+  wget -O $HOME/caffe/Makefile.config  $URL_PATH/Makefile.config
+ 
+  # for arm  plantform
+  set -i "s/x86_64/aarch64/" $HOME/caffe/Makefile.config
+  
+  cd  $HOME/caffe; make &&  make distribute
+  
+  
+  tee ${HOME}/.bash_aliases <<-'EOF'
+  export LD_LIBRARY_PATH=$HOME/caffe/distribute/lib:$LD_LIBRARY_PATH
+  export APOLLO_CNNSEG=/home/promote/Autoware/APOLLO_CNNSEG
+  EOF
+  
+  # lidar_apollo_cnn_seg_detect patch
+  cd ${HOME}/Autoware/src/autoware/core_perception/lidar_apollo_cnn_seg_detect
+  wget -O lidar_apollo_cnn_seg_detect.patch ${URL_PATH}/lidar_apollo_cnn_seg_detect.patch
+  git apply lidar_apollo_cnn_seg_detect.patch
+
+  #下载 APOLLO_CNNSEG
+  #https://github.com/ApolloAuto/apollo/tree/master/modules/perception/production/data/perception/lidar/models/cnnseg
+  #https://hub.fastgit.org/ApolloAuto/apollo/tree/master/modules/perception/production/data/perception/lidar/models/cnnseg
+
+
+
+
 4. Docker 安装Autoware(整理中....)
 `````````````````````````````````````
 

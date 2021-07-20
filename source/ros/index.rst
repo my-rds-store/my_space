@@ -175,9 +175,14 @@ example
         rosrun turtlesim turtlesim_node
         rosrun turtlesim turtle_teleop_key
 
-
-
 * `《ROS机器人开发实践》源码 <https://github.com/huchunxu/ros_exploring>`_
+
+* `LIO-SAM <https://github.com/TixiaoShan/LIO-SAM>`_
+    * `LIO-SAM运行自己数据包遇到的问题解决--SLAM不学无数术小问题 <https://blog.csdn.net/weixin_42141088/article/details/118000544>`_
+    * `LIO-SAM源码阅读分析（1）--配置文件Tips <https://zhuanlan.zhihu.com/p/171589473>`_
+    * https://zhuanlan.zhihu.com/p/352039509
+    * https://blog.csdn.net/heirenlop/article/details/115216476
+* `imu ch110 <https://hub.fastgit.org/hipnuc/products>`_
 
 ***********
 常用命令
