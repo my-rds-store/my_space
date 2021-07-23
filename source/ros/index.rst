@@ -975,6 +975,18 @@ advSocketCAN
     #  10periodic、20auto-upgrades配置中1改为0即可
 
 
+*****************
+can-dbc-parser
+*****************
+
+    * Source : https://github.com/NewEagleRaptor/raptor-dbw-ros
+    * `code API <http://docs.ros.org/en/melodic/api/can_dbc_parser/html/namespaceNewEagle.html>`_
+
+    * Install : **sudo apt-get install ros-${ROS_DISTRO}-can-dbc-parser**
+
+    * example
+
+
 ----------
 
 * `使用socat实现Linux虚拟串口 <https://blog.csdn.net/rainertop/article/details/26706847>`_
