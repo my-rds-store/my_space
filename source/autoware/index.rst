@@ -297,6 +297,16 @@ Autoware.AI
 
 * https://github.com/Autoware-AI/autoware.ai/wiki/Gazebo-Simulation-Start
 
+* Example :
+    * `如何在Gazebo仿真环境配置自动驾驶汽车 <https://blog.csdn.net/Travis_X/article/details/105418119>`_
+    * `使用NDT构建点云地图  <https://blog.csdn.net/Travis_X/article/details/105455195>`_
+    * `使用Hybrid a*进行路径规划 <https://blog.csdn.net/Travis_X/article/details/105949471>`_
+    * `使用Pure Pursuit和MPC进行路径追踪 <https://blog.csdn.net/Travis_X/article/details/106116998>`_
+    * `给仿真环境中的自动驾驶汽车更换或添加传感器  <https://blog.csdn.net/Travis_X/article/details/105418550>`_
+    * https://blog.csdn.net/Travis_X/article/details/115000150 
+    * https://blog.csdn.net/qq_31815513/article/details/88709640
+        * https://blog.csdn.net/qq_15569561/article/details/88853807
+        * https://blog.csdn.net/robinvista/article/details/95137143
 
 `三 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
 -------------------------------------------------------------------
