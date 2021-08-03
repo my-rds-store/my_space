@@ -52,6 +52,8 @@ Demo
 Cmake
 **********************
 
+* `Cmake Tools <https://code.visualstudio.com/docs/cpp/cmake-linux>`_
+
 
 * `Cmake-Cookbook (网速慢，需要梯子) <https://app.gitbook.com/@chenxiaowei/s/cmake-cookbook/>`_
     * `cmake教程4(find_package使用) <https://cloud.tencent.com/developer/article/1338349>`_
@@ -60,6 +62,7 @@ Cmake
     * https://github.com/xiaoweiChen/CMake-Cookbook.git
     * `cmake 生成 protobuf <https://blog.csdn.net/datase/article/details/82763236>`_
     * `readelf <https://blog.csdn.net/yfldyxl/article/details/81566279>`_
+
 
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
