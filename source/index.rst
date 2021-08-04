@@ -193,6 +193,49 @@ open edx
 `各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
 
 
+Linux log日志占用
+    * `Linux /var/log/日志文件太大，清理journal就行 <https://www.uedbox.com/post/58901/>`_
+
+.. code-block:: sh
+
+    # Linux log日志占用
+    #Linux使用df -h检查磁盘文件，可以看到/run目录下有日志目录/run/log/journal，占用了数G空间。
+
+    du --max-depth=1 -h
+
+    #在日志目录下有很多历史累积的日志。
+
+    #Linux log日志清理
+    #检查当前journal使用磁盘量
+
+    journalctl --disk-usage
+
+    # 清理方法可以采用按照日期清理，或者按照允许保留的容量清理，只保存2天的日志，最大500M
+    journalctl --vacuum-time=2d
+    journalctl --vacuum-size=500M
+
+    #如果要手工删除日志文件，则在删除前需要先轮转一次journal日志
+    # systemctl kill --kill-who=main --signal=SIGUSR2 systemd-journald.service
+
+
+要启用日志限制持久化配置，可以修改 /etc/systemd/journald.conf
+
+.. code::
+
+    SystemMaxUse=16M
+    ForwardToSyslog=no
+
+
+然后重启
+
+.. code:: sh
+
+    systemctl restart systemd-journald.service
+
+    # 检查journal是否运行正常以及日志文件是否完整无损坏
+    journalctl --verify
+
+
 ************************
 Ubuntu 编译源码包
 ************************
