@@ -912,6 +912,7 @@ Jetson AGX Xavier
     bash /enable_CAN.sh &
     exit 0
     EOF
+
     sudo chmod a+x /etc/rc.local 
 
 
