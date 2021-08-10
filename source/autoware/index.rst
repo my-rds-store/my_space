@@ -316,6 +316,8 @@ Autoware.AI
  # 0.9.10 depends
  pip install --user pygame numpy
 
+ python -m pip install pygame==2.0.1 # 0.9.10.1
+
 
 `ros-bridge <https://carla.readthedocs.io/projects/ros-bridge/en/latest/>`_
 `````````````````````````````````````````````````````````````````````````````
