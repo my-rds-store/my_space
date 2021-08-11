@@ -784,7 +784,7 @@ Peak-CAN
         sudo make -C test install
         sudo make -C libpcanbasic install
 
-        ip l | grpe can
+        ip l | grep can
 
         # 4.0 load peak_usb
         sudo modprobe peak_usb # 卸载 sudo modprobe -r peak_usb
@@ -948,13 +948,27 @@ advSocketCAN
     # 安装 18.04.5 lts
     #           http://releases.ubuntu.com/releases/bionic/ubuntu-18.04.5-desktop-amd64.iso.torrent
 
-    sudo apt-get install linux-image-5.3.0-59-generic linux-headers-5.3.0-59-generic
-    sudo apt-mark hold linux-image-5.3.0-59-generic #　禁用系统升级
-    # sudo apt-mark hold linux-image-5.0.0-23-generic 
-    sudo apt-mark hold linux-image-4.15.0-20-generic
-    ##  modinfo  ./advcan_sja1000.ko | grep depend    
-    sudo apt-get install linux-modules-extra-5.0.0-23-generic # depends can-dev.ko
+    # 4.15.0-20-generic
+    # KERNAL_VERSION=5.0.0-23-generic  # Ubuntu 18.04.4
+    # KERNAL_VERSION=5.3.0-59-generic  # Ubuntu 18.04.4
+
+    KERNAL_VERSION=$(uname -r) 
+    KERNAL_VERSION=5.4.0-42-generic    # Ubuntu 18.04.5
+
+    sudo apt-get install linux-image-${KERNAL_VERSION} \
+                         linux-headers-${KERNAL_VERSION} \
+                         linux-modules-extra-${KERNAL_VERSION} # depends can-dev.ko
+
+    sudo apt-mark hold linux-image-${KERNAL_VERSION}  #　禁用系统升级
+
     sudo apt-get install vim make gcc openssh-server
+
+    sudo shutdown -r now  #  重启
+
+
+    ##  modinfo  ./advcan_sja1000.ko | grep depend    
+    sudo apt-get install linux-modules-extra-$(uname -r) # depends can-dev.ko
+
 
 * `关闭内核或包的自动更新 <https://blog.csdn.net/weixin_42915431/article/details/106614841>`_
 
