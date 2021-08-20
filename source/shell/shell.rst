@@ -316,6 +316,15 @@ apt-get install时如何指定安装版本
     $ sudo cp -d $HOME/bin/FoxitReader /usr/local/bin/ 
 
 
+Sed 命令
+----------
+
+.. code-block::sh
+
+    sed -i '3s/^/your_test\n/' test.txt      # 在第3行前，插入一行
+
+    sed -i '3s/your_test/my_test/' test.txt  # 修改第三行
+
 查找当前目录，及其子目录，” .c “ 文件脚本
 ------------------------------------------
 

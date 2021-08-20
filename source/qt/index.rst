@@ -26,13 +26,20 @@ Book
 Qt学习 开源项目
 *********************
 
-* `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
 
 * `Stacer <https://github.com/oguzhaninan/Stacer>`_
 
     .. code-block:: sh
 
         git clone --depth 1 https://hub.fastgit.org/oguzhaninan/Stacer.git
+
+
+* Qt自定义控件
+    * https://github.com/feiyangqingyun/qucsdk
+    * https://www.zhihu.com/column/c_1099710576145567744
+
+
+* `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
 
 
 *******

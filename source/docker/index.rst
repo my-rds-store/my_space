@@ -23,7 +23,6 @@ Repositories
 ============
 
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
-
 .. code-block:: sh
 
     ##################################### 
@@ -408,7 +407,11 @@ Dockerfile
 Docker私有仓库
 ***************
 
+* `harbor <https://github.com/goharbor/harbor>`_
+
+
 * `harbor搭建与使用 待验证 <https://blog.csdn.net/qq_24095941/article/details/86063684>`_
+      * https://www.cnblogs.com/qiuhom-1874/p/13061984.html
 
 
 * `Docker私有仓库搭建  <http://www.jianshu.com/p/00ac18fce367>`_
