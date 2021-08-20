@@ -180,9 +180,10 @@ open edx
 
 
 匿名网盘
-    *  `奶牛快传 <http://cowtransfer.com/>`_
-    *  `瑞典 anonfile  <https://anonfile.com/>`_
-    *  `degoo(jiang_xmin@massclouds.com)  <https://degoo.com>`_
+    * `奶牛快传 <http://cowtransfer.com/>`_
+    * `Firefox Send <https://send.ioiox.com/>`_
+    * `瑞典 anonfile  <https://anonfile.com/>`_
+    * `degoo(jiang_xmin@massclouds.com)  <https://degoo.com>`_
 
 短链接服务
     * https://st.im/ 
