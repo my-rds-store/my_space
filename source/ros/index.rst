@@ -14,6 +14,15 @@ ROS
     * `ros 开机自启动 `robot_upstart`
     * `解决ROS系统 rosdep update超时问题的新方法 <https://blog.csdn.net/leida_wt/article/details/115120940>`_
 
+    .. code-block:: sh
+
+        wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/ros/src/rosdep_repair.sh | bash
+        wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/ros/src/rosdep_repair.sh
+
+  .. literalinclude:: ./shell/rosdep_repair.sh
+     :language: bash
+
+
 * `Awesome Robotic Tooling <https://freerobotics.tools/>`_
     * https://freerobotics.tools/#communication-and-coordination
     * https://freerobotics.tools/#documentation-and-presentation
