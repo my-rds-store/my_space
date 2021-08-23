@@ -191,7 +191,14 @@ Autoware.AI
     vcs import src < autoware.ai.repos
 
     ## Install dependencies using rosdep.
+    rosdep update # 如遇失败, 需登梯子,原因不解释
+
+    # 或者执行,也可以
+    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/ros/shell/rosdep_repair.sh | bash
+
     rosdep update
+
+
     rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 
     # Without CUDA Support
