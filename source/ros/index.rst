@@ -16,8 +16,8 @@ ROS
 
     .. code-block:: sh
 
-        wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/ros/src/rosdep_repair.sh | bash
-        wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/ros/src/rosdep_repair.sh
+        wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/ros/shell/rosdep_repair.sh | bash
+        wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/ros/shell/rosdep_repair.sh | bash
 
   .. literalinclude:: ./shell/rosdep_repair.sh
      :language: bash
