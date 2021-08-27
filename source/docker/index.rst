@@ -75,7 +75,7 @@ Repositories
     {
         "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
         "graph": "/home/docker/docker_image",
-        "dns": ["180.76.76.76", "114.114.114.114"]
+        "dns": ["114.114.114.114","8.8.8.8"]
     }
     EOF
   
