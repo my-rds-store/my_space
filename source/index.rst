@@ -457,6 +457,7 @@ bittorrent文件编辑工具
    ros/index
    autoware/index
    autoware/autoware_iv
+   autoware/auoware_auto
    apollo/index
    vscode/index
    qemu_libvirt/qemu
