@@ -999,6 +999,16 @@ advSocketCAN
     #  修改系统配置，在/etc/apt/apt.conf.d目录下
     #  10periodic、20auto-upgrades配置中1改为0即可
 
+* `如果内核已经自动升级,更改默认启动内核 <https://blog.csdn.net/violet_echo_0908/article/details/103766027>`_
+
+.. code ::
+
+    # /etc/default/grub
+    # sudo update-grub
+
+    GRUB_DEFAULT="Ubuntu 高级选项>Ubuntu，Linux 5.4.0-42-generic"
+    GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu，Linux 5.4.0-42-generic"
+    GRUB_DEFAULT="1> 3"
 
 *****************
 can-dbc-parser
