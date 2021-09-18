@@ -205,6 +205,7 @@ git tag
 
     # 打TAG也就是发布版本
     $ git tag -a v1.4 -m "version 1.4"
+    $ git show v1.4   # 查看
     $ 
     $ git push --tags
     $ git push my_origin --tags
