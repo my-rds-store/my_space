@@ -9,7 +9,6 @@ ROS
     apt-get install ros-melodic-plotjuggler ros-melodic-plotjuggler-ros
 
 
-
 * 待研究
     * `ros 开机自启动 `robot_upstart`
     * `解决ROS系统 rosdep update超时问题的新方法 <https://blog.csdn.net/leida_wt/article/details/115120940>`_
