@@ -68,6 +68,10 @@ Cmake
     * `readelf <https://blog.csdn.net/yfldyxl/article/details/81566279>`_
 
 
+----
+* `利用cmake打deb包 <https://note.qidong.name/2019/11/cmake-cpack-deb/>`_
+----
+
 ***************************************************************************
 `跟我一起写Makefile <https://seisman.github.io/how-to-write-makefile/>`_
 ***************************************************************************
