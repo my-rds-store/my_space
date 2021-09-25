@@ -91,7 +91,7 @@ Repositories
 去掉sudo权限 
 ================
 
-.. code:: sh
+.. code-block:: sh
 
     #可以添加docker组
     sudo groupadd docker
@@ -100,6 +100,25 @@ Repositories
     sudo gpasswd -a $USER docker
 
     # docker服务重启 (CentOS7的場合)
+    sudo systemctl restart docker
+
+Nvidia Docker 
+================
+
+* `installing-on-ubuntu-and-debian <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-ubuntu-and-debian>`_
+
+
+.. code-block:: sh
+
+    distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+       && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
+       && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+
+
+    sudo apt-get update 
+
+    sudo apt-get install -y nvidia-docker2
+
     sudo systemctl restart docker
 
 ******************
