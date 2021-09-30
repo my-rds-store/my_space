@@ -9,11 +9,12 @@ if [ -f /usr/lib/python2.7/dist-packages/rosdep2/sources_list.py.bak ]; then
 	echo "PASS to EXIT!!!!!!"
 	exit 0
 else
-	sudo sed -i "311s/^/        url=\"${GHPROXY}\"+url\n/" \
-		/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py
 
 	sudo cp -rvf /usr/lib/python2.7/dist-packages/rosdep2/sources_list.py \
 	             /usr/lib/python2.7/dist-packages/rosdep2/sources_list.py.bak
+
+	sudo sed -i "311s/^/        url=\"${GHPROXY}\"+url\n/" \
+		/usr/lib/python2.7/dist-packages/rosdep2/sources_list.py
 fi
 
 
