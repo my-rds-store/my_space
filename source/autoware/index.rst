@@ -24,6 +24,10 @@ Autoware.AI
 * `矢量地图 <https://account.tier4.jp/accounts/login/>`_
 * `MapToolbox <https://github.com/autocore-ai/MapToolbox/tree/lanelet2>`_
 
+-------
+
+* `ASSURE mapping tools <https://github.com/hatem-darweesh/assuremappingtools>`_
+
 1 安装 CUDA 10.0
 ```````````````````
 
