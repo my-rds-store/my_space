@@ -759,6 +759,20 @@ velodyne
 
 * `ROS创建点云数据并在rviz中显示 <https://blog.csdn.net/qq_43176116/article/details/88020003>`_
 
+***************************
+LIO-SAM
+***************************
+
+..code-block:: bash
+
+    docker pull daocloud.io/jiangxumin/lio_sam_utils:latest
+
+    docker run --rm --name=lio_sam_utils  -it -v $(pwd):/root/host_dir daocloud.io/jiangxumin/lio_sam_utils:latest
+
+    
+* https://blog.csdn.net/weixin_42141088/article/details/118000544
+
+
 
 ***************
 CAN BUS
