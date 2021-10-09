@@ -6,10 +6,11 @@ Docker
 Repositories
 **********************
 
+* `DaoCloud <https://dashboard.daocloud.io/>`_
 * `Docker Hub <https://hub.docker.com/explore/>`_
-*  `Docker store <https://store.docker.com>`_
+* `Docker store [已收费]<https://store.docker.com>`_
 * `QUAY <https://quay.io>`_
-* `阿里云 <https://dev.aliyun.com/search.html>`_
+* `阿里云 [已收费]<https://dev.aliyun.com/search.html>`_
 
 .. code-block:: sh
 

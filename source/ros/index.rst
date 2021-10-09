@@ -763,7 +763,7 @@ velodyne
 LIO-SAM
 ***************************
 
-..code-block:: bash
+.. code-block:: bash
 
     docker pull daocloud.io/jiangxumin/lio_sam_utils:latest
 
