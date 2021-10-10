@@ -411,7 +411,14 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
 
     ## 待研究： https://www.freebuf.com/articles/network/244567.html
 
+-------
 
+* `SSH 只能用于远程 Linux 主机？那说明你见识太小了! <https://blog.csdn.net/mingongge/article/details/108525571>`_
+
+.. code-block:: sh
+
+    ssh -L 1080:127.0.0.1:1080 192.168.3.19
+    ssh -L 1089:127.0.0.1:1089 promote@192.168.3.19
 
 
 参考
