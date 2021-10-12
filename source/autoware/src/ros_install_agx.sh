@@ -45,6 +45,7 @@ tee ${HOME}/.bash_aliases <<-'EOF'
 export CPLUS_INCLUDE_PATH=/usr/local/include/eigen3:${CPLUS_INCLUDE_PATH}  # autoware : --- stderr: glviewer
 
 source /opt/ros/melodic/setup.bash
+rosclean purge -y
 EOF
 source /opt/ros/melodic/setup.bash
 

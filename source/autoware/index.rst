@@ -263,28 +263,19 @@ Autoware.AI
   #https://hub.fastgit.org/ApolloAuto/apollo/tree/master/modules/perception/production/data/perception/lidar/models/cnnseg
 
 
-
-
-4. Docker 安装Autoware(整理中....)
-`````````````````````````````````````
-
-* 需要 在 autoware 用户下操作. 新建 autoware 用户
-
-.. code::
-
-    #/etc/sudoers 添加
-    autoware      ALL=NOPASSWD:ALL
- 
+4. Autoware Docker 镜像
+``````````````````````````
 
 .. code-block:: sh
 
-     git clone https://gitlab.com/autowarefoundation/autoware.ai/docker.git
+     git clone -b 1.14.0 https://github.com/Autoware-AI/docker.git
 
      cd docker/generic
 
-     mkdir ~/Autoware
-    ./run.sh --ros-distro melodic 
-    ./run.sh --ros-distro melodic --cuda off # 无cuda
+     mkdir ${HOME}/shared_dir
+
+    ./run.sh --ros-distro melodic            # 有 nvidia cuda支持  
+    ./run.sh --ros-distro melodic --cuda off # 无 nvidia cuda支持
 
 
    
