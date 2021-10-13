@@ -816,3 +816,18 @@ Service
 * `Ubuntu Service说明与使用方法 <http://www.mikewootc.com/wiki/linux/usage/ubuntu_service_usage.html>`_
 
 
+********
+乱码 
+********
+.. code-block:: sh
+
+    # 解决解压Windos 压缩包文件名，乱码
+    unzip -O cp936 a.zip
+    
+    # convmv 待验证
+    sudo apt-get install convmv
+
+
+
+
+
