@@ -1017,6 +1017,8 @@ advSocketCAN
 
 * `如果内核已经自动升级,更改默认启动内核 <https://blog.csdn.net/violet_echo_0908/article/details/103766027>`_
 
+* **tab + shift**  开机进入 **grub** 引导界面
+
 .. code ::
 
     # /etc/default/grub
