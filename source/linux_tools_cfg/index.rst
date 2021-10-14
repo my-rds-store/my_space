@@ -757,6 +757,8 @@ tmux
     apt-get download $DEPS
 
 
+* apt-mirror 待研究
+
 
 .. raw:: html
 
