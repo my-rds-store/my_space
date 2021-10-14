@@ -926,6 +926,37 @@ pcanview
 
 ------
 
+***********************************************************
+`ZLG PCIe <https://www.zlg.cn/can/down/down/id/36.html>`_
+***********************************************************
+
+
+* ZLG PCIe-91XX系列LINUX驱动 
+
+.. code-block:: sh
+
+    #下载 PCIe-91XX系列LINUX驱动
+    wget https://www.zlg.cn/data/upload/software/Can/zpcican_socket.rar
+
+    # md5sum zpcican_socket.rar
+    # 6b3f6ee0f0aa8f84f2e2f6304f845fb4  zpcican_socket.rar
+
+    CUR_KERNAL=$(uname -r)
+    sed -i "s/4.4.0-31-generic/${CUR_KERNAL}/"  Makefile
+
+    make
+    # sudo modprobe sja1000
+    # sudo insmod zpcican.ko
+    
+    sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/can/zlg
+    sudo cp zpcican.ko /lib/modules/$(uname -r)/kernel/drivers/net/can/zlg/
+    suod depmod 
+    sudo modprobe zpcican
+
+    sudo tee -a /etc/modules-load.d/modules.conf <<-'EOF'
+    zpcican
+    EOF
+
 
 **************
 advSocketCAN
