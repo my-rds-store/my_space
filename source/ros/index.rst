@@ -941,8 +941,12 @@ pcanview
     # md5sum zpcican_socket.rar
     # 6b3f6ee0f0aa8f84f2e2f6304f845fb4  zpcican_socket.rar
 
-    CUR_KERNAL=$(uname -r)
-    sed -i "s/4.4.0-31-generic/${CUR_KERNAL}/"  Makefile
+    apt-get install unrar 
+    unrar x zpcican_socket.rar
+
+    cd zpcican_socket/zpcican_socket_2018_11_07/
+
+    sed -i "s/4.4.0-31-generic/$(uname -r)/"  Makefile
 
     make
     # sudo modprobe sja1000

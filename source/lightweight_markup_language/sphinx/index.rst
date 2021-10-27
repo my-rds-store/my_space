@@ -28,6 +28,9 @@ reStructuredText
 
 * `放到git page <http://lucasbardella.com/blog/2010/02/hosting-your-sphinx-docs-in-github>`_
 
+* `sphinx文档规范与模版 <https://ebf-contribute-guide.readthedocs.io/zh_CN/latest/>`_
+
+
 INSTALL
 -------
 
