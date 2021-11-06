@@ -36,6 +36,8 @@ Autoware.IV
         # 迅雷下载
         sudo tar xofjC  egm2008-1.tar.bz2 /usr/share/GeographicLib
 
+        # https://geographiclib.sourceforge.io/html/geoid.html
+
 
         ###################################
         # LibTorch (download)
