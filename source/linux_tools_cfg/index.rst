@@ -265,6 +265,17 @@ Synergy 一套键鼠同时控制多台电脑
 
 * `Compiling Synergy <https://github.com/symless/synergy-core/wiki/Compiling#Dependencies>`_
   
+
+Barrier 一套键鼠同时控制多台电脑
+=========================================
+
+* `[ 下载地址 ] <https://github.com/debauchee/barrier/releases>`_
+* `[ 下载地址2 ] <https://sourceforge.net/projects/barrier.mirror/files/>`_
+
+.. code-block:: sh 
+
+        sudo apt-get install barrier
+
 -----
 
 FSearch : Linux 版本的 Everything

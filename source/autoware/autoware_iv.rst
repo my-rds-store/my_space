@@ -20,6 +20,30 @@ Autoware.IV
 ------------
 
 
+编译
+------------
+
+
+.. code-block:: sh
+
+        ###################################
+        # Autoware (install egm2008-1)
+        ###################################
+
+        # file: egm2008-1.tar.bz 
+        # size: 155M
+        # link: https://nchc.dl.sourceforge.net/project/geographiclib/geoids-distrib/egm2008-1.tar.bz
+        # 迅雷下载
+        sudo tar xofjC  egm2008-1.tar.bz2 /usr/share/GeographicLib
+
+
+        ###################################
+        # LibTorch (download)
+        ###################################
+
+        # gdown https://drive.google.com/u/0/uc?id=1eNh3F3xCQ4AMJEHtwb1dhshSyzWMjoc8 -O /tmp/libtorch.zip
+        # Lantern 下载
+
 
 
 .. raw:: html
