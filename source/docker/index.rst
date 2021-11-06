@@ -76,7 +76,8 @@ Repositories
     {
         "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
         "graph": "/home/docker/docker_image",
-        "dns": ["114.114.114.114","8.8.8.8"]
+        "dns": ["114.114.114.114","8.8.8.8"],
+        "insecure-registries": ["192.168.2.100:8086"]
     }
     EOF
   
@@ -212,8 +213,22 @@ Nvidia Docker
 
    docker run --help
    # 守护态运行``
-   sudo docker run -d -p 3080:80 --name={CONTAINER_NAME}  {REPOSITORY:TAG}  /bin/bash -c " while true; do echo hello world; sleep 1; done"
-   sudo docker run -d --restart=always -p 3080:80 --name={CONTAINER_NAME} {REPOSITORY:TAG}  /root/start.sh  #开机自启动
+   docker run -d -p 3080:80 --name={CONTAINER_NAME}  {REPOSITORY:TAG}  /bin/bash -c " while true; do echo hello world; sleep 1; done"
+   docker run -d --restart=always -p 3080:80 --name={CONTAINER_NAME} {REPOSITORY:TAG}  /root/start.sh  #开机自启动
+
+   docker run -it --net host \
+                   --ipc=host  \
+                   -e LANG=C.UTF-8  \
+                   -e DISPLAY=${DISPLAY} \
+                   --env="QT_X11_NO_MITSHM=1" \
+                   -v /tmp/.X11-unix:/tmp/.X11-unix \
+                   -v /home/promote/Pictures:/home/Pictures -v /home/promote/Videos:/home/Videos \
+                   --name lidar \
+                   --gpus all \
+                   --runtime nvidia \
+                   --device /dev/snd \
+                   --privileged \
+                   sensor:v1.6 /bin/bash
 
    # 启动一个容器
    docker start --help
