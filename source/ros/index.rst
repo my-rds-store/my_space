@@ -954,7 +954,7 @@ pcanview
     
     sudo mkdir /lib/modules/$(uname -r)/kernel/drivers/net/can/zlg
     sudo cp zpcican.ko /lib/modules/$(uname -r)/kernel/drivers/net/can/zlg/
-    suod depmod 
+    sudo depmod 
     sudo modprobe zpcican
 
     sudo tee -a /etc/modules-load.d/modules.conf <<-'EOF'
