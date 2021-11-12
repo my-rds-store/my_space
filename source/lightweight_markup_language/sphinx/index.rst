@@ -192,6 +192,48 @@ INSTALL
 `支持Markdown <https://github.com/miyakogi/m2r>`_
 --------------------------------------------------
 
+
+修改页面宽度 
+--------------------------------------------------
+
+* `参考 <https://stackoverflow.com/questions/23211695/modifying-content-width-of-the-sphinx-theme-read-the-docs>`_
+
+Another option is to create a stylesheet in source/_static with just the css you want, e.g.
+
+.. code-block:: css
+
+    .wy-nav-content {
+        max-width: none;
+    }
+
+    /*or*/
+
+    .wy-nav-content {
+        max-width: 1200px !important;
+    }
+
+Make sure the directory is referenced in source/conf.py - I believe by default there's a line to do this, i.e.
+
+.. code-block:: python
+
+    # Add any paths that contain custom static files (such as style sheets) here,
+    # relative to this directory. They are copied after the builtin static files,
+    # so a file named "default.css" will overwrite the builtin "default.css".
+
+    html_static_path = ['_static']
+
+Then create a custom layout in source/_templates/layout.html and do something like this to include your stylesheet
+
+.. code-block:: html
+
+
+    {% extends "!layout.html" %}
+    {% block extrahead %}
+        <link href="{{ pathto("_static/style.css", True) }}" rel="stylesheet" type="text/css">
+    {% endblock %}
+    Assuming you called your stylesheet style.css
+
+
 ReadTheDocs 私有部署搭建安装
 ----------------------------
 
