@@ -86,3 +86,31 @@ Makedown
     |张三|足球<br>篮球
     |李四|羽毛球<br>乒乓球
 
+
+* 修改图片大小
+    * https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown
+
+
+You could just use some HTML in your Markdown:
+
+.. code-block:: html
+
+    <img src="drawing.jpg" alt="drawing" width="200"/>
+
+Or via style attribute (not supported by GitHub)
+
+.. code-block:: html
+
+    <img src="drawing.jpg" alt="drawing" style="width:200px;"/>
+
+Or you could use a custom CSS file as described in this answer on Markdown and image alignment
+
+.. code-block:: md
+
+    ![drawing](drawing.jpg)
+
+CSS in another file:
+
+.. code-block:: md
+
+    img[alt=drawing] { width: 200px; }
