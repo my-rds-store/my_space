@@ -8,6 +8,9 @@ Makedown
 
 * `在线编辑器 <https://mermaid-js.github.io/mermaid-live-editor>`_
 
+
+
+
 .. code-block:: md
 
     ```mermaid
@@ -114,3 +117,6 @@ CSS in another file:
 .. code-block:: md
 
     img[alt=drawing] { width: 200px; }
+
+*  数学公式 
+    * https://www.sympy.org/sphinx-math-dollar/
