@@ -361,9 +361,13 @@ Autoware.AI
 
 .. code::
 
-    Windows LGSVL地图及配置文件，下载保存路径为
+   Windows LGSVL地图及配置文件，下载保存路径为
 
-     用户\AppData\Locallow\LG Silicon Valley Lab\LGSVL Simulator\
+   2020早期版本 
+           %userprofile%\AppData\Locallow\LG Silicon Valley Lab\LGSVL Simulator\
+
+   2021版本 
+           %userprofile%\AppData\locallow\LGElectronics
 
 
 Example JSON Configuration for an Autoware Vehicle 
