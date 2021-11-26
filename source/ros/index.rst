@@ -463,6 +463,13 @@ rosdep
 知识点
 ***************
 
+CATKIN_IGNORE
+==============
+
+.. code-block:: sh
+
+    touch /path/to/catkin_ws/your/package/CATKIN_IGNORE
+
 ROSINFO
 ==========
 
