@@ -215,6 +215,9 @@ Autoware.AI
     # AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --packages-up-to gnss_localizer \
     #                                --cmake-args -DCMAKE_BUILD_TYPE=Release  
 
+* `cuda 10.2 安装 autoware  <https://blog.csdn.net/qq_43509129/article/details/109224071>`_
+
+------
 
 * step 2 : Run Autoware
 
