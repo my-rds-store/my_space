@@ -290,6 +290,13 @@ Autoware.AI
     xhost +
 
 
+
+.. code-block:: sh
+
+        # for armv8
+        docker pull autoware/arm64v8:1.14.0-melodic
+
+
 5. 学习资料
 `````````````
 
