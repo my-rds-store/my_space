@@ -278,6 +278,8 @@ Nvidia Docker
    sudo docker logs -f       {CONTAINER ID}       # 日志
    sudo docker logs --follow {CONTAINER ID}
 
+* `限制容器日志磁盘占用大小 <https://medium.com/@Quigley_Ja/rotating-docker-logs-keeping-your-overlay-folder-small-40cfa2155412>`_
+
 容器-ps
 ----------
 
