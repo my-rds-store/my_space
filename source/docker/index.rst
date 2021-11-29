@@ -280,6 +280,12 @@ Nvidia Docker
 
 * `限制容器日志磁盘占用大小 <https://medium.com/@Quigley_Ja/rotating-docker-logs-keeping-your-overlay-folder-small-40cfa2155412>`_
 
+.. code-block:: sh
+
+  # 在/var/lib/docker/containers/目录下
+  # 找到对应的container id，然后进去，
+  # 执行  echo "" > ${container id}.log 即可
+
 容器-ps
 ----------
 
