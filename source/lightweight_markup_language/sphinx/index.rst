@@ -49,6 +49,32 @@ INSTALL
     
 * `Pip安装依赖于six的库失败的解决方法 <https://www.jianshu.com/p/45fb07007ddc>`_
 
+
+latex
+--------------
+
+
+.. code-block:: sh
+
+    # 然后安装构建 PDF 所需的 TeX Live 相关包。
+    sudo apt -y install \
+       texlive-latex-recommended \
+       texlive-latex-extra \
+       texlive-fonts-recommended \
+       texlive-fonts-extra \
+       texlive-lang-english \
+       texlive-lang-chinese \
+       texlive-lang-cjk \
+       latexmk
+
+
+    # 然后安装构建 texlive 所有包。
+    sudo apt -y install texlive-full
+
+    make latexpdf
+
+
+
 建立sphinx工程
 --------------
 
