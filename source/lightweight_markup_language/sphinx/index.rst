@@ -57,15 +57,15 @@ latex
 .. code-block:: sh
 
     # 然后安装构建 PDF 所需的 TeX Live 相关包。
-    sudo apt -y install \
-       texlive-latex-recommended \
-       texlive-latex-extra \
-       texlive-fonts-recommended \
-       texlive-fonts-extra \
-       texlive-lang-english \
-       texlive-lang-chinese \
-       texlive-lang-cjk \
-       latexmk
+    sudo apt -y install texlive-xetex \
+                        texlive-latex-recommended \
+                        texlive-latex-extra \
+                        texlive-fonts-recommended \
+                        texlive-fonts-extra \
+                        texlive-lang-english \
+                        texlive-lang-chinese \
+                        texlive-lang-cjk \
+                        latexmk
 
 
     # 然后安装构建 texlive 所有包。

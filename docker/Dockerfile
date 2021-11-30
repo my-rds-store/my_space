@@ -18,7 +18,18 @@ RUN  sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
 
 RUN DEBIAN_FRONTEND=noninteractive apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -y git make graphviz python3-pip && \
+    DEBIAN_FRONTEND=noninteractive apt install -y language-pack-zh-hans-base inkscape && \
+    DEBIAN_FRONTEND=noninteractive apt install -y  texlive-xetex \
+                                                   texlive-latex-recommended \
+                                                   texlive-latex-extra  \
+                                                   texlive-fonts-recommended  \
+                                                   texlive-fonts-extra \
+                                                   texlive-lang-english \
+                                                   texlive-lang-chinese \
+                                                   texlive-lang-cjk \
+                                                   latexmk && \
     DEBIAN_FRONTEND=noninteractive  apt clean
+
 
 
 COPY requirements.txt ./requirements.txt
