@@ -74,6 +74,21 @@ latex
     make latexpdf
 
 
+*  svg 图片转pdf
+
+.. code-block:: sh
+
+  sudo apt-get install inkscape python3-sphinxcontrib.svg2pdfconverter
+
+  # pip3 install  sphinxcontrib-svg2pdfconverter==1.2.0
+
+.. code-block:: python
+
+    extensions = [
+        # ... ,
+        # ... ,
+        'sphinxcontrib.inkscapeconverter'
+    ]
 
 建立sphinx工程
 --------------
