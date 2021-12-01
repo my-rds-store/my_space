@@ -7,14 +7,19 @@ Repositories
 **********************
 
 * `DaoCloud <https://dashboard.daocloud.io/>`_
-* `Docker Hub <https://hub.docker.com/explore/>`_
-* `Docker store [已收费]<https://store.docker.com>`_
-* `QUAY <https://quay.io>`_
-* `阿里云 [已收费]<https://dev.aliyun.com/search.html>`_
+* `阿里云 容器镜像服务 ACR <https://dev.aliyun.com/search.html>`_
+    * `容器镜像服务-个人实例 <https://cr.console.aliyun.com/cn-hangzhou/instance/dashboard>`_
 
 .. code-block:: sh
 
-    $ sudo docker login --username=jiang_xmin -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
+    docker login --username=jiang_xmin -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
+
+-----
+
+* `Docker Hub <https://hub.docker.com/explore/>`_
+* `Docker store [已收费] <https://store.docker.com>`_
+* `QUAY <https://quay.io>`_
+
 
 ************
 安装与配置
@@ -24,6 +29,7 @@ Repositories
 ============
 
 * `Instal Docker <https://docs.docker.com/engine/installation/>`_
+
 .. code-block:: sh
 
     ##################################### 
@@ -145,10 +151,10 @@ Nvidia Docker
     EOF
 
     # Flush changes:
-    sudo systemctl daemon-reload
+    systemctl daemon-reload
 
     # Restart Docker:
-    sudo systemctl restart docker
+    systemctl restart docker
 
     # Verify that the configuration has been loaded:
     systemctl show --property=Environment docker
@@ -160,7 +166,7 @@ Nvidia Docker
     Environment=HTTPS_PROXY=https://proxy.example.com:443/
 
     # test 
-    sudo docker pull k8s.gcr.io/kube-apiserver-amd64:v1.11.0
+    docker pull k8s.gcr.io/kube-apiserver-amd64:v1.11.0
 
 ***********
 常用镜像   
@@ -184,21 +190,23 @@ Nvidia Docker
 
     docker images --help
 
-    sudo docker images      # 列出本地镜像
+    docker images      # 列出本地镜像
 
-    sudo docker commit -m "do something" -a "do something ..." {CONTAINER ID} {REPOSITORY:TAG}  # 镜像commit
-    sudo docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce   jxm/my_space:v3  # 镜像commit
+    docker commit -m "do something" -a "do something ..." {CONTAINER ID} {REPOSITORY:TAG}  # 镜像commit
+    docker commit -m "add start.sh" -a "add start.sh ..." e0dfc0f706ce   jxm/my_space:v3  # 镜像commit
 
-    sudo docker rmi {REPOSITORY:TAG}  # 删除本地镜像
+    docker rmi {REPOSITORY:TAG}  # 删除本地镜像
     
     # 本地镜像重命名 
-    sudo docker tag  {ORIGIN_REPOSITORY:TAG} {NEW_NAME:TAG} 
-    sudo docker tag  {IMAGE_ID}              {NEW_NAME:TAG} 
-    sudo docker rmi  {ORIGIN_REPOSITORY:TAG}   
+    docker tag  {ORIGIN_REPOSITORY:TAG} {NEW_NAME:TAG} 
+    docker tag  {IMAGE_ID}              {NEW_NAME:TAG} 
+    docker rmi  {ORIGIN_REPOSITORY:TAG}   
+
+    docker image prune  # 清理none镜像
 
 
     # 从docker hub 搜索镜像
-    sudo docker search centos  
+    docker search centos  
 
 容器
 ============
@@ -208,8 +216,8 @@ Nvidia Docker
 
 .. code-block:: sh
 
-   sudo docker create --help
-   sudo docker create -i -t --name=my_test  ubuntu:14.04  /bin/bash  #  创建容器
+   docker create --help
+   docker create -i -t --name=my_test  ubuntu:14.04  /bin/bash  #  创建容器
 
    docker run --help
    # 守护态运行``
@@ -232,14 +240,14 @@ Nvidia Docker
 
    # 启动一个容器
    docker start --help
-   sudo docker start/stop {CONTAINER_NAME}  # 启动/停止容器
+   sdocker start/stop {CONTAINER_NAME}  # 启动/停止容器
 
    docker --help
-   sudo docker attach {CONTAINER_NAME}  # 进入容器
+   docker attach {CONTAINER_NAME}  # 进入容器
 
    docker rm --help
-   sudo docker rm  {CONTAINER_NAME}/{CONTAINER_ID}  # 删除一个容器
-   sudo docker rm `sudo docker ps -a -q`            # 删除全部容器
+   docker rm  {CONTAINER_NAME}/{CONTAINER_ID}  # 删除一个容器
+   docker rm `sudo docker ps -a -q`            # 删除全部容器
 
 
 容器-exec
@@ -248,7 +256,7 @@ Nvidia Docker
 .. code-block:: sh
 
     docker exec  --help
-    sudo docker exec -it {CONTAINER_NAME} /bin/bash
+    docker exec -it {CONTAINER_NAME} /bin/bash
 
 
 容器-root权限
@@ -256,17 +264,17 @@ Nvidia Docker
 
 .. code-block:: sh
 
-    sudo docker run -d --privileged {REPOSITORY:TAG} 
+    docker run -d --privileged {REPOSITORY:TAG} 
 
     #  参数privileged ，container内的root拥有真正的root权限。
     #  否则，container内的root只是外部的一个普通用户权限。
     #  privileged启动的容器，可以看到很多host上的设备，并且可以执行mount。
     #  甚至允许你在docker容器中启动docker容器。
 
-    sudo docker run -d --cap-add SYS_NET_ADMIN {REPOSITORY:TAG} 
+    docker run -d --cap-add SYS_NET_ADMIN {REPOSITORY:TAG} 
 
     # 让容器拥有除了MKNOD之外的所有内核权限 
-    sudo docker run --cap-add=ALL --cap-drop=MKNOD ...
+    docker run --cap-add=ALL --cap-drop=MKNOD ...
 
 容器-logs
 ------------------
@@ -275,8 +283,8 @@ Nvidia Docker
 
    # 查看日志
    docker logs --help       
-   sudo docker logs -f       {CONTAINER ID}       # 日志
-   sudo docker logs --follow {CONTAINER ID}
+   docker logs -f       {CONTAINER ID}       # 日志
+   docker logs --follow {CONTAINER ID}
 
 * `限制容器日志磁盘占用大小 <https://medium.com/@Quigley_Ja/rotating-docker-logs-keeping-your-overlay-folder-small-40cfa2155412>`_
 
@@ -293,9 +301,9 @@ Nvidia Docker
 
    #``查询``
    docker ps  --help      
-   sudo docker ps         # 显示UP状态的容器
-   sudo docker ps  -a     # 显示所有容器
-   sudo docker ps  -as    # 显示所有容器,显示容器大小
+   docker ps         # 显示UP状态的容器
+   docker ps  -a     # 显示所有容器
+   docker ps  -as    # 显示所有容器,显示容器大小
 
 容器-导入导出
 ---------------
@@ -305,17 +313,17 @@ Nvidia Docker
 
    # 导出导入
    docker export --help
-   sudo docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
+   docker export {CONTAINER ID}  > ubuntu.tar # 导出容器
 
    cat ubuntu.tar | sudo docker import - test/ubuntu:v1.0  # 导入容器快照 
 
    docker import --help
    # 通过指定 URL 或者某个目录来导入容器
-   sudo docker import http://example.com/exampleimage.tgz example/imagerepo
+   docker import http://example.com/exampleimage.tgz example/imagerepo
 
    docker save  --help
-   sudo docker save -o nextcloud.tar nextcloud  # 导出镜像
-   sudo docker load -i nextcloud.tar            # 导入镜像
+   docker save -o nextcloud.tar nextcloud  # 导出镜像
+   docker load -i nextcloud.tar            # 导入镜像
 
 
 容器-reame
@@ -325,8 +333,8 @@ Nvidia Docker
 
    #  容器重命名
    docker rename  --help 
-   sudo docker rename {ORIGIN_NAME}  {NEW_NAME}
-   sudo docker rename {CONTAINER ID} {NEW_NAME} 
+   docker rename {ORIGIN_NAME}  {NEW_NAME}
+   docker rename {CONTAINER ID} {NEW_NAME} 
 
 容器-port
 --------------
@@ -335,8 +343,8 @@ Nvidia Docker
 
     # 查看端口
     docker port --help
-    sudo docker port {CONTAINER ID}
-    sudo docker port {CONTAINER ID}  80
+    docker port {CONTAINER ID}
+    docker port {CONTAINER ID}  80
 
 
 容器-数据卷
@@ -348,13 +356,13 @@ Nvidia Docker
 .. code-block:: sh
 
     # 指定数据卷
-    sudo docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
+    docker run -i -i --name=web -v /src/webapp:/opt/webapp  ubuntu:14.04
 
     # 查看数据卷
-    sudo docker inspect {NAMES}
+    docker inspect {NAMES}
     
     # 数据卷容器
-    sudo docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
+    docker run -d --volumes-from={NAME/ID} --name=my_space_build  alpine/my_space_build:v1
 
 ********************
 docker-compose
@@ -429,11 +437,11 @@ Dockerfile
 
 .. code-block:: sh
 
-    $ sudo docker build . -t  ${image name}
+    $ docker build . -t  ${image name}
 
 .. code-block:: sh
 
-    $ sudo docker run -d --restart=always -p 8901:8080 -v $HOEM/Video:/mediadrop/data/media --name=mediadrop acaranta/mediadrop
+    $ docker run -d --restart=always -p 8901:8080 -v $HOEM/Video:/mediadrop/data/media --name=mediadrop acaranta/mediadrop
 
 #. EXPOSE
 

@@ -20,6 +20,8 @@ reStructuredText
 参考文档
 ----------
 
+* `reStructuredText 语法 <https://3vshej.cn/rstSyntax/index.html>`_
+
 * `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
 * `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
 * `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
@@ -90,6 +92,7 @@ latex
         'sphinxcontrib.inkscapeconverter'
     ]
 
+-------------------
 
 .. code-block:: python
 
@@ -101,6 +104,12 @@ latex
         'sphinxcontrib.inkscapeconverter' # svg convert to pdf
         ]
 
+
+* xindy - index generator for structured documents like LaTeX or SGML
+
+.. code-block:: bash
+
+    sudo apt-get install xindy
 
 
 建立sphinx工程
