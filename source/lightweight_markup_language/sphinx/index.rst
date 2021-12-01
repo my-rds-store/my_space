@@ -90,6 +90,19 @@ latex
         'sphinxcontrib.inkscapeconverter'
     ]
 
+
+.. code-block:: python
+
+    extensions = [
+        'recommonmark',           # sport markdown
+        'sphinx_markdown_tables', # sport markdown tables 
+        'sphinx_math_dollar',     # sport math
+        'sphinx.ext.mathjax',     # sport math
+        'sphinxcontrib.inkscapeconverter' # svg convert to pdf
+        ]
+
+
+
 建立sphinx工程
 --------------
 
