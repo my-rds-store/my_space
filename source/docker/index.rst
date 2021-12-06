@@ -63,6 +63,8 @@ Repositories
      sudo systemctl enable docker 
      sudo systemctl start  docker
 
+* `部署并使用Docker（Alibaba Cloud Linux 2） <https://help.aliyun.com/document_detail/51853.html>`_
+
 配置 
 ========
 
