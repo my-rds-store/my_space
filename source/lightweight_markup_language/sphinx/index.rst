@@ -252,6 +252,80 @@ latex
         .. raw:: html
            :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
 
+
+公式
+-------------
+
+* `希腊字母表 <https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols>`_
+
+
+.. φ -> \varphi
+.. δ -> \delta
+
+.. code-block:: rst
+
+    $\acute{X_r}$  
+
+
+    .. math::
+
+    v_r=\acute{X_r}  cos \varphi +\acute{Y_r}sin\varphi
+
+
+    $$
+    \acute{X_f}cos( \varphi + \delta_f)−\acute{Y_f}sin( \varphi +  \delta_f)=0
+    $$
+
+    $$
+    \acute{X_r}​sin\varphi − \acute{Y_r} cos\varphi=0
+    $$
+
+
+    .. math::
+
+    \acute{X_r} = \acute{Y_r} {sin\varphi \over cos\varphi}​	
+
+
+    .. math::
+
+    v_r = \acute{Y_r}{sin\varphi \over cos\varphi}cos\varphi + \acute{Y_r}sin\varphi 
+        = {{\acute{Y_r}cos\varphi^2+\acute{Y_r}sin\varphi^2} \over sin\varphi } 
+        = sin\varphi \acute{Y_r}
+
+
+    X_f = X_r + lcos\varphi 
+
+
+    .. math:: 
+
+    R = { v_r \over \omega } 
+
+
+    .. math:: 
+    
+    \delta_f = arctan( {\omega l \over v_r} ) = arctan ( {l \over R} )
+
+
+    .. math:: 
+
+    \delta_f = arctan({l \over R})
+
+
+    $$\gamma = {1 \over r} ={2x \over l^2}$$
+
+
+    $$\delta_f =arctan({l \gamma} )$$
+
+
+    $$= {{(a∆_x)^2 + (b∆_y)^2 + (a∆_y)^2 + (b∆_x)^2} \over {( a^2 + b^2)}}$$
+
+
+    .. math:: 
+
+    d = {{ | a x_0 + b y_0 + c | } \over { \sqrt{ a^2 + b^2} }}
+
+
+
 `支持Markdown <https://github.com/miyakogi/m2r>`_
 --------------------------------------------------
 
