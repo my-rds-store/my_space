@@ -8,6 +8,7 @@ Autoware.IV
 
 * 参考
     * `AutowareArchitectureProposal设计和代码结构梳理 <https://blog.csdn.net/moyu123456789/article/details/108584169>`_
+    * `tier4 技术博客 <https://tech.tier4.jp/>`_
 
 地图
 ------------
