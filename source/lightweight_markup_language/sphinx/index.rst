@@ -186,6 +186,28 @@ latex
        :end-before:
        :emphasize-lines:
 
+
+表格
+------
+
+.. code-block:: rst
+
+    .. csv-table::
+    :header: A, B, A and B
+    :widths: 5, 10, 5
+
+    False, False, False
+    True, False, False
+    False, True, False
+    True, True, True
+
+    .. csv-table:: Table Title
+    :file: ./csv/name.csv
+    :widths: 30, 70
+    :header-rows: 1
+
+
+
 标题
 ------
 
@@ -224,6 +246,11 @@ latex
 | 14   | **>** |
 +------+-------+
 
+
+* `行内标记 <https://iridescent.ink/HowToMakeDocs/Basic/reST.html#inline-markup>`_
+* `侧边栏 (Sidebar) <https://iridescent.ink/HowToMakeDocs/Basic/reST.html#sidebar>`_
+* `脚注 <https://iridescent.ink/HowToMakeDocs/Basic/reST.html#footnotes>`_
+* `引文 <https://iridescent.ink/HowToMakeDocs/Basic/reST.html#citations>`_
 
 图片
 -------------

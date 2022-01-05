@@ -288,3 +288,5 @@ latex 模板
     \href{http://v.youku.com/}{Youku video} 
 
 
+
+* `封面 <https://www.latextemplates.com/cat/title-pages>`_

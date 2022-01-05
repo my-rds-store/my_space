@@ -1,6 +1,5 @@
-#############
 ROS2
-#############
+===============
 
 .. code :: 
 
@@ -152,6 +151,29 @@ ROS2
 ----
 
 * `ROS2入门教程-创客制造 <https://www.ncnynl.com/archives/201801/2250.html>`_
+
+
+
+LGSVL
+--------
+    
+galactic
+```````````
+
+.. code-block:: sh
+
+    apt-get install ros-galactic-lgsvl-msgs
+    mkdir  -p ros2_ws/src
+
+    git clone -b galactic-devel https://github.com/lgsvl/ros2-lgsvl-bridge.git  ros2_ws/src/ros2-lgsvl-bridge
+
+    cd ros2_ws
+
+    rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+
+    colcon build --cmake-args '-DCMAKE_BUILD_TYPE=Release'
+
+
 
 ----
 
