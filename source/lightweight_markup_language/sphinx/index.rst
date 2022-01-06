@@ -33,6 +33,12 @@ reStructuredText
 * `sphinx文档规范与模版 <https://ebf-contribute-guide.readthedocs.io/zh_CN/latest/>`_
 
 
+config-file
+-------------------
+
+* https://docs.readthedocs.io/en/stable/config-file/v2.html#
+
+
 INSTALL
 -------
 
