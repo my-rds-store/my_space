@@ -323,6 +323,11 @@ Autoware.AI
 `三 CARLA Simulator <https://carla.readthedocs.io/en/0.9.10/>`_
 -------------------------------------------------------------------
 
+* 待研究
+    * https://www.bilibili.com/video/BV1ZB4y1u7ZV?from=search&seid=12311616562034216922&spm_id_from=333.337.0.0
+    * https://blog.csdn.net/qq_39537898/article/details/118436448
+
+
 .. code-block:: sh
 
  # 0.9.10 depends
