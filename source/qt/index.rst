@@ -1,10 +1,5 @@
-#########
 Qt
-#########
-
-*******
-Book   
-*******
+===========
 
 Book
 ------
@@ -22,10 +17,8 @@ Book
 * `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
 * `Qt Download <http://download.qt.io/>`_
 
-*********************
 Qt学习 开源项目
-*********************
-
+----------------------
 
 * `Stacer <https://github.com/oguzhaninan/Stacer>`_
 
@@ -42,14 +35,19 @@ Qt学习 开源项目
 * `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
 
 
-*******
 QML   
-*******
+-------------
 
 *  待整理
     * `QtQuick之PyQt5与QML交互学习笔记 <https://blog.csdn.net/zym326975/article/details/86589091>`_
     * https://evileg.com/en/post/242/
     * https://www.linuxzen.com/pyqt-qml-kuai-su-kai-fa-guizong-jie.html
+
+qml online 
+````````````````
+
+* https://invent.kde.org/webapps/qmlonline
+* https://qmlonline.kde.org/
 
 
 .. code-block:: qml
@@ -111,9 +109,8 @@ PyQt4
 
 * `PyQt 之 QSettings <https://blog.csdn.net/jxm_csdn/article/details/106762208>`_ 
 
-********************
 PyQt 学习示例    
-********************
+----------------------
 
 * `Python GUI  <https://pythonprogramminglanguage.com/pyqt/>`_
 
@@ -121,9 +118,8 @@ PyQt 学习示例
 
     git clone --depth 1  https://github.com/pyqt/examples.git
 
-*******************
 QChart
-*******************
+-------------
 
 * 动态曲线图 
     * **Examples/Qt-5.10.0/charts/dynamicspline**
@@ -136,9 +132,8 @@ QChart
 * `QT绘制面积图 QAreaSeries    <https://blog.csdn.net/sazass/article/details/112899184>`_
 
 
-*******************
 Qt地图  研究   
-*******************
+---------------------
 
 * `Qt Position <https://doc.qt.io/qt-5/qtpositioning-module.html>`_
 
@@ -152,9 +147,8 @@ Qt地图  研究
 * https://github.com/SindenDev/QAMap.git
 * https://github.com/gongjianbo/QtWebCannelAndMap.git
 
-**********
 播放器    
-**********
+--------------
 
 QMultimedia
     QCamera
@@ -169,23 +163,20 @@ QMultimedia
 QT环境搭建: QT-4.8 在windows下的使用
     http://blog.csdn.net/qq_22122811/article/details/63684008
 
-*************
 跨平台编译   
-*************
+---------------
 
 * `Linux下编译静态MinGW环境,编译windows平台Qt程序 <https://yjdwbj.github.io/2016/09/13/Linux%E4%B8%8B%E7%BC%96%E8%AF%91%E9%9D%99%E6%80%81MinGW%E7%8E%AF%E5%A2%83-%E7%BC%96%E8%AF%91windows%E5%B9%B3%E5%8F%B0Qt%E7%A8%8B%E5%BA%8F/>`_
 
 * `MXE <http://mxe.cc/>`_   
 
-********
 打包    
-********
+---------------
 
 *  `QT程序打包成EXE <https://blog.csdn.net/weixin_39568531/article/details/79606105>`_
 
-***********
 知识点     
-***********
+-------------
 
 * `将外部应用程序嵌入到QWidget中 <https://gitee.com/saltDocument/demo/tree/master/find_window>`_
 
@@ -212,17 +203,15 @@ QT环境搭建: QT-4.8 在windows下的使用
     $ sudo apt-get install libgstreamer-plugins-base0.10-0
 
 
-************
 NextCloud   
-************
+-------------------
 
 * `Git Client <https://github.com/nextcloud/client>`_
 * `Build the Client <https://github.com/nextcloud/client_theming>`_
 
 
-************
 StyleSheet   
-************
+--------------------
 
 
 .. code:: sh
@@ -392,9 +381,8 @@ StyleSheet
                 border-radius: 4px;
         }
 
-************
 常见问题   
-************
+------------------
 
 * `Ubuntu下Qtcreator无法输入中文的解决办法 <https://blog.csdn.net/baidu_33850454/article/details/81212026>`_
 

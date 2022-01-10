@@ -132,6 +132,16 @@ ROS
 
 * `CSDN ROS学习八篇 <https://blog.csdn.net/tansir94/category_7885264.html>`_
 
+
+***********
+URDF
+***********
+
+* https://www.cnblogs.com/linuxAndMcu/p/10869157.html
+* https://www.cnblogs.com/linuxAndMcu/p/10874789.html
+* https://www.cnblogs.com/linuxAndMcu/p/10876005.html
+
+
 ***********
 example
 ***********
