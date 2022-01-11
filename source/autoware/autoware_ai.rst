@@ -446,59 +446,6 @@ https://github.com/autowarefoundation/autoware/issues/492
 `路径跟踪基本配置 <https://qiita.com/hakuturu583/items/297adfd8ad0fa54d1a24>`_
 ````````````````````````````````````````````````````````````````````````````````
 
-录制rosbag包
-::::::::::::::::
-
-.. code-block:: cpp
-
-    rosbag record -O name.bag /points_raw
-
-rosbag建图
-::::::::::::::::
-
-**Runtime Manager** 
-
-* Setup  
-
-.. code::
-
-    TF -  x: 1.2, y: 0, z: 2 ;  这是 LIDAR 传感器在车身坐标系中的位置。 
-                                设置 transform 是为了建立 LIDAR 坐标系
-                                与车身坐标系的转换关系。
-    Vehicle Model
-
-* Computing 
-
-.. code::
-
-    ndt_mapping : 借助 NDT 算法实现 SLAM。
-    ndt_mapping[app] : ref设定保存pcd文件的路径, 建图结束后 ,点击 `PCD OUTPUT` 保存pcd。
-
-
-    rviz 配置文件 Autoware/ros/src/.config/rviz/ndt_mapping.rviz。
-
-
-    建图不一定每次都成功，有时候 NDT 算法匹配的不好,地图可能很混乱。
-    我们的经验是，在收集 LIDAR 数据的时候车辆行驶慢一些，如果建图不成功，就多尝试几次，每次都重新收集一次数据.`
-
-
-生成 Waypoint
-::::::::::::::::
-
-* Setup 
-
-.. code::
-
-    TF  -  x: 1.2, y: 0, z: 2
-    Vehicle Model
-
-* Map 
-
-.. code::
-
-  Point Cloud : 加载pcd
-  TF : 加载 lgsvl-tf.launch
-
 .. code-block:: xml
 
     <!-- lgsvl-tf.launch -->
@@ -507,64 +454,6 @@ rosbag建图
     <node pkg="tf"  type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 /world /map 10" />
     <node pkg="tf"  type="static_transform_publisher" name="map_to_mobility" args="0 0 0 0 0 0 /map /mobility 10" />
     </launch>
-
-* Sensing 
-
-.. code::
-
-    Point Downsampler -> voxel_grid_filter 
-
-* Computing 
-
-.. code::
-
-    lidar_localizer -> ndt_matching : 注意，要在 app 中 initial pose，数值全为 0.
-
-    autoware connector -> vel_pose_connect  这里是将 ndt 估计出的 pose 和 velocity 
-                                              名字改为 current_pose, current_velocity，
-                                              以便后续 pure-pursuit node 使用.
-
-    waypoing_maker -> waypoint_saver : 设置好路径点文件的名字和保存路径。
-
-航点导航
-:::::::::
-
-* Sensing 
-
-.. code::
-
-    Point Downsampler -> voxel_grid_filter 
-
-* Computing 
-
-.. code::
-
-     lidar_localizer    -> ndt_matching : 注意，要在 app 中 initial pose，数值全为 0; 
-                                              这是 NDT 点云匹配的初始位置
-     autoware connector -> vel_pose_connect
-
-* Mission Planning
-
-.. code::
-
-    * lane_planner -> lane_rule 
-                   -> lane_stop 
-                   -> lane_select
-
-* Motion Planning
-
-.. code::
-
-    waypoing_maker -> waypoint_loader - 加载刚才生成的路径点文件
-                   -> path_select
-
-    waypoint_planner -> astar_void 
-                     -> velocity_set
-
-    waypoint_follower -> pure_pursuit 
-                      -> twist_filter
-
-    lattice_planner -> lattice_velocity_set  
 
 
 Autoware Camera-LiDAR Calibration Package
@@ -721,8 +610,3 @@ Step 3
 .. code-block:: sh
 
    rostopic echo /points_raw     | grep frame_id
-
---------------------
-
-
-
