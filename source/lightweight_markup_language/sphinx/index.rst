@@ -155,6 +155,12 @@ latex
     ## 手动注释掉,关闭: loading intersphinx inventory from https://docs.python.org/objects.inv...
     # intersphinx_mapping = {'https://docs.python.org/': None}
 
+Webhook
+-----------
+
+GitHub 
+``````````````````
+
 .. image:: img/readthedocs.png
        :height: 500 px
        :width: 800 px
@@ -168,6 +174,16 @@ latex
        :scale: 100%
        :alt: alternate text
        :align: center
+
+Gitlab 
+``````````````````
+空
+
+Gitee
+``````````````````
+空
+
+
 
 
 代码
