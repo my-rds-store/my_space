@@ -57,6 +57,12 @@ INSTALL
     
 * `Pip安装依赖于six的库失败的解决方法 <https://www.jianshu.com/p/45fb07007ddc>`_
 
+theming
+-----------
+
+* `HTML <https://www.sphinx-doc.org/en/master/usage/theming.html>`_
+* `sphinx-themes  <https://sphinx-themes.org/>`_
+
 
 latex
 --------------
