@@ -663,10 +663,10 @@ op_behavior_selector 状态及 `END` 状态
         {
             d+= hypot(m_TotalPath.at(iGlobalPathIndex).at(i+1).pos.y - m_TotalPath.at(iGlobalPathIndex).at(i).pos.y,
                       m_TotalPath.at(iGlobalPathIndex).at(i+1).pos.x - m_TotalPath.at(iGlobalPathIndex).at(i).pos.x);
-            if(d > min_distance)  // 停车距离 小于 最小停车距离, 返回 False
+            if(d > min_distance)  // 停车距离 大于 最小停车距离, 返回 False, -> 正常
             return false;
         }
-        return true;
+        return true;  // 停车距离 小于 最小停车距离, 返回 True, -> 最终触发 FINISH_STATE
     }
 
 
