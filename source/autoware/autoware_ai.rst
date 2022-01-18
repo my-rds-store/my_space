@@ -418,7 +418,6 @@ MapToolbox
 五 学习笔记
 ------------
 
-
 使用GNSS进行定位
 `````````````````
 
@@ -610,3 +609,80 @@ Step 3
 .. code-block:: sh
 
    rostopic echo /points_raw     | grep frame_id
+
+
+问题记录
+------------
+
+op_behavior_selector 状态及 `END` 状态
+````````````````````````````````````````
+
+* 问题分析
+
+.. code-block:: cpp
+
+    // autoware/common/op_planner/src/DecisionMaker.cpp + 148
+
+    void DecisionMaker::CalculateImportantParameterForDecisionMaking(const PlannerHNS::VehicleState& car_state,
+     const int& goalID, const bool& bEmergencyStop, const std::vector<TrafficLight>& detectedLights,
+     const TrajectoryCost& bestTrajectory)
+    {
+
+        // .......
+
+        /* m_CarInfo.max_deceleration 对应 
+           op_local_planner)/launch/op_common_params.launch 的参数 maxDeceleration */
+
+        if(m_CarInfo.max_deceleration != 0)
+            pValues->minStoppingDistance = -pow(car_state.speed, 2)/(m_CarInfo.max_deceleration);  
+        // ...........
+        double critical_long_front_distance =  m_CarInfo.wheel_base/2.0 + m_CarInfo.length/2.0 + m_params.verticalSafetyDistance;
+
+        if(ReachEndOfGlobalPath(pValues->minStoppingDistance + critical_long_front_distance, pValues->iCurrSafeLane))
+            pValues->currentGoalID = -1;   // 触发 GoalStateII  进入 FINISH_STATE 状态
+        else
+            pValues->currentGoalID = goalID;
+
+        // ******
+
+    }
+
+    /* 
+       ... 
+    */
+
+    bool DecisionMaker::ReachEndOfGlobalPath(const double& min_distance, const int& iGlobalPathIndex)
+    {
+        if(m_TotalPath.size()==0) return false;
+
+        PlannerHNS::RelativeInfo info;
+        PlanningHelpers::GetRelativeInfo(m_TotalPath.at(iGlobalPathIndex), state, info);
+
+        double d = 0;
+        for(unsigned int i = info.iFront; i < m_TotalPath.at(iGlobalPathIndex).size()-1; i++)
+        {
+            d+= hypot(m_TotalPath.at(iGlobalPathIndex).at(i+1).pos.y - m_TotalPath.at(iGlobalPathIndex).at(i).pos.y,
+                      m_TotalPath.at(iGlobalPathIndex).at(i+1).pos.x - m_TotalPath.at(iGlobalPathIndex).at(i).pos.x);
+            if(d > min_distance)  // 停车距离 小于 最小停车距离, 返回 False
+            return false;
+        }
+        return true;
+    }
+
+
+.. code-block:: cpp
+
+    // autoware/common/op_planner/src/BehaviorStateMachine.cpp  
+
+    BehaviorStateMachine* GoalStateII::GetNextState()
+    {
+        PreCalculatedConditions* pCParams = GetCalcParams();
+
+        if(pCParams->currentGoalID == -1){
+            return FindBehaviorState(FINISH_STATE);  // 触发 END 停车状态
+        } else
+        {
+            pCParams->prevGoalID = pCParams->currentGoalID;
+            return FindBehaviorState(FORWARD_STATE);
+        }
+    }
