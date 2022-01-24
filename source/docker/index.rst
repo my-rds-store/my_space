@@ -205,6 +205,7 @@ Nvidia Docker
     docker rmi  {ORIGIN_REPOSITORY:TAG}   
 
     docker image prune  # 清理none镜像
+    docker rmi $(docker images | grep none | awk '{print $3}' | xargs)
 
 
     # 从docker hub 搜索镜像

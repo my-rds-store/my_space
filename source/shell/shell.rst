@@ -37,6 +37,16 @@ Bash
     # To change home-folder, use
     sudo usermod -d /home/newHomeDir -m newUsername
 
+更改tilix
+---------------
+
+
+.. code-block:: sh
+
+    sudo update-alternatives --config x-terminal-emulator
+
+    #  选择 tilix.wrapper  对应的 标号,  更改 默认 启动
+
 
 * `linux查看硬链接对应的所有文件 <http://blog.51cto.com/liuqun/1982654>`_
 

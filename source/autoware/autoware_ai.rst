@@ -335,16 +335,45 @@ MapToolbox
     * https://blog.csdn.net/qq_39537898/article/details/118436448
 
 
+
 .. code-block:: sh
 
- # 0.9.10 depends
- pip install --user pygame numpy
+    # 0.9.10 depends
+    pip install --user pygame numpy
 
- python -m pip install pygame==2.0.1 # 0.9.10.1
+    python -m pip install pygame==2.0.1 # 0.9.10.1
+
+
+    #export CARLA_ROOT=${HOME}/shared_dir/carla
+    #export PYTHONPATH=${PYTHONPATH}:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.10-py2.7-linux-x86_64.egg
+    #export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
+    
+    #export CARLA_AUTOWARE_CONTENTS=${HOME}/work2/carla/linux/carla-autoware/autoware-contents
+
+
+    # 安装 carla 
+    mkdir carla
+    tar xzvf CARLA_0.9.10.1.tar.gz  -c carla
+    mv AdditionalMaps_0.9.10.1.tar.gz ./carla/Import/
+
+    # 导入 AdditionalMaps
+    cd carla
+    ./ImportAssets.sh
+
+
 
 
 `ros-bridge <https://carla.readthedocs.io/projects/ros-bridge/en/latest/>`_
 `````````````````````````````````````````````````````````````````````````````
+
+.. code-block:: bash
+
+    git clone -b 0.9.10.1  https://github.com/carla-simulator/ros-bridge.git --recursive 
+    # cd ros-bridge
+    # git submodule update --init --recursive  
+
+    # install depends
+    sudo apt-get install ros-melodic-ackermann-msgs ros-melodic-derived-object-msgs
 
 
 .. code-block:: sh
@@ -380,6 +409,7 @@ MapToolbox
 
     ## 
     ${HOME}/.config/unity3d/LG\ Silicon\ Valley\ Lab/LGSVL\ Simulator
+    ${HOME}/.config/unity3d/LGElectronics/SVLSimulator-2021.3
 
 .. code::
 
