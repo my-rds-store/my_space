@@ -173,6 +173,8 @@ galactic
 
     colcon build --cmake-args '-DCMAKE_BUILD_TYPE=Release'
 
+    . ~/ros2-lgsvl-bridge/install/setup.bash
+    lgsvl_bridge [--port 9090] [--log D]
 
 
 ----
