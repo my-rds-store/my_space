@@ -438,6 +438,11 @@ Dockerfile
 
     CMD ["/bin/bash","/root/run.sh"]
 
+    # apt-get安装,可以加上 --no-install-recommends 这个参数，不安装非必须的依赖包
+    # pip安装，加上pip --no-cache-dir
+    # yum clean all && rm -rf /var/cache/yum/* ;  for cenotos 
+
+
 .. code-block:: sh
 
     $ docker build . -t  ${image name}
