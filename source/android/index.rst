@@ -125,6 +125,12 @@ adbshell_
     $ adb shell am start -n com.example.client/com.example.client.MainActivity  # restart
 
 
+    adb connect 192.168.0.105
+    adb devices
+    adb --help
+    adb install dangbeimarket_4.3.5_277_yunji.apk
+
+
 * `connect to android emulator from virtualbox <https://nftb.saturdaymp.com/connect-to-android-emulator-from-virtualbox/>`_
 
 * `VirtualBox中安装Android-x86 <https://www.howtogeek.com/164570/how-to-install-android-in-virtualbox/>`_
