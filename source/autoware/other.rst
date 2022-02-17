@@ -159,6 +159,18 @@ Jetson AGX Xavier
     nvidia ALL=(ALL) NOPASSWD : ALL  
     EOF
 
+    ########################################
+
+    sudo cat <<EOF > /tmp/nopasswd4sudo
+    ${USER} ALL=(ALL) NOPASSWD : ALL
+    EOF
+    sudo chown root:root /tmp/nopasswd4sudo
+    sudo mv /tmp/nopasswd4sudo  /etc/sudoers.d/nopasswd4sudo
+
+
+
+
+
 ----
 
 * `NVIDIA Xavier CAN <https://blog.csdn.net/weifengdq/article/details/103093111#JetsonAGX_Xavier_CAN_17>`_
