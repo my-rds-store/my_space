@@ -580,6 +580,13 @@ Advanced
 * `GitLab-CI与GitLab-Runner <http://www.jianshu.com/p/2b43151fb92e>`_
 * `[后端]gitlab之gitlab-ci自动部署  <http://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation>`_
 
+**************************
+Docker 镜像托管 (待研究)    
+**************************
+
+* https://cloud.tencent.com/developer/article/1178492 
+
+
 **************
 Travis CI     
 **************

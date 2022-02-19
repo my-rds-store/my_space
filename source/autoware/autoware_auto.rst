@@ -2,8 +2,12 @@ Autoware.Auto
 ==============
 
 
+* `GitLab <https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto>`_
+* `Doc <https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/>`_
+
 一 环境搭建
 ------------
+
 
 
 
