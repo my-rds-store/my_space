@@ -90,7 +90,20 @@ http://blog.csdn.net/zhaihaifei/article/details/50523576
 修改文件名 rename
 -------------------
 
-http://man.linuxde.net/rename
+* https://blog.csdn.net/WMX843230304WMX/article/details/81870536
+
+
+.. code-block:: sh
+
+    sudo apt-get instal rename 
+
+    rename -n 's/Screenshotfrom302.mp4/p/' *.png   # 列出需要重命名的文件,只显示，不执行修改
+    rename -v 's/Screenshotfrom302.mp4/p/' *.png   # 执行修改，列出已重命名的文件
+
+    rename 'y/A-Z/a-z/' *  # 文件名 大写改小写
+    rename 's/[ ]+//g'  *  # 去除文件名的空格
+    rename 's/^/myend/' *  # 文件头加入字符串 myend
+    rename 's/$/myend/' *  # 文件尾加入字符串 myend
 
 
 判断安装包,有没有安装
