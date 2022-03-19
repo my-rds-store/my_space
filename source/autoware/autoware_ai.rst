@@ -554,6 +554,12 @@ Step 2: usb_cam
 
 .. code-block:: sh
 
+    sudo apt install v4l-utils
+
+    v4l2-ctl --list-devices
+
+    ###
+
     sudo apt install ros-melodic-cv-camera
 
     rosparam set cv_camera/device_id 2

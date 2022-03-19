@@ -22,3 +22,12 @@ Autoware.Auto
     https://www.autoware.org/training
 
 * https://www.apex.ai/
+
+
+
+AVP
+------
+
+.. drawio -x avp_framework.drawio -f svg -o ./
+
+.. image:: img/avp_framework.drawio.svg
