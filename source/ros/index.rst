@@ -847,6 +847,11 @@ Peak-CAN
         candump can0
 
 
+        ### SecureBoot如果是 enable 状态,  需要进入 BOIS , 将 secure boot 关闭
+        ### linux secure boot 状态查询：
+        mokutil --sb-state 
+
+
 ***************
 pcanview
 ***************

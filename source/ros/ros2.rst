@@ -102,6 +102,10 @@ ROS2
     ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
     ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}" # 1 Hz
 
+    ros2 topic pub --once /sent_messages can_msgs/msg/Frame  \
+        "{header: { frame_id: 'map'} , id: 15, is_rtr: 0,is_extended: 0, is_error: 0, dlc: 8, data: [1,2,3,4,5,6,7,9]}"
+    ros2 topic pub --once /sent_messages can_msgs/msg/Frame  \
+        "{header: {stamp: {sec: 0, nanosec: 0}, frame_id: 'map'} , id: 15, is_rtr: 0,is_extended: 0, is_error: 0, dlc: 8, data: [1,2,3,4,5,6,7,9]}"
 
 * Services 
 
