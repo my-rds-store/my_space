@@ -54,6 +54,14 @@ ROS2
     * http://docs.ros.org/en/melodic/api/can_dbc_parser/html/annotated.html
       
 
+* Build
+
+.. code-block:: bash
+    
+    colcon build --symlink-install  --packages-select-by-dep  socketcan_bridge
+    colcon build --symlink-install  --packages-select  socketcan_bridge
+
+
 * Node
 
 .. code:: bash

@@ -438,3 +438,27 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
 
 * https://github.com/gfw-breaker/nogfw
 
+
+
+************************
+内网穿透 tailscaled
+************************
+
+* `管理地址 <https://login.tailscale.com/admin/machines>`_
+
+* `subnets <https://tailscale.com/kb/1019/subnets/>`_
+
+```bash
+
+docker run  -d --restart=always  \
+    --name=tailscaled \
+    -v /var/lib:/var/lib \
+    -v /dev/net/tun:/dev/net/tun \
+    --network=host \
+    --privileged \
+    tailscale/tailscale 
+
+docker exec tailscaled tailscale  up
+docker exec tailscaled tailscale  up --advertise-routes=192.168.3.0/24,192.168.2.0/24 --reset
+
+```

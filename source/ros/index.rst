@@ -1096,6 +1096,9 @@ can-dbc-parser
 
     * example
 
+    * `defined but not used [-Wunused-function] 警告`
+        * https://blog.csdn.net/hanhui22/article/details/108869744
+
 
 ----------
 
