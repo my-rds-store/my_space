@@ -1081,6 +1081,9 @@ advSocketCAN
     # /etc/default/grub
     # sudo update-grub
 
+
+    grub_timeout_style=menu # 这里可以选择menu或者是hidden
+
     GRUB_DEFAULT="Ubuntu 高级选项>Ubuntu，Linux 5.4.0-42-generic"
     GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu，Linux 5.4.0-42-generic"
     GRUB_DEFAULT="1> 3"

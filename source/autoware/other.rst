@@ -339,6 +339,33 @@ Jetson AGX Xavier
     vncviewer 192.168.2.105:5900
 
 
+Jetson Nano
+-------------------
+
+.. code-block:: sh
+
+    # jtop : 安装实时查看CPU，GPU状态工具
+
+    sudo pip3 install jetson-stats
+
+    jtop
+    
+
+    # 关闭图形界面
+    sudo systemctl set-default multi-user.target 
+    sudo reboot
+
+    # 开启图形界面
+    sudo systemctl set-default graphical.target 
+    sudo reboot
+
+nvidia jetson ros2 docker  
+------------------------------
+
+* https://nvidia-ai-iot.github.io/ros2_jetson/ros2-jetson-dockers/#docker-containers-for-rosros2-noeticfoxyeloquent
+* https://github.com/NVIDIA-AI-IOT/ros2_jetson/tree/main/docker#pull-docker-images-from-docker-hub-follow
+
+
 
 
 惠普暗影精灵5 Plus
