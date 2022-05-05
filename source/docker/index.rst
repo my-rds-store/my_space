@@ -463,6 +463,79 @@ Dockerfile
 
 
 ***************
+buildx
+***************
+
+* `Releases <https://github.com/docker/buildx/releases>`_
+
+
+.. code-block:: bash
+
+    sudo apt-get install -y qemu qemu-user-static binfmt-support debootstrap
+
+    mkdir -p ~/.docker/cli-plugins/
+    cd ~/.docker/cli-plugins/ || exit
+    wget https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-amd64
+    mv buildx-v0.8.2.linux-amd64 docker-buildx
+    chmod a+x ~/.docker/cli-plugins/docker-buildx
+
+
+* Edit file  `/etc/docker/daemon.json`,  add `"experimental":true`
+
+.. code-block:: json
+
+    {
+    "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"],
+        "runtimes": {
+            "nvidia": {
+                "path": "nvidia-container-runtime",
+                "runtimeArgs": []
+            }
+        },
+        "experimental":true,
+    "insecure-registries": ["192.168.2.100:8086" ]
+    }
+
+
+.. code-block:: json
+
+    sudo systemctl restart docker
+
+    docker buildx version
+
+
+* https://docs.docker.com/buildx/working-with-buildx/
+
+.. code-block:: bash
+
+    ## http
+    sudo tee  $HOME/.config/buildkit/buildkitd.toml <<-'EOF'
+    [registry."192.168.2.100:8086"]
+      http = true
+    EOF
+
+    ## create  builder
+    docker buildx create --use --platform=linux/amd64,linux/arm64 \
+        --name localbuilder  \
+        --config $HOME/.config/buildkit/buildkitd.toml
+
+    docker buildx use localbuilder
+
+    docker exec -t buildx_buildkit_localbuilder0 cat  /etc/buildkit/buildkitd.toml
+
+    docker buildx ls              #  list builder
+    docker buildx rm localbuilder #  delect
+
+
+* https://github.com/moby/buildkit/blob/master/docs/buildkitd.toml.md
+* https://github.com/docker/buildx/blob/master/docs/guides/custom-registry-config.md
+
+
+.. code-block:: bash
+
+    docker buildx build --platform=linux/amd64,linux/arm64 -t 192.168.2.100:8086/v2x/test:v1 . --push
+
+***************
 Docker私有仓库
 ***************
 

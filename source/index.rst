@@ -487,6 +487,7 @@ bittorrent文件编辑工具
    virtualbox/index
    database/index
    unix/index
+   windows/index
    mingw32/index
    nsis/index
    dnsmasq/index
