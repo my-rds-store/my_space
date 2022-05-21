@@ -276,6 +276,8 @@ Barrier 一套键鼠同时控制多台电脑
 
         sudo apt-get install barrier
 
+        sudo snap install barrier
+
 -----
 
 FSearch : Linux 版本的 Everything

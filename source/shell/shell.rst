@@ -292,6 +292,15 @@ tar 打包
     $ tar -tf  name.tgz  # 查看压缩包内容
 
 
+nohub 
+----------------------------
+
+.. code-block:: sh
+
+    nohup /root/runoob.sh > /dev/null 2>&1 &
+    nohup /root/runoob.sh > runoob.log 2>&1 &
+
+
 shell 文件所在路径
 ----------------------------
 

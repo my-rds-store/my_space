@@ -1111,7 +1111,10 @@ can-dbc-parser
 .. code-block:: sh 
 
         sudo apt-get install -y socat
+
         socat -d -d pty,raw,echo=0 pty,raw,echo=0
+
+        sudo socat -d -d pty,raw,echo=0,link=/dev/ttyS0 pty,raw,echo=0,link=/dev/ttyS1
 
 * `摄像头 <https://blog.csdn.net/qq_43433255/article/details/89332667>`_
 
