@@ -251,6 +251,9 @@ Jetson AGX Xavier
     #sudo systemctl disable nvgetty
     #udevadm trigger  # 串口 /dev/ttyTHS0
 
+    #
+    # sudo stty -F /dev/ttyUSB0 -a
+
 ---------
 
 * Jetson TX2——CAN口的使用 `<https://blog.csdn.net/xuezhunzhen9743/article/details/81877757>`_
