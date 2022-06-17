@@ -450,8 +450,29 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
 * https://hub.docker.com/r/tailscale/tailscale
 
 
+* `Set up a subnet route <https://tailscale.com/kb/1019/subnets/?tab=linux>`_
 
 .. code-block:: bash
+
+
+    ################################################################
+    # Server: Enable IP forwarding 
+    ################################################################
+
+    echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+    echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+    sudo sysctl -p /etc/sysctl.conf
+
+    ################################################################
+    # Server : If your Linux node uses firewalld 
+    ################################################################
+
+    firewall-cmd --permanent --add-masquerade
+
+    
+    ################################################################
+    # Server or client
+    ################################################################
 
     docker run  -d --restart=always \
         --name=tailscaled \
@@ -463,6 +484,8 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
         tailscaled
 
 
-    docker exec tailscaled tailscale  up
-    docker exec tailscaled tailscale  up --advertise-routes=192.168.3.0/24,192.168.2.0/24 --reset
+    docker exec tailscaled tailscale up --advertise-routes=192.168.3.0/24,192.168.2.0/24 --reset # For Server
+
+    docker exec tailscaled tailscale up                  # For Windows , macOS client
+    docker exec tailscaled tailscale up --accept-routes  # For linux client
 
