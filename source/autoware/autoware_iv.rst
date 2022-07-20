@@ -1,4 +1,4 @@
-Autoware.IV
+Autoware
 ============
 
 * Documentation
