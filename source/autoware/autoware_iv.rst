@@ -7,6 +7,56 @@ Autoware
 
 * `Source <https://github.com/autowarefoundation/autoware>`_
 
+
+* IDL
+    *  http://design.ros2.org/articles/idl_interface_definition.html
+
+
+安装
+----------------
+
+.. code:: bash
+
+    # # 更换阿里源, 网速快; 缺点, 当碰巧,阿里源正在和官方源同步的时段，会无法安装
+    # sed -i 's/cn.archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list # X86 中文
+    # sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list    # X86 英文
+    # sed -i 's/ports.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list      # arm
+
+    sudo apt-get -y update
+    sudo apt-get -y install git
+
+    ######################################################
+    ### geographiclib-tools
+    ######################################################
+    sudo apt install geographiclib-tools
+    ## sudo geographiclib-get-geoids egm2008-1
+
+    ## http://192.168.2.100:8089/s/kQN2Gme9b5gkeSk?path=%2Fgeographiclib
+    tar xofjC egm2008-1.tar.bz2 /usr/share/GeographicLib
+    ## tar xofjC egm2008-2_5.tar.bz2 /usr/local/share/GeographicLib
+
+    ######################################################
+    ### libtorch  ???/
+    ######################################################
+    # Download http://192.168.2.100:8089/s/kQN2Gme9b5gkeSk?path=%2F
+    sudo unzip libtorch-1.6.0+cu11.1.zip -d /usr/local/
+
+    #
+    git clone https://github.com/autowarefoundation/autoware.git
+    cd autoware
+
+    ./setup-dev-env.sh
+
+
+    cd autoware
+    mkdir src
+    vcs import src < autoware.repos
+
+    sudo apt-get install ros-galactic-pacmod3-msgs
+
+    source /opt/ros/galactic/setup.bash
+    rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+
 ----------------
 
 * 链接地址
