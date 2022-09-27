@@ -354,6 +354,8 @@ Sed 命令
 .. code-block:: sh
 
     sed -i '3s/^/your_test\n/' test.txt      # 在第3行前，插入一行
+    sed -i "3s/$/\nyour_test/" test.txt      # 在第3行后，插入一行
+
 
     sed -i '3s/your_test/my_test/' test.txt  # 修改第三行
 
