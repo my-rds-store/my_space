@@ -16,6 +16,28 @@ Autoware
     * `Autoware Universe  <https://github.com/autowarefoundation/autoware.universe>`_
 
 
+* MkDocs Build    
+
+    .. code-block:: sh
+
+        ## 2022.09.26
+
+        sudo pip3 install mkdocs==1.3.1
+
+        pip3 install --user fontawesome-markdown==0.2.6
+        pip3 install --user python-markdown-math==0.8
+        pip3 install --user mdx_truly_sane_lists==1.3
+        pip3 install --user plantuml-markdown==3.6.3
+        pip3 install --user mkdocs-awesome-pages-plugin==2.8.0
+        pip3 install --user mkdocs-exclude==1.0.2
+        pip3 install --user mkdocs-macros-plugin==0.7.0
+        pip3 install --user mkdocs-material===8.5.3
+        pip3 install --user mkdocs-same-dir==0.1.1
+
+ 
+        mkdocs serve -a 0.0.0.0:8000 
+
+
 * IDL
     *  http://design.ros2.org/articles/idl_interface_definition.html
 
