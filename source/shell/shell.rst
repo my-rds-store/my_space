@@ -323,6 +323,23 @@ shell 文件所在路径
     ipython 
 
 
+* apt
+
+
+.. code-block:: sh
+
+    apt install --only-upgrade <packagename>
+
+    # 用apt升级单个软件包
+
+    apt-get upgrade [-u]
+
+    # 升级所以已经安装的包裹为最新可用版本.
+    # 不会安装新的或移除老的包裹.
+    # 如果一个包改变了倚赖关系而需要安装一个新的包裹,那么它将不会被升级,而是标志为 hold .
+    # apt-get update 不会升级被标志为 hold 的包裹 (这个也就是 hold 的意思).请看下文如何手动设置包裹为 hold .
+    # 我建议同时使用 ‘-u’ 选项,因为这样你就能看到哪些包裹将会被升级.
+
 
 apt-get install时如何指定安装版本
 -----------------------------------
