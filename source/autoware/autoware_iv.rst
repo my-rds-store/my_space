@@ -137,6 +137,20 @@ Autoware
         # Lantern 下载
 
 
+yolo
+------------
+
+* `v4l2-camera <https://zhuanlan.zhihu.com/p/517831485>`_
+
+.. code-block:: sh
+
+    sudo apt-get install ros-galactic-v4l2-camera
+
+    ros2 launch tensorrt_yolo tensorrt_yolo.launch.xml \
+        engine_file:=${HOME}/autoware.galactic/install/tensorrt_yolo/share/tensorrt_yolo/data/yolov3.engine
+
+
+
 
 .. raw:: html
 

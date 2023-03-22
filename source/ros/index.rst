@@ -1298,6 +1298,19 @@ Demo
 vscode
 *************
 
+* 在 VSCode 中, `c_cpp_properties.json` 的"包含路径"如下所示.
+
+.. code-block:: json
+
+    "includePath": [
+        "/home/shisato/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/shisato/catkin_ws/src/package_name/include/**",
+        "/usr/include/**"
+    ]
+
+
+
 ::
 
     ctrl+shift+B
