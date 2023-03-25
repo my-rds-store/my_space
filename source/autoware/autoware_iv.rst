@@ -149,9 +149,6 @@ yolo
     ros2 launch tensorrt_yolo tensorrt_yolo.launch.xml \
         engine_file:=${HOME}/autoware.galactic/install/tensorrt_yolo/share/tensorrt_yolo/data/yolov3.engine
 
-
-
-
 .. raw:: html
 
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=31445554&auto=1&height=66">

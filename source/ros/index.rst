@@ -515,6 +515,8 @@ package
             </node>
         </launch>
 
+* `订阅 rtsp topic 发送 rtsp - ros_rtsp <https://github.com/CircusMonkey/ros_rtsp.git>`_
+
 * `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_  
     * `参考 - Ubuntu利用ROS搭建手机移动网络摄像头 (Android) <https://www.bbsmax.com/A/E35pOMWgJv/>`_
 

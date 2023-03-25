@@ -175,6 +175,10 @@ ROS2
 
 * `ROS2入门教程-创客制造 <https://www.ncnynl.com/archives/201801/2250.html>`_
 
+---
+
+* `订阅rtsp 发布ros2 image topic - ros2_ipcamera <https://github.com/surfertas/ros2_ipcamera.git>`_
+
 
 
 LGSVL
