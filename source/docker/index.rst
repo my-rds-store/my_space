@@ -535,7 +535,8 @@ buildx
 
     docker buildx build --platform=linux/amd64,linux/arm64 -t 192.168.2.100:8086/v2x/test:v1 . --push
 
-*******************************
+
+******************************
 jetson Nano 运行 ros rviz
 ******************************
 
