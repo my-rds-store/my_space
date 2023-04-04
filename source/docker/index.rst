@@ -535,6 +535,51 @@ buildx
 
     docker buildx build --platform=linux/amd64,linux/arm64 -t 192.168.2.100:8086/v2x/test:v1 . --push
 
+*******************************
+jetson Nano 运行 ros rviz
+******************************
+
+* `jetson-containers <https://hub.docker.com/r/dustynv/ros/tags>`_
+
+
+.. code-block:: bash
+
+    # step 1
+    docker run  --rm -it --net host \
+                    --ipc=host  \
+                    -e LANG=C.UTF-8  \
+                    -e DISPLAY=${DISPLAY} \
+                    --env="QT_X11_NO_MITSHM=1" \
+                    -v /tmp/.X11-unix:/tmp/.X11-unix \
+                    --name ros-noetic \
+                    --gpus all \
+                    --runtime nvidia \
+                    --privileged \
+                    dustynv/ros:noetic-desktop-l4t-r35.2.1 \
+                    /bin/bash
+
+
+    # step 2
+    xhost + 
+
+    # step 3
+    roscore & sleep 5 ; rviz
+
+
+.. code-block:: bash
+
+    #NVIDIA_Nona 下查看 CPU/GPU/内存使用率
+
+    sudo pip3 install jetson-stats
+
+    jtop
+
+    jetson_release
+
+
+
+
+
 ***************
 Docker私有仓库
 ***************
