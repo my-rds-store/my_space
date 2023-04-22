@@ -184,6 +184,12 @@ Gitee
 空
 
 
+语法
+----------
+
+* 参考 `[野火]sphinx文档规范与模版`_
+
+.. _[野火]sphinx文档规范与模版: https://contribute.doc.embedfire.com/zh_CN/stable/index.html
 
 
 代码
@@ -426,10 +432,10 @@ Then create a custom layout in source/_templates/layout.html and do something li
     Assuming you called your stylesheet style.css
 
 
-ReadTheDocs 私有部署搭建安装
-----------------------------
-
-.. literalinclude:: ./rtd_local_install.sh
-    :language: bash
-    :encoding: utf-8
-
+.. ReadTheDocs 私有部署搭建安装
+.. ----------------------------
+.. 
+.. .. literalinclude:: ./rtd_local_install.sh
+..     :language: bash
+..     :encoding: utf-8
+ 

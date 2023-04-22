@@ -480,7 +480,7 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
         -v /dev/net/tun:/dev/net/tun \
         --network=host \
         --privileged \
-        tailscale/tailscale \
+        tailscale/tailscale:v1.26.0 \
         tailscaled
 
 
