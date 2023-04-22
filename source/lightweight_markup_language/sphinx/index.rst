@@ -432,6 +432,14 @@ Then create a custom layout in source/_templates/layout.html and do something li
     Assuming you called your stylesheet style.css
 
 
+GPT4使用技巧
+-----------------------
+
+-  通过 `bing chart` 使用 `GPT4` 翻译   
+
+   使用GPT4将下面的内容翻译成中文：
+
+
 .. ReadTheDocs 私有部署搭建安装
 .. ----------------------------
 .. 
