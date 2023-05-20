@@ -471,6 +471,7 @@ bittorrent文件编辑工具
    android/index
    golang/index
    cpp/index
+   rust/index
    qt/index
    opencv/index
    nginx/index
