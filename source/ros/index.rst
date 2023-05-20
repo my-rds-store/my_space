@@ -8,6 +8,7 @@ ROS
 
     apt-get install ros-melodic-plotjuggler ros-melodic-plotjuggler-ros
 
+* `ROS Tutorials <http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html>`_
 
 * 待研究
     * `ros 开机自启动 `robot_upstart`
