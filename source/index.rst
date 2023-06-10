@@ -458,7 +458,6 @@ bittorrent文件编辑工具
    ros/ros2
    autoware/index
    apollo/index
-   vscode/index
    webrtc/index
    unity/index
    qemu_libvirt/qemu
@@ -480,7 +479,6 @@ bittorrent文件编辑工具
    shell/shell
    lightweight_markup_language/index
    latex/index
-   pycharm/remote_debug
    docker/index
    kubernetes/index
    rancher/index
@@ -488,6 +486,8 @@ bittorrent文件编辑工具
    virtualbox/index
    database/index
    unix/index
+   unix/unix
+   IDE/index
    windows/index
    mingw32/index
    nsis/index
