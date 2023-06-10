@@ -476,7 +476,6 @@ bittorrent文件编辑工具
    nginx/index
    download_tools/index
    bittorrent/index
-   shell/shell
    lightweight_markup_language/index
    latex/index
    docker/index
@@ -487,6 +486,7 @@ bittorrent文件编辑工具
    database/index
    unix/index
    unix/unix
+   unix/shell/shell
    IDE/index
    windows/index
    mingw32/index
