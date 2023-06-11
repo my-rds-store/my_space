@@ -339,6 +339,26 @@ tmux
 * https://linux.cn/article-9096-1.html
 
 
+项目管理系统 `taiga` 安装部署
+-----------------------------
+
+.. code:: bash
+
+    git clone https://github.com/taigaio/taiga-docker.git
+
+    # 修改ip, `docker-compose.yml` 
+    # 把里面的所有的 `localhost` 都替换为服务器IP, 我的ip 为 192.168.2.100
+
+    # 运行容器
+    ./launch-all.sh
+
+    # 生成管理员账户
+    ./taiga-manage.sh createsuperuser
+
+
+    # 浏览器访问
+    #  http://192.168.2.100:9000.
+
 .. raw:: html
 
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=2&id=413961293&auto=1&height=66"></iframe>
