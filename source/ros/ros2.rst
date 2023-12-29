@@ -29,7 +29,10 @@ Docker Containers
         * `l4t-jetpack <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/l4t-jetpack>`_
     * `l4t-ros <https://hub.docker.com/r/dustynv/ros>`_
         * `l4t-humble <https://hub.docker.com/r/dustynv/ros/tags?page=1&name=humble>`_
-        * `docker pull dustynv/ros:humble-desktop-l4t-r36.2.0`
+
+    .. code-block:: bash
+
+        docker pull dustynv/ros:humble-desktop-l4t-r36.2.0
 
 * Amd64
     * `cuda <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuda>`_
