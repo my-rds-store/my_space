@@ -277,9 +277,9 @@ Github
 
 
 * github的镜像网站 
-  * github.com.cnpmjs.org
-  * hub.fastgit.org`
-  * https://ghproxy.com/
+    * github.com.cnpmjs.org
+    * hub.fastgit.org
+    * https://ghproxy.com/
 
 .. code-block:: sh 
 
@@ -299,24 +299,6 @@ Github
     wget https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
     curl -O https://ghproxy.com/https://github.com/stilleshan/ServerStatus/archive/master.zip
     curl -O https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
-
-
-* `如何加快github下载代码的速度 <https://blog.csdn.net/mist99/article/details/80602090>`_
-
-::
-
-        sudo gedit /etc/hosts
-
-        添加
-
-        151.101.185.194 http://github.global.ssl.fastly.net 
-        192.30.253.112  http://github.com
-
-        保存,退出,并重启网络
-
-        /etc/init.d/networking restart
-
-
 
 
 
@@ -377,6 +359,23 @@ Gitlab_
     # /srv/gitlab/config/gitlab.rb
     pages_external_url "http://192.168.1.100/"
     gitlab_pages['enable'] = true
+
+
+Gitlab Prometheus
+-----------------
+
+* `解决Gitlab Prometheus导致的磁盘空间不足问题 <https://blog.csdn.net/IT_Holmes/article/details/135354866>`_
+
+.. code::
+
+    ## gitlab/config/gitlab.rb
+
+    prometheus['enable'] = false
+
+
+
+Gitlab other
+-----------------
 
 
 
