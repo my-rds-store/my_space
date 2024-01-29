@@ -192,7 +192,17 @@ Docker Containers
 
 * `订阅rtsp 发布ros2 image topic - ros2_ipcamera <https://github.com/surfertas/ros2_ipcamera.git>`_
 
+* 打包
 
+.. code:: bash
+
+    sudo apt install python3-catkin-pkg python3-bloom
+    sudo apt-get install fakeroot
+    sudo apt-get install debhelper
+
+    # sudo apt-get install lsb-release 
+    bloom-generate rosdebian --os-name ubuntu --os-version ${lsb_release -cs} --ros-distro ${ROS_DISTRO}
+    # bloom-generate rosdebian --os-name ubuntu --os-version focal --ros-distro galactic
 
 
 LGSVL
