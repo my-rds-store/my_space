@@ -192,6 +192,9 @@ Docker Containers
 
 * `订阅rtsp 发布ros2 image topic - ros2_ipcamera <https://github.com/surfertas/ros2_ipcamera.git>`_
 
+
+-------
+
 * 打包
 
 .. code:: bash
@@ -201,8 +204,10 @@ Docker Containers
     sudo apt-get install debhelper
 
     # sudo apt-get install lsb-release 
-    bloom-generate rosdebian --os-name ubuntu --os-version ${lsb_release -cs} --ros-distro ${ROS_DISTRO}
-    # bloom-generate rosdebian --os-name ubuntu --os-version focal --ros-distro galactic
+    bloom-generate rosdebian --os-name ubuntu --os-version $(lsb_release -cs) --ros-distro ${ROS_DISTRO}
+    #bloom-generate rosdebian --os-name ubuntu --os-version focal --ros-distro galactic
+
+    fakeroot debian/rules binary
 
 
 LGSVL
