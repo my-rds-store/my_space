@@ -254,6 +254,13 @@ Barrier 一套键鼠同时控制多台电脑
 
         sudo snap install barrier
 
+
+input-leap 一套键鼠同时控制多台电脑(Next Barrier)
+-----------------------------------------------
+
+* https://github.com/input-leap/input-leap
+
+
 -----
 
 FSearch : Linux 版本的 Everything
