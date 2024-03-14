@@ -225,13 +225,13 @@ x11vnc
 
 :: 
 
-    启动WPS for Linux后，出现提示"系统缺失字体" 。
+    启动WPS for Linux后, 出现提示"系统缺失字体" 。
 
-    1. 下载缺失的字体文件，然后复制到Linux系统中的/usr/share/fonts文件夹中。
+    1. 下载缺失的字体文件, 然后复制到Linux系统中的/usr/share/fonts文件夹中。
 
-	    国外下载地址：https://www.dropbox.com/s/lfy4hvq95ilwyw5/wps_symbol_fonts.zip
+	    国外下载地址: https://www.dropbox.com/s/lfy4hvq95ilwyw5/wps_symbol_fonts.zip
 
-	    国内下载地址：https://pan.baidu.com/s/1eS6xIzo
+	    国内下载地址: https://pan.baidu.com/s/1eS6xIzo
 
     2. 将解压的字体，拷贝到 /usr/share/fonts/wps-office/
 
