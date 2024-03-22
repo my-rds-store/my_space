@@ -85,6 +85,59 @@ Cmake
 `Learn OpenGL <https://learnopengl-cn.github.io/>`_
 ***************************************************************************
 
+* Hello Window
+
+  * `hello_window_clear <https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/1.2.hello_window_clear/hello_window_clear.cpp>`_
+
+  * `配置GLAD <https://learnopengl-cn.github.io/01%20Getting%20started/02%20Creating%20a%20window/#glad>`_
+
+    * Language: `C/C++`
+    * Specification : OpenGL
+    * gl :  Version 3.3
+    * Core :  Core
+    * GENERATE
+
+
+.. code:: sh
+
+        g++ -I include  `pkg-config --cflags glfw3` -o hello_window_clear hello_window_clear.cpp src/glad.c `pkg-config --static --libs glfw3` -lGL -lGLU -lglut -ldl 
+
+
+.. code:: makefile
+
+        # 编译器设置
+        CXX = g++
+        CXXFLAGS = -Wall -g
+
+        # 包含路径
+        INCLUDES = -I./include `pkg-config --cflags glfw3`
+
+        # 链接库
+        LDLIBS = `pkg-config --static --libs glfw3` -lGL -lGLU -lglut -ldl
+
+        # 源文件和目标文件
+        SOURCES = hello_window_clear.cpp src/glad.c
+        OBJECTS = $(SOURCES:.cpp=.o)
+        TARGET = hello_window_clear
+
+        # 默认目标
+        all: $(TARGET)
+
+        # 链接目标
+        $(TARGET): $(OBJECTS)
+                $(CXX) $(LDFLAGS) $(INCLUDES) -o $@ $^ $(LDLIBS)
+
+        # 编译规则
+        %.o: %.cpp
+                $(CXX) $(CXXFLAGS) $(INCLUDES) -c $<
+
+        # 清理目标
+        clean:
+                rm -f $(OBJECTS) $(TARGET)
+
+        .PHONY: all clean
+
+
 
 **********************
 Doxygen
