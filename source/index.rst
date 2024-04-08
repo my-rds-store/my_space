@@ -190,34 +190,31 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 源列表
 ************
 
-    * 科大开源镜像站:  http://mirrors.ustc.edu.cn/
-    * 163源地址 ： http://mirrors.163.com/
-    * 阿里源地址:  http://mirrors.aliyun.com/
+* 科大开源镜像站:  http://mirrors.ustc.edu.cn/
+* 163源地址: http://mirrors.163.com/
+* 阿里源地址:  http://mirrors.aliyun.com/
 
-.. code-block:: bash
+
+
+.. .. code-block:: bash
     
-    $ curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-    $ curl -o /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo 
-    $ sudo yum makecache
+..     $ curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+..     $ curl -o /etc/yum.repos.d/epel-7.repo http://mirrors.aliyun.com/repo/epel-7.repo 
+..     $ sudo yum makecache
 
 
-    # centos/fedora 安装epel扩展源 并更换为科大开源镜像
-    $ sudo yum -y install epel-release
-    $ sudo sed -e 's!^mirrorlist=!#mirrorlist=!g' \
-             -e 's!^#baseurl=!baseurl=!g' \
-             -e 's!//download\.fedoraproject\.org/pub!//mirrors.ustc.edu.cn!g' \
-             -e 's!http://mirrors\.ustc!https://mirrors.ustc!g' \
-             -i /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo
+..     # centos/fedora 安装epel扩展源 并更换为科大开源镜像
+..     $ sudo yum -y install epel-release
+..     $ sudo sed -e 's!^mirrorlist=!#mirrorlist=!g' \
+..              -e 's!^#baseurl=!baseurl=!g' \
+..              -e 's!//download\.fedoraproject\.org/pub!//mirrors.ustc.edu.cn!g' \
+..              -e 's!http://mirrors\.ustc!https://mirrors.ustc!g' \
+..              -i /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo
+
 
 `Fodora 中文社区软件源 <https://repo.fdzh.org/>`_
 
-Ubuntu 源列表
-================
 
-
-    `官方源列表 <https://wiki.ubuntu.com.cn/%E6%BA%90%E5%88%97%E8%A1%A8>`_
-
-    `163源列表 <http://mirrors.163.com/.help/ubuntu.html>`_
     
 .. code-block:: bash
 
@@ -258,16 +255,6 @@ Ubuntu 源列表
     $ export APT_CONFIG=~/apt_proxy.conf
     $ sudo apt-get update
 
-
-
-.. code-block:: sh
-
-    apt-get download  <your_package_here> #  Download the binary package into the current directory
-    ####################
-    apt-get clean
-    apt-get --download-only install <your_package_here>
-    cp /var/cache/apt/archives/*.deb <your_directory_here>
-    
 
 
 * `jitsi  开源视频会议 <https://jitsi.org/>`_
@@ -329,9 +316,4 @@ Ubuntu 源列表
    gfw_is_shit/index
    tensorflow/index
    other/index
-
-------------------
-
-* `英特尔® 服务器主板 S1200SPL的 pGFX 图形驱动程序 S1200SPL <https://downloadcenter.intel.com/zh-cn/download/25689/pGFX-Graphics-Driver-for-the-Intel-Server-Board-S1200SPL?product=97950&_ga=2.88649426.81022229.1538991029-1974842179.1536233238>`_
-
 
