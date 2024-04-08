@@ -103,8 +103,6 @@ Hello World
 open edx     
 *************
 
-*  https://shuer.link/#/discover
-
 * `学堂在线 <http://www.xuetangx.com>`_
     * username : jiang_xumin@massclouds.com
 
