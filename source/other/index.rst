@@ -488,3 +488,88 @@ remote-viewer
    --hotkeys=release-cursor=""   # 屏蔽 ctrl+alt
    
    
+
+BitTorrent
+    * `CentOS 下搭建BT下载服务器安装笔记  <http://www.linuxidc.com/Linux/2011-05/35510.htm>`_
+    * `CTorrent <http://www.3haoweb.cn/a/internet/download/bt/2010/1030/4446.html>`_
+    * `其他 <http://blog.csdn.net/vblittleboy/article/details/38494807>`_
+
+.. code-block:: bash
+    
+    # 制作种子
+    mktorrent -a http://192.168.8.204:18888/announce -o drbl-live-xfce.iso.torrent /home/jxm/Downloads/drbl-live-xfce.iso
+    # or
+    ctorrent -t ~/Downloads/virtualbox-5.1.deb -u http://192.168.8.204:18888/announce -s virtualbox-5.1.deb.torrent
+
+    # 启动下载
+    ctorrent virtualbox-5.1.deb.torrent -s ~/Downloads/virtualbox-5.1.deb
+
+BT Tracker List
+    https://github.com/ngosang/trackerslist
+    https://newtrackon.com/
+
+bittorrent文件编辑工具
+    * BEncode Editor
+    * TrackerEditor
+
+邮箱
+===========
+
+* `网易邮箱 <https://help.aliyun.com/knowledge_detail/36576.html?spm=a2c4g.11186631.2.3.372744fdMddz7M>`_
+
+::
+
+        企业云邮箱各个服务器地址及端口信息如下：
+
+        收件服务器地址：
+
+                POP 服务器地址：pop3.mxhichina.com 端口110, SSL 加密端口995
+                或
+                IMAP 服务器地址：imap.mxhichina.com 端口143, SSL 加密端口993
+
+        发件服务器地址：
+                SMTP 服务器地址：smtp.mxhichina.com 端口25, SSL 加密端口465
+
+
+************
+待研究
+************
+
+* `申请Let's Encrypt永久免费SSL证书 <https://www.jianshu.com/p/3ae2f024c291>`_
+    * https://letsencrypt.org/
+
+DDRL
+============
+
+* `Partclone <https://partclone.org>`_
+    * `鸟哥介绍DDRL <http://linux.vbird.org/linux_enterprise/0130drbl_clonezilla.php>`_
+    * `Partclone <http://ju.outofmemory.cn/entry/346636>`_
+    * `Partclone - git hub <https://github.com/Thomas-Tsai/partclone>`_
+
+
+* https://github.com/stevenshiau/drbl
+* http://drbl.nchc.org.tw/one4all/desktop/drbl-cmd-list.php
+* http://drbl.nchc.org.tw/advanced/
+* http://drbl.nchc.org.tw/fine-print.php?path=advanced/./01_DRBL/01-drbl-archi.faq#01-drbl-archi.faq
+
+Udpcast
+===========
+
+* http://www.udpcast.linux.lu/mkimagedoc.html
+
+----
+
+P2P File Transfer
+    https://github.com/ypingcn/P2PChat-Qt
+    https://github.com/aanrv/P2P-File-Transfer-Client
+    https://www.cnblogs.com/snake-hand/p/3148366.html
+    https://blog.csdn.net/hackertom/article/details/73692902
+
+--------------
+
+http://www.isjian.com/
+
+Linux From Scratch
+   https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html 
+
+   http://www.linuxfromscratch.org/

@@ -69,6 +69,12 @@ nohub
     $ fuser -vm /mnt  #  查看挂载点，被那些进程占用
 
 
+
+* Linux log日志占用
+    * `Linux /var/log/日志文件太大, 清理journal就行 <https://www.uedbox.com/post/58901/>`_
+
+
+
 `磁盘坏道 <http://man.linuxde.net/badblocks>`_
 --------------------------------------------------------
 

@@ -113,14 +113,15 @@ Hello World
 宝贝读物     
 *************************************
 
+.. code::
 
-* <<我的情绪小怪兽>>
-    引导宝宝如何理解情绪,为以后更好的控制管理自己的情绪打下基础。
-    情绪管理很重要,直接影响人际交往，问题解决，自信心等。
+    <<我的情绪小怪兽>>
+        引导宝宝如何理解情绪,为以后更好的控制管理自己的情绪打下基础。
+        情绪管理很重要,直接影响人际交往，问题解决，自信心等。
 
-* <<小灯泡情绪管理绘本>>
-    来自韩国的"暖心"情绪绘本，为儿童的性情培养提供全面的解决方案，用一段段温情的亲子时光引导孩子.
-    学会正当释放情绪，培养健康快乐心态.
+    <<小灯泡情绪管理绘本>>
+        来自韩国的"暖心"情绪绘本，为儿童的性情培养提供全面的解决方案，用一段段温情的亲子时光引导孩子.
+        学会正当释放情绪，培养健康快乐心态.
 
 
 *************************************
@@ -129,11 +130,6 @@ Hello World
 
 * `线性代数 <https://my-linear-algebra.readthedocs.io/zh/latest/>`_
 
-*************
-PDF book     
-*************
-   
-* `linux公社下载地址 <https://linux.linuxidc.com/>`_
 
 *************
 open edx     
@@ -185,17 +181,9 @@ open edx
     * `瑞典 anonfile  <https://anonfile.com/>`_
     * `degoo(jiang_xmin@massclouds.com)  <https://degoo.com>`_
 
-短链接服务
-    * https://st.im/ 
 
 * `chroot  <https://www.howtogeek.com/howto/linux/reset-your-ubuntu-password-easily-from-the-live-cd/>`_
 
-
-`各类程序员学习路线图 <http://www.runoob.com/coder-learn-path>`_
-
-
-Linux log日志占用
-    * `Linux /var/log/日志文件太大，清理journal就行 <https://www.uedbox.com/post/58901/>`_
 
 .. code-block:: sh
 
@@ -270,7 +258,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
 
 * `Ubuntu  <http://cdimage.ubuntu.com/releases/>`_
 * `CentOS  <http://isoredirect.centos.org/centos/7/isos/x86_64/>`_
-* `Fedora  </>`_
 
 
 ************
@@ -355,94 +342,10 @@ Ubuntu 源列表
     apt-get --download-only install <your_package_here>
     cp /var/cache/apt/archives/*.deb <your_directory_here>
     
-************
-待研究
-************
 
-* `申请Let's Encrypt永久免费SSL证书 <https://www.jianshu.com/p/3ae2f024c291>`_
-    * https://letsencrypt.org/
-
-DDRL
-============
-
-* `Partclone <https://partclone.org>`_
-    * `鸟哥介绍DDRL <http://linux.vbird.org/linux_enterprise/0130drbl_clonezilla.php>`_
-    * `Partclone <http://ju.outofmemory.cn/entry/346636>`_
-    * `Partclone - git hub <https://github.com/Thomas-Tsai/partclone>`_
-
-
-* https://github.com/stevenshiau/drbl
-* http://drbl.nchc.org.tw/one4all/desktop/drbl-cmd-list.php
-* http://drbl.nchc.org.tw/advanced/
-* http://drbl.nchc.org.tw/fine-print.php?path=advanced/./01_DRBL/01-drbl-archi.faq#01-drbl-archi.faq
-
-Udpcast
-===========
-
-* http://www.udpcast.linux.lu/mkimagedoc.html
-
-----
-
-P2P File Transfer
-    https://github.com/ypingcn/P2PChat-Qt
-    https://github.com/aanrv/P2P-File-Transfer-Client
-    https://www.cnblogs.com/snake-hand/p/3148366.html
-    https://blog.csdn.net/hackertom/article/details/73692902
-
---------------
-
-http://www.isjian.com/
-
-Linux From Scratch
-   https://linux.cn/lfs/LFS-BOOK-7.7-systemd/index.html 
-
-   http://www.linuxfromscratch.org/
-
-前端框架(js)
-   `Meteor <https://www.meteor.com/>`_
 
 * `jitsi  开源视频会议 <https://jitsi.org/>`_
 
-BitTorrent
-    * `CentOS 下搭建BT下载服务器安装笔记  <http://www.linuxidc.com/Linux/2011-05/35510.htm>`_
-    * `CTorrent <http://www.3haoweb.cn/a/internet/download/bt/2010/1030/4446.html>`_
-    * `其他 <http://blog.csdn.net/vblittleboy/article/details/38494807>`_
-
-.. code-block:: bash
-    
-    # 制作种子
-    mktorrent -a http://192.168.8.204:18888/announce -o drbl-live-xfce.iso.torrent /home/jxm/Downloads/drbl-live-xfce.iso
-    # or
-    ctorrent -t ~/Downloads/virtualbox-5.1.deb -u http://192.168.8.204:18888/announce -s virtualbox-5.1.deb.torrent
-
-    # 启动下载
-    ctorrent virtualbox-5.1.deb.torrent -s ~/Downloads/virtualbox-5.1.deb
-
-BT Tracker List
-    https://github.com/ngosang/trackerslist
-    https://newtrackon.com/
-
-bittorrent文件编辑工具
-    * BEncode Editor
-    * TrackerEditor
-
-邮箱
-===========
-
-* `网易邮箱 <https://help.aliyun.com/knowledge_detail/36576.html?spm=a2c4g.11186631.2.3.372744fdMddz7M>`_
-
-::
-
-        企业云邮箱各个服务器地址及端口信息如下：
-
-        收件服务器地址：
-
-                POP 服务器地址：pop3.mxhichina.com 端口110，SSL 加密端口995
-                或
-                IMAP 服务器地址：imap.mxhichina.com 端口143，SSL 加密端口993
-
-        发件服务器地址：
-                SMTP 服务器地址：smtp.mxhichina.com 端口25， SSL 加密端口465
 
 
 
