@@ -469,6 +469,58 @@ Gitlab other
             --docker-image "docker:latest" \
             --docker-volumes /var/run/docker.sock:/var/run/docker.sock
 
+3. Registering Runners 
+-------------------------
+
+.. code:: bash
+
+    gitlab-runner register -n \
+        --url "http://192.168.2.100/" \
+        --registration-token "yrXA-AuQF9x7A24AxLeM" \
+        --description "arm64 jigang shell" \
+        --locked="true" \
+        --tag-list jigang-arm64-shell\
+        --run-untagged="true" \
+        --executor "shell" \
+
+    ## sudo    -->  /etc/gitlab-runner/config.toml
+    ## promote -->  ~/.gitlab-runner/config.toml
+
+
+.. code:: bash
+
+    sudo vim /etc/systemd/system/gitlab-runner.service
+
+.. code:: 
+
+    Description=GitLab Runner
+    After=network.target
+
+    [Service]
+    #StartLimitInterval=5
+    #StartLimitBurst=10
+    Type=simple
+    ExecStart=/usr/bin/gitlab-runner run --working-directory /home/promote/extdisk/gitlab-runner 
+    #ExecStart=/usr/bin/gitlab-runner run  -working-directory /home/promote/gitlab-runner --config /home/promote/.gitlab-runner/config.toml
+    StandardOutput=syslog
+
+    User=root
+    Group=root
+
+    #Restart=always
+    #RestartSec=120
+
+    [Install]
+    WantedBy=multi-user.target
+
+
+.. code:: bash
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable  gitlab-runner.service
+    sudo systemctl restart gitlab-runner.service 
+    sudo systemctl status  gitlab-runner.service 
+
 3. gitlab-ci.yml
 ------------------
 
