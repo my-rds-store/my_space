@@ -500,7 +500,7 @@ buildx
     }
 
 
-.. code-block:: json
+.. code-block:: bash
 
     sudo systemctl restart docker
 
@@ -581,9 +581,6 @@ jetson Nano 运行 ros rviz
     jetson_release
 
 
-
-
-
 ***************
 Docker私有仓库
 ***************
@@ -593,6 +590,25 @@ Docker私有仓库
 
 * `harbor搭建与使用 待验证 <https://blog.csdn.net/qq_24095941/article/details/86063684>`_
       * https://www.cnblogs.com/qiuhom-1874/p/13061984.html
+
+
+* `harbor releases <https://github.com/goharbor/harbor/releases>`_
+
+.. code:: bash
+
+    # 1. 把harbor.yml.tmpl重命名为harbor.yml
+
+    # 2. 编辑harbor.yml文件, 修改
+    -- hostname
+    -- http
+        --port
+    注释掉 https
+
+    # 3. 运行install.sh
+
+    # 4.
+    sudo docker-compose up -d
+    sudo docker-compose restart
 
 
 * `Docker私有仓库搭建  <http://www.jianshu.com/p/00ac18fce367>`_
