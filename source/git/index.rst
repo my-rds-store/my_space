@@ -483,8 +483,23 @@ Gitlab other
         --run-untagged="true" \
         --executor "shell" \
 
+
     ## sudo    -->  /etc/gitlab-runner/config.toml
     ## promote -->  ~/.gitlab-runner/config.toml
+
+    gitlab-runner register -n \
+        --url "http://192.168.2.100/" \
+        --registration-token "yrXA-AuQF9x7A24AxLeM" \
+        --executor docker \
+        --description doc-2.0-gitlab-runner  \
+        --docker-image "docker:latest" \
+        --docker-privileged false\
+        --locked false \
+        --run-untagged true \
+        --tag-list public-runner,another-tag \
+        --docker-volumes '/usr/share/fonts:/usr/share/fonts' \
+        --docker-volumes '/home/promote/extdisk/pm_file/doc:/tmp/doc' \
+        --docker-volumes '/cache'
 
 
 .. code:: bash
