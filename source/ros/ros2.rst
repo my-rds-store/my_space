@@ -85,6 +85,11 @@ Docker Containers
     colcon build --symlink-install  --packages-select-by-dep  socketcan_bridge
     colcon build --symlink-install  --packages-select  socketcan_bridge
 
+----------
+
+* `CyberDog DDS本地及多播设置 <https://github.com/MiRoboticsLab/cyberdog_ros2/wiki/CyberDog-DDS本地及多播设置>`_
+
+----------
 
 * Node
 
