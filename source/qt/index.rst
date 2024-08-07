@@ -20,6 +20,29 @@ Book
 * `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
 * `Qt Download <http://download.qt.io/>`_
 
+Install
+---------
+
+从 https://mirrors.aliyun.com/qt/official_releases/online_installers/ 下载在线安装器。
+
+```
+
+1.
+    新版本的安装器（4.0.1-1 后）支持 --mirror 命令行参数。在命令行中执行安装器，添加 
+
+    --mirror https://mirrors.aliyun.com/qt 参数。
+
+    例如 Windows 下执行当前目录的安装器的命令为 
+
+    .\qt-unified-windows-x86-online.exe --mirror https://mirrors.aliyun.com/qt；
+
+2.  启动安装器后在设置中禁用默认源，添加新源 
+    https://mirrors.aliyun.com/qt/online/qtsdkrepository/linux_x64/root/qt/ 
+    （其他版本注意更改地址）。
+```
+
+
+
 Qt学习 开源项目
 ----------------------
 
@@ -41,52 +64,15 @@ Qt学习 开源项目
 QML   
 -------------
 
+* `Your First QtQuick/QML Application <https://doc.qt.io/qtforpython-6/tutorials/basictutorial/qml.html>`_
+
 *  待整理
+
     * `QtQuick之PyQt5与QML交互学习笔记 <https://blog.csdn.net/zym326975/article/details/86589091>`_
     * https://evileg.com/en/post/242/
     * https://www.linuxzen.com/pyqt-qml-kuai-su-kai-fa-guizong-jie.html
 
-qml online 
-````````````````
-
-* https://invent.kde.org/webapps/qmlonline
-* https://qmlonline.kde.org/
-
-
-.. code-block:: qml
-
-    /* test.qml */
-
-    import QtQuick 2.0
-
-    Rectangle {
-        id: test
-        width: 100; height: 30
-
-        Text {
-            anchors.fill:parent;
-            text: textData;
-        }
-    }
-
-
-
-.. code-block:: python
-
-    from PyQt5.QtQuick import  QQuickView
-    from PyQt5.QtWidgets import QApplication
-    from PyQt5.QtCore import QUrl
-
-    app = QApplication([])
-
-    view = QQuickView()
-    rootContext = view.rootContext()
-    rootContext.setContextProperty("textData", "Hello world")
-    view.setSource(QUrl("test.qml"))
-    view.show()
-    app.exec_()
-
-
+    * `Create applications with QtQuick <https://www.pythonguis.com/tutorials/pyqt6-qml-qtquick-python-application>`_
 
 --------
 
@@ -94,13 +80,10 @@ qml online
 
 * `图片下载网站  <https://www.flaticon.com/>`_
 
- www.flaticon.com/Jiangxumin/cjiangxumin@gmain.com/j6m
-
 
 --------
 
 PyQt4
-    `Nullege is a search engine for Python source code <http://nullege.com/>`_
 
 `Qt Style Sheets Examples <https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html>`_
 
