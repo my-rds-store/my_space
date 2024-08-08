@@ -2,7 +2,7 @@
 
 ## Qt6 QML Book
 
-* [Qt6 QML Book](https://www.qt.io/product/qt6/qml-book)_
+* [Qt6 QML Book](https://www.qt.io/product/qt6/qml-book)
 
 ## Qt6 QML   
 -------------
