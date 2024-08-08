@@ -4,25 +4,24 @@ Qt
 Install
 ----------
 
-从 https://mirrors.aliyun.com/qt/official_releases/online_installers/ 下载在线安装器。
+从 `https://mirrors.aliyun.com/qt/official_releases/online_installers/` 
+下载在线安装器。
 
+.. code::
 
-```
+    1.
+        新版本的安装器（4.0.1-1 后）支持 --mirror 命令行参数。在命令行中执行安装器，添加 
 
-1.
-    新版本的安装器（4.0.1-1 后）支持 --mirror 命令行参数。在命令行中执行安装器，添加 
+        --mirror https://mirrors.aliyun.com/qt 参数。
 
-    --mirror https://mirrors.aliyun.com/qt 参数。
+        例如 Windows 下执行当前目录的安装器的命令为 
 
-    例如 Windows 下执行当前目录的安装器的命令为 
+        .\qt-unified-windows-x86-online.exe --mirror https://mirrors.aliyun.com/qt；
 
-    .\qt-unified-windows-x86-online.exe --mirror https://mirrors.aliyun.com/qt；
+    2.  启动安装器后在设置中禁用默认源，添加新源 
+        https://mirrors.aliyun.com/qt/online/qtsdkrepository/linux_x64/root/qt/ 
+        （其他版本注意更改地址）。
 
-2.  启动安装器后在设置中禁用默认源，添加新源 
-    https://mirrors.aliyun.com/qt/online/qtsdkrepository/linux_x64/root/qt/ 
-    （其他版本注意更改地址）。
-
-```
 
 * https://mirrors.ustc.edu.cn/help/qtproject.html
 
