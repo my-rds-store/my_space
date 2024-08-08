@@ -41,8 +41,18 @@ extensions = ['sphinx.ext.autodoc',
      'sphinx.ext.viewcode',
      'sphinx.ext.githubpages',
      'sphinx.ext.graphviz',   ### graphviz画图插
-     #'m2r'
+     'recommonmark',           # sport markdown
+     'sphinx_markdown_tables', # sport markdown tables
+     'sphinx_math_dollar',     # sport math
+     'sphinx.ext.mathjax',     # sport math
+     'sphinxcontrib.inkscapeconverter' # svg convert to pdf
+    #  'm2r'
      ]
+
+source_parsers = {
+    '.md': 'recommonmark.parser.CommonMarkParser',
+}
+
 
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # if on_rtd:
