@@ -64,6 +64,7 @@ Qt学习 开源项目
 QML   
 -------------
 
+* `Qt6 QML Book <https://www.qt.io/product/qt6/qml-book>`_
 * `Your First QtQuick/QML Application <https://doc.qt.io/qtforpython-6/tutorials/basictutorial/qml.html>`_
 
 *  待整理
