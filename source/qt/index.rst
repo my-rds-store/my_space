@@ -129,9 +129,6 @@ QMultimedia
 
     $ sudo apt-get install smplayer
 
-QT环境搭建: QT-4.8 在windows下的使用
-    http://blog.csdn.net/qq_22122811/article/details/63684008
-
 跨平台编译   
 ---------------
 
@@ -142,7 +139,8 @@ QT环境搭建: QT-4.8 在windows下的使用
 打包    
 ---------------
 
-*  `QT程序打包成EXE <https://blog.csdn.net/weixin_39568531/article/details/79606105>`_
+* windeployqt
+
 
 知识点     
 -------------
