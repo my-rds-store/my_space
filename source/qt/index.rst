@@ -78,17 +78,6 @@ QML
 
 --------
 
-PyQt4
-
-`Qt Style Sheets Examples <https://doc.qt.io/archives/qt-4.8/stylesheet-examples.html>`_
-
-* `QListWidget 布局方向设定 <http://blog.csdn.net/yexiangcsdn/article/details/9932155>`_
-
-* `pyqtSignal  <http://pyqt.sourceforge.net/Docs/PyQt4/new_style_signals_slots.html>`_
-
-* `PyQt4 信号和槽用法总结 <http://blog.csdn.net/jxm_csdn/article/details/51628367>`_
-
-* `PyQt 之 QSettings <https://blog.csdn.net/jxm_csdn/article/details/106762208>`_ 
 
 PyQt 学习示例    
 ----------------------
