@@ -1,0 +1,9 @@
+cloud-sptheme
+sphinx-rtd-theme
+m2r
+graphviz
+sphinxcontrib-svg2pdfconverter==1.2.0
+
+recommonmark==0.7.1           # sport markdown
+sphinx-markdown-tables==0.0.17
+sphinx-math-dollar==1.2     # sport math
