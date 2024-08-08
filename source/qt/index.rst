@@ -3,7 +3,6 @@ Qt
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
 
    Qt5
    Qt6
