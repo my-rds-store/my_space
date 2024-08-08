@@ -1,6 +1,16 @@
 Qt
 ===========
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   qml
+
+
+
+
 Install
 ----------
 
@@ -35,30 +45,6 @@ Book
 * `Qt5 QMlBook <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
     * https://github.com/cwc1987/QmlBook-In-Chinese
 
-
-* `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
-* `Qt开源社区 <http://www.qter.org/>`_
-
-* `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
-
-
-
-Qt学习 开源项目
-----------------------
-
-* `Stacer <https://github.com/oguzhaninan/Stacer>`_
-
-    .. code-block:: sh
-
-        git clone --depth 1 https://hub.fastgit.org/oguzhaninan/Stacer.git
-
-
-* Qt自定义控件
-    * https://github.com/feiyangqingyun/qucsdk
-    * https://www.zhihu.com/column/c_1099710576145567744
-    * `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
-
-
 QML   
 -------------
 
@@ -77,6 +63,30 @@ QML
 * `阿里图标 <https://www.iconfont.cn/?spm=a313x.7781069.1998910419.d4d0a486a>`_
 
 * `图片下载网站  <https://www.flaticon.com/>`_
+
+
+
+--------------
+
+* Qt4
+    * `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
+    * `Qt开源社区 <http://www.qter.org/>`_
+
+
+Qt学习 开源项目
+----------------------
+
+* `Stacer <https://github.com/oguzhaninan/Stacer>`_
+
+    .. code-block:: sh
+
+        git clone --depth 1 https://hub.fastgit.org/oguzhaninan/Stacer.git
+
+* Qt自定义控件
+    * https://github.com/feiyangqingyun/qucsdk
+    * https://www.zhihu.com/column/c_1099710576145567744
+    * `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
+
 
 
 --------
