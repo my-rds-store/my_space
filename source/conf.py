@@ -209,35 +209,6 @@ texinfo_documents = [
 ]
 
 
-#  ##################################################################
-#  # -- Options for Epub output ----------------------------------------------
-#  ##################################################################
-#  
-#  # Bibliographic Dublin Core info.
-#  epub_title = project
-#  epub_author = author
-#  epub_publisher = author
-#  epub_copyright = copyright
-#  
-#  # The unique identifier of the text. This can be a ISBN number
-#  # or the project homepage.
-#  #
-#  # epub_identifier = ''
-#  
-#  # A unique identification for the text.
-#  #
-#  # epub_uid = ''
-#  
-#  # A list of files that should not be packed into the epub file.
-#  epub_exclude_files = ['search.html']
-#  
-#  
-#  
-#  # Example configuration for intersphinx: refer to the Python standard library.
-#  #intersphinx_mapping = {'https://docs.python.org/': None}
-#  intersphinx_mapping = {}
-
-
 ##################################################################
 
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
@@ -277,16 +248,16 @@ texinfo_documents = [
 #     }
 # 
 
-# #######################################################################
-# # -- Options for graphviz  seting -------------------------------------
-# #######################################################################
+#######################################################################
+# -- Options for graphviz  seting -------------------------------------
+#######################################################################
 
-# # 设置 graphviz_dot 路径
-# graphviz_dot = 'dot'
-# # 设置 graphviz_dot_args 的参数，这里默认了默认字体
-# graphviz_dot_args = ['-Gfontname=Georgia', 
-#                      '-Nfontname=Georgia',
-#                      '-Efontname=Georgia']
-# # 输出格式，默认png，这里我用svg矢量图
-# graphviz_output_format = 'svg'
+# 设置 graphviz_dot 路径
+graphviz_dot = 'dot'
+# 设置 graphviz_dot_args 的参数，这里默认了默认字体
+graphviz_dot_args = ['-Gfontname=Georgia', 
+                     '-Nfontname=Georgia',
+                     '-Efontname=Georgia']
+# 输出格式，默认png，这里我用svg矢量图
+graphviz_output_format = 'svg'
 
