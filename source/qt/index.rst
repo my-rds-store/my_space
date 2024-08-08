@@ -1,33 +1,13 @@
 Qt
 ===========
 
-* https://mirrors.ustc.edu.cn/help/qtproject.html#
-
-
-Book
-------
-
-* `Qt6 QML Book <https://www.qt.io/product/qt6/qml-book>`_
-* `QMlBook <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
-    * https://github.com/cwc1987/QmlBook-In-Chinese
-
-* `C++ GUI Qt 4编程(第二版) <http://linux.linuxidc.com/index.php?folder=MjAxMsTq18rBzy821MIvNMjVL0Ox4LPMo6i12rb+sOajqSjW0M7EuN/H5VBERsmow+iw5ilAy+bK6dS0wus=>`_ 
-
-
-* `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
-* `Qt开源社区 <http://www.qter.org/>`_
-    * `精品教程 <http://www.qter.org/portal.php?mod=list&catid=6>`_
-* `QTCN <http://www.qtcn.org/gpq4/>`_
-* `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
-* `Qt Download <http://download.qt.io/>`_
-
 Install
----------
+----------
 
 从 https://mirrors.aliyun.com/qt/official_releases/online_installers/ 下载在线安装器。
 
-```
 
+```
 1.
     新版本的安装器（4.0.1-1 后）支持 --mirror 命令行参数。在命令行中执行安装器，添加 
 
@@ -41,6 +21,22 @@ Install
     https://mirrors.aliyun.com/qt/online/qtsdkrepository/linux_x64/root/qt/ 
     （其他版本注意更改地址）。
 ```
+
+* https://mirrors.ustc.edu.cn/help/qtproject.html
+
+
+Book
+------
+
+* `Qt6 QML Book <https://www.qt.io/product/qt6/qml-book>`_
+* `Qt5 QMlBook <https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/>`_
+    * https://github.com/cwc1987/QmlBook-In-Chinese
+
+
+* `Qt学习之路 <https://www.devbean.net/2012/08/qt-study-road-2-catelog/>`_
+* `Qt开源社区 <http://www.qter.org/>`_
+
+* `Qt 参考文档 <http://www.kuqin.com/qtdocument/index.html>`_
 
 
 
@@ -57,9 +53,7 @@ Qt学习 开源项目
 * Qt自定义控件
     * https://github.com/feiyangqingyun/qucsdk
     * https://www.zhihu.com/column/c_1099710576145567744
-
-
-* `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
+    * `开源Demo <https://gitee.com/feiyangqingyun/QWidgetDemo>`_
 
 
 QML   
