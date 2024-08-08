@@ -46,13 +46,11 @@ extensions = ['sphinx.ext.autodoc',
      'sphinx_math_dollar',     # sport math
      'sphinx.ext.mathjax',     # sport math
      'sphinxcontrib.inkscapeconverter' # svg convert to pdf
-    #  'm2r'
      ]
 
-source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
-}
-
+# source_parsers = {
+#     '.md': 'recommonmark.parser.CommonMarkParser',
+# }
 
 # on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # if on_rtd:
