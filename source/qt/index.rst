@@ -54,20 +54,16 @@ Install
 * `linuxdeployqt <https://github.com/probonopd/linuxdeployqt/releases>`_
 * windeployqt.exe -- Qt自带的工具
 
-
 .. code:: bash
 
-    mkdir build
-    cd build
+    # Linux 
+
+    mkdir build;  cd build
     cmake ../
     make -j10
 
-
     APP_EXE=qt_client
     QML_DIR=${HOME}/extdisk/opt/Qt6/6.7.2/gcc_64/qml
-
-    #alias linuxdeployqt=${HOME}/Downloads/linuxdeployqt-continuous-x86_64.AppImage
-    #linuxdeployqt=${HOME}/Downloads/linuxdeployqt-continuous-x86_64.AppImage
 
     mkdir -p  AppRun
     cp $APP_EXE AppRun/
@@ -77,6 +73,8 @@ Install
     # linuxdeployqt $APP_EXE -appimage -qmldir=${QML_DIR}
 
 .. code:: 
+
+    # Windows 
 
     cd build\Desktop_Qt_5_15_2_MinGW_32_bit-Release
     windeployqt.exe release --qmldir=D:\Qt\5.15.2\mingw81_32\qml
