@@ -10,10 +10,9 @@ Qt
 Install
 ----------
 
-下载在线安装器
-
-* `online_installers <https://download.qt.io/official_releases/online_installers/>`_
-* `online_installers-aliyun <https://mirrors.aliyun.com/qt/official_releases/online_installers/>`_ 
+* 下载在线安装器
+    * `online_installers <https://download.qt.io/official_releases/online_installers/>`_
+    * `online_installers-aliyun <https://mirrors.aliyun.com/qt/official_releases/online_installers/>`_ 
 
 
 .. code::
