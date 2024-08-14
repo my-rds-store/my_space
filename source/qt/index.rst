@@ -68,6 +68,18 @@ Install
 * `图片下载网站  <https://www.flaticon.com/>`_
 
 
+屏幕取色工具   
+---------------
+
+* Ubuntu
+
+    .. code:: bash
+
+        sudo apt install gpick
+
+* Windows
+    * `Plastiliq Pixel Picker <https://plastiliq-pixel-picker.software.informer.com/download/>`_
+
 
 跨平台编译   
 ---------------
