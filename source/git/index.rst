@@ -364,6 +364,8 @@ Gitlab_
         -v /srv/gitlab/data:/var/opt/gitlab \
         gitlab/gitlab-ee:14.10.5-ee.0
 
+        #  gitlab/gitlab-ee:15.11.13-ee.0 ## OK , but vscode.dev not ok
+
 
     # external_url 'http://192.168.110.30:9980'
     # gitlab_rails['gitlab_ssh_host'] = '192.168.110.30'
