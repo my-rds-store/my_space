@@ -352,6 +352,35 @@ Gitlab_
         --volume /srv/gitlab/data:/var/opt/gitlab \
        gitlab/gitlab-ee:13.9.1-ee.0
 
+
+
+    ### 2024
+    docker run -d --name gitlab --restart always \
+        -p 9443:443 \
+        -p 9980:9980 \
+        -p 9922:22 \
+        -v /srv/gitlab/config:/etc/gitlab \
+        -v /srv/gitlab/logs:/var/log/gitlab \
+        -v /srv/gitlab/data:/var/opt/gitlab \
+        gitlab/gitlab-ee:14.10.5-ee.0
+
+
+    # external_url 'http://192.168.110.30:9980'
+    # gitlab_rails['gitlab_ssh_host'] = '192.168.110.30'
+    # gitlab_rails['gitlab_shell_ssh_port'] = 9922
+
+    #  vim /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
+    #
+    # docker exec -it gitlab vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
+
+    # docker exec -it gitlab gitlab-ctl reconfigure
+    # docker exec -it gitlab gitlab-ctl restart
+
+    # get root passwd
+    # docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+
+
+
 * `Gitlab Pages <https://docs.gitlab.com/ee/administration/pages/index.html>`_
 
 .. code-block:: ini
