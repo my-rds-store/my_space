@@ -408,8 +408,6 @@ Gitlab Prometheus
 Gitlab other
 -----------------
 
-
-
 * `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
 * `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
