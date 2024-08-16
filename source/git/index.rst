@@ -318,14 +318,6 @@ Gitlab_
 
 .. code-block:: sh
 
-     docker run --name='gitlab-ce' -d \
-	   -p 10022:22 -p 10080:80 \
-	   --restart always \
-	   --volume /data/gitlab/config:/etc/gitlab \
-	   --volume /data/gitlab/logs:/var/log/gitlab \
-	   --volume /data/gitlab/data:/var/opt/gitlab \
-	   gitlab/gitlab-ce
-
      sudo docker run --detach \
          --hostname gitlab.example.com \
          --env GITLAB_OMNIBUS_CONFIG="external_url 'http://192.168.8.100:10080'; gitlab_rails['lfs_enabled'] = true;" \
@@ -342,7 +334,7 @@ Gitlab_
      sudo sed -i 's/#Port\ 22/Port\ 1022/g' /etc/ssh/sshd_config
      sudo shutdown -r now
 
-     # 
+     ## 2020 
      sudo docker run --detach \
         --hostname "192.168.1.100" \
         --env GITLAB_OMNIBUS_CONFIG="gitlab_rails['lfs_enabled'] = true;" \
@@ -391,6 +383,13 @@ Gitlab_
     gitlab_pages['enable'] = true
 
 
+    ############################################ 
+    # DNS config
+    # C:\Windows\System32\drivers\etc/hosts
+    # /etc/hosts
+    ############################################ 
+
+    192.168.110.30 document.promote.pages.io
 
 * `Gitlab Pages <https://docs.gitlab.com/ee/administration/pages/index.html>`_
 
