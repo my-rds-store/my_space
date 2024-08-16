@@ -310,6 +310,8 @@ Gitlab_
 
 .. _Gitlab : https://gitlab.com
 
+* `Install GitLab by using Docker <https://docs.gitlab.com/ee/install/docker/index.html>`_
+
 
 搭建Gitlab 
 ================
@@ -380,6 +382,13 @@ Gitlab_
 
     # get root passwd
     # docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+
+
+    ################
+    # gitlab_pages
+    ################
+    pages_external_url "http://promote.pages.io:9980"
+    gitlab_pages['enable'] = true
 
 
 
