@@ -391,6 +391,10 @@ Gitlab_
 
     192.168.110.30 document.promote.pages.io
 
+
+    GitLab Pages examples
+        https://gitlab.com/pages
+
 * `Gitlab Pages <https://docs.gitlab.com/ee/administration/pages/index.html>`_
 
 .. code-block:: ini
