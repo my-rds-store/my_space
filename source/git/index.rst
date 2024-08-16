@@ -404,6 +404,17 @@ Gitlab_
     gitlab_pages['enable'] = true
 
 
+注册限制
+-----------------
+
+.. code:: 
+
+    1. “Admin Area”(管理员区域）。
+    2. 选择 “Settings”(设置) > “General”(常规）。
+    3. 在 “Sign-up Restrictions”(注册限制)
+    4. 新的注册需要管理员批准
+
+
 Gitlab Prometheus
 -----------------
 
