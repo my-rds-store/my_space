@@ -45,6 +45,10 @@ Install
     aqt install-qt -O "$QT_PATH"  linux       desktop "$QT_VERSION" -m qt3d qt5compat  qtcharts  ...
     aqt install-qt -O "$QT_PATH"  linux_arm64 desktop "$QT_VERSION" -m qt3d qt5compat  qtcharts  ...
 
+* https://gitee.com/qt_study/qt6-docker.git
+      * https://hub.docker.com/r/stateoftheartio/qt6
+      * https://github.com/state-of-the-art/qt6-docker
+
 
 .. code::
 
