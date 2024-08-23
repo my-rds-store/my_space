@@ -18,6 +18,7 @@ Install
 * aqtinstall
 
 .. code:: bash
+    pip install aqtinstall -i https://mirrors.aliyun.com/pypi/simple/
 
     aqt list-qt linux_arm64 android --arch  6.7.2
     aqt list-qt linux_arm64 desktop --arch  6.7.2
