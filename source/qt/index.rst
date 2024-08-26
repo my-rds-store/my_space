@@ -27,6 +27,11 @@ Install
     aqt list-qt mac desktop --arch  6.7.2
     aqt list-qt windows desktop --arch  6.7.2
 
+    aqt list-tool linux       desktop
+    aqt list-tool linux_arm64 desktop
+    aqt list-tool linux       desktop tools_cmake --long
+    aqt list-tool linux_arm64 desktop tools_cmake --long
+
 
     # 查询
     # https://aqtinstall.readthedocs.io/en/latest/getting_started.html#installing-qt
@@ -39,11 +44,15 @@ Install
 
     # 安装
     # https://aqtinstall.readthedocs.io/en/latest/cli.html#install-commands
-    aqt install-qt -O "$QT_PATH"  linux desktop "$QT_VERSION" linux_gcc_64  -m all
+    aqt install-qt -O "$QT_PATH"  linux        desktop "$QT_VERSION" linux_gcc_64  -m all
     aqt install-qt -O "$QT_PATH"  linux_arm64 desktop "$QT_VERSION" linux_gcc_arm64  -m all
 
     aqt install-qt -O "$QT_PATH"  linux       desktop "$QT_VERSION" -m qt3d qt5compat  qtcharts  ...
     aqt install-qt -O "$QT_PATH"  linux_arm64 desktop "$QT_VERSION" -m qt3d qt5compat  qtcharts  ...
+
+    aqt install-tool -O "$QT_PATH" linux        desktop tools_cmake
+    aqt install-tool -O "$QT_PATH" linux        desktop tools_qtcreator_gui
+    aqt install-tool -O "$QT_PATH" linux_arm64  desktop tools_cmake
 
 * https://gitee.com/qt_study/qt6-docker.git
       * https://hub.docker.com/r/stateoftheartio/qt6
