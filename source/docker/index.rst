@@ -91,6 +91,33 @@ Repositories
         "insecure-registries": ["192.168.2.100:8086"]
     }
     EOF
+
+    sudo tee /etc/docker/daemon.json <<-'EOF'
+    {
+        "registry-mirrors": [
+                "https://docker.mirrors.ustc.edu.cn",
+                "https://hub.uuuadc.top",
+                "https://docker.anyhub.us.kg",
+                "https://dockerhub.jobcher.com",
+                "https://dockerhub.icu",
+                "https://docker.ckyl.me",
+                "https://docker.awsl9527.cn"
+            ],
+
+            "graph": "/home/docker/docker_image",
+            "dns": ["114.114.114.114","8.8.8.8"],
+            "runtimes": {
+                "nvidia": {
+                    "path": "nvidia-container-runtime",
+                    "runtimeArgs": []
+                }
+            },
+            "experimental":true,
+            "insecure-registries": ["192.168.2.100:8086","192.168.110.30:8086",
+                            "192.168.110.30:9980",
+                            "jigang.site:8086"]
+    }
+    EOF
   
     # 重启
     sudo systemctl daemon-reload
