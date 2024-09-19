@@ -91,6 +91,17 @@ Docker Containers
 
 ----------
 
+* PCL 
+
+.. code:: bash
+
+  pcl_voxel_grid input.pcd output.pcd  -leaf 0.5,0.5,0.5
+
+  pcl_convert_pcd_ascii_binary <file_in.pcd> <file_out.pcd> 0/1/2 (ascii/binary/binary_compressed) [precision (ASCII)]
+
+  pcl_convert_pcd_ascii_binary Town01.pcd Town01_ascii.pcd 1  #  binary => ascii
+
+
 * Node
 
 .. code:: bash
