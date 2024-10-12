@@ -497,3 +497,32 @@ Clash
     docker exec tailscaled tailscale up                  # For Windows , macOS client
     docker exec tailscaled tailscale up --accept-routes  # For linux client
 
+
+
+************************
+proxychains
+************************
+
+.. code-block:: bash
+
+    # a. 安装 `proxychains`
+    #    在 Debian/Ubuntu 系统上，你可以使用以下命令安装：
+
+        sudo apt-get install proxychains
+
+    # b. 配置 `proxychains`
+    #    编辑 `/etc/proxychains.conf` 文件，添加你的 SOCKS5 代理：
+
+        sudo vim /etc/proxychains.conf
+
+    #  在文件的最后添加：
+    #    socks5 	127.0.0.1 7897
+
+
+    # c. 使用 `proxychains` 拉取 Docker 镜像
+    #    使用 `proxychains` 命令来执行 Docker 命令，例如：
+
+        proxychains apt-get update
+
+
+

@@ -34,3 +34,41 @@ WebRTC
 
 * 待验证
     * `Webrtc服务器搭建(基于局域网环境) <https://blog.csdn.net/gladsnow/article/details/77900333>`_
+
+
+
+`npm下载源 <https://www.cnblogs.com/echohye/p/18149863>`_
+====================================================================
+
+
+官方的源地址： https://registry.npmjs.org/
+
+由于服务器在海外，国内访问速度会慢很多。下面是我搜集的一些npm国内的镜像源
+
+============== ================================================= ======================
+源名称	        npm源地址	                                        推荐指数
+============== ================================================= ======================
+淘宝新镜像源	  https://registry.npmmirror.com	                   ★★★★
+腾讯云镜像源	  http://mirrors.cloud.tencent.com/npm/	             ★★★
+华为云镜像源	  https://mirrors.huaweicloud.com/repository/npm/	   ★★★
+cnpm镜像地址	  http://registry.cnpmjs.org	                       ★★
+============== ================================================= ======================
+
+
+    2、修改npm源
+
+.. code::
+
+    2.1、临时修改
+        如果只是在某一次使用源，可以临时修改，通过在install命令前加上--registry 源地址即可：
+
+    示例：使用淘宝npm源下载cnpm
+        npm --registry https://registry.npmmirror.com install cnpm
+    2.2、永久修改
+      永久配置，直接使用指令修改：
+
+      npm config set registry https://registry.npmmirror.com
+
+    修改之后生效如下，查询npm配置的源：
+
+      npm config get registry

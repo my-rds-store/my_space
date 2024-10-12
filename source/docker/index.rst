@@ -165,6 +165,19 @@ Nvidia Docker
 代理
 ******************
 
+* 目前国内可用Docker镜像源汇总
+    * https://www.coderjia.cn/archives/dba3f94c-a021-468a-8ac6-e840f85867ea
+
+.. code-block:: sh
+
+    docker pull dockerpull.com/node:latest
+
+* DockerHub国内镜像源/加速列表
+    * https://xuanyuan.me/blog/archives/1154
+
+
+--------
+
 * `HTTP/HTTPS proxy <https://docs.docker.com/config/daemon/systemd/#httphttps-proxy>`_
 
 
