@@ -63,7 +63,9 @@ Mac
 .. code:: sh
 
     defaults write -g ApplePressAndHoldEnabled -bool false                    #  全局禁用
-    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false  # 禁用某个应用 VSCode
+
+    # 禁用某个应用 VSCode
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled      -bool false  # 禁用 ApplePressAndHoldEnabled 针对 VSCode
     defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
-    defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
-    defaults write com.jetbrains.AppCode ApplePressAndHoldEnabled -bool false
+    defaults write com.jetbrains.intellij ApplePressAndHoldEnabled    -bool false
+    defaults write com.jetbrains.AppCode ApplePressAndHoldEnabled     -bool false
