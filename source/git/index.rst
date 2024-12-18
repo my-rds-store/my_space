@@ -427,6 +427,21 @@ Gitlab Prometheus
     prometheus['enable'] = false
 
 
+.. code-block:: sh
+
+    # 容器日志文件积累过多：容器运行时，会产生大量的日志文件，特别是当容器处于高负载或长时间运行时。
+    # 容器日志通常会存储在 /var/lib/docker/containers/{container_id}/ 目录下。你可以进入该目录查看哪些文件占用了大量空间，尤其是 *-json.log 文件
+
+    sudo du -h --max-depth=1 /var/lib/docker/containers
+     ...
+     302G    /var/lib/docker/containers/1460a86b4f73384ec563d71bc67b9fad2ba4790ca94c0c4a0674337f22945b06
+     ...
+     309G    /var/lib/docker/containers
+
+    sudo truncate -s 0  /var/lib/docker/containers/1460a86b4f73384ec563d71bc67b9fad2ba4790ca94c0c4a0674337f22945b06/1460a86b4f73384ec563d71bc67b9fad2ba4790ca94c0c4a0674337f22945b06-json.log
+
+
+
 
 Gitlab other
 -----------------
