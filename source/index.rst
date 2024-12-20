@@ -99,6 +99,12 @@ Hello World
 * `线性代数 <https://my-linear-algebra.readthedocs.io/zh/latest/>`_
 
 
+*************************************
+动态域名     
+*************************************
+
+* `noip动态域名 <https://www.noip.com/>`_
+
 *************
 open edx     
 *************
