@@ -142,7 +142,8 @@ NextCloud
     # 1.
     docker rm -f nextcloud
     sudo rm -rf ${HOME}/extdisk/nextcloud
-    docker run -d --restart=always --name nextcloud -p 8092:80  -v ${HOME}/extdisk/nextcloud:/var/www/html  nextcloud:26.0
+    docker run -d --restart=always --name nextcloud -p 8092:80  -v ${HOME}/extdisk/nextcloud:/var/www/html  nextcloud:30.0
+    #docker run -d --restart=always --name nextcloud -p 8092:80  -v ${HOME}/extdisk/nextcloud:/var/www/html  nextcloud:26.0
 
     # 2.
     # 刷新登陆页面, 会创建config.php文件
@@ -170,6 +171,8 @@ NextCloud
 
     # 6.
     # 安装 onlyoffice app, 并设置
+    #
+    #  https://www.jianshu.com/p/649763d38b85
 
 
 
