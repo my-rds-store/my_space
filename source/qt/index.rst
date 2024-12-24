@@ -165,6 +165,9 @@ NextCloud
     -e JWT_SECRET=my_jwt_secret \
     onlyoffice/documentserver:8.2  
 
+    ## https://helpcenter.onlyoffice.com/integration/gettingstarted-nextcloud.aspx#JWT_block
+    sudo docker exec onlyoffice /var/www/onlyoffice/documentserver/npm/json -f /etc/onlyoffice/documentserver/local.json 'services.CoAuthoring.secret.session.string'
+
     # 6.
     # 安装 onlyoffice app, 并设置
 
