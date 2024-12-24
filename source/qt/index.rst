@@ -137,6 +137,39 @@ Install
 NextCloud   
 -------------------
 
+.. code:: bash
+
+    # 1.
+    docker rm -f nextcloud
+    sudo rm -rf ${HOME}/extdisk/nextcloud
+    docker run -d --restart=always --name nextcloud -p 8092:80  -v ${HOME}/extdisk/nextcloud:/var/www/html  nextcloud:26.0
+
+    # 2.
+    # 刷新登陆页面, 会创建config.php文件
+    #   ${HOME}/extdisk/nextcloud/config/config.php 
+
+    # 3.
+    sudo vim ~/extdisk/nextcloud/config/config.php
+    # 添加一行,代理地址,下载app  
+    #  'proxy' => 'socks5://192.168.110.129:7897',
+
+    # 4.
+    # web 创建 管理员账号密码，
+
+
+    # 5.
+    ############################
+    ## Passwd  ： my_jwt_secret
+    ############################
+    sudo docker run -i -t -d -p 8090:80 -p 12433:433 --restart=always --name=onlyoffice\
+    -e JWT_SECRET=my_jwt_secret \
+    onlyoffice/documentserver:8.2  
+
+    # 6.
+    # 安装 onlyoffice app, 并设置
+
+
+
 * `Git Client <https://github.com/nextcloud/client>`_
 * `Build the Client <https://github.com/nextcloud/client_theming>`_
 
