@@ -173,7 +173,23 @@ NextCloud
     # 安装 onlyoffice app, 并设置
     #
     #  https://www.jianshu.com/p/649763d38b85
+    # 
+    
+    # 解押
+    cd  /extdisk/nextcloud/apps
+    tar xzvf ~/drawio-v3.0.3.tar.gz
 
+    # 进入 Nextcloud 的“应用”页面，找到“未启用”的应用列表，手动启用 Draw.io 应用。
+
+*  Nextcloud  Install App
+
+.. code:: bash
+
+    # Download  drawio fome  apps.nextcloud.com
+    # https://apps.nextcloud.com/apps/drawio
+
+    #  Version
+    # nextcloud 30 -----> Draw.io 3.0.3
 
 
 * `Git Client <https://github.com/nextcloud/client>`_
