@@ -2,3 +2,5 @@
 build/
 .vscode
 source/_build
+
+.codegpt
