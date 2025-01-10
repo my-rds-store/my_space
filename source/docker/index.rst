@@ -229,6 +229,10 @@ Nvidia Docker
 * `docker 资源限制   <https://docs.docker.com/config/containers/resource_constraints/#limit-a-containers-access-to-memory>`_
 
 
+
+* `Docker — 从入门到实践 <https://vuepress.mirror.docker-practice.com/>`_
+
+
 镜像
 ===================
 
@@ -250,7 +254,6 @@ Nvidia Docker
 
     docker image prune  # 清理none镜像
     docker rmi $(docker images | grep none | awk '{print $3}' | xargs)
-
 
     # 从docker hub 搜索镜像
     docker search centos  
@@ -305,7 +308,6 @@ Nvidia Docker
     docker exec  --help
     docker exec -it {CONTAINER_NAME} /bin/bash
 
-
 容器-root权限
 -----------------
 
@@ -340,6 +342,7 @@ Nvidia Docker
   # 在/var/lib/docker/containers/目录下
   # 找到对应的container id，然后进去，
   # 执行  echo "" > ${container id}.log 即可
+
 
 容器-ps
 ----------
