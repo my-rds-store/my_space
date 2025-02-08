@@ -65,21 +65,11 @@ OBS Studio
     # https://github.com/alfg/docker-nginx-rtmp
     $ sudo docker run -d -p 1935:1935 -p 8080:80 --rm alfg/nginx-rtmp
 
-**windows**
-
-    http://bbs.ngacn.cc/read.php?tid=10021940&rand=854
-    https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmfp-server-using-monaserver.153/
-
-
-http://www.hangge.com/blog/cache/detail_1325.html
-
 
 开源许可证
 -----------
 
-http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html
-
-http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html
+* http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html
 
 ceph
     * `英文文档 <http://docs.ceph.com/docs/master/rados/>`_
@@ -137,8 +127,6 @@ Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分�
     # 永久设置
     $ sudo echo "vm.swappiness=10" >> /etc/sysctl.conf
     $ sysctl -p  # 激活
-
-
 
 
 屏幕录像gif
@@ -266,23 +254,6 @@ rmp and yum
     yum provides *rdma.so
 
 
-Fedora 开启SSH服务
-   https://my.oschina.net/atttx123/blog/58100 
-
-* `Nextcloud+Collabora Office文档在线协作 <https://www.orgleaf.com/2280.html>`_
-
-vmware 问题
------------
-
-http://www.jianshu.com/p/df30c0c3889b
-
-https://communities.vmware.com/thread/552232
-
-`Download VMware-Player-12.5.2-4638234_Linux-4.9_patch.sh <https://communities.vmware.com/servlet/JiveServlet/download/2647089-168790/VMware-Player-12.5.2-4638234_Linux-4.9_patch.sh>`_
-
-* `最新版本 vmware workstation <https://www.vmware.com/cn/products/workstation/workstation-evaluation.html>`_
-	
-
 nginx
 ------
 
@@ -405,81 +376,17 @@ tty终端中显示和输入中文
     AddDefaultCharset UTF-8
     IndexOptions Charset=GBK
 
-
-.. raw:: html
-
-    <iframe width="400" height="225" frameborder="0" src="http://127.0.0.1:3080/media/adding-a-video-in-mediadrop/embed_player"></iframe>
-
 ------
 
-.. raw:: html
-
-    <iframe src="http://www.google.cn/maps/embed?pb=!1m14!1m12!1m3!1d11676.277536269174!2d117.22922223214272!3d36.730209801497175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1szh-CN!2scn!4v1501312245008" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-插入youku视频
-
-.. raw:: html
-
-    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="550" height="325"><param name="movie" value="http://v.ifeng.com/include/exterior.swf?guid=95a6f52b-89d1-4e61-8f17-faecb03b809b&pageurl=http://www.ifeng.com&fromweb=other&AutoPlay=false" /><param name="quality" value="high" /><param name="allowScriptAccess" value="always" /><embed src="http://v.ifeng.com/include/exterior.swf?guid=95a6f52b-89d1-4e61-8f17-faecb03b809b&pageurl=http://www.ifeng.com&fromweb=other&AutoPlay=false" quality="high"  allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="550" height="325"></embed></object>
-
-.. raw:: html
-
-    <embed src='http://player.youku.com/player.php/sid/XMjYyMjk4MDYwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
-
-.. raw:: html
-
-    <embed src='http://player.youku.com/player.php/sid/XMjc2ODQzNTcwMA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
-
-.. raw:: html
-
-    <iframe height=498 width=510 src='http://player.youku.com/embed/XMzcyNzAyODAw' frameborder=0 'allowfullscreen'></iframe>
-
-.. raw:: html
-
-    <iframe height=498 width=510 src="http://player.youku.com/embed/XMjgzODg5NzYwNA==?client_id=undefined" frameborder=0 allowfullscreen></iframe>
-
-------
-
-插入github 视频
+插入视频
 
 .. raw:: html
 
     <video width="638" height="478" controls>
-        <source src="http://github.liaoxuefeng.com/sinaweibopy/video/git-apt-install.mp4">
+        <source src="http://192.168.2.100:81/project-release-space-assets/4.0/videos/%E5%BB%BA%E5%9B%BE%E5%AE%9A%E4%BD%8D4.0%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D20241217.mp4">
     </video>
-
-
-------
-
-插入gitliab 视频
-
-.. raw:: html
-
-    <video width="638" height="478" controls>
-        <source src="http://58.56.27.130:800/jiang_xmin/videos/raw/master/test/LakePowell_Thunderstorms_nimiaRM_4471864_062_1080_HD_ZH-CN.mp4">
-    </video>
-
-
-    <video width="638" height="478" controls>
-        <source src="http://58.56.27.130:800/jiang_xmin/videos/raw/master/mcserver/creat_course.mp4">
-    </video>
-
-
 
 -------
-
-插入百度云盘
-
-.. raw:: html
-
-    <video width="638" height="478" controls>
-        <source src="https://d11.baidupcs.com/file/c3f114b8af0538d6115cb999c203bc5f?bkt=p3-0000704efb1fbe3f09ed4973db1154656483&xcode=818c9e935f798db6570eaae746598dd0bfa3efe48b5ae2b70b2977702d3e6764&fid=705205442-250528-55740032843716&time=1498015007&sign=FDTAXGERLBHS-DCb740ccc5511e5e8fedcff06b081203-2E7ZycCw1sxqN%2FzX%2BiT%2BOeA9IUQ%3D&to=d11&size=452161518&sta_dx=452161518&sta_cs=5604&sta_ft=mp4&sta_ct=7&sta_mt=5&fm2=MH,Yangquan,Netizen-anywhere,,shandong,ct&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=0000704efb1fbe3f09ed4973db1154656483&sl=83099727&expires=8h&rt=sh&r=376250870&mlogid=3976873212576580908&vuk=705205442&vbdid=2939017377&fin=%E5%93%88%E5%B0%94%E7%9A%84%E7%A7%BB%E5%8A%A8%E5%9F%8E%E5%A0%A1.mp4&fn=%E5%93%88%E5%B0%94%E7%9A%84%E7%A7%BB%E5%8A%A8%E5%9F%8E%E5%A0%A1.mp4&rtype=1&iv=0&dp-logid=3976873212576580908&dp-callid=0.1.1&hps=1&csl=299&csign=aH32eCyhXT%2FyKiSSRhPc3C7xP2o%3D&by=themis">
-    </video>
-
-    <video width="638" height="478" controls>
-        <source src="https://nbct01.baidupcs.com/file/9d2bdcb775c417ba82e5001aced243b7?bkt=p3-00003ba7ed0850b8b6036fd520787b5e1e39&fid=705205442-250528-230870834788841&time=1498016729&sign=FDTAXGERLBHS-DCb740ccc5511e5e8fedcff06b081203-vXKmCJCb3EMkQOHUYeMdUoNMb6o%3D&to=67&size=45713742&sta_dx=45713742&sta_cs=3&sta_ft=mp4&sta_ct=7&sta_mt=5&fm2=MH,Ningbo,Netizen-anywhere,,shandong,ct&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=00003ba7ed0850b8b6036fd520787b5e1e39&sl=79888463&expires=8h&rt=sh&r=318596121&mlogid=3977335580399524366&vuk=705205442&vbdid=2939017377&fin=%E7%AC%AC01%E7%AB%A001+%E5%AD%A6%E4%B9%A0%E8%AE%BE%E5%A4%87%E5%87%86%E5%A4%87%E5%8F%8A%E5%AD%A6%E4%B9%A0%E8%AE%BA%E5%9D%9B.mp4&fn=%E7%AC%AC01%E7%AB%A001+%E5%AD%A6%E4%B9%A0%E8%AE%BE%E5%A4%87%E5%87%86%E5%A4%87%E5%8F%8A%E5%AD%A6%E4%B9%A0%E8%AE%BA%E5%9D%9B.mp4&rtype=1&iv=0&dp-logid=3977335580399524366&dp-callid=0.1.1&hps=1&csl=284&csign=i3P%2FclMK%2FwgOYQR3g9DYv8cgku8%3D&by=themis">
-    </video>
-
 
 remote-viewer
     https://www.systutorials.com/docs/linux/man/1-remote-viewer/
@@ -511,25 +418,6 @@ bittorrent文件编辑工具
     * BEncode Editor
     * TrackerEditor
 
-************
-邮箱
-************
-
-* `网易邮箱 <https://help.aliyun.com/knowledge_detail/36576.html?spm=a2c4g.11186631.2.3.372744fdMddz7M>`_
-
-::
-
-        企业云邮箱各个服务器地址及端口信息如下：
-
-        收件服务器地址：
-
-                POP 服务器地址：pop3.mxhichina.com 端口110, SSL 加密端口995
-                或
-                IMAP 服务器地址：imap.mxhichina.com 端口143, SSL 加密端口993
-
-        发件服务器地址：
-                SMTP 服务器地址：smtp.mxhichina.com 端口25, SSL 加密端口465
-
 
 ************
 待研究
@@ -539,20 +427,17 @@ bittorrent文件编辑工具
     * https://letsencrypt.org/
 
 
-************
-DDRL
-************
+************************
+DDRL(企鵝龍)
+************************
 
 * `Partclone <https://partclone.org>`_
     * `鸟哥介绍DDRL <http://linux.vbird.org/linux_enterprise/0130drbl_clonezilla.php>`_
-    * `Partclone <http://ju.outofmemory.cn/entry/346636>`_
     * `Partclone - git hub <https://github.com/Thomas-Tsai/partclone>`_
 
-
 * https://github.com/stevenshiau/drbl
-* http://drbl.nchc.org.tw/one4all/desktop/drbl-cmd-list.php
 * http://drbl.nchc.org.tw/advanced/
-* http://drbl.nchc.org.tw/fine-print.php?path=advanced/./01_DRBL/01-drbl-archi.faq#01-drbl-archi.faq
+
 
 Udpcast
 ===========
