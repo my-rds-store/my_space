@@ -380,8 +380,15 @@ tty终端中显示和输入中文
 
 .. raw:: html
 
+    <video width="638" height="478" style=" background-color: #000;boder-with: 2px solid #000;" controls>
+        <source src="https://user-images.githubusercontent.com/3022416/225920856-745a3bb7-6b35-403d-87b0-6e5085952d70.mp4">
+    </video>
+
+
+.. raw:: html
+
     <video width="638" height="478" controls>
-        <source src="http://192.168.2.100:81/project-release-space-assets/4.0/videos/%E5%BB%BA%E5%9B%BE%E5%AE%9A%E4%BD%8D4.0%E8%BD%AF%E4%BB%B6%E4%BB%8B%E7%BB%8D20241217.mp4">
+        <source src="http://192.168.2.100:81/project-release-space-assets/4.0/videos/智能控制4.0软件介绍20241217.m4v">
     </video>
 
 -------
