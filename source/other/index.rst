@@ -75,8 +75,6 @@ ceph
     * `英文文档 <http://docs.ceph.com/docs/master/rados/>`_
     * `中文文档 <http://docs.ceph.org.cn/>`_
 
-`FreeNAS+廉价主机：搭建低成本家庭多媒体共享方案 <https://post.smzdm.com/p/27048/>`_
-
 
 other
 --------------
