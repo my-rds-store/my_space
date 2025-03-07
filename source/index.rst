@@ -285,16 +285,13 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    mac/index
    git/index
    python/index
-   java/index
    android/index
-   golang/index
    cpp/index
    rust/index
    qt/index
    opencv/index
    nginx/index
    download_tools/index
-   bittorrent/index
    lightweight_markup_language/index
    latex/index
    docker/index
@@ -303,7 +300,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    virtualbox/index
    database/index
    unix/index
-   unix/unix
    unix/shell/shell
    IDE/index
    windows/index
@@ -316,6 +312,5 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    x11/index
    install_cd_customization/index
    gfw_is_shit/index
-   tensorflow/index
    other/index
 
