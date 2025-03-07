@@ -298,7 +298,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    lightweight_markup_language/index
    latex/index
    docker/index
-   kubernetes/index
    rancher/index
    vagrant/index
    virtualbox/index
