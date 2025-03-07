@@ -497,7 +497,7 @@ Clash
     docker exec tailscaled tailscale up                  # For Windows , macOS client
     docker exec tailscaled tailscale up --accept-routes  # For linux client
 
-
+* ZeroTier 
 
 ************************
 proxychains
