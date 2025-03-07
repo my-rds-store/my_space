@@ -6,12 +6,10 @@
 
                           *一枝红杏出墙来!!!*
 
-.. image:: https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1821475898,231081266&fm=27&gp=0.jpg
+.. image:: https://5b0988e595225.cdn.sohucs.com/images/20190622/38523a44c6fd4562a3339783d99bc359.jpeg
     :alt: alternate text
     :align: center
 
-* `科学上网漫游指南 <https://lvii.gitbooks.io/outman/content/>`_
-* `科学上网漫游指南GitBook <https://www.gitbook.com/book/lvii/outman/details>`_
  
 ************
 VPS厂商
@@ -118,7 +116,6 @@ VPS厂商
 
 Server  
 --------
-
 
 .. code-block:: bash
     
@@ -424,19 +421,8 @@ Shadowsocks是我们常用的代理工具,它使用socks5协议,而终端很多�
 参考
 ============
 
+* polipo
 
-
-* `Mac+shadowsocks+polipo快捷实现终端科学上网 <https://segmentfault.com/a/1190000008449046>`_
-
-* `Shadowsocks + Polipo 配置全局代理(Linux 版本) <https://blog.csdn.net/jon_me/article/details/53525059/>`_
-* `shadowsocks和polipo配置全局代理 <https://blog.denghaihui.com/2017/10/10/shadowsocks-polipo/>`_
-
-*  `ubuntu Polipo 快速使用 <http://wiki.ubuntu.org.cn/UbuntuHelp:Polipo/zh>`_
-
-
-=================
-
-* https://github.com/gfw-breaker/nogfw
 
 
 Clash
@@ -445,7 +431,6 @@ Clash
 * https://maomeng.xyz/
     * `Clash Verge <https://github.com/clash-verge-rev/clash-verge-rev>`_
     * `Mihomo Party <https://github.com/pompurin404/mihomo-party>`_
-
 
 
 ************************
