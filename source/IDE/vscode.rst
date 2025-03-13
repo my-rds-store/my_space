@@ -1,3 +1,11 @@
+Cursor
+=============
+
+.. code-block:: bash
+
+   ~/Library/Application\ Support/Cursor    # Cursor AI 聊天历史
+
+
 Vscode
 =============
 
