@@ -2,6 +2,28 @@
 Git
 ###########
 
+************
+Git 常用命令 
+************
+
+.. code-block:: sh
+
+    git config --global core.editor vim  # 配置默认编辑器 vim
+
+    # 强制覆盖远程标签（高风险操作）
+    git tag -f v2.0.0-Alpha1          # 先更新本地标签到最新提交
+    git push -f origin v2.0.0-Alpha1  # 强制推送到远程
+
+
+    # submodule
+    git clone <repository> --recursive      # 递归的方式克隆整个项目
+    git submodule update --init --recursive     # 更新子模块
+    git submodule update --recursive --remote   # 更新子模块
+ 
+    git submodule foreach git pull origin master # 拉取所有子模块
+
+
+
 * `Git Community Book 中文版 <http://gitbook.liuhui998.com/index.html>`_
 * `Git 教程 <https://git-scm.com/book/zh/v2>`_
 * `Pro Git(中文版)  <http://git.oschina.net/progit/>`_
@@ -26,17 +48,6 @@ Git
     :alt: alternate text
     :align: center
 
-****************
-Git 安装与配置 
-****************
-
-* `Git flow completion <https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion>`_
-
-
-
-************
-Git 常用命令 
-************
 
 git config 
 ============
@@ -64,7 +75,6 @@ git config
      
     #取消代理
     git config --global --unset http.https://github.com.proxy
-
 
     # 记住密码
     $ git config credential.helper store # 永久记住密码
@@ -96,7 +106,6 @@ Create New branch
     $ git checkout -b  <new_branch_name> <commit_id>  
     $ git branch -a   # 查看分支（本地 + 远程)  
     $ git push origin --delete <new_branch_name>   # 删除远程分支
-
 
 Gitignore   
 ============
