@@ -73,8 +73,8 @@ CIFS (Ubuntu 14.04)
     mkdir /mnt/work
 
     # 3. 挂载
-    sudo mount.cifs  //192.168.2.104/home/ /mnt -o username=jiangxumin,password="Promote==1",uid=1000,gid=1000,vers=3.0
-    sudo mount -t cifs //192.168.2.104/home/ /mnt -o username=jiangxumin,password="Promote==1",uid=1000,gid=1000,vers=3.0
+    sudo mount.cifs  //192.168.2.104/home/ /mnt -o username=jiangxumin,password="123456",uid=1000,gid=1000,vers=3.0
+    sudo mount -t cifs //192.168.2.104/home/ /mnt -o username=jiangxumin,password="123456",uid=1000,gid=1000,vers=3.0
 
 
 **更改文件夹权限。给mount共享文件夹所在组的写权限:**
