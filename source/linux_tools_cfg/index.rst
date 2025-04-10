@@ -67,24 +67,24 @@ CIFS (Ubuntu 14.04)
 .. code-block:: sh
 
     # 1. 安装 cifs-utils
-    $ sudo apt-get install  cifs-utils
+    sudo apt-get install  cifs-utils
 
     # 2. 在linux系统/mnt目录下创建一个文件夹
-    $ mkdir /mnt/work
+    mkdir /mnt/work
 
     # 3. 挂载
-    $ sudo mount -t cifs -o username=jxm,password=123456 //192.168.2.102/cifs_shared /mnt
-    $ sudo mount.cifs -o username="jxm",password="123456",uid=jxm,gid=jxm  //192.168.2.102/cifs_shared /mnt
+    sudo mount.cifs  //192.168.2.104/home/ /mnt -o username=jiangxumin,password="Promote==1",uid=1000,gid=1000,vers=3.0
+    sudo mount -t cifs //192.168.2.104/home/ /mnt -o username=jiangxumin,password="Promote==1",uid=1000,gid=1000,vers=3.0
 
 
 **更改文件夹权限。给mount共享文件夹所在组的写权限:**
 
     .. code-block:: sh
 
-        $ sudo mount.cifs -o username="jxm",password="123456",uid=jxm,gid=jxm,dir_mode=0777 //192.168.2.102/cifs_shared /mnt/
-        $ sudo mount.cifs //192.168.2.102/cifs_shared /mnt -o file_mode=0777,dir_mode=0777,rw,username=jxm,password=123456,iocharset=utf8
-        $ sudo mount.cifs //192.168.2.102/cifs_shared /mnt -o file_mode=0777,dir_mode=0777,rw,username=jxm,password=123456,iocharset=cp93
-        $ sudo mount.cifs //192.168.100.252/Public /mnt
+        sudo mount.cifs -o username="jxm",password="123456",uid=1000,gid=1000,dir_mode=0777 //192.168.2.102/cifs_shared /mnt/
+        sudo mount.cifs //192.168.2.102/cifs_shared /mnt -o file_mode=0777,dir_mode=0777,rw,username=jxm,password=123456,iocharset=utf8
+        sudo mount.cifs //192.168.2.102/cifs_shared /mnt -o file_mode=0777,dir_mode=0777,rw,username=jxm,password=123456,iocharset=cp93
+        sudo mount.cifs //192.168.100.252/Public /mnt
 
 
 .. image:: ./images/mount_cifs.png
