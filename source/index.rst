@@ -273,6 +273,7 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    :maxdepth: 2
    :caption: Contents:
     
+   ai/index
    ros/index
    ros/ros2
    autoware/index
