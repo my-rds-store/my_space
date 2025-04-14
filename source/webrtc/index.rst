@@ -77,3 +77,19 @@ cnpm镜像地址	  http://registry.cnpmjs.org	                       ★★
     修改之后生效如下，查询npm配置的源：
 
       npm config get registry
+
+
+.. code:: 
+
+    npm create tauri-app@latest
+    npm create tauri-app@2.4.0
+
+    wget https://github.com/AppImage/AppImageKit/releases/download/continuous/AppRun-x86_64
+    chmod a+x AppRun-x86_64
+    mv AppRun-x86_64 src-tauri/
+
+    npm install
+    npm run dev
+    npm run tauri dev
+    npm run tauri build
+
