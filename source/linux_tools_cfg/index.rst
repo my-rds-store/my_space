@@ -240,25 +240,13 @@ x11vnc
 
 参考: http://www.cnblogs.com/liangml/p/5969404.html
 
-  
-
-Barrier 一套键鼠同时控制多台电脑
----------------------------------------------
-
-* `[ 下载地址 ] <https://github.com/debauchee/barrier/releases>`_
-* `[ 下载地址2 ] <https://sourceforge.net/projects/barrier.mirror/files/>`_
-
-.. code-block:: sh 
-
-        sudo apt-get install barrier
-
-        sudo snap install barrier
 
 
 input-leap 一套键鼠同时控制多台电脑(Next Barrier)
 ------------------------------------------------------------------------------
 
 * https://github.com/input-leap/input-leap
+
 
 
 -----
