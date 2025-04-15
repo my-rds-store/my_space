@@ -315,3 +315,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    gfw_is_shit/index
    other/index
 
+.. sudo su 
+.. sdcuni_clienth   //卸载
+.. passwd: 201506
