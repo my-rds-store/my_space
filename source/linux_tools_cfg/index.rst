@@ -247,6 +247,11 @@ input-leap 一套键鼠同时控制多台电脑(Next Barrier)
 
 * https://github.com/input-leap/input-leap
 
+.. code:: bash
+
+    sudo  apt-get install qt6-wayland
+    sudo  apt-get install qt6-qpa-plugins
+
 
 
 -----
