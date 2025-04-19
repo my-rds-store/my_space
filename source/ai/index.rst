@@ -3,6 +3,12 @@ AI
 ##############
 
 **************
+cursor      
+**************
+
+* `cursor models <https://docs.cursor.com/settings/models#available-models>`_
+
+**************
 MCP      
 **************
 

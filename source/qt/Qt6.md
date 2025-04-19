@@ -1,8 +1,13 @@
 # Qt6
 
+
+* [Qt Doc](https://doc.qt.io/qt-6/index.html)
+* [Qt For Python](https://doc.qt.io/qtforpython-6.8/index.html)
+
 ## Qt6 QML Book
 
 * [Qt6 QML Book](https://www.qt.io/product/qt6/qml-book)
+
 
 ## Qt6 QML   
 
