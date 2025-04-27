@@ -315,6 +315,16 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    gfw_is_shit/index
    other/index
 
+.. 卸载
 .. sudo su 
 .. sdcuni_clienth   //卸载
 .. passwd: 201506
+
+.. sudo ./SetupclientH5.1.355.20250401103405_Ubuntu-22.04-LTS_64 
+.. sudo ./SetupclientH5.1.355.20250401103405_Ubuntu-22.04-LTS_64 --reinstall
+.. 192.168.2.200
+
+
+.. sdcpolicy -u
+.. sdclog | grep deny
+
