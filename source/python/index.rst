@@ -2,6 +2,14 @@
 Python 
 ###########
 
+* deadsnakes 
+```
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install python3.7  python3.7-venv
+```
+
+
 * `Numpy 中文 <https://www.numpy.org.cn/about/>`_
 
 -----------------
