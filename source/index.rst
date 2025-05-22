@@ -274,6 +274,7 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    :caption: Contents:
     
    ai/index
+   vue/index
    ros/index
    ros/ros2
    autoware/index

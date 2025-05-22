@@ -8,6 +8,13 @@ cursor
 
 * `cursor models <https://docs.cursor.com/settings/models#available-models>`_
 
+.. code-block:: sh
+
+   repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git
+   repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/mcu/traffic_light_test_ui.git --style markdown,
+   repomix  .
+
+
 **************
 MCP      
 **************

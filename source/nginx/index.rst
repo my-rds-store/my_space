@@ -2,6 +2,51 @@
 Nginx
 #########################
 
+
+* `Nginx <https://nginx.org/en/docs/>`_
+
+
+* nginx 反向代理 
+
+.. code-block:: sh
+
+    events {
+        worker_connections 1024;  # Defines the maximum number of simultaneous connections
+    }
+
+    http {
+        server {
+            listen 8090;         # 监听 8090 端口
+            server_name localhost;
+
+            location / {
+                proxy_pass http://192.168.2.100:5090;  # 转发到目标地址
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            }
+
+            # 添加WebSocket代理配置
+            location /ws/ {
+                proxy_pass http://192.168.2.100:9090/;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_set_header Host $host;
+                proxy_read_timeout 86400;
+            }
+
+        }
+    }
+
+.. code-block:: sh
+
+    docker run -d --restart=always --net=host --name=web-lanelet2-planner \
+        -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf \
+        nginx:alpine
+
+
+
 * `Nginx开发从入门到精通 <http://tengine.taobao.org/book/index.html>`_
 
 ------
