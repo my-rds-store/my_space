@@ -10,7 +10,7 @@ cursor
 
 .. code-block:: sh
 
-    npm install -g repomix  --registry https://registry.npmmirror.com
+   npm install -g repomix  --registry https://registry.npmmirror.com
 
    repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git
    repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/mcu/traffic_light_test_ui.git --style markdown,
