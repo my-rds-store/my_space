@@ -12,6 +12,7 @@ how to use Vue3
 
      npm create vite@latest .
 
+     npm install --registry https://registry.npmmirror.com
 
 
 
