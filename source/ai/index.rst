@@ -18,6 +18,29 @@ cursor
    repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/mcu/traffic_light_test_ui.git --style markdown,
    repomix  .
 
+*  
+
+.. code-block:: sh
+
+    连接的主机ip地址变了 192.168.110.120 ->192.168.110.127，
+    更改连接地址后， Could not establish connection to 192.168.110.127
+
+    MobaXterm 可以成功连接到 192.168.110.127，但 Cursor 的 Remote-SSH 无法连接;
+
+    ssh-keygen -R 192.168.110.127
+
+
+    根本原因：
+        目标主机 IP 从 192.168.110.120 变为 192.168.110.127，但 known_hosts 文件中保留了旧 IP 的主机密钥记录，
+        导致 Cursor 的 SSH 客户端因密钥不匹配而拒绝连接。
+
+    解决机制：
+        ssh-keygen -R 192.168.110.127 删除了 known_hosts 中与 192.168.110.127 相关的记录，
+        允许 Cursor 在下次连接时重新接受主机密钥。
+
+    MobaXterm 的不同表现：
+        MobaXterm 可能自动更新或忽略密钥不匹配，而 Cursor 的严格检查导致需要手动清理。
+
 
 **************
 MCP      
