@@ -45,6 +45,10 @@ Install
     # 安装
     # https://aqtinstall.readthedocs.io/en/latest/cli.html#install-commands
     aqt install-qt -O "$QT_PATH"  linux        desktop "$QT_VERSION" linux_gcc_64  -m all
+
+    aqt install-qt --base https://mirrors.aliyun.com/qt \
+        -O "$QT_PATH"  linux        desktop "$QT_VERSION" linux_gcc_64  -m all
+
     aqt install-qt -O "$QT_PATH"  linux_arm64 desktop "$QT_VERSION" linux_gcc_arm64  -m all
 
     aqt install-qt -O "$QT_PATH"  linux       desktop "$QT_VERSION" -m qt3d qt5compat  qtcharts  ...
