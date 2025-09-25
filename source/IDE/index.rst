@@ -6,4 +6,3 @@ IED
    :caption: Contents:
 
    vscode.rst
-   pycharm/remote_debug.rst

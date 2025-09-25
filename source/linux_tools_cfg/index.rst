@@ -171,6 +171,17 @@ Ftp遇到的问题
     $ sudo curlftpfs -o codepage=gbk  ftp://username:password@192.168.8.25   /mnt  
     $ sudo curlftpfs -o codepage=utf-8 ftp://username:password@192.168.8.25/public /mnt
 
+录屏软件 - ubuntu22.04
+-----------------------
+
+.. code-block:: sh
+
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+    flatpak install flathub io.github.seadve.Kooha
+
+    flatpak run io.github.seadve.Kooha
+
 
 x11vnc
 ---------------------------

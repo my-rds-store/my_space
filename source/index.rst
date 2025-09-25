@@ -282,7 +282,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    webrtc/index
    unity/index
    qemu_libvirt/qemu
-   openstack/index
    vim/vim
    mac/index
    git/index
@@ -293,7 +292,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    qt/index
    opencv/index
    nginx/index
-   download_tools/index
    lightweight_markup_language/index
    latex/index
    docker/index
