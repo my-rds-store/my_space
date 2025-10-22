@@ -243,7 +243,7 @@ deeplearningbook
 在线文档    
 ===============
 
-* `LaTeX教程 <https://www.latexstudio.net/LearnLaTeX/>`
+* `LaTeX教程 <https://www.latexstudio.net/LearnLaTeX/>`_
 * `LaTeX文档-CTEX <http://www.ctex.org/OnlineDocuments>`_
 
 Learning and  Book   
