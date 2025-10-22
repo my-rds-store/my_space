@@ -72,8 +72,8 @@ Quick start (ubuntu)
         * Ctrl + t : 注释
         * Ctrl + u : 去除注释
 
+* `overleaf <https://www.overleaf.com/project>`_
 
-* `ShareLaTex - 在线 LaTex 协同编辑 <https://www.sharelatex.com>`_
 
 ------------------------
 
@@ -248,7 +248,8 @@ deeplearningbook
 Learning and  Book   
 =====================
 
-* `Mac LaTex 实战 <https://toutiao.io/posts/diwaz3/preview>`_
+* `一份（不太）简短的 LaTeX2ε 介绍 <https://github.com/CTeX-org/lshort-zh-cn/releases>`_
+
 
 * `texblog  <https://texblog.org/>`_
     * `Automated sub-figure generation using a loop in LaTeX  <https://texblog.org/2015/10/09/automated-sub-figure-generation-using-a-loop-in-latex/>`_
