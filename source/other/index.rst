@@ -388,7 +388,7 @@ tty终端中显示和输入中文
 .. raw:: html
 
     <video width="638" height="478" controls>
-        <source src="http://192.168.2.100:81/project-release-space-assets/4.0/videos/智能控制4.0软件介绍20241217.m4v">
+        <source src="http://192.168.2.100:81/project-release-space-assets/4.0/videos/综合路测4.0软件介绍20241217-2_watermarked.mp4">
     </video>
 
 -------
