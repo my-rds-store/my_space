@@ -74,6 +74,18 @@ Quick start (ubuntu)
 
 * `overleaf <https://www.overleaf.com/project>`_
 
+* Latex workshop 插件配置
+    *  Latex-workshop.view.outline.Sync.viewer
+    *  Latex-workshop. `show Contex Menu`
+
+    .. code-block:: json
+
+        { 
+            "latex-workshop.view.outline.sync.viewer": true,
+            "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+            "latex-workshop.showContextMenu": true
+        }
+
 
 ------------------------
 
