@@ -582,6 +582,38 @@ buildx
 
     docker buildx build --platform=linux/amd64,linux/arm64 -t 192.168.2.100:8086/v2x/test:v1 . --push
 
+************************************************************
+跨平台编译arm64 (x86 platform cross-compilation)
+************************************************************
+
+.. code-block:: bash 
+
+    sudo apt-get install qemu binfmt-support qemu-user-static              # 安装qemu包
+    docker run --rm --privileged multiarch/qemu-user-static --reset -p yes # 这一步将执行注册脚本（docker+qemu功能）
+
+    # docker run --rm -it --platform linux/arm64/v8 -w $(pwd) -v $(pwd):$(pwd) arm64v8/ubuntu:22.04 uname -m
+    # docker run --rm -it --platform linux/arm64/v8 -w $(pwd) -v $(pwd):$(pwd) arm64v8/ubuntu:20.04 bash ./build.sh
+    # docker run --rm -it --platform linux/arm64/v8 -w $(pwd) -v $(pwd):$(pwd) arm64v8/ubuntu:22.04 bash ./build.sh
+
+    ## for ubuntu_20.04
+    docker run --rm -it  \
+        --platform linux/arm64/v8 \
+        -w $(pwd) \
+        -v $(pwd):$(pwd)  \
+        --name=build_ubuntu_20.04 \
+        "192.168.2.100:8086/pmpilot-4.0/pm-pilot-stage1-gui-builder:ubuntu-20.04-latest-arm64" \
+        bash ./build.sh
+
+    ## for ubuntu_22.04
+    docker run --rm -it \
+        --platform linux/arm64/v8 \
+        -w $(pwd) \
+        -v $(pwd):$(pwd)  \
+        --name=build_ubuntu_22.04 \
+        "192.168.2.100:8086/pmpilot-4.0/pm-pilot-stage1-gui-builder:ubuntu-22.04-latest-arm64" \
+        bash ./build.sh
+
+
 
 ******************************
 jetson Nano 运行 ros rviz
