@@ -177,7 +177,20 @@ LaTeX/Source Code Listings
 .. code-block:: sh
 
     # 思源字体 ubuntu
-    $ sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+    sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
+
+
+.. code-block:: sh
+
+    # 微米黑（文泉驿-微米黑）：
+    sudo apt-get install ttf-wqy-microhei 
+
+    # 正黑（文泉驿-正黑）：
+    sudo apt-get install ttf-wqy-zenhei 
+
+    # 点阵宋体（文泉驿-点阵宋体）与仿宋最接近
+    sudo apt-get install xfonts-wqy 
+
 
 ----------------
 
