@@ -28,46 +28,6 @@ Repositories
 安装与配置
 ************
 
-安装与启动 
-============
-
-* `Instal Docker <https://docs.docker.com/engine/installation/>`_
-
-.. code-block:: sh
-
-    ##################################### 
-    # 官方安装，速度慢
-    ##################################### 
-    curl -sSL https://get.docker.com/ | sh
-
-    ##################################### 
-    # 基于国内源,速度快
-    ##################################### 
-
-    # fedora/centos 
-    curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_centos7.sh | bash
-
-    # debian/ubuntu 
-    curl -sSL https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
-    wget -qO - https://gitee.com/my_shell/linux_install_shell/raw/master/docker/docker_ubuntu14.04.sh | bash
-
-    # centos 6 安装老版本,docker
-    sudo yum install -y docker.io
-
-
-.. code-block:: sh
-    
-     #  启动docker server
-
-     # ubuntu
-     sudo service docker start
-
-     # centos
-     sudo systemctl enable docker 
-     sudo systemctl start  docker
-
-* `部署并使用Docker（Alibaba Cloud Linux 2） <https://help.aliyun.com/document_detail/51853.html>`_
-
 配置 
 ========
 
@@ -167,7 +127,8 @@ Nvidia Docker
 ******************
 
 * 目前国内可用Docker镜像源汇总
-    * https://www.coderjia.cn/archives/dba3f94c-a021-468a-8ac6-e840f85867ea
+    * https://github.com/dongyubin/DockerHub
+    * https://www.wangdu.site/course/2109.html
 
 .. code-block:: sh
 
