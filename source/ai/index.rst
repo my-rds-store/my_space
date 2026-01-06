@@ -53,6 +53,9 @@ MCP
     * `Figma-Context-MCP <https://github.com/GLips/Figma-Context-MCP>`_
     * `cursor-talk-to-figma-mcp <https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp>`_
 
+* playwright-mcp
+    * https://github.com/microsoft/playwright-mcp
+
 * Office
     * `Office-Word-MCP-Server <https://github.com/GongRzhe/Office-Word-MCP-Server>`_
     * `excel-mcp-server <https://github.com/negokaz/excel-mcp-server>`_
