@@ -55,6 +55,7 @@ MCP
 
 * playwright-mcp
     * https://github.com/microsoft/playwright-mcp
+      * 使用 Playwright MCP 打开 http://localhost:3000，运行页面交互，并读取所有 console 消息。如果有错误，分析并修复代码。
 
 * Office
     * `Office-Word-MCP-Server <https://github.com/GongRzhe/Office-Word-MCP-Server>`_
