@@ -69,3 +69,10 @@ Claude
 **************
 
 * `Claude Desktop for Debian <https://github.com/aaddrick/claude-desktop-debian>`_
+
+
+* Agent skills
+  * `UI UX Pro Max <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill>`_
+  * `frontend-design <https://claudekit.github.io/frontend-design-pro-demo/>`_
+
+
