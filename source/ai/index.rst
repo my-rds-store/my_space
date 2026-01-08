@@ -132,3 +132,9 @@ VibeCoding
 ***********
 
 * `Auto-Claude <https://github.com/AndyMik90/Auto-Claude>`_
+
+***********
+Tools
+***********
+
+* `cc-switch <https://github.com/farion1231/cc-switch.git>`_
