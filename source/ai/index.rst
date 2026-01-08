@@ -126,3 +126,9 @@ Claude
 
         * `shadcn-ui <https://ui.shadcn.com/>`_
         * `shadcn-vue <https://www.shadcn-vue.com/>`
+
+***********
+VibeCoding
+***********
+
+* `Auto-Claude <https://github.com/AndyMik90/Auto-Claude>`_
