@@ -71,8 +71,58 @@ Claude
 * `Claude Desktop for Debian <https://github.com/aaddrick/claude-desktop-debian>`_
 
 
-* Agent skills
-  * `UI UX Pro Max <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill>`_
-  * `frontend-design <https://claudekit.github.io/frontend-design-pro-demo/>`_
+* **Agent skills**
+
+    * `UI UX Pro Max <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill>`_
+    * `frontend-design <https://claudekit.github.io/frontend-design-pro-demo>`_
+
+* **subagents**
+
+    * awesome-claude-code-subagents
+
+        * https://github.com/VoltAgent/awesome-claude-code-subagents
+
+        * Claude Code Subagents & Commands Collection
+
+            * https://github.com/davepoon/buildwithclaude
+            * https://www.buildwithclaude.com/browse
 
 
+* Claude code +subagent + Git Worktree
+
+    * https://www.bilibili.com/video/BV1MdqfB6EDn?spm_id_from=333.788.videopod.sections&vd_source=6c16ccca40aa689dd4c3950c899f53d1
+
+* **voltagent**
+
+    * https://voltagent.dev/ 
+    * https://github.com/voltagent/voltagent/
+
+* https://github.com/oraios/serena
+* https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor
+
+* **UI设计**
+
+    * `superdesign <https://app.superdesign.dev/>`_
+    * `firecrawl <https://www.firecrawl.dev/>`_
+
+        * `firecrawl-mcp-server <https://github.com/firecrawl/firecrawl-mcp-server>`_
+
+    * `Animatopy <https://sarthology.github.io/Animatopy>`_
+    * `coolors <https://coolors.co>`_
+
+    * `drawbridge <https://github.com/breschio/drawbridge>`_
+
+        Drawbridge 是一个开源的 Chrome 扩展程序和 Cursor 规则集，
+        主要用于在浏览器中对网页进行视觉标注（类似 Figma 的评论功能），
+        并将这些标注直接作为提示发送给 Claude Code 和 Cursor 等 AI 编码工具，
+        帮助 AI 自动实现设计修改，极大提升前端开发效率。
+
+    * puppeteer-mcp
+
+    * `tweakcn <https://tweakcn.com/>`_
+
+
+    * `shadcn-mcp`
+
+        * `shadcn-ui <https://ui.shadcn.com/>`_
+        * `shadcn-vue <https://www.shadcn-vue.com/>`
