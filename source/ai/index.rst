@@ -71,6 +71,11 @@ Claude
 * `Claude Desktop for Debian <https://github.com/aaddrick/claude-desktop-debian>`_
 
 
+* **Plugins**
+
+    * `claude-mem <https://claude-mem.ai>`_
+
+
 * **Agent skills**
 
     * `UI UX Pro Max <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill>`_
@@ -127,9 +132,16 @@ Claude
         * `shadcn-ui <https://ui.shadcn.com/>`_
         * `shadcn-vue <https://www.shadcn-vue.com/>`
 
+        * `context7 <https://context7.com/>`_
+
+
 ***********
 VibeCoding
 ***********
+
+* `vibe-kanban <https://www.vibekanban.com>`_
+
+    * vibe-guide <https://www.vibekanban.com/vibe-guide>`_
 
 * `Auto-Claude <https://github.com/AndyMik90/Auto-Claude>`_
 
@@ -138,3 +150,8 @@ Tools
 ***********
 
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
+
+
+-----------
+
+* `Manim <https://docs.manim.community/en/stable/>`_
