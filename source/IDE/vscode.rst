@@ -12,6 +12,11 @@ Vscode
 配置
 --------
 
+```        
+terminal.integrated.suggest    # 关闭终端自动提示
+```
+
+
 * `转PDF <https://www.jianshu.com/p/4856a78b96b6>`_
 *  https://github.com/NightNineCat/markdown-pdf_css
 
