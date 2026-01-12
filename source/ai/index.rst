@@ -151,6 +151,16 @@ Tools
 
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
 
+------------
+
+* `Presenton AI 演示文稿生成 <https://github.com/presenton/presenton.git>`_
+* `ComfyUI 文字生成图/视频 <https://github.com/Comfy-Org/ComfyUI>`_
+
+-----------
+
+* `langchain  <https://github.com/langchain-ai/langchain>`_
+
+    * 构建 LLM 应用 / Agent 的开源框架 + 生态
 
 -----------
 
