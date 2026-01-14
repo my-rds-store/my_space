@@ -153,6 +153,12 @@ VibeCoding
 Tools
 ***********
 
+* Claude-Cowork
+    * https://github.com/DevAgentForge/Claude-Cowork.git
+* AionUi
+    * https://github.com/iOfficeAI/AionUi
+    * https://github.com/claude-cowork-free/claude-cowork-free.git
+
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
 
 ------------
