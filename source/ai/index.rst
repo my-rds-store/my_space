@@ -57,6 +57,10 @@ MCP
     * https://github.com/microsoft/playwright-mcp
       * 使用 Playwright MCP 打开 http://localhost:3000，运行页面交互，并读取所有 console 消息。如果有错误，分析并修复代码。
 
+* agent-browser 
+    * https://github.com/vercel-labs/agent-browser.git
+        * agent-browser 是 Vercel Labs 出的「专门给 AI Agent 用的」浏览器自动化命令行工具（CLI），核心目标是：让大模型可以像人一样打开网页、点点点、填表、上传文件、截图、获取页面内容，但所有操作都以 CLI 和「AI 友好的数据结构」呈现，非常方便接入各类 LLM / Agent
+
 * Office
     * `Office-Word-MCP-Server <https://github.com/GongRzhe/Office-Word-MCP-Server>`_
     * `excel-mcp-server <https://github.com/negokaz/excel-mcp-server>`_
