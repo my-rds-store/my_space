@@ -145,9 +145,24 @@ VibeCoding
 
 * `vibe-kanban <https://www.vibekanban.com>`_
 
-    * vibe-guide <https://www.vibekanban.com/vibe-guide>`_
+    * `vibe-guide <https://www.vibekanban.com/vibe-guide>`_
+
+
+产品设计
+--------------
+
+* `OpenSpec <https://github.com/OpenSpec/OpenSpec>`_
+    * `【Claude Code】OpenSpec 安装与使用 <https://zhuanlan.zhihu.com/p/1971369431671219035>`_
+    * `OpenSpec,SpecKit and AgentOS. <https://www.youtube.com/watch?v=d3Glwdf_xA8>`_
+
+
 
 * `Auto-Claude <https://github.com/AndyMik90/Auto-Claude>`_
+
+
+* chm 转 markdown
+    * `chm-converter <https://github.com/DTDucas/chm-converter>`_
+    * `sudo apt install kchmviewer`
 
 ***********
 Tools
