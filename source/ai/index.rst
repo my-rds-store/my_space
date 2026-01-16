@@ -134,7 +134,7 @@ Claude
     * `shadcn-mcp`
 
         * `shadcn-ui <https://ui.shadcn.com/>`_
-        * `shadcn-vue <https://www.shadcn-vue.com/>`
+        * `shadcn-vue <https://www.shadcn-vue.com/>`_
 
         * `context7 <https://context7.com/>`_
 
@@ -155,6 +155,8 @@ VibeCoding
     * `【Claude Code】OpenSpec 安装与使用 <https://zhuanlan.zhihu.com/p/1971369431671219035>`_
     * `OpenSpec,SpecKit and AgentOS. <https://www.youtube.com/watch?v=d3Glwdf_xA8>`_
 
+* `planning-with-files <https://github.com/OthmanAdi/planning-with-files.git>`_
+    * https://zhuanlan.zhihu.com/p/1994343817332143003
 
 
 * `Auto-Claude <https://github.com/AndyMik90/Auto-Claude>`_
