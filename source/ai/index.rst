@@ -18,7 +18,10 @@ cursor
    repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/mcu/traffic_light_test_ui.git --style markdown,
    repomix  .
 
-*  
+* `gitingest <https://gitingest.com/>`_
+
+    * gitingest 是一个开源工具，可以将 Git 仓库中的代码和文档转换为适合大语言模型（LLM）使用的格式，
+      以便更好地进行代码理解、生成和自动化任务。
 
 .. code-block:: sh
 
