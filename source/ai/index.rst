@@ -174,7 +174,10 @@ Tools
     * https://github.com/DevAgentForge/Claude-Cowork.git
 * AionUi
     * https://github.com/iOfficeAI/AionUi
-    * https://github.com/claude-cowork-free/claude-cowork-free.git
+
+* eigent(支持私有部署-未验证)
+    * https://github.com/eigent-ai/eigent
+
 
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
 
