@@ -181,6 +181,9 @@ Tools
 * eigent(支持私有部署-未验证)
     * https://github.com/eigent-ai/eigent
 
+* `openwork <https://github.com/accomplish-ai/openwork>`_
+
+* `clawdbot <https://github.com/clawdbot/clawdbot.git>`_
 
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
 

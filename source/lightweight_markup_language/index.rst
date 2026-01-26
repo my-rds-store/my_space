@@ -10,5 +10,6 @@ lightweight markup language
    docusaurus
    makedown/index
    sphinx/index.rst
+   mintlify.rst
 
 
