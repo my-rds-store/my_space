@@ -1,7 +1,6 @@
 ###########
 Git
 ###########
-
 ************
 Git 常用命令 
 ************
@@ -14,7 +13,6 @@ Git 常用命令
     git tag -f v2.0.0-Alpha1          # 先更新本地标签到最新提交
     git push -f origin v2.0.0-Alpha1  # 强制推送到远程
 
-
     # submodule
     git clone <repository> --recursive      # 递归的方式克隆整个项目
     git submodule update --init --recursive     # 更新子模块
@@ -22,6 +20,12 @@ Git 常用命令
  
     git submodule foreach git pull origin master # 拉取所有子模块
 
+
+    # 本地仓库合并，以 dev -> master 为例
+
+    git push . dev:master  # 当前所在支dev 
+
+    git merge  dev        # 当前所在支master
 
 
 * `Git Community Book 中文版 <http://gitbook.liuhui998.com/index.html>`_
