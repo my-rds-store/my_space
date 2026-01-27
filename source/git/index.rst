@@ -290,8 +290,6 @@ Github
 
 
 * github的镜像网站 
-    * github.com.cnpmjs.org
-    * hub.fastgit.org
     * https://ghproxy.com/
 
 .. code-block:: sh 
@@ -300,11 +298,6 @@ Github
     git clone https://github.com/Autoware-AI/autoware.ai.git 
 
     # 加速
-    git clone https://github.com.cnpmjs.org/Autoware-AI/autoware.ai.git 
-    git clone https://hub.fastgit.org/Autoware-AI/autoware.ai.git 
-    
-
-    git clone
     git clone https://ghproxy.com/https://github.com/stilleshan/ServerStatus
 
     wget & curl
@@ -312,7 +305,6 @@ Github
     wget https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
     curl -O https://ghproxy.com/https://github.com/stilleshan/ServerStatus/archive/master.zip
     curl -O https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
-
 
 
 * `Syncing a fork <https://help.github.com/articles/syncing-a-fork/>`_
