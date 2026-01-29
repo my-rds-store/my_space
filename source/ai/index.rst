@@ -183,7 +183,7 @@ Tools
 
 * `openwork <https://github.com/accomplish-ai/openwork>`_
 
-* `clawdbot <https://github.com/clawdbot/clawdbot.git>`_
+* `moltbot <https://github.com/moltbot/moltbot.git>`_
 
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
 
