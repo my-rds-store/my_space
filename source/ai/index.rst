@@ -184,6 +184,7 @@ Tools
 * `openwork <https://github.com/accomplish-ai/openwork>`_
 
 * `openclaw <https://github.com/openclaw/openclaw.git>`_
+    * https://github.com/m1heng/clawdbot-feishu.git
 
 * `cc-switch <https://github.com/farion1231/cc-switch.git>`_
 
