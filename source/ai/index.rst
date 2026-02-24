@@ -181,6 +181,7 @@ Tools
 * eigent(支持私有部署-未验证)
     * https://github.com/eigent-ai/eigent
 
+* `accomplish <https://github.com/accomplish-ai/accomplish>`_
 * `openwork <https://github.com/accomplish-ai/openwork>`_
 
 * `openclaw <https://github.com/openclaw/openclaw.git>`_
