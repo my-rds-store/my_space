@@ -56,6 +56,13 @@ MCP
     * `Figma-Context-MCP <https://github.com/GLips/Figma-Context-MCP>`_
     * `cursor-talk-to-figma-mcp <https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp>`_
 
+* GitNexus
+    * `GitNexus <https://github.com/abhigyanpatwari/GitNexus>`_
+        * 1. 知识图谱索引工具 - 将代码库索引为知识图谱，让 AI 代理能够深度分析代码依赖、调用链和执行流程
+        * 2. MCP 服务器 - 通过 Model Context Protocol 提供 7 个工具和多种资源
+        * 3. 本地运行 - 所有操作都在本地进行，代码不会离开你的机器
+
+
 * playwright-mcp
     * https://github.com/microsoft/playwright-mcp
       * 使用 Playwright MCP 打开 http://localhost:3000，运行页面交互，并读取所有 console 消息。如果有错误，分析并修复代码。
@@ -63,7 +70,6 @@ MCP
 * agent-browser 
     * https://github.com/vercel-labs/agent-browser.git
         * agent-browser 是 Vercel Labs 出的「专门给 AI Agent 用的」浏览器自动化命令行工具（CLI），核心目标是：让大模型可以像人一样打开网页、点点点、填表、上传文件、截图、获取页面内容，但所有操作都以 CLI 和「AI 友好的数据结构」呈现，非常方便接入各类 LLM / Agent
-
 * Office
     * `Office-Word-MCP-Server <https://github.com/GongRzhe/Office-Word-MCP-Server>`_
     * `excel-mcp-server <https://github.com/negokaz/excel-mcp-server>`_
