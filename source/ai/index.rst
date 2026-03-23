@@ -56,12 +56,10 @@ MCP
     * `Figma-Context-MCP <https://github.com/GLips/Figma-Context-MCP>`_
     * `cursor-talk-to-figma-mcp <https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp>`_
 
-* GitNexus
-    * `GitNexus <https://github.com/abhigyanpatwari/GitNexus>`_
-        * 1. 知识图谱索引工具 - 将代码库索引为知识图谱，让 AI 代理能够深度分析代码依赖、调用链和执行流程
-        * 2. MCP 服务器 - 通过 Model Context Protocol 提供 7 个工具和多种资源
-        * 3. 本地运行 - 所有操作都在本地进行，代码不会离开你的机器
-
+* `GitNexus <https://github.com/abhigyanpatwari/GitNexus>`_
+    * 1. 知识图谱索引工具 - 将代码库索引为知识图谱，让 AI 代理能够深度分析代码依赖、调用链和执行流程
+    * 2. MCP 服务器 - 通过 Model Context Protocol 提供 7 个工具和多种资源
+    * 3. 本地运行 - 所有操作都在本地进行，代码不会离开你的机器
 
 * playwright-mcp
     * https://github.com/microsoft/playwright-mcp
