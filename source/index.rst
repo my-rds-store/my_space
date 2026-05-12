@@ -323,7 +323,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    lightweight_markup_language/index
    latex/index
    docker/index
-   rancher/index
    vagrant/index
    virtualbox/index
    database/index
@@ -334,7 +333,6 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    mingw32/index
    nsis/index
    dnsmasq/index
-   apache/index 
    openbox/index
    linux_tools_cfg/index
    x11/index

@@ -19,6 +19,16 @@ ROS2
 .. 做程序员让我保持高速、高效学习新技术的能力。而这种学习新技术的能力，不正是保持自己不被淘汰，各个公司都很重视的技能吗
 
 
+navigation2
+------------------
+
+* `ROS 2 humble installation guide <https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html>`_
+
+.. code:: bash
+
+    sudo apt-get install ros-humble-navigation2 ros-humble-nav2-bringup 
+
+
 Docker Containers
 ------------------
 
