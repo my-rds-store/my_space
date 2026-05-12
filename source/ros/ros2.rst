@@ -28,6 +28,15 @@ navigation2
 
     sudo apt-get install ros-humble-navigation2 ros-humble-nav2-bringup 
 
+    sudo apt-get install python3-rosdep2
+
+    rosdep init
+    rosdep update
+    rosdep install --from-paths src --ignore-src -r -y
+
+    ## colcon install
+    sudo apt install python3-colcon-common-extensions
+
 
 Docker Containers
 ------------------
