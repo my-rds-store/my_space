@@ -30,16 +30,19 @@ navigation2
 
     sudo apt-get install python3-rosdep2
 
+    ## colcon install
+    sudo apt install python3-colcon-common-extensions
+
+    ## 
+    sudo apt install python3-vcstool
+
     rosdep init
     rosdep update
     rosdep install --from-paths src --ignore-src -r -y
 
-    ## colcon install
-    sudo apt install python3-colcon-common-extensions
-
 
 Docker Containers
-------------------
+------------------------------------
 
 * L4T
     * `L4T Containers <https://catalog.ngc.nvidia.com/containers?filters=&orderBy=scoreDESC&query=l4t>`_
