@@ -140,6 +140,8 @@ Claude
 
 * https://github.com/oraios/serena
 * https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor
+* `claude-code-glm-statusline <https://github.com/Darkycl/claude-code-glm-statusline>`_
+    * GLM Coding Plan 订阅者的 Claude Code 状态栏，实时显示配额与上下文用量
 
 * **UI设计**
 
