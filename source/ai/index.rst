@@ -75,6 +75,15 @@ MCP
 
 * `awesome-mcp-servers <https://github.com/punkpeye/awesome-mcp-servers>`_
 
+* `ros-mcp-server <https://github.com/robotmcp/ros-mcp-server>`_
+    * 通过 MCP 让 LLM/Agent 与 ROS/ROS2 机器人系统交互（话题、服务、行为控制等）
+
+* `gazebo-mcp <https://github.com/kvgork/gazebo-mcp>`_
+    * 通过 MCP 控制 Gazebo 仿真（加载世界、控制关节、SLAM/Nav2、传感器数据等）
+
+* `drawio-mcp <https://github.com/jgraph/drawio-mcp>`_
+    * 通过 MCP 生成/编辑 draw.io 图表
+
 **************
 Claude
 **************
