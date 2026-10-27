@@ -204,17 +204,6 @@ VibeCoding
 Tools
 ***********
 
-* Claude-Cowork
-    * https://github.com/DevAgentForge/Claude-Cowork.git
-* AionUi
-    * https://github.com/iOfficeAI/AionUi
-
-* eigent(支持私有部署-未验证)
-    * https://github.com/eigent-ai/eigent
-
-* `accomplish <https://github.com/accomplish-ai/accomplish>`_
-* `openwork <https://github.com/accomplish-ai/openwork>`_
-
 * `openclaw <https://github.com/openclaw/openclaw.git>`_
 
     * https://github.com/m1heng/clawdbot-feishu.git
