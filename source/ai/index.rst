@@ -208,3 +208,7 @@ Tools
 -----------
 
 * `Manim <https://docs.manim.community/en/stable/>`_
+
+* `manimgx <https://manimgx.academa.ai/user-guide/quickstart/>`_
+
+---------
