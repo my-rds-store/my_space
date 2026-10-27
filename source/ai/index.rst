@@ -75,6 +75,31 @@ MCP
 
 * `awesome-mcp-servers <https://github.com/punkpeye/awesome-mcp-servers>`_
 
+* `ros-mcp-server <https://github.com/robotmcp/ros-mcp-server>`_
+    * 通过 MCP 让 LLM/Agent 与 ROS/ROS2 机器人系统交互（话题、服务、行为控制等）
+
+* `gazebo-mcp <https://github.com/kvgork/gazebo-mcp>`_
+    * 通过 MCP 控制 Gazebo 仿真（加载世界、控制关节、SLAM/Nav2、传感器数据等）
+
+* `drawio-mcp <https://github.com/jgraph/drawio-mcp>`_
+    * 通过 MCP 生成/编辑 draw.io 图表
+
+* `stepscribe-cad <https://github.com/idris900323/stepscribe-cad>`_
+    * 大型 STEP 装配分析工具：BOM/包围盒/体积、两两 BRep 接触、销轴关节与运动学关系，
+      为 ROS URDF 提供几何/测量/关节数据；内置 16 个 MCP 工具（仅 stdio）
+
+    * Ubuntu 22.04 环境经验：系统 Python 3.10 没有 OCP，不要升级/替换系统 Python；
+      用 uv 单独管理 CPython 3.11 venv（uv 自动下载解释器），``stepscribe doctor`` 自检全绿
+
+      .. code-block:: sh
+
+         uv venv --python 3.11 .venv
+         uv pip install stepscribe-cad
+
+         # 注册 MCP（仅支持 stdio 传输）
+         claude mcp add --transport stdio stepscribe -- \
+             /home/promote/opt/stepscribe-cad/.venv/bin/stepscribe mcp
+
 **************
 Claude
 **************
@@ -115,6 +140,8 @@ Claude
 
 * https://github.com/oraios/serena
 * https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor
+* `claude-code-glm-statusline <https://github.com/Darkycl/claude-code-glm-statusline>`_
+    * GLM Coding Plan 订阅者的 Claude Code 状态栏，实时显示配额与上下文用量
 
 * **UI设计**
 
