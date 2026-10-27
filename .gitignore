@@ -4,3 +4,4 @@ build/
 source/_build
 
 .codegpt
+.claude/worktrees
