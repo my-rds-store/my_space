@@ -10,6 +10,15 @@ sudo apt-get install python3.7  python3.7-venv
 ```
 
 
+* python-is-python3
+    * 让 ``python`` 命令默认指向 ``python3``（Ubuntu 20.04+，不用再敲 python3）
+
+.. code-block:: sh
+
+    # 如果经常用 `python` 而不是 `python3`
+    sudo apt install python-is-python3
+
+
 * `Numpy 中文 <https://www.numpy.org.cn/about/>`_
 
 -----------------
