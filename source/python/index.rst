@@ -11,7 +11,7 @@ sudo apt-get install python3.7  python3.7-venv
 
 
 * python-is-python3
-    * 让 ``python`` 命令默认指向 ``python3``（Ubuntu 20.04+，不用再敲 python3）
+    * 让 python 命令默认指向 python3（Ubuntu 20.04+，不用再敲 python3）
 
 .. code-block:: sh
 
