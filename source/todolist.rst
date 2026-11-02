@@ -51,6 +51,15 @@
     * 工业 AI 解决方案
         * https://www.quanzhi.com/job/6a0e8befa35f113293583023#1
 
+* [ ] 行为树学习
+    * https://roboticseabass.com/2021/05/08/introduction-to-behavior-trees/
+    * https://py-trees.readthedocs.io/en/devel/index.html
+    * https://blog.csdn.net/weixin_46300916/article/details/155038318
+    * https://zhuanlan.zhihu.com/p/581125086
+    * https://www.zhihu.com/column/c_1572932842551775232
+    * https://github.com/splintered-reality/py_trees
+    * https://py-trees.readthedocs.io/en/devel/introduction.html
+
 **********
 已完成
 **********
