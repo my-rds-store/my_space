@@ -1,6 +1,10 @@
 #########
-Mysql
+MySQL
 #########
+
+.. note::
+
+   示例覆盖较旧版本；当前版本请参考 https://dev.mysql.com/doc/
 
 * `推荐几本学习MySQL的好书 <https://www.cnblogs.com/prettyisshit/p/5841055.html>`_
     * `MySQL必知必会 高清晰中文书签版PDF+源码 <https://linux.linuxidc.com/index.php?folder=MjAxNsTq18rBzy801MIvNcjVL015U1FMsdjWqrHYu+EguN/H5c761tDOxMrpx6mw5lBERivUtMLr>`_

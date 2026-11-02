@@ -1,6 +1,8 @@
 ######
-sqlite
+SQLite
 ######
+
+* `SQLite 文档 <https://www.sqlite.org/docs.html>`_
 
 https://www.sitepoint.com/getting-started-sqlite3-basic-commands/
 

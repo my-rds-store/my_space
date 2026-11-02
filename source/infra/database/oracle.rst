@@ -1,6 +1,11 @@
 #######
-Oracle 
+Oracle
 #######
+
+.. warning::
+
+   以下安装步骤针对 Oracle 11g/CentOS 7，已过时；当前版本请参考
+   https://docs.oracle.com/en/database/
 
 ***********
 Install    
