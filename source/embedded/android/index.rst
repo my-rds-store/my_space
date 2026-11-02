@@ -1,9 +1,21 @@
 ##############
-Android      
+Android
 ##############
 
+.. note::
+
+   示例基于旧版 Android Gradle Plugin/Gradle；新项目建议 AGP 8.x + Kotlin DSL。
+
+* `Android 开发者文档 <https://developer.android.com/develop?hl=zh-cn>`_
+* `AGP 版本说明 <https://developer.android.com/build/releases/gradle-plugin>`_
+* `Kotlin DSL <https://developer.android.com/build/kotlin-dsl>`_
+
+.. contents::
+   :local:
+   :depth: 2
+
 **************
-下载地址      
+下载地址
 **************
 
 * `developer android <https://developer.android.google.cn/>`_
@@ -37,6 +49,11 @@ APK 证书
    keytool -genkeypair -alias serverkey -keypass 111111 -storepass 111111 \
         -dname "C=CN,ST=GD,L=SZ,O=vihoo,OU=dev,CN=vihoo.com" \
         -keyalg RSA -keysize 2048 -validity 3650 -keystore server.keystore 
+
+.. warning::
+
+   以下为旧版 Groovy DSL 示例，且使用 debug keystore 签 release；
+   生产环境请使用独立的 release keystore。
 
 .. code-block:: sh
 
@@ -191,6 +208,10 @@ required
        :align: center
 
 https://jcenter.bintray.com/com/android/tools/build/
+
+.. note::
+
+   JCenter 已停止服务；Gradle 依赖请使用 google() 和 mavenCentral()。
 
 
 `Android studio 关闭 初次启动更新 <https://blog.csdn.net/wyl_1994/article/details/52353647>`_
