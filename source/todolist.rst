@@ -32,6 +32,9 @@
 * [ ] 待整理 Human-Atlas
     * https://github.com/slorksmo/Human-Atlas
 
+* [ ] Microduck 研究
+    * https://github.com/fanhao375/microduck-replica.git
+
 **********
 已完成
 **********
