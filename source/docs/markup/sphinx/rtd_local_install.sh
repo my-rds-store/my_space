@@ -38,7 +38,7 @@ pip install -r requirements.txt  -i https://pypi.mirrors.ustc.edu.cn/simple
 python manage.py migrate
 python ./manage.py createsuperuser
 
-#python ./manage.py createsuperuser --username=jiangxumin  --email=jiang_xmin@massclouds.com
+#python ./manage.py createsuperuser --username=jiangxumin  --email=admin@example.com
 
 python manage.py loaddata test_data
 

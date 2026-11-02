@@ -344,11 +344,11 @@ gitlab-ci 环境变量
 .. code-block:: sh
 
     $ echo "$CI_REPOSITORY_URL"
-    http://gitlab-ci-token:xxxxxxxxxxxxxxxxxxxx@172.19.2.57/jiang_xmin/gitlib-ci_test.git
+    http://gitlab-ci-token:xxxxxxxxxxxxxxxxxxxx@172.19.2.57/your-username/gitlib-ci_test.git
     $ echo "$CI_PIPELINE_URL"
-    http://172.19.2.57/jiang_xmin/gitlib-ci_test/pipelines/149
+    http://172.19.2.57/your-username/gitlib-ci_test/pipelines/149
     $ echo "$CI_PROJECT_URL"
-    http://172.19.2.57/jiang_xmin/gitlib-ci_test
+    http://172.19.2.57/your-username/gitlib-ci_test
     $ echo "$CI_SERVER"
     yes
     $ echo "$CI_SERVER_NAME"
@@ -393,22 +393,22 @@ downloading-the-latest-artifacts
 
     # pirvite  project
     curl -L  --header "PRIVATE-TOKEN: nDU2GenxaCiNouREB91n"  \
-        "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1" \
+        "http://192.168.1.102/your-username/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1" \
         -o artifacts.zip
 
     # public project
     curl -L -o artifacts.zip \
-    "http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"
+    "http://192.168.1.102/your-username/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1"
     
     wget -O artifacts.zip  \
-    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1
+    http://192.168.1.102/your-username/mc-terminal/-/jobs/artifacts/4.2.0-dev/download?job=job1
     
     #### 
     curl -L -o mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
-    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+    http://192.168.1.102/your-username/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
 
     wget -O mcstudent_offline_4.2.1-11-g54157f0_amd64.deb \
-    http://192.168.1.102/jiang_xmin/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
+    http://192.168.1.102/your-username/mc-terminal/-/jobs/artifacts/4.2.0-dev/raw/BUILD/mcstudent_offline_4.2.1-11-g54157f0_amd64.deb?job=job1
 
 
 * `Building Docker images with GitLab CI/CD <https://docs.gitlab.com/ee/ci/docker/using_docker_build.html>`_

@@ -269,11 +269,11 @@ Send Mail
     $ sudo apt-get install -y git-email  
     
     # config 
-    $ git config --local user.email "jiang_xmin@massclouds.com"
-    $ git config --local user.name  "jiang_xmin"
+    $ git config --local user.email "admin@example.com"
+    $ git config --local user.name  "Your Name"
     $ git config --local sendemail.smtpserver     "smtp.qiye.163.com"
     $ git config --local sendemail.smtpencryption "tls"
-    $ git config --local sendemail.smtpuser        "jiang_xmin@massclouds.com"
+    $ git config --local sendemail.smtpuser        "admin@example.com"
     $ git config --local sendemail.smtpserverport "25"
     # git config --local sendemail.smtppass       'passwd'
 

@@ -110,7 +110,7 @@ Quick start (ubuntu)
      $ docker run -d --restart=always -p 3000:3000 --name=sharelatex-docker  -v /srv/sharelatex-data:/data tiagoboldt/sharelatex-docker:latest
 
      # 生成管理员用户
-     $ docker exec -t sharelatex-docker /bin/bash -c  'cd /sharelatex/ && grunt user:create-admin --email jiang_xmin@massclouds.com'
+     $ docker exec -t sharelatex-docker /bin/bash -c  'cd /sharelatex/ && grunt user:create-admin --email admin@example.com'
 
      # 设置管理员用密码
      $ google-chorme  http://localhost:3000/user/password/set?passwordResetToken=${TOKEN}

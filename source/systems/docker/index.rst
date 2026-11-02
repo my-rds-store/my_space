@@ -17,7 +17,7 @@ Repositories
 
 .. code-block:: sh
 
-    docker login --username=jiang_xmin registry.aliyuncs.com  # 登录阿里云
+    docker login registry.aliyuncs.com  # 登录阿里云
     docker login registry.gitlab.com
     docker login http://192.168.2.100:8086
 
