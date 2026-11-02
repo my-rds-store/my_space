@@ -8,6 +8,8 @@
 
    python2
    ros1-install
+   ros2-galactic-foxy
+   ros2-links
 
 .. note::
 
