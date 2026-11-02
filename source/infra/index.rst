@@ -4,8 +4,8 @@
 .. toctree::
    :maxdepth: 2
 
-   ../git/index
-   ../nginx/index
-   ../dnsmasq/index
-   ../database/index
-   ../gfw_is_shit/index
+   git/index
+   nginx/index
+   dnsmasq/index
+   database/index
+   gfw_is_shit/index
