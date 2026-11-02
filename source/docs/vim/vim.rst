@@ -1,6 +1,14 @@
 ####
-Vim 
+Vim
 ####
+
+.. note::
+
+   本页配置和插件示例较旧；现代 Vim 可考虑 vim-plug，Neovim 可考虑 lazy.nvim。
+
+.. contents::
+   :local:
+   :depth: 2
 
 **************
 屏幕显示按键  
@@ -31,6 +39,10 @@ Vim
     $ sudo apt-get install vim-addon-manager # 插件管理
     $ sudo apt-get install vim-gnome         # 系统黏贴板支持 
 
+.. note::
+
+   现代 Ubuntu 中 vim-gnome 已被 vim-gtk3 取代；插件管理可考虑 vim-plug。
+
 
 升级vim
 -----------------------
@@ -42,6 +54,10 @@ Vim
     $ sudo add-apt-repository ppa:jonathonf/vim
     $ sudo apt-get update && sudo apt-get upgrade
     $ sudo apt-get install vim-nox 
+
+.. note::
+
+   该 PPA 可能已停止维护；优先使用发行版仓库或从源码编译。
 
 * `Using Vim as IDE for Python <http://christian.sterzl.info/blog/vim-as-ide-for-python>`_
 * `UltiSnips vim 代码块 <http://mednoter.com/UltiSnips.html>`_
@@ -106,6 +122,10 @@ VI 技巧
 ************************
 YouCompleteMe
 ************************
+
+.. note::
+
+   YouCompleteMe 的安装和配置较旧；新项目可考虑 coc.nvim 或 Neovim 内置 LSP。
 
 * `YouCompleteMe手册 <http://valloric.github.io/YouCompleteMe/#ubuntu-linux-x64>`_
 * `Vim插件YouCompleteMe介绍 <http://www.vitah.net/posts/15cf7230/>`_
