@@ -1,6 +1,10 @@
 ########
-C/C++   
+C/C++
 ########
+
+.. note::
+
+   示例以 C++17/20 为参考；新项目建议 C++20/23。
 
 
 .. toctree::
@@ -22,6 +26,17 @@ C/C++
 * `C++并发编程实战 <https://nj.gitbooks.io/c/content/>`_
 * `C++并发编程实战 第二版 <https://chenxiaowei.gitbook.io/c-concurrency-in-action-second-edition-2019/>`_
 
+.. contents::
+   :local:
+   :depth: 2
+
+**********************
+现代 C++ 参考
+**********************
+
+* `C++ Core Guidelines <https://isocpp.github.io/CppCoreGuidelines/>`_
+* `refactoring.guru 设计模式 <https://refactoring.guru/design-patterns/cpp>`_
+* `Modern C++ Features <https://github.com/AnthonyCalandra/modern-cpp-features>`_
 
 ------------
 

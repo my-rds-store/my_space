@@ -1,6 +1,11 @@
 #######
-C++   
+C++
 #######
+
+.. note::
+
+   下面 23 种设计模式的链接较旧；优先参考
+   `refactoring.guru 设计模式 <https://refactoring.guru/design-patterns/cpp>`_
 
 * `C++ reference <https://en.cppreference.com/w/>`_
 
