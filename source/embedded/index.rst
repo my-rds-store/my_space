@@ -4,6 +4,6 @@
 .. toctree::
    :maxdepth: 2
 
-   ../android/index
-   ../mingw32/index
-   ../nsis/index
+   android/index
+   mingw32/index
+   nsis/index
