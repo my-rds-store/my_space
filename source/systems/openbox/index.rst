@@ -1,9 +1,13 @@
 ###################
-X11 and openbox    
+X11 and openbox
 ###################
 
+.. note::
+
+   本页示例基于较旧的 Debian/Ubuntu 环境；Chromium、Flash、ibus 相关包名可能已变化。
+
 **************************************
-Install and Start  
+Install and Start
 **************************************
 
 .. code-block:: bash
@@ -11,7 +15,7 @@ Install and Start
     sudo apt-get install -y xorg openbox
     export DISPLAY=:0.0
     sudo xhost +local:root
-    sudo sartx /usr/bin/openbox
+    sudo startx /usr/bin/openbox
 
 * `使用SSH的X11特性远程运行X界面程序 <https://blog.csdn.net/gothicane/article/details/1669978>`_
 
