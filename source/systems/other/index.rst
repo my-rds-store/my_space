@@ -1,6 +1,12 @@
 其他
 ================
 
+本页汇总系统工具、网络、硬件与杂项记录；部分内容是历史资料。
+
+.. contents::
+   :local:
+   :depth: 2
+
 .. math:: \sigma_\mathrm{mean} = \frac{\sigma}{\sqrt{N}}
 
 .. math::
@@ -135,7 +141,7 @@ Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分�
 
 
 
-CenterOS
+CentOS
 ------------
 
 #. 检查某服务是否开机启动
@@ -238,7 +244,7 @@ nmcli命令
 *  `工具Valgrind,检测内存泄露 <https://www.cnblogs.com/wangkangluo1/archive/2011/07/20/2111248.html>`_
 
 
-rmp and yum   
+rpm and yum
 --------------
 
 * `RPM包的制作* <https://blog.csdn.net/samxx8/article/details/71945726>`_
@@ -264,7 +270,7 @@ nginx
 
 * `Ubuntu 14.04安装teamviewer 远程桌面 <https://blog.csdn.net/love_xiaozhao/article/details/52704197>`_
 
-ubutnu 源制作
+Ubuntu 源制作
 ---------------
 
 * https://gist.github.com/awesomebytes/ce0643c1ddead589ab06e2a1e4c5861b
