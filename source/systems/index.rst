@@ -4,19 +4,19 @@
 .. toctree::
    :maxdepth: 2
 
-   ../unix/index
-   ../unix/shell/shell
-   ../windows/index
-   ../mac/index
-   ../x11/index
-   ../openbox/index
-   ../linux_tools_cfg/index
-   ../install_cd_customization/index
-   ../docker/index
-   ../vagrant/index
-   ../virtualbox/index
-   ../qemu_libvirt/qemu
-   ../other/index
+   unix/index
+   unix/shell/shell
+   windows/index
+   mac/index
+   x11/index
+   openbox/index
+   linux_tools_cfg/index
+   install_cd_customization/index
+   docker/index
+   vagrant/index
+   virtualbox/index
+   qemu_libvirt/qemu
+   other/index
 
 .. note::
 
