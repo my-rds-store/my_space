@@ -35,6 +35,11 @@
 * [ ] Microduck 研究
     * https://github.com/fanhao375/microduck-replica.git
 
+* [ ] 研究 iceoryx2
+    * 面向数据密集型系统的零拷贝 IPC 数据平面：共享内存直接传大数据、不拷贝，延迟低且确定；Rust 实现，是 iceoryx 的后继者。
+    * https://iceoryx.io/
+    * https://github.com/eclipse-iceoryx/iceoryx2
+
 **********
 已完成
 **********
