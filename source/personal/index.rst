@@ -4,4 +4,4 @@
 .. toctree::
    :maxdepth: 2
 
-   ../todolist
+   todolist
