@@ -301,45 +301,15 @@ http://blog.sina.com.cn/s/blog_476d8cf30100lnd4.html
    :maxdepth: 2
    :caption: Contents:
     
-   todolist
+   personal/index
    ai/index
-   vue/index
-   ros/index
-   ros/ros2
-   autoware/index
-   apollo/index
-   webrtc/index
-   unity/index
-   qemu_libvirt/qemu
-   vim/vim
-   mac/index
-   git/index
-   python/index
-   android/index
-   cpp/index
-   rust/index
-   qt/index
-   opencv/index
-   nginx/index
-   lightweight_markup_language/index
-   latex/index
-   docker/index
-   vagrant/index
-   virtualbox/index
-   database/index
-   unix/index
-   unix/shell/shell
-   IDE/index
-   windows/index
-   mingw32/index
-   nsis/index
-   dnsmasq/index
-   openbox/index
-   linux_tools_cfg/index
-   x11/index
-   install_cd_customization/index
-   gfw_is_shit/index
-   other/index
+   robotics/index
+   programming/index
+   systems/index
+   infra/index
+   docs/index
+   embedded/index
+   legacy/index
 
 .. 卸载
 .. sudo su 
