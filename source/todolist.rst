@@ -60,6 +60,24 @@
     * https://github.com/splintered-reality/py_trees
     * https://py-trees.readthedocs.io/en/devel/introduction.html
 
+* [ ] skills 工具验证
+    * book-to-skill
+        * https://github.com/virgiliojr94/book-to-skill/blob/master/README.zh-CN.md
+        * book-to-skill超详细教程
+            * https://mp.weixin.qq.com/s/f3GLf9080ZHWqWqcAcQ2bg?poc_token=HMR66GqjP28g3rfFgv7iLDTYZQ0ItKc6Cnwn4GfU
+    * diagram-design
+        * https://github.com/cathrynlavery/diagram-design
+        * AI 终于可以画出好看的图表了
+            * https://mp.weixin.qq.com/s/XgE78Rm20ukCyeicxNYGQA
+    * anatomy
+        * https://github.com/wheresryan22/anatomy
+        * 神级画图 Skill
+            * https://mp.weixin.qq.com/s/BIfRleEEVRCUtPmSU8XB9w
+    * hyperframes
+        * https://github.com/heygen-com/hyperframes
+        * DeepSeek也能生成视频了
+            * https://mp.weixin.qq.com/s/4X0RMUwifZFbGsm4EbupNg
+
 **********
 已完成
 **********
