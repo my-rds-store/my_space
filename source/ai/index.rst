@@ -1,6 +1,12 @@
 ##############
-AI      
+AI
 ##############
+
+本页记录 AI 工具、MCP、Claude/Agent 生态与产品设计资源；更新较快，以官方文档为准。
+
+.. contents::
+   :local:
+   :depth: 2
 
 **************
 cursor      
@@ -49,6 +55,7 @@ cursor
 MCP      
 **************
 
+* `MCP 规范与文档 <https://modelcontextprotocol.io/>`_
 * `MCP Official Website <https://mcp.so/>`_
 * `Playbooks MCP <https://playbooks.com/mcp>`_
 
@@ -104,6 +111,7 @@ MCP
 Claude
 **************
 
+* `Anthropic 文档 <https://docs.anthropic.com/>`_
 * `Claude Desktop for Debian <https://github.com/aaddrick/claude-desktop-debian>`_
 
 
