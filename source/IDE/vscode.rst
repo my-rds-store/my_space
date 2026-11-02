@@ -46,7 +46,20 @@ terminal.integrated.suggest    # 关闭终端自动提示
         ],
 
         // "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span class=\"title\"></span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"> <span class='date'></span></div>"
-        "markdown-pdf.headerTemplate": 
+        "markdown-pdf.headerTemplate":
             "<div style=\"font-size: 9px; margin-left: 1cm;\"> <span>山东派蒙</span></div> <div style=\"font-size: 9px; margin-left: auto; margin-right: 1cm; \"> <span class='date'></span></div>"
     }
+
+
+Git worktree
+----------------
+
+如果 VS Code 的 Git 版本没问题，却识别不到 worktree，通常是 git.detectWorktrees 设置被关闭了。
+
+启用步骤：
+
+#. 打开设置：Ctrl + ,（macOS 为 Cmd + ,）。
+#. 在搜索框输入 git.detectWorktrees。
+#. 勾选 “Git: Detect Worktrees” 选项，使其处于启用状态。
+#. 重启 VS Code，让设置生效。
 
