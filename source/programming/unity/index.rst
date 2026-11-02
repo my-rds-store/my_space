@@ -1,7 +1,12 @@
 Unity
 ==============
 
-*  `Asset Store <https://assetstore.unity.com/>`_
+**当前版本**：Unity 6（6000.x）或 2022 LTS。
+
+* `Unity Hub <https://unity.com/download>`_
+* `Unity 文档 <https://docs.unity3d.com/>`_
+* `Unity Learn <https://learn.unity.com/>`_
+* `Asset Store <https://assetstore.unity.com/>`_
 
 
 * 快捷键
@@ -10,8 +15,12 @@ Unity
     * `alt+左键`  视角围绕选中物体旋转
 
 
-osm 转 unity world(待研究)
+OSM 转 Unity World（待研究）
 ----------------------------
+
+.. note::
+
+   以下 OSM 工具和资源较旧，使用前确认与当前 Unity 版本兼容。
 
 * http://osm2world.org/download/
 * https://qiita.com/hiroga/items/8f8496af23c3661f4092
