@@ -5,3 +5,5 @@
    :maxdepth: 2
 
    todolist
+   reading
+   accounts

@@ -4,6 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
+   linux/index
    unix/index
    unix/shell/shell
    windows/index
