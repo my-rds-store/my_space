@@ -1,6 +1,11 @@
 ############################
-Install CD Customization    
+Ubuntu 安装盘定制（归档）
 ############################
+
+.. warning::
+
+   Ubuntu 14.04 时代的安装盘定制资料，已过时，仅作历史参考。
+
 
 
 ***************
@@ -20,7 +25,7 @@ Base Ubuntu
 
 
 **************
-Ubnntu 打包   
+Ubuntu 打包
 **************
 
 * `定制Ubuntu安装CD <http://wiki.ubuntu.org.cn/%E5%AE%9A%E5%88%B6Ubuntu%E5%AE%89%E8%A3%85CD>`_

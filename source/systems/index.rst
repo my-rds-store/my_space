@@ -12,7 +12,6 @@
    x11/index
    openbox/index
    linux_tools_cfg/index
-   install_cd_customization/index
    docker/index
    vagrant/index
    virtualbox/index
