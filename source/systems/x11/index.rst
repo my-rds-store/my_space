@@ -1,9 +1,18 @@
 ######
-X11   
+X11
 ######
 
+.. note::
+
+   Ubuntu 现代版本默认使用 Wayland；如果要运行 X11，请在登录界面选择
+   “Ubuntu on Xorg”。以下命令适用于 Xorg 会话。
+
+.. contents::
+   :local:
+   :depth: 2
+
 ***********
-Install    
+Install
 ***********
 
 .. code-block:: bash
@@ -13,6 +22,10 @@ Install
     sudo xhost +local:root
      
     xinit
+
+.. warning::
+
+   xhost +local:root 会放宽 X11 访问控制，仅在可信环境中使用。
 
 * `xrandr <https://wiki.archlinux.org/index.php/Xrandr_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>`_
 * `窗口管理器 Openbox 入门指南 (1) <https://linuxtoy.org/archives/openbox-getting-started-guide.html#running>`_
@@ -60,15 +73,20 @@ Install
 
 
 **************
-自 动 登 陆   
+自动登录
 **************
+
+.. note::
+
+   以下示例基于 Ubuntu Server 16.04 的 systemd getty 配置；新版本请按当前
+   systemd 文档调整。
 
 * `Ubuntu Server 16.04 免密碼自動登入  <https://justhodl.blogspot.com/2018/03/ubuntu-server-1604-auto-login-non-gui.html>`_
 
 .. code-block:: sh
 
     sudo mkdir /etc/systemd/system/getty@tty1.service.d
-    tee /etc/systemd/system/getty@tty1.service.d/override.conf  <<- 'EOF'
+    sudo tee /etc/systemd/system/getty@tty1.service.d/override.conf  <<- 'EOF'
     [Service]
     ExecStart=
     ExecStart=-/sbin/agetty --noissue --autologin 帳戶名稱 %I $TERM
