@@ -1,6 +1,14 @@
-reStructuredText 
+reStructuredText
 =====================
 
+.. note::
+
+   本页示例基于较旧的 Sphinx 版本；当前 Sphinx 7/8 请参考官方文档
+   https://www.sphinx-doc.org/
+
+.. contents::
+   :local:
+   :depth: 2
 
 .. toctree::
    :maxdepth: 1
