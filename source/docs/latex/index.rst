@@ -1,6 +1,19 @@
 ########
-LaTeX   
+LaTeX
 ########
+
+.. note::
+
+   中文排版推荐 ctex 宏包 + XeLaTeX。texlive-full 体积较大，也可按需安装
+   texlive-xetex 和 texlive-lang-chinese。
+
+* `TeX Live <https://tug.org/texlive/>`_
+* `Overleaf 官网 <https://www.overleaf.com/>`_
+* `CTAN <https://ctan.org/>`_
+
+.. contents::
+   :local:
+   :depth: 2
 
 ***********
 INSTALL    
@@ -22,10 +35,10 @@ INSTALL
     #  mac 
     ############
 
-    $ brew cask install mactex
+    $ brew install --cask mactex
 
     # Install Edit 
-    $ brew cask install texstudio
+    $ brew install --cask texstudio
 
 
 *******************************************
@@ -67,7 +80,7 @@ Quick start (ubuntu)
 编辑器    
 **********
 
-* `texstudio <http://texstudio.sourceforge.net/>`_
+* `texstudio <https://www.texstudio.org/>`_
     * Texstudio快捷键。
         * Ctrl + t : 注释
         * Ctrl + u : 去除注释
