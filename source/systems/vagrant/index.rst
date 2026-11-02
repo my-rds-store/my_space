@@ -5,7 +5,16 @@ Vagrant
 .. warning::
 
    以下 trusty/bionic/Fedora 28 示例已过时，mirrors.shu.edu.cn 也已不可用。
-   请从 https://cloud-images.ubuntu.com/ 下载对应版本的 cloud image。
+   新项目建议直接使用 Vagrant Cloud 的 ubuntu/noble64。
+
+************************************
+当前推荐（Ubuntu 24.04）
+************************************
+
+.. code-block:: bash
+
+   vagrant init ubuntu/noble64
+   vagrant up
 
 ************************************
 Vagrant 插件
@@ -39,7 +48,7 @@ Vagrant-libvirt
  
 .. code-block:: sh
 
-    vagrant init centos/7 
+    vagrant init centos/7  # 旧版；建议用 ubuntu/noble64
 
 更名存储池
 ============
@@ -82,7 +91,7 @@ Vagrant box Init
 
 .. code-block:: sh
 
-    vagrant init ubuntu/trusty64
+    vagrant init ubuntu/trusty64  # 旧版；建议用 ubuntu/noble64
     vagrant init my-box https://boxes.company.com/my.box
     vagrant init my-box ../mybox_storage/my.box
 
@@ -118,6 +127,11 @@ Vagrantbox.ex
 
 Base box download
 ==================
+
+.. note::
+
+   Ubuntu cloud image 目录当前不提供 noble 的 -vagrant.box 文件；
+   推荐使用 Vagrant Cloud 的 ubuntu/noble64。
 
 * `Ubuntu cloud <https://cloud-images.ubuntu.com/>`_
     
