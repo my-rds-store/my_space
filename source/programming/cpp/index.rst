@@ -7,7 +7,7 @@ C/C++
    :maxdepth: 2
    :caption: Contents:
 
-   cpp/index
+   basics
    glib
    data_structure
    debug

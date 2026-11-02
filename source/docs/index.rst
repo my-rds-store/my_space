@@ -5,7 +5,7 @@
    :maxdepth: 2
 
    tools
-   lightweight_markup_language/index
+   markup/index
    latex/index
    IDE/index
    vim/vim

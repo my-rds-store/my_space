@@ -1,15 +1,12 @@
 ###############################
-lightweight markup language   
+标记语言与文档工具
 ###############################
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
    docusaurus
-   makedown/index
-   sphinx/index.rst
-   mintlify.rst
-
-
+   markdown/index
+   sphinx/index
+   mintlify
