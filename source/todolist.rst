@@ -36,9 +36,11 @@
     * https://github.com/fanhao375/microduck-replica.git
 
 * [ ] 研究 iceoryx2
-    * 面向数据密集型系统的零拷贝 IPC 数据平面：共享内存直接传大数据、不拷贝，延迟低且确定；Rust 实现，是 iceoryx 的后继者。
+    * Rust 实现的零拷贝 IPC 数据平面，是 iceoryx 的后继者；ROS 2 link adapter/gateway（原型）已用 Humble + rmw_cyclonedds_cpp 验证，也可通过 rmw_iceoryx2（alpha）直接作为 ROS 2 的 RMW。
+    * 注意：CycloneDDS 自带的共享内存零拷贝 PSMX 插件对接的是 Iceoryx 2.0（上一代），不是 iceoryx2。
     * https://iceoryx.io/
     * https://github.com/eclipse-iceoryx/iceoryx2
+    * https://github.com/ekxide/rmw_iceoryx2
 
 * [ ] Lichee Zero 研究
     * https://wiki.sipeed.com/hardware/zh/lichee/Zero/Zero.html
