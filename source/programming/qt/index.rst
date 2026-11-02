@@ -1,11 +1,21 @@
 Qt
 ===========
 
+.. note::
+
+   新项目建议使用 Qt 6；Qt5 内容仅作历史参考。
+
 .. toctree::
    :maxdepth: 1
+   :caption: 当前
+
+   Qt6
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 历史
 
    Qt5
-   Qt6
 
 Install
 ----------
@@ -16,6 +26,10 @@ Install
 
 
 * aqtinstall
+
+.. note::
+
+   示例使用 Qt 6.7.2，可按需替换为当前版本。
 
 .. code:: bash
 
