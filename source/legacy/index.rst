@@ -7,6 +7,7 @@
    :maxdepth: 2
 
    python2
+   ros1-install
 
 .. note::
 

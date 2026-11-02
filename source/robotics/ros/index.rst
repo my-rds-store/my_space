@@ -2,6 +2,10 @@
 ROS
 #############
 
+.. warning::
+
+   本页主要是 ROS 1 笔记。ROS 1 已停止维护，新项目请使用 ROS 2（见 ros2.rst）。
+
 * PlotJuggler
 
 .. code-block:: sh
@@ -149,9 +153,9 @@ example
 
 * `ROS with PyQt <https://github.com/WelinLee/ROS_QT_GUI.git>`_
 
-***********
-环境搭建
-***********
+******************************
+环境搭建（国内镜像）
+******************************
 
 .. code-block:: sh
 
@@ -163,50 +167,11 @@ example
         #  添加 ROS源
         sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
 
-        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F42ED6FBAB17C654
-        sudo apt-get update
+.. note::
 
-        #apt-cache search ros-kinetic
-        sudo apt-get install ros-melodic-desktop-full --yes --allow-unauthenticated
-
-        # sudo apt-get install ros-kinetic-slam-gmapping -y # 地图建模
-
-        sudo rosdep init
-        rosdep update
-        sudo apt-get install python-rosinstall \
-                             python-rosinstall-generator \
-                             python-wstool \
-                             build-essential --yes --allow-unauthenticated
-        source /opt/ros/kinetic/setup.sh
-
-        ########################################
-        # install  ros melodic  on ubuntu 18.04  
-        ########################################
-        sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.ustc.edu.cn/ros/ubuntu/ $DISTRIB_CODENAME main" > /etc/apt/sources.list.d/ros-latest.list'
-        rosdep update
-
-        sudo apt install ros-melodic-desktop-full
-        # sudo apt-get install rosbash 
-        # sudo apt-get install ros-melodic-rosbash ros-melodic-rosbash-params # install and reboot , roscd 
-        sudo apt-get install ros-${ROS_DISTRO}-rosbash ros-${ROS_DISTRO}-rosbash-params
-
-        apt-cache search ros-melodic
-
-.. code-block:: sh
-
-        # 小乌龟
-        source /opt/ros/melodic/setup.sh
-        rosrun turtlesim turtlesim_node
-        rosrun turtlesim turtle_teleop_key
-
-* `《ROS机器人开发实践》源码 <https://github.com/huchunxu/ros_exploring>`_
-
-* `LIO-SAM <https://github.com/TixiaoShan/LIO-SAM>`_
-    * `LIO-SAM运行自己数据包遇到的问题解决--SLAM不学无数术小问题 <https://blog.csdn.net/weixin_42141088/article/details/118000544>`_
-    * `LIO-SAM源码阅读分析（1）--配置文件Tips <https://zhuanlan.zhihu.com/p/171589473>`_
-    * https://zhuanlan.zhihu.com/p/352039509
-    * https://blog.csdn.net/heirenlop/article/details/115216476
-* `imu ch110 <https://github.com/hipnuc/products>`_
+   ROS 1 已 EOL。完整的 Melodic 安装步骤见
+   :doc:`/legacy/ros1-install`
+   ROS 2 请参考 :doc:`ros2`
 
 ***********
 常用命令
