@@ -78,6 +78,11 @@
         * DeepSeek也能生成视频了
             * https://mp.weixin.qq.com/s/4X0RMUwifZFbGsm4EbupNg
 
+* [ ] 一份完整的数学自学路线图
+    * https://mp.weixin.qq.com/s/tD9-NHujKwM9Z9K5aaOuqg
+    * How to Learn Mathematics: A Self-Study Roadmap
+        * https://abakcus.com/articles/how-to-learn-mathematics
+
 **********
 已完成
 **********
