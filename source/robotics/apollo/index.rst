@@ -1,8 +1,18 @@
 Apollo
 ==========
 
-一. 入门-混个脸熟
---------------------
+当前入口
+--------
+
+* `Apollo 开源社区 <https://apollo.baidu.com/>`_
+* `Apollo GitHub <https://github.com/ApolloAuto/apollo>`_
+
+.. note::
+
+   以下资料主要对应 Apollo 2.5/5.5 和 LGSVL 仿真，部分链接可能已过时。
+
+一. 旧版入门（Apollo 2.5/5.5）
+--------------------------------
 
 lgsvl仿真
 `````````````
@@ -21,7 +31,7 @@ lgsvl仿真
 如何在本地运行RTK定位模块
     https://github.com/ApolloAuto/apollo/blob/master/docs/howto/how_to_run_RTK_localization_module_on_your_local_computer_cn.md
 
-二. 参考资料
+二. 参考资料（旧版）
 --------------------
 
 攻城狮の家
