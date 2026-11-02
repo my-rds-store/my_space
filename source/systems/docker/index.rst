@@ -2,6 +2,11 @@
 Docker
 ###############
 
+.. note::
+
+   以下命令以 Docker Engine 24+ / Compose v2 为准；旧版 nvidia-docker2、
+   docker-compose v1 已停止维护。
+
 **********************
 Repositories
 **********************
@@ -12,7 +17,7 @@ Repositories
 
 .. code-block:: sh
 
-    docker login --username=jiang_xmin -e sample.aliyun.com registry.aliyuncs.com  # 登录阿里云
+    docker login --username=jiang_xmin registry.aliyuncs.com  # 登录阿里云
     docker login registry.gitlab.com
     docker login http://192.168.2.100:8086
 
@@ -88,6 +93,10 @@ Repositories
     # 查看
     docker info
 
+.. note::
+
+   Docker 24+ 建议把 daemon.json 中的 graph 改为 data-root。
+
 去掉sudo权限 
 ================
 
@@ -106,8 +115,23 @@ Repositories
 Nvidia Docker 
 ================
 
-* `installing-on-ubuntu-and-debian <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-ubuntu-and-debian>`_
+* `NVIDIA Container Toolkit 安装指南 <https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html>`_
 
+.. code-block:: sh
+
+    # 新版：NVIDIA Container Toolkit
+    curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | \
+      sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+    curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list | \
+      sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+      sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+    sudo apt-get update
+    sudo apt-get install -y nvidia-container-toolkit
+    sudo nvidia-ctk runtime configure --runtime=docker
+    sudo systemctl restart docker
+
+旧版 nvidia-docker2（已弃用）
+-----------------------------
 
 .. code-block:: sh
 
@@ -115,11 +139,8 @@ Nvidia Docker
        && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
        && curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 
-
-    sudo apt-get update 
-
+    sudo apt-get update
     sudo apt-get install -y nvidia-docker2
-
     sudo systemctl restart docker
 
 ******************
@@ -337,7 +358,7 @@ Nvidia Docker
    docker load -i nextcloud.tar            # 导入镜像
 
 
-容器-reame
+容器-rename
 ----------------
 
 .. code-block:: sh
@@ -381,9 +402,15 @@ docker-compose
 
 * `Doc <https://docs.docker.com/compose/compose-file/compose-file-v3/>`_
 
+.. note::
+
+   Compose v1（docker-compose）已停止维护；新版使用 Docker Compose v2，
+   命令为 docker compose。
+
 .. code-block:: sh
 
-    pip install docker-compose==1.24.0
+    sudo apt install docker-compose-plugin
+    docker compose version
 
 
 .. code-block:: yaml
@@ -414,6 +441,10 @@ docker-compose
         extra_hosts:
           - "HP-Laptop:127.0.0.1"
         entrypoint: ["/bin/bash", "-c", "while true; do echo hello world; sleep 1; done"]
+
+.. note::
+
+   示例中的 autoware:latest-melodic-cuda 是旧镜像，请替换为当前版本。
 
 **********
 Dockerfile
@@ -644,8 +675,8 @@ Docker私有仓库
     # 3. 运行install.sh
 
     # 4.
-    sudo docker-compose up -d
-    sudo docker-compose restart
+    sudo docker compose up -d
+    sudo docker compose restart
 
 
 * `Docker私有仓库搭建  <https://www.jianshu.com/p/00ac18fce367>`_
