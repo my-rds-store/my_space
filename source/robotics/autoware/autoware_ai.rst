@@ -129,12 +129,12 @@ MapToolbox
     
     # 按照提示输入,当前用户密码
     # x86_64
-    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash
-    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_instal.sh | bash 
+    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/robotics/autoware/src/ros_instal.sh | bash
+    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/robotics/autoware/src/ros_instal.sh | bash 
 
     # Arm - Nvidia Jetson AGX
-    wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/autoware/src/ros_install_agx.sh | bash
-    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/ros_install_agx.sh
+    wget -qO - https://github.com/my-rds-store/my_space/raw/master/source/robotics/autoware/src/ros_install_agx.sh | bash
+    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/robotics/autoware/src/ros_install_agx.sh
 
 
 * x86_64安装脚本的源码如下:
@@ -205,7 +205,7 @@ MapToolbox
     rosdep update # 如遇失败, 需登梯子,原因不解释
 
     # 或者执行,也可以
-    wget -qO - https://raw.fastgit.org/my-rds-store/my_space/master/source/ros/shell/rosdep_repair.sh | bash
+    wget -qO - https://raw.githubusercontent.com/my-rds-store/my_space/master/source/robotics/ros/shell/rosdep_repair.sh | bash
 
     rosdep update
 
@@ -249,7 +249,7 @@ MapToolbox
   
   git clone --depth 1 https://hub.fastgit.org/BVLC/caffe.git $HOME/caffe
   
-  URL_PATH=https://raw.fastgit.org/my-rds-store/my_space/master/source/autoware/src/caffe
+  URL_PATH=https://raw.githubusercontent.com/my-rds-store/my_space/master/source/robotics/autoware/src/caffe
   wget -O $HOME/caffe/Makefile.config  $URL_PATH/Makefile.config
  
   # for arm  plantform
