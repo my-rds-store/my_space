@@ -1,6 +1,10 @@
 Autoware.Auto
 ==============
 
+.. warning::
+
+   Autoware.Auto 已并入 Autoware Universe；以下内容仅作历史参考。
+
 
 * `GitLab <https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto>`_
 * `Doc <https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/>`_

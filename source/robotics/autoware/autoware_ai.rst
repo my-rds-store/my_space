@@ -1,6 +1,10 @@
 Autoware.AI
 ============
 
+.. warning::
+
+   Autoware.AI 基于 ROS 1（Melodic），已停止维护；新项目请参考 Autoware Universe。
+
 .. image:: https://pic2.zhimg.com/80/v2-f36c99478ce4d0b7ecd8b8ad61a9ed95_720w.jpg
 
 
