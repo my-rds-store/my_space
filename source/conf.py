@@ -50,9 +50,9 @@ import os
 
 extensions = [
     'recommonmark',
-    'sphinx_markdown_tables',
     'sphinx_math_dollar',
     'sphinx.ext.mathjax',
+    'sphinx.ext.graphviz',
     'sphinxcontrib.inkscapeconverter'
     ]
 

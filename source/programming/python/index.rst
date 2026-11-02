@@ -2,12 +2,13 @@
 Python 
 ###########
 
-* deadsnakes 
-```
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
-sudo apt-get install python3.7  python3.7-venv
-```
+* deadsnakes
+
+  .. code-block:: bash
+
+     sudo add-apt-repository ppa:deadsnakes/ppa
+     sudo apt-get update
+     sudo apt-get install python3.7 python3.7-venv
 
 
 * python-is-python3
@@ -263,7 +264,7 @@ Linux 下编译windows Exe
 
 ------
 
-* `Urwid <http://urwid.org/>`_
+* `Urwid 项目页 <http://urwid.org/>`_
 * `npyscreen  <https://npyscreen.readthedocs.io/index.html>`_
 
 *******

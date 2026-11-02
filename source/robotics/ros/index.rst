@@ -1096,7 +1096,7 @@ can-dbc-parser
 *****************
 
     * Source : https://github.com/NewEagleRaptor/raptor-dbw-ros
-    * `code API <http://docs.ros.org/en/melodic/api/can_dbc_parser/html/namespaceNewEagle.html>`_
+    * `code API (can_dbc_parser) <http://docs.ros.org/en/melodic/api/can_dbc_parser/html/namespaceNewEagle.html>`_
 
     * Install : **sudo apt-get install ros-${ROS_DISTRO}-can-dbc-parser**
 

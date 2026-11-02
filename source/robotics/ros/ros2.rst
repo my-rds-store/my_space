@@ -62,8 +62,8 @@ Docker Containers
 
 
 * Galactic
-    * `Tutorials <https://docs.ros.org/en/galactic/Tutorials.html>`_
-    * `API <https://docs.ros2.org/galactic/api/rclcpp/index.html>`_
+    * `Galactic Tutorials <https://docs.ros.org/en/galactic/Tutorials.html>`_
+    * `Galactic API <https://docs.ros2.org/galactic/api/rclcpp/index.html>`_
 
 
     .. code-block:: bash
@@ -83,8 +83,8 @@ Docker Containers
 
 
 * Foxy 
-    * `Tutorials  <https://docs.ros.org/en/foxy/Tutorials.html>`_
-    * `API <https://docs.ros2.org/foxy/api/rclcpp/index.html>`_
+    * `Foxy Tutorials <https://docs.ros.org/en/foxy/Tutorials.html>`_
+    * `Foxy API <https://docs.ros2.org/foxy/api/rclcpp/index.html>`_
 
 
     .. code-block:: bash

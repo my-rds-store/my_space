@@ -29,7 +29,7 @@ Ubnntu 打包
 
 * https://gist.github.com/robertstarmer/5147832 
 
-* `InstallCDCustomization <https://help.ubuntu.com/community/InstallCDCustomization?action=show&redirect=InstallCDCustomizationHowTo>`_
+* `InstallCDCustomization（重定向） <https://help.ubuntu.com/community/InstallCDCustomization?action=show&redirect=InstallCDCustomizationHowTo>`_
 * `InstallCDCustomization Scripts <https://help.ubuntu.com/community/InstallCDCustomization/Scripts>`_
 
 * `Ubuntu Installation Guide <https://help.ubuntu.com/lts/installation-guide/amd64/index.html>`_

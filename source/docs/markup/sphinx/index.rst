@@ -422,7 +422,7 @@ Make sure the directory is referenced in source/conf.py - I believe by default t
 
 Then create a custom layout in source/_templates/layout.html and do something like this to include your stylesheet
 
-.. code-block:: html
+.. code-block:: text
 
 
     {% extends "!layout.html" %}

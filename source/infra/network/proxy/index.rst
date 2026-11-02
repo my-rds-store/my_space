@@ -240,7 +240,7 @@ Client
 kcptun 加速
 ==============
 
-* `kcptun  <https://github.com/xtaci/kcptun>`_   
+* `kcptun GitHub <https://github.com/xtaci/kcptun>`_   
 * `Using shadowsocks and kcptun <http://litaotju.github.io/2017/05/14/Uwssing-shadowsocks-and-kcptun/>`_
 
 

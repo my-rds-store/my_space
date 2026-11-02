@@ -11,7 +11,7 @@ Makedown
 
 
 
-.. code-block:: md
+.. code-block:: text
 
     ```mermaid
     graph TD
@@ -82,7 +82,7 @@ Makedown
 * 表格内折行
 
 
-.. code-block:: md
+.. code-block:: text
 
     |姓名|爱好|
     |----|----|
@@ -108,13 +108,13 @@ Or via style attribute (not supported by GitHub)
 
 Or you could use a custom CSS file as described in this answer on Markdown and image alignment
 
-.. code-block:: md
+.. code-block:: text
 
     ![drawing](drawing.jpg)
 
 CSS in another file:
 
-.. code-block:: md
+.. code-block:: text
 
     img[alt=drawing] { width: 200px; }
 
