@@ -1,91 +1,47 @@
 ###########
-Python 
+Python
 ###########
 
-* deadsnakes
+**适用版本**：Python 3.12+（Ubuntu 24.04 自带 3.12）
+
+环境与版本
+==========
+
+* 系统 Python：
+
+  .. code-block:: bash
+
+     sudo apt install python3 python3-venv python3-pip
+
+* 需要更新版本时使用 deadsnakes：
 
   .. code-block:: bash
 
      sudo add-apt-repository ppa:deadsnakes/ppa
-     sudo apt-get update
-     sudo apt-get install python3.7 python3.7-venv
+     sudo apt update
+     sudo apt install python3.13 python3.13-venv
+
+* 让 python 命令默认指向 python3：
+
+  .. code-block:: bash
+
+     sudo apt install python-is-python3
+
+* 查看安装路径：
+
+  .. code-block:: bash
+
+     python3 -m site
+     python3 -m site --user-site
 
 
-* python-is-python3
-    * 让 python 命令默认指向 python3（Ubuntu 20.04+，不用再敲 python3）
-
-.. code-block:: sh
-
-    # 如果经常用 `python` 而不是 `python3`
-    sudo apt install python-is-python3
-
-
-* `Numpy 中文 <https://www.numpy.org.cn/about/>`_
-
------------------
-
-* `Python Code Examples <https://www.programcreek.com/python/>`_
-
-* `python-requests <http://www.python-requests.org/en/master/>`_ 
-    * `Python Requests快速入门  <https://blog.csdn.net/iloveyin/article/details/21444613>`_
-
-* `在Linux中使用Python模拟键盘按键  <https://blog.csdn.net/zhouy1989/article/details/13997507>`_
-
-
-.. code-block:: sh
-    
-    # python2   SimpleHTTPServer
-    python -m SimpleHTTPServer 8008
-    
-    # python3   
-    python -m http.server 8008
-
-
-.. code-block:: sh
-
-    # 查找python安装包的路径 site-packages
-
-    python -m site              # 系统目录
-    python -m site --user-site  # 用户目录
-
-
-************
-打包
-************
-
-* `如何打包你的Python代码 <https://python-packaging-zh.readthedocs.io/zh_CN/latest/>`_
-
-* `Pyinstaller使用  <https://www.jianshu.com/p/cc76099bbe04>`_
-* `Using PyInstaller <http://pyinstaller.readthedocs.io/en/stable/usage.html>`_
-
----------
-
-* python3编译成pyc文件
-
-.. code-block:: sh
-
-    python3 -m compileall -b .           # -b: 生成的pyc与源代码在同一目录
-    find . -name '*.py' |xargs rm -rf    # . 删除py文件
-    find . -name 'pycache' |xargs rm -rf # 删除pycache目录
-
-
-*******
-Book   
-*******
-
-* `python3-cookbook <http://python3-cookbook.readthedocs.io/zh_CN/latest/>`_
-* `流畅的Python 中文PDF <https://www.linuxidc.com/Linux/2017-06/144466.htm>`_
-* `精通Python设计模式 高清晰PDF <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
-* `NumPy 中文文档 <https://www.numpy.org.cn/>`_
-
-**************
 国内镜像源
-**************
+==========
 
 * Linux
- 
+
 .. code-block:: sh
-        
+
     mkdir $HOME/.pip
     tee $HOME/.pip/pip.conf <<-'EOF'
     [global]
@@ -105,58 +61,107 @@ Book
 
         进入pip文件夹，新建一个pip.ini文件
 
-virtualenv   
+
+virtualenv
 ==================
 
 .. code-block:: sh
 
-    # old  version
-    #virtualenv --no-site-packages venv
-    #virtualenv -p /usr/bin/python3.6  --no-site-packages venv
-    
-    # new version 20.0.13
-    virtualenv --python=python3 venv
-    source venv/bin/activate #启动环境
-    deactivate  # 退出删除环境
+    # 推荐使用标准库 venv
+    python3 -m venv .venv
+    source .venv/bin/activate
+    deactivate
 
+    # virtualenv（可选）
+    virtualenv --python=python3 venv
 
     pip freeze  # 查看当前安装版本
     pip freeze > requirements.txt
 
 * `virtualenvwrapper  <https://www.cnblogs.com/freely/p/8022923.html>`_
 
-   待整理
+
+常用操作
+========
+
+临时 HTTP 服务
+--------------
+
+.. code-block:: bash
+
+   python3 -m http.server 8008
+
+.. note::
+
+   Python 2 的 SimpleHTTPServer 已移除，现在统一使用 http.server。
+
+编译 pyc
+--------
+
+.. code-block:: bash
+
+   python3 -m compileall -b .
+
+.. warning::
+
+   下面的命令会删除 .py 源文件，确认后再执行。
+
+.. code-block:: bash
+
+   find . -name '*.py' -delete
+   find . -name '__pycache__' -type d -prune -exec rm -rf {} +
+
+打包 Windows exe
+----------------
+
+.. code-block:: bash
+
+   python3 -m pip install pyinstaller
+   pyinstaller --onefile app.py
+
+* `PyInstaller 文档 <https://pyinstaller.org/en/stable/>`_
+* `Python 打包指南 <https://packaging.python.org/>`_
 
 
-python 语法规则   
+打包与资料
+==========
+
+* `如何打包你的 Python 代码 <https://python-packaging-zh.readthedocs.io/zh_CN/latest/>`_
+* `python3-cookbook <https://python3-cookbook.readthedocs.io/zh_CN/latest/>`_
+* `流畅的 Python <https://www.linuxidc.com/Linux/2017-06/144466.htm>`_
+* `精通 Python 设计模式 <https://www.linuxidc.com/Linux/2017-03/141662.htm>`_
+* `NumPy 中文 <https://www.numpy.org.cn/>`_
+* `Python Code Examples <https://www.programcreek.com/python/>`_
+* `requests <https://requests.readthedocs.io/>`_
+
+
+python 语法规则
 ==================
 
-
-* python规则指定,所有在赋值语句左面的变量都是局部变量
+* 函数内对变量赋值会创建局部变量；需要修改全局变量时用 global：
 
 .. code-block:: python
 
-    a=5
+    a = 5
     def func():
-        # global a  # 注释掉此行，报错
-        a = a+11
-        print a
+        global a
+        a = a + 11
+        print(a)
 
     func()
 
 
 -------
 
-* `Django 教程 <https://code.ziqiangxuetang.com/django/django-tutorial.html>`_
+* `Django 官方文档 <https://docs.djangoproject.com/zh-hans/stable/>`_
 
 
-****************
-python库  
-****************
+python库
+================
 
-* `lxml - XML and HTML with Python <http://lxml.de/>`_
+* `lxml - XML and HTML with Python <https://lxml.de/>`_
 
-* `Urwid <http://urwid.org/index.html>`_
+* `Urwid <https://urwid.org/index.html>`_
   * `urwid_timed_progress <https://github.com/mgk/urwid_timed_progress>`_
 
 * `pyserial <https://my.oschina.net/u/2306127/blog/616002>`_
@@ -175,141 +180,60 @@ python库
     class TapRecord(PyKeyboardEvent):
       def __init__(self):
         PyKeyboardEvent.__init__(self)
-     
+
       def tap(self, keycode, character, press):
         print(time.time(), keycode, character, press)
-     
+
     t = TapRecord()
     t.run()
 
 
 
 * `python装饰器详解 <https://blog.csdn.net/xiangxianghehe/article/details/77170585>`_
-* `python装饰器 <http://python.jobbole.com/82344/>`_
-* `详解Python的装饰器 <https://www.cnblogs.com/cicaday/p/python-decorator.html>`_
+* `python装饰器 <https://www.cnblogs.com/cicaday/p/python-decorator.html>`_
 
 ----
 
 .. code-block:: python
 
-    # 查看字符串 编码
+    # 查看字符串编码
     import chardet
-    fencoding=chardet.detect(u"test string")
-    print fencoding
+    fencoding = chardet.detect(u"test string")
+    print(fencoding)
 
-    # 从URL地址提取文件名
+    # 从 URL 地址提取文件名
     import os
     url = 'http://www.jb51.net/images/logo.gif'
     filename = os.path.basename(url)
     print(filename)
 
     # 去除扩展名
-    print os.path.splitext(filename)[0]
+    print(os.path.splitext(filename)[0])
 
     # 打印方法名
     import inspect
     import sys
-    for  method in  inspect.getmembers(sys.path):
-        print method
-
-***********************************
-Linux 下编译windows Exe
-***********************************
-
-* `winehq <https://wiki.winehq.org/Ubuntu_zhcn>`_
-
-* `Build a Windows executable from Python scripts on Linux <http://sparkandshine.net/build-a-windows-executable-from-python-scripts-on-linux/>`_
-
-.. code-block:: sh
-
-    sudo apt-get install wine32 winetricks
-    winetricks python 
-
-    cd ~/.wine/drive_c/Python26
-    #wine msiexec /i python-2.7.15.msi /L*v log.txt
-    wine msiexec /i python-2.7.15.msi 
-
-    wine python.exe Scripts/pip.exe install pyinstaller -i    https://pypi.mirrors.ustc.edu.cn/simple
-    wine python.exe Scripts/pip.exe install --upgrade pip -i  https://pypi.mirrors.ustc.edu.cn/simple
-    #wine python.exe Scripts/pip.exe install pyserial -i    https://pypi.mirrors.ustc.edu.cn/simple
-
-    cd ~/workspace
-
-    tee HelloWorld.py <<-"EOF"
-    print('hello world!')
-    EOF
-
-    wine ~/.wine/drive_c/Python27/Scripts/pyinstaller.exe --onefile HelloWorld.py
-    wine dist/HelloWorld.exe
+    for method in inspect.getmembers(sys.path):
+        print(method)
 
 
-.. code-block:: sh
-    
-    sudo dpkg --add-architecture i386 # 开启32位架构支持
-    sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/' /etc/apt/sources.list
-    apt-get update
-
-    apt-get install -y curl 
-    apt-get install -y wine32 
-    #apt-get install -y --fix-missing winetricks 
-
-    curl -o python-2.7.15.msi https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi
-    wine msiexec /i python-2.7.15.msi /q   #Dockerfile 有问题？？？, 手动安装没问题
-    rm -f  python-2.7.15.msi
-
-    PY_HOME=${HOME}/.wine/drive_c/Python27
-    wine ${PY_HOME}/python.exe ${PY_HOME}/Scripts/pip.exe install pyinstaller   -i  https://pypi.mirrors.ustc.edu.cn/simple
-    wine ${PY_HOME}/python.exe ${PY_HOME}/Scripts/pip.exe install --upgrade pip -i  https://pypi.mirrors.ustc.edu.cn/simple
-
-
-------
-
-* `Urwid 项目页 <http://urwid.org/>`_
-* `npyscreen  <https://npyscreen.readthedocs.io/index.html>`_
-
-*******
-其他   
-*******
+其他
+====
 
 * `python全栈学习路线-查询笔记 <https://www.cnblogs.com/eric_yi/p/8483079.html>`_
 
 
-***********
-机器学习   
-***********
+机器学习
+========
 
 * https://github.com/Avik-Jain/100-Days-Of-ML-Code
 
 
-******************
-build int docker 
-******************
-
-* https://github.com/dockefile-storage/wine/blob/master/Dockerfile
-* https://hub.docker.com/r/cdrx/pyinstaller-windows/dockerfile
-* http://www.kegel.com/wine/cl-howto-win7sdk.html
-* https://github.com/Winetricks/winetricks
-    * https://github.com/Winetricks/winetricks/blob/master/files/verbs/settings.txt
-
-************************************
-build install python 
-************************************
-
-.. code-block:: sh
-
-        # 编译前安装 , 否则pip 报错误
-        sudo apt-get install openssl
-        sudo apt-get install libssl-dev
-
-* `Ubuntu 16.04 安装 Python3.6 <https://www.cnblogs.com/gaowengang/p/7736672.html>`_
-        * `python3.6安装报错ZipImportError...zlib not available <https://blog.51cto.com/jschu/2174394>`_
-
-************************************
-示例 
-************************************
+示例
+====
 
 UDP 接收超时
-=============
+-------------
 
 .. literalinclude:: src/udp_timeout.py
     :linenos:
@@ -317,3 +241,7 @@ UDP 接收超时
     :emphasize-lines: 6, 9,15
 
 
+过时内容
+========
+
+Python 2、SimpleHTTPServer、Wine + Python 2.7 打包等旧笔记已移到 :doc:`/legacy/python2`。
