@@ -48,11 +48,11 @@ conf.py
 
 `sphinx文档使用graphviz来画图 <http://ju.outofmemory.cn/entry/220289>`_
 
-`graphviz dot语言学习笔记 <http://www.jianshu.com/p/e44885a777f0>`_
+`graphviz dot语言学习笔记 <https://www.jianshu.com/p/e44885a777f0>`_
 
 
-`使用 Graphviz dot 创作 UML 类图 <http://www.jianshu.com/p/d730f83bd81f>`_
-`使用Graphviz Dot绘制类图 <http://blog.csdn.net/ttomer/article/details/8684689>`_ 
+`使用 Graphviz dot 创作 UML 类图 <https://www.jianshu.com/p/d730f83bd81f>`_
+`使用Graphviz Dot绘制类图 <https://blog.csdn.net/ttomer/article/details/8684689>`_
 
 `UML绘制-dot语言 <https://segmentfault.com/a/1190000004646829?utm_source=tuicool&utm_medium=referral>`_
 

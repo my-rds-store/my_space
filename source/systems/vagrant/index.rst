@@ -2,6 +2,11 @@
 Vagrant
 ##############
 
+.. warning::
+
+   以下 trusty/bionic/Fedora 28 示例已过时，mirrors.shu.edu.cn 也已不可用。
+   请从 https://cloud-images.ubuntu.com/ 下载对应版本的 cloud image。
+
 ************************************
 Vagrant 插件
 ************************************
@@ -309,7 +314,7 @@ Docs
 * `vagrant with guis and windows <https://www.phparch.com/2015/01/vagrant-with-guis-and-windows/>`_
 * `Vagrant 入门 <https://www.cnblogs.com/davenkin/p/vagrant-virtualbox.html>`_
 
-* http://blog.csdn.net/hel12he/article/details/51069269
+* https://blog.csdn.net/hel12he/article/details/51069269
 
 ----
 

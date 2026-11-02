@@ -30,7 +30,7 @@ APK 证书
 
 * `给第三方apk进行系统签名的几种方式  <https://blog.csdn.net/luzhenrong45/article/details/47733053>`_
 
-* `生成证书  <http://www.cnblogs.com/littleatp/p/5922362.html>`_
+* `生成证书  <https://www.cnblogs.com/littleatp/p/5922362.html>`_
 
 .. code-block:: sh
 
@@ -193,7 +193,7 @@ required
 https://jcenter.bintray.com/com/android/tools/build/
 
 
-`Android studio 关闭 初次启动更新 <http://blog.csdn.net/wyl_1994/article/details/52353647>`_
+`Android studio 关闭 初次启动更新 <https://blog.csdn.net/wyl_1994/article/details/52353647>`_
 
 
 Android SDK 在线更新镜像服务器资源

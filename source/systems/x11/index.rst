@@ -23,7 +23,7 @@ Install
 
     <script src="https://gist.github.com/mapix/4652350.js"></script>
 
-* `startx <http://man.linuxde.net/startx>`_
+* `startx <https://manpages.debian.org/bookworm/xinit/startx.1.en.html>`_
 
 .. code-block:: sh
 

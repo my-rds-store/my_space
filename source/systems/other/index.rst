@@ -69,7 +69,7 @@ OBS Studio
 开源许可证
 -----------
 
-* http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html
+* https://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html
 
 ceph
     * `英文文档 <http://docs.ceph.com/docs/master/rados/>`_
@@ -91,22 +91,22 @@ mingw编译gtk
 ------------------------
 
 * `快速建立工程模板cookiecutter <https://pypi.python.org/pypi/cookiecutter/1.5.1>`_
-* `virtualenv搭建虚拟环境 <http://www.cnblogs.com/kym/archive/2011/12/29/2306428.html>`_
+* `virtualenv搭建虚拟环境 <https://www.cnblogs.com/kym/archive/2011/12/29/2306428.html>`_
 
 
 patch
 -----
 
-* `linux patch 命令小结 <http://blog.csdn.net/wh_19910525/article/details/7515540>`_
-* `patch 命令用法详解 <http://blog.csdn.net/clozxy/article/details/5830880>`_
-* `二进制patch工具xdelta的使用方法 <http://blog.csdn.net/panda_bear/article/details/8191859/>`_
+* `linux patch 命令小结 <https://blog.csdn.net/wh_19910525/article/details/7515540>`_
+* `patch 命令用法详解 <https://blog.csdn.net/clozxy/article/details/5830880>`_
+* `二进制patch工具xdelta的使用方法 <https://blog.csdn.net/panda_bear/article/details/8191859/>`_
 
 
 
 SPAW 分区
 -------------
 
-`Linux系统swappiness参数在内存与交换分区之间优化作用 <http://blog.csdn.net/lufeisan/article/details/53339991>`_
+`Linux系统swappiness参数在内存与交换分区之间优化作用 <https://blog.csdn.net/lufeisan/article/details/53339991>`_
 
 Linux VPS的使用过程中，SWAP交换分区是一个很重要系统缓存分区。他是在内存不够用的情况下，从硬盘中临时分出一部分空间系统当做内存使用。但是，如果SWAP的占用超过30%的时候，系统的性能就会受到影响，这时候就要刷新SWAP。
 
@@ -255,7 +255,7 @@ rmp and yum
 nginx
 ------
 
-* `nginx简易教程 <http://www.cnblogs.com/jingmoxukong/p/5945200.html>`_
+* `nginx简易教程 <https://www.cnblogs.com/jingmoxukong/p/5945200.html>`_
 
 
 * BurnInTest - 电脑系统稳定性与可靠性测试工具
@@ -401,9 +401,9 @@ remote-viewer
    
 
 BitTorrent
-    * `CentOS 下搭建BT下载服务器安装笔记  <http://www.linuxidc.com/Linux/2011-05/35510.htm>`_
+    * `CentOS 下搭建BT下载服务器安装笔记  <https://www.linuxidc.com/Linux/2011-05/35510.htm>`_
     * `CTorrent <http://www.3haoweb.cn/a/internet/download/bt/2010/1030/4446.html>`_
-    * `其他 <http://blog.csdn.net/vblittleboy/article/details/38494807>`_
+    * `其他 <https://blog.csdn.net/vblittleboy/article/details/38494807>`_
 
 .. code-block:: bash
     

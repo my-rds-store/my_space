@@ -206,7 +206,7 @@ example
     * `LIO-SAM源码阅读分析（1）--配置文件Tips <https://zhuanlan.zhihu.com/p/171589473>`_
     * https://zhuanlan.zhihu.com/p/352039509
     * https://blog.csdn.net/heirenlop/article/details/115216476
-* `imu ch110 <https://hub.fastgit.org/hipnuc/products>`_
+* `imu ch110 <https://github.com/hipnuc/products>`_
 
 ***********
 常用命令
@@ -364,11 +364,11 @@ roslaunch
             在节点的〜 / local命名空间中设置一个参数。
 
 
-`rosbag <http://wiki.ros.org/rosbag/Commandline>`_
+`rosbag <https://wiki.ros.org/rosbag/Commandline>`_
 ====================================================
 
-* `Commandline <http://wiki.ros.org/rosbag/Commandline>`_
-* `Code API <http://wiki.ros.org/rosbag/Code%20API>`_
+* `Commandline <https://wiki.ros.org/rosbag/Commandline>`_
+* `Code API <https://wiki.ros.org/rosbag/Code%20API>`_
 
 
 * 录制
@@ -496,7 +496,7 @@ ROSINFO
 package
 ==========
 
-* `image_transport <http://wiki.ros.org/image_transport>`_
+* `image_transport <https://wiki.ros.org/image_transport>`_
 
     .. code-block:: sh
 
@@ -518,7 +518,7 @@ package
 
 * `订阅 rtsp topic 发送 rtsp - ros_rtsp <https://github.com/CircusMonkey/ros_rtsp.git>`_
 
-* `rocon_rtsp_camera_relay  <http://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_  
+* `rocon_rtsp_camera_relay  <https://wiki.ros.org/action/fullsearch/rocon_rtsp_camera_relay?action=fullsearch&context=180&value=linkto%3A%22rocon_rtsp_camera_relay%22>`_
     * `参考 - Ubuntu利用ROS搭建手机移动网络摄像头 (Android) <https://www.bbsmax.com/A/E35pOMWgJv/>`_
 
     .. code-block:: sh
@@ -544,7 +544,7 @@ package
 
 ----------------
 
-* `pointgrey_camera_driver <http://wiki.ros.org/pointgrey_camera_driver>`_
+* `pointgrey_camera_driver <https://wiki.ros.org/pointgrey_camera_driver>`_
 
 
     `Download FlyCapture SDK - flycapture2-2.13.3.31-amd64-pkg_Ubuntu18.04.tgz <https://www.flir.com/support-center/iis/machine-vision/downloads/spinnaker-sdk-flycapture-and-firmware-download/>`_
@@ -629,9 +629,9 @@ tf变换
     <node pkg="tf" type="static_transform_publisher" name="map_to_mobility" args="0 0 0 0 0 0 /map /mobility 10" />
     </launch>
 
-* `API <http://wiki.ros.org/tf/Overview/Using%20Published%20Transforms>`_
+* `API <https://wiki.ros.org/tf/Overview/Using%20Published%20Transforms>`_
 
-* `tf namespace <http://docs.ros.org/en/kinetic/api/tf/html/c++/namespacetf.html>`_
+* `tf namespace <https://docs.ros.org/en/kinetic/api/tf/html/c++/namespacetf.html>`_
     * tf::TransformListener Class Reference
 
 
@@ -666,7 +666,7 @@ tf变换
                                         geometry_msgs::Quaternion &msg)
 
 
-* `geometry_msgs <http://docs.ros.org/en/api/geometry_msgs/html/index-msg.html>`_
+* `geometry_msgs <https://docs.ros.org/en/api/geometry_msgs/html/index-msg.html>`_
 
 
 ROS 分布式
@@ -859,13 +859,13 @@ Peak-CAN
 pcanview
 ***************
 
-* `pcanview  <http://www.peak-system.com/fileadmin/media/linux/index.htm>`_
+* `pcanview  <https://www.peak-system.com/fileadmin/media/linux/index.htm>`_
 
 
 .. code-block:: bash
 
-  wget -q http://www.peak-system.com/debian/dists/`lsb_release -cs`/peak-system.list -O- | sudo tee /etc/apt/sources.list.d/peak-system.list
-  wget -q http://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add -
+  wget -q https://www.peak-system.com/debian/dists/`lsb_release -cs`/peak-system.list -O- | sudo tee /etc/apt/sources.list.d/peak-system.list
+  wget -q https://www.peak-system.com/debian/peak-system-public-key.asc -O- | sudo apt-key add -
   sudo apt-get update 
   sudo apt-get install pcanview-ncurses
 
@@ -934,7 +934,7 @@ pcanview
        rosrun socketcan_bridge topic_to_socketcan_node _can_device:=vcan0
 
 
-* `socketcan_interface <http://wiki.ros.org/socketcan_interface?distro=melodic>`_
+* `socketcan_interface <https://wiki.ros.org/socketcan_interface?distro=melodic>`_
 
 .. code-block:: sh 
 
@@ -947,7 +947,7 @@ pcanview
 
 * `Can Dbc Editor - SavvyCAN <https://github.com/collin80/SavvyCAN/releases>`_
         
-* `PID <http://wiki.ros.org/pid>`_
+* `PID <https://wiki.ros.org/pid>`_
 
 ------
 
@@ -1096,7 +1096,7 @@ can-dbc-parser
 *****************
 
     * Source : https://github.com/NewEagleRaptor/raptor-dbw-ros
-    * `code API (can_dbc_parser) <http://docs.ros.org/en/melodic/api/can_dbc_parser/html/namespaceNewEagle.html>`_
+    * `code API (can_dbc_parser) <https://docs.ros.org/en/melodic/api/can_dbc_parser/html/namespaceNewEagle.html>`_
 
     * Install : **sudo apt-get install ros-${ROS_DISTRO}-can-dbc-parser**
 

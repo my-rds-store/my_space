@@ -55,11 +55,11 @@ Bash
 常用命令
 --------
 
-    http://blog.csdn.net/jxm_csdn/article/details/52234267
+    https://blog.csdn.net/jxm_csdn/article/details/52234267
 
-    `我使用过的Linux命令之trap - 在脚本中处理信号 <http://blog.csdn.net/world_hello_100/article/details/18049599>`_
+    `我使用过的Linux命令之trap - 在脚本中处理信号 <https://blog.csdn.net/world_hello_100/article/details/18049599>`_
 
-* `Bash 脚本 set 命令教程 <http://www.ruanyifeng.com/blog/2017/11/bash-set.html?utm_source=tool.lu>`_
+* `Bash 脚本 set 命令教程 <https://www.ruanyifeng.com/blog/2017/11/bash-set.html?utm_source=tool.lu>`_
 
 修改文件名 rename
 -------------------
@@ -115,7 +115,7 @@ sftp文件批量上传与下载
 ------------------------
 
 * https://stackoverflow.com/questions/41378953/unknown-command-lftp
-* `用Python实现无交互sftp上传 下载 <http://blog.csdn.net/u010950854/article/details/62233538?utm_source=itdadao&utm_medium=referral>`_
+* `用Python实现无交互sftp上传 下载 <https://blog.csdn.net/u010950854/article/details/62233538?utm_source=itdadao&utm_medium=referral>`_
 
 .. code-block:: sh
 

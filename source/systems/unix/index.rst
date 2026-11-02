@@ -4,7 +4,7 @@ Linux
 split分割文件
 -------------
 
-http://blog.csdn.net/whu_zhangmin/article/details/45870077
+https://blog.csdn.net/whu_zhangmin/article/details/45870077
 
 .. code:: sh
 
@@ -75,8 +75,8 @@ nohub
 
 
 
-`磁盘坏道 <http://man.linuxde.net/badblocks>`_
---------------------------------------------------------
+`磁盘坏道 <https://man7.org/linux/man-pages/man8/badblocks.8.html>`_
+--------------------------------------------------------------------------------------------
 
 .. code-block:: sh
 
@@ -90,7 +90,7 @@ nohub
 ssh 无密码登录
 --------------------
 
-http://blog.csdn.net/zhaihaifei/article/details/50523576
+https://blog.csdn.net/zhaihaifei/article/details/50523576
 
 
 
@@ -148,7 +148,7 @@ ip 命令使用
 CentOS 网络
 `````````````````````
 
-* `CentOS 7网卡网桥、绑定设置 <http://www.cnblogs.com/configure/p/5799538.html>`_
+* `CentOS 7网卡网桥、绑定设置 <https://www.cnblogs.com/configure/p/5799538.html>`_
 * `bond <https://www.cnblogs.com/liwanggui/p/6807212.html>`_
    
 .. code::
@@ -534,16 +534,16 @@ Linux平台下的service程序编写指南
 ------------------------------------
 
 C
-    http://blog.csdn.net/gobitan/article/details/5903342
+    https://blog.csdn.net/gobitan/article/details/5903342
 python
-    http://blog.csdn.net/philip502/article/details/13511625
+    https://blog.csdn.net/philip502/article/details/13511625
     https://stackoverflow.com/questions/4705564/python-script-as-linux-service-daemon
 
 
 磁盘IO 查看
 -----------------------
 
-http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
+https://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858810.html
 
 .. code-block:: sh
     
@@ -781,7 +781,7 @@ Ubuntu 修改 启动时间等待
 Systemd  
 -------------------
 
-* `Systemd 入门教程 <http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html>`_
+* `Systemd 入门教程 <https://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html>`_
 * `systemctl 命令完全指南 <https://www.linuxidc.com/Linux/2015-07/120833.htm>`_
 * `REATING AND MODIFYING SYSTEMD UNIT FILES <https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-managing_services_with_systemd-unit_files>`_
 

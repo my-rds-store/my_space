@@ -97,7 +97,7 @@ Docker Containers
 * Packages
     * `ros_canopen <https://github.com/ros-industrial/ros_canopen/tree/dashing>`_
     * `can_dbc_parser <https://github.com/NewEagleRaptor/raptor-dbw-ros2>`_
-    * http://docs.ros.org/en/melodic/api/can_dbc_parser/html/annotated.html
+    * https://docs.ros.org/en/melodic/api/can_dbc_parser/html/annotated.html
       
 
 * Build
@@ -220,7 +220,7 @@ Docker Containers
 
     git clone https://github.com/ros2/examples.git 
 
-    git clone https://hub.fastgit.org/ros2/examples.git 
+    git clone https://github.com/ros2/examples.git
 
 ----
 

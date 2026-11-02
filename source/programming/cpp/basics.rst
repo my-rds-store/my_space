@@ -2,7 +2,7 @@
 C++   
 #######
 
-* `C++ reference <http://en.cppreference.com/w/>`_ 
+* `C++ reference <https://en.cppreference.com/w/>`_
 
 **************
 23种设计模式  

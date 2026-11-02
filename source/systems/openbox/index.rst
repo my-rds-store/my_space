@@ -87,5 +87,5 @@ Install and Start
 
 .. seealso::
 
-    `Centos7 安装lightdm openbox tint2配置最简单桌面 <http://blog.csdn.net/shile/article/details/53809365>`_
+    `Centos7 安装lightdm openbox tint2配置最简单桌面 <https://blog.csdn.net/shile/article/details/53809365>`_
 

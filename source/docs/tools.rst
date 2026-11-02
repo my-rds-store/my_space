@@ -25,6 +25,6 @@
 --------
 
 * `奶牛快传 <http://cowtransfer.com/>`_
-* `Firefox Send <https://send.ioiox.com/>`_
+* `Send（Firefox Send 社区版） <https://github.com/timvisee/send>`_
 * `anonfile <https://anonfile.com/>`_
 * `degoo <https://degoo.com>`_

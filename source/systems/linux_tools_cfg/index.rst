@@ -245,7 +245,7 @@ x11vnc
     4. 重启 wps
 
 
-参考: http://www.cnblogs.com/liangml/p/5969404.html
+参考: https://www.cnblogs.com/liangml/p/5969404.html
 
 
 

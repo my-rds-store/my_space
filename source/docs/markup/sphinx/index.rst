@@ -22,10 +22,10 @@ reStructuredText
 
 * `reStructuredText 语法 <https://3vshej.cn/rstSyntax/index.html>`_
 
-* `Quick reStructuredText <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
-* `reStructuredText Directives <http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
-* `reStructuredText Markup Specification <http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
-* `A ReStructuredText Primer <http://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_
+* `Quick reStructuredText <https://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+* `reStructuredText Directives <https://docutils.sourceforge.net/docs/ref/rst/directives.html>`_
+* `reStructuredText Markup Specification <https://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html>`_
+* `A ReStructuredText Primer <https://docutils.sourceforge.net/docs/user/rst/quickstart.html>`_
 * `sphinx-doc <http://www.sphinx-doc.org/en/stable/index.html>`_
 
 * `放到git page <http://lucasbardella.com/blog/2010/02/hosting-your-sphinx-docs-in-github>`_
@@ -311,7 +311,7 @@ Gitee
            <hr width=50 size=10>
 
         .. raw:: html
-           :url: http://docutils.sourceforge.net/docs/ref/rst/directives.html
+           :url: https://docutils.sourceforge.net/docs/ref/rst/directives.html
 
 
 公式

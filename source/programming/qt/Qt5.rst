@@ -27,7 +27,7 @@ Qt学习 开源项目
 
     .. code-block:: sh
 
-        git clone --depth 1 https://hub.fastgit.org/oguzhaninan/Stacer.git
+        git clone --depth 1 https://github.com/oguzhaninan/Stacer.git
 
 * Qt自定义控件
     * https://github.com/feiyangqingyun/qucsdk

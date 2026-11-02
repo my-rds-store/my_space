@@ -232,7 +232,7 @@ Client
 
 * https://www.cnblogs.com/cursorhu/p/7157257.html
 
-* http://blog.csdn.net/lee_j_r/article/details/54019691
+* https://blog.csdn.net/lee_j_r/article/details/54019691
 * https://www.8dlive.com/post/168.html
 * http://xinwen.eastday.com/a/170207195821936.html
     

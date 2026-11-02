@@ -18,7 +18,7 @@ Install
 * `关于dnsmasq的使用配置 <http://www.tuicool.com/articles/bUn2Uz>`_ 
 * `Dnsmasq使用参考入门 <http://www.freeoa.net/osuport/servap/dnsmasq-use-intro-refer_2480.html>`_
 * `dnsmasq之dnsmasq.conf配置 <http://www.mamicode.com/info-detail-1648780.html>`_
-* `dnsmasq用法 <http://blog.csdn.net/h721510279812/article/details/39010355>`_
+* `dnsmasq用法 <https://blog.csdn.net/h721510279812/article/details/39010355>`_
 
 
 DNS服务
@@ -32,7 +32,7 @@ https://manpages.debian.org/jessie/dnsmasq-base/dnsmasq.8.en.html
 http://www.yunweipai.com/archives/8664.html
 http://chuansong.me/n/471642951828
 http://debugo.com/dnsmasq/
-http://blog.csdn.net/linuxnews/article/details/51034338
+https://blog.csdn.net/linuxnews/article/details/51034338
 
 # slove "dnsmasq: setting capabilities failed: Operation not permitted"
 https://hub.docker.com/r/fayehuang/centos-serf/~/dockerfile/
@@ -106,8 +106,8 @@ DHCP服务
 Nat转发
 ===============
 
-    * `Linux CentOS 6 NAT 转发 完整教程  <http://www.linuxidc.com/Linux/2017-07/145382.htm>`_
-    * `linux-iptables nat设置路由转换 <http://blog.csdn.net/cooling88/article/details/51040054>`_
+    * `Linux CentOS 6 NAT 转发 完整教程  <https://www.linuxidc.com/Linux/2017-07/145382.htm>`_
+    * `linux-iptables nat设置路由转换 <https://blog.csdn.net/cooling88/article/details/51040054>`_
 
 * 两个网卡:
     * enp2s0 : 连接外网, 192.168.8.25

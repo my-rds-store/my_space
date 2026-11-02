@@ -189,8 +189,7 @@ MapToolbox
 
 
     # Download 1.14.0
-    wget https://raw.fastgit.org/Autoware-AI/autoware.ai/1.14.0/autoware.ai.repos
-    sed -i "s/github.com/hub.fastgit.org/" autoware.ai.repos
+    wget https://raw.githubusercontent.com/Autoware-AI/autoware.ai/1.14.0/autoware.ai.repos
 
     #　使用官方 lanelet2
     # sudo apt-get install  ros-melodic-lanelet2
@@ -246,7 +245,7 @@ MapToolbox
   sudo apt install -y libopenblas-dev #libatlas-base-dev
   sudo apt install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
   
-  git clone --depth 1 https://hub.fastgit.org/BVLC/caffe.git $HOME/caffe
+  git clone --depth 1 https://github.com/BVLC/caffe.git $HOME/caffe
   
   URL_PATH=https://raw.githubusercontent.com/my-rds-store/my_space/master/source/robotics/autoware/src/caffe
   wget -O $HOME/caffe/Makefile.config  $URL_PATH/Makefile.config
@@ -269,7 +268,7 @@ MapToolbox
 
   #下载 APOLLO_CNNSEG
   #https://github.com/ApolloAuto/apollo/tree/master/modules/perception/production/data/perception/lidar/models/cnnseg
-  #https://hub.fastgit.org/ApolloAuto/apollo/tree/master/modules/perception/production/data/perception/lidar/models/cnnseg
+  #https://github.com/ApolloAuto/apollo/tree/master/modules/perception/production/data/perception/lidar/models/cnnseg
 
 
 4. Autoware Docker 镜像
@@ -381,7 +380,7 @@ MapToolbox
             host:=192.168.8.6 town:=Town03 vehicle_filter:=vehicle.toyota.prius  \
             spawn_point:="0.700499,-189.727951,0.2,0,0.000000,-91.413536"
 
-`carla-autoware <https://hub.fastgit.org/carla-simulator/carla-autoware>`_
+`carla-autoware <https://github.com/carla-simulator/carla-autoware>`_
 `````````````````````````````````````````````````````````````````````````````
 
 .. code-block:: sh

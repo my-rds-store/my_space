@@ -40,12 +40,12 @@ Git 常用命令
 
 * `Git使用流程规范 <http://www.jizhuomi.com/software/436.html>`_
 * `Gitlab 项目分支管理的一种策略 <https://segmentfault.com/a/1190000006062453>`_
-* `Git rebase简介 <http://blog.csdn.net/hudashi/article/details/7664631/>`_
+* `Git rebase简介 <https://blog.csdn.net/hudashi/article/details/7664631/>`_
 
 ----
 
-* `Git分支管理策略  <http://www.ruanyifeng.com/blog/2012/07/git.html>`_
-* `git cherry-pick 教程 (*重点*) <http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html>`_
+* `Git分支管理策略  <https://www.ruanyifeng.com/blog/2012/07/git.html>`_
+* `git cherry-pick 教程 (*重点*) <https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html>`_
 
 .. image:: ./image/Repository.png
     :scale: 100%
@@ -128,7 +128,7 @@ Gitignore
     EOF
 
 
-`git log <http://blog.csdn.net/wh_19910525/article/details/7468549>`_
+`git log <https://blog.csdn.net/wh_19910525/article/details/7468549>`_
 =============================================================================
 
 .. code-block:: sh
@@ -290,21 +290,21 @@ Github
 
 
 * github的镜像网站 
-    * https://ghproxy.com/
+    * 原 ghproxy.com 已不可用，以下示例改为直连。
 
 .. code-block:: sh 
 
     # 未加速
     git clone https://github.com/Autoware-AI/autoware.ai.git 
 
-    # 加速
-    git clone https://ghproxy.com/https://github.com/stilleshan/ServerStatus
+    # 直连
+    git clone https://github.com/stilleshan/ServerStatus
 
     wget & curl
-    wget https://ghproxy.com/https://github.com/stilleshan/ServerStatus/archive/master.zip
-    wget https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
-    curl -O https://ghproxy.com/https://github.com/stilleshan/ServerStatus/archive/master.zip
-    curl -O https://ghproxy.com/https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
+    wget https://github.com/stilleshan/ServerStatus/archive/master.zip
+    wget https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
+    curl -O https://github.com/stilleshan/ServerStatus/archive/master.zip
+    curl -O https://raw.githubusercontent.com/stilleshan/ServerStatus/master/Dockerfile
 
 
 * `Syncing a fork <https://help.github.com/articles/syncing-a-fork/>`_
@@ -451,10 +451,10 @@ Gitlab Prometheus
 Gitlab other
 -----------------
 
-* `指定HostName  <http://blog.csdn.net/u011054333/article/details/61532271>`_
+* `指定HostName  <https://blog.csdn.net/u011054333/article/details/61532271>`_
 * `gitlab docker <https://hub.docker.com/u/gitlab/>`_
 * `gitlab docker 镜像 <https://hub.docker.com/r/gitlab/gitlab-ce/>`_
-* `使用docker运行gitlab服务 <http://blog.csdn.net/felix_yujing/article/details/52139070>`_
+* `使用docker运行gitlab服务 <https://blog.csdn.net/felix_yujing/article/details/52139070>`_
 *  https://docs.gitlab.com/omnibus/docker/
 
 
@@ -714,9 +714,9 @@ Advanced
     $ sudo gitlab-runner list
     $ sudo gitlab-runner verify
 
-* `gitlab runner 遇到的几个坑 <http://www.jianshu.com/p/d91387b9a79b>`_
-* `GitLab-CI与GitLab-Runner <http://www.jianshu.com/p/2b43151fb92e>`_
-* `[后端]gitlab之gitlab-ci自动部署  <http://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation>`_
+* `gitlab runner 遇到的几个坑 <https://www.jianshu.com/p/d91387b9a79b>`_
+* `GitLab-CI与GitLab-Runner <https://www.jianshu.com/p/2b43151fb92e>`_
+* `[后端]gitlab之gitlab-ci自动部署  <https://www.jianshu.com/p/df433633816b?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation>`_
 
 **************************
 Docker 镜像托管 (待研究)    
@@ -732,7 +732,7 @@ Travis CI
 
 * `docs.travis-ci <https://docs.travis-ci.com/>`_
 
-* `持续集成服务 Travis CI 教程 <http://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html>`_
+* `持续集成服务 Travis CI 教程 <https://www.ruanyifeng.com/blog/2017/12/travis_ci_tutorial.html>`_
 
 * `用Travis CI给android项目部署Github release <http://kescoode.com/travis-ci-android-github-release/>`_
 * `基于Travis CI搭建Android自动打包发布工作流（支持Github Release及fir.im） <https://avnpc.com/pages/android-auto-deploy-workflow-on-travis-ci>`_

@@ -648,7 +648,7 @@ Docker私有仓库
     sudo docker-compose restart
 
 
-* `Docker私有仓库搭建  <http://www.jianshu.com/p/00ac18fce367>`_
+* `Docker私有仓库搭建  <https://www.jianshu.com/p/00ac18fce367>`_
 
 **http: server gave HTTP response to HTTPS client** , 解决,添加如下:
 
@@ -661,7 +661,7 @@ Docker私有仓库
 
 
 
-* `使用官方 docker registry 搭建私有镜像仓库及部署 web ui <http://blog.csdn.net/mideagroup/article/details/52052618>`_
+* `使用官方 docker registry 搭建私有镜像仓库及部署 web ui <https://blog.csdn.net/mideagroup/article/details/52052618>`_
 
 
 *****
