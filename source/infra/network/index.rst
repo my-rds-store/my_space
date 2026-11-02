@@ -7,3 +7,4 @@
    nginx/index
    dnsmasq/index
    proxy/index
+   nextcloud
