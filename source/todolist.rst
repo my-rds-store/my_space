@@ -46,6 +46,9 @@
     * https://wiki.sipeed.com/hardware/zh/lichee/Zero/Zero.html
     * https://licheezero.readthedocs.io/zh/latest/index.html
 
+* [ ] AI（agent 具身智能）相关岗位查询
+    * 山东智衍科技（魏桥全资控股的子公司）
+
 **********
 已完成
 **********
