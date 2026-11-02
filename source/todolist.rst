@@ -40,6 +40,10 @@
     * https://iceoryx.io/
     * https://github.com/eclipse-iceoryx/iceoryx2
 
+* [ ] Lichee Zero 研究
+    * https://wiki.sipeed.com/hardware/zh/lichee/Zero/Zero.html
+    * https://licheezero.readthedocs.io/zh/latest/index.html
+
 **********
 已完成
 **********
