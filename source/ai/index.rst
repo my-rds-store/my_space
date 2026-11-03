@@ -8,47 +8,39 @@ AI
    :local:
    :depth: 2
 
-**************
-cursor      
-**************
-
-* `cursor models <https://docs.cursor.com/settings/models#available-models>`_
-
-.. code-block:: sh
-
-   npm install -g repomix  --registry https://registry.npmmirror.com
-
-   repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git
-   repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git --remote-branch main
-   repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git --remote-branch 935b695
-   repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/mcu/traffic_light_test_ui.git --style markdown,
-   repomix  .
-
-* `gitingest <https://gitingest.com/>`_
-
-    * gitingest 是一个开源工具，可以将 Git 仓库中的代码和文档转换为适合大语言模型（LLM）使用的格式，
-      以便更好地进行代码理解、生成和自动化任务。
-
-.. code-block:: sh
-
-    连接的主机ip地址变了 192.168.110.120 ->192.168.110.127，
-    更改连接地址后， Could not establish connection to 192.168.110.127
-
-    MobaXterm 可以成功连接到 192.168.110.127，但 Cursor 的 Remote-SSH 无法连接;
-
-    ssh-keygen -R 192.168.110.127
 
 
-    根本原因：
-        目标主机 IP 从 192.168.110.120 变为 192.168.110.127，但 known_hosts 文件中保留了旧 IP 的主机密钥记录，
-        导致 Cursor 的 SSH 客户端因密钥不匹配而拒绝连接。
+************
+SKILL使用
+************
 
-    解决机制：
-        ssh-keygen -R 192.168.110.127 删除了 known_hosts 中与 192.168.110.127 相关的记录，
-        允许 Cursor 在下次连接时重新接受主机密钥。
+Claude Code 只识别 ``~/.claude/skills/`` 或项目 ``.claude/skills/`` 下的一级目录。
 
-    MobaXterm 的不同表现：
-        MobaXterm 可能自动更新或忽略密钥不匹配，而 Cursor 的严格检查导致需要手动清理。
+推荐做法
+--------
+
+* 真实文件放独立 Git 仓库，例如 ``~/my-skills/``
+* 每个 Skill 建符号链接：
+
+.. code-block:: bash
+
+   # 用户级
+   ln -s ~/my-skills/my-skill ~/.claude/skills/my-skill
+
+   # 项目级（仅本机，不要提交到团队仓库）
+   ln -s ~/my-skills/my-skill <project>/.claude/skills/my-skill
+
+* 在源仓库正常 git commit/push；其他设备 git pull 后立即生效
+* 项目/团队需要锁定版本时，用 Git submodule 挂到 .claude/skills；不要把绝对路径链接提交给团队
+
+注意
+----
+
+* 链接单个 Skill，不要把整个 skills 目录替换成链接
+* Skill 必须平铺在 skills/ 下一级，不能保留分类子目录
+* Windows 需开启开发者模式，并设置 git config --global core.symlinks true
+* 符号链接下 allowed-tools 对自身目录的 Read 规则可能不生效
+* 需要提交符号链接时，.gitignore 可能忽略它，需 git add -f
 
 
 **************
@@ -59,34 +51,20 @@ MCP
 * `MCP Official Website <https://mcp.so/>`_
 * `Playbooks MCP <https://playbooks.com/mcp>`_
 
-* Figma
-    * `Figma-Context-MCP <https://github.com/GLips/Figma-Context-MCP>`_
-    * `cursor-talk-to-figma-mcp <https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp>`_
+* 面向软件库文档的 RAG 检索能力（MCP）
+    * `docs-mcp-server: context7 的开源替代方案 <https://github.com/arabold/docs-mcp-server>`_
+        `Grounded Docs MCP Server    <https://grounded.tools/>`_
 
-* `GitNexus <https://github.com/abhigyanpatwari/GitNexus>`_
-    * 1. 知识图谱索引工具 - 将代码库索引为知识图谱，让 AI 代理能够深度分析代码依赖、调用链和执行流程
-    * 2. MCP 服务器 - 通过 Model Context Protocol 提供 7 个工具和多种资源
-    * 3. 本地运行 - 所有操作都在本地进行，代码不会离开你的机器
+    * `git-mcp <https://github.com/idosal/git-mcp>`_
 
-* playwright-mcp
-    * https://github.com/microsoft/playwright-mcp
-      * 使用 Playwright MCP 打开 http://localhost:3000，运行页面交互，并读取所有 console 消息。如果有错误，分析并修复代码。
 
-* agent-browser 
-    * https://github.com/vercel-labs/agent-browser.git
-        * agent-browser 是 Vercel Labs 出的「专门给 AI Agent 用的」浏览器自动化命令行工具（CLI），核心目标是：让大模型可以像人一样打开网页、点点点、填表、上传文件、截图、获取页面内容，但所有操作都以 CLI 和「AI 友好的数据结构」呈现，非常方便接入各类 LLM / Agent
-* Office
-    * `Office-Word-MCP-Server <https://github.com/GongRzhe/Office-Word-MCP-Server>`_
-    * `excel-mcp-server <https://github.com/negokaz/excel-mcp-server>`_
-    * `PowerPoint MCP <https://playbooks.com/mcp/socamalo-powerpoint>`_
 
-* `awesome-mcp-servers <https://github.com/punkpeye/awesome-mcp-servers>`_
+* ROS
+    * `ros-mcp-server <https://github.com/robotmcp/ros-mcp-server>`_
+        * 通过 MCP 让 LLM/Agent 与 ROS/ROS2 机器人系统交互（话题、服务、行为控制等）
 
-* `ros-mcp-server <https://github.com/robotmcp/ros-mcp-server>`_
-    * 通过 MCP 让 LLM/Agent 与 ROS/ROS2 机器人系统交互（话题、服务、行为控制等）
-
-* `gazebo-mcp <https://github.com/kvgork/gazebo-mcp>`_
-    * 通过 MCP 控制 Gazebo 仿真（加载世界、控制关节、SLAM/Nav2、传感器数据等）
+    * `gazebo-mcp <https://github.com/kvgork/gazebo-mcp>`_
+        * 通过 MCP 控制 Gazebo 仿真（加载世界、控制关节、SLAM/Nav2、传感器数据等）
 
 * `drawio-mcp <https://github.com/jgraph/drawio-mcp>`_
     * 通过 MCP 生成/编辑 draw.io 图表
@@ -107,12 +85,31 @@ MCP
          claude mcp add --transport stdio stepscribe -- \
              /home/promote/opt/stepscribe-cad/.venv/bin/stepscribe mcp
 
+
+* Figma
+    * `Figma-Context-MCP <https://github.com/GLips/Figma-Context-MCP>`_
+    * `cursor-talk-to-figma-mcp <https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp>`_
+
+* `GitNexus <https://github.com/abhigyanpatwari/GitNexus>`_
+    * 1. 知识图谱索引工具 - 将代码库索引为知识图谱，让 AI 代理能够深度分析代码依赖、调用链和执行流程
+    * 2. MCP 服务器 - 通过 Model Context Protocol 提供 7 个工具和多种资源
+    * 3. 本地运行 - 所有操作都在本地进行，代码不会离开你的机器
+
+* agent-browser 
+    * https://github.com/vercel-labs/agent-browser.git
+        * agent-browser 是 Vercel Labs 出的「专门给 AI Agent 用的」浏览器自动化命令行工具（CLI），核心目标是：让大模型可以像人一样打开网页、点点点、填表、上传文件、截图、获取页面内容，但所有操作都以 CLI 和「AI 友好的数据结构」呈现，非常方便接入各类 LLM / Agent
+
+* `awesome-mcp-servers <https://github.com/punkpeye/awesome-mcp-servers>`_
+
+
+
+
 **************
 Claude
 **************
 
 * `Anthropic 文档 <https://docs.anthropic.com/>`_
-* `Claude Desktop for Debian <https://github.com/aaddrick/claude-desktop-debian>`_
+* `新功能 <https://code.claude.com/docs/zh-CN/whats-new>`_
 
 
 * **Plugins**
@@ -161,34 +158,11 @@ Claude
     * `Animatopy <https://sarthology.github.io/Animatopy>`_
     * `coolors <https://coolors.co>`_
 
-    * `drawbridge <https://github.com/breschio/drawbridge>`_
-
-        Drawbridge 是一个开源的 Chrome 扩展程序和 Cursor 规则集，
-        主要用于在浏览器中对网页进行视觉标注（类似 Figma 的评论功能），
-        并将这些标注直接作为提示发送给 Claude Code 和 Cursor 等 AI 编码工具，
-        帮助 AI 自动实现设计修改，极大提升前端开发效率。
-
-    * puppeteer-mcp
-
-    * `tweakcn <https://tweakcn.com/>`_
-
 
     * `shadcn-mcp`
 
         * `shadcn-ui <https://ui.shadcn.com/>`_
         * `shadcn-vue <https://www.shadcn-vue.com/>`_
-
-        * `context7 <https://context7.com/>`_
-
-
-***********
-VibeCoding
-***********
-
-* `vibe-kanban <https://www.vibekanban.com>`_
-
-    * `vibe-guide <https://www.vibekanban.com/vibe-guide>`_
-
 
 产品设计
 --------------
@@ -199,10 +173,6 @@ VibeCoding
 
 * `planning-with-files <https://github.com/OthmanAdi/planning-with-files.git>`_
     * https://zhuanlan.zhihu.com/p/1994343817332143003
-
-
-* `Auto-Claude <https://github.com/AndyMik90/Auto-Claude>`_
-
 
 * chm 转 markdown
     * `chm-converter <https://github.com/DTDucas/chm-converter>`_
@@ -221,7 +191,6 @@ Tools
 ------------
 
 * `Presenton AI 演示文稿生成 <https://github.com/presenton/presenton.git>`_
-* `ComfyUI 文字生成图/视频 <https://github.com/Comfy-Org/ComfyUI>`_
 
 -----------
 
@@ -235,34 +204,30 @@ Tools
 
 * `manimgx <https://manimgx.academa.ai/user-guide/quickstart/>`_
 
-************
-SKILL使用
-************
 
-Claude Code 只识别 ``~/.claude/skills/`` 或项目 ``.claude/skills/`` 下的一级目录。
 
-推荐做法
---------
+--------------------------------
 
-* 真实文件放独立 Git 仓库，例如 ``~/my-skills/``
-* 每个 Skill 建符号链接：
+* `repomix <https://github.com/yamadashy/repomix>`_
 
-.. code-block:: bash
+    * repomix 是一个开源工具，可以将 Git 仓库中的代码和文档转换为适合大语言模型（LLM）使用的格式，
+      以便更好地进行代码理解、生成和自动化任务。
 
-   # 用户级
-   ln -s ~/my-skills/my-skill ~/.claude/skills/my-skill
+    * 安装与使用示例：
 
-   # 项目级（仅本机，不要提交到团队仓库）
-   ln -s ~/my-skills/my-skill <project>/.claude/skills/my-skill
 
-* 在源仓库正常 git commit/push；其他设备 git pull 后立即生效
-* 项目/团队需要锁定版本时，用 Git submodule 挂到 .claude/skills；不要把绝对路径链接提交给团队
+    .. code-block:: sh
 
-注意
-----
+        npm install -g repomix  --registry https://registry.npmmirror.com
 
-* 链接单个 Skill，不要把整个 skills 目录替换成链接
-* Skill 必须平铺在 skills/ 下一级，不能保留分类子目录
-* Windows 需开启开发者模式，并设置 git config --global core.symlinks true
-* 符号链接下 allowed-tools 对自身目录的 Read 规则可能不生效
-* 需要提交符号链接时，.gitignore 可能忽略它，需 git add -f
+        repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git
+        repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git --remote-branch main
+        repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/obu/obu_client.git --remote-branch 935b695
+        repomix --remote http://192.168.2.100/pmpilot-4.0.0/v2x-2.0/mcu/traffic_light_test_ui.git --style markdown,
+        repomix  .
+
+* `gitingest <https://gitingest.com/>`_
+
+    * gitingest 是一个开源工具，可以将 Git 仓库中的代码和文档转换为适合大语言模型（LLM）使用的格式，
+      以便更好地进行代码理解、生成和自动化任务。
+
