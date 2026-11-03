@@ -249,10 +249,14 @@ Claude Code 只识别 ``~/.claude/skills/`` 或项目 ``.claude/skills/`` 下的
 
 .. code-block:: bash
 
+   # 用户级
    ln -s ~/my-skills/my-skill ~/.claude/skills/my-skill
 
+   # 项目级（仅本机，不要提交到团队仓库）
+   ln -s ~/my-skills/my-skill <project>/.claude/skills/my-skill
+
 * 在源仓库正常 git commit/push；其他设备 git pull 后立即生效
-* 项目/团队需要锁定版本时，用 Git submodule 挂到 .claude/skills
+* 项目/团队需要锁定版本时，用 Git submodule 挂到 .claude/skills；不要把绝对路径链接提交给团队
 
 注意
 ----
