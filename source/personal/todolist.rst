@@ -59,6 +59,10 @@
         * https://github.com/heygen-com/hyperframes
         * DeepSeek也能生成视频了
             * https://mp.weixin.qq.com/s/4X0RMUwifZFbGsm4EbupNg
+    * img2threejs
+        * https://github.com/img2threejs/img2threejs
+        * 一个开源的图像到 3D 重建 AI Agent 技能
+            * https://mp.weixin.qq.com/s/ltzgwzHHbneag2KF8UeHjw
 
 
 * [ ] Microduck 研究
