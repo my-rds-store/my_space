@@ -244,12 +244,12 @@ Claude Code 只识别 ``~/.claude/skills/`` 或项目 ``.claude/skills/`` 下的
 推荐做法
 --------
 
-* 真实文件放独立 Git 仓库，例如 ``~/Skills/skills/``
+* 真实文件放独立 Git 仓库，例如 ``~/my-skills/``
 * 每个 Skill 建符号链接：
 
 .. code-block:: bash
 
-   ln -s ~/Skills/skills/my-skill ~/.claude/skills/my-skill
+   ln -s ~/my-skills/my-skill ~/.claude/skills/my-skill
 
 * 在源仓库正常 git commit/push；其他设备 git pull 后立即生效
 * 项目/团队需要锁定版本时，用 Git submodule 挂到 .claude/skills
