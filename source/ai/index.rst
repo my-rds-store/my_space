@@ -234,3 +234,31 @@ Tools
 * `Manim <https://docs.manim.community/en/stable/>`_
 
 * `manimgx <https://manimgx.academa.ai/user-guide/quickstart/>`_
+
+************
+SKILL使用
+************
+
+Claude Code 只识别 ``~/.claude/skills/`` 或项目 ``.claude/skills/`` 下的一级目录。
+
+推荐做法
+--------
+
+* 真实文件放独立 Git 仓库，例如 ``~/Skills/skills/``
+* 每个 Skill 建符号链接：
+
+.. code-block:: bash
+
+   ln -s ~/Skills/skills/my-skill ~/.claude/skills/my-skill
+
+* 在源仓库正常 git commit/push；其他设备 git pull 后立即生效
+* 项目/团队需要锁定版本时，用 Git submodule 挂到 .claude/skills
+
+注意
+----
+
+* 链接单个 Skill，不要把整个 skills 目录替换成链接
+* Skill 必须平铺在 skills/ 下一级，不能保留分类子目录
+* Windows 需开启开发者模式，并设置 git config --global core.symlinks true
+* 符号链接下 allowed-tools 对自身目录的 Read 规则可能不生效
+* 需要提交符号链接时，.gitignore 可能忽略它，需 git add -f
