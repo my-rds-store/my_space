@@ -75,6 +75,10 @@
     * https://github.com/eclipse-iceoryx/iceoryx2
     * https://github.com/ekxide/rmw_iceoryx2
 
+* [ ] 研究 Dora
+    * 智能数据流导向机器人架构 (Agentic Dataflow-Oriented Robotic Architecture) – 一个 100% Rust 的实时机器人与 AI 应用框架。
+    * `dora-github <https://github.com/dora-rs/dora>`_
+
 * [ ] Lichee Zero 研究
     * https://wiki.sipeed.com/hardware/zh/lichee/Zero/Zero.html
     * https://licheezero.readthedocs.io/zh/latest/index.html
