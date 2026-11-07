@@ -10,8 +10,8 @@
 阅读计划
 --------
 
-.. raw:: html
-   :file: reading-plan.html
+* 《纳瓦尔宝典》
+* 《穷爸爸富爸爸》
 
 
 宝贝读物
