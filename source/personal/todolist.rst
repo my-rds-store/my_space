@@ -30,6 +30,8 @@
     * [ ] QMT 客户端学习 
             * `迅投知识库 <https://dict.thinktrader.net/?id=1L5eYT>`_
 
+*  通过AI 制作家庭财务报表
+
 **********
 待办
 **********
