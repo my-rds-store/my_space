@@ -63,6 +63,8 @@
             * https://mp.weixin.qq.com/s/4X0RMUwifZFbGsm4EbupNg
     * `img2threejs <https://github.com/img2threejs/img2threejs>`_
         * `一个开源的图像到 3D 重建 AI Agent 技能 <https://mp.weixin.qq.com/s/ltzgwzHHbneag2KF8UeHjw>`_
+    * `dashi-ppt-skill <https://github.com/chuspeeism/dashi-ppt-skill>`_
+        * `一个真正适合职场人的 PPT Skill <https://mp.weixin.qq.com/s/fn1O7Ij13p1DD2s3wk-aMg>`_
 
 * [ ] Microduck 研究
     * https://github.com/fanhao375/microduck-replica.git
