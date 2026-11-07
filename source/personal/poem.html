@@ -1,0 +1,184 @@
+<!-- 诗歌卡片：独立片段，由 reading.rst 通过 .. raw:: html :file: 引入；样式均限定在 .poem-sheet 内。 -->
+<style>
+.poem-sheet {
+  --paper: #f6f3ea;
+  --rule: #ded5c3;
+  --ink: #26221c;
+  --ink-soft: #70675a;
+  --cinnabar: #a13a2b;
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 1.6rem auto 2.4rem;
+  padding: 2rem 1.8rem;
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC",
+    "AR PL UMing CN", "SimSun", Georgia, serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+.poem-sheet::before,
+.poem-sheet::after {
+  content: "";
+  position: absolute;
+  width: 1.05rem;
+  height: 1.05rem;
+  border: 0 solid rgba(122, 113, 99, 0.45);
+  pointer-events: none;
+}
+.poem-sheet::before {
+  top: 0.55rem;
+  left: 0.55rem;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+.poem-sheet::after {
+  right: 0.55rem;
+  bottom: 0.55rem;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+.poem-sheet .poem-layout {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0 1rem;
+}
+.poem-sheet .poem-meta {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  flex: none;
+}
+.poem-sheet .poem-title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+}
+.poem-sheet .poem-author {
+  margin: 0;
+  margin-block-start: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+}
+.poem-sheet .poem-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  flex: none;
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+}
+.poem-sheet .poem-stanza {
+  margin: 0;
+  margin-block-end: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.poem-sheet .poem-stanza:last-child {
+  margin-block-end: 0;
+}
+.poem-sheet .poem-seal {
+  flex: none;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--cinnabar);
+  color: #f8f4ea;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  border-radius: 1px;
+  opacity: 0.9;
+  transform: rotate(-3deg);
+  user-select: none;
+}
+@media (max-width: 1100px) {
+  .poem-sheet {
+    padding: 1.8rem 1.4rem;
+  }
+  .poem-sheet .poem-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  .poem-sheet .poem-meta {
+    writing-mode: horizontal-tb;
+    text-align: center;
+  }
+  .poem-sheet .poem-title {
+    font-size: 2.1rem;
+  }
+  .poem-sheet .poem-author {
+    margin: 0.45rem 0 0;
+  }
+  .poem-sheet .poem-text {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    max-width: 100%;
+    text-align: center;
+    line-height: 2.1;
+    letter-spacing: 0.06em;
+  }
+  .poem-sheet .poem-stanza {
+    margin: 0 0 1.3rem;
+    line-height: 2.1;
+  }
+  .poem-sheet .poem-stanza:last-child {
+    margin-bottom: 0;
+  }
+  .poem-sheet .poem-seal {
+    align-self: center;
+    transform: rotate(-2deg);
+  }
+}
+</style>
+
+<div class="poem-sheet">
+  <div class="poem-layout">
+    <div class="poem-meta">
+      <h3 class="poem-title">诗</h3>
+      <p class="poem-author">聂鲁达【智利】</p>
+    </div>
+
+    <div class="poem-text">
+      <p class="poem-stanza">
+        我简直无以言表，我<br>
+        瞠目结舌<br>
+        我头脑发热或羽翼失修<br>
+        而使灵魂有点蠢动<br>
+        我一意孤行<br>
+        去诠释那团火
+      </p>
+      <p class="poem-stanza">
+        我记下第一行苍白文字<br>
+        变态的、空洞无物、纯粹<br>
+        的痴言乱语、一整个无知者的<br>
+        终极智慧
+      </p>
+      <p class="poem-stanza">
+        而忽然间我瞥见<br>
+        天堂之锁开启<br>
+        诸多星辰、离离草木<br>
+        镶边的幻影<br>
+        迷一般地<br>
+        与箭、火焰和花丛<br>
+        以及寥廓长夜、寰宇浑然一体
+      </p>
+    </div>
+
+    <div class="poem-seal" aria-hidden="true">聂</div>
+  </div>
+</div>
