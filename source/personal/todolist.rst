@@ -43,6 +43,10 @@
 待办
 **********
 
+* [ ] 研究,将绘本转换成动画视频
+    * https://github.com/lhlGitHub/hand-drawn-storybook-animation-skill
+    * https://github.com/gnipbao/story-to-handdrawn-video
+
 
 * [ ] 行为树学习
     * https://roboticseabass.com/2021/05/08/introduction-to-behavior-trees/
@@ -111,7 +115,10 @@
     * `Overleaf Pro 付费功能全开源 <https://mp.weixin.qq.com/s/1DGQlPmGMB9g2UsxAanCqg>`_
     * `Overleaf Pro 开源版本 <https://github.com/ayaka-notes/ayakaleaf-pro>`_
 
-* [ ] openmontage <https://github.com/calesthio/openmontage>
+* [ ] openmontage <https://github.com/calesthio/openmontage>`
+    * `OpenMontage: AI 生成图像的开源工具 <https://mp.weixin.qq.com/s/Df_6M4XrXQi-0nElNgtkLw>`_
+
+* [ ] `open-notebook <https://github.com/lfnovo/open-notebook>`_
 
 **********
 已完成
