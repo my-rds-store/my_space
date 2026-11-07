@@ -30,7 +30,14 @@
     * [ ] QMT 客户端学习 
             * `迅投知识库 <https://dict.thinktrader.net/?id=1L5eYT>`_
 
-*  通过AI 制作家庭财务报表
+*  [ ]通过AI 制作家庭财务报表
+    * 制作家庭财务报表，核心是 “摸清家底 + 看清现金流 + 管住负债 + 追踪目标”。
+    * 建议从三张核心表开始：资产负债表、收入支出表、预算/目标表，
+    * 再按需增加债务明细、投资明细、保险明细。
+
+* [ ] 家庭儿童媒体中心,研究
+    *  `kindo <https://github.com/Aaron-LiLei/kindo>`_
+    * `civideo <https://github.com/bitoceango/civideo>`_
 
 **********
 待办
@@ -104,6 +111,7 @@
     * `Overleaf Pro 付费功能全开源 <https://mp.weixin.qq.com/s/1DGQlPmGMB9g2UsxAanCqg>`_
     * `Overleaf Pro 开源版本 <https://github.com/ayaka-notes/ayakaleaf-pro>`_
 
+* [ ] openmontage <https://github.com/calesthio/openmontage>
 
 **********
 已完成
