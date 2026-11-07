@@ -93,6 +93,10 @@
 * [ ] 待整理 Human-Atlas
     * https://github.com/slorksmo/Human-Atlas
 
+* [ ] ayakaleaf-pro
+    * `Overleaf Pro 付费功能全开源 <https://mp.weixin.qq.com/s/1DGQlPmGMB9g2UsxAanCqg>`_
+    * `Overleaf Pro 开源版本 <https://github.com/ayaka-notes/ayakaleaf-pro>`_
+
 
 **********
 已完成
