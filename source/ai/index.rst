@@ -58,6 +58,28 @@ MCP
     * `git-mcp <https://github.com/idosal/git-mcp>`_
 
 
+* blander
+    * https://www.blender.org/lab/mcp-server/#addon
+
+    .. code-block:: sh
+
+        claude mcp add blender -- uvx --from git+https://projects.blender.org/lab/blender_mcp.git#subdirectory=mcp ble
+
+  
+    .. code-block:: json
+
+        "mcpServers": {
+            "blender": {
+                "command": "uvx",
+                    "args": [
+                        "--from",
+                        "git+https://projects.blender.org/lab/blender_mcp.git#subdirectory=mcp",
+                        "blender-mcp"
+                    ]
+                }
+            }
+        }
+
 
 * ROS
     * `ros-mcp-server <https://github.com/robotmcp/ros-mcp-server>`_
