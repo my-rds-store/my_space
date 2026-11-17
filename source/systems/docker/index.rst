@@ -240,8 +240,8 @@ Nvidia Docker
     # 从docker hub 搜索镜像
     docker search centos
 
-清理构建缓存与镜像
-===================
+清理构建缓存、镜像与容器
+=========================
 
 .. code-block:: sh
 
