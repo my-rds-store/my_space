@@ -238,7 +238,42 @@ Nvidia Docker
     docker rmi $(docker images | grep none | awk '{print $3}' | xargs)
 
     # 从docker hub 搜索镜像
-    docker search centos  
+    docker search centos
+
+清理构建缓存与镜像
+===================
+
+.. code-block:: sh
+
+    # 1. 清除构建缓存（BuildKit cache）
+    #    -a/--all   清理全部构建缓存（不加 -a 只清理悬空/未被引用的缓存）
+    #    -f/--force 跳过交互确认，直接执行
+    sudo docker builder prune -af
+
+    # 2. 清理悬空镜像（dangling image：无 tag、且不被任何容器引用）
+    #    不加 -a 时只删悬空镜像；-f 只是跳过确认，
+    #    仍被容器使用（包括已停止容器）的镜像不会被删除
+    sudo docker image prune -f
+
+    # 如需清理所有“未被任何容器使用”的镜像（包括带 tag 的），追加 -a：
+    sudo docker image prune -af
+
+    # 3. 清理已停止的容器，until 表示“创建时间早于该时长的容器”
+    #    720h = 30 天：只删除 30 天前创建且已停止的容器，
+    #    30 天内创建的容器（无论是否运行）都会被保留；运行中的容器也不会被删
+    sudo docker container prune -f --filter "until=720h"
+
+    # 查看 Docker 各项磁盘占用（镜像 / 容器 / 数据卷 / 构建缓存）
+    docker system df
+
+    # 更彻底的一键清理：停止的容器 + 未使用网络 + 悬空镜像 + 构建缓存
+    # （默认不清理未被引用的数据卷，需要时显式加 --volumes）
+    sudo docker system prune -f
+
+.. note::
+
+   ``docker builder prune -af`` 会删除全部构建缓存，之后首次构建会重新
+   下载/编译依赖，耗时明显变长；仅在磁盘空间紧张或缓存损坏时使用。
 
 容器
 ============
